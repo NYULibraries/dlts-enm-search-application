@@ -28,4 +28,4 @@ module.exports = {
     // Always terminate statements with semi-colons
     'semi': [ 'error', 'always' ],
   }
-}
+};
