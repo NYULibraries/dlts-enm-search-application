@@ -24,11 +24,24 @@ module.exports = {
     'comma-dangle': [ 'error', 'always-multiline' ],
     // allow async-await
     'generator-star-spacing': 'off',
+    'indent': [ 'warn', 4 ],
+    'key-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-multi-spaces': 'off',
     // https://github.com/babel/babel-eslint/issues/517
     'no-use-before-define': 'off',
+    'one-var': [ 'error', { var: 'always' } ],
     // Always terminate statements with semi-colons
     'semi': [ 'error', 'always' ],
+    'space-before-function-paren': [ 'error',
+                                     { 'anonymous': 'always',
+                                       'named': 'never',
+                                       'asyncArrow': 'always',
+                                     }
+                                   ],
+    'space-in-parens': [ 'error', 'always' ],
+    'space-unary-ops': [ 'error', { 'words': true, 'nonwords': false } ],
+    'standard/computed-property-even-spacing': [ 'error', 'always' ],
   }
 };
