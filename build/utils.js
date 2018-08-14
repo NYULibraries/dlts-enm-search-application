@@ -72,7 +72,7 @@ exports.styleLoaders = function ( options ) {
     const loaders = exports.cssLoaders( options );
 
     for ( const extension in loaders ) {
-        const loader = loaders[extension];
+        const loader = loaders[ extension ];
         output.push( {
             test: new RegExp( '\\.' + extension + '$' ),
             use: loader,
@@ -88,7 +88,7 @@ exports.createNotifierCallback = () => {
     return ( severity, errors ) => {
         if ( severity !== 'error' ) return;
 
-        const error = errors[0];
+        const error = errors[ 0 ];
         const filename = error.file && error.file.split( '!' ).pop();
 
         notifier.notify( {
