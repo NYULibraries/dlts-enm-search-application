@@ -25,6 +25,8 @@ module.exports = {
     'generator-star-spacing': 'off',
     // allow debugger during development
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    // https://github.com/babel/babel-eslint/issues/517
+    'no-use-before-define': 'off',
     // Always terminate statements with semi-colons
     'semi': [ 'error', 'always' ],
   }
