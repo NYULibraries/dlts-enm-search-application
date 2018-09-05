@@ -8,11 +8,8 @@
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
-
     "test:unit": "npm run unit",
-
     "test:browser:local": "node_modules/.bin/wdio test/browser/conf/wdio.local.conf.js",
-
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node build/build.js"
   },
@@ -37,6 +34,7 @@
     "babel-preset-stage-2": "^6.22.0",
     "babel-preset-vue": "^2.0.2",
     "chalk": "^2.0.1",
+    "chromedriver": "^2.31.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.28.0",
     "eslint": "^4.15.0",
