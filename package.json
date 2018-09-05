@@ -11,7 +11,7 @@
 
     "test:unit": "npm run unit",
 
-    "test:browser:local": "node_modules/.bin/wdio test/e2e/conf/wdio.local.conf.js",
+    "test:browser:local": "node_modules/.bin/wdio test/browser/conf/wdio.local.conf.js",
 
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node build/build.js"
