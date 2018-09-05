@@ -1,3 +1,20 @@
+const path = require( 'path' );
+const VisualRegressionCompare = require( 'wdio-visual-regression-service/compare' );
+
+function getScreenshotName( basePath ) {
+    return function( context ) {
+        let type = context.type;
+        let testName = context.test.title;
+        let browserVersion = parseInt( context.browser.version, 10 );
+        let browserName = context.browser.name;
+        let browserViewport = context.meta.viewport;
+        let browserWidth = browserViewport.width;
+        let browserHeight = browserViewport.height;
+
+        return path.join( basePath, `${testName}_${type}_${browserName}_v${browserVersion}_${browserWidth}x${browserHeight}.png` );
+    };
+}
+
 exports.config = {
 
     //
@@ -115,6 +132,23 @@ exports.config = {
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
     services: ['selenium-standalone', 'visual-regression', 'chromedriver', 'screenshots-cleanup'],
+    cleanScreenshotsFolder: {
+        folder: 'screenshots',
+        pattern: '/**/ERROR_*',
+    },
+    visualRegression: {
+        compare: new VisualRegressionCompare.LocalCompare(
+            {
+                referenceName: getScreenshotName( path.join( process.cwd(), 'screenshots/reference' ) ),
+                screenshotName: getScreenshotName( path.join( process.cwd(), 'screenshots/screen' ) ),
+                diffName: getScreenshotName( path.join( process.cwd(), 'screenshots/diff' ) ),
+                misMatchTolerance: 0.01,
+            }
+        ),
+        viewportChangePause: 300,
+        viewports: [{ width: 320, height: 480 }, { width: 480, height: 320 }, { width: 1024, height: 768 }],
+        orientations: ['landscape', 'portrait'],
+    },
     //
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
