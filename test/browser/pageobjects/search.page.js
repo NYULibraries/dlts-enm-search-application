@@ -1,9 +1,9 @@
-/* global $:false */
+/* global browser:false */
 
 import Page from './page';
 
 class SearchPage extends Page {
-    get title() { return $( 'title' ); };
+    get title() { return browser.getTitle(); };
 
     open() {
         // This is the real path, after the build is implemented.
