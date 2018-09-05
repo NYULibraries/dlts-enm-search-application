@@ -132,6 +132,7 @@ exports.config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
+        compilers: ['js:babel-core/register'],
         ui: 'tdd',
     },
     //
