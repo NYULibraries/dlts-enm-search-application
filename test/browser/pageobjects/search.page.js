@@ -35,6 +35,12 @@ class SearchPage extends Page {
         // For now use the prototype for writing of the tests.
         super.open( this.paths.search );
     }
+
+    expandNavbarBrowseMenu() {
+        // Note this will need to be replaced with Actions command.
+        // See https://github.com/webdriverio/webdriverio/issues/2140
+        this.navbar.browse.moveToObject( 0, 0 );
+    }
 }
 
 export default new SearchPage();
