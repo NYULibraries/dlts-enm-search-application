@@ -27,14 +27,16 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/browser/tests/**/*.js',
+        'test/browser/tests/navbar.js',
     ],
     // Patterns to exclude.
     exclude: [
         // 'path/to/excluded/files'
     ],
     suites: {
-        // TODO
+        navbar: [
+            'test/browser/tests/navbar.js',
+        ],
     },
     //
     // ============
