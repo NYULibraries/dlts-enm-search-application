@@ -39,6 +39,13 @@ suite( 'Navbar', function () {
         assert.equal(  SearchPage.currentUrl, SearchPage.baseUrl + SearchPage.paths.featuredTopics );
     } );
 
+    test( 'Clicking "ENHANCED NETWORKED MONOGRAPHS" logo takes user to home page', function () {
+        SearchPage.open();
+        SearchPage.navbar.home.click();
+
+        assert.equal(  SearchPage.currentUrl, SearchPage.baseUrl + SearchPage.paths.home );
+    } );
+
     test( 'Clicking "Search" takes user to search application', function () {
         SearchPage.open();
         SearchPage.navbar.search.click();

@@ -9,6 +9,7 @@ class SearchPage extends Page {
             about: 'prototypes/about.html',
             allTopics: 'prototypes/browse-topics-lists/a.html',
             browse: 'prototypes/browse-topics-lists/enm-picks.html',
+            home: 'prototypes/',
             featuredTopics: 'prototypes/browse-topics-lists/enm-picks.html',
             search: 'prototypes/search-results',
         };
@@ -23,6 +24,8 @@ class SearchPage extends Page {
             featuredTopics: $( 'a.navbar-item=Featured topics' ),
             // Second item of Browse menu
             allTopics: $( 'a.navbar-item=All topics' ),
+
+            home: $( 'h1.enm-logo' ),
 
             search: $( 'a.navbar-item=Search' ),
         };
