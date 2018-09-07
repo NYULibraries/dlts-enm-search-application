@@ -4,7 +4,15 @@ import Page from './page';
 
 class SearchPage extends Page {
     get baseUrl() { return browser.options.baseUrl; }
-    get path() { return 'prototypes/search-results'; }
+    get paths() {
+        return {
+            about: 'prototypes/about.html',
+            allTopics: 'prototypes/browse-topics-lists/a.html',
+            browse: 'prototypes/browse-topics-lists/enm-picks.html',
+            featuredTopics: 'prototypes/browse-topics-lists/enm-picks.html',
+            search: 'prototypes/search-results',
+        };
+    }
     get navbar() {
         return {
             about: $( 'a.navbar-item=About' ),
@@ -25,7 +33,7 @@ class SearchPage extends Page {
         // This is the real path, after the build is implemented.
         // super.open( 'search' );
         // For now use the prototype for writing of the tests.
-        super.open( this.path );
+        super.open( this.paths.search );
     }
 }
 
