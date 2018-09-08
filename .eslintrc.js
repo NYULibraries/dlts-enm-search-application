@@ -46,7 +46,16 @@ module.exports = {
                                      }
                                    ],
     'space-in-parens': [ 'error', 'always' ],
-    'space-unary-ops': [ 'error', { 'words': true, 'nonwords': false } ],
+    'space-unary-ops': [
+        'error',
+        {
+            'words': true,
+            'nonwords': false,
+            'overrides': {
+                '!': false,
+            }
+        }
+    ],
     'standard/computed-property-even-spacing': [ 'error', 'always' ],
   }
 };
