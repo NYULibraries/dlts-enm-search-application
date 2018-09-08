@@ -45,6 +45,10 @@ class SearchPage extends Page {
         };
     }
 
+    get spinner() {
+        return $( '#spinner' );
+    }
+
     get title() { return browser.getTitle(); };
 
     open() {
