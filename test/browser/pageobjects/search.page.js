@@ -38,6 +38,10 @@ class SearchPage extends Page {
             searchBox        : $( '#enm-searchinput' ),
             fulltextCheckbox : $( '#fulltextChx' ),
             topicsCheckbox   : $( '#topicsChx' ),
+
+            submit: function () {
+                browser.submitForm( 'form.enm-searchform' );
+            },
         };
     }
 
