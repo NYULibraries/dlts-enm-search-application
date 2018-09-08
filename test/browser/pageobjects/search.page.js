@@ -33,6 +33,13 @@ class SearchPage extends Page {
         };
     }
 
+    get resultsPane() {
+        return {
+            header: $( 'div.enm-pane-results header' ).getText(),
+            results: $( 'div.enm-results' ).getText(),
+        };
+    }
+
     get searchForm() {
         return {
             searchBox        : $( '#enm-searchinput' ),
