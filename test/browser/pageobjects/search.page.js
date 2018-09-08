@@ -35,9 +35,9 @@ class SearchPage extends Page {
 
     get searchForm() {
         return {
-            searchBox: $( '#enm-searchinput' ),
-            fullTextCheckbox: $( '#fulltextChx' ),
-            topicsCheckbox: $( '#topicsChx' ),
+            searchBox        : $( '#enm-searchinput' ),
+            fullTextCheckbox : $( '#fulltextChx' ),
+            topicsCheckbox   : $( '#topicsChx' ),
         };
     }
 
