@@ -76,6 +76,30 @@ class SearchPage extends Page {
         this.navbar.browse.moveToObject( 0, 0 );
     }
 
+    // These can't be run in resultsPane getter because it fails if search hasn't
+    // been submitted and run to completion.
+    getResultsPaneNumBooks() {
+        return this.getResultsPaneNumBooksAndPages().numBooks;
+    }
+    getResultsPaneNumPages() {
+        return this.getResultsPaneNumBooksAndPages().numPages;
+    }
+    getResultsPaneNumBooksAndPages( index ) {
+        let found = this.resultsPane.header.text.match( /Results: (.*) pages in (\d+) books/ );
+
+        if ( found ) {
+            return {
+                numBooks : parseInt( found[ 2 ].replace( ',', '' ), 10 ),
+                numPages : parseInt( found[ 1 ].replace( ',', '' ), 10 ),
+            };
+        } else {
+            return {
+                numBooks : NaN,
+                numPages : NaN,
+            };
+        }
+    }
+
     search( query ) {
         this.searchForm.searchBox.addValue( query );
         this.searchForm.submit();
