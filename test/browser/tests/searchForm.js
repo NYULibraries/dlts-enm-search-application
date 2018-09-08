@@ -28,4 +28,17 @@ suite( 'Search form', function () {
 
         assert( SearchPage.spinner.isVisible(), 'Spinner did not appear' );
     } );
+
+    test( 'Blank query should return zero results with suggestion to try another search',
+        function () {
+            const separator = ' ... ';
+
+            SearchPage.search( '' );
+
+            assert.equal(
+                SearchPage.resultsPane.header + separator + SearchPage.resultsPane.results,
+                'Results: None' + separator + 'Please try another search.'
+            );
+        }
+    );
 } );
