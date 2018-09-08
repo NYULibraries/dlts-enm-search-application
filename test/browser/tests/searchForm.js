@@ -22,4 +22,11 @@ suite( 'Search form', function () {
             '"Topics" checkbox is not checked'
         );
     } );
+
+    test( 'Spinner should appear when search is submitted', function () {
+        SearchPage.searchForm.searchBox.addValue( 'anything' );
+        SearchPage.searchForm.submit();
+
+        assert( SearchPage.spinner.isVisible(), 'Spinner did not appear' );
+    } );
 } );
