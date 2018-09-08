@@ -63,6 +63,11 @@ class SearchPage extends Page {
         // See https://github.com/webdriverio/webdriverio/issues/2140
         this.navbar.browse.moveToObject( 0, 0 );
     }
+
+    search( query ) {
+        this.searchForm.searchBox.addValue( query );
+        this.searchForm.submit();
+    }
 }
 
 export default new SearchPage();

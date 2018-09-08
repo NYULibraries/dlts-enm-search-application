@@ -24,8 +24,7 @@ suite( 'Search form', function () {
     } );
 
     test( 'Spinner should appear when search is submitted', function () {
-        SearchPage.searchForm.searchBox.addValue( 'anything' );
-        SearchPage.searchForm.submit();
+        SearchPage.search( 'anything' );
 
         assert( SearchPage.spinner.isVisible(), 'Spinner did not appear' );
     } );
