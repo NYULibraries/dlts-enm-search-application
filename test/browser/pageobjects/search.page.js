@@ -39,7 +39,8 @@ class SearchPage extends Page {
                 text : $( 'div.enm-pane-results header' ).getText(),
             },
             results : {
-                text : $( 'div.enm-results' ).getText(),
+                _element : $( 'div.enm-results' ),
+                text     : $( 'div.enm-results' ).getText(),
             },
         };
     }
