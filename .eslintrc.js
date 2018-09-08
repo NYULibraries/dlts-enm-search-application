@@ -52,7 +52,7 @@ module.exports = {
             'words': true,
             'nonwords': false,
             'overrides': {
-                '!': false,
+                '!': true,
             }
         }
     ],
