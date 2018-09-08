@@ -4,7 +4,7 @@ import { assert } from 'chai';
 
 import SearchPage from '../pageobjects/search.page';
 
-const expectedQueryResults = {
+const expectedSearchResults = {
     '*' : {
         resultsPane : {
             numPages : 30793,
@@ -18,7 +18,7 @@ suite( 'Search results', function () {
         SearchPage.open();
     } );
 
-    Object.entries( expectedQueryResults ).forEach( ( entry ) => {
+    Object.entries( expectedSearchResults ).forEach( ( entry ) => {
         let [ query, expectedResults ] = entry;
 
         testResultsPaneNumBooksAndPages( query, expectedResults );
