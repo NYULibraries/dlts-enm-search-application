@@ -4,6 +4,7 @@ import Page from './page';
 
 class SearchPage extends Page {
     get baseUrl() { return browser.options.baseUrl; }
+
     get paths() {
         return {
             about: 'prototypes/about.html',
@@ -14,6 +15,7 @@ class SearchPage extends Page {
             search: 'prototypes/search-results',
         };
     }
+
     get navbar() {
         return {
             about: $( 'a.navbar-item=About' ),
@@ -30,6 +32,7 @@ class SearchPage extends Page {
             search: $( 'a.navbar-item=Search' ),
         };
     }
+
     get title() { return browser.getTitle(); };
 
     open() {
