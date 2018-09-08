@@ -104,6 +104,12 @@ class SearchPage extends Page {
         this.searchForm.searchBox.addValue( query );
         this.searchForm.submit();
     }
+
+    searchAndWaitForResults( query ) {
+        this.searchForm.searchBox.addValue( query );
+        this.searchForm.submit();
+        this.resultsPane.results._element.waitForVisible( 30000 );
+    }
 }
 
 export default new SearchPage();
