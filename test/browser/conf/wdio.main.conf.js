@@ -28,6 +28,7 @@ exports.config = {
     //
     specs: [
         'test/browser/tests/navbar.js',
+        'test/browser/tests/searchForm.js',
     ],
     // Patterns to exclude.
     exclude: [
@@ -36,6 +37,9 @@ exports.config = {
     suites: {
         navbar: [
             'test/browser/tests/navbar.js',
+        ],
+        searchForm: [
+            'test/browser/tests/searchForm.js',
         ],
     },
     //
