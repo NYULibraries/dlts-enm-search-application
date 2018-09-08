@@ -36,7 +36,7 @@ suite( 'Search form', function () {
             SearchPage.search( '' );
 
             assert.equal(
-                SearchPage.resultsPane.header + separator + SearchPage.resultsPane.results,
+                SearchPage.resultsPane.header.text + separator + SearchPage.resultsPane.results.text,
                 'Results: None' + separator + 'Please try another search.'
             );
         }

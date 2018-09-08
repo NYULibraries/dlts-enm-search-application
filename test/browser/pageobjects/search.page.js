@@ -35,8 +35,12 @@ class SearchPage extends Page {
 
     get resultsPane() {
         return {
-            header: $( 'div.enm-pane-results header' ).getText(),
-            results: $( 'div.enm-results' ).getText(),
+            header  : {
+                text : $( 'div.enm-pane-results header' ).getText(),
+            },
+            results : {
+                text : $( 'div.enm-results' ).getText(),
+            },
         };
     }
 
