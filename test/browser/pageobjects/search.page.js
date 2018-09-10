@@ -7,6 +7,17 @@ class SearchPage extends Page {
 
     get baseUrl() { return browser.options.baseUrl; }
 
+    get limitByTopicPane() {
+        return {
+            topicsWithHitCounts : $$( '.enm-facets-group-visible a' ).map(
+                ( topicItem ) => {
+                    const found = topicItem.getText().match( /^(.*) \((\d+)\)$/ );
+                    return [ found[ 1 ], found[ 2 ] ];
+                }
+        ),
+    };
+    }
+
     get navbar() {
         return {
             about: $( 'a.navbar-item=About' ),
