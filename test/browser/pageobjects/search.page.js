@@ -59,7 +59,9 @@ class SearchPage extends Page {
             topicDCIs : {
                 dismiss : ( topic ) => { return $( 'button[ id="' + topic + '" ]' ).click(); },
 
-                topics  : $$( 'span.enm-topic' ).map( ( topicDCI ) => { return topicDCI.getText(); } ),
+                topics  : $$( 'span.enm-topic' ).map(
+                    ( topicDCI ) => { return topicDCI.getText(); }
+                ),
             },
         };
     }
