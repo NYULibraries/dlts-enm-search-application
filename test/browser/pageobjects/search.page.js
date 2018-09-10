@@ -3,6 +3,8 @@
 import Page from './page';
 
 class SearchPage extends Page {
+    get alertText() { return browser.alertText; }
+
     get baseUrl() { return browser.options.baseUrl; }
 
     get paths() {
