@@ -11,14 +11,14 @@ suite( 'Search form', function () {
 
     test( '"Full Text" checkbox is checked by default', function () {
         assert(
-            SearchPage.searchForm.fulltextCheckbox.isSelected(),
+            SearchPage.searchForm.fulltext.isSelected(),
             '"Full Text" checkbox is not checked'
         );
     } );
 
     test( '"Topics" checkbox is checked by default', function () {
         assert(
-            SearchPage.searchForm.topicsCheckbox.isSelected(),
+            SearchPage.searchForm.topics.isSelected(),
             '"Topics" checkbox is not checked'
         );
     } );
@@ -46,18 +46,13 @@ suite( 'Search form', function () {
     test(
         'Submitting query with neither "Full Text" nor "Topics" selected should bring up error dialog box',
         function () {
-            // Need to click checkbox labels instead of checkboxes themselves.
-            // Trying to click checkboxes produces an error like this:
-            //
-            //     Element <input type="checkbox" name="fulltextChx" id="fulltextChx" class="is-medium is-checkbox" value="pageText"> is not clickable at point (630, 106). Other element would receive the click: <label for="fulltextChx">...</label>
-
-            SearchPage.searchForm.fulltextLabel.click();
-            if ( SearchPage.searchForm.fulltextCheckbox.isSelected() ) {
+            SearchPage.searchForm.fulltext.click();
+            if ( SearchPage.searchForm.fulltext.isSelected() ) {
                 assert.fail( 'Failed to de-select "Topics" -- make sure "Topics" is selected by default.' );
             }
 
-            SearchPage.searchForm.topicsLabel.click();
-            if ( SearchPage.searchForm.topicsCheckbox.isSelected() ) {
+            SearchPage.searchForm.topics.click();
+            if ( SearchPage.searchForm.topics.isSelected() ) {
                 assert.fail( 'Failed to de-select "Topics" -- make sure "Topics" is selected by default.' );
             }
 

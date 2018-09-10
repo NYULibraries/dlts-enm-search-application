@@ -48,18 +48,25 @@ class SearchPage extends Page {
     }
 
     get searchForm() {
-        // We need the labels because to select/de-select the labels need to be
-        // clicked rather than the checkboxes themselves.
-        // Trying to click checkboxes produces an error like this:
-        //
-        //     Element <input type="checkbox" name="fulltextChx" id="fulltextChx" class="is-medium is-checkbox" value="pageText"> is not clickable at point (630, 106). Other element would receive the click: <label for="fulltextChx">...</label>
-
         return {
-            searchBox        : $( '#enm-searchinput' ),
-            fulltextCheckbox : $( '#fulltextChx' ),
-            fulltextLabel    : $( 'label[ for="fulltextChx" ]' ),
-            topicsCheckbox   : $( '#topicsChx' ),
-            topicsLabel      : $( 'label[ for="topicsChx" ]' ),
+            searchBox : $( '#enm-searchinput' ),
+
+            //  NOTE: We click the labels for select/de-select because they obscure
+            // the checkboxes themselves.  Trying to click checkboxes produces an
+            // error like this:
+            //
+            //     Element <input type="checkbox" name="fulltextChx" id="fulltextChx" class="is-medium is-checkbox" value="pageText"> is not clickable at point (630, 106). Other element would receive the click: <label for="fulltextChx">...</label>
+
+            fulltext : {
+                click      : () => { $( 'label[ for="fulltextChx" ]' ).click(); },
+                isSelected : () => { return $( '#fulltextChx' ).isSelected(); },
+                text       : $( '#fulltextChx' ).getText(),
+            },
+            topics : {
+                click      : () => { $( 'label[ for="topicsChx" ]' ).click(); },
+                isSelected : () => { return $( '#topicsChx' ).isSelected(); },
+                text       : $( '#topicsChx' ).getText(),
+            },
 
             submit: function () {
                 browser.submitForm( 'form.enm-searchform' );
