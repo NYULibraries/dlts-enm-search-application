@@ -1,20 +1,26 @@
 /* global setup:false suite:false test:false */
 
+import fs from 'fs';
+
 import { assert } from 'chai';
 
 import SearchPage from '../pageobjects/search.page';
 
-const expectedSearchResults = require( './testdata/golden/search-results/temp.json' );
+const goldenFiles = fs.readdirSync( './testdata/golden/search-results/' );
 
 suite( 'Search results', function () {
     setup( function () {
         SearchPage.open();
     } );
 
-    Object.entries( expectedSearchResults ).forEach( ( entry ) => {
-        let [ query, expectedResults ] = entry;
+    goldenFiles.forEach( ( goldenFile ) => {
+        let expectedSearchResults = require( goldenFile );
 
-        testResultsPaneNumBooksAndPages( query, expectedResults );
+        Object.entries( expectedSearchResults ).forEach( ( entry ) => {
+            let [ query, expectedResults ] = entry;
+
+            testResultsPaneNumBooksAndPages( query, expectedResults );
+        } );
     } );
 } );
 
