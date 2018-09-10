@@ -57,18 +57,7 @@ class SearchPage extends Page {
                     .replace( /^Searching full texts and topics for: /, '' ),
             },
             topicDCIs : {
-                // This does not work:
-                // dismiss : ( topic ) => { $( '#' + topic ).click(); },
-                //
-                // Example:
-                //
-                // $( "button#Rilke's writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)" )
-                //
-                // ... returns error:
-                //
-                // Error: invalid selector: An invalid or illegal selector was specified
-                // TODO
-                dismiss : ( topic ) => { return 'NOT IMPLEMENTED YET'; },
+                dismiss : ( topic ) => { return $( 'button[ id="' + topic + '" ]' ).click(); },
 
                 topics  : $$( 'span.enm-topic' ).map( ( topicDCI ) => { return topicDCI.getText(); } ),
             },
