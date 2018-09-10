@@ -28,8 +28,8 @@ exports.config = {
     //
     specs: [
         'test/browser/tests/navbar.js',
-        'test/browser/tests/searchForm.js',
-        'test/browser/tests/searchResults.js',
+        'test/browser/tests/search-form.js',
+        'test/browser/tests/search-results.js',
     ],
     // Patterns to exclude.
     exclude: [
@@ -39,11 +39,11 @@ exports.config = {
         navbar: [
             'test/browser/tests/navbar.js',
         ],
-        searchForm: [
-            'test/browser/tests/searchForm.js',
+        'search-form': [
+            'test/browser/tests/search-form.js',
         ],
-        searchResults: [
-            'test/browser/tests/searchResults.js',
+        'search-results': [
+            'test/browser/tests/search-results.js',
         ],
     },
     //
