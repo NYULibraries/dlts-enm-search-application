@@ -2,7 +2,7 @@ const path = require( 'path' );
 const VisualRegressionCompare = require( 'wdio-visual-regression-service/compare' );
 
 function getScreenshotName( basePath ) {
-    return function( context ) {
+    return function ( context ) {
         let type = context.type;
         let testName = context.test.title;
         let browserVersion = parseInt( context.browser.version, 10 );
