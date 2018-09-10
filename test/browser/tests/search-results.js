@@ -4,14 +4,7 @@ import { assert } from 'chai';
 
 import SearchPage from '../pageobjects/search.page';
 
-const expectedSearchResults = {
-    '*' : {
-        resultsPane : {
-            numPages : 30793,
-            numBooks : 104,
-        },
-    },
-};
+const expectedSearchResults = require( './testdata/golden/search-results/temp.json' );
 
 suite( 'Search results', function () {
     setup( function () {
