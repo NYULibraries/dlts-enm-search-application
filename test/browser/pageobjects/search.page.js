@@ -7,17 +7,6 @@ class SearchPage extends Page {
 
     get baseUrl() { return browser.options.baseUrl; }
 
-    get paths() {
-        return {
-            about: 'prototypes/about.html',
-            allTopics: 'prototypes/browse-topics-lists/a.html',
-            browse: 'prototypes/browse-topics-lists/enm-picks.html',
-            home: 'prototypes/',
-            featuredTopics: 'prototypes/browse-topics-lists/enm-picks.html',
-            search: 'prototypes/search-results',
-        };
-    }
-
     get navbar() {
         return {
             about: $( 'a.navbar-item=About' ),
@@ -32,6 +21,17 @@ class SearchPage extends Page {
             home: $( 'h1.enm-logo' ),
 
             search: $( 'a.navbar-item=Search' ),
+        };
+    }
+
+    get paths() {
+        return {
+            about: 'prototypes/about.html',
+            allTopics: 'prototypes/browse-topics-lists/a.html',
+            browse: 'prototypes/browse-topics-lists/enm-picks.html',
+            home: 'prototypes/',
+            featuredTopics: 'prototypes/browse-topics-lists/enm-picks.html',
+            search: 'prototypes/search-results',
         };
     }
 
