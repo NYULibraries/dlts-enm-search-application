@@ -1,4 +1,4 @@
-/* global browser:false $:false */
+/* global browser:false $:false $$:false */
 
 import Page from './page';
 
@@ -43,6 +43,34 @@ class SearchPage extends Page {
             results : {
                 _element : $( 'div.enm-results' ),
                 text     : $( 'div.enm-results' ).getText(),
+            },
+        };
+    }
+
+    get searchEcho() {
+        return {
+            searchDCI : {
+                dismiss  : () => { $( 'button#search-dci' ).click(); },
+
+                query    : $( '//span[button[@id="search-dci"]]' )
+                    .getText()
+                    .replace( /^Searching full texts and topics for: /, '' ),
+            },
+            topicDCIs : {
+                // This does not work:
+                // dismiss : ( topic ) => { $( '#' + topic ).click(); },
+                //
+                // Example:
+                //
+                // $( "button#Rilke's writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)" )
+                //
+                // ... returns error:
+                //
+                // Error: invalid selector: An invalid or illegal selector was specified
+                // TODO
+                dismiss : ( topic ) => { return 'NOT IMPLEMENTED YET'; },
+
+                topics  : $$( 'span.enm-topic' ).map( ( topicDCI ) => { return topicDCI.getText(); } ),
             },
         };
     }
