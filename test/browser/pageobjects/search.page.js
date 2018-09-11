@@ -14,8 +14,8 @@ class SearchPage extends Page {
                     const found = topicItem.getText().match( /^(.*) \((\d+)\)$/ );
                     return [ found[ 1 ], found[ 2 ] ];
                 }
-        ),
-    };
+            ),
+        };
     }
 
     get navbar() {
