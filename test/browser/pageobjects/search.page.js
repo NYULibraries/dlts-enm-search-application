@@ -85,7 +85,6 @@ class SearchPage extends Page {
             },
             results : {
                 _element : $( '.enm-results' ),
-                text     : $( '.enm-results' ).getText(),
             },
         };
     }
