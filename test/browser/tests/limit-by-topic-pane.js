@@ -26,9 +26,14 @@ suite( 'Limit by Topic Pane', function () {
         SearchPage.searchEcho.topicDCIs.dismiss( topic );
         console.log( SearchPage.searchEcho.topicDCIs.topics );
 
+        SearchPage.searchEcho.topicDCIs.dismiss( 'Disintegration -- fear of' );
+        console.log( SearchPage.searchEcho.topicDCIs.topics );
+
         SearchPage.searchEcho.searchDCI.dismiss();
 
-        console.log( SearchPage.searchEcho.topicDCIs.topics );
+        SearchPage.limitByTopicPane.seeAllLink.click();
+        SearchPage.limitByTopicPane.seeLessLink.waitForVisible();
+        SearchPage.limitByTopicPane.seeLessLink.click();
 
         console.log( topicsWithHitCounts );
     } );
