@@ -28,7 +28,11 @@ class SearchPage extends Page {
             about: $( 'a.navbar-item=About' ),
 
             // Menu
-            browse: $( 'a.navbar-link=Browse' ),
+            browse: {
+                _element : $( 'a.navbar-link=Browse' ),
+                click    : () => { $( 'a.navbar-link=Browse' ).click(); },
+                expand   : () => { $( 'a.navbar-link=Browse' ).moveToObject( 0, 0 ); },
+            },
             // First item of Browse menu
             featuredTopics: $( 'a.navbar-item=Featured topics' ),
             // Second item of Browse menu
@@ -120,12 +124,6 @@ class SearchPage extends Page {
         // super.open( 'search' );
         // For now use the prototype for writing of the tests.
         super.open( this.paths.search );
-    }
-
-    expandNavbarBrowseMenu() {
-        // Note this will need to be replaced with Actions command.
-        // See https://github.com/webdriverio/webdriverio/issues/2140
-        this.navbar.browse.moveToObject( 0, 0 );
     }
 
     // These can't be run in resultsPane getter because it fails if search hasn't

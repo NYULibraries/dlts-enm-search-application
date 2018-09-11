@@ -22,14 +22,14 @@ suite( 'Navbar', function () {
     } );
 
     test( 'Clicking "All topics" under "Browse" menu takes user to all topics', function () {
-        SearchPage.expandNavbarBrowseMenu();
+        SearchPage.navbar.browse.expand();
         SearchPage.navbar.allTopics.click();
 
         assert.equal(  SearchPage.currentUrl, SearchPage.baseUrl + SearchPage.paths.allTopics );
     } );
 
     test( 'Clicking "Featured topics" under "Browse" menu takes user to featured topics', function () {
-        SearchPage.expandNavbarBrowseMenu();
+        SearchPage.navbar.browse.expand();
         SearchPage.navbar.featuredTopics.click();
 
         assert.equal(  SearchPage.currentUrl, SearchPage.baseUrl + SearchPage.paths.featuredTopics );
