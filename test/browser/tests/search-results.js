@@ -33,7 +33,7 @@ function testResultsPaneNumBooksAndPages( query, expected ) {
         }
 
         assert.equal(
-            getStringForComparison( SearchPage.getResultsPaneNumPages(), SearchPage.getResultsPaneNumBooks() ),
+            getStringForComparison( SearchPage.resultsPane.header.numPages(), SearchPage.resultsPane.header.numBooks() ),
             getStringForComparison( expected.resultsPane.numPages, expected.resultsPane.numBooks )
         );
     } );

@@ -61,6 +61,27 @@ class SearchPage extends Page {
         return {
             header  : {
                 text : $( 'div.enm-pane-results header' ).getText(),
+                numPages: () => {
+                    return this.resultsPane.header.numPagesAndBooks().numPages;
+                },
+                numBooks: () => {
+                    return this.getResultsPaneNumBooksAndPages().numBooks;
+                },
+                numPagesAndBooks: () => {
+                    let found = this.resultsPane.header.text.match( /Results: (.*) pages in (\d+) books/ );
+
+                    if ( found ) {
+                        return {
+                            numBooks : parseInt( found[ 2 ].replace( ',', '' ), 10 ),
+                            numPages : parseInt( found[ 1 ].replace( ',', '' ), 10 ),
+                        };
+                    } else {
+                        return {
+                            numBooks : NaN,
+                            numPages : NaN,
+                        };
+                    }
+                },
             },
             results : {
                 _element : $( 'div.enm-results' ),
@@ -126,30 +147,6 @@ class SearchPage extends Page {
         // super.open( 'search' );
         // For now use the prototype for writing of the tests.
         super.open( this.paths.search );
-    }
-
-    // These can't be run in resultsPane getter because it fails if search hasn't
-    // been submitted and run to completion.
-    getResultsPaneNumBooks() {
-        return this.getResultsPaneNumBooksAndPages().numBooks;
-    }
-    getResultsPaneNumPages() {
-        return this.getResultsPaneNumBooksAndPages().numPages;
-    }
-    getResultsPaneNumBooksAndPages( index ) {
-        let found = this.resultsPane.header.text.match( /Results: (.*) pages in (\d+) books/ );
-
-        if ( found ) {
-            return {
-                numBooks : parseInt( found[ 2 ].replace( ',', '' ), 10 ),
-                numPages : parseInt( found[ 1 ].replace( ',', '' ), 10 ),
-            };
-        } else {
-            return {
-                numBooks : NaN,
-                numPages : NaN,
-            };
-        }
     }
 
     search( query ) {
