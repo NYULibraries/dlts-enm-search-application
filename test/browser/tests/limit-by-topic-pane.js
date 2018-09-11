@@ -4,7 +4,7 @@ import { assert } from 'chai';
 
 import SearchPage from '../pageobjects/search.page';
 
-suite( 'Navbar', function () {
+suite( 'Limit by Topic Pane', function () {
     setup( function () {
         SearchPage.open();
     } );
