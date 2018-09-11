@@ -65,7 +65,7 @@ class SearchPage extends Page {
                     return this.resultsPane.header.numPagesAndBooks().numPages;
                 },
                 numBooks: () => {
-                    return this.getResultsPaneNumBooksAndPages().numBooks;
+                    return this.resultsPane.header.numPagesAndBooks().numBooks;
                 },
                 numPagesAndBooks: () => {
                     let found = this.resultsPane.header.text.match( /Results: (.*) pages in (\d+) books/ );
