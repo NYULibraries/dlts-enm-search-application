@@ -27,6 +27,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
+        'test/browser/tests/limit-by-topic-pane.js',
         'test/browser/tests/navbar.js',
         'test/browser/tests/search-form.js',
         'test/browser/tests/search-results.js',
@@ -36,6 +37,9 @@ exports.config = {
         // 'path/to/excluded/files'
     ],
     suites: {
+        'limit-by-topic-pane': [
+            'test/browser/tests/limit-by-topic-pane.js',
+        ],
         navbar: [
             'test/browser/tests/navbar.js',
         ],

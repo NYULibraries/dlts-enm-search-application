@@ -12,9 +12,8 @@ suite( 'Navbar', function () {
     test( 'Temp', function () {
         SearchPage.searchAndWaitForResults( 'art' );
 
-        let topicsWithHitCounts = SearchPage.limitByTopicPane.topicsWithHitCounts();
+        let topicsWithHitCounts = SearchPage.limitByTopicPane.topicsWithHitCounts;
 
         console.log( topicsWithHitCounts );
-
     } );
-};
+} );
