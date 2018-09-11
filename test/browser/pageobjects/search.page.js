@@ -12,7 +12,7 @@ class SearchPage extends Page {
             topicsWithHitCounts : $$( '.enm-facets-group-visible a' ).map(
                 ( topicItem ) => {
                     const found = topicItem.getText().match( /^(.*) \((\d+)\)$/ );
-                    return [ found[ 1 ], found[ 2 ] ];
+                    return [ found[ 1 ], parseInt( found[ 2 ], 10 ) ];
                 }
             ),
         };
