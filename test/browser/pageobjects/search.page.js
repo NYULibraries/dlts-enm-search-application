@@ -9,6 +9,9 @@ class SearchPage extends Page {
 
     get limitByTopicPane() {
         return {
+            click : ( topic ) => {
+                $( 'a[ id = "' + topic + '" ]' ).click();
+            },
             topicsWithHitCounts : $$( '.enm-facets-group-visible a' ).map(
                 ( topicItem ) => {
                     const found = topicItem.getText().match( /^(.*) \((\d+)\)$/ );
