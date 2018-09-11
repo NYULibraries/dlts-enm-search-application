@@ -33,8 +33,10 @@ class SearchPage extends Page {
                 click    : () => { $( 'a.navbar-link=Browse' ).click(); },
                 expand   : () => { $( 'a.navbar-link=Browse' ).moveToObject( 0, 0 ); },
             },
+
             // First item of Browse menu
             featuredTopics: $( 'a.navbar-item=Featured topics' ),
+
             // Second item of Browse menu
             allTopics: $( 'a.navbar-item=All topics' ),
 
