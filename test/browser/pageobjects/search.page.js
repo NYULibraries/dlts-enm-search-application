@@ -94,8 +94,18 @@ class SearchPage extends Page {
 
                         book.authorsAndPublisher       = result.element( '.meta' ).getText();
                         book.isbn                      = result.getAttribute( 'id' );
-                        book.maximumPageRelevanceScore = result.element( '.relevance' ).getText();
-                        book.numMatchedPages           = result.element( '.matches' ).getText();
+                        book.maximumPageRelevanceScore =
+                            // Leave the score as a string, don't mess with JS floats
+                            result.element( '.relevance' )
+                                .getText()
+                                .match( /Maximum page relevance score: (\S+)/ )[ 1 ];
+                        book.numMatchedPages           =
+                            parseInt(
+                                result.element( '.matches' )
+                                    .getText()
+                                    .match( /(\d+) matched pages/ )[ 1 ],
+                                10
+                            );
                         book.thumbnail                 = result.element( '.enm-thumbnail img' ).getAttribute( 'src' );
                         book.title                     = result.element( '.title' ).getText();
 
