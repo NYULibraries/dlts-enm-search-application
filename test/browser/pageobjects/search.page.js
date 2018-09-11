@@ -85,6 +85,25 @@ class SearchPage extends Page {
             },
             results : {
                 _element : $( '.enm-results' ),
+                books    : () => {
+                    let results = $$( '.enm-results div.box' );
+                    let books   = [];
+
+                    results.forEach( ( result ) => {
+                        let book = {};
+
+                        book.authorsAndPublisher       = result.element( '.meta' ).getText();
+                        book.isbn                      = result.getAttribute( 'id' );
+                        book.maximumPageRelevanceScore = result.element( '.relevance' ).getText();
+                        book.numMatchedPages           = result.element( '.matches' ).getText();
+                        book.thumbnail                 = result.element( '.enm-thumbnail img' ).getAttribute( 'src' );
+                        book.title                     = result.element( '.title' ).getText();
+
+                        books.push( book );
+                    } );
+
+                    return books;
+                },
             },
         };
     }
