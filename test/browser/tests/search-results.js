@@ -24,6 +24,8 @@ suite( 'Search results', function () {
             let [ query, expectedResults ] = entry;
 
             testResultsPaneNumBooksAndPages( query, expectedResults );
+
+            testResultsPaneHits( query, {} );
         } );
     } );
 } );
@@ -40,5 +42,14 @@ function testResultsPaneNumBooksAndPages( query, expected ) {
             getStringForComparison( SearchPage.resultsPane.header.numPages(), SearchPage.resultsPane.header.numBooks() ),
             getStringForComparison( expected.resultsPane.numPages, expected.resultsPane.numBooks )
         );
+    } );
+}
+
+function testResultsPaneHits( query, expected ) {
+    test( 'Query "' + query + '" should return correct hits', function () {
+        SearchPage.searchAndWaitForResults( query );
+
+        let books = SearchPage.resultsPane.results.books();
+        console.log( books );
     } );
 }
