@@ -1,12 +1,16 @@
 /* global setup:false suite:false test:false */
 
 import fs from 'fs';
+import path from 'path';
 
 import { assert } from 'chai';
 
 import SearchPage from '../pageobjects/search.page';
 
-const goldenFiles = fs.readdirSync( './testdata/golden/search-results/' );
+const GOLDEN_FILES_DIRECTORY = path.resolve( __dirname, './testdata/golden/search-results/' );
+const goldenFiles = fs.readdirSync( GOLDEN_FILES_DIRECTORY ).map( ( file ) => {
+    return path.resolve( GOLDEN_FILES_DIRECTORY + '/' + file );
+} );
 
 suite( 'Search results', function () {
     setup( function () {
