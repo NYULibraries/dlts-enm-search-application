@@ -98,7 +98,7 @@ class SearchPage extends Page {
                 book     : ( title ) => {
                     return $( '.enm-results div[ name = "' + title + '" ]' );
                 },
-                books    : () => {
+                metadata : () => {
                     let results = $$( '.enm-results div.box' );
                     let books   = [];
 
