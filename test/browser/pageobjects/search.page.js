@@ -9,8 +9,8 @@ class SearchPage extends Page {
 
     get limitByTopicPane() {
         return {
-            seeAllLink              : $( 'a=See All' ),
-            seeLessLink             : $( 'a=See Less' ),
+            seeAllLink  : $( 'a=See All' ),
+            seeLessLink : $( 'a=See Less' ),
 
             topic : ( topic ) => {
                 $( 'a[ id = "' + topic + '" ]' );
