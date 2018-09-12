@@ -114,6 +114,9 @@ class SearchPage extends Page {
 
                     return books;
                 },
+                clickBook : ( title ) => {
+                    $( '.enm-results div[ name = "' + title + '" ]' ).click();
+                },
             },
         };
     }
