@@ -16,9 +16,9 @@ suite( 'Limit by Topic Pane', function () {
 
         let topic = topicsWithHitCounts[ 0 ][ 0 ];
 
-        SearchPage.limitByTopicPane.clickTopic( topic );
-        SearchPage.limitByTopicPane.clickTopic( 'Andreas-Salomé, Lou (Luise)' );
-        SearchPage.limitByTopicPane.clickTopic( 'Disintegration -- fear of' );
+        SearchPage.limitByTopicPane.topic( topic ).click();
+        SearchPage.limitByTopicPane.topic( 'Andreas-Salomé, Lou (Luise)' ).click();
+        SearchPage.limitByTopicPane.topic( 'Disintegration -- fear of' ).click();
 
         console.log( SearchPage.searchEcho.searchDCI.query );
         console.log( SearchPage.searchEcho.topicDCIs.topics );
