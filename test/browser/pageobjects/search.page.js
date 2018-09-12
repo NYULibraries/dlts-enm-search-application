@@ -9,12 +9,12 @@ class SearchPage extends Page {
 
     get limitByTopicPane() {
         return {
-            clickTopic          : ( topic ) => {
+            clickTopic              : ( topic ) => {
                 $( 'a[ id = "' + topic + '" ]' ).click();
             },
-            seeAllLink          : $( 'a=See All' ),
-            seeLessLink         : $( 'a=See Less' ),
-            topicsWithHitCounts : $$( '.enm-facets-group-visible a' ).map(
+            seeAllLink              : $( 'a=See All' ),
+            seeLessLink             : $( 'a=See Less' ),
+            topicNamesWithHitCounts : $$( '.enm-facets-group-visible a' ).map(
                 ( topicItem ) => {
                     const found = topicItem.getText().match( /^(.*) \((\d+)\)$/ );
                     return [ found[ 1 ], parseInt( found[ 2 ], 10 ) ];
