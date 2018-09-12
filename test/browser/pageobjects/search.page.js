@@ -61,6 +61,17 @@ class SearchPage extends Page {
 
     get previewPane() {
         return {
+            barChart : {
+                bars : $$( '.enm-pane-preview svg rect' ),
+                barForPage : ( page ) => {
+                    return $( '.enm-pane-preview svg rect[ name = "' + page + '"]' );
+                },
+                isBarForPageSelected : ( page ) => {
+                    return this.previewPane.barChart.barForPage( page )
+                        .getAttribute( 'class' ) === 'bar enm-page-active';
+                },
+            },
+
             loadTheFirstMatchedPageLink : $( '=Load the first matched page' ),
             next     : $( 'a.button=next >' ),
             previous : $( 'a.button=< previous' ),
