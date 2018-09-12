@@ -9,7 +9,7 @@ class SearchPage extends Page {
 
     get limitByTopicPane() {
         return {
-            click : ( topic ) => {
+            clickTopic          : ( topic ) => {
                 $( 'a[ id = "' + topic + '" ]' ).click();
             },
             seeAllLink : $( 'a=See All' ),
