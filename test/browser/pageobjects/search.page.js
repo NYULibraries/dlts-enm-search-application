@@ -70,7 +70,6 @@ class SearchPage extends Page {
     get resultsPane() {
         return {
             header  : {
-                text : $( 'div.enm-pane-results header' ).getText(),
                 numPages: () => {
                     return this.resultsPane.header.numPagesAndBooks().numPages;
                 },
@@ -92,6 +91,7 @@ class SearchPage extends Page {
                         };
                     }
                 },
+                text : $( 'div.enm-pane-results header' ).getText(),
             },
             results : {
                 _element : $( '.enm-results' ),
