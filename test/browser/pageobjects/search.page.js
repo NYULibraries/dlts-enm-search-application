@@ -57,6 +57,14 @@ class SearchPage extends Page {
         };
     }
 
+    get previewPane() {
+        return {
+            loadTheFirstMatchedPageLink : $( '=Load the first matched page' ),
+            next     : $( 'a.button=next >' ),
+            previous : $( 'a.button=< previous' ),
+        };
+    }
+
     get resultsPane() {
         return {
             header  : {
