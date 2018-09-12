@@ -12,8 +12,8 @@ class SearchPage extends Page {
             clickTopic          : ( topic ) => {
                 $( 'a[ id = "' + topic + '" ]' ).click();
             },
-            seeAllLink : $( 'a=See All' ),
-            seeLessLink : $( 'a=See Less' ),
+            seeAllLink          : $( 'a=See All' ),
+            seeLessLink         : $( 'a=See Less' ),
             topicsWithHitCounts : $$( '.enm-facets-group-visible a' ).map(
                 ( topicItem ) => {
                     const found = topicItem.getText().match( /^(.*) \((\d+)\)$/ );
