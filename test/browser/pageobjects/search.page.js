@@ -73,8 +73,20 @@ class SearchPage extends Page {
             },
 
             loadTheFirstMatchedPageLink : $( '=Load the first matched page' ),
-            next     : $( 'a.button=next >' ),
-            previous : $( 'a.button=< previous' ),
+            next                        : $( 'a.button=next >' ),
+            pageNumber                  : $( '.enm-pane-preview .enm-pageno' ).getText(),
+            pageText                    : $( '.enm-pageText' ).getText(),
+            pageTextHightlights         : $$( '.enm-pageText mark' ).map(
+                ( highlight ) => { return highlight.getText(); }
+            ),
+            previous                    : $( 'a.button=< previous' ),
+            title                       : $( '.enm-pane-preview .title' ).getText(),
+            topicsOnThisPage            : $$( '.enm-topicsonthispage li a' ).map(
+                ( highlight ) => { return highlight.getText(); }
+            ),
+            topicsOnThisPageHighlights  : $$( '.enm-topicsonthispage li a mark' ).map(
+                ( highlight ) => { return highlight.getText(); }
+            ),
         };
     }
 
