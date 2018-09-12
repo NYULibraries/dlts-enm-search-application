@@ -95,6 +95,9 @@ class SearchPage extends Page {
             },
             results : {
                 _element : $( '.enm-results' ),
+                book     : ( title ) => {
+                    return $( '.enm-results div[ name = "' + title + '" ]' );
+                },
                 books    : () => {
                     let results = $$( '.enm-results div.box' );
                     let books   = [];
@@ -123,9 +126,6 @@ class SearchPage extends Page {
                     } );
 
                     return books;
-                },
-                clickBook : ( title ) => {
-                    $( '.enm-results div[ name = "' + title + '" ]' ).click();
                 },
             },
         };
