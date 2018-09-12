@@ -49,7 +49,8 @@ function testResultsPaneHits( query, expected ) {
     test( 'Query "' + query + '" should return correct hits', function () {
         SearchPage.searchAndWaitForResults( query );
 
-        let books = SearchPage.resultsPane.results.books();
+        let books = SearchPage.resultsPane.results.metadata();
+
         console.log( books );
     } );
 }
