@@ -38,31 +38,40 @@ suite( 'Temp', function () {
     //     console.log( topicsWithHitCounts );
     // } );
 
-    test( 'preview pane', function () {
-        // SearchPage.searchForm.fulltextCheckbox.click();
+    // test( 'preview pane', function () {
+    //     // SearchPage.searchForm.fulltextCheckbox.click();
+    //     SearchPage.searchAndWaitForResults( 'art' );
+    //
+    //     SearchPage.previewPane.loadTheFirstMatchedPageLink.click();
+    //
+    //     // SearchPage.previewPane.next.click();
+    //     // SearchPage.previewPane.next.click();
+    //     // SearchPage.previewPane.next.click();
+    //     //
+    //     // SearchPage.previewPane.previous.click();
+    //     // SearchPage.previewPane.previous.click();
+    //     // SearchPage.previewPane.previous.click();
+    //     //
+    //     // console.log( 'page number = ' + SearchPage.previewPane.pageNumber );
+    //     // console.log( 'title = ' + SearchPage.previewPane.title );
+    //     // console.log( 'topics on page = ' + SearchPage.previewPane.topicsOnThisPage );
+    //     // console.log( 'topics on page highlights = ' + SearchPage.previewPane.topicsOnThisPageHighlights );
+    //     // console.log( 'page pageText = ' + SearchPage.previewPane.pageText );
+    //     // console.log( 'page pageTextHighlights = ' + SearchPage.previewPane.pageTextHighlights );
+    //
+    //     console.log( SearchPage.previewPane.barChart.data );
+    //     console.log( SearchPage.previewPane.barChart.selectedPage() );
+    //     console.log( SearchPage.previewPane.barChart.barForPage( 155 ).click() );
+    //     console.log( SearchPage.previewPane.barChart.selectedPage() );
+    //
+    // } );
+
+    test( 'snapshots', function () {
         SearchPage.searchAndWaitForResults( 'art' );
 
         SearchPage.previewPane.loadTheFirstMatchedPageLink.click();
 
-        // SearchPage.previewPane.next.click();
-        // SearchPage.previewPane.next.click();
-        // SearchPage.previewPane.next.click();
-        //
-        // SearchPage.previewPane.previous.click();
-        // SearchPage.previewPane.previous.click();
-        // SearchPage.previewPane.previous.click();
-        //
-        // console.log( 'page number = ' + SearchPage.previewPane.pageNumber );
-        // console.log( 'title = ' + SearchPage.previewPane.title );
-        // console.log( 'topics on page = ' + SearchPage.previewPane.topicsOnThisPage );
-        // console.log( 'topics on page highlights = ' + SearchPage.previewPane.topicsOnThisPageHighlights );
-        // console.log( 'page pageText = ' + SearchPage.previewPane.pageText );
-        // console.log( 'page pageTextHighlights = ' + SearchPage.previewPane.pageTextHighlights );
-
-        console.log( SearchPage.previewPane.barChart.data );
-        console.log( SearchPage.previewPane.barChart.selectedPage() );
-        console.log( SearchPage.previewPane.barChart.barForPage( 155 ).click() );
-        console.log( SearchPage.previewPane.barChart.selectedPage() );
-
+        console.log( SearchPage.searchResultsSnapshot() );
+        console.log( SearchPage.previewSnapshot() );
     } );
 } );
