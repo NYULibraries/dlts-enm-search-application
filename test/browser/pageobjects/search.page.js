@@ -323,7 +323,7 @@ class SearchPage extends Page {
             title : this.previewPane.title,
 
             barChartData         : this.previewPane.barChart.data,
-            barChartSelectedpage : this.previewPane.selectedPage(),
+            barChartSelectedpage : this.previewPane.selectedPage,
         };
     }
 
