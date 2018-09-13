@@ -3,9 +3,13 @@
 import Page from './page';
 
 class SearchPage extends Page {
-    get alertText() { return browser.alertText; }
+    get alertText() {
+        return browser.alertText;
+    }
 
-    get baseUrl() { return browser.options.baseUrl; }
+    get baseUrl() {
+        return browser.options.baseUrl;
+    }
 
     get limitByTopicPane() {
         return {
@@ -27,43 +31,47 @@ class SearchPage extends Page {
 
     get navbar() {
         return {
-            about: $( 'a.navbar-item=About' ),
+            about : $( 'a.navbar-item=About' ),
 
             // Menu
-            browse: {
+            browse : {
                 _element : $( 'a.navbar-link=Browse' ),
-                click    : () => { $( 'a.navbar-link=Browse' ).click(); },
-                expand   : () => { $( 'a.navbar-link=Browse' ).moveToObject( 0, 0 ); },
+                click    : () => {
+                    $( 'a.navbar-link=Browse' ).click();
+                },
+                expand   : () => {
+                    $( 'a.navbar-link=Browse' ).moveToObject( 0, 0 );
+                },
             },
 
             // First item of Browse menu
-            featuredTopics: $( 'a.navbar-item=Featured topics' ),
+            featuredTopics : $( 'a.navbar-item=Featured topics' ),
 
             // Second item of Browse menu
-            allTopics: $( 'a.navbar-item=All topics' ),
+            allTopics : $( 'a.navbar-item=All topics' ),
 
-            home: $( 'h1.enm-logo' ),
+            home : $( 'h1.enm-logo' ),
 
-            search: $( 'a.navbar-item=Search' ),
+            search : $( 'a.navbar-item=Search' ),
         };
     }
 
     get paths() {
         return {
-            about: 'prototypes/about.html',
-            allTopics: 'prototypes/browse-topics-lists/a.html',
-            browse: 'prototypes/browse-topics-lists/enm-picks.html',
-            home: 'prototypes/',
-            featuredTopics: 'prototypes/browse-topics-lists/enm-picks.html',
-            search: 'prototypes/search-results',
+            about          : 'prototypes/about.html',
+            allTopics      : 'prototypes/browse-topics-lists/a.html',
+            browse         : 'prototypes/browse-topics-lists/enm-picks.html',
+            home           : 'prototypes/',
+            featuredTopics : 'prototypes/browse-topics-lists/enm-picks.html',
+            search         : 'prototypes/search-results',
         };
     }
 
     get previewPane() {
         return {
             barChart : {
-                bars : $$( '.enm-pane-preview svg rect' ),
-                barForPage : ( page ) => {
+                bars                 : $$( '.enm-pane-preview svg rect' ),
+                barForPage           : ( page ) => {
                     return $( '.enm-pane-preview svg rect[ name = "' + page + '"]' );
                 },
                 isBarForPageSelected : ( page ) => {
@@ -77,15 +85,21 @@ class SearchPage extends Page {
             pageNumber                  : $( '.enm-pane-preview .enm-pageno' ).getText(),
             pageText                    : $( '.enm-pageText' ).getText(),
             pageTextHighlights          : $$( '.enm-pageText mark' ).map(
-                ( highlight ) => { return highlight.getText(); }
+                ( highlight ) => {
+                    return highlight.getText();
+                }
             ),
             previous                    : $( 'a.button=< previous' ),
             title                       : $( '.enm-pane-preview .title' ).getText(),
             topicsOnThisPage            : $$( '.enm-topicsonthispage li a' ).map(
-                ( highlight ) => { return highlight.getText(); }
+                ( highlight ) => {
+                    return highlight.getText();
+                }
             ),
             topicsOnThisPageHighlights  : $$( '.enm-topicsonthispage li a mark' ).map(
-                ( highlight ) => { return highlight.getText(); }
+                ( highlight ) => {
+                    return highlight.getText();
+                }
             ),
         };
     }
@@ -93,13 +107,13 @@ class SearchPage extends Page {
     get resultsPane() {
         return {
             header  : {
-                numPages: () => {
+                numPages         : () => {
                     return this.resultsPane.header.numPagesAndBooks().numPages;
                 },
-                numBooks: () => {
+                numBooks         : () => {
                     return this.resultsPane.header.numPagesAndBooks().numBooks;
                 },
-                numPagesAndBooks: () => {
+                numPagesAndBooks : () => {
                     let found = this.resultsPane.header.text.match( /Results: (.*) pages in (\d+) books/ );
 
                     if ( found ) {
@@ -114,7 +128,7 @@ class SearchPage extends Page {
                         };
                     }
                 },
-                text : $( 'div.enm-pane-results header' ).getText(),
+                text             : $( 'div.enm-pane-results header' ).getText(),
             },
             results : {
                 _element : $( '.enm-results' ),
@@ -157,17 +171,23 @@ class SearchPage extends Page {
     get searchEcho() {
         return {
             searchDCI : {
-                dismiss  : () => { $( 'button#search-dci' ).click(); },
+                dismiss : () => {
+                    $( 'button#search-dci' ).click();
+                },
 
-                query    : $( '//span[button[@id="search-dci"]]' )
+                query : $( '//span[button[@id="search-dci"]]' )
                     .getText()
                     .replace( /^Searching full texts and topics for: /, '' ),
             },
             topicDCIs : {
-                dismiss : ( topic ) => { return $( 'button[ id="' + topic + '" ]' ).click(); },
+                dismiss : ( topic ) => {
+                    return $( 'button[ id="' + topic + '" ]' ).click();
+                },
 
-                topics  : $$( 'span.enm-topic' ).map(
-                    ( topicDCI ) => { return topicDCI.getText(); }
+                topics : $$( 'span.enm-topic' ).map(
+                    ( topicDCI ) => {
+                        return topicDCI.getText();
+                    }
                 ),
             },
         };
@@ -184,17 +204,25 @@ class SearchPage extends Page {
             //     Element <input type="checkbox" name="fulltextChx" id="fulltextChx" class="is-medium is-checkbox" value="pageText"> is not clickable at point (630, 106). Other element would receive the click: <label for="fulltextChx">...</label>
 
             fulltextCheckbox : {
-                click      : () => { $( 'label[ for="fulltextChx" ]' ).click(); },
-                isSelected : () => { return $( '#fulltextChx' ).isSelected(); },
+                click      : () => {
+                    $( 'label[ for="fulltextChx" ]' ).click();
+                },
+                isSelected : () => {
+                    return $( '#fulltextChx' ).isSelected();
+                },
                 text       : $( '#fulltextChx' ).getText(),
             },
-            topicsCheckbox   : {
-                click      : () => { $( 'label[ for="topicsChx" ]' ).click(); },
-                isSelected : () => { return $( '#topicsChx' ).isSelected(); },
+            topicsCheckbox : {
+                click      : () => {
+                    $( 'label[ for="topicsChx" ]' ).click();
+                },
+                isSelected : () => {
+                    return $( '#topicsChx' ).isSelected();
+                },
                 text       : $( '#topicsChx' ).getText(),
             },
 
-            submit: function () {
+            submit : function () {
                 browser.submitForm( 'form.enm-searchform' );
             },
         };
@@ -204,7 +232,9 @@ class SearchPage extends Page {
         return $( '#spinner' );
     }
 
-    get title() { return browser.getTitle(); };
+    get title() {
+        return browser.getTitle();
+    };
 
     open() {
         // This is the real path, after the build is implemented.
