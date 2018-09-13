@@ -74,7 +74,19 @@ class SearchPage extends Page {
                 barForPage           : ( page ) => {
                     return $( '.enm-pane-preview svg rect[ name = "' + page + '"]' );
                 },
-                selectedPage         : $( '.enm-page-active' ).getAttribute( 'name' ),
+                selectedPage         : () => {
+                    let activeBar;
+
+                    try {
+                        activeBar = $( '.enm-page-active' );
+
+                        return activeBar.getAttribute( 'name' );
+                    } catch( e ) {
+                        console.error( e );
+
+                        return null;
+                    }
+                },
             },
 
             loadTheFirstMatchedPageLink : $( '=Load the first matched page' ),
