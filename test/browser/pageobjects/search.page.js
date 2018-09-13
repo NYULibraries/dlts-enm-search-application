@@ -100,6 +100,7 @@ class SearchPage extends Page {
                 },
             },
 
+            isbn                        : 'TODO',
             loadTheFirstMatchedPageLink : $( '=Load the first matched page' ),
             next                        : $( 'a.button=next >' ),
             pageNumber                  : $( '.enm-pane-preview .enm-pageno' ).getText(),
