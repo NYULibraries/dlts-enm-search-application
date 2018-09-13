@@ -306,9 +306,24 @@ class SearchPage extends Page {
     }
 
     previewSnapshot() {
-    // Pre-condition: preview pane must have a page selected for preview
+        // Pre-condition: preview pane must have a page selected for preview
         return {
             id : this.getPreviewIdForCurrentPreview(),
+
+            isbn : this.previewPane.isbn,
+
+            pageNumber : this.previewPane.pageNumber,
+
+            pageText           : this.previewPane.pageText,
+            pageTextHighlights : this.previewPane.pageTextHighlights,
+
+            topicsOnThisPage           : this.previewPane.topicsOnThisPage,
+            topicsOnThisPageHighlights : this.previewPane.topicsOnThisPageHighlights,
+
+            title : this.previewPane.title,
+
+            barChartData         : this.previewPane.barChart.data,
+            barChartSelectedpage : this.previewPane.selectedPage(),
         };
     }
 
