@@ -305,6 +305,14 @@ class SearchPage extends Page {
             this.searchForm.topicsCheckbox.isSelected(),
         );
     }
+
+    previewSnapshot() {
+    // Pre-condition: preview pane must have a page selected for preview
+        return {
+            id : this.getPreviewIdForCurrentPreview(),
+        };
+    }
+
     search( query ) {
         this.searchForm.searchBox.addValue( query );
         this.searchForm.submit();
@@ -314,6 +322,24 @@ class SearchPage extends Page {
         this.searchForm.searchBox.addValue( query );
         this.searchForm.submit();
         this.resultsPane.results._element.waitForVisible( 5000 );
+    }
+
+    searchResultsSnapshot() {
+        return {
+            id              : this.getQueryIdForCurrentQuery(),
+
+            query           : this.searchForm.searchBox.getValue(),
+            searchFulltext  : this.searchForm.fulltextCheckbox.isSelected(),
+            searchTopics    : this.searchForm.topicsCheckbox.isSelected(),
+            searchDCI       : this.searchEcho.searchDCI.query,
+            topicsDCIs      : this.searchEcho.topicsDCIs ? this.searchEcho.topicsDCIs.topics : [],
+
+            limitByTopics   : this.limitByTopicPane.topicNamesWithHitCounts,
+
+            resultsNumBooks : this.resultsPane.header.numBooks(),
+            resultsNumPages : this.resultsPane.header.numPages(),
+            resultsMetadata : this.resultsPane.results.metadata(),
+        };
     }
 }
 
