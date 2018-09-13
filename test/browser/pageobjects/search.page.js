@@ -87,20 +87,19 @@ class SearchPage extends Page {
                 barForPage           : ( page ) => {
                     return $( '.enm-pane-preview svg rect[ name = "' + page + '"]' );
                 },
-            },
+                selectedPage         : () => {
+                    let activeBar;
 
-            currentPage                 : () => {
-                let activeBar;
+                    try {
+                        activeBar = $( '.enm-page-active' );
 
-                try {
-                    activeBar = $( '.enm-page-active' );
+                        return activeBar.getAttribute( 'name' );
+                    } catch( e ) {
+                        console.error( e );
 
-                    return activeBar.getAttribute( 'name' );
-                } catch( e ) {
-                    console.error( e );
-
-                    return null;
-                }
+                        return null;
+                    }
+                },
             },
             isbn                        : 'TODO',
             loadTheFirstMatchedPageLink : $( '=Load the first matched page' ),
@@ -294,7 +293,7 @@ class SearchPage extends Page {
             this.searchForm.fulltextCheckbox.isSelected(),
             this.searchForm.topicsCheckbox.isSelected(),
             this.previewPane.isbn,
-            this.previewPane.currentPage(),
+            this.previewPane.pageNumber(),
         );
     }
 
