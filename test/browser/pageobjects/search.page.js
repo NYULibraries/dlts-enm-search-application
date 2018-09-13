@@ -288,6 +288,23 @@ class SearchPage extends Page {
         super.open( this.paths.search );
     }
 
+    getPreviewIdForCurrentPreview() {
+        return SearchPage.getPreviewId(
+            this.searchForm.searchBox.getText(),
+            this.searchForm.fulltextCheckbox.isSelected(),
+            this.searchForm.topicsCheckbox.isSelected(),
+            this.previewPane.isbn,
+            this.previewPane.currentPage(),
+        );
+    }
+
+    getQueryIdForCurrentQuery() {
+        return SearchPage.getSearchId(
+            this.searchForm.searchBox.getText(),
+            this.searchForm.fulltextCheckbox.isSelected(),
+            this.searchForm.topicsCheckbox.isSelected(),
+        );
+    }
     search( query ) {
         this.searchForm.searchBox.addValue( query );
         this.searchForm.submit();
