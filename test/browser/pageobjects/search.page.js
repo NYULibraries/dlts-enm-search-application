@@ -183,12 +183,12 @@ class SearchPage extends Page {
             //
             //     Element <input type="checkbox" name="fulltextChx" id="fulltextChx" class="is-medium is-checkbox" value="pageText"> is not clickable at point (630, 106). Other element would receive the click: <label for="fulltextChx">...</label>
 
-            fulltext : {
+            fulltextCheckbox : {
                 click      : () => { $( 'label[ for="fulltextChx" ]' ).click(); },
                 isSelected : () => { return $( '#fulltextChx' ).isSelected(); },
                 text       : $( '#fulltextChx' ).getText(),
             },
-            topics : {
+            topicsCheckbox   : {
                 click      : () => { $( 'label[ for="topicsChx" ]' ).click(); },
                 isSelected : () => { return $( '#topicsChx' ).isSelected(); },
                 text       : $( '#topicsChx' ).getText(),

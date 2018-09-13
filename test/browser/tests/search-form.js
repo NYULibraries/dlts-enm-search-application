@@ -11,14 +11,14 @@ suite( 'Search form', function () {
 
     test( '"Full Text" checkbox is checked by default', function () {
         assert(
-            SearchPage.searchForm.fulltext.isSelected(),
+            SearchPage.searchForm.fulltextCheckbox.isSelected(),
             '"Full Text" checkbox is not checked'
         );
     } );
 
     test( '"Topics" checkbox is checked by default', function () {
         assert(
-            SearchPage.searchForm.topics.isSelected(),
+            SearchPage.searchForm.topicsCheckbox.isSelected(),
             '"Topics" checkbox is not checked'
         );
     } );
@@ -48,13 +48,13 @@ suite( 'Search form', function () {
     test(
         'Submitting query with neither "Full Text" nor "Topics" selected should bring up error dialog box',
         function () {
-            SearchPage.searchForm.fulltext.click();
-            if ( SearchPage.searchForm.fulltext.isSelected() ) {
+            SearchPage.searchForm.fulltextCheckbox.click();
+            if ( SearchPage.searchForm.fulltextCheckbox.isSelected() ) {
                 assert.fail( 'Failed to de-select "Topics" -- make sure "Topics" is selected by default.' );
             }
 
-            SearchPage.searchForm.topics.click();
-            if ( SearchPage.searchForm.topics.isSelected() ) {
+            SearchPage.searchForm.topicsCheckbox.click();
+            if ( SearchPage.searchForm.topicsCheckbox.isSelected() ) {
                 assert.fail( 'Failed to de-select "Topics" -- make sure "Topics" is selected by default.' );
             }
 
