@@ -85,21 +85,21 @@ class SearchPage extends Page {
                 barForPage           : ( page ) => {
                     return $( '.enm-pane-preview svg rect[ name = "' + page + '"]' );
                 },
-                selectedPage         : () => {
-                    let activeBar;
-
-                    try {
-                        activeBar = $( '.enm-page-active' );
-
-                        return activeBar.getAttribute( 'name' );
-                    } catch( e ) {
-                        console.error( e );
-
-                        return null;
-                    }
-                },
             },
 
+            currentPage                 : () => {
+                let activeBar;
+
+                try {
+                    activeBar = $( '.enm-page-active' );
+
+                    return activeBar.getAttribute( 'name' );
+                } catch( e ) {
+                    console.error( e );
+
+                    return null;
+                }
+            },
             isbn                        : 'TODO',
             loadTheFirstMatchedPageLink : $( '=Load the first matched page' ),
             next                        : $( 'a.button=next >' ),
