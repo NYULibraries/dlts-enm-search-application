@@ -70,7 +70,18 @@ class SearchPage extends Page {
     get previewPane() {
         return {
             barChart : {
-                bars                 : $$( '.enm-pane-preview svg rect' ),
+                data : $$( '.enm-pane-preview svg rect' ).map(
+                    ( bar ) => {
+                        return {
+                            page   : bar.getAttribute( 'name' ),
+                            x      : bar.getAttribute( 'x' ),
+                            y      : bar.getAttribute( 'y' ),
+                            width  : bar.getAttribute( 'width' ),
+                            height : bar.getAttribute( 'height' ),
+                            stroke : bar.getAttribute( 'stroke' ),
+                        };
+                    }
+                ),
                 barForPage           : ( page ) => {
                     return $( '.enm-pane-preview svg rect[ name = "' + page + '"]' );
                 },

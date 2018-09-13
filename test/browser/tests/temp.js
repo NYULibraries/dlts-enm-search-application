@@ -59,7 +59,7 @@ suite( 'Temp', function () {
         // console.log( 'page pageText = ' + SearchPage.previewPane.pageText );
         // console.log( 'page pageTextHighlights = ' + SearchPage.previewPane.pageTextHighlights );
 
-        console.log( SearchPage.previewPane.barChart.bars );
+        console.log( SearchPage.previewPane.barChart.data );
         console.log( SearchPage.previewPane.barChart.selectedPage() );
         console.log( SearchPage.previewPane.barChart.barForPage( 155 ).click() );
         console.log( SearchPage.previewPane.barChart.selectedPage() );
