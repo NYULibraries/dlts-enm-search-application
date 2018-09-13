@@ -1,5 +1,7 @@
 /* global browser:false $:false $$:false */
 
+import crypto from 'crypto';
+
 import Page from './page';
 
 class SearchPage extends Page {
@@ -256,6 +258,28 @@ class SearchPage extends Page {
     get title() {
         return browser.getTitle();
     };
+
+    static getPreviewId( query, searchFulltext, searchTopics, isbn, pageNumber ) {
+        return this.getSearchId( query, searchFulltext, searchTopics ) +
+               `-${isbn}-${pageNumber}.json`;
+    }
+
+    static getSearchId( query, searchFulltext, searchTopics ) {
+        const hash    = crypto.createHash( 'sha256' );
+        const queryId = hash.update( query ).digest( 'hex' );
+
+        let basename = queryId;
+
+        if ( searchFulltext ) {
+            basename += '-fulltext';
+        }
+
+        if ( searchTopics ) {
+            basename += '-topics';
+        }
+
+        return basename;
+    }
 
     open() {
         // This is the real path, after the build is implemented.
