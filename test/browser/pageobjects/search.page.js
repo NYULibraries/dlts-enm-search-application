@@ -76,7 +76,7 @@ class SearchPage extends Page {
             next                        : $( 'a.button=next >' ),
             pageNumber                  : $( '.enm-pane-preview .enm-pageno' ).getText(),
             pageText                    : $( '.enm-pageText' ).getText(),
-            pageTextHightlights         : $$( '.enm-pageText mark' ).map(
+            pageTextHighlights          : $$( '.enm-pageText mark' ).map(
                 ( highlight ) => { return highlight.getText(); }
             ),
             previous                    : $( 'a.button=< previous' ),
