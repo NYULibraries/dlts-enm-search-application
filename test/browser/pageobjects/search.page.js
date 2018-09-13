@@ -293,7 +293,7 @@ class SearchPage extends Page {
             this.searchForm.fulltextCheckbox.isSelected(),
             this.searchForm.topicsCheckbox.isSelected(),
             this.previewPane.isbn,
-            this.previewPane.pageNumber(),
+            this.previewPane.pageNumber,
         );
     }
 
