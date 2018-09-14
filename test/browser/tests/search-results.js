@@ -41,10 +41,9 @@ suite( 'Search results', function () {
     } );
 
     goldenFiles.forEach( ( goldenFile ) => {
-        let expectedSearchResults = require( goldenFile );
+        let golden = require( goldenFile );
 
-        Object.entries( expectedSearchResults ).forEach( ( entry ) => {
-            let [ query, expectedResults ] = entry;
+        testSearchResults( golden );
 
             testResults( query, expectedResults );
 
@@ -55,32 +54,51 @@ suite( 'Search results', function () {
     } );
 } );
 
-function testResults( query , expectedResults ) {
-    test( 'Query "' + query + '" should return correct hits', function () {
+function testSearchResults( golden ) {
+    let query          = golden.query;
+    let searchFulltext = golden.searchFulltext;
+    let searchTopics   = golden.searchTopics;
+
+    let testTitle = `Search for '${query}' `                                  +
+                    ( searchFulltext ? 'fulltext=TRUE ' : 'fulltext=FALSE ' ) +
+                    ( searchTopics   ? 'topics=TRUE '   : 'topics=FALSE '   ) +
+                    ' works correctly';
+
+    test( testTitle, function () {
+        if ( ! searchFulltext ) {
+            SearchPage.searchForm.fulltextCheckbox.click();
+        }
+
+        if ( ! searchTopics ) {
+            SearchPage.searchForm.topicsCheckbox.click();
+        }
+
         SearchPage.searchAndWaitForResults( query );
 
         let snapshot = SearchPage.searchResultsSnapshot();
-        let queryId  = SearchPage.getQueryIdForCurrentQuery();
+        let searchId = SearchPage.getSearchIdForCurrentSearch();
+
+        let stringifiedGolden = jsonStableStringify( golden );
+        let stringifiedSnapshot = jsonStableStringify( snapshot );
+
+        let goldenFile = GOLDEN_FILES_DIRECTORY + '/' + searchId + '.json';
+        let actualFile = ACTUAL_FILES_DIRECTORY + '/' + searchId + '.json';
 
         if ( updateGoldenFiles ) {
-            fs.writeFileSync(
-                'testdata/search-results/' + queryId + '.json',
-                JSON.stringify( snapshot, null, '   ' ) );
-        }
-    } );
-}
+            fs.writeFileSync( goldenFile, stringifiedGolden );
 
-function testResultsPaneNumBooksAndPages( query, expected ) {
-    test( 'Query "' + query + '" should return correct number of books and pages', function () {
-        SearchPage.searchAndWaitForResults( query );
+            console.log( `Updated golden file ${goldenFile}` );
 
-        function getStringForComparison( numPages, numBooks ) {
-            return numBooks + ' books | ' + numPages + ' pages';
+            return;
         }
 
-        assert.equal(
-            getStringForComparison( SearchPage.resultsPane.header.numPages(), SearchPage.resultsPane.header.numBooks() ),
-            getStringForComparison( expected.resultsPane.numPages, expected.resultsPane.numBooks )
+        fs.writeFileSync( actualFile, stringifiedSnapshot );
+
+        assert(
+            stringifiedSnapshot === stringifiedGolden,
+            'Actual search results do not match expected.  Diff actual file vs ' +
+            'golden file for details: '                                          +
+            `    diff ${goldenFile} ${actualFile}`
         );
     } );
 }
