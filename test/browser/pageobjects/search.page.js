@@ -297,7 +297,7 @@ class SearchPage extends Page {
         );
     }
 
-    getQueryIdForCurrentQuery() {
+    getSearchIdForCurrentSearch() {
         return SearchPage.getSearchId(
             this.searchForm.searchBox.getText(),
             this.searchForm.fulltextCheckbox.isSelected(),
@@ -340,7 +340,7 @@ class SearchPage extends Page {
 
     searchResultsSnapshot() {
         return {
-            id              : this.getQueryIdForCurrentQuery(),
+            id              : this.getSearchIdForCurrentSearch(),
 
             query           : this.searchForm.searchBox.getValue(),
             searchFulltext  : this.searchForm.fulltextCheckbox.isSelected(),
