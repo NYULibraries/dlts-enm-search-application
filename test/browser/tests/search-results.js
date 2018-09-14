@@ -45,12 +45,7 @@ suite( 'Search results', function () {
 
         testSearchResults( golden );
 
-            testResults( query, expectedResults );
-
-            testResultsPaneNumBooksAndPages( query, expectedResults );
-
-            testResultsPaneHits( query, {} );
-        } );
+        // testResultsPaneNumBooksAndPages( query, expectedResults );
     } );
 } );
 
@@ -103,12 +98,3 @@ function testSearchResults( golden ) {
     } );
 }
 
-function testResultsPaneHits( query, expected ) {
-    test( 'Query "' + query + '" should return correct hits', function () {
-        SearchPage.searchAndWaitForResults( query );
-
-        let books = SearchPage.resultsPane.results.metadata();
-
-        console.log( books );
-    } );
-}
