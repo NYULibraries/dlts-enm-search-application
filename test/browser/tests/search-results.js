@@ -1,6 +1,7 @@
-/* global setup:false suite:false test:false */
+/* global setup:false suiteSetup:false suite:false test:false */
 
 import fs from 'fs';
+import rimraf from 'rimraf';
 import path from 'path';
 
 import { assert } from 'chai';
@@ -25,6 +26,16 @@ if (
 }
 
 suite( 'Search results', function () {
+    suiteSetup( function () {
+        try {
+            rimraf.sync( ACTUAL_FILES_DIRECTORY + '/*' );
+        } catch( error ) {
+            console.error( `ERROR clearing ${ACTUAL_FILES_DIRECTORY}: ${error}` );
+
+            process.exit( 1 );
+        }
+    } );
+
     setup( function () {
         SearchPage.open();
     } );
