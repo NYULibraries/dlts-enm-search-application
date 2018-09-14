@@ -335,7 +335,7 @@ class SearchPage extends Page {
     searchAndWaitForResults( query ) {
         this.searchForm.searchBox.addValue( query );
         this.searchForm.submit();
-        this.resultsPane.results._element.waitForVisible( 5000 );
+        this.resultsPane.results._element.waitForVisible();
     }
 
     searchResultsSnapshot() {
