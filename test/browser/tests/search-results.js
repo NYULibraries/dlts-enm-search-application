@@ -7,6 +7,8 @@ import { assert } from 'chai';
 
 import SearchPage from '../pageobjects/search.page';
 
+import { jsonStableStringify } from '../util';
+
 const ACTUAL_FILES_DIRECTORY = path.resolve( __dirname, './testdata/actual/search-results/' );
 const GOLDEN_FILES_DIRECTORY = path.resolve( __dirname, './testdata/golden/search-results/' );
 const goldenFiles = fs.readdirSync( GOLDEN_FILES_DIRECTORY ).map( ( file ) => {
