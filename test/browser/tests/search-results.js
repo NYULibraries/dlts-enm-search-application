@@ -32,12 +32,29 @@ suite( 'Search results', function () {
         Object.entries( expectedSearchResults ).forEach( ( entry ) => {
             let [ query, expectedResults ] = entry;
 
+            testResults( query, expectedResults );
+
             testResultsPaneNumBooksAndPages( query, expectedResults );
 
             testResultsPaneHits( query, {} );
         } );
     } );
 } );
+
+function testResults( query , expectedResults ) {
+    test( 'Query "' + query + '" should return correct hits', function () {
+        SearchPage.searchAndWaitForResults( query );
+
+        let snapshot = SearchPage.searchResultsSnapshot();
+        let queryId  = SearchPage.getQueryIdForCurrentQuery();
+
+        if ( updateGoldenFiles ) {
+            fs.writeFileSync(
+                'testdata/search-results/' + queryId + '.json',
+                JSON.stringify( snapshot, null, '   ' ) );
+        }
+    } );
+}
 
 function testResultsPaneNumBooksAndPages( query, expected ) {
     test( 'Query "' + query + '" should return correct number of books and pages', function () {
