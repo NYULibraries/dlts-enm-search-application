@@ -1,0 +1,539 @@
+{
+    "id": "11dafb757b0e1fd4de61feaf21530be3a9e0ae42688a7b0131d3f62b4ed20860-topics",
+    "limitByTopics": [
+        [
+            "Tolstoy, Count Leo",
+            23
+        ],
+        [
+            "George, Alexander L.",
+            18
+        ],
+        [
+            "feminism",
+            15
+        ],
+        [
+            "Meade, L. T. -- Sorceress of the Strand",
+            14
+        ],
+        [
+            "Ozeki, Ruth L., My Year of Meats",
+            14
+        ],
+        [
+            "Faderman, L.",
+            13
+        ],
+        [
+            "North Bi Northwest",
+            13
+        ],
+        [
+            "Meade, L. T.",
+            12
+        ],
+        [
+            "Carter, Stephen L.",
+            11
+        ],
+        [
+            "Hoffman, M. L.",
+            11
+        ],
+        [
+            "Madame Rachel",
+            11
+        ],
+        [
+            "Adamic, Lada A.",
+            10
+        ],
+        [
+            "Berger, Peter L.",
+            10
+        ],
+        [
+            "Dahl, Vladimir",
+            10
+        ],
+        [
+            "Dostoevsky, Feodor",
+            10
+        ]
+    ],
+    "query": "hk;lajglkj 09u09 afkjasfk;askhj;ak gkd;l",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Robert L. Hayman; New York University Press",
+            "isbn": "9780814735336",
+            "maximumPageRelevanceScore": "6.399756",
+            "numMatchedPages": 11,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814735336.jpg",
+            "title": "The Smart Culture"
+        },
+        {
+            "authorsAndPublisher": "Cummings, Robert E.; Barton, Matt; University of Michigan Press and University of Michigan Library",
+            "isbn": "9780472024513",
+            "maximumPageRelevanceScore": "5.4748945",
+            "numMatchedPages": 5,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472024513.jpg",
+            "title": "Wiki Writing: Collaborative Learning in the College Classroom"
+        },
+        {
+            "authorsAndPublisher": "Turrow, Joseph; Tsui, Lokman; University of Michigan Press",
+            "isbn": "9780472024537",
+            "maximumPageRelevanceScore": "5.4748945",
+            "numMatchedPages": 26,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472024537.jpg",
+            "title": "The Hyperlinked Society: Questioning Connections in the Digital Age"
+        },
+        {
+            "authorsAndPublisher": "Stanley A. Renshon; New York University Press",
+            "isbn": "9780814774694",
+            "maximumPageRelevanceScore": "5.4748945",
+            "numMatchedPages": 39,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774694.jpg",
+            "title": "The Psychological Assessment of Presidential Candidates"
+        },
+        {
+            "authorsAndPublisher": "Barbara Fass Leavy; New York University Press",
+            "isbn": "9780814751008",
+            "maximumPageRelevanceScore": "5.4748945",
+            "numMatchedPages": 19,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814751008.jpg",
+            "title": "In Search of the Swan Maiden"
+        },
+        {
+            "authorsAndPublisher": "Robert Rogers; New york University Press",
+            "isbn": "9780814774434",
+            "maximumPageRelevanceScore": "5.4748945",
+            "numMatchedPages": 11,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774434.jpg",
+            "title": "Self and Other"
+        },
+        {
+            "authorsAndPublisher": "Pearl M. Oliner; New York University Press",
+            "isbn": "9780814761908",
+            "maximumPageRelevanceScore": "5.4748945",
+            "numMatchedPages": 16,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814761908.jpg",
+            "title": "Embracing the Other"
+        },
+        {
+            "authorsAndPublisher": "Gary Minda; New York University Press",
+            "isbn": "9780814755112",
+            "maximumPageRelevanceScore": "5.4748945",
+            "numMatchedPages": 9,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814755112.jpg",
+            "title": "Postmodern Legal Movements"
+        },
+        {
+            "authorsAndPublisher": "R. Jeffrey Ringer; New York University Press",
+            "isbn": "9780814774410",
+            "maximumPageRelevanceScore": "5.341696",
+            "numMatchedPages": 40,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774410.jpg",
+            "title": "Queer Words, Queer Images: Communication and the Construction of Homosexuality"
+        },
+        {
+            "authorsAndPublisher": "Ronald Suresh Roberts; New York University Press",
+            "isbn": "9780814774816",
+            "maximumPageRelevanceScore": "5.341696",
+            "numMatchedPages": 7,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774816.jpg",
+            "title": "Clarence Thomas and the Tough Love Crowd"
+        },
+        {
+            "authorsAndPublisher": "Paula C. Rust; New York University Press",
+            "isbn": "9780814774458",
+            "maximumPageRelevanceScore": "5.341696",
+            "numMatchedPages": 37,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774458.jpg",
+            "title": "Bisexuality and the Challenge to Lesbian Politics"
+        },
+        {
+            "authorsAndPublisher": "Elizabeth Carolyn Miller; University of Michigan Press and University of Michigan Library",
+            "isbn": "9780472024469",
+            "maximumPageRelevanceScore": "5.274937",
+            "numMatchedPages": 26,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472024469.jpg",
+            "title": "Framed: The New Woman Criminal in British Culture at the Fin de Siecle"
+        },
+        {
+            "authorsAndPublisher": "Ruth Colker; New York University Press",
+            "isbn": "9780814715383",
+            "maximumPageRelevanceScore": "5.271867",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814715383.jpg",
+            "title": "Hybrid"
+        },
+        {
+            "authorsAndPublisher": "Jay M. Harris; New York University Press",
+            "isbn": "9780814735084",
+            "maximumPageRelevanceScore": "5.271867",
+            "numMatchedPages": 6,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814735084.jpg",
+            "title": "Nachman Krochmal"
+        },
+        {
+            "authorsAndPublisher": "Cary Nelson; New York University Press",
+            "isbn": "9780814757970",
+            "maximumPageRelevanceScore": "4.986933",
+            "numMatchedPages": 4,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814757970.jpg",
+            "title": "Manifesto of a Tenured Radical"
+        },
+        {
+            "authorsAndPublisher": "Daniel Rancour-Laferriere; New York University Press",
+            "isbn": "9780814774823",
+            "maximumPageRelevanceScore": "4.986933",
+            "numMatchedPages": 31,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774823.jpg",
+            "title": "The Slave Soul of Russia"
+        },
+        {
+            "authorsAndPublisher": "James B. Jacobs; New York University Press",
+            "isbn": "9780814742303",
+            "maximumPageRelevanceScore": "4.986933",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814742303.jpg",
+            "title": "Busting the Mob"
+        },
+        {
+            "authorsAndPublisher": "John W. Chapman; New York University Press",
+            "isbn": "9780814714218",
+            "maximumPageRelevanceScore": "4.986933",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814714218.jpg",
+            "title": "Markets and Justice"
+        },
+        {
+            "authorsAndPublisher": "Stephen M. Feldman.; New York University Press",
+            "isbn": "9780814726846",
+            "maximumPageRelevanceScore": "4.986933",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814726846.jpg",
+            "title": "Please don’t Wish me a Merry Christmas"
+        },
+        {
+            "authorsAndPublisher": "Stanley A. Renshon; New York University Press",
+            "isbn": "9780814774632",
+            "maximumPageRelevanceScore": "4.986933",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774632.jpg",
+            "title": "High Hopes"
+        },
+        {
+            "authorsAndPublisher": "Shackelford, Laura; University of Michigan Press",
+            "isbn": "9780472120680",
+            "maximumPageRelevanceScore": "4.5766954",
+            "numMatchedPages": 16,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120680.jpg",
+            "title": "Tactics of the Human: Experimental Technics in American Fiction"
+        },
+        {
+            "authorsAndPublisher": "Peter L. Rudnytsky; New York University Press",
+            "isbn": "9780814774755",
+            "maximumPageRelevanceScore": "4.5766954",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774755.jpg",
+            "title": "Ferenczi’s Turn in Psychoanalysis"
+        },
+        {
+            "authorsAndPublisher": "Ben-Ami Scharfstein; New York University Press",
+            "isbn": "9780814779163",
+            "maximumPageRelevanceScore": "4.5766954",
+            "numMatchedPages": 21,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814779163.jpg",
+            "title": "The Dilemma of Context"
+        },
+        {
+            "authorsAndPublisher": "Ian Shapiro; New York University Press",
+            "isbn": "9780814780978",
+            "maximumPageRelevanceScore": "4.5766954",
+            "numMatchedPages": 4,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814780978.jpg",
+            "title": "Integrity and Conscience"
+        },
+        {
+            "authorsAndPublisher": "Katherine J. Mayberry; York University Press",
+            "isbn": "9780814755471",
+            "maximumPageRelevanceScore": "4.5766954",
+            "numMatchedPages": 6,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814755471.jpg",
+            "title": "Teaching What You’re Not"
+        },
+        {
+            "authorsAndPublisher": "Bonnie A. Nardi; The University of Michigan Press",
+            "isbn": "9780472026715",
+            "maximumPageRelevanceScore": "4.4852967",
+            "numMatchedPages": 29,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472026715.jpg",
+            "title": "My Life as a Night Elf Priest"
+        },
+        {
+            "authorsAndPublisher": "Klein, Julie Thompson; University of Michigan Press",
+            "isbn": "9780472120932",
+            "maximumPageRelevanceScore": "3.9747655",
+            "numMatchedPages": 6,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120932.jpg",
+            "title": "Interdisciplining Digital Humanities: Boundary Work in an Emerging Field"
+        },
+        {
+            "authorsAndPublisher": "Henry Jenkins et al; New York University Press",
+            "isbn": "9781479899982",
+            "maximumPageRelevanceScore": "3.9747655",
+            "numMatchedPages": 6,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9781479899982.jpg",
+            "title": "By Any Media Necessary"
+        },
+        {
+            "authorsAndPublisher": "David Kleinbard; New York University Press",
+            "isbn": "9780814746677",
+            "maximumPageRelevanceScore": "3.9747655",
+            "numMatchedPages": 6,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814746677.jpg",
+            "title": "The Beginning of Terror"
+        },
+        {
+            "authorsAndPublisher": "John W. Chapman; New York University Press",
+            "isbn": "9780814714539",
+            "maximumPageRelevanceScore": "3.9747655",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814714539.jpg",
+            "title": "Compensatory Justice"
+        },
+        {
+            "authorsAndPublisher": "Bill Ong Hing; NEW YORK UNIVERSITY PRESS",
+            "isbn": "9780814735237",
+            "maximumPageRelevanceScore": "3.9747655",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814735237.jpg",
+            "title": "TO BE AN AMERICAN"
+        },
+        {
+            "authorsAndPublisher": "Seth Forman; New York University Press",
+            "isbn": "9780814726815",
+            "maximumPageRelevanceScore": "3.9747655",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814726815.jpg",
+            "title": "Blacks in the Jewish Mind"
+        },
+        {
+            "authorsAndPublisher": "Steve Kroll-Smith; New York University Press",
+            "isbn": "9780814746622",
+            "maximumPageRelevanceScore": "3.9747655",
+            "numMatchedPages": 5,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814746622.jpg",
+            "title": "Bodies in Protest"
+        },
+        {
+            "authorsAndPublisher": "Jennifer L. Manlowe; New York University Press",
+            "isbn": "9780814755297",
+            "maximumPageRelevanceScore": "3.9747655",
+            "numMatchedPages": 6,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814755297.jpg",
+            "title": "Faith Born of Seduction"
+        },
+        {
+            "authorsAndPublisher": "Steven Goldberg; New York University Press",
+            "isbn": "9780814730911",
+            "maximumPageRelevanceScore": "3.9747655",
+            "numMatchedPages": 5,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814730911.jpg",
+            "title": "Culture Clash"
+        },
+        {
+            "authorsAndPublisher": "David Mitchell; University of Minnesota Press",
+            "isbn": "9780816689972",
+            "maximumPageRelevanceScore": "3.9747655",
+            "numMatchedPages": 5,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780816689972.jpg",
+            "title": "Becoming Human"
+        },
+        {
+            "authorsAndPublisher": "Sonia Livingstone and Julian Sefton-Green; New York University Press",
+            "isbn": "9781479824243",
+            "maximumPageRelevanceScore": "3.5749528",
+            "numMatchedPages": 15,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9781479824243.jpg",
+            "title": "The Class: Living and Learning in the Digital Age"
+        },
+        {
+            "authorsAndPublisher": "Moshe Y. Herczl; New York University Press New York and London",
+            "isbn": "9780814735206",
+            "maximumPageRelevanceScore": "3.5749528",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814735206.jpg",
+            "title": "Christianity and the Holocaust of Hungarian Jewry"
+        },
+        {
+            "authorsAndPublisher": "Jody David Armour; New york University Press",
+            "isbn": "9780814706404",
+            "maximumPageRelevanceScore": "3.5749528",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814706404.jpg",
+            "title": "Negrophobia and Reasonable Racism"
+        },
+        {
+            "authorsAndPublisher": "James Darsey; New York University Press",
+            "isbn": "9780814718766",
+            "maximumPageRelevanceScore": "3.5749528",
+            "numMatchedPages": 7,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814718766.jpg",
+            "title": "The Prophetic Tradition and Radical Rhetoric in America"
+        },
+        {
+            "authorsAndPublisher": "Nancy Levit; New York University Press",
+            "isbn": "9780814751213",
+            "maximumPageRelevanceScore": "3.5749528",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814751213.jpg",
+            "title": "The Gender Line"
+        },
+        {
+            "authorsAndPublisher": "Jenna M. Loyd; University of Minnesota Press",
+            "isbn": "9780816676507",
+            "maximumPageRelevanceScore": "3.5749528",
+            "numMatchedPages": 14,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780816676507.jpg",
+            "title": "Health Rights Are Civil Rights"
+        },
+        {
+            "authorsAndPublisher": "Gabrys, Jennifer; The University of Michigan Press",
+            "isbn": "9780472029402",
+            "maximumPageRelevanceScore": "3.095251",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472029402.jpg",
+            "title": "Digital Rubbish: A Natural History of Electronics"
+        },
+        {
+            "authorsAndPublisher": "Michael Bérubé; New York University Press",
+            "isbn": "9780814713013",
+            "maximumPageRelevanceScore": "3.095251",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814713013.jpg",
+            "title": "The Employment of English"
+        },
+        {
+            "authorsAndPublisher": "Robert M. Seltzer; New York University Press",
+            "isbn": "9780814780015",
+            "maximumPageRelevanceScore": "3.095251",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814780015.jpg",
+            "title": "The Americanization of the Jews"
+        },
+        {
+            "authorsAndPublisher": "Richard K. Vedder and Lowell E. Gallaway; New York University Press",
+            "isbn": "9780814787922",
+            "maximumPageRelevanceScore": "3.095251",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814787922.jpg",
+            "title": "Out of Work"
+        },
+        {
+            "authorsAndPublisher": "Paul Harris; New York University",
+            "isbn": "9780814735923",
+            "maximumPageRelevanceScore": "3.095251",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814735923.jpg",
+            "title": "Black Rage Confronts the Law"
+        },
+        {
+            "authorsAndPublisher": "Antonio T. Tiongson Jr.; University of Minnesota Press",
+            "isbn": "9780816687848",
+            "maximumPageRelevanceScore": "3.095251",
+            "numMatchedPages": 4,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780816687848.jpg",
+            "title": "FILIPINOS REPRESENT"
+        },
+        {
+            "authorsAndPublisher": "Mahiri, Jabari; The University of Michigan Press",
+            "isbn": "9780472027606",
+            "maximumPageRelevanceScore": "2.6222591",
+            "numMatchedPages": 6,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472027606.jpg",
+            "title": "Digital Tools in Urban Schools: Mediating a Remix of Learning"
+        },
+        {
+            "authorsAndPublisher": "Eisner, Caroline; Vicinus, Martha; University of Michigan Press and University of Michigan Library",
+            "isbn": "9780472024445",
+            "maximumPageRelevanceScore": "2.5318222",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472024445.jpg",
+            "title": "Originality, Imitation, and Plagiarism"
+        },
+        {
+            "authorsAndPublisher": "Usher, Nikki; The University of Michigan Press",
+            "isbn": "9780472120499",
+            "maximumPageRelevanceScore": "2.5318222",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120499.jpg",
+            "title": "Making News at The New York Times"
+        },
+        {
+            "authorsAndPublisher": "David Holbrook; New York University Press",
+            "isbn": "9780814735282",
+            "maximumPageRelevanceScore": "2.5318222",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814735282.jpg",
+            "title": "Charles Dickens and the Image of Woman"
+        },
+        {
+            "authorsAndPublisher": "Natalie Clifford Barney, John Spalding Gatton; New York University Press",
+            "isbn": "9780814711774",
+            "maximumPageRelevanceScore": "2.5318222",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814711774.jpg",
+            "title": "Adventures of the Mind"
+        },
+        {
+            "authorsAndPublisher": "charles b.craver; New York University Press",
+            "isbn": "9780814715123",
+            "maximumPageRelevanceScore": "1.8963526",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814715123.jpg",
+            "title": "Can Unions Survive?"
+        },
+        {
+            "authorsAndPublisher": "M. Guy Thompson; New York University Press",
+            "isbn": "9780814782194",
+            "maximumPageRelevanceScore": "1.8963526",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814782194.jpg",
+            "title": "The truth about Freud’s technique"
+        },
+        {
+            "authorsAndPublisher": "Martha Grace Duncan; New York University Press",
+            "isbn": "9780814718803",
+            "maximumPageRelevanceScore": "1.8963526",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814718803.jpg",
+            "title": "Romantic Outlaws, Beloved Prisons"
+        },
+        {
+            "authorsAndPublisher": "Niobe Way; New York University Press",
+            "isbn": "9780814793398",
+            "maximumPageRelevanceScore": "1.8963526",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814793398.jpg",
+            "title": "Everyday Courage"
+        },
+        {
+            "authorsAndPublisher": "Darling-Wolf, Fabienne; University of Michigan Press",
+            "isbn": "9780472120796",
+            "maximumPageRelevanceScore": "0.9083732",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120796.jpg",
+            "title": "Imagining the Global: Transnational Media and Popular Culture Beyond East and West"
+        }
+    ],
+    "resultsNumBooks": 58,
+    "resultsNumPages": 488,
+    "searchDCI": "Searching topics for: hk;lajglkj 09u09 afkjasfk;askhj;ak gkd;l",
+    "searchFulltext": false,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}

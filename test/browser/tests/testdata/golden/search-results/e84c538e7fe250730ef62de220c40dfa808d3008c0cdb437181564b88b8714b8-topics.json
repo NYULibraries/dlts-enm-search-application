@@ -1,0 +1,15 @@
+{
+    "id": "e84c538e7fe250730ef62de220c40dfa808d3008c0cdb437181564b88b8714b8-topics",
+    "limitByTopics": [
+    ],
+    "query": "!!!",
+    "resultsMetadata": [
+    ],
+    "resultsNumBooks": null,
+    "resultsNumPages": null,
+    "searchDCI": "Searching topics for: !!!",
+    "searchFulltext": false,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}

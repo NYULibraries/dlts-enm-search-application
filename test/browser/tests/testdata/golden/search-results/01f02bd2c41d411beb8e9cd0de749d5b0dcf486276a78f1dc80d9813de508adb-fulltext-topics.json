@@ -1,0 +1,235 @@
+{
+    "id": "01f02bd2c41d411beb8e9cd0de749d5b0dcf486276a78f1dc80d9813de508adb-fulltext-topics",
+    "limitByTopics": [
+        [
+            "Ableggen, James",
+            1
+        ],
+        [
+            "American Revolution -- Continental Congress",
+            1
+        ],
+        [
+            "Anderson, Stanley",
+            1
+        ],
+        [
+            "Anne Elliot (Persuasion)",
+            1
+        ],
+        [
+            "Anything That Moves: Beyond the Myths of Bisexuality",
+            1
+        ],
+        [
+            "Appiah, Kwame Anthony",
+            1
+        ],
+        [
+            "Austen, Jane",
+            1
+        ],
+        [
+            "Austen, Jane -- Sense and Sensibility",
+            1
+        ],
+        [
+            "Baker, James A. III",
+            1
+        ],
+        [
+            "Berger, S.",
+            1
+        ],
+        [
+            "Bi Women",
+            1
+        ],
+        [
+            "Boas, Franz",
+            1
+        ],
+        [
+            "Boskin, Michael J.",
+            1
+        ],
+        [
+            "Brutus (Julius Caesar)",
+            1
+        ],
+        [
+            "Call, William",
+            1
+        ]
+    ],
+    "query": "Elliot",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Seth Forman; New York University Press",
+            "isbn": "9780814726815",
+            "maximumPageRelevanceScore": "12.112393",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814726815.jpg",
+            "title": "Blacks in the Jewish Mind"
+        },
+        {
+            "authorsAndPublisher": "Yochim, Emily Chivers; The University of Michigan Press and The University of Michigan Library",
+            "isbn": "9780472026609",
+            "maximumPageRelevanceScore": "10.589468",
+            "numMatchedPages": 4,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472026609.jpg",
+            "title": "Skate Life: Re-Imagining White Masculinity"
+        },
+        {
+            "authorsAndPublisher": "Steven T. Katz; New York University Press",
+            "isbn": "9780814746929",
+            "maximumPageRelevanceScore": "9.004518",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814746929.jpg",
+            "title": "The Essential Agus"
+        },
+        {
+            "authorsAndPublisher": "Robert L. Hayman; New York University Press",
+            "isbn": "9780814735336",
+            "maximumPageRelevanceScore": "8.793581",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814735336.jpg",
+            "title": "The Smart Culture"
+        },
+        {
+            "authorsAndPublisher": "John Marshall; New York University Press",
+            "isbn": "9780814731437",
+            "maximumPageRelevanceScore": "8.780999",
+            "numMatchedPages": 5,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814731437.jpg",
+            "title": "Seriatim"
+        },
+        {
+            "authorsAndPublisher": "Steve Kroll-Smith; New York University Press",
+            "isbn": "9780814746622",
+            "maximumPageRelevanceScore": "8.686105",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814746622.jpg",
+            "title": "Bodies in Protest"
+        },
+        {
+            "authorsAndPublisher": "Niobe Way; New York University Press",
+            "isbn": "9780814793398",
+            "maximumPageRelevanceScore": "7.645864",
+            "numMatchedPages": 5,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814793398.jpg",
+            "title": "Everyday Courage"
+        },
+        {
+            "authorsAndPublisher": "Peter L. Rudnytsky; New York University Press",
+            "isbn": "9780814774755",
+            "maximumPageRelevanceScore": "6.5166416",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774755.jpg",
+            "title": "Ferenczi’s Turn in Psychoanalysis"
+        },
+        {
+            "authorsAndPublisher": "Ryuzo Sato; New York University Press",
+            "isbn": "9780814780213",
+            "maximumPageRelevanceScore": "6.5166416",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814780213.jpg",
+            "title": "The Chrysanthemum and the Eagle"
+        },
+        {
+            "authorsAndPublisher": "Katherine J. Mayberry; York University Press",
+            "isbn": "9780814755471",
+            "maximumPageRelevanceScore": "6.5166416",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814755471.jpg",
+            "title": "Teaching What You’re Not"
+        },
+        {
+            "authorsAndPublisher": "Barbara Fass Leavy; New York University Press",
+            "isbn": "9780814751008",
+            "maximumPageRelevanceScore": "5.789548",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814751008.jpg",
+            "title": "In Search of the Swan Maiden"
+        },
+        {
+            "authorsAndPublisher": "Bernard J. Paris; New York University Press",
+            "isbn": "9780814766569",
+            "maximumPageRelevanceScore": "5.789548",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814766569.jpg",
+            "title": "Imagined Human Beings"
+        },
+        {
+            "authorsAndPublisher": "John W. Chapman; New York University Press",
+            "isbn": "9780814714218",
+            "maximumPageRelevanceScore": "5.789548",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814714218.jpg",
+            "title": "Markets and Justice"
+        },
+        {
+            "authorsAndPublisher": "Keith Beattie; New York University Press",
+            "isbn": "9780814713266",
+            "maximumPageRelevanceScore": "5.789548",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814713266.jpg",
+            "title": "The Scar That Binds"
+        },
+        {
+            "authorsAndPublisher": "Matthew A. Taylor; University of Minnesota Press",
+            "isbn": "9780816680610",
+            "maximumPageRelevanceScore": "5.789548",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780816680610.jpg",
+            "title": "Universes without Us"
+        },
+        {
+            "authorsAndPublisher": "Usher, Nikki; The University of Michigan Press",
+            "isbn": "9780472120499",
+            "maximumPageRelevanceScore": "4.940275",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120499.jpg",
+            "title": "Making News at The New York Times"
+        },
+        {
+            "authorsAndPublisher": "Henry Jenkins et al; New York University Press",
+            "isbn": "9781479899982",
+            "maximumPageRelevanceScore": "4.940275",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9781479899982.jpg",
+            "title": "By Any Media Necessary"
+        },
+        {
+            "authorsAndPublisher": "Mark Hertzog; New York University Press",
+            "isbn": "9780814735305",
+            "maximumPageRelevanceScore": "4.940275",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814735305.jpg",
+            "title": "The Lavender Vote"
+        },
+        {
+            "authorsAndPublisher": "Stephen M. Feldman.; New York University Press",
+            "isbn": "9780814726846",
+            "maximumPageRelevanceScore": "4.940275",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814726846.jpg",
+            "title": "Please don’t Wish me a Merry Christmas"
+        },
+        {
+            "authorsAndPublisher": "Paula C. Rust; New York University Press",
+            "isbn": "9780814774458",
+            "maximumPageRelevanceScore": "4.940275",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774458.jpg",
+            "title": "Bisexuality and the Challenge to Lesbian Politics"
+        }
+    ],
+    "resultsNumBooks": 20,
+    "resultsNumPages": 44,
+    "searchDCI": "Elliot",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}

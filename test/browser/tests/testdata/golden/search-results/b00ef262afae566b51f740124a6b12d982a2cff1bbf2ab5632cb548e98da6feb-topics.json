@@ -1,0 +1,67 @@
+{
+    "id": "b00ef262afae566b51f740124a6b12d982a2cff1bbf2ab5632cb548e98da6feb-topics",
+    "limitByTopics": [
+        [
+            "Civil Wars storyline",
+            1
+        ],
+        [
+            "DREAMers",
+            1
+        ],
+        [
+            "Huerta, Erick",
+            1
+        ],
+        [
+            "Justice League",
+            1
+        ],
+        [
+            "Marvel Comics",
+            1
+        ],
+        [
+            "Spider-Man",
+            1
+        ],
+        [
+            "Superman",
+            1
+        ],
+        [
+            "Wolverine",
+            1
+        ],
+        [
+            "X-Men",
+            1
+        ],
+        [
+            "YouTube.com",
+            1
+        ],
+        [
+            "Zimmerman, Arely M.",
+            1
+        ]
+    ],
+    "query": "wolverine",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Henry Jenkins et al; New York University Press",
+            "isbn": "9781479899982",
+            "maximumPageRelevanceScore": "7.93449",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9781479899982.jpg",
+            "title": "By Any Media Necessary"
+        }
+    ],
+    "resultsNumBooks": 1,
+    "resultsNumPages": 1,
+    "searchDCI": "Searching topics for: wolverine",
+    "searchFulltext": false,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}

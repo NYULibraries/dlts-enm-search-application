@@ -1,0 +1,115 @@
+{
+    "id": "01f02bd2c41d411beb8e9cd0de749d5b0dcf486276a78f1dc80d9813de508adb-topics",
+    "limitByTopics": [
+        [
+            "Ableggen, James",
+            1
+        ],
+        [
+            "Anderson, Stanley",
+            1
+        ],
+        [
+            "Anne Elliot (Persuasion)",
+            1
+        ],
+        [
+            "Anything That Moves: Beyond the Myths of Bisexuality",
+            1
+        ],
+        [
+            "Appiah, Kwame Anthony",
+            1
+        ],
+        [
+            "Austen, Jane",
+            1
+        ],
+        [
+            "Austen, Jane -- Sense and Sensibility",
+            1
+        ],
+        [
+            "Baker, James A. III",
+            1
+        ],
+        [
+            "Berger, S.",
+            1
+        ],
+        [
+            "Bi Women",
+            1
+        ],
+        [
+            "Boskin, Michael J.",
+            1
+        ],
+        [
+            "Brutus (Julius Caesar)",
+            1
+        ],
+        [
+            "Cheney, Richard",
+            1
+        ],
+        [
+            "Chrysanthemum Club",
+            1
+        ],
+        [
+            "Clarissa (Richardson)",
+            1
+        ]
+    ],
+    "query": "Elliot",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Seth Forman; New York University Press",
+            "isbn": "9780814726815",
+            "maximumPageRelevanceScore": "12.112393",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814726815.jpg",
+            "title": "Blacks in the Jewish Mind"
+        },
+        {
+            "authorsAndPublisher": "Robert L. Hayman; New York University Press",
+            "isbn": "9780814735336",
+            "maximumPageRelevanceScore": "8.793581",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814735336.jpg",
+            "title": "The Smart Culture"
+        },
+        {
+            "authorsAndPublisher": "Ryuzo Sato; New York University Press",
+            "isbn": "9780814780213",
+            "maximumPageRelevanceScore": "5.6012816",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814780213.jpg",
+            "title": "The Chrysanthemum and the Eagle"
+        },
+        {
+            "authorsAndPublisher": "Paula C. Rust; New York University Press",
+            "isbn": "9780814774458",
+            "maximumPageRelevanceScore": "4.1953998",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774458.jpg",
+            "title": "Bisexuality and the Challenge to Lesbian Politics"
+        },
+        {
+            "authorsAndPublisher": "Bernard J. Paris; New York University Press",
+            "isbn": "9780814766569",
+            "maximumPageRelevanceScore": "3.4574733",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814766569.jpg",
+            "title": "Imagined Human Beings"
+        }
+    ],
+    "resultsNumBooks": 5,
+    "resultsNumPages": 5,
+    "searchDCI": "Searching topics for: Elliot",
+    "searchFulltext": false,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}

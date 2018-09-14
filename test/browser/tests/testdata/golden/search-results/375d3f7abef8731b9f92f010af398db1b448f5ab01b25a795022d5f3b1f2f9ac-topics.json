@@ -1,0 +1,83 @@
+{
+    "id": "375d3f7abef8731b9f92f010af398db1b448f5ab01b25a795022d5f3b1f2f9ac-topics",
+    "limitByTopics": [
+        [
+            "linking books",
+            18
+        ],
+        [
+            "Catherine",
+            14
+        ],
+        [
+            "Atrus",
+            12
+        ],
+        [
+            "realMyst",
+            12
+        ],
+        [
+            "Gehn",
+            11
+        ],
+        [
+            "Achenar",
+            9
+        ],
+        [
+            "Miller brothers",
+            9
+        ],
+        [
+            "CD-ROMs",
+            8
+        ],
+        [
+            "D'ni (Dunny)",
+            8
+        ],
+        [
+            "Myst III: Exile",
+            8
+        ],
+        [
+            "Myst Masterpiece Edition",
+            8
+        ],
+        [
+            "Myst novels",
+            8
+        ],
+        [
+            "Sirrus",
+            8
+        ],
+        [
+            "Cyan Worlds",
+            6
+        ],
+        [
+            "Myst: The Book of Atrus",
+            6
+        ]
+    ],
+    "query": "Myst Riven",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Wolf, Mark J. P.; The University of Michigan Press",
+            "isbn": "9780472027491",
+            "maximumPageRelevanceScore": "15.871243",
+            "numMatchedPages": 59,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472027491.jpg",
+            "title": "Myst and Riven: The World of the D'ni"
+        }
+    ],
+    "resultsNumBooks": 1,
+    "resultsNumPages": 59,
+    "searchDCI": "Searching topics for: Myst Riven",
+    "searchFulltext": false,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}

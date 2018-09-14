@@ -1,0 +1,91 @@
+{
+    "id": "ddd9c29cedc98b817bd05d5b01ca17b9ee7d74d3898953cfc3a415d07900757d-topics",
+    "limitByTopics": [
+        [
+            "Blizzard Entertainment -- TBC, and software design alterations by",
+            3
+        ],
+        [
+            "Burning Crusade, The (TBC)",
+            3
+        ],
+        [
+            "encoded rules in digital entities -- TBC, and changes to",
+            3
+        ],
+        [
+            "encoded rules in digital entities -- in WoW",
+            3
+        ],
+        [
+            "software modifications -- TBC and",
+            3
+        ],
+        [
+            "Ducheneaut, N.",
+            2
+        ],
+        [
+            "Serpentshrine Cavern (SSC)",
+            2
+        ],
+        [
+            "World of Warcraft (WoW) -- demographic data on players of",
+            2
+        ],
+        [
+            "artistry in visual design -- nostalgia runs due to",
+            2
+        ],
+        [
+            "dungeons -- TBC and",
+            2
+        ],
+        [
+            "dungeons -- raiding",
+            2
+        ],
+        [
+            "feedback on changes in design",
+            2
+        ],
+        [
+            "nostalgia runs",
+            2
+        ],
+        [
+            "players -- demographic data on",
+            2
+        ],
+        [
+            "resource role of rules -- artistry in visual design of and",
+            2
+        ]
+    ],
+    "query": "Dungeons & Dragons",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Wolf, Mark J. P.; The University of Michigan Press",
+            "isbn": "9780472027491",
+            "maximumPageRelevanceScore": "11.793638",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472027491.jpg",
+            "title": "Myst and Riven: The World of the D'ni"
+        },
+        {
+            "authorsAndPublisher": "Bonnie A. Nardi; The University of Michigan Press",
+            "isbn": "9780472026715",
+            "maximumPageRelevanceScore": "9.586905",
+            "numMatchedPages": 7,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472026715.jpg",
+            "title": "My Life as a Night Elf Priest"
+        }
+    ],
+    "resultsNumBooks": 2,
+    "resultsNumPages": 8,
+    "searchDCI": "Searching topics for: Dungeons & Dragons",
+    "searchFulltext": false,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}

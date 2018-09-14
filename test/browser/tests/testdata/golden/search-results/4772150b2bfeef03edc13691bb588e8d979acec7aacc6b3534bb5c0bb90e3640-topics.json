@@ -1,0 +1,91 @@
+{
+    "id": "4772150b2bfeef03edc13691bb588e8d979acec7aacc6b3534bb5c0bb90e3640-topics",
+    "limitByTopics": [
+        [
+            "Amelia Sedley (Vanity Fair)",
+            3
+        ],
+        [
+            "Dobbin (Vanity Fair)",
+            3
+        ],
+        [
+            "Thackeray, W. M.",
+            3
+        ],
+        [
+            "Austen, Jane",
+            2
+        ],
+        [
+            "Becky Sharp (Vanity Fair)",
+            2
+        ],
+        [
+            "Conrad, Joseph",
+            2
+        ],
+        [
+            "Contradictions in theme and rhetoric -- in Vanity Fair",
+            2
+        ],
+        [
+            "Critical Interdisciplinarity",
+            2
+        ],
+        [
+            "Earhart, Amy",
+            2
+        ],
+        [
+            "Eliot, George",
+            2
+        ],
+        [
+            "Eliot, George, writings -- The Mill on the Floss",
+            2
+        ],
+        [
+            "Psychological Approach to Fiction, A (Paris)",
+            2
+        ],
+        [
+            "interdisciplinarity (ID) -- critical",
+            2
+        ],
+        [
+            "\"Big Data\"",
+            1
+        ],
+        [
+            "Alice Mellings (The Good Terrorist)",
+            1
+        ]
+    ],
+    "query": "amelia earhart",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Klein, Julie Thompson; University of Michigan Press",
+            "isbn": "9780472120932",
+            "maximumPageRelevanceScore": "6.140698",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120932.jpg",
+            "title": "Interdisciplining Digital Humanities: Boundary Work in an Emerging Field"
+        },
+        {
+            "authorsAndPublisher": "Bernard J. Paris; New York University Press",
+            "isbn": "9780814766569",
+            "maximumPageRelevanceScore": "4.427009",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814766569.jpg",
+            "title": "Imagined Human Beings"
+        }
+    ],
+    "resultsNumBooks": 2,
+    "resultsNumPages": 5,
+    "searchDCI": "Searching topics for: amelia earhart",
+    "searchFulltext": false,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}

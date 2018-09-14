@@ -1,0 +1,43 @@
+{
+    "id": "d98af5c457b933c1854ece268aa36016ae6ff5c6885fb47a84947a87b77e7799-fulltext",
+    "limitByTopics": [
+        [
+            "Content worlds",
+            1
+        ],
+        [
+            "Merrick, Helen",
+            1
+        ],
+        [
+            "Nerdfighters",
+            1
+        ],
+        [
+            "Public spheres of the imagination",
+            1
+        ],
+        [
+            "Ross, Andrew",
+            1
+        ]
+    ],
+    "query": "nerdfighter +\"Helen Merrick (2009)\"",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Henry Jenkins et al; New York University Press",
+            "isbn": "9781479899982",
+            "maximumPageRelevanceScore": "22.750076",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9781479899982.jpg",
+            "title": "By Any Media Necessary"
+        }
+    ],
+    "resultsNumBooks": 1,
+    "resultsNumPages": 1,
+    "searchDCI": "Searching full texts for: nerdfighter +\"Helen Merrick (2009)\"",
+    "searchFulltext": true,
+    "searchTopics": false,
+    "topicsDCIs": [
+    ]
+}
