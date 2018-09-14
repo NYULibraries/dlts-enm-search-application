@@ -289,7 +289,7 @@ class SearchPage extends Page {
 
     getPreviewIdForCurrentPreview() {
         return SearchPage.getPreviewId(
-            this.searchForm.searchBox.getText(),
+            this.searchForm.searchBox.getValue(),
             this.searchForm.fulltextCheckbox.isSelected(),
             this.searchForm.topicsCheckbox.isSelected(),
             this.previewPane.isbn,
@@ -299,7 +299,7 @@ class SearchPage extends Page {
 
     getSearchIdForCurrentSearch() {
         return SearchPage.getSearchId(
-            this.searchForm.searchBox.getText(),
+            this.searchForm.searchBox.getValue(),
             this.searchForm.fulltextCheckbox.isSelected(),
             this.searchForm.topicsCheckbox.isSelected(),
         );
