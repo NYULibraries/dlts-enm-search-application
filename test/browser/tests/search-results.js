@@ -12,6 +12,15 @@ const goldenFiles = fs.readdirSync( GOLDEN_FILES_DIRECTORY ).map( ( file ) => {
     return path.resolve( GOLDEN_FILES_DIRECTORY + '/' + file );
 } );
 
+let updateGoldenFiles = false;
+
+if (
+    process.env.UPDATE_GOLDEN_FILES &&
+    process.env.UPDATE_GOLDEN_FILES.toLowerCase() !== 'false'
+) {
+    updateGoldenFiles = true;
+}
+
 suite( 'Search results', function () {
     setup( function () {
         SearchPage.open();
