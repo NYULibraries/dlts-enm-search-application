@@ -44,8 +44,6 @@ suite( 'Search results', function () {
         let golden = require( goldenFile );
 
         testSearchResults( golden );
-
-        // testResultsPaneNumBooksAndPages( query, expectedResults );
     } );
 } );
 
