@@ -14,3 +14,8 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+
+test/browser/tests/testdata/actual/*
+!test/browser/tests/testdata/actual/search-results/
+test/browser/tests/testdata/actual/search-results/*
+!test/browser/tests/testdata/actual/search-results/.commit-empty-directory
