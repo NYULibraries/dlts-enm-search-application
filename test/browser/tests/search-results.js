@@ -89,10 +89,10 @@ function testSearchResults( golden ) {
 
         assert(
             stringifiedSnapshot === stringifiedGolden,
-            'Actual search results do not match expected.  Diff actual file vs ' +
-            'golden file for details: '                                          +
-            `    diff ${goldenFile} ${actualFile}`
+            // eslint-disable-next-line indent
+`Actual search results do not match expected.  Diff actual file vs  golden file for details:
+
+    diff ${goldenFile} ${actualFile}`
         );
     } );
 }
-
