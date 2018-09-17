@@ -16,11 +16,11 @@ class SearchPage extends Page {
         super();
 
         this.limitByTopicPane = new LimitByTopicPane();
-        this.navbar = new Navbar();
-        this.previewPane = new PreviewPane();
-        this.resultsPane = new ResultsPane();
-        this.searchEcho = new SearchEcho();
-        this.searchForm = new SearchForm();
+        this.navbar           = new Navbar();
+        this.previewPane      = new PreviewPane();
+        this.resultsPane      = new ResultsPane();
+        this.searchEcho       = new SearchEcho();
+        this.searchForm       = new SearchForm();
     }
 
     get alertText() {
