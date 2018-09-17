@@ -82,8 +82,8 @@ class SearchPage extends Page {
     getPreviewIdForCurrentPreview() {
         return SearchPage.getPreviewId(
             this.searchForm.searchBox.getValue(),
-            this.searchForm.fulltextCheckbox.isSelected(),
-            this.searchForm.topicsCheckbox.isSelected(),
+            this.searchForm.fulltextCheckbox.isSelected,
+            this.searchForm.topicsCheckbox.isSelected,
             this.previewPane.isbn,
             this.previewPane.pageNumber,
         );
@@ -92,8 +92,8 @@ class SearchPage extends Page {
     getSearchIdForCurrentSearch() {
         return SearchPage.getSearchId(
             this.searchForm.searchBox.getValue(),
-            this.searchForm.fulltextCheckbox.isSelected(),
-            this.searchForm.topicsCheckbox.isSelected(),
+            this.searchForm.fulltextCheckbox.isSelected,
+            this.searchForm.topicsCheckbox.isSelected,
         );
     }
 
@@ -135,8 +135,8 @@ class SearchPage extends Page {
             id              : this.getSearchIdForCurrentSearch(),
 
             query           : this.searchForm.searchBox.getValue(),
-            searchFulltext  : this.searchForm.fulltextCheckbox.isSelected(),
-            searchTopics    : this.searchForm.topicsCheckbox.isSelected(),
+            searchFulltext  : this.searchForm.fulltextCheckbox.isSelected,
+            searchTopics    : this.searchForm.topicsCheckbox.isSelected,
             searchDCI       : this.searchEcho.searchDCI.query,
             topicsDCIs      : this.searchEcho.topicsDCIs ? this.searchEcho.topicsDCIs.topics : [],
 
