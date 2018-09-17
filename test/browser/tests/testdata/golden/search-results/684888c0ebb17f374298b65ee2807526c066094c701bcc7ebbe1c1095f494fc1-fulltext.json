@@ -899,7 +899,7 @@
     ],
     "resultsNumBooks": 104,
     "resultsNumPages": 30793,
-    "searchDCI": "Searching full texts for: *",
+    "searchDCI": "*",
     "searchFulltext": true,
     "searchTopics": false,
     "topicsDCIs": [

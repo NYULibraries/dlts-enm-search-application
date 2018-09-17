@@ -7,7 +7,7 @@
     ],
     "resultsNumBooks": null,
     "resultsNumPages": null,
-    "searchDCI": "Searching topics for: nerdfighter +\"Helen Merrick (2009)\"",
+    "searchDCI": "nerdfighter +\"Helen Merrick (2009)\"",
     "searchFulltext": false,
     "searchTopics": true,
     "topicsDCIs": [

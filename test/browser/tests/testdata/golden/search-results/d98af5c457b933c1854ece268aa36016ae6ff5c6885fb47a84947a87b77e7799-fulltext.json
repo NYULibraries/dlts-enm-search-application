@@ -35,7 +35,7 @@
     ],
     "resultsNumBooks": 1,
     "resultsNumPages": 1,
-    "searchDCI": "Searching full texts for: nerdfighter +\"Helen Merrick (2009)\"",
+    "searchDCI": "nerdfighter +\"Helen Merrick (2009)\"",
     "searchFulltext": true,
     "searchTopics": false,
     "topicsDCIs": [

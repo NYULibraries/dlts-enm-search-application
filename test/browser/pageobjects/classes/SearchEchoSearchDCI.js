@@ -4,7 +4,7 @@ class SearchEchoSearchDCI {
     get query() {
         return $( '//span[button[@id="search-dci"]]' )
             .getText()
-            .replace( /^Searching full texts and topics for: /, '' );
+            .replace( /^[^:]+: /, '' );
     }
 
     dismiss() {
