@@ -4,31 +4,21 @@ import crypto from 'crypto';
 
 import Page from './page';
 
+import LimitByTopicPane from './classes/LimitByTopicPane';
+
 class SearchPage extends Page {
+    constructor() {
+        super();
+
+        this.limitByTopicPane = new LimitByTopicPane();
+    }
+
     get alertText() {
         return browser.alertText;
     }
 
     get baseUrl() {
         return browser.options.baseUrl;
-    }
-
-    get limitByTopicPane() {
-        return {
-            seeAllLink  : $( 'a=See All' ),
-            seeLessLink : $( 'a=See Less' ),
-
-            topic : ( topic ) => {
-                $( 'a[ id = "' + topic + '" ]' );
-            },
-
-            topicNamesWithHitCounts : $$( '.enm-facets-group-visible a' ).map(
-                ( topicItem ) => {
-                    const found = topicItem.getText().match( /^(.*) \((\d+)\)$/ );
-                    return [ found[ 1 ], parseInt( found[ 2 ], 10 ) ];
-                }
-            ),
-        };
     }
 
     get navbar() {
