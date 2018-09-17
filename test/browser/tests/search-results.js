@@ -78,7 +78,7 @@ function testSearchResults( golden ) {
         let actualFile = ACTUAL_FILES_DIRECTORY + '/' + searchId + '.json';
 
         if ( updateGoldenFiles ) {
-            fs.writeFileSync( goldenFile, stringifiedGolden );
+            fs.writeFileSync( goldenFile, stringifiedSnapshot );
 
             console.log( `Updated golden file ${goldenFile}` );
 
