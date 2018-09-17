@@ -1,4 +1,4 @@
-/* global browser:false $:false $$:false */
+/* global browser:false $:false */
 
 import crypto from 'crypto';
 
@@ -9,6 +9,7 @@ import Navbar from './classes/Navbar';
 import PreviewPane from './classes/PreviewPane';
 import ResultsPane from './classes/ResultsPane';
 import SearchEcho from './classes/SearchEcho';
+import SearchForm from './classes/SearchForm';
 
 class SearchPage extends Page {
     constructor() {
@@ -19,6 +20,7 @@ class SearchPage extends Page {
         this.previewPane = new PreviewPane();
         this.resultsPane = new ResultsPane();
         this.searchEcho = new SearchEcho();
+        this.searchForm = new SearchForm();
     }
 
     get alertText() {
@@ -37,41 +39,6 @@ class SearchPage extends Page {
             home           : 'prototypes/',
             featuredTopics : 'prototypes/browse-topics-lists/enm-picks.html',
             search         : 'prototypes/search-results',
-        };
-    }
-
-    get searchForm() {
-        return {
-            searchBox : $( '#enm-searchinput' ),
-
-            //  NOTE: We click the labels for select/de-select because they obscure
-            // the checkboxes themselves.  Trying to click checkboxes produces an
-            // error like this:
-            //
-            //     Element <input type="checkbox" name="fulltextChx" id="fulltextChx" class="is-medium is-checkbox" value="pageText"> is not clickable at point (630, 106). Other element would receive the click: <label for="fulltextChx">...</label>
-
-            fulltextCheckbox : {
-                click      : () => {
-                    $( 'label[ for="fulltextChx" ]' ).click();
-                },
-                isSelected : () => {
-                    return $( '#fulltextChx' ).isSelected();
-                },
-                text       : $( '#fulltextChx' ).getText(),
-            },
-            topicsCheckbox : {
-                click      : () => {
-                    $( 'label[ for="topicsChx" ]' ).click();
-                },
-                isSelected : () => {
-                    return $( '#topicsChx' ).isSelected();
-                },
-                text       : $( '#topicsChx' ).getText(),
-            },
-
-            submit : function () {
-                browser.submitForm( 'form.enm-searchform' );
-            },
         };
     }
 
