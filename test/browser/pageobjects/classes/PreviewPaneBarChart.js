@@ -1,6 +1,6 @@
 /* global $:false $$:false */
 
-class BarChart {
+class PreviewPaneBarChart {
     get data() {
         return $$( '.enm-pane-preview svg rect' ).map(
             ( bar ) => {
@@ -35,4 +35,4 @@ class BarChart {
     }
 }
 
-export default BarChart;
+export default PreviewPaneBarChart;

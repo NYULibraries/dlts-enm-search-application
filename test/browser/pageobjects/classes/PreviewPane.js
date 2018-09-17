@@ -1,10 +1,10 @@
 /* global $:false $$:false */
 
-import BarChart from './BarChart';
+import PreviewPaneBarChart from './PreviewPaneBarChart';
 
 class PreviewPane {
     constructor() {
-        this.barChart = new BarChart();
+        this.barChart = new PreviewPaneBarChart();
     }
 
     get isbn() {
