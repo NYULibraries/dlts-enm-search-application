@@ -5,12 +5,14 @@ import crypto from 'crypto';
 import Page from './page';
 
 import LimitByTopicPane from './classes/LimitByTopicPane';
+import PreviewPane from './classes/PreviewPane';
 
 class SearchPage extends Page {
     constructor() {
         super();
 
         this.limitByTopicPane = new LimitByTopicPane();
+        this.previewPane = new PreviewPane();
     }
 
     get alertText() {
@@ -56,63 +58,6 @@ class SearchPage extends Page {
             home           : 'prototypes/',
             featuredTopics : 'prototypes/browse-topics-lists/enm-picks.html',
             search         : 'prototypes/search-results',
-        };
-    }
-
-    get previewPane() {
-        return {
-            barChart : {
-                data : $$( '.enm-pane-preview svg rect' ).map(
-                    ( bar ) => {
-                        return {
-                            page   : bar.getAttribute( 'name' ),
-                            x      : bar.getAttribute( 'x' ),
-                            y      : bar.getAttribute( 'y' ),
-                            width  : bar.getAttribute( 'width' ),
-                            height : bar.getAttribute( 'height' ),
-                            stroke : bar.getAttribute( 'stroke' ),
-                        };
-                    }
-                ),
-                barForPage           : ( page ) => {
-                    return $( '.enm-pane-preview svg rect[ name = "' + page + '"]' );
-                },
-                selectedPage         : () => {
-                    let activeBar;
-
-                    try {
-                        activeBar = $( '.enm-page-active' );
-
-                        return activeBar.getAttribute( 'name' );
-                    } catch( e ) {
-                        console.error( e );
-
-                        return null;
-                    }
-                },
-            },
-            isbn                        : 'TODO',
-            loadTheFirstMatchedPageLink : $( '=Load the first matched page' ),
-            next                        : $( 'a.button=next >' ),
-            pageNumber                  : $( '.enm-pane-preview .enm-pageno' ).getText(),
-            pageText                    : $( '.enm-pageText' ).getText(),
-            pageTextHighlights          : $$( '.enm-pageText mark' ).map(
-                ( highlight ) => {
-                    return highlight.getText();
-                }
-            ),
-            previous                    : $( 'a.button=< previous' ),
-            title                       : $( '.enm-pane-preview .title' ).getText(),
-            topicsOnThisPage            : $$( '.enm-topicsonthispage li a' ).map(
-                ( highlight ) => {
-                    return highlight.getText();
-                }
-            ),
-            topicsOnThisPageHighlights  : $$( '.enm-topicsonthispage li a mark' ).map(
-                ( highlight ) => {
-                    return highlight.getText();
-                }
-            ),
         };
     }
 
