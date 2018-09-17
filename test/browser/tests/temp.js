@@ -74,4 +74,13 @@ suite( 'Temp', function () {
         console.log( SearchPage.searchResultsSnapshot() );
         console.log( SearchPage.previewSnapshot() );
     } );
+
+    test( 'Limit by topic', function () {
+        SearchPage.searchAndWaitForResults( 'art' );
+
+        // SearchPage.limitByTopicPane.seeAllLink.click();
+        // SearchPage.limitByTopicPane.seeLessLink.click();
+        SearchPage.limitByTopicPane.topic( 'postmodernism' ).click();
+        console.log( SearchPage.limitByTopicPane.topicNamesWithHitCounts );
+    } );
 } );
