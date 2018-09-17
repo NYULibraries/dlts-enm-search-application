@@ -1,10 +1,10 @@
 /* global $:false */
 
-import BrowseMenu from './BrowseMenu';
+import NavbarBrowseMenu from './NavbarBrowseMenu';
 
 class Navbar {
     constructor() {
-        this.browse = new BrowseMenu();
+        this.browse = new NavbarBrowseMenu();
     }
     get about() {
         return $( 'a.navbar-item=About' );

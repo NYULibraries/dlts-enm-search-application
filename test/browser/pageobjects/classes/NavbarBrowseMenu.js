@@ -1,6 +1,6 @@
 /* global $:false */
 
-class BrowseMenu {
+class NavbarBrowseMenu {
     get _element() {
         return $( 'a.navbar-link=Browse' );
     }
@@ -22,4 +22,4 @@ class BrowseMenu {
     };
 }
 
-export default BrowseMenu;
+export default NavbarBrowseMenu;
