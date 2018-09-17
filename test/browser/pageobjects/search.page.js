@@ -7,6 +7,7 @@ import Page from './page';
 import LimitByTopicPane from './classes/LimitByTopicPane';
 import Navbar from './classes/Navbar';
 import PreviewPane from './classes/PreviewPane';
+import ResultsPane from './classes/ResultsPane';
 
 class SearchPage extends Page {
     constructor() {
@@ -15,6 +16,7 @@ class SearchPage extends Page {
         this.limitByTopicPane = new LimitByTopicPane();
         this.navbar = new Navbar();
         this.previewPane = new PreviewPane();
+        this.resultsPane = new ResultsPane();
     }
 
     get alertText() {
@@ -33,70 +35,6 @@ class SearchPage extends Page {
             home           : 'prototypes/',
             featuredTopics : 'prototypes/browse-topics-lists/enm-picks.html',
             search         : 'prototypes/search-results',
-        };
-    }
-
-    get resultsPane() {
-        return {
-            header  : {
-                numPages         : () => {
-                    return this.resultsPane.header.numPagesAndBooks().numPages;
-                },
-                numBooks         : () => {
-                    return this.resultsPane.header.numPagesAndBooks().numBooks;
-                },
-                numPagesAndBooks : () => {
-                    let found = this.resultsPane.header.text.match( /Results: (.*) pages in (\d+) books/ );
-
-                    if ( found ) {
-                        return {
-                            numBooks : parseInt( found[ 2 ].replace( ',', '' ), 10 ),
-                            numPages : parseInt( found[ 1 ].replace( ',', '' ), 10 ),
-                        };
-                    } else {
-                        return {
-                            numBooks : NaN,
-                            numPages : NaN,
-                        };
-                    }
-                },
-                text             : $( 'div.enm-pane-results header' ).getText(),
-            },
-            results : {
-                _element : $( '.enm-results' ),
-                book     : ( title ) => {
-                    return $( '.enm-results div[ name = "' + title + '" ]' );
-                },
-                metadata : () => {
-                    let results = $$( '.enm-results div.box' );
-                    let books   = [];
-
-                    results.forEach( ( result ) => {
-                        let book = {};
-
-                        book.authorsAndPublisher       = result.element( '.meta' ).getText();
-                        book.isbn                      = result.getAttribute( 'id' );
-                        book.maximumPageRelevanceScore =
-                            // Leave the score as a string, don't mess with JS floats
-                            result.element( '.relevance' )
-                                .getText()
-                                .match( /Maximum page relevance score: (\S+)/ )[ 1 ];
-                        book.numMatchedPages           =
-                            parseInt(
-                                result.element( '.matches' )
-                                    .getText()
-                                    .match( /(\d+) matched pages/ )[ 1 ],
-                                10
-                            );
-                        book.thumbnail                 = result.element( '.enm-thumbnail img' ).getAttribute( 'src' );
-                        book.title                     = result.element( '.title' ).getText();
-
-                        books.push( book );
-                    } );
-
-                    return books;
-                },
-            },
         };
     }
 
@@ -260,8 +198,8 @@ class SearchPage extends Page {
 
             limitByTopics   : this.limitByTopicPane.topicNamesWithHitCounts,
 
-            resultsNumBooks : this.resultsPane.header.numBooks(),
-            resultsNumPages : this.resultsPane.header.numPages(),
+            resultsNumBooks : this.resultsPane.header.numBooks,
+            resultsNumPages : this.resultsPane.header.numPages,
             resultsMetadata : this.resultsPane.results.metadata(),
         };
     }
