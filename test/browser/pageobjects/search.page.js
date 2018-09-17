@@ -5,6 +5,7 @@ import crypto from 'crypto';
 import Page from './page';
 
 import LimitByTopicPane from './classes/LimitByTopicPane';
+import Navbar from './classes/Navbar';
 import PreviewPane from './classes/PreviewPane';
 
 class SearchPage extends Page {
@@ -12,6 +13,7 @@ class SearchPage extends Page {
         super();
 
         this.limitByTopicPane = new LimitByTopicPane();
+        this.navbar = new Navbar();
         this.previewPane = new PreviewPane();
     }
 
@@ -21,33 +23,6 @@ class SearchPage extends Page {
 
     get baseUrl() {
         return browser.options.baseUrl;
-    }
-
-    get navbar() {
-        return {
-            about : $( 'a.navbar-item=About' ),
-
-            // Menu
-            browse : {
-                _element : $( 'a.navbar-link=Browse' ),
-                click    : () => {
-                    $( 'a.navbar-link=Browse' ).click();
-                },
-                expand   : () => {
-                    $( 'a.navbar-link=Browse' ).moveToObject( 0, 0 );
-                },
-            },
-
-            // First item of Browse menu
-            featuredTopics : $( 'a.navbar-item=Featured topics' ),
-
-            // Second item of Browse menu
-            allTopics : $( 'a.navbar-item=All topics' ),
-
-            home : $( 'h1.enm-logo' ),
-
-            search : $( 'a.navbar-item=Search' ),
-        };
     }
 
     get paths() {
