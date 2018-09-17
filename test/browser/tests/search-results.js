@@ -55,7 +55,9 @@ function testSearchResults( golden ) {
     let testTitle = `Search for '${query}' `                                  +
                     ( searchFulltext ? 'fulltext=TRUE ' : 'fulltext=FALSE ' ) +
                     ( searchTopics   ? 'topics=TRUE '   : 'topics=FALSE '   ) +
-                    ' works correctly';
+                    ' produces correct DCIs, Limit by Topic list, '           +
+                    ' search results header, EPUBs list with thumbnails and'  +
+                    ' metadata';
 
     test( testTitle, function () {
         if ( ! searchFulltext ) {
