@@ -83,4 +83,17 @@ suite( 'Temp', function () {
         SearchPage.limitByTopicPane.topic( 'postmodernism' ).click();
         console.log( SearchPage.limitByTopicPane.topicNamesWithHitCounts );
     } );
+
+    test( 'Search echo', function () {
+        SearchPage.searchAndWaitForResults( 'art' );
+
+        console.log( SearchPage.searchEcho.searchDCI.query );
+        SearchPage.limitByTopicPane.topic( 'postmodernism' ).click();
+        SearchPage.searchEcho.searchDCI.dismiss();
+        console.log( SearchPage.searchEcho.searchDCI.query );
+
+        console.log( SearchPage.searchEcho.topicDCIs.topics );
+        SearchPage.searchEcho.topicDCIs.dismiss( 'postmodernism' );
+        console.log( SearchPage.searchEcho.topicDCIs.topics );
+    } );
 } );

@@ -8,6 +8,7 @@ import LimitByTopicPane from './classes/LimitByTopicPane';
 import Navbar from './classes/Navbar';
 import PreviewPane from './classes/PreviewPane';
 import ResultsPane from './classes/ResultsPane';
+import SearchEcho from './classes/SearchEcho';
 
 class SearchPage extends Page {
     constructor() {
@@ -17,6 +18,7 @@ class SearchPage extends Page {
         this.navbar = new Navbar();
         this.previewPane = new PreviewPane();
         this.resultsPane = new ResultsPane();
+        this.searchEcho = new SearchEcho();
     }
 
     get alertText() {
@@ -35,31 +37,6 @@ class SearchPage extends Page {
             home           : 'prototypes/',
             featuredTopics : 'prototypes/browse-topics-lists/enm-picks.html',
             search         : 'prototypes/search-results',
-        };
-    }
-
-    get searchEcho() {
-        return {
-            searchDCI : {
-                dismiss : () => {
-                    $( 'button#search-dci' ).click();
-                },
-
-                query : $( '//span[button[@id="search-dci"]]' )
-                    .getText()
-                    .replace( /^Searching full texts and topics for: /, '' ),
-            },
-            topicDCIs : {
-                dismiss : ( topic ) => {
-                    return $( 'button[ id="' + topic + '" ]' ).click();
-                },
-
-                topics : $$( 'span.enm-topic' ).map(
-                    ( topicDCI ) => {
-                        return topicDCI.getText();
-                    }
-                ),
-            },
         };
     }
 
