@@ -50,9 +50,12 @@ class SearchPage extends Page {
         return browser.getTitle();
     };
 
-    static getPreviewId( query, searchFulltext, searchTopics, isbn, pageNumber ) {
+    static getPreviewId( query, searchFulltext, searchTopics, title, pageNumber ) {
+        const hash    = crypto.createHash( 'sha256' );
+        const titleId = hash.update( title ).digest( 'hex' );
+
         return this.getSearchId( query, searchFulltext, searchTopics ) +
-               `-${isbn}-${pageNumber}.json`;
+               `-${titleId}-${pageNumber}.json`;
     }
 
     static getSearchId( query, searchFulltext, searchTopics ) {
