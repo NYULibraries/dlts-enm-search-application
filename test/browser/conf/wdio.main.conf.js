@@ -41,7 +41,7 @@ exports.config = {
         'limit-by-topic-pane': [
             'test/browser/tests/limit-by-topic-pane.js',
         ],
-        navbar: [
+        'navbar': [
             'test/browser/tests/navbar.js',
         ],
         'search-form': [
