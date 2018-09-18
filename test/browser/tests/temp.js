@@ -61,7 +61,7 @@ suite( 'Temp', function () {
 
         console.log( SearchPage.previewPane.barChart.data );
         console.log( SearchPage.previewPane.barChart.selectedPage() );
-        console.log( SearchPage.previewPane.barChart.barForPage( 155 ).click() );
+        console.log( SearchPage.previewPane.barChart.barForPageNumber( 155 ).click() );
         console.log( SearchPage.previewPane.barChart.selectedPage() );
     } );
 

@@ -16,8 +16,8 @@ class PreviewPaneBarChart {
         );
     }
 
-    barForPage( page ) {
-        return $( '.enm-pane-preview svg rect[ name = "' + page + '"]' );
+    barForPageNumber( pageNumber ) {
+        return $( '.enm-pane-preview svg rect[ name = "' + pageNumber + '"]' );
     }
 
     selectedPage() {
