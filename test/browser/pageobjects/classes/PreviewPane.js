@@ -7,10 +7,6 @@ class PreviewPane {
         this.barChart = new PreviewPaneBarChart();
     }
 
-    get isbn() {
-        // 'TODO'
-    }
-
     get loadTheFirstMatchedPageLink() {
         return $( '=Load the first matched page' );
     }

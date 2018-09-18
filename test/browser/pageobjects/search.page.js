@@ -84,7 +84,7 @@ class SearchPage extends Page {
             this.searchForm.searchBox.getValue(),
             this.searchForm.fulltextCheckbox.isSelected,
             this.searchForm.topicsCheckbox.isSelected,
-            this.previewPane.isbn,
+            this.previewPane.title,
             this.previewPane.pageNumber,
         );
     }
