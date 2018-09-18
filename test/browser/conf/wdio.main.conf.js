@@ -29,6 +29,7 @@ exports.config = {
     specs: [
         'test/browser/tests/limit-by-topic-pane.js',
         'test/browser/tests/navbar.js',
+        'test/browser/tests/preview-pane.js',
         'test/browser/tests/search-form.js',
         'test/browser/tests/search-results.js',
         'test/browser/tests/temp.js',
@@ -43,6 +44,9 @@ exports.config = {
         ],
         'navbar': [
             'test/browser/tests/navbar.js',
+        ],
+        'preview-pane': [
+            'test/browser/tests/preview-pane.js',
         ],
         'search-form': [
             'test/browser/tests/search-form.js',
