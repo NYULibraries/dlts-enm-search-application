@@ -16,7 +16,7 @@ class PreviewPane {
     }
 
     get pageNumber() {
-        return $( '.enm-pane-preview .enm-pageno' ).getText().match( /(\d+)$/ )[ 1 ];
+        return $( '.enm-pane-preview .enm-pageno' ).getText().match( /page (\S+)$/ )[ 1 ];
     }
 
     get pageText() {
