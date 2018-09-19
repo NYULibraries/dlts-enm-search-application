@@ -52,6 +52,8 @@ class SearchPage extends Page {
 
     static getPreviewId( query, searchFulltext, searchTopics, title, pageNumber ) {
         const hash    = crypto.createHash( 'sha256' );
+        // ISBN isn't currently available in Preview Pane, and in any case
+        // tests are selecting EPUB by title
         const titleId = hash.update( title ).digest( 'hex' );
 
         return this.getSearchId( query, searchFulltext, searchTopics ) +
