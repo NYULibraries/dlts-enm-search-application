@@ -63,6 +63,12 @@ suite( 'Temp', function () {
         console.log( SearchPage.previewPane.barChart.selectedPage() );
         console.log( SearchPage.previewPane.barChart.barForPageNumber( 155 ).click() );
         console.log( SearchPage.previewPane.barChart.selectedPage() );
+
+        SearchPage.previewPane.barChart.barForPageNumber( 12 ).click();
+
+        let pageNumberAndScore = SearchPage.previewPane.barChart.tooltipPageNumberAndScore();
+
+        console.log( pageNumberAndScore );
     } );
 
     test( 'snapshots', function () {
