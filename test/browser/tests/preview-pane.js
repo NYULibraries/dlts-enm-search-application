@@ -116,7 +116,6 @@ suite( 'Generate golden files', function () {
     );
 } );
 
-
 function generateGoldenFile( preview ) {
     test( 'Generate new golden file for ' + JSON.stringify( preview, null, '    ' ), function () {
         if ( ! preview.searchFulltext ) {
