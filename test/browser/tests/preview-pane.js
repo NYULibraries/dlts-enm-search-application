@@ -128,6 +128,7 @@ function generateGoldenFile( preview ) {
 
         SearchPage.searchAndWaitForResults( preview.query );
         SearchPage.resultsPane.results.book( preview.title ).click();
+        SearchPage.previewPane.barChart.barForPageNumber( preview.pageNumber ).waitForVisible();
         SearchPage.previewPane.barChart.barForPageNumber( preview.pageNumber ).click();
 
         let snapshot  = SearchPage.previewSnapshot();
