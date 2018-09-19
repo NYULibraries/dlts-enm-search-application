@@ -55,7 +55,7 @@ class SearchPage extends Page {
         const titleId = hash.update( title ).digest( 'hex' );
 
         return this.getSearchId( query, searchFulltext, searchTopics ) +
-               `-${titleId}-${pageNumber}.json`;
+               `-${titleId}-${pageNumber}`;
     }
 
     static getSearchId( query, searchFulltext, searchTopics ) {
