@@ -7,6 +7,10 @@ class PreviewPane {
         this.barChart = new PreviewPaneBarChart();
     }
 
+    get isbn() {
+        return $( '#preview-isbn' ).getAttribute( 'name' );
+    }
+
     get loadTheFirstMatchedPageLink() {
         return $( '=Load the first matched page' );
     }

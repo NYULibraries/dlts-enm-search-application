@@ -50,14 +50,11 @@ class SearchPage extends Page {
         return browser.getTitle();
     };
 
-    static getPreviewId( query, searchFulltext, searchTopics, title, pageNumber ) {
+    static getPreviewId( query, searchFulltext, searchTopics, isbn, pageNumber ) {
         const hash    = crypto.createHash( 'sha256' );
-        // ISBN isn't currently available in Preview Pane, and in any case
-        // tests are selecting EPUB by title
-        const titleId = hash.update( title ).digest( 'hex' );
 
         return this.getSearchId( query, searchFulltext, searchTopics ) +
-               `-${titleId}-${pageNumber}`;
+               `-${isbn}-${pageNumber}`;
     }
 
     static getSearchId( query, searchFulltext, searchTopics ) {
@@ -89,7 +86,7 @@ class SearchPage extends Page {
             this.searchForm.searchBox.getValue(),
             this.searchForm.fulltextCheckbox.isSelected,
             this.searchForm.topicsCheckbox.isSelected,
-            this.previewPane.title,
+            this.previewPane.isbn,
             this.previewPane.pageNumber,
         );
     }
