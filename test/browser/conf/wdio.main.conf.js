@@ -200,6 +200,7 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         compilers: ['js:babel-core/register'],
+        retries: 3,
         timeout: 30000,
         ui: 'tdd',
     },
