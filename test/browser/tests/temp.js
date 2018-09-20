@@ -69,6 +69,8 @@ suite( 'Temp', function () {
         let pageNumberAndScore = SearchPage.previewPane.barChart.tooltipPageNumberAndScore();
 
         console.log( pageNumberAndScore );
+
+        console.log( SearchPage.previewPane.isbn );
     } );
 
     test( 'snapshots', function () {
