@@ -1,0 +1,77 @@
+{
+    "id": "d3cec99112255db9bf4963f7798562b6a36f1bd0b2016918629e007d474deb70-fulltext-topics-088848fd8af580b77b83310b3b0326c643106acdff802b7109175013e3845bc5",
+    "limitByTopics": [
+        [
+            "Rilke's writings -- \"Modern Poetry\" (\"Moderne Lyrik\")",
+            2
+        ],
+        [
+            "Rilke's writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)",
+            2
+        ],
+        [
+            "Art -- \"objective expression\"",
+            1
+        ],
+        [
+            "Art -- autonomous art",
+            1
+        ],
+        [
+            "Art -- corrupted forms of writing in Rilke's view",
+            1
+        ],
+        [
+            "Baudelaire, Charles",
+            1
+        ],
+        [
+            "Cézanne, Paul",
+            1
+        ],
+        [
+            "Dehumanization",
+            1
+        ],
+        [
+            "Flaubert, Gustave",
+            1
+        ],
+        [
+            "Jugendstil",
+            1
+        ],
+        [
+            "Rilke's writings -- Duino Elegies (Duineser Elegien)",
+            1
+        ],
+        [
+            "Rodin, Auguste",
+            1
+        ],
+        [
+            "Symbolists",
+            1
+        ]
+    ],
+    "query": "art",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "David Kleinbard; New York University Press",
+            "isbn": "9780814746677",
+            "maximumPageRelevanceScore": "5.5100307",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814746677.jpg",
+            "title": "The Beginning of Terror"
+        }
+    ],
+    "resultsNumBooks": 1,
+    "resultsNumPages": 2,
+    "searchDCI": "art",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+        "Rilke's writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)",
+        "Rilke's writings -- \\\"Modern Poetry\\\" (\\\"Moderne Lyrik\\\")"
+    ]
+}
