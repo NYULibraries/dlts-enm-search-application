@@ -70,13 +70,13 @@ function testSearchResults( golden ) {
             SearchPage.searchForm.topicsCheckbox.click();
         }
 
+        SearchPage.searchAndWaitForResults( query );
+
         if ( topicsDCIs.length > 0 ) {
             topicsDCIs.forEach( ( topic ) => {
-                SearchPage.limitByTopicPane.topic( topic ).click();
+                SearchPage.limitByTopicAndWaitForResults( topic );
             } );
         }
-
-        SearchPage.searchAndWaitForResults( query );
 
         const snapshot = SearchPage.searchResultsSnapshot();
         const searchId = SearchPage.getSearchIdForCurrentSearch();
