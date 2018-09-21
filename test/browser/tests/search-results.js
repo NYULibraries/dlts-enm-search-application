@@ -48,13 +48,15 @@ suite( 'Search results', function () {
 } );
 
 function testSearchResults( golden ) {
+    const topicsDCIs     = golden.topicsDCIs;
     const query          = golden.query;
     const searchFulltext = golden.searchFulltext;
     const searchTopics   = golden.searchTopics;
 
-    const testTitle = `Search for '${query}' `                                  +
+    const testTitle = `Search for '${query}' `                                +
                     ( searchFulltext ? 'fulltext=TRUE ' : 'fulltext=FALSE ' ) +
                     ( searchTopics   ? 'topics=TRUE '   : 'topics=FALSE '   ) +
+                    ' topic-facet-values=[' + topicsDCIs + ']'                 +
                     ' produces correct DCIs, Limit by Topic list, '           +
                     ' search results header, EPUBs list with thumbnails and'  +
                     ' metadata';
@@ -66,6 +68,12 @@ function testSearchResults( golden ) {
 
         if ( ! searchTopics ) {
             SearchPage.searchForm.topicsCheckbox.click();
+        }
+
+        if ( topicsDCIs.length > 0 ) {
+            topicsDCIs.forEach( ( topic ) => {
+                SearchPage.limitByTopicPane.topic( topic ).click();
+            } );
         }
 
         SearchPage.searchAndWaitForResults( query );
