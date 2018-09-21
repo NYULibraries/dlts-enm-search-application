@@ -157,7 +157,7 @@ class SearchPage extends Page {
             searchFulltext  : this.searchForm.fulltextCheckbox.isSelected,
             searchTopics    : this.searchForm.topicsCheckbox.isSelected,
             searchDCI       : this.searchEcho.searchDCI.query,
-            topicsDCIs      : this.searchEcho.topicsDCIs.topics,
+            topicsDCIs      : this.searchEcho.topicDCIs.topics,
 
             limitByTopics   : this.limitByTopicPane.topicNamesWithHitCounts,
 
