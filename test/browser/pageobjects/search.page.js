@@ -51,8 +51,6 @@ class SearchPage extends Page {
     };
 
     static getPreviewId( query, searchFulltext, searchTopics, isbn, pageNumber ) {
-        const hash    = crypto.createHash( 'sha256' );
-
         return this.getSearchId( query, searchFulltext, searchTopics ) +
                `-${isbn}-${pageNumber}`;
     }
