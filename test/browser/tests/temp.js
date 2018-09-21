@@ -102,5 +102,11 @@ suite( 'Temp', function () {
         console.log( SearchPage.searchEcho.topicDCIs.topics );
         SearchPage.searchEcho.topicDCIs.dismiss( 'postmodernism' );
         console.log( SearchPage.searchEcho.topicDCIs.topics );
+
+        SearchPage.limitByTopicPane.topic( 'postmodernism' ).click();
+        SearchPage.limitByTopicPane.topic( 'Post–Civil Rights era -- Cultural production' ).click();
+        console.log( SearchPage.getSearchIdForCurrentSearch() );
+        SearchPage.searchEcho.topicDCIs.dismiss( 'postmodernism' );
+        console.log( SearchPage.getSearchIdForCurrentSearch() );
     } );
 } );
