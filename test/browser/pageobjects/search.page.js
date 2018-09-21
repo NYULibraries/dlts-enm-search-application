@@ -55,9 +55,9 @@ class SearchPage extends Page {
                `-${isbn}-${pageNumber}`;
     }
 
-    static getSearchId( query, searchFulltext, searchTopics ) {
-        const hash    = crypto.createHash( 'sha256' );
-        const queryId = hash.update( query ).digest( 'hex' );
+    static getSearchId( query, searchFulltext, searchTopics, topicDCIsTopics ) {
+        const hashQueryId = crypto.createHash( 'sha256' );
+        const queryId     = hashQueryId.update( query ).digest( 'hex' );
 
         let basename = queryId;
 
@@ -67,6 +67,14 @@ class SearchPage extends Page {
 
         if ( searchTopics ) {
             basename += '-topics';
+        }
+
+        if ( topicDCIsTopics.length > 0 ) {
+            const hashTopicDCIsTopics   = crypto.createHash( 'sha256' );
+            const topicDCIsTopicsString = topicDCIsTopics.sort().join( '|' );
+            let topicDCIsTopicsKey      = hashTopicDCIsTopics.update( topicDCIsTopicsString ).digest( 'hex' );
+
+            basename += '-' + topicDCIsTopicsKey;
         }
 
         return basename;
@@ -94,6 +102,7 @@ class SearchPage extends Page {
             this.searchForm.searchBox.getValue(),
             this.searchForm.fulltextCheckbox.isSelected,
             this.searchForm.topicsCheckbox.isSelected,
+            this.searchEcho.topicDCIs.topics,
         );
     }
 
