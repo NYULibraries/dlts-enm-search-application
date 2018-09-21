@@ -48,11 +48,11 @@ suite( 'Search results', function () {
 } );
 
 function testSearchResults( golden ) {
-    let query          = golden.query;
-    let searchFulltext = golden.searchFulltext;
-    let searchTopics   = golden.searchTopics;
+    const query          = golden.query;
+    const searchFulltext = golden.searchFulltext;
+    const searchTopics   = golden.searchTopics;
 
-    let testTitle = `Search for '${query}' `                                  +
+    const testTitle = `Search for '${query}' `                                  +
                     ( searchFulltext ? 'fulltext=TRUE ' : 'fulltext=FALSE ' ) +
                     ( searchTopics   ? 'topics=TRUE '   : 'topics=FALSE '   ) +
                     ' produces correct DCIs, Limit by Topic list, '           +
@@ -70,14 +70,14 @@ function testSearchResults( golden ) {
 
         SearchPage.searchAndWaitForResults( query );
 
-        let snapshot = SearchPage.searchResultsSnapshot();
-        let searchId = SearchPage.getSearchIdForCurrentSearch();
+        const snapshot = SearchPage.searchResultsSnapshot();
+        const searchId = SearchPage.getSearchIdForCurrentSearch();
 
-        let stringifiedGolden = jsonStableStringify( golden );
-        let stringifiedSnapshot = jsonStableStringify( snapshot );
+        const stringifiedGolden = jsonStableStringify( golden );
+        const stringifiedSnapshot = jsonStableStringify( snapshot );
 
-        let goldenFile = GOLDEN_FILES_DIRECTORY + '/' + searchId + '.json';
-        let actualFile = ACTUAL_FILES_DIRECTORY + '/' + searchId + '.json';
+        const goldenFile = GOLDEN_FILES_DIRECTORY + '/' + searchId + '.json';
+        const actualFile = ACTUAL_FILES_DIRECTORY + '/' + searchId + '.json';
 
         if ( updateGoldenFiles ) {
             fs.writeFileSync( goldenFile, stringifiedSnapshot );
