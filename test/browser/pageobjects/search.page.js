@@ -87,6 +87,11 @@ class SearchPage extends Page {
         super.open( this.paths.search );
     }
 
+    limitByTopicAndWaitForResults( topic ) {
+        this.limitByTopicPane.topic( topic ).click();
+        this.resultsPane.results._element.waitForVisible();
+    }
+
     getPreviewIdForCurrentPreview() {
         return SearchPage.getPreviewId(
             this.searchForm.searchBox.getValue(),
