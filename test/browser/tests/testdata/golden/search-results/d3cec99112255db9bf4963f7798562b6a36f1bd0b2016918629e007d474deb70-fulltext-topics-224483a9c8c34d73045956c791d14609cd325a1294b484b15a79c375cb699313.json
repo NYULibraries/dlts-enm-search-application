@@ -1,6 +1,14 @@
 {
-    "id": "d3cec99112255db9bf4963f7798562b6a36f1bd0b2016918629e007d474deb70-fulltext-topics-da5aeeec84e983d1ff4cba106a66833d6d6670573df34647bad6fe562ca8db8a",
+    "id": "d3cec99112255db9bf4963f7798562b6a36f1bd0b2016918629e007d474deb70-fulltext-topics-224483a9c8c34d73045956c791d14609cd325a1294b484b15a79c375cb699313",
     "limitByTopics": [
+        [
+            "Rilke's writings -- \"Modern Poetry\" (\"Moderne Lyrik\")",
+            2
+        ],
+        [
+            "Rilke's writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)",
+            2
+        ],
         [
             "Art -- \"objective expression\"",
             1
@@ -34,11 +42,11 @@
             1
         ],
         [
-            "Rilke's writings -- \"Modern Poetry\" (\"Moderne Lyrik\")",
+            "Rilke's writings -- Duino Elegies (Duineser Elegien)",
             1
         ],
         [
-            "Rilke's writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)",
+            "Rodin, Auguste",
             1
         ],
         [
@@ -52,19 +60,18 @@
             "authorsAndPublisher": "David Kleinbard; New York University Press",
             "isbn": "9780814746677",
             "maximumPageRelevanceScore": "5.5100307",
-            "numMatchedPages": 1,
+            "numMatchedPages": 2,
             "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814746677.jpg",
             "title": "The Beginning of Terror"
         }
     ],
     "resultsNumBooks": 1,
-    "resultsNumPages": 1,
+    "resultsNumPages": 2,
     "searchDCI": "art",
     "searchFulltext": true,
     "searchTopics": true,
     "topicsDCIs": [
         "Rilke's writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)",
-        "Rilke's writings -- \"Modern Poetry\" (\"Moderne Lyrik\")",
-        "Cézanne, Paul"
+        "Rilke's writings -- \"Modern Poetry\" (\"Moderne Lyrik\")"
     ]
 }
