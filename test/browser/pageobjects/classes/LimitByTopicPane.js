@@ -18,7 +18,7 @@ class LimitByTopicPane {
     }
 
     topic( topic ) {
-        return $( 'a[ id = "' + topic + '" ]' );
+        return $( 'a[ id = "' + topic.replace( /"/g, '\\"' ) + '" ]' );
     }
 }
 
