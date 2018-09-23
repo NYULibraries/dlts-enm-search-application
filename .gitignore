@@ -15,6 +15,9 @@ yarn-error.log*
 *.njsproj
 *.sln
 
+test/browser/diffs/*
+!test/browser/diffs/.commit-empty-directory
+
 test/browser/tests/testdata/actual/*
 
 !test/browser/tests/testdata/actual/search-results/
