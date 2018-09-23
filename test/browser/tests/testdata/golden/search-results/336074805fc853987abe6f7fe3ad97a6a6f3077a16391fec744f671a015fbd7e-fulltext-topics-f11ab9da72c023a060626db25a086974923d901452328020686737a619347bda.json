@@ -1,0 +1,85 @@
+{
+    "id": "336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e-fulltext-topics-f11ab9da72c023a060626db25a086974923d901452328020686737a619347bda",
+    "limitByTopics": [
+        [
+            "Behavior(al)",
+            1
+        ],
+        [
+            "Campaign(s) and campaigning -- presidential",
+            1
+        ],
+        [
+            "Candidate(s) and candidacies",
+            1
+        ],
+        [
+            "Character integrity -- personas and",
+            1
+        ],
+        [
+            "Characterological -- strengths",
+            1
+        ],
+        [
+            "Cognitive/cognition -- capacity",
+            1
+        ],
+        [
+            "Cognitive/cognition -- structures",
+            1
+        ],
+        [
+            "Development(al) -- history",
+            1
+        ],
+        [
+            "Emotional -- structures",
+            1
+        ],
+        [
+            "Experience(s) -- identity development and",
+            1
+        ],
+        [
+            "George, Alexander L.",
+            1
+        ],
+        [
+            "George, Juliette",
+            1
+        ],
+        [
+            "Ideals -- pursuit of",
+            1
+        ],
+        [
+            "Kohut, Heinz",
+            1
+        ],
+        [
+            "Lasswell, Harold D.",
+            1
+        ]
+    ],
+    "query": "time",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Stanley A. Renshon; New York University Press",
+            "isbn": "9780814774694",
+            "maximumPageRelevanceScore": "1.1910797",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774694.jpg",
+            "title": "The Psychological Assessment of Presidential Candidates"
+        }
+    ],
+    "resultsNumBooks": 1,
+    "resultsNumPages": 1,
+    "searchDCI": "time",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+        "values",
+        "virtue"
+    ]
+}
