@@ -1,5 +1,7 @@
 /* global setup:false suiteSetup:false suite:false test:false */
 
+import { sync as commandExistsSync } from 'command-exists';
+import { execSync } from 'child_process';
 import fs from 'fs';
 import rimraf from 'rimraf';
 import path from 'path';
@@ -12,6 +14,8 @@ import { jsonStableStringify } from '../util';
 
 const ACTUAL_FILES_DIRECTORY = path.resolve( __dirname, './testdata/actual/search-results/' );
 const GOLDEN_FILES_DIRECTORY = path.resolve( __dirname, './testdata/golden/search-results/' );
+const DIFF_FILES_DIRECTORY   = path.resolve( __dirname, '../diffs' );
+
 const goldenFiles = fs.readdirSync( GOLDEN_FILES_DIRECTORY ).map( ( file ) => {
     return path.resolve( GOLDEN_FILES_DIRECTORY + '/' + file );
 } );
@@ -25,12 +29,16 @@ if (
     updateGoldenFiles = true;
 }
 
+const DIFF = 'diff';
+const DIFF_EXISTS = commandExistsSync( DIFF );
+
 suite( 'Search results', function () {
     suiteSetup( function () {
         try {
             rimraf.sync( ACTUAL_FILES_DIRECTORY + '/*' );
+            rimraf.sync( DIFF_FILES_DIRECTORY + '/*' );
         } catch( error ) {
-            console.error( `ERROR clearing ${ACTUAL_FILES_DIRECTORY}: ${error}` );
+            console.error( `ERROR clearing directory: ${error}` );
 
             process.exit( 1 );
         }
@@ -97,12 +105,37 @@ function testSearchResults( golden ) {
 
         fs.writeFileSync( actualFile, stringifiedSnapshot );
 
-        assert(
-            stringifiedSnapshot === stringifiedGolden,
-            // eslint-disable-next-line indent
-`Actual search results do not match expected.  Diff actual file vs  golden file for details:
+        const ok = ( stringifiedSnapshot === stringifiedGolden );
+        let message = 'Actual search results do not match expected.';
+        if ( ! ok ) {
+            if ( DIFF_EXISTS ) {
+                // Create the diff file for later inspection
+                const diffFile = `${DIFF_FILES_DIRECTORY}/${searchId}.txt`;
+                const command = `diff ${goldenFile} ${actualFile} > ${diffFile}`;
 
-    diff ${goldenFile} ${actualFile}`
-        );
+                // Note that this will always throw an exception because `diff`
+                // throws when files are different.
+                try {
+                    execSync( command );
+                } catch( e ) {
+                    if ( ! e.stderr.toString() ) {
+                        // This is what is expected -- diff command succeeds.
+                        message += `  See diff file: ${diffFile}`;
+                    } else {
+                        // This is unexpected -- diff command failed to create
+                        // the diff file.
+                        message += `  Diff command \`${command}\` failed:
+
+${e.stderr.toString()}`;
+                    }
+                }
+            } else {
+                message += `  \`${DIFF}\` command not available.  Compare actual file vs golden file for details:
+    ${goldenFile}
+    ${actualFile}`;
+            }
+        }
+
+        assert( ok, message );
     } );
 }
