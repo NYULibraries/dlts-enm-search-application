@@ -1,0 +1,87 @@
+{
+    "id": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1-fulltext-topics-5729b07d21aed4bd86e63bffc79b68424cd5bdfb5fe0d1c2c38b47c67422a70d",
+    "limitByTopics": [
+        [
+            "B & C (British and Colonial Kinematograph Company)",
+            1
+        ],
+        [
+            "Doyle, Arthur Conan",
+            1
+        ],
+        [
+            "Doyle, Arthur Conan -- Sherlock Holmes",
+            1
+        ],
+        [
+            "Eviction, The (1904)",
+            1
+        ],
+        [
+            "Exploits of Three-Fingered Kate (series)",
+            1
+        ],
+        [
+            "Gaumont",
+            1
+        ],
+        [
+            "Ireland",
+            1
+        ],
+        [
+            "Martinek, Ivy",
+            1
+        ],
+        [
+            "Queen of Criminals",
+            1
+        ],
+        [
+            "Sheerluck Jones (1901)",
+            1
+        ],
+        [
+            "Sherlock Holmes Baffled (1901)",
+            1
+        ],
+        [
+            "Singer, Ben",
+            1
+        ],
+        [
+            "United States -- U.S. films / film industry",
+            1
+        ],
+        [
+            "class",
+            1
+        ],
+        [
+            "feminism",
+            1
+        ]
+    ],
+    "query": "*",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Elizabeth Carolyn Miller; University of Michigan Press and University of Michigan Library",
+            "isbn": "9780472024469",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472024469.jpg",
+            "title": "Framed: The New Woman Criminal in British Culture at the Fin de Siecle"
+        }
+    ],
+    "resultsNumBooks": 1,
+    "resultsNumPages": 1,
+    "searchDCI": "*",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+        "feminism",
+        "class",
+        "Doyle, Arthur Conan",
+        "film(s)"
+    ]
+}
