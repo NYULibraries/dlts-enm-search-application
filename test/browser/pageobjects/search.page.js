@@ -92,7 +92,7 @@ class SearchPage extends Page {
             this.limitByTopicPane.topic( topic ).click();
         } else {
             this.limitByTopicPane.seeAllLink.click();
-            this.limitByTopicPane.topic( topic ).waitForVisible();
+            this.limitByTopicPane.topic( topic ).waitForVisible( 5000 );
             this.limitByTopicPane.topic( topic ).click();
         }
 
