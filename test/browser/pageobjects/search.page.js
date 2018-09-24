@@ -88,7 +88,14 @@ class SearchPage extends Page {
     }
 
     limitByTopicAndWaitForResults( topic ) {
-        this.limitByTopicPane.topic( topic ).click();
+        if ( this.limitByTopicPane.topic( topic ).isExisting() ) {
+            this.limitByTopicPane.topic( topic ).click();
+        } else {
+            this.limitByTopicPane.seeAllLink.click();
+            this.limitByTopicPane.topic( topic ).waitForVisible();
+            this.limitByTopicPane.topic( topic ).click();
+        }
+
         this.resultsPane.results._element.waitForVisible();
     }
 
