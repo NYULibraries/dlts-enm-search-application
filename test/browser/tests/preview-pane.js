@@ -56,13 +56,13 @@ suite( 'Preview Pane', function () {
     } );
 
     goldenFiles.forEach( ( goldenFile ) => {
-        let golden = require( goldenFile );
-
-        testPreviewOfPage( golden );
+        testPreviewOfPage( goldenFile );
     } );
 } );
 
-function testPreviewOfPage( golden ) {
+function testPreviewOfPage( goldenFile ) {
+    const golden = require( goldenFile );
+
     let query          = golden.query;
     let pageNumber     = golden.pageNumber;
     let searchFulltext = golden.searchFulltext;
@@ -96,7 +96,6 @@ function testPreviewOfPage( golden ) {
         let stringifiedGolden = jsonStableStringify( golden );
         let stringifiedSnapshot = jsonStableStringify( snapshot );
 
-        let goldenFile = GOLDEN_FILES_DIRECTORY + '/' + previewId + '.json';
         let actualFile = ACTUAL_FILES_DIRECTORY + '/' + previewId + '.json';
 
         if ( updateGoldenFiles ) {
