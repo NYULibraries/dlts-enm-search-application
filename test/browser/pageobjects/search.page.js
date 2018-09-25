@@ -50,8 +50,8 @@ class SearchPage extends Page {
         return browser.getTitle();
     };
 
-    static getPreviewId( query, searchFulltext, searchTopics, isbn, pageNumber ) {
-        return this.getSearchId( query, searchFulltext, searchTopics ) +
+    static getPreviewId( query, searchFulltext, searchTopics, topicDCIsTopics, isbn, pageNumber ) {
+        return this.getSearchId( query, searchFulltext, searchTopics, topicDCIsTopics ) +
                `-${isbn}-${pageNumber}`;
     }
 
@@ -104,6 +104,7 @@ class SearchPage extends Page {
             this.searchForm.searchBox.getValue(),
             this.searchForm.fulltextCheckbox.isSelected,
             this.searchForm.topicsCheckbox.isSelected,
+            this.searchEcho.topicDCIs.topics,
             this.previewPane.isbn,
             this.previewPane.pageNumber,
         );
