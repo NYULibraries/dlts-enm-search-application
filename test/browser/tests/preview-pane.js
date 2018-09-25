@@ -63,13 +63,13 @@ suite( 'Preview Pane', function () {
 function testPreviewOfPage( goldenFile ) {
     const golden = require( goldenFile );
 
-    let query          = golden.query;
-    let pageNumber     = golden.pageNumber;
-    let searchFulltext = golden.searchFulltext;
-    let searchTopics   = golden.searchTopics;
-    let title          = golden.title;
+    const query          = golden.query;
+    const pageNumber     = golden.pageNumber;
+    const searchFulltext = golden.searchFulltext;
+    const searchTopics   = golden.searchTopics;
+    const title          = golden.title;
 
-    let testTitle = `Preview pane for'${query}' `                                  +
+    const testTitle = `Preview pane for'${query}' `                                  +
                     ( searchFulltext ? 'fulltext=TRUE ' : 'fulltext=FALSE ' ) +
                     ( searchTopics   ? 'topics=TRUE '   : 'topics=FALSE '   ) +
                     ' title=' + title + ' pageNumber=' + pageNumber +
@@ -90,13 +90,13 @@ function testPreviewOfPage( goldenFile ) {
         SearchPage.resultsPane.results.book( title ).click();
         SearchPage.previewPane.barChart.barForPageNumber( pageNumber ).click();
 
-        let snapshot = SearchPage.previewSnapshot();
-        let previewId = SearchPage.getPreviewIdForCurrentPreview();
+        const snapshot = SearchPage.previewSnapshot();
+        const previewId = SearchPage.getPreviewIdForCurrentPreview();
 
-        let stringifiedGolden = jsonStableStringify( golden );
-        let stringifiedSnapshot = jsonStableStringify( snapshot );
+        const stringifiedGolden = jsonStableStringify( golden );
+        const stringifiedSnapshot = jsonStableStringify( snapshot );
 
-        let actualFile = ACTUAL_FILES_DIRECTORY + '/' + previewId + '.json';
+        const actualFile = ACTUAL_FILES_DIRECTORY + '/' + previewId + '.json';
 
         if ( updateGoldenFiles ) {
             fs.writeFileSync( goldenFile, stringifiedSnapshot );
