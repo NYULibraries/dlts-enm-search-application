@@ -1,7 +1,5 @@
 /* global setup:false suiteSetup:false suite:false test:false */
 
-import { sync as commandExistsSync } from 'command-exists';
-import { execSync } from 'child_process';
 import fs from 'fs';
 import rimraf from 'rimraf';
 import path from 'path';
@@ -10,7 +8,7 @@ import { assert } from 'chai';
 
 import SearchPage from '../pageobjects/search.page';
 
-import { jsonStableStringify } from '../util';
+import { diffActualVsGoldenAndReturnMessage, jsonStableStringify } from '../util';
 
 const ACTUAL_FILES_DIRECTORY = path.resolve( __dirname, './testdata/actual/search-results/' );
 const GOLDEN_FILES_DIRECTORY = path.resolve( __dirname, './testdata/golden/search-results/' );
@@ -28,9 +26,6 @@ if (
 ) {
     updateGoldenFiles = true;
 }
-
-const DIFF = 'diff';
-const DIFF_EXISTS = commandExistsSync( DIFF );
 
 suite( 'Search results', function () {
     suiteSetup( function () {
@@ -106,34 +101,9 @@ function testSearchResults( golden ) {
         fs.writeFileSync( actualFile, stringifiedSnapshot );
 
         const ok = ( stringifiedSnapshot === stringifiedGolden );
-        let message = 'Actual search results do not match expected.';
+        let message;
         if ( ! ok ) {
-            if ( DIFF_EXISTS ) {
-                // Create the diff file for later inspection
-                const diffFile = `${DIFF_FILES_DIRECTORY}/${searchId}.txt`;
-                const command = `diff ${goldenFile} ${actualFile} > ${diffFile}`;
-
-                // Note that this will always throw an exception because `diff`
-                // throws when files are different.
-                try {
-                    execSync( command );
-                } catch( e ) {
-                    if ( ! e.stderr.toString() ) {
-                        // This is what is expected -- diff command succeeds.
-                        message += `  See diff file: ${diffFile}`;
-                    } else {
-                        // This is unexpected -- diff command failed to create
-                        // the diff file.
-                        message += `  Diff command \`${command}\` failed:
-
-${e.stderr.toString()}`;
-                    }
-                }
-            } else {
-                message += `  \`${DIFF}\` command not available.  Compare actual file vs golden file for details:
-    ${goldenFile}
-    ${actualFile}`;
-            }
+            message = diffActualVsGoldenAndReturnMessage( actualFile, goldenFile, searchId );
         }
 
         assert( ok, message );
