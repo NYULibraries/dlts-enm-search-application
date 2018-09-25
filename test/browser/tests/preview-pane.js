@@ -40,6 +40,21 @@ suite( 'Preview Pane', function () {
         SearchPage.open();
     } );
 
+    test( '"Load the first matched page" link', function () {
+        SearchPage.searchAndWaitForResults( 'art' );
+        SearchPage.previewPane.loadTheFirstMatchedPageLink.click();
+
+        const expected = 'Japanese lessons|12';
+        const got      = SearchPage.previewPane.title + '|' +
+                         SearchPage.previewPane.pageNumber;
+
+        assert(
+            got === expected,
+            'Clicking on "Load the first matched page" link did not load the correct preview.' +
+            '  Expected: ' + expected + '; got: ' + got
+        );
+    } );
+
     goldenFiles.forEach( ( goldenFile ) => {
         let golden = require( goldenFile );
 
