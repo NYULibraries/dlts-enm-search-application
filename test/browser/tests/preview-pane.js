@@ -43,11 +43,11 @@ suite( 'Preview Pane', function () {
     goldenFiles.forEach( ( goldenFile ) => {
         let golden = require( goldenFile );
 
-        testPreviewPane( golden );
+        testPreviewOfPage( golden );
     } );
 } );
 
-function testPreviewPane( golden ) {
+function testPreviewOfPage( golden ) {
     let query          = golden.query;
     let pageNumber     = golden.pageNumber;
     let searchFulltext = golden.searchFulltext;
