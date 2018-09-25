@@ -90,30 +90,47 @@ function testPreviewOfPage( goldenFile ) {
         SearchPage.resultsPane.results.book( title ).click();
         SearchPage.previewPane.barChart.barForPageNumber( pageNumber ).click();
 
-        const snapshot = SearchPage.previewSnapshot();
-        const previewId = SearchPage.getPreviewIdForCurrentPreview();
-
-        const stringifiedGolden = jsonStableStringify( golden );
-        const stringifiedSnapshot = jsonStableStringify( snapshot );
-
-        const actualFile = ACTUAL_FILES_DIRECTORY + '/' + previewId + '.json';
-
-        if ( updateGoldenFiles ) {
-            fs.writeFileSync( goldenFile, stringifiedSnapshot );
-
-            console.log( `Updated golden file ${goldenFile}` );
-
-            return;
-        }
-
-        fs.writeFileSync( actualFile, stringifiedSnapshot );
+        const result = compareActualToGolden();
+        const actualFile = getActualFilePath( golden.id );
 
         assert(
-            stringifiedSnapshot === stringifiedGolden,
+            result,
             // eslint-disable-next-line indent
-            `Actual search results do not match expected.  Diff actual file vs  golden file for details:
+            `Actual search results do not match expected.  Diff actual file vs golden file for details:
 
     diff ${goldenFile} ${actualFile}`
         );
     } );
+}
+
+function compareActualToGolden() {
+    const snapshot = SearchPage.previewSnapshot();
+    const previewId = SearchPage.getPreviewIdForCurrentPreview();
+    const goldenFile = getGoldenFilePath( previewId );
+    const golden = require( goldenFile );
+
+    const stringifiedGolden = jsonStableStringify( golden );
+    const stringifiedSnapshot = jsonStableStringify( snapshot ) + 'x';
+
+    const actualFile = getActualFilePath( previewId );
+
+    if ( updateGoldenFiles ) {
+        fs.writeFileSync( goldenFile, stringifiedSnapshot );
+
+        console.log( `Updated golden file ${goldenFile}` );
+
+        return;
+    }
+
+    fs.writeFileSync( actualFile, stringifiedSnapshot );
+
+    return stringifiedSnapshot === stringifiedGolden;
+}
+
+function getActualFilePath( previewId ) {
+    return ACTUAL_FILES_DIRECTORY + '/' + previewId + '.json';
+}
+
+function getGoldenFilePath( previewId ) {
+    return GOLDEN_FILES_DIRECTORY + '/' + previewId + '.json';
 }
