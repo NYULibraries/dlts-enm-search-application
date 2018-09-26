@@ -36,6 +36,12 @@ suite( 'Preview Pane', function () {
 
     setup( function () {
         SearchPage.open();
+        SearchPage.setViewportSize(
+            {
+                height : 650,
+                width  : 1350,
+            }
+        );
     } );
 
     test( '"Load the first matched page" link', function () {
