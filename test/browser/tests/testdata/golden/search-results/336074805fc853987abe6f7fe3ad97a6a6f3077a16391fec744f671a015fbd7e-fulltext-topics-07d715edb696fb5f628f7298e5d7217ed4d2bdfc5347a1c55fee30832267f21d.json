@@ -1,0 +1,100 @@
+{
+    "id": "336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e-fulltext-topics-07d715edb696fb5f628f7298e5d7217ed4d2bdfc5347a1c55fee30832267f21d",
+    "limitByTopics": [
+        [
+            "power",
+            17
+        ],
+        [
+            "responsibility",
+            6
+        ],
+        [
+            "discourse(s)",
+            4
+        ],
+        [
+            "policy",
+            4
+        ],
+        [
+            "structural",
+            4
+        ],
+        [
+            "equity",
+            3
+        ],
+        [
+            "failure",
+            3
+        ],
+        [
+            "inequity",
+            3
+        ],
+        [
+            "invest(ment)",
+            3
+        ],
+        [
+            "mechanism (of whiteness)",
+            3
+        ],
+        [
+            "meritocracy",
+            3
+        ],
+        [
+            "races",
+            3
+        ],
+        [
+            "reproduce",
+            3
+        ],
+        [
+            "status quo",
+            3
+        ],
+        [
+            "Character -- types",
+            2
+        ]
+    ],
+    "query": "time",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Angelina E. Castagno; University of Minnesota Press",
+            "isbn": "9780816681655",
+            "maximumPageRelevanceScore": "2.3370678",
+            "numMatchedPages": 11,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780816681655.jpg",
+            "title": "Educated in Whiteness"
+        },
+        {
+            "authorsAndPublisher": "Stanley A. Renshon; New York University Press",
+            "isbn": "9780814774694",
+            "maximumPageRelevanceScore": "1.6387407",
+            "numMatchedPages": 5,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774694.jpg",
+            "title": "The Psychological Assessment of Presidential Candidates"
+        },
+        {
+            "authorsAndPublisher": "R. Jeffrey Ringer; New York University Press",
+            "isbn": "9780814774410",
+            "maximumPageRelevanceScore": "1.0581851",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774410.jpg",
+            "title": "Queer Words, Queer Images: Communication and the Construction of Homosexuality"
+        }
+    ],
+    "resultsNumBooks": 3,
+    "resultsNumPages": 17,
+    "searchDCI": "time",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+        "power"
+    ]
+}
