@@ -55,6 +55,42 @@ suite( 'Preview Pane', function () {
         );
     } );
 
+    test( '"Previous" button disabled for preview of first page hit', function () {
+        SearchPage.searchAndWaitForResults( 'art' );
+        SearchPage.resultsPane.results.book( 'Japanese lessons' ).click();
+        SearchPage.previewPane.barChart.barForPageNumber( 12 ).click();
+
+        // `isEnabled()` doesn't report correctly:
+        //
+        // > browser.getAttribute( 'a=< previous', 'disabled' )
+        // 'true'
+        // > browser.isEnabled( 'a=< previous' )
+        // true
+        // >
+        assert(
+            SearchPage.previewPane.previous.getAttribute( 'disabled' ) === 'true',
+            '"Previous" button is not disabled for first page hit in bar chart'
+        );
+    } );
+
+    test( '"Previous" button disabled for preview of first page hit', function () {
+        SearchPage.searchAndWaitForResults( 'art' );
+        SearchPage.resultsPane.results.book( 'Japanese lessons' ).click();
+        SearchPage.previewPane.barChart.barForPageNumber( 262 ).click();
+
+        // `isEnabled()` doesn't report correctly:
+        //
+        // > browser.getAttribute( 'a=next >', 'disabled' )
+        // 'true'
+        // > browser.isEnabled( 'a=next >' )
+        // true
+        // >
+        assert(
+            SearchPage.previewPane.next.getAttribute( 'disabled' ) === 'true',
+            '"Next" button is not disabled for first page hit in bar chart'
+        );
+    } );
+
     goldenFiles.forEach( ( goldenFile ) => {
         testPreviewOfPage( goldenFile );
     } );
