@@ -69,7 +69,7 @@ function testSearchResults( golden ) {
     const testTitle = `Search for '${query}' `                                +
                     ( searchFulltext ? 'fulltext=TRUE ' : 'fulltext=FALSE ' ) +
                     ( searchTopics   ? 'topics=TRUE '   : 'topics=FALSE '   ) +
-                    ' topic-facet-values=[' + topicsDCIs + ']'                 +
+                    ' topic-facet-values=[' + topicsDCIs + ']'                +
                     ' produces correct DCIs, Limit by Topic list, '           +
                     ' search results header, EPUBs list with thumbnails and'  +
                     ' metadata';
