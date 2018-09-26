@@ -33,7 +33,7 @@ function clearDiffFilesDirectory( suiteNameArg ) {
         const diffFilesDirectory = getDiffFilesDirectory( suiteNameArg );
 
         try {
-            rimraf.sync( path.resolve( diffFilesDirectory, '/*' ) );
+            rimraf.sync( path.resolve( diffFilesDirectory, './*' ) );
         } catch( error ) {
             console.error( `ERROR clearing diff files directory: ${error}` );
 
