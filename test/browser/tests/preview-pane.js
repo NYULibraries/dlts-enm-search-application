@@ -80,7 +80,7 @@ suite( 'Preview Pane', function () {
         );
     } );
 
-    test( '"Next" button disabled for preview of first page hit', function () {
+    test( '"Next" button disabled for preview of last page hit', function () {
         SearchPage.searchAndWaitForResults( 'art' );
         SearchPage.resultsPane.results.book( 'Japanese lessons' ).click();
         SearchPage.previewPane.barChart.barForPageNumber( 262 ).click();
