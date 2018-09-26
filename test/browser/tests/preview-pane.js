@@ -97,6 +97,27 @@ suite( 'Preview Pane', function () {
         );
     } );
 
+    test( '"Previous" button brings up correct preview for previous page', function () {
+        SearchPage.searchAndWaitForResults( 'art' );
+        SearchPage.resultsPane.results.book( 'Japanese lessons' ).click();
+        SearchPage.previewPane.barChart.barForPageNumber( 154 ).click();
+        SearchPage.previewPane.previous.click();
+
+        const previewId = SearchPage.getPreviewId( 'art', true, true, [], 9780814712917, 153 );
+        const goldenFile = getGoldenFilePath( previewId );
+        const ok = compareActualToGolden( goldenFile );
+        let message;
+        if ( ! ok ) {
+            message = diffActualVsGoldenAndReturnMessage(
+                getActualFilePath( previewId ),
+                goldenFile,
+                previewId,
+            );
+        }
+
+        assert( ok, `Clicking "Previous" button did not bring up correct preview. ` + message );
+    } );
+
     goldenFiles.forEach( ( goldenFile ) => {
         testPreviewOfPage( goldenFile );
     } );
