@@ -8,7 +8,10 @@ import { assert } from 'chai';
 
 import SearchPage from '../pageobjects/search.page';
 
-import { jsonStableStringify } from '../util';
+import {
+    diffActualVsGoldenAndReturnMessage,
+    jsonStableStringify,
+} from '../util';
 
 const ACTUAL_FILES_DIRECTORY = path.resolve( __dirname, './testdata/actual/preview-pane/' );
 const GOLDEN_FILES_DIRECTORY = path.resolve( __dirname, './testdata/golden/preview-pane/' );
@@ -126,16 +129,17 @@ function testPreviewOfPage( goldenFile ) {
         SearchPage.resultsPane.results.book( title ).click();
         SearchPage.previewPane.barChart.barForPageNumber( pageNumber ).click();
 
-        const result = compareActualToGolden();
-        const actualFile = getActualFilePath( golden.id );
+        const ok = compareActualToGolden();
+        let message;
+        if ( ! ok ) {
+            message = diffActualVsGoldenAndReturnMessage(
+                getActualFilePath( golden.id ),
+                goldenFile,
+                golden.id,
+            );
+        }
 
-        assert(
-            result,
-            // eslint-disable-next-line indent
-            `Actual search results do not match expected.  Diff actual file vs golden file for details:
-
-    diff ${goldenFile} ${actualFile}`
-        );
+        assert( ok, `Preview of page ${pageNumber} of _${title}_ failed. ` + message );
     } );
 }
 
