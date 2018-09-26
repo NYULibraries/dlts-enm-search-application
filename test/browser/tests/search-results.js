@@ -8,11 +8,14 @@ import { assert } from 'chai';
 
 import SearchPage from '../pageobjects/search.page';
 
-import { diffActualVsGoldenAndReturnMessage, jsonStableStringify } from '../util';
+import {
+    clearDiffFilesDirectory,
+    diffActualVsGoldenAndReturnMessage,
+    jsonStableStringify,
+} from '../util';
 
 const ACTUAL_FILES_DIRECTORY = path.resolve( __dirname, './testdata/actual/search-results/' );
 const GOLDEN_FILES_DIRECTORY = path.resolve( __dirname, './testdata/golden/search-results/' );
-const DIFF_FILES_DIRECTORY   = path.resolve( __dirname, '../diffs' );
 
 const goldenFiles = fs.readdirSync( GOLDEN_FILES_DIRECTORY ).map( ( file ) => {
     return path.resolve( GOLDEN_FILES_DIRECTORY + '/' + file );
@@ -31,9 +34,16 @@ suite( 'Search results', function () {
     suiteSetup( function () {
         try {
             rimraf.sync( ACTUAL_FILES_DIRECTORY + '/*' );
-            rimraf.sync( DIFF_FILES_DIRECTORY + '/*' );
         } catch( error ) {
             console.error( `ERROR clearing directory: ${error}` );
+
+            process.exit( 1 );
+        }
+
+        try {
+            clearDiffFilesDirectory();
+        } catch( error ) {
+            console.error( `ERROR clearing diff files directory: ${error}` );
 
             process.exit( 1 );
         }

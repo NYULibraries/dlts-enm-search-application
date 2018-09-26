@@ -1,11 +1,16 @@
 import { execSync } from 'child_process';
 import path from 'path';
+import rimraf from 'rimraf';
 import stringify from 'json-stable-stringify';
 import { sync as commandExistsSync } from 'command-exists';
 
 const DIFF = 'diff';
 const DIFF_EXISTS = commandExistsSync( DIFF );
 const DIFF_FILES_DIRECTORY = path.resolve( __dirname, '../diffs' );
+
+function clearDiffFilesDirectory() {
+    rimraf.sync( DIFF_FILES_DIRECTORY + '/*' );
+}
 
 function diffActualVsGoldenAndReturnMessage( actualFile, goldenFile, id ) {
     let message = 'Actual search results do not match expected.';
@@ -48,6 +53,7 @@ function jsonStableStringify( data ) {
 }
 
 export {
+    clearDiffFilesDirectory,
     diffActualVsGoldenAndReturnMessage,
     jsonStableStringify,
 };
