@@ -47,13 +47,14 @@ suite( 'Preview Pane', function () {
         SearchPage.searchAndWaitForResults( 'art' );
         SearchPage.previewPane.loadTheFirstMatchedPageLink.click();
 
-        const ok = compareActualToGolden();
+        const previewId = SearchPage.getPreviewId( 'art', true, true, [], 9780814712917, 12 );
+        const goldenFile = getGoldenFilePath( previewId );
+        const ok = compareActualToGolden( goldenFile );
         let message;
         if ( ! ok ) {
-            const previewId = SearchPage.getPreviewIdForCurrentPreview();
             message = diffActualVsGoldenAndReturnMessage(
                 getActualFilePath( previewId ),
-                getGoldenFilePath( previewId ),
+                goldenFile,
                 previewId
             );
         }
@@ -153,7 +154,7 @@ function testPreviewOfPage( goldenFile ) {
         SearchPage.resultsPane.results.book( title ).click();
         SearchPage.previewPane.barChart.barForPageNumber( pageNumber ).click();
 
-        const ok = compareActualToGolden();
+        const ok = compareActualToGolden( goldenFile );
         let message;
         if ( ! ok ) {
             message = diffActualVsGoldenAndReturnMessage(
@@ -167,10 +168,9 @@ function testPreviewOfPage( goldenFile ) {
     } );
 }
 
-function compareActualToGolden() {
+function compareActualToGolden( goldenFile ) {
     const snapshot = SearchPage.previewSnapshot();
     const previewId = SearchPage.getPreviewIdForCurrentPreview();
-    const goldenFile = getGoldenFilePath( previewId );
     const golden = require( goldenFile );
 
     const stringifiedGolden = jsonStableStringify( golden );
