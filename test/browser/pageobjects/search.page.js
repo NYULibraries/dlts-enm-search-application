@@ -50,12 +50,42 @@ class SearchPage extends Page {
         return browser.getTitle();
     };
 
-    static getPreviewId( query, searchFulltext, searchTopics, topicDCIsTopics, isbn, pageNumber ) {
+    open() {
+        // This is the real path, after the build is implemented.
+        // super.open( 'search' );
+        // For now use the prototype for writing of the tests.
+        super.open( this.paths.search );
+    }
+
+    limitByTopicAndWaitForResults( topic ) {
+        if ( this.limitByTopicPane.topic( topic ).isExisting() ) {
+            this.limitByTopicPane.topic( topic ).click();
+        } else {
+            this.limitByTopicPane.seeAllLink.click();
+            this.limitByTopicPane.topic( topic ).waitForVisible( 5000 );
+            this.limitByTopicPane.topic( topic ).click();
+        }
+
+        this.resultsPane.results._element.waitForVisible();
+    }
+
+    getPreviewId( query, searchFulltext, searchTopics, topicDCIsTopics, isbn, pageNumber ) {
         return this.getSearchId( query, searchFulltext, searchTopics, topicDCIsTopics ) +
                `-${isbn}-${pageNumber}`;
     }
 
-    static getSearchId( query, searchFulltext, searchTopics, topicDCIsTopics ) {
+    getPreviewIdForCurrentPreview() {
+        return this.getPreviewId(
+            this.searchForm.searchBox.getValue(),
+            this.searchForm.fulltextCheckbox.isSelected,
+            this.searchForm.topicsCheckbox.isSelected,
+            this.searchEcho.topicDCIs.topics,
+            this.previewPane.isbn,
+            this.previewPane.pageNumber,
+        );
+    }
+
+    getSearchId( query, searchFulltext, searchTopics, topicDCIsTopics ) {
         const hashQueryId = crypto.createHash( 'sha256' );
         const queryId     = hashQueryId.update( query ).digest( 'hex' );
 
@@ -80,38 +110,8 @@ class SearchPage extends Page {
         return basename;
     }
 
-    open() {
-        // This is the real path, after the build is implemented.
-        // super.open( 'search' );
-        // For now use the prototype for writing of the tests.
-        super.open( this.paths.search );
-    }
-
-    limitByTopicAndWaitForResults( topic ) {
-        if ( this.limitByTopicPane.topic( topic ).isExisting() ) {
-            this.limitByTopicPane.topic( topic ).click();
-        } else {
-            this.limitByTopicPane.seeAllLink.click();
-            this.limitByTopicPane.topic( topic ).waitForVisible( 5000 );
-            this.limitByTopicPane.topic( topic ).click();
-        }
-
-        this.resultsPane.results._element.waitForVisible();
-    }
-
-    getPreviewIdForCurrentPreview() {
-        return SearchPage.getPreviewId(
-            this.searchForm.searchBox.getValue(),
-            this.searchForm.fulltextCheckbox.isSelected,
-            this.searchForm.topicsCheckbox.isSelected,
-            this.searchEcho.topicDCIs.topics,
-            this.previewPane.isbn,
-            this.previewPane.pageNumber,
-        );
-    }
-
     getSearchIdForCurrentSearch() {
-        return SearchPage.getSearchId(
+        return this.getSearchId(
             this.searchForm.searchBox.getValue(),
             this.searchForm.fulltextCheckbox.isSelected,
             this.searchForm.topicsCheckbox.isSelected,
