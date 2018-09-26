@@ -36,6 +36,8 @@ suite( 'Preview Pane', function () {
 
     setup( function () {
         SearchPage.open();
+        // Setting to wider width might help prevent errors with not being able
+        // to click rightmost bar in bar chart.
         SearchPage.setViewportSize(
             {
                 height : 650,
