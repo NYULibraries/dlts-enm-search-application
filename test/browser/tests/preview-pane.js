@@ -146,7 +146,7 @@ function compareActualToGolden() {
     const golden = require( goldenFile );
 
     const stringifiedGolden = jsonStableStringify( golden );
-    const stringifiedSnapshot = jsonStableStringify( snapshot ) + 'x';
+    const stringifiedSnapshot = jsonStableStringify( snapshot );
 
     const actualFile = getActualFilePath( previewId );
 
