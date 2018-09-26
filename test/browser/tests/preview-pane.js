@@ -47,15 +47,18 @@ suite( 'Preview Pane', function () {
         SearchPage.searchAndWaitForResults( 'art' );
         SearchPage.previewPane.loadTheFirstMatchedPageLink.click();
 
-        const expected = 'Japanese lessons|12';
-        const got      = SearchPage.previewPane.title + '|' +
-                         SearchPage.previewPane.pageNumber;
+        const ok = compareActualToGolden();
+        let message;
+        if ( ! ok ) {
+            const previewId = SearchPage.getPreviewIdForCurrentPreview();
+            message = diffActualVsGoldenAndReturnMessage(
+                getActualFilePath( previewId ),
+                getGoldenFilePath( previewId ),
+                previewId
+            );
+        }
 
-        assert(
-            got === expected,
-            'Clicking on "Load the first matched page" link did not load the correct preview.' +
-            '  Expected: ' + expected + '; got: ' + got
-        );
+        assert( ok, `"Load the first matched page" link failed. ` + message );
     } );
 
     test( '"Previous" button disabled for preview of first page hit', function () {
