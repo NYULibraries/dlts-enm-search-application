@@ -26,4 +26,11 @@ test/browser/tests/testdata/actual/preview-pane/*
 !test/browser/tests/testdata/actual/preview-pane/.commit-empty-directory
 
 test/browser/tests/testdata/diffs/*
-!test/browser/tests/testdata/diffs/.commit-empty-directory
+
+!test/browser/tests/testdata/diffs/preview-pane/
+test/browser/tests/testdata/diffs/preview-pane/*
+!test/browser/tests/testdata/diffs/preview-pane/.commit-empty-directory
+
+!test/browser/tests/testdata/diffs/search-results/
+test/browser/tests/testdata/diffs/search-results/*
+!test/browser/tests/testdata/diffs/search-results/.commit-empty-directory
