@@ -8,6 +8,7 @@ import SearchPage from '../pageobjects/search.page';
 
 import {
     clearActualFilesDirectory,
+    clearDiffFilesDirectory,
     diffActualVsGoldenAndReturnMessage,
     getActualFilePath,
     getGoldenFilePath,
@@ -30,6 +31,7 @@ if (
 suite( 'Preview Pane', function () {
     suiteSetup( function () {
         clearActualFilesDirectory( SUITE_NAME.previewPane );
+        clearDiffFilesDirectory( SUITE_NAME.previewPane );
     } );
 
     setup( function () {
