@@ -105,7 +105,7 @@ function testPreviewOfPage( goldenFile ) {
     const searchTopics   = golden.searchTopics;
     const title          = golden.title;
 
-    const testTitle = `Preview pane for'${query}' `                                  +
+    const testTitle = `Preview pane for'${query}' `                           +
                     ( searchFulltext ? 'fulltext=TRUE ' : 'fulltext=FALSE ' ) +
                     ( searchTopics   ? 'topics=TRUE '   : 'topics=FALSE '   ) +
                     ' title=' + title + ' pageNumber=' + pageNumber +
