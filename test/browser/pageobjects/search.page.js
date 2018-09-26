@@ -174,6 +174,15 @@ class SearchPage extends Page {
             resultsMetadata : this.resultsPane.results.metadata(),
         };
     }
+
+    setViewportSize( size ) {
+        // size must be an object with width and height fields:
+        // {
+        //     width  : 500,
+        //     height : 500,
+        // }
+        browser.setViewportSize( size );
+    }
 }
 
 export default new SearchPage();
