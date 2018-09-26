@@ -1,23 +1,22 @@
 /* global setup:false suiteSetup:false suite:false test:false */
 
 import fs from 'fs';
-import rimraf from 'rimraf';
-import path from 'path';
 
 import { assert } from 'chai';
 
 import SearchPage from '../pageobjects/search.page';
 
 import {
+    clearActualFilesDirectory,
     diffActualVsGoldenAndReturnMessage,
+    getActualFilePath,
+    getGoldenFilePath,
+    getGoldenFiles,
     jsonStableStringify,
+    SUITE_NAME,
 } from '../util';
 
-const ACTUAL_FILES_DIRECTORY = path.resolve( __dirname, './testdata/actual/preview-pane/' );
-const GOLDEN_FILES_DIRECTORY = path.resolve( __dirname, './testdata/golden/preview-pane/' );
-const goldenFiles = fs.readdirSync( GOLDEN_FILES_DIRECTORY ).map( ( file ) => {
-    return path.resolve( GOLDEN_FILES_DIRECTORY + '/' + file );
-} );
+const goldenFiles = getGoldenFiles( SUITE_NAME.previewPane );
 
 let updateGoldenFiles = false;
 
@@ -30,13 +29,7 @@ if (
 
 suite( 'Preview Pane', function () {
     suiteSetup( function () {
-        try {
-            rimraf.sync( ACTUAL_FILES_DIRECTORY + '/*' );
-        } catch( error ) {
-            console.error( `ERROR clearing ${ACTUAL_FILES_DIRECTORY}: ${error}` );
-
-            process.exit( 1 );
-        }
+        clearActualFilesDirectory( SUITE_NAME.previewPane );
     } );
 
     setup( function () {
@@ -48,12 +41,13 @@ suite( 'Preview Pane', function () {
         SearchPage.previewPane.loadTheFirstMatchedPageLink.click();
 
         const previewId = SearchPage.getPreviewId( 'art', true, true, [], 9780814712917, 12 );
-        const goldenFile = getGoldenFilePath( previewId );
+        const goldenFile = getGoldenFilePath( SUITE_NAME.previewPane, previewId );
         const ok = compareActualToGolden( goldenFile );
         let message;
         if ( ! ok ) {
             message = diffActualVsGoldenAndReturnMessage(
-                getActualFilePath( previewId ),
+                SUITE_NAME.previewPane,
+                getActualFilePath( SUITE_NAME.previewPane, previewId ),
                 goldenFile,
                 previewId
             );
@@ -105,12 +99,13 @@ suite( 'Preview Pane', function () {
         SearchPage.previewPane.previous.click();
 
         const previewId = SearchPage.getPreviewId( 'art', true, true, [], 9780814712917, 153 );
-        const goldenFile = getGoldenFilePath( previewId );
+        const goldenFile = getGoldenFilePath( SUITE_NAME.previewPane, previewId );
         const ok = compareActualToGolden( goldenFile );
         let message;
         if ( ! ok ) {
             message = diffActualVsGoldenAndReturnMessage(
-                getActualFilePath( previewId ),
+                SUITE_NAME.previewPane,
+                getActualFilePath( SUITE_NAME.previewPane, previewId ),
                 goldenFile,
                 previewId,
             );
@@ -158,7 +153,8 @@ function testPreviewOfPage( goldenFile ) {
         let message;
         if ( ! ok ) {
             message = diffActualVsGoldenAndReturnMessage(
-                getActualFilePath( golden.id ),
+                SUITE_NAME.previewPane,
+                getActualFilePath( SUITE_NAME.previewPane, golden.id ),
                 goldenFile,
                 golden.id,
             );
@@ -176,7 +172,7 @@ function compareActualToGolden( goldenFile ) {
     const stringifiedGolden = jsonStableStringify( golden );
     const stringifiedSnapshot = jsonStableStringify( snapshot );
 
-    const actualFile = getActualFilePath( previewId );
+    const actualFile = getActualFilePath( SUITE_NAME.previewPane, previewId );
 
     if ( updateGoldenFiles ) {
         fs.writeFileSync( goldenFile, stringifiedSnapshot );
@@ -189,12 +185,4 @@ function compareActualToGolden( goldenFile ) {
     fs.writeFileSync( actualFile, stringifiedSnapshot );
 
     return stringifiedSnapshot === stringifiedGolden;
-}
-
-function getActualFilePath( previewId ) {
-    return ACTUAL_FILES_DIRECTORY + '/' + previewId + '.json';
-}
-
-function getGoldenFilePath( previewId ) {
-    return GOLDEN_FILES_DIRECTORY + '/' + previewId + '.json';
 }

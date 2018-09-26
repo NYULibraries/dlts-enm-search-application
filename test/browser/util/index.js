@@ -1,23 +1,55 @@
 import { execSync } from 'child_process';
+import fs from 'fs';
 import path from 'path';
 import rimraf from 'rimraf';
 import stringify from 'json-stable-stringify';
 import { sync as commandExistsSync } from 'command-exists';
 
+const ACTUAL_FILES_ROOT = path.resolve( __dirname, '../tests/testdata/actual/' );
+const DIFF_FILES_ROOT = path.resolve( __dirname, '../tests/testdata/diffs/' );
+const GOLDEN_FILES_ROOT = path.resolve( __dirname, '../tests/testdata/golden/' );
+
 const DIFF = 'diff';
 const DIFF_EXISTS = commandExistsSync( DIFF );
-const DIFF_FILES_DIRECTORY = path.resolve( __dirname, '../diffs' );
 
-function clearDiffFilesDirectory() {
-    rimraf.sync( DIFF_FILES_DIRECTORY + '/*' );
+function clearActualFilesDirectory( suiteNameArg ) {
+    if ( Object.values( SUITE_NAME ).includes( suiteNameArg ) ) {
+        const actualFilesDirectory = getActualFilesDirectory( suiteNameArg );
+
+        try {
+            rimraf.sync( path.resolve( actualFilesDirectory, './*' ) );
+        } catch( error ) {
+            console.error( `ERROR clearing actual files directory: ${error}` );
+
+            process.exit( 1 );
+        }
+    } else {
+        throw new Error( `Invalid suiteArg "${suiteNameArg}` );
+    }
 }
 
-function diffActualVsGoldenAndReturnMessage( actualFile, goldenFile, id ) {
+function clearDiffFilesDirectory( suiteNameArg ) {
+    if ( Object.values( SUITE_NAME ).includes( suiteNameArg ) ) {
+        const diffFilesDirectory = getDiffFilesDirectory( suiteNameArg );
+
+        try {
+            rimraf.sync( path.resolve( diffFilesDirectory, '/*' ) );
+        } catch( error ) {
+            console.error( `ERROR clearing diff files directory: ${error}` );
+
+            process.exit( 1 );
+        }
+    } else {
+        throw new Error( `Invalid suiteArg "${suiteNameArg}` );
+    }
+}
+
+function diffActualVsGoldenAndReturnMessage( suiteName, actualFile, goldenFile, id ) {
     let message = 'Actual search results do not match expected.';
 
     if ( DIFF_EXISTS ) {
         // Create the diff file for later inspection
-        const diffFile = `${DIFF_FILES_DIRECTORY}/${id}.txt`;
+        const diffFile = getDiffFilePath( suiteName, id );
         const command = `diff ${goldenFile} ${actualFile} > ${diffFile}`;
 
         // Note that this will always throw an exception because `diff`
@@ -45,6 +77,40 @@ ${actualFile}`;
     return message;
 }
 
+function getActualFilePath( suiteName, id ) {
+    return path.resolve( getActualFilesDirectory( suiteName ), `./${id}.json` );
+}
+
+function getActualFilesDirectory( suiteNameArg ) {
+    return path.resolve( ACTUAL_FILES_ROOT, `${suiteNameArg}/` );
+}
+
+function getDiffFilePath( suiteName, id ) {
+    return path.resolve( getDiffFilesDirectory( suiteName ), `./${id}.txt` );
+}
+
+function getDiffFilesDirectory( suiteNameArg ) {
+    return path.resolve( DIFF_FILES_ROOT, `${suiteNameArg}/` );
+}
+
+function getGoldenFilePath( suiteName, id ) {
+    return path.resolve( getGoldenFilesDirectory( suiteName ), `./${id}.json` );
+}
+
+function getGoldenFiles( suiteName ) {
+    const goldenFilesDirectory = getGoldenFilesDirectory( suiteName );
+    const goldenFiles = fs.readdirSync( goldenFilesDirectory )
+        .map( ( file ) => {
+            return path.resolve( goldenFilesDirectory, `./${file}` );
+        } );
+
+    return goldenFiles;
+}
+
+function getGoldenFilesDirectory( suiteNameArg ) {
+    return path.resolve( GOLDEN_FILES_ROOT, `${suiteNameArg}/` );
+}
+
 function jsonStableStringify( data ) {
     return stringify(
         data,
@@ -52,8 +118,20 @@ function jsonStableStringify( data ) {
     );
 }
 
+export const SUITE_NAME = {
+    previewPane   : 'preview-pane',
+    searchResults : 'search-results',
+};
+
 export {
+    clearActualFilesDirectory,
     clearDiffFilesDirectory,
     diffActualVsGoldenAndReturnMessage,
+    getActualFilePath,
+    getActualFilesDirectory,
+    getDiffFilesDirectory,
+    getGoldenFilePath,
+    getGoldenFiles,
+    getGoldenFilesDirectory,
     jsonStableStringify,
 };

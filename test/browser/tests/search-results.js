@@ -1,25 +1,23 @@
 /* global setup:false suiteSetup:false suite:false test:false */
 
 import fs from 'fs';
-import rimraf from 'rimraf';
-import path from 'path';
 
 import { assert } from 'chai';
 
 import SearchPage from '../pageobjects/search.page';
 
 import {
+    clearActualFilesDirectory,
     clearDiffFilesDirectory,
     diffActualVsGoldenAndReturnMessage,
+    getActualFilePath,
+    getGoldenFilePath,
+    getGoldenFiles,
     jsonStableStringify,
+    SUITE_NAME,
 } from '../util';
 
-const ACTUAL_FILES_DIRECTORY = path.resolve( __dirname, './testdata/actual/search-results/' );
-const GOLDEN_FILES_DIRECTORY = path.resolve( __dirname, './testdata/golden/search-results/' );
-
-const goldenFiles = fs.readdirSync( GOLDEN_FILES_DIRECTORY ).map( ( file ) => {
-    return path.resolve( GOLDEN_FILES_DIRECTORY + '/' + file );
-} );
+const goldenFiles = getGoldenFiles( SUITE_NAME.searchResults );
 
 let updateGoldenFiles = false;
 
@@ -32,21 +30,8 @@ if (
 
 suite( 'Search results', function () {
     suiteSetup( function () {
-        try {
-            rimraf.sync( ACTUAL_FILES_DIRECTORY + '/*' );
-        } catch( error ) {
-            console.error( `ERROR clearing directory: ${error}` );
-
-            process.exit( 1 );
-        }
-
-        try {
-            clearDiffFilesDirectory();
-        } catch( error ) {
-            console.error( `ERROR clearing diff files directory: ${error}` );
-
-            process.exit( 1 );
-        }
+        clearActualFilesDirectory( SUITE_NAME.searchResults );
+        clearDiffFilesDirectory( SUITE_NAME.searchResults );
     } );
 
     setup( function () {
@@ -97,8 +82,8 @@ function testSearchResults( golden ) {
         const stringifiedGolden = jsonStableStringify( golden );
         const stringifiedSnapshot = jsonStableStringify( snapshot );
 
-        const goldenFile = GOLDEN_FILES_DIRECTORY + '/' + searchId + '.json';
-        const actualFile = ACTUAL_FILES_DIRECTORY + '/' + searchId + '.json';
+        const actualFile = getActualFilePath( SUITE_NAME.searchResults, searchId );
+        const goldenFile = getGoldenFilePath( SUITE_NAME.searchResults, searchId );
 
         if ( updateGoldenFiles ) {
             fs.writeFileSync( goldenFile, stringifiedSnapshot );
@@ -113,7 +98,7 @@ function testSearchResults( golden ) {
         const ok = ( stringifiedSnapshot === stringifiedGolden );
         let message;
         if ( ! ok ) {
-            message = diffActualVsGoldenAndReturnMessage( actualFile, goldenFile, searchId );
+            message = diffActualVsGoldenAndReturnMessage( SUITE_NAME.searchResults, actualFile, goldenFile, searchId );
         }
 
         assert( ok, message );
