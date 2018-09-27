@@ -23,4 +23,13 @@ suite( 'Limit by Topic Pane', function () {
             `"${testTopic}" appears in new Limit by Topic after it has already been selected`
         );
     } );
+
+    test( '"See all" link does not appear if there are no toggle-able topics', function () {
+        SearchPage.searchAndWaitForResults( 'nerdfighter +"Helen Merrick (2009)"' );
+
+        assert(
+            SearchPage.limitByTopicPane.seeAllLink.isVisible() === false,
+            '"See all" link is present even when there are no toggle-able topics'
+        );
+    } );
 } );
