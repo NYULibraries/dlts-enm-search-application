@@ -29,7 +29,7 @@ suite( 'Limit by Topic Pane', function () {
         );
     } );
 
-    test( '"See all" link does not appear if there are no toggle-able topics', function () {
+    test( '"See all" link does not appear if there are no togglable topics', function () {
         SearchPage.searchAndWaitForResults( 'nerdfighter +"Helen Merrick (2009)"' );
 
         assert(
