@@ -86,14 +86,17 @@ suite( 'Temp', function () {
         SearchPage.searchAndWaitForResults( 'art' );
         SearchPage.limitByTopicAndWaitForResults( 'postmodernism' );
 
+        console.log( 'TOGGLABLE VISIBLE: ' + SearchPage.limitByTopicPane.togglableTopicsGroup.isVisible() );
         console.log( SearchPage.limitByTopicPane.topicNamesWithHitCounts );
 
         SearchPage.limitByTopicPane.seeAllLink.click();
 
+        console.log( 'TOGGLABLE VISIBLE: ' + SearchPage.limitByTopicPane.togglableTopicsGroup.isVisible() );
         console.log( SearchPage.limitByTopicPane.topicNamesWithHitCounts );
 
         SearchPage.limitByTopicPane.seeLessLink.click();
 
+        console.log( 'TOGGLABLE VISIBLE: ' + SearchPage.limitByTopicPane.togglableTopicsGroup.isVisible() );
         console.log( SearchPage.limitByTopicPane.topicNamesWithHitCounts );
     } );
 
