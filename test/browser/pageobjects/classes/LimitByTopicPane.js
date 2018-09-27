@@ -17,6 +17,22 @@ class LimitByTopicPane {
     }
 
     get topicNamesWithHitCounts() {
+        return this.topicNamesWithHitCountsGroupVisible.concat(
+            this.topicNamesWithHitCountsGroupTogglable
+        );
+    }
+
+    get topicNamesWithHitCountsGroupTogglable() {
+        // Empty unless user has clicked "See all"
+        return $$( '.enm-facets-group-togglable a' ).map(
+            ( topicItem ) => {
+                const found = topicItem.getText().match( /^(.*) \((\d+)\)$/ );
+                return [ found[ 1 ], parseInt( found[ 2 ], 10 ) ];
+            }
+        );
+    }
+
+    get topicNamesWithHitCountsGroupVisible() {
         return $$( '.enm-facets-group-visible a' ).map(
             ( topicItem ) => {
                 const found = topicItem.getText().match( /^(.*) \((\d+)\)$/ );
