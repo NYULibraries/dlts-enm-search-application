@@ -1,7 +1,6 @@
 /* global $:false $$:false */
 
 class LimitByTopicPane {
-
     get seeAllLink() {
         return $( 'a=See All' );
     }
