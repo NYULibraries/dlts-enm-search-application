@@ -70,4 +70,51 @@ suite( 'Limit by Topic Pane', function () {
             assert( ok, message );
         }
     );
+
+    test(
+        'Clicking "See all" link causes "See all" link to disappear and "See less" to appear',
+        function () {
+            SearchPage.searchAndWaitForResults( 'Dungeons & Dragons' );
+            SearchPage.limitByTopicPane.seeAllLink.click();
+
+            assert(
+                SearchPage.limitByTopicPane.seeAllLink.isVisible() === false &&
+                SearchPage.limitByTopicPane.seeLessLink.isVisible() === true,
+                seeAllSeeLessMode()
+            );
+        }
+    );
+
+    test(
+        'Clicking "See less" link causes "See all" link to appear and "See less" to disappear',
+        function () {
+            SearchPage.searchAndWaitForResults( 'Dungeons & Dragons' );
+            SearchPage.limitByTopicPane.seeAllLink.click();
+            SearchPage.limitByTopicPane.seeLessLink.click();
+
+            assert(
+                SearchPage.limitByTopicPane.seeAllLink.isVisible() === true &&
+                SearchPage.limitByTopicPane.seeLessLink.isVisible() === false,
+                seeAllSeeLessMode()
+            );
+        }
+    );
 } );
+
+function seeAllSeeLessMode() {
+    let mode = '';
+
+    if ( SearchPage.limitByTopicPane.seeAllLink.isVisible() ) {
+        mode += '"See all" is visible and ';
+    } else {
+        mode += '"See all" is not visible and ';
+    }
+
+    if ( SearchPage.limitByTopicPane.seeLessLink.isVisible() ) {
+        mode += '"See less" is visible.';
+    } else {
+        mode += '"See less" is not visible.';
+    }
+
+    return mode;
+}
