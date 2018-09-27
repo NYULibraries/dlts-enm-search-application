@@ -9,6 +9,10 @@ class LimitByTopicPane {
         return $( 'a=See Less' );
     }
 
+    get togglableTopicsGroup() {
+        return $( '.enm-facets-group-togglable a' );
+    }
+
     get topicNames() {
         return this.topicNamesWithHitCounts.map( ( topicNameWithHitCount ) => {
             return topicNameWithHitCount[ 0 ];
