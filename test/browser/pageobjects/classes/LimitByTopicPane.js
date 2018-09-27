@@ -8,6 +8,12 @@ class LimitByTopicPane {
         return $( 'a=See Less' );
     }
 
+    get topicNames() {
+        return this.topicNamesWithHitCounts.map( ( topicNameWithHitCount ) => {
+            return topicNameWithHitCount[ 0 ];
+        } );
+    }
+
     get topicNamesWithHitCounts() {
         return $$( '.enm-facets-group-visible a' ).map(
             ( topicItem ) => {
