@@ -1,3 +1,5 @@
+/* global $:false $$:false */
+
 class LimitByTopicPane {
 
     get seeAllLink() {
