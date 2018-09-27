@@ -119,8 +119,9 @@ function jsonStableStringify( data ) {
 }
 
 export const SUITE_NAME = {
-    previewPane   : 'preview-pane',
-    searchResults : 'search-results',
+    limitByTopicPane : 'limit-by-topic-pane',
+    previewPane      : 'preview-pane',
+    searchResults    : 'search-results',
 };
 
 export {
