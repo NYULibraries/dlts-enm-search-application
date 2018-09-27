@@ -14,7 +14,7 @@ suite( 'Limit by Topic Pane', function () {
 
         const testTopic = SearchPage.limitByTopicPane.topicNames[ 0 ];
 
-        SearchPage.limitByTopicPane.topic( testTopic ).click();
+        SearchPage.limitByTopicAndWaitForResults( testTopic );
 
         const newLimitByTopicList = SearchPage.limitByTopicPane.topicNames;
 
