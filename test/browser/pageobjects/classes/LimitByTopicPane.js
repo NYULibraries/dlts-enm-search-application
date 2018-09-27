@@ -20,9 +20,13 @@ class LimitByTopicPane {
     }
 
     get topicNamesWithHitCounts() {
-        return this.topicNamesWithHitCountsGroupVisible.concat(
-            this.topicNamesWithHitCountsGroupTogglable
-        );
+        if ( this.togglableTopicsGroup.isVisible() ) {
+            return this.topicNamesWithHitCountsGroupVisible.concat(
+                this.topicNamesWithHitCountsGroupTogglable
+            );
+        } else {
+            return this.topicNamesWithHitCountsGroupVisible;
+        }
     }
 
     get topicNamesWithHitCountsGroupTogglable() {
