@@ -86,6 +86,39 @@ suite( 'Search Echo', function () {
             );
         } );
 
+        test( 'If query is already "*", do not reset preview', function () {
+            SearchPage.searchAndWaitForResults( 'art' );
+            SearchPage.resultsPane.results.book( 'Japanese lessons' ).click();
+
+            const expectedPage = getCurrentPreviewPanePage(
+                'Japanese lessons', '12'
+            );
+            let currentPage = getCurrentPreviewPanePage(
+                SearchPage.previewPane.title, SearchPage.previewPane.pageNumber
+            );
+            if ( currentPage !== expectedPage ) {
+                assert.fail(
+                    0, 1, 'Setup of test failed: preview pane has page ' +
+                          currentPage + ' loaded; expected ' + expectedPage
+                );
+            }
+
+            SearchPage.searchEcho.searchDCI.dismiss();
+
+            if ( SearchPage.resultsPane.header.text === 'Results: None' ) {
+                assert.fail( 0, 1, 'Search has been reset' );
+            }
+
+            currentPage = getCurrentPreviewPanePage(
+                SearchPage.previewPane.title, SearchPage.previewPane.pageNumber
+            );
+            assert(
+                currentPage,
+                'Preview Pane does not have the same page loaded as it did before search DCI dismissal; ' +
+                'got ' + currentPage + '; expected ' + expectedPage
+            );
+        } );
+
         test( 'Change to "*" if topic DCIs', function () {
             SearchPage.searchAndWaitForResults( 'women' );
             SearchPage.limitByTopicAndWaitForResults( 'feminism' );
@@ -125,3 +158,7 @@ suite( 'Search Echo', function () {
         } );
     } );
 } );
+
+function getCurrentPreviewPanePage( title, pageNumber ) {
+    return `${title}|${pageNumber}`;
+}
