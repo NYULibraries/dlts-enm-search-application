@@ -31,7 +31,7 @@ suite( 'Search Echo', function () {
             const EXPECTED_LABEL = 'Searching topics for';
             assert(
                 label === EXPECTED_LABEL,
-                `Search DCI label was "${label}"; was expecting ${EXPECTED_LABEL}`
+                `Got search DCI label "${label}"; expected "${EXPECTED_LABEL}"`
             );
         } );
 
@@ -42,7 +42,7 @@ suite( 'Search Echo', function () {
             const EXPECTED_LABEL = 'Searching full texts and topics for';
             assert(
                 label === EXPECTED_LABEL,
-                `Search DCI label was "${label}"; was expecting ${EXPECTED_LABEL}`
+                `Got search DCI label "${label}"; expected "${EXPECTED_LABEL}"`
             );
         } );
 
@@ -58,7 +58,7 @@ suite( 'Search Echo', function () {
             const EXPECTED_LABEL = 'Searching full texts and topics for';
             assert(
                 label === EXPECTED_LABEL,
-                `Search DCI label was "${label}"; was expecting ${EXPECTED_LABEL}`
+                `Got search DCI label "${label}"; expected "${EXPECTED_LABEL}"`
             );
         } );
     } );
