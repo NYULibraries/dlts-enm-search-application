@@ -86,6 +86,48 @@ suite( 'Limit by Topic Pane', function () {
     );
 
     test(
+        'Clicking "See less" link produces correct short list',
+        function () {
+            SearchPage.searchAndWaitForResults( 'Dungeons & Dragons' );
+
+            const initialShortList = SearchPage.limitByTopicPane.topicNames;
+
+            SearchPage.limitByTopicPane.seeAllLink.click();
+
+            assert(
+                SearchPage.limitByTopicPane.topicNames.length > initialShortList.length,
+                'Clicking "See all" link did not expand the list.  Can\'t continue with the test...'
+            );
+
+            SearchPage.limitByTopicPane.seeLessLink.click();
+
+            const actualLimitByTopicsAfterSeeLess = SearchPage.limitByTopicPane.topicNames;
+
+            const inActualNotExpected = _.difference( actualLimitByTopicsAfterSeeLess, initialShortList );
+            const inExpectedNotActual = _.difference( initialShortList, actualLimitByTopicsAfterSeeLess);
+
+            const ok = ( inActualNotExpected.length === 0 && inExpectedNotActual.length === 0 );
+            let message = '';
+            if ( ! ok ) {
+                message = 'Clicking "See less" link did not restore original short list.  ' + EOL;
+
+                if ( inActualNotExpected.length > 0 ) {
+                    message += 'In actual not expected: ' +
+                               JSON.stringify( inActualNotExpected, null, '   ' ) +
+                               EOL;
+                }
+
+                if ( inExpectedNotActual.length > 0 ) {
+                    message += 'In expected not actual: ' +
+                               JSON.stringify( inExpectedNotActual, null, '   ' );
+                }
+            }
+
+            assert( ok, message );
+        }
+    );
+
+    test(
         'Clicking "See less" link causes "See all" link to appear and "See less" to disappear',
         function () {
             SearchPage.searchAndWaitForResults( 'Dungeons & Dragons' );
