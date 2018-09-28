@@ -120,8 +120,8 @@ suite( 'Search Echo', function () {
         } );
 
         test( 'Change to "*" if topic DCIs', function () {
-            SearchPage.searchAndWaitForResults( 'women' );
-            SearchPage.limitByTopicAndWaitForResults( 'feminism' );
+            SearchPage.searchAndWaitForResults( 'art' );
+            SearchPage.limitByTopicAndWaitForResults( 'postmodernism' );
 
             SearchPage.searchEcho.searchDCI.dismiss();
 
