@@ -30,6 +30,7 @@ exports.config = {
         'test/browser/tests/limit-by-topic-pane.js',
         'test/browser/tests/navbar.js',
         'test/browser/tests/preview-pane.js',
+        'test/browser/tests/search-echo.js',
         'test/browser/tests/search-form.js',
         'test/browser/tests/search-results.js',
         'test/browser/tests/temp.js',
@@ -47,6 +48,9 @@ exports.config = {
         ],
         'preview-pane': [
             'test/browser/tests/preview-pane.js',
+        ],
+        'search-echo': [
+            'test/browser/tests/search-echo.js',
         ],
         'search-form': [
             'test/browser/tests/search-form.js',
