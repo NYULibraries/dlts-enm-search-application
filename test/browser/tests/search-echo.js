@@ -62,4 +62,66 @@ suite( 'Search Echo', function () {
             );
         } );
     } );
+
+    suite( 'Search DCI dismissal', function () {
+        setup( function () {
+            SearchPage.open();
+        } );
+
+        test( 'Change to blank search if no topic DCIs', function () {
+            SearchPage.searchAndWaitForResults( 'art' );
+
+            SearchPage.searchEcho.searchDCI.dismiss();
+
+            // Make exception to one-assert-per-test
+            const query = SearchPage.searchForm.searchBox.getValue();
+            assert(
+                query === '',
+                `Got query "${query}"; expected empty query`
+            );
+
+            assert(
+                SearchPage.resultsPane.header.text === 'Results: None',
+                'Results not empty after search DCI dismissal'
+            );
+        } );
+
+        test( 'Change to "*" if topic DCIs', function () {
+            SearchPage.searchAndWaitForResults( 'women' );
+            SearchPage.limitByTopicAndWaitForResults( 'feminism' );
+
+            SearchPage.searchEcho.searchDCI.dismiss();
+
+            // Make exception to one-assert-per-test
+            const searchBoxQuery = SearchPage.searchForm.searchBox.getValue();
+            assert( searchBoxQuery === '*', `Got search form query "${searchBoxQuery}"; expected "*"` );
+
+            const searchDCIQuery = SearchPage.searchEcho.searchDCI.query;
+            assert( searchDCIQuery === '*', `Got search DCI query ${searchDCIQuery}; expected "*"` );
+        } );
+
+        test( 'Change to "*" if topic DCIs and reset Preview Pane if original query was not "*"', function () {
+            SearchPage.searchAndWaitForResults( 'women' );
+            SearchPage.limitByTopicAndWaitForResults( 'feminism' );
+            SearchPage.previewPane.loadTheFirstMatchedPageLink.click();
+
+            if ( SearchPage.previewPane.title !== 'American Cool' ) {
+                assert.fail( 0, 1, 'Setup of test failed: preview pane not properly loaded' );
+            }
+
+            SearchPage.searchEcho.searchDCI.dismiss();
+
+            // Make exception to one-assert-per-test
+            const searchBoxQuery = SearchPage.searchForm.searchBox.getValue();
+            assert( searchBoxQuery === '*', `Got search form query "${searchBoxQuery}"; expected "*"` );
+
+            const searchDCIQuery = SearchPage.searchEcho.searchDCI.query;
+            assert( searchDCIQuery === '*', `Got search DCI query ${searchDCIQuery}; expected "*"` );
+
+            assert(
+                SearchPage.previewPane.loadTheFirstMatchedPageLink.isVisible(),
+                '"Load the first matched page" link is not visible'
+            );
+        } );
+    } );
 } );
