@@ -33,7 +33,6 @@ exports.config = {
         'test/browser/tests/search-echo.js',
         'test/browser/tests/search-form.js',
         'test/browser/tests/search-results.js',
-        'test/browser/tests/temp.js',
     ],
     // Patterns to exclude.
     exclude: [
