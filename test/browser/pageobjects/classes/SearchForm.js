@@ -14,7 +14,8 @@ class SearchForm {
     }
 
     submit() {
-        browser.submitForm( 'form.enm-searchform' );
+        this.searchBox.click();
+        browser.keys( '\uE006' );
     }
 }
 
