@@ -121,6 +121,7 @@ function jsonStableStringify( data ) {
 export const SUITE_NAME = {
     limitByTopicPane : 'limit-by-topic-pane',
     previewPane      : 'preview-pane',
+    searchEcho       : 'search-echo',
     searchResults    : 'search-results',
 };
 
