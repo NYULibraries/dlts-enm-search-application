@@ -121,7 +121,7 @@ suite( 'Search Echo', function () {
             SearchPage.searchEcho.searchDCI.dismiss();
 
             if ( SearchPage.resultsPane.header.text === 'Results: None' ) {
-                assert.fail( 0, 1, 'Search has been reset' );
+                assert.fail( 0, 1, 'Search was reset instead of left alone at "*"' );
             }
 
             currentPage = getCurrentPreviewPanePage(
