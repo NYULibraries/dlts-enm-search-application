@@ -1,9 +1,24 @@
-/* global setup:false suite:false test:false */
+/* global setup:false suite:false suiteSetup:false test:false */
 
 import { assert } from 'chai';
+import { EOL } from 'os';
+import fs from 'fs';
 import SearchPage from '../pageobjects/search.page';
+import {
+    clearActualFilesDirectory, clearDiffFilesDirectory,
+    diffActualVsGoldenAndReturnMessage,
+    getActualFilePath,
+    getGoldenFilePath,
+    jsonStableStringify,
+    SUITE_NAME,
+} from '../util';
 
 suite( 'Search Echo', function () {
+    suiteSetup( function () {
+        clearActualFilesDirectory( SUITE_NAME.searchEcho );
+        clearDiffFilesDirectory( SUITE_NAME.searchEcho );
+    } );
+
     suite( 'Search DCI label', function () {
         setup( function () {
             SearchPage.open();
@@ -157,8 +172,84 @@ suite( 'Search Echo', function () {
             );
         } );
     } );
+
+    suite( 'Topic DCI dismissal', function () {
+        setup( function () {
+            SearchPage.open();
+        } );
+
+        test( 'Dismissing topic DCI produces correct search results', function () {
+            SearchPage.searchAndWaitForResults( 'art' );
+            SearchPage.limitByTopicAndWaitForResults( 'Rilke\'s writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)' );
+
+            const dismissedTopic = 'Rilke\'s writings -- "Modern Poetry" ("Moderne Lyrik")';
+            SearchPage.limitByTopicAndWaitForResults( dismissedTopic );
+
+            const resultTestSetup = compareActualToGolden();
+            if ( ! resultTestSetup.ok ) {
+                const message = 'Setup of test failed.  ' + resultTestSetup.message;
+
+                assert.fail( 0, 1, message );
+            }
+
+            const dismissedTopicEscapedDoubleQuotes = dismissedTopic.replace( /"/g, '\\"' );
+            SearchPage.searchEcho.topicDCIs.dismiss( dismissedTopicEscapedDoubleQuotes );
+
+            const result = compareActualToGolden();
+
+            assert( result.ok, `Dismissal of ${dismissedTopic} resulted in incorrect search: ${result.message}` );
+        } );
+    } );
 } );
 
 function getCurrentPreviewPanePage( title, pageNumber ) {
     return `${title}|${pageNumber}`;
+}
+
+function getSearchFailureMessage( snapshot ) {
+    const searchId       = snapshot.id;
+    const query          = snapshot.query;
+    const searchFulltext = snapshot.searchFulltext;
+    const searchTopics   = snapshot.searchTopics;
+    const topicsDCIs     = snapshot.topicsDCIs;
+
+    const diffMessage = diffActualVsGoldenAndReturnMessage(
+        SUITE_NAME.searchEcho,
+        getActualFilePath( SUITE_NAME.searchEcho, searchId ),
+        getGoldenFilePath( SUITE_NAME.searchResults, searchId ),
+        searchId
+    );
+
+    return `Search for '${query}' `                                +
+        ( searchFulltext ? 'fulltext=TRUE ' : 'fulltext=FALSE ' )  +
+        ( searchTopics   ? 'topics=TRUE '   : 'topics=FALSE '   )  +
+        ' topic-facet-values=[' + topicsDCIs + ']'                 +
+        ' produces correct DCIs, Limit by Topic list, '            +
+        ' search results header, EPUBs list with thumbnails and'   +
+        ' metadata did not produce correct snapshot. ' + EOL +
+        diffMessage;
+}
+
+function compareActualToGolden() {
+    const snapshot = SearchPage.searchResultsSnapshot();
+
+    const searchId = snapshot.id;
+
+    const golden = require( getGoldenFilePath( SUITE_NAME.searchResults, searchId ) );
+
+    const stringifiedGolden = jsonStableStringify( golden );
+    const stringifiedSnapshot = jsonStableStringify( snapshot );
+
+    const ok = ( stringifiedSnapshot === stringifiedGolden );
+
+    if ( ! ok ) {
+        fs.writeFileSync(
+            getActualFilePath( SUITE_NAME.searchEcho, searchId ),
+            stringifiedSnapshot
+        );
+    }
+
+    let message = ok || getSearchFailureMessage( snapshot );
+
+    return { ok, message };
 }
