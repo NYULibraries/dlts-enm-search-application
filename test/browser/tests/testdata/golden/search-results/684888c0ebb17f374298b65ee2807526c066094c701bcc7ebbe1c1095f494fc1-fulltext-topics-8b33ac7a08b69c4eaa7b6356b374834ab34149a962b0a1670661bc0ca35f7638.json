@@ -56,6 +56,10 @@
         [
             "murder",
             9
+        ],
+        [
+            "political crime",
+            9
         ]
     ],
     "query": "*",
