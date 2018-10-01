@@ -1,5 +1,5 @@
 {
-    "id": "336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e-fulltext-topics-44e6fd3435dcb43d5c696e4e11d58e29638ec6be6ba036bb5fad785d4eaf45b4",
+    "id": "336074805fc853987abe6f7fe3ad97a6a6f3077a16391fec744f671a015fbd7e-fulltext-topics-f11ab9da72c023a060626db25a086974923d901452328020686737a619347bda",
     "limitByTopics": [
         [
             "Behavior(al)",
@@ -79,7 +79,7 @@
     "searchFulltext": true,
     "searchTopics": true,
     "topicsDCIs": [
-        "power",
+        "values",
         "virtue"
     ]
 }
