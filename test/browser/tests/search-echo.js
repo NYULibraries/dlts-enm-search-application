@@ -197,7 +197,24 @@ suite( 'Search Echo', function () {
 
             const result = compareActualToGolden();
 
-            assert( result.ok, `Dismissal of ${dismissedTopic} resulted in incorrect search: ${result.message}` );
+
+        test( 'Dismissing topic DCI resets Preview Pane', function () {
+            const topic = 'modernism';
+
+            SearchPage.searchAndWaitForResults( 'art' );
+            SearchPage.limitByTopicAndWaitForResults( topic );
+            SearchPage.resultsPane.results.book( 'Split Screen Korea' ).click();
+
+            if ( SearchPage.previewPane.title !== 'Split Screen Korea' ) {
+                assert.fail( 0, 1, 'Setup of test failed.  _Split Screen Korea_ is not loaded in Preview Pane' );
+            }
+
+            SearchPage.dismissTopicDCIAndWaitForResults( topic );
+
+            assert(
+                SearchPage.previewPane.loadTheFirstMatchedPageLink.isVisible(),
+                '"Load the first matched page" link is not visible'
+            );
         } );
     } );
 } );
