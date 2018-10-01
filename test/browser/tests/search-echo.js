@@ -197,6 +197,8 @@ suite( 'Search Echo', function () {
 
             const result = compareActualToGolden();
 
+            assert( result.ok, `Dismissal of ${dismissedTopic} resulted in incorrect search: ${result.message}` );
+        } );
 
         test( 'Dismissing topic DCI resets Preview Pane', function () {
             const topic = 'modernism';
