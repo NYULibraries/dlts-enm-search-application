@@ -57,6 +57,12 @@ class SearchPage extends Page {
         super.open( this.paths.search );
     }
 
+    dismissTopicDCIAndWaitForResults( topic ) {
+        this.searchEcho.topicDCIs.dismiss( topic );
+
+        this.resultsPane.results._element.waitForVisible();
+    }
+
     limitByTopicAndWaitForResults( topic ) {
         if ( this.limitByTopicPane.topic( topic ).isExisting() ) {
             this.limitByTopicPane.topic( topic ).click();
