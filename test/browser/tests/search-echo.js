@@ -86,7 +86,7 @@ suite( 'Search Echo', function () {
         test( 'Change to blank search if no topic DCIs', function () {
             SearchPage.searchAndWaitForResults( 'art' );
 
-            SearchPage.searchEcho.searchDCI.dismiss();
+            SearchPage.dismissSearchDCIAndWaitForResults();
 
             // Make exception to one-assert-per-test
             const query = SearchPage.searchForm.searchBox.getValue();
@@ -118,7 +118,7 @@ suite( 'Search Echo', function () {
                 );
             }
 
-            SearchPage.searchEcho.searchDCI.dismiss();
+            SearchPage.dismissSearchDCIAndWaitForResults();
 
             if ( SearchPage.resultsPane.header.text === 'Results: None' ) {
                 assert.fail( 0, 1, 'Search was reset instead of left alone at "*"' );
