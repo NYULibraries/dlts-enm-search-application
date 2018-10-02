@@ -101,12 +101,17 @@ suite( 'Search Echo', function () {
             );
         } );
 
-        test( 'If query is already "*", do not reset preview', function () {
+        test( 'If topic DCIs and query is already "*", do nothing', function () {
             SearchPage.searchAndWaitForResults( 'art' );
-            SearchPage.resultsPane.results.book( 'Japanese lessons' ).click();
+            SearchPage.limitByTopicAndWaitForResults( 'modernism' );
+
+            // First dismissal changes to "*"
+            SearchPage.dismissSearchDCIAndWaitForResults();
+
+            SearchPage.resultsPane.results.book( 'Split Screen Korea' ).click();
 
             const expectedPage = getCurrentPreviewPanePage(
-                'Japanese lessons', '12'
+                'Split Screen Korea', '12'
             );
             let currentPage = getCurrentPreviewPanePage(
                 SearchPage.previewPane.title, SearchPage.previewPane.pageNumber
@@ -118,6 +123,7 @@ suite( 'Search Echo', function () {
                 );
             }
 
+            // Second dismissal
             SearchPage.dismissSearchDCIAndWaitForResults();
 
             if ( SearchPage.resultsPane.header.text === 'Results: None' ) {
