@@ -193,7 +193,7 @@ suite( 'Search Echo', function () {
             }
 
             const dismissedTopicEscapedDoubleQuotes = dismissedTopic.replace( /"/g, '\\"' );
-            SearchPage.searchEcho.topicDCIs.dismiss( dismissedTopicEscapedDoubleQuotes );
+            SearchPage.dismissTopicDCIAndWaitForResults( dismissedTopicEscapedDoubleQuotes );
 
             const result = compareActualToGolden();
 
