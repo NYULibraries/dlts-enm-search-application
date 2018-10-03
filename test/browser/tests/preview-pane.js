@@ -40,8 +40,8 @@ suite( 'Preview Pane', function () {
         // to click rightmost bar in bar chart.
         SearchPage.setViewportSize(
             {
-                height : 650,
-                width  : 1350,
+                height : 851,
+                width  : 1440,
             }
         );
     } );
