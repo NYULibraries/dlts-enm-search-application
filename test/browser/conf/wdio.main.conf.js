@@ -123,7 +123,9 @@ exports.config = {
     coloredLogs: true,
     //
     // Warns when a deprecated command is used
-    deprecationWarnings: true,
+    // TODO: re-enable this after finding a way to fix https://jira.nyu.edu/jira/browse/NYUP-451
+    // without using browser.submitForm()
+    deprecationWarnings: false,
     //
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
