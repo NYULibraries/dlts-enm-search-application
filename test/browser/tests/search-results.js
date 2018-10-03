@@ -36,6 +36,17 @@ suite( 'Search results', function () {
 
     setup( function () {
         SearchPage.open();
+        // Setting to wider width prevents a problem in Firefox where that is brought
+        // into the screen by a scroll is not clickable due to a horizontal
+        // scrollbar obscuring it.  This bug occurs when query is "time", and
+        // a topic that is not immediately visible is selected by first clicking
+        // "See all" link.
+        SearchPage.setViewportSize(
+            {
+                height : 851,
+                width  : 1500,
+            }
+        );
     } );
 
     goldenFiles.forEach( ( goldenFile ) => {
