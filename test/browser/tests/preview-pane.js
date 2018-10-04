@@ -41,7 +41,7 @@ suite( 'Preview Pane', function () {
         SearchPage.setViewportSize(
             {
                 height : 851,
-                width  : 1500,
+                width  : 1600,
             }
         );
     } );
