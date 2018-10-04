@@ -57,9 +57,6 @@ exports.config = {
         'search-results': [
             'test/browser/tests/search-results.js',
         ],
-        'temp': [
-            'test/browser/tests/temp.js',
-        ],
     },
     //
     // ============
