@@ -7,6 +7,15 @@ import SearchPage from '../pageobjects/search.page';
 suite( 'Navbar', function () {
     setup( function () {
         SearchPage.open();
+        // Setting to wider width to prevent errors with navbar not being visible
+        // when running full test suite.
+        // See https://jira.nyu.edu/jira/browse/NYUP-454
+        SearchPage.setViewportSize(
+            {
+                height : 851,
+                width  : 1600,
+            }
+        );
     } );
 
     test( 'Clicking "About" takes user to About page', function () {
