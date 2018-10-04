@@ -41,10 +41,12 @@ suite( 'Search results', function () {
         // scrollbar obscuring it.  This bug occurs when query is "time", and
         // a topic that is not immediately visible is selected by first clicking
         // "See all" link.
+        // Width of 1500 was found to be sufficient, but 1600 is used in Preview Pane
+        // tests so using that higher width for consistency.
         SearchPage.setViewportSize(
             {
                 height : 851,
-                width  : 1500,
+                width  : 1600,
             }
         );
     } );
