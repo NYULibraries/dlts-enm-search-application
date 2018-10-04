@@ -10,6 +10,9 @@ suite( 'Navbar', function () {
         // Setting to wider width to prevent errors with navbar not being visible
         // when running full test suite.
         // See https://jira.nyu.edu/jira/browse/NYUP-454
+        // It's unknown what the minimum width should be, but 1600 is used
+        // in Preview Pane tests and that width fixes the problem here, so using
+        // 1600 for consistency.
         SearchPage.setViewportSize(
             {
                 height : 851,
