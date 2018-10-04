@@ -1,0 +1,15 @@
+{
+    "id": "d98af5c457b933c1854ece268aa36016ae6ff5c6885fb47a84947a87b77e7799-topics",
+    "limitByTopics": [
+    ],
+    "query": "nerdfighter +\"Helen Merrick (2009)\"",
+    "resultsMetadata": [
+    ],
+    "resultsNumBooks": null,
+    "resultsNumPages": null,
+    "searchDCI": "nerdfighter +\"Helen Merrick (2009)\"",
+    "searchFulltext": false,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}

@@ -1,0 +1,131 @@
+{
+    "id": "4772150b2bfeef03edc13691bb588e8d979acec7aacc6b3534bb5c0bb90e3640-fulltext-topics",
+    "limitByTopics": [
+        [
+            "Amelia Sedley (Vanity Fair)",
+            3
+        ],
+        [
+            "Dobbin (Vanity Fair)",
+            3
+        ],
+        [
+            "Thackeray, W. M.",
+            3
+        ],
+        [
+            "Austen, Jane",
+            2
+        ],
+        [
+            "Becky Sharp (Vanity Fair)",
+            2
+        ],
+        [
+            "Conrad, Joseph",
+            2
+        ],
+        [
+            "Contradictions in theme and rhetoric -- in Vanity Fair",
+            2
+        ],
+        [
+            "Critical Interdisciplinarity",
+            2
+        ],
+        [
+            "Earhart, Amy",
+            2
+        ],
+        [
+            "Eliot, George",
+            2
+        ],
+        [
+            "Eliot, George, writings -- The Mill on the Floss",
+            2
+        ],
+        [
+            "Psychological Approach to Fiction, A (Paris)",
+            2
+        ],
+        [
+            "interdisciplinarity (ID) -- critical",
+            2
+        ],
+        [
+            "\"Big Data\"",
+            1
+        ],
+        [
+            "Alice Mellings (The Good Terrorist)",
+            1
+        ]
+    ],
+    "query": "amelia earhart",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Yochim, Emily Chivers; The University of Michigan Press and The University of Michigan Library",
+            "isbn": "9780472026609",
+            "maximumPageRelevanceScore": "16.306168",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472026609.jpg",
+            "title": "Skate Life: Re-Imagining White Masculinity"
+        },
+        {
+            "authorsAndPublisher": "Bernard J. Paris; New York University Press",
+            "isbn": "9780814766569",
+            "maximumPageRelevanceScore": "13.664257",
+            "numMatchedPages": 4,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814766569.jpg",
+            "title": "Imagined Human Beings"
+        },
+        {
+            "authorsAndPublisher": "Amy Koritz and George J. Sanchez; University of Michigan Press",
+            "isbn": "9780472024483",
+            "maximumPageRelevanceScore": "12.305294",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472024483.jpg",
+            "title": "Civic Engagement in the Wake of Katrina"
+        },
+        {
+            "authorsAndPublisher": "Klein, Julie Thompson; University of Michigan Press",
+            "isbn": "9780472120932",
+            "maximumPageRelevanceScore": "10.474718",
+            "numMatchedPages": 4,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120932.jpg",
+            "title": "Interdisciplining Digital Humanities: Boundary Work in an Emerging Field"
+        },
+        {
+            "authorsAndPublisher": "Richard K. Vedder and Lowell E. Gallaway; New York University Press",
+            "isbn": "9780814787922",
+            "maximumPageRelevanceScore": "9.704276",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814787922.jpg",
+            "title": "Out of Work"
+        },
+        {
+            "authorsAndPublisher": "John Marshall; New York University Press",
+            "isbn": "9780814731437",
+            "maximumPageRelevanceScore": "8.271046",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814731437.jpg",
+            "title": "Seriatim"
+        },
+        {
+            "authorsAndPublisher": "David Holbrook; New York University Press",
+            "isbn": "9780814735282",
+            "maximumPageRelevanceScore": "7.138604",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814735282.jpg",
+            "title": "Charles Dickens and the Image of Woman"
+        }
+    ],
+    "resultsNumBooks": 7,
+    "resultsNumPages": 15,
+    "searchDCI": "amelia earhart",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}

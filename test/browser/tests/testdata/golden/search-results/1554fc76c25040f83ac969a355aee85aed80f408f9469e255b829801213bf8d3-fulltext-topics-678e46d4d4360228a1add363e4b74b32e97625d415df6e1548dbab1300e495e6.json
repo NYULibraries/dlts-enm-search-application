@@ -1,0 +1,52 @@
+{
+    "id": "1554fc76c25040f83ac969a355aee85aed80f408f9469e255b829801213bf8d3-fulltext-topics-678e46d4d4360228a1add363e4b74b32e97625d415df6e1548dbab1300e495e6",
+    "limitByTopics": [
+        [
+            "Bhattacharya, K.",
+            1
+        ],
+        [
+            "Graham, Angus C.",
+            1
+        ],
+        [
+            "Murti, T. R. V.",
+            1
+        ],
+        [
+            "Nagarjuna",
+            1
+        ],
+        [
+            "Plato",
+            1
+        ],
+        [
+            "Socrates",
+            1
+        ],
+        [
+            "Theaetetus",
+            1
+        ]
+    ],
+    "query": "Plato",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Ben-Ami Scharfstein; New York University Press",
+            "isbn": "9780814779163",
+            "maximumPageRelevanceScore": "5.700952",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814779163.jpg",
+            "title": "The Dilemma of Context"
+        }
+    ],
+    "resultsNumBooks": 1,
+    "resultsNumPages": 1,
+    "searchDCI": "Plato",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+        "Sextus Empiricus"
+    ]
+}

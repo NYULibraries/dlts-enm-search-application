@@ -1,0 +1,147 @@
+{
+    "id": "375d3f7abef8731b9f92f010af398db1b448f5ab01b25a795022d5f3b1f2f9ac-fulltext-topics",
+    "limitByTopics": [
+        [
+            "linking books",
+            29
+        ],
+        [
+            "Gehn",
+            19
+        ],
+        [
+            "Catherine",
+            18
+        ],
+        [
+            "Atrus",
+            16
+        ],
+        [
+            "puzzles",
+            16
+        ],
+        [
+            "realMyst",
+            16
+        ],
+        [
+            "Achenar",
+            14
+        ],
+        [
+            "D'ni (Dunny)",
+            14
+        ],
+        [
+            "Sirrus",
+            14
+        ],
+        [
+            "CD-ROMs",
+            10
+        ],
+        [
+            "Miller brothers",
+            10
+        ],
+        [
+            "Myst III: Exile",
+            8
+        ],
+        [
+            "Myst Masterpiece Edition",
+            8
+        ],
+        [
+            "Myst novels",
+            8
+        ],
+        [
+            "Black Moiety",
+            7
+        ]
+    ],
+    "query": "Myst Riven",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Wolf, Mark J. P.; The University of Michigan Press",
+            "isbn": "9780472027491",
+            "maximumPageRelevanceScore": "21.826315",
+            "numMatchedPages": 106,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472027491.jpg",
+            "title": "Myst and Riven: The World of the D'ni"
+        },
+        {
+            "authorsAndPublisher": "Pinchbeck, Dan; The University of Michigan Press",
+            "isbn": "9780472028931",
+            "maximumPageRelevanceScore": "13.736528",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472028931.jpg",
+            "title": "Doom: Scarydarkfast"
+        },
+        {
+            "authorsAndPublisher": "Perron, Bernard; The University of Michigan Press",
+            "isbn": "9780472027835",
+            "maximumPageRelevanceScore": "13.736528",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472027835.jpg",
+            "title": "Silent Hill: The Terror Engine"
+        },
+        {
+            "authorsAndPublisher": "Herscher, Andrew; The University of Michigan Press",
+            "isbn": "9780472029174",
+            "maximumPageRelevanceScore": "7.7800245",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472029174.jpg",
+            "title": "The Unreal Estate Guide to Detroit"
+        },
+        {
+            "authorsAndPublisher": "Michael Bérubé; New York University Press",
+            "isbn": "9780814713013",
+            "maximumPageRelevanceScore": "6.0068197",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814713013.jpg",
+            "title": "The Employment of English"
+        },
+        {
+            "authorsAndPublisher": "John Marshall; New York University Press",
+            "isbn": "9780814731437",
+            "maximumPageRelevanceScore": "6.0068197",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814731437.jpg",
+            "title": "Seriatim"
+        },
+        {
+            "authorsAndPublisher": "Rossignol, Jim; The University of Michigan Press",
+            "isbn": "9780472023141",
+            "maximumPageRelevanceScore": "5.700952",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472023141.jpg",
+            "title": "This Gaming Life"
+        },
+        {
+            "authorsAndPublisher": "David Mitchell; University of Minnesota Press",
+            "isbn": "9780816689972",
+            "maximumPageRelevanceScore": "5.3366094",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780816689972.jpg",
+            "title": "Becoming Human"
+        },
+        {
+            "authorsAndPublisher": "Stein, Kevin; The University of Michigan Press",
+            "isbn": "9780472026708",
+            "maximumPageRelevanceScore": "4.553778",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472026708.jpg",
+            "title": "Poetry's Afterlife: Verse in the Digital Age"
+        }
+    ],
+    "resultsNumBooks": 9,
+    "resultsNumPages": 115,
+    "searchDCI": "Myst Riven",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}

@@ -1,0 +1,58 @@
+{
+    "id": "d3cec99112255db9bf4963f7798562b6a36f1bd0b2016918629e007d474deb70-fulltext-topics-427e7d5b9164df41ba418657f4bb524c3f7459c94b4b211853339b89ec6654dc",
+    "limitByTopics": [
+        [
+            "Art -- \"objective expression\"",
+            1
+        ],
+        [
+            "Art -- autonomous art",
+            1
+        ],
+        [
+            "Art -- corrupted forms of writing in Rilke's view",
+            1
+        ],
+        [
+            "Baudelaire, Charles",
+            1
+        ],
+        [
+            "Dehumanization",
+            1
+        ],
+        [
+            "Flaubert, Gustave",
+            1
+        ],
+        [
+            "Jugendstil",
+            1
+        ],
+        [
+            "Symbolists",
+            1
+        ]
+    ],
+    "query": "art",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "David Kleinbard; New York University Press",
+            "isbn": "9780814746677",
+            "maximumPageRelevanceScore": "5.5100307",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814746677.jpg",
+            "title": "The Beginning of Terror"
+        }
+    ],
+    "resultsNumBooks": 1,
+    "resultsNumPages": 1,
+    "searchDCI": "art",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+        "Rilke's writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)",
+        "Rilke's writings -- \"Modern Poetry\" (\"Moderne Lyrik\")",
+        "Cézanne, Paul"
+    ]
+}

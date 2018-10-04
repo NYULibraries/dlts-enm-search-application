@@ -1,0 +1,84 @@
+{
+    "id": "d3cec99112255db9bf4963f7798562b6a36f1bd0b2016918629e007d474deb70-fulltext-topics-97b6b4ae686d19cbdb9c40b02cc25dc2b166f165dcbd47f8730bbf0bb493966f",
+    "limitByTopics": [
+        [
+            "Andreas-Salomé, Lou (Luise)",
+            2
+        ],
+        [
+            "Baudelaire, Charles",
+            2
+        ],
+        [
+            "Bradley, Brigitte L.",
+            2
+        ],
+        [
+            "Butler, Eliza M.",
+            2
+        ],
+        [
+            "Cézanne, Paul",
+            2
+        ],
+        [
+            "Dehumanization",
+            2
+        ],
+        [
+            "Father -- images of the father in Rilke's writings",
+            2
+        ],
+        [
+            "Kierkegaard, Søren",
+            2
+        ],
+        [
+            "Mastery -- in Rilke's art",
+            2
+        ],
+        [
+            "Nietzsche, Friedrich",
+            2
+        ],
+        [
+            "Rilke's writings -- \"Modern Poetry\" (\"Moderne Lyrik\")",
+            2
+        ],
+        [
+            "Rilke's writings -- Duino Elegies (Duineser Elegien)",
+            2
+        ],
+        [
+            "Rilke's writings -- New Poems (Neue Gedichte)",
+            2
+        ],
+        [
+            "Rodin, Auguste",
+            2
+        ],
+        [
+            "Rodin, Auguste -- as second father",
+            2
+        ]
+    ],
+    "query": "art",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "David Kleinbard; New York University Press",
+            "isbn": "9780814746677",
+            "maximumPageRelevanceScore": "5.5100307",
+            "numMatchedPages": 16,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814746677.jpg",
+            "title": "The Beginning of Terror"
+        }
+    ],
+    "resultsNumBooks": 1,
+    "resultsNumPages": 16,
+    "searchDCI": "art",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+        "Rilke's writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)"
+    ]
+}

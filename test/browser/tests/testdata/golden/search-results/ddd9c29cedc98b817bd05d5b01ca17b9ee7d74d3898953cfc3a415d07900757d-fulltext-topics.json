@@ -1,0 +1,203 @@
+{
+    "id": "ddd9c29cedc98b817bd05d5b01ca17b9ee7d74d3898953cfc3a415d07900757d-fulltext-topics",
+    "limitByTopics": [
+        [
+            "Blizzard Entertainment -- TBC, and software design alterations by",
+            3
+        ],
+        [
+            "Burning Crusade, The (TBC)",
+            3
+        ],
+        [
+            "Ducheneaut, N.",
+            3
+        ],
+        [
+            "Gnomes",
+            3
+        ],
+        [
+            "Karazhan (Kara) dungeon",
+            3
+        ],
+        [
+            "encoded rules in digital entities -- TBC, and changes to",
+            3
+        ],
+        [
+            "encoded rules in digital entities -- in WoW",
+            3
+        ],
+        [
+            "software modifications -- TBC and",
+            3
+        ],
+        [
+            "Alliance races",
+            2
+        ],
+        [
+            "Bardzell, S.",
+            2
+        ],
+        [
+            "Blood Elves",
+            2
+        ],
+        [
+            "Draenei",
+            2
+        ],
+        [
+            "Dwarfs",
+            2
+        ],
+        [
+            "European WoW culture -- TBC release and",
+            2
+        ],
+        [
+            "Huizinga, J. -- on play",
+            2
+        ]
+    ],
+    "query": "Dungeons & Dragons",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Rossignol, Jim; The University of Michigan Press",
+            "isbn": "9780472023141",
+            "maximumPageRelevanceScore": "19.392197",
+            "numMatchedPages": 5,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472023141.jpg",
+            "title": "This Gaming Life"
+        },
+        {
+            "authorsAndPublisher": "Bonnie A. Nardi; The University of Michigan Press",
+            "isbn": "9780472026715",
+            "maximumPageRelevanceScore": "13.76224",
+            "numMatchedPages": 23,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472026715.jpg",
+            "title": "My Life as a Night Elf Priest"
+        },
+        {
+            "authorsAndPublisher": "Wolf, Mark J. P.; The University of Michigan Press",
+            "isbn": "9780472027491",
+            "maximumPageRelevanceScore": "12.522136",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472027491.jpg",
+            "title": "Myst and Riven: The World of the D'ni"
+        },
+        {
+            "authorsAndPublisher": "Pinchbeck, Dan; The University of Michigan Press",
+            "isbn": "9780472028931",
+            "maximumPageRelevanceScore": "12.522136",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472028931.jpg",
+            "title": "Doom: Scarydarkfast"
+        },
+        {
+            "authorsAndPublisher": "David Kleinbard; New York University Press",
+            "isbn": "9780814746677",
+            "maximumPageRelevanceScore": "12.522136",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814746677.jpg",
+            "title": "The Beginning of Terror"
+        },
+        {
+            "authorsAndPublisher": "Martha Grace Duncan; New York University Press",
+            "isbn": "9780814718803",
+            "maximumPageRelevanceScore": "7.951742",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814718803.jpg",
+            "title": "Romantic Outlaws, Beloved Prisons"
+        },
+        {
+            "authorsAndPublisher": "Stein, Kevin; The University of Michigan Press",
+            "isbn": "9780472026708",
+            "maximumPageRelevanceScore": "7.3174124",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472026708.jpg",
+            "title": "Poetry's Afterlife: Verse in the Digital Age"
+        },
+        {
+            "authorsAndPublisher": "Ryuzo Sato; New York University Press",
+            "isbn": "9780814780213",
+            "maximumPageRelevanceScore": "7.3174124",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814780213.jpg",
+            "title": "The Chrysanthemum and the Eagle"
+        },
+        {
+            "authorsAndPublisher": "Ben-Ami Scharfstein; New York University Press",
+            "isbn": "9780814779163",
+            "maximumPageRelevanceScore": "7.3174124",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814779163.jpg",
+            "title": "The Dilemma of Context"
+        },
+        {
+            "authorsAndPublisher": "Cummings, Robert E.; Barton, Matt; University of Michigan Press and University of Michigan Library",
+            "isbn": "9780472024513",
+            "maximumPageRelevanceScore": "6.777344",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472024513.jpg",
+            "title": "Wiki Writing: Collaborative Learning in the College Classroom"
+        },
+        {
+            "authorsAndPublisher": "Lee, Chin-Chuan; University of Michigan Press",
+            "isbn": "9780472120789",
+            "maximumPageRelevanceScore": "6.5009727",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120789.jpg",
+            "title": "Internationalizing “International Communication”"
+        },
+        {
+            "authorsAndPublisher": "Alexander, Buzz; The University of Michigan Press and The University of Michigan Library",
+            "isbn": "9780472027446",
+            "maximumPageRelevanceScore": "6.5009727",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472027446.jpg",
+            "title": "Is William Martinez Not Our Brother?: Twenty Years of the Prison Creative Arts Project"
+        },
+        {
+            "authorsAndPublisher": "Barbara Fass Leavy; New York University Press",
+            "isbn": "9780814751008",
+            "maximumPageRelevanceScore": "6.5009727",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814751008.jpg",
+            "title": "In Search of the Swan Maiden"
+        },
+        {
+            "authorsAndPublisher": "Peggy Fitzhugh Johnstone; New York University Press",
+            "isbn": "9780814742358",
+            "maximumPageRelevanceScore": "6.5009727",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814742358.jpg",
+            "title": "The Transformation of Rage"
+        },
+        {
+            "authorsAndPublisher": "Kee, Kevin; The University of Michigan Press",
+            "isbn": "9780472120482",
+            "maximumPageRelevanceScore": "6.021163",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120482.jpg",
+            "title": "Pastplay: Teaching and Learning History with Technology"
+        },
+        {
+            "authorsAndPublisher": "Cary Nelson; New York University Press",
+            "isbn": "9780814757970",
+            "maximumPageRelevanceScore": "6.021163",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814757970.jpg",
+            "title": "Manifesto of a Tenured Radical"
+        }
+    ],
+    "resultsNumBooks": 16,
+    "resultsNumPages": 46,
+    "searchDCI": "Dungeons & Dragons",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}

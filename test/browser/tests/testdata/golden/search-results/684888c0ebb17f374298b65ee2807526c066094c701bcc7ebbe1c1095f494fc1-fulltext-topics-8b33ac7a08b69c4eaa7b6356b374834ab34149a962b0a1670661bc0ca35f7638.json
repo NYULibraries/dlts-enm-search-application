@@ -1,0 +1,140 @@
+{
+    "id": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1-fulltext-topics-8b33ac7a08b69c4eaa7b6356b374834ab34149a962b0a1670661bc0ca35f7638",
+    "limitByTopics": [
+        [
+            "New Woman, The",
+            17
+        ],
+        [
+            "consumerism / consumer culture",
+            14
+        ],
+        [
+            "democracy / democratization",
+            14
+        ],
+        [
+            "class",
+            13
+        ],
+        [
+            "police and policing",
+            13
+        ],
+        [
+            "terrorism / terrorists",
+            13
+        ],
+        [
+            "Doyle, Arthur Conan -- Sherlock Holmes",
+            12
+        ],
+        [
+            "legal interventionism",
+            12
+        ],
+        [
+            "image / image-centered culture",
+            11
+        ],
+        [
+            "Feminism -- lesbian feminists",
+            10
+        ],
+        [
+            "James, Henry",
+            10
+        ],
+        [
+            "James, Henry -- The Princess Casamassima",
+            10
+        ],
+        [
+            "public sphere",
+            10
+        ],
+        [
+            "murder",
+            9
+        ],
+        [
+            "political crime",
+            9
+        ]
+    ],
+    "query": "*",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Elizabeth Carolyn Miller; University of Michigan Press and University of Michigan Library",
+            "isbn": "9780472024469",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 58,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472024469.jpg",
+            "title": "Framed: The New Woman Criminal in British Culture at the Fin de Siecle"
+        },
+        {
+            "authorsAndPublisher": "Cary Nelson; New York University Press",
+            "isbn": "9780814757970",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 8,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814757970.jpg",
+            "title": "Manifesto of a Tenured Radical"
+        },
+        {
+            "authorsAndPublisher": "Daniel Rancour-Laferriere; New York University Press",
+            "isbn": "9780814774823",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 4,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774823.jpg",
+            "title": "The Slave Soul of Russia"
+        },
+        {
+            "authorsAndPublisher": "Ian Shapiro; New York University Press",
+            "isbn": "9780814780978",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814780978.jpg",
+            "title": "Integrity and Conscience"
+        },
+        {
+            "authorsAndPublisher": "Katherine J. Mayberry; York University Press",
+            "isbn": "9780814755471",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814755471.jpg",
+            "title": "Teaching What You’re Not"
+        },
+        {
+            "authorsAndPublisher": "Paula C. Rust; New York University Press",
+            "isbn": "9780814774458",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 29,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774458.jpg",
+            "title": "Bisexuality and the Challenge to Lesbian Politics"
+        },
+        {
+            "authorsAndPublisher": "Peter N. Stearns; New York University Press",
+            "isbn": "9780814779965",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 11,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814779965.jpg",
+            "title": "American Cool"
+        },
+        {
+            "authorsAndPublisher": "Ronald Suresh Roberts; New York University Press",
+            "isbn": "9780814774816",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774816.jpg",
+            "title": "Clarence Thomas and the Tough Love Crowd"
+        }
+    ],
+    "resultsNumBooks": 8,
+    "resultsNumPages": 114,
+    "searchDCI": "*",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+        "feminism"
+    ]
+}

@@ -1,0 +1,85 @@
+{
+    "id": "684888c0ebb17f374298b65ee2807526c066094c701bcc7ebbe1c1095f494fc1-fulltext-topics-22bf46aa8b9985c0cae733f852d82c5f84b10fbbb21a93c6f99c6c782bd58144",
+    "limitByTopics": [
+        [
+            "James, Henry",
+            6
+        ],
+        [
+            "consumerism / consumer culture",
+            6
+        ],
+        [
+            "Conrad, Joseph",
+            5
+        ],
+        [
+            "democracy / democratization",
+            5
+        ],
+        [
+            "political crime",
+            5
+        ],
+        [
+            "James, Henry -- The Princess Casamassima",
+            4
+        ],
+        [
+            "dynamite narrative",
+            4
+        ],
+        [
+            "police and policing",
+            4
+        ],
+        [
+            "terrorism / terrorists",
+            4
+        ],
+        [
+            "Conrad, Joseph -- Secret Agent",
+            3
+        ],
+        [
+            "New Woman, The",
+            3
+        ],
+        [
+            "film -- crime film",
+            3
+        ],
+        [
+            "film(s)",
+            3
+        ],
+        [
+            "nationalism / national identity",
+            3
+        ],
+        [
+            "Doyle, Arthur Conan",
+            2
+        ]
+    ],
+    "query": "*",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Elizabeth Carolyn Miller; University of Michigan Press and University of Michigan Library",
+            "isbn": "9780472024469",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 13,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472024469.jpg",
+            "title": "Framed: The New Woman Criminal in British Culture at the Fin de Siecle"
+        }
+    ],
+    "resultsNumBooks": 1,
+    "resultsNumPages": 13,
+    "searchDCI": "*",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+        "feminism",
+        "class"
+    ]
+}
