@@ -68,10 +68,19 @@ as some of the Solr responses have a lot of data in them.
 
 The initial golden files were created by scripts which ran queries against the
 verified Solr indexes and used the responses to create the JSON golden files.
-In the future, if the Solr indexes change, once they pass validation the golden
-files can be updated by re-running all tests with an environment variable
-`UPDATE_GOLDEN_FILES` set to `1`.  The new golden files should then be checked
-into the repo.
+
+In the future, if the Solr indexes change, the golden files can be updated by
+re-running all tests with an environment variable `UPDATE_GOLDEN_FILES` set to `1`.
+The new golden files should then be checked into the repo.  There should be certainty
+that the new actual data being written out to the new golden files is correct.
+If the following pre-conditions are met, the generation of new golden files using
+UPDATE_GOLDEN_FILES=1 can proceed with confidence:
+
+* There have been no code changes since the last successful full test suite run. 
+* The Solr indexes have been verified, either by the [ENM Verifier](https://github.com/nyulibraries/dlts-enm-verifier)
+or some other process.  In theory this may not need to be a pre-condition if the
+test suite is considered a test of the correctness of the code, and not the data.
+Ideally though the golden files should have clean and correct data. 
 
 Note that there may be some tests that do not verify against golden files but
 have check data directly hardcoded into the scripts.  These will need to be updated
