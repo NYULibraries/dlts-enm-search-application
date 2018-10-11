@@ -1,23 +1,27 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <router-view/>
-  </div>
+    <div id="app">
+        App
+        <search-form/>
+        <search-echo/>
+        <facet-pane/>
+        <results-pane/>
+        <preview-pane/>
+    </div>
 </template>
 
 <script>
+import FacetPane from './components/FacetPane';
+import PreviewPane from './components/PreviewPane';
+import ResultsPane from './components/ResultsPane';
+import SearchEcho from './components/SearchEcho';
+import SearchForm from './components/SearchForm';
 export default {
     name: 'App',
+    components : { FacetPane, PreviewPane, ResultsPane, SearchEcho, SearchForm },
 };
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
