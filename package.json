@@ -13,7 +13,7 @@
     "test:browser:local:debug:firefox": "node_modules/.bin/wdio test/browser/conf/wdio.local.debug-firefox.conf.js",
     "test:unit": "jest --config test/unit/jest.conf.js --coverage",
     "lint": "eslint --ext .js,.vue src test/unit",
-    "build": "node build/build.js"
+    "build": "node $NODE_DEBUG_OPTION build/build.js"
   },
   "dependencies": {
     "vue": "^2.5.2",
