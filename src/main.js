@@ -4,6 +4,9 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 
+// TODO: replace with SASS
+import '@/assets/css/bulma.css';
+
 Vue.config.productionTip = false;
 
 // eslint-disable-next-line no-new
