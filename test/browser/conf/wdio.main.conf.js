@@ -176,7 +176,7 @@ exports.config = {
     // commands. Instead, they hook themselves up into the test process.
     services: ['selenium-standalone', 'visual-regression', 'chromedriver', 'screenshots-cleanup'],
     cleanScreenshotsFolder: {
-        folder: 'screenshots',
+        folder: './test/browser/errorShots/',
         pattern: '/**/ERROR_*',
     },
     visualRegression: {
