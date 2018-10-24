@@ -21,6 +21,8 @@
     "d3-tip": "^0.9.1",
     "font-awesome": "4.7.0",
     "lodash": "^4.17.11",
+    "node-sass": "^4.9.4",
+    "sass-loader": "^7.1.0",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
   },
