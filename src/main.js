@@ -4,8 +4,7 @@ import Vue from 'vue';
 import App from './App';
 import router from './router';
 
-// TODO: replace with SASS
-import '@/assets/css/bulma.css';
+require( './assets/sass/bulma.scss' );
 
 Vue.config.productionTip = false;
 
