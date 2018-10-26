@@ -63,4 +63,13 @@ export default {
 </script>
 
 <style>
+    .book-cover-thumbnail {
+        max-height: 64px;
+        width: auto !important;
+    }
+
+    .enm-page-active {
+        fill: lightgrey;
+        stroke: black;
+    }
 </style>
