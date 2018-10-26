@@ -5,9 +5,7 @@
             <search-echo/>
             <div class="container is-fluid">
                 <div class="columns enm-panes">
-                    <div class="column enm-pane enm-pane-facets is-2">
-                        <facet-pane/>
-                    </div>
+                    <facet-pane/>
                     <results-pane/>
                     <preview-pane/>
                 </div>
