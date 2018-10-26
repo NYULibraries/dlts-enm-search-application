@@ -25,6 +25,4 @@ export default {
 </script>
 
 <style>
-    #spinner {
-    }
 </style>

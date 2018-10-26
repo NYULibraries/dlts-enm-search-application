@@ -63,6 +63,4 @@ export default {
 </script>
 
 <style>
-    #results-pane {
-    }
 </style>

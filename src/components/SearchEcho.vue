@@ -32,6 +32,4 @@ export default {
 </script>
 
 <style>
-    #search-echo {
-    }
 </style>

@@ -11,6 +11,4 @@ export default {
 </script>
 
 <style>
-    #bar-chart {
-    }
 </style>

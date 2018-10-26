@@ -68,6 +68,4 @@ export default {
 </script>
 
 <style>
-    #preview-pane {
-    }
 </style>

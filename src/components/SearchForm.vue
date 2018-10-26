@@ -48,6 +48,4 @@ export default {
 </script>
 
 <style>
-    #search-form {
-    }
 </style>
