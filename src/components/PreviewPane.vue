@@ -57,6 +57,7 @@
                  v-html="previewPane.pageText">
             </div>
         </div>
+    </div>
 </template>
 
 <script>
