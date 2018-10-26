@@ -1,12 +1,18 @@
 <template>
     <div id="app">
-        App
         <search-form/>
-        <search-echo/>
-        <facet-pane/>
-        <results-pane/>
-        <spinner/>
-        <preview-pane/>
+        <div v-cloak>
+            <search-echo/>
+            <div class="container is-fluid">
+                <div class="columns enm-panes">
+                    <div class="column enm-pane enm-pane-facets is-2">
+                        <facet-pane/>
+                    </div>
+                    <results-pane/>
+                    <preview-pane/>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
