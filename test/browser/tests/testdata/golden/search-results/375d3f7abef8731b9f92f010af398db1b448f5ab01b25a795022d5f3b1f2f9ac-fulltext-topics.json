@@ -97,20 +97,20 @@
             "title": "The Unreal Estate Guide to Detroit"
         },
         {
-            "authorsAndPublisher": "Michael Bérubé; New York University Press",
-            "isbn": "9780814713013",
-            "maximumPageRelevanceScore": "6.0068197",
-            "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814713013.jpg",
-            "title": "The Employment of English"
-        },
-        {
             "authorsAndPublisher": "John Marshall; New York University Press",
             "isbn": "9780814731437",
             "maximumPageRelevanceScore": "6.0068197",
             "numMatchedPages": 1,
             "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814731437.jpg",
             "title": "Seriatim"
+        },
+        {
+            "authorsAndPublisher": "Michael Bérubé; New York University Press",
+            "isbn": "9780814713013",
+            "maximumPageRelevanceScore": "6.0068197",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814713013.jpg",
+            "title": "The Employment of English"
         },
         {
             "authorsAndPublisher": "Rossignol, Jim; The University of Michigan Press",

@@ -185,6 +185,14 @@
             "title": "Adventures of the Mind"
         },
         {
+            "authorsAndPublisher": "Ian Shapiro; New York University Press",
+            "isbn": "9780814780978",
+            "maximumPageRelevanceScore": "6.0192204",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814780978.jpg",
+            "title": "Integrity and Conscience"
+        },
+        {
             "authorsAndPublisher": "Shackelford, Laura; University of Michigan Press",
             "isbn": "9780472120680",
             "maximumPageRelevanceScore": "6.0192204",
@@ -199,14 +207,6 @@
             "numMatchedPages": 6,
             "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774823.jpg",
             "title": "The Slave Soul of Russia"
-        },
-        {
-            "authorsAndPublisher": "Ian Shapiro; New York University Press",
-            "isbn": "9780814780978",
-            "maximumPageRelevanceScore": "6.0192204",
-            "numMatchedPages": 3,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814780978.jpg",
-            "title": "Integrity and Conscience"
         },
         {
             "authorsAndPublisher": "Keith Beattie; New York University Press",
@@ -281,22 +281,6 @@
             "title": "Imagining the Global: Transnational Media and Popular Culture Beyond East and West"
         },
         {
-            "authorsAndPublisher": "Yochim, Emily Chivers; The University of Michigan Press and The University of Michigan Library",
-            "isbn": "9780472026609",
-            "maximumPageRelevanceScore": "4.6281857",
-            "numMatchedPages": 10,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472026609.jpg",
-            "title": "Skate Life: Re-Imagining White Masculinity"
-        },
-        {
-            "authorsAndPublisher": "Barbara Fass Leavy; New York University Press",
-            "isbn": "9780814751008",
-            "maximumPageRelevanceScore": "4.6281857",
-            "numMatchedPages": 2,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814751008.jpg",
-            "title": "In Search of the Swan Maiden"
-        },
-        {
             "authorsAndPublisher": "Seth Forman; New York University Press",
             "isbn": "9780814726815",
             "maximumPageRelevanceScore": "4.6281857",
@@ -321,12 +305,28 @@
             "title": "Health Rights Are Civil Rights"
         },
         {
-            "authorsAndPublisher": "Kee, Kevin; The University of Michigan Press",
-            "isbn": "9780472120482",
+            "authorsAndPublisher": "Barbara Fass Leavy; New York University Press",
+            "isbn": "9780814751008",
+            "maximumPageRelevanceScore": "4.6281857",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814751008.jpg",
+            "title": "In Search of the Swan Maiden"
+        },
+        {
+            "authorsAndPublisher": "Yochim, Emily Chivers; The University of Michigan Press and The University of Michigan Library",
+            "isbn": "9780472026609",
+            "maximumPageRelevanceScore": "4.6281857",
+            "numMatchedPages": 10,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472026609.jpg",
+            "title": "Skate Life: Re-Imagining White Masculinity"
+        },
+        {
+            "authorsAndPublisher": "Paul Harris; New York University",
+            "isbn": "9780814735923",
             "maximumPageRelevanceScore": "4.287771",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120482.jpg",
-            "title": "Pastplay: Teaching and Learning History with Technology"
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814735923.jpg",
+            "title": "Black Rage Confronts the Law"
         },
         {
             "authorsAndPublisher": "Ruth Colker; New York University Press",
@@ -345,20 +345,20 @@
             "title": "Negrophobia and Reasonable Racism"
         },
         {
+            "authorsAndPublisher": "Kee, Kevin; The University of Michigan Press",
+            "isbn": "9780472120482",
+            "maximumPageRelevanceScore": "4.287771",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120482.jpg",
+            "title": "Pastplay: Teaching and Learning History with Technology"
+        },
+        {
             "authorsAndPublisher": "Robert L. Hayman; New York University Press",
             "isbn": "9780814735336",
             "maximumPageRelevanceScore": "4.287771",
             "numMatchedPages": 2,
             "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814735336.jpg",
             "title": "The Smart Culture"
-        },
-        {
-            "authorsAndPublisher": "Paul Harris; New York University",
-            "isbn": "9780814735923",
-            "maximumPageRelevanceScore": "4.287771",
-            "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814735923.jpg",
-            "title": "Black Rage Confronts the Law"
         },
         {
             "authorsAndPublisher": "Gabrys, Jennifer; The University of Michigan Press",
@@ -369,6 +369,22 @@
             "title": "Digital Rubbish: A Natural History of Electronics"
         },
         {
+            "authorsAndPublisher": "Ruth Colker; New York University Press",
+            "isbn": "9780814715635",
+            "maximumPageRelevanceScore": "3.6545076",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814715635.jpg",
+            "title": "American Law in the Age of Hypercapitalism"
+        },
+        {
+            "authorsAndPublisher": "Christina Gerken; University of Minnesota Press",
+            "isbn": "9780816686353",
+            "maximumPageRelevanceScore": "3.6545076",
+            "numMatchedPages": 5,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780816686353.jpg",
+            "title": "Model Immigrants and Undesirable Aliens"
+        },
+        {
             "authorsAndPublisher": "Bonnie A. Nardi; The University of Michigan Press",
             "isbn": "9780472026715",
             "maximumPageRelevanceScore": "3.6545076",
@@ -377,12 +393,20 @@
             "title": "My Life as a Night Elf Priest"
         },
         {
-            "authorsAndPublisher": "Michael Bérubé; New York University Press",
-            "isbn": "9780814713013",
+            "authorsAndPublisher": "Richard K. Vedder and Lowell E. Gallaway; New York University Press",
+            "isbn": "9780814787922",
             "maximumPageRelevanceScore": "3.6545076",
-            "numMatchedPages": 9,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814713013.jpg",
-            "title": "The Employment of English"
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814787922.jpg",
+            "title": "Out of Work"
+        },
+        {
+            "authorsAndPublisher": "Martha Grace Duncan; New York University Press",
+            "isbn": "9780814718803",
+            "maximumPageRelevanceScore": "3.6545076",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814718803.jpg",
+            "title": "Romantic Outlaws, Beloved Prisons"
         },
         {
             "authorsAndPublisher": "Robert Rogers; New york University Press",
@@ -401,36 +425,12 @@
             "title": "The Beginning of Terror"
         },
         {
-            "authorsAndPublisher": "Ruth Colker; New York University Press",
-            "isbn": "9780814715635",
+            "authorsAndPublisher": "Michael Bérubé; New York University Press",
+            "isbn": "9780814713013",
             "maximumPageRelevanceScore": "3.6545076",
-            "numMatchedPages": 2,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814715635.jpg",
-            "title": "American Law in the Age of Hypercapitalism"
-        },
-        {
-            "authorsAndPublisher": "Martha Grace Duncan; New York University Press",
-            "isbn": "9780814718803",
-            "maximumPageRelevanceScore": "3.6545076",
-            "numMatchedPages": 2,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814718803.jpg",
-            "title": "Romantic Outlaws, Beloved Prisons"
-        },
-        {
-            "authorsAndPublisher": "Richard K. Vedder and Lowell E. Gallaway; New York University Press",
-            "isbn": "9780814787922",
-            "maximumPageRelevanceScore": "3.6545076",
-            "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814787922.jpg",
-            "title": "Out of Work"
-        },
-        {
-            "authorsAndPublisher": "Christina Gerken; University of Minnesota Press",
-            "isbn": "9780816686353",
-            "maximumPageRelevanceScore": "3.6545076",
-            "numMatchedPages": 5,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780816686353.jpg",
-            "title": "Model Immigrants and Undesirable Aliens"
+            "numMatchedPages": 9,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814713013.jpg",
+            "title": "The Employment of English"
         },
         {
             "authorsAndPublisher": "Stephen M. Feldman.; New York University Press",
@@ -441,28 +441,12 @@
             "title": "Please don’t Wish me a Merry Christmas"
         },
         {
-            "authorsAndPublisher": "Schur, Richard L.; The University of Michigan Press and The University of Michigan Library",
-            "isbn": "9780472024490",
+            "authorsAndPublisher": "Mark E. Kann; New York University Press",
+            "isbn": "9780814747148",
             "maximumPageRelevanceScore": "3.2467563",
-            "numMatchedPages": 2,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472024490.jpg",
-            "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law"
-        },
-        {
-            "authorsAndPublisher": "Dougherty, Jack; Nawrotzki, Kristen; The University of Michigan Press",
-            "isbn": "9780472029914",
-            "maximumPageRelevanceScore": "3.2467563",
-            "numMatchedPages": 3,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472029914.jpg",
-            "title": "Writing History in the Digital Age"
-        },
-        {
-            "authorsAndPublisher": "John Marshall; New York University Press",
-            "isbn": "9780814731437",
-            "maximumPageRelevanceScore": "3.2467563",
-            "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814731437.jpg",
-            "title": "Seriatim"
+            "numMatchedPages": 5,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814747148.jpg",
+            "title": "A Republic of Men"
         },
         {
             "authorsAndPublisher": "John W. Chapman; New York University Press",
@@ -471,14 +455,6 @@
             "numMatchedPages": 2,
             "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814714539.jpg",
             "title": "Compensatory Justice"
-        },
-        {
-            "authorsAndPublisher": "Mark E. Kann; New York University Press",
-            "isbn": "9780814747148",
-            "maximumPageRelevanceScore": "3.2467563",
-            "numMatchedPages": 5,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814747148.jpg",
-            "title": "A Republic of Men"
         },
         {
             "authorsAndPublisher": "Pearl M. Oliner; New York University Press",
@@ -497,12 +473,36 @@
             "title": "High Hopes"
         },
         {
+            "authorsAndPublisher": "Schur, Richard L.; The University of Michigan Press and The University of Michigan Library",
+            "isbn": "9780472024490",
+            "maximumPageRelevanceScore": "3.2467563",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472024490.jpg",
+            "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law"
+        },
+        {
+            "authorsAndPublisher": "John Marshall; New York University Press",
+            "isbn": "9780814731437",
+            "maximumPageRelevanceScore": "3.2467563",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814731437.jpg",
+            "title": "Seriatim"
+        },
+        {
             "authorsAndPublisher": "Matthew A. Taylor; University of Minnesota Press",
             "isbn": "9780816680610",
             "maximumPageRelevanceScore": "3.2467563",
             "numMatchedPages": 2,
             "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780816680610.jpg",
             "title": "Universes without Us"
+        },
+        {
+            "authorsAndPublisher": "Dougherty, Jack; Nawrotzki, Kristen; The University of Michigan Press",
+            "isbn": "9780472029914",
+            "maximumPageRelevanceScore": "3.2467563",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472029914.jpg",
+            "title": "Writing History in the Digital Age"
         },
         {
             "authorsAndPublisher": "charles b.craver; New York University Press",
