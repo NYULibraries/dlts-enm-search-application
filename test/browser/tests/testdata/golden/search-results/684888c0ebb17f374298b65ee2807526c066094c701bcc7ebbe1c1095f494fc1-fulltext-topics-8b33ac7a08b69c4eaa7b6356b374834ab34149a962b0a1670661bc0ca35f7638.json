@@ -65,44 +65,12 @@
     "query": "*",
     "resultsMetadata": [
         {
-            "authorsAndPublisher": "Elizabeth Carolyn Miller; University of Michigan Press and University of Michigan Library",
-            "isbn": "9780472024469",
+            "authorsAndPublisher": "Peter N. Stearns; New York University Press",
+            "isbn": "9780814779965",
             "maximumPageRelevanceScore": "1",
-            "numMatchedPages": 58,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472024469.jpg",
-            "title": "Framed: The New Woman Criminal in British Culture at the Fin de Siecle"
-        },
-        {
-            "authorsAndPublisher": "Cary Nelson; New York University Press",
-            "isbn": "9780814757970",
-            "maximumPageRelevanceScore": "1",
-            "numMatchedPages": 8,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814757970.jpg",
-            "title": "Manifesto of a Tenured Radical"
-        },
-        {
-            "authorsAndPublisher": "Daniel Rancour-Laferriere; New York University Press",
-            "isbn": "9780814774823",
-            "maximumPageRelevanceScore": "1",
-            "numMatchedPages": 4,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774823.jpg",
-            "title": "The Slave Soul of Russia"
-        },
-        {
-            "authorsAndPublisher": "Ian Shapiro; New York University Press",
-            "isbn": "9780814780978",
-            "maximumPageRelevanceScore": "1",
-            "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814780978.jpg",
-            "title": "Integrity and Conscience"
-        },
-        {
-            "authorsAndPublisher": "Katherine J. Mayberry; York University Press",
-            "isbn": "9780814755471",
-            "maximumPageRelevanceScore": "1",
-            "numMatchedPages": 2,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814755471.jpg",
-            "title": "Teaching What You’re Not"
+            "numMatchedPages": 11,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814779965.jpg",
+            "title": "American Cool"
         },
         {
             "authorsAndPublisher": "Paula C. Rust; New York University Press",
@@ -113,20 +81,52 @@
             "title": "Bisexuality and the Challenge to Lesbian Politics"
         },
         {
-            "authorsAndPublisher": "Peter N. Stearns; New York University Press",
-            "isbn": "9780814779965",
-            "maximumPageRelevanceScore": "1",
-            "numMatchedPages": 11,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814779965.jpg",
-            "title": "American Cool"
-        },
-        {
             "authorsAndPublisher": "Ronald Suresh Roberts; New York University Press",
             "isbn": "9780814774816",
             "maximumPageRelevanceScore": "1",
             "numMatchedPages": 1,
             "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774816.jpg",
             "title": "Clarence Thomas and the Tough Love Crowd"
+        },
+        {
+            "authorsAndPublisher": "Elizabeth Carolyn Miller; University of Michigan Press and University of Michigan Library",
+            "isbn": "9780472024469",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 58,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472024469.jpg",
+            "title": "Framed: The New Woman Criminal in British Culture at the Fin de Siecle"
+        },
+        {
+            "authorsAndPublisher": "Ian Shapiro; New York University Press",
+            "isbn": "9780814780978",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814780978.jpg",
+            "title": "Integrity and Conscience"
+        },
+        {
+            "authorsAndPublisher": "Cary Nelson; New York University Press",
+            "isbn": "9780814757970",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 8,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814757970.jpg",
+            "title": "Manifesto of a Tenured Radical"
+        },
+        {
+            "authorsAndPublisher": "Katherine J. Mayberry; York University Press",
+            "isbn": "9780814755471",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814755471.jpg",
+            "title": "Teaching What You’re Not"
+        },
+        {
+            "authorsAndPublisher": "Daniel Rancour-Laferriere; New York University Press",
+            "isbn": "9780814774823",
+            "maximumPageRelevanceScore": "1",
+            "numMatchedPages": 4,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774823.jpg",
+            "title": "The Slave Soul of Russia"
         }
     ],
     "resultsNumBooks": 8,

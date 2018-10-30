@@ -81,20 +81,20 @@
             "title": "My Life as a Night Elf Priest"
         },
         {
-            "authorsAndPublisher": "Wolf, Mark J. P.; The University of Michigan Press",
-            "isbn": "9780472027491",
-            "maximumPageRelevanceScore": "12.522136",
-            "numMatchedPages": 3,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472027491.jpg",
-            "title": "Myst and Riven: The World of the D'ni"
-        },
-        {
             "authorsAndPublisher": "Pinchbeck, Dan; The University of Michigan Press",
             "isbn": "9780472028931",
             "maximumPageRelevanceScore": "12.522136",
             "numMatchedPages": 1,
             "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472028931.jpg",
             "title": "Doom: Scarydarkfast"
+        },
+        {
+            "authorsAndPublisher": "Wolf, Mark J. P.; The University of Michigan Press",
+            "isbn": "9780472027491",
+            "maximumPageRelevanceScore": "12.522136",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472027491.jpg",
+            "title": "Myst and Riven: The World of the D'ni"
         },
         {
             "authorsAndPublisher": "David Kleinbard; New York University Press",
@@ -145,6 +145,14 @@
             "title": "Wiki Writing: Collaborative Learning in the College Classroom"
         },
         {
+            "authorsAndPublisher": "Barbara Fass Leavy; New York University Press",
+            "isbn": "9780814751008",
+            "maximumPageRelevanceScore": "6.5009727",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814751008.jpg",
+            "title": "In Search of the Swan Maiden"
+        },
+        {
             "authorsAndPublisher": "Lee, Chin-Chuan; University of Michigan Press",
             "isbn": "9780472120789",
             "maximumPageRelevanceScore": "6.5009727",
@@ -161,14 +169,6 @@
             "title": "Is William Martinez Not Our Brother?: Twenty Years of the Prison Creative Arts Project"
         },
         {
-            "authorsAndPublisher": "Barbara Fass Leavy; New York University Press",
-            "isbn": "9780814751008",
-            "maximumPageRelevanceScore": "6.5009727",
-            "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814751008.jpg",
-            "title": "In Search of the Swan Maiden"
-        },
-        {
             "authorsAndPublisher": "Peggy Fitzhugh Johnstone; New York University Press",
             "isbn": "9780814742358",
             "maximumPageRelevanceScore": "6.5009727",
@@ -177,20 +177,20 @@
             "title": "The Transformation of Rage"
         },
         {
-            "authorsAndPublisher": "Kee, Kevin; The University of Michigan Press",
-            "isbn": "9780472120482",
-            "maximumPageRelevanceScore": "6.021163",
-            "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120482.jpg",
-            "title": "Pastplay: Teaching and Learning History with Technology"
-        },
-        {
             "authorsAndPublisher": "Cary Nelson; New York University Press",
             "isbn": "9780814757970",
             "maximumPageRelevanceScore": "6.021163",
             "numMatchedPages": 1,
             "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814757970.jpg",
             "title": "Manifesto of a Tenured Radical"
+        },
+        {
+            "authorsAndPublisher": "Kee, Kevin; The University of Michigan Press",
+            "isbn": "9780472120482",
+            "maximumPageRelevanceScore": "6.021163",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120482.jpg",
+            "title": "Pastplay: Teaching and Learning History with Technology"
         }
     ],
     "resultsNumBooks": 16,

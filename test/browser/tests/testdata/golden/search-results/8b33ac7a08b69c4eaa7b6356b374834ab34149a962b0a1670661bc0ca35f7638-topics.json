@@ -145,6 +145,14 @@
             "title": "Adventures of the Mind"
         },
         {
+            "authorsAndPublisher": "Ian Shapiro; New York University Press",
+            "isbn": "9780814780978",
+            "maximumPageRelevanceScore": "6.0192204",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814780978.jpg",
+            "title": "Integrity and Conscience"
+        },
+        {
             "authorsAndPublisher": "Shackelford, Laura; University of Michigan Press",
             "isbn": "9780472120680",
             "maximumPageRelevanceScore": "6.0192204",
@@ -159,14 +167,6 @@
             "numMatchedPages": 4,
             "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774823.jpg",
             "title": "The Slave Soul of Russia"
-        },
-        {
-            "authorsAndPublisher": "Ian Shapiro; New York University Press",
-            "isbn": "9780814780978",
-            "maximumPageRelevanceScore": "6.0192204",
-            "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814780978.jpg",
-            "title": "Integrity and Conscience"
         },
         {
             "authorsAndPublisher": "Keith Beattie; New York University Press",
@@ -185,20 +185,20 @@
             "title": "Clarence Thomas and the Tough Love Crowd"
         },
         {
-            "authorsAndPublisher": "Diane Helene Miller; New York University Press",
-            "isbn": "9780814755969",
-            "maximumPageRelevanceScore": "5.2769036",
-            "numMatchedPages": 5,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814755969.jpg",
-            "title": "Freedom to Differ"
-        },
-        {
             "authorsAndPublisher": "Jennifer L. Manlowe; New York University Press",
             "isbn": "9780814755297",
             "maximumPageRelevanceScore": "5.2769036",
             "numMatchedPages": 9,
             "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814755297.jpg",
             "title": "Faith Born of Seduction"
+        },
+        {
+            "authorsAndPublisher": "Diane Helene Miller; New York University Press",
+            "isbn": "9780814755969",
+            "maximumPageRelevanceScore": "5.2769036",
+            "numMatchedPages": 5,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814755969.jpg",
+            "title": "Freedom to Differ"
         },
         {
             "authorsAndPublisher": "Henry Jenkins et al; New York University Press",
@@ -217,20 +217,20 @@
             "title": "Postmodern Legal Movements"
         },
         {
-            "authorsAndPublisher": "R. Jeffrey Ringer; New York University Press",
-            "isbn": "9780814774410",
-            "maximumPageRelevanceScore": "3.4878433",
-            "numMatchedPages": 2,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774410.jpg",
-            "title": "Queer Words, Queer Images: Communication and the Construction of Homosexuality"
-        },
-        {
             "authorsAndPublisher": "Jenna M. Loyd; University of Minnesota Press",
             "isbn": "9780816676507",
             "maximumPageRelevanceScore": "3.4878433",
             "numMatchedPages": 1,
             "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780816676507.jpg",
             "title": "Health Rights Are Civil Rights"
+        },
+        {
+            "authorsAndPublisher": "R. Jeffrey Ringer; New York University Press",
+            "isbn": "9780814774410",
+            "maximumPageRelevanceScore": "3.4878433",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814774410.jpg",
+            "title": "Queer Words, Queer Images: Communication and the Construction of Homosexuality"
         }
     ],
     "resultsNumBooks": 21,
