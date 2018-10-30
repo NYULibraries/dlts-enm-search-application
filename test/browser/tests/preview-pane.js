@@ -211,7 +211,7 @@ function compareActualToGolden( goldenFile ) {
 
         console.log( `Updated golden file ${goldenFile}` );
 
-        return;
+        return true;
     }
 
     fs.writeFileSync( actualFile, stringifiedSnapshot );
