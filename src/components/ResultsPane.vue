@@ -12,7 +12,7 @@
             <header v-show="displayResultsPane">
                 <h2 class="is-size-4">Results: {{ resultsHeader }}</h2>
             </header>
-            <div class="enm-results" v-show="displayResultsPane">
+            <div v-show="displayResultsPane" class="enm-results">
 
                 <span v-if="! results || results.length === 0">
                     Please try another search.
@@ -20,10 +20,11 @@
 
                 <!--BOOK-->
                 <div
+                    v-for="result in results"
                     :id="result.groupValue"
                     :name="result.doclist.docs[ 0 ].title"
-                    class="box" v-for="result in results"
                     :key="result.groupValue"
+                    class="box"
                     @click="previewEpub">
                     <article class="media enm-book">
                         <div class="media-left">

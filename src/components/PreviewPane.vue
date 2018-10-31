@@ -1,11 +1,11 @@
 <template>
-    <div class="column enm-pane enm-pane-preview" v-show="displayPreviewPane">
+    <div v-show="displayPreviewPane" class="column enm-pane enm-pane-preview">
 
         <!--PREVIEW: NO EPUB SELECTED-->
         <div v-show="! previewPane.isbn" id="message" class="message is-valign is-centered">
             <p class="message-body has-text-centered">Choose a book at left to view matched pages, or
                 <br>
-                <a @click="loadFirstEpub" href="#">Load the first matched page</a>
+                <a href="#" @click="loadFirstEpub">Load the first matched page</a>
             </p>
         </div>
         <!--PREVIEW: NO EPUB SELECTED-->
@@ -24,8 +24,8 @@
             <div v-show="previewPane.isbn" class="enm-buttons">
                 <a
                     :disabled="previewPane.pageIndex === 0"
-                    @click="clickPrevious"
-                    href="#" class="button" title="View previous matched page in this book">
+                    href="#" class="button" title="View previous matched page in this book"
+                    @click="clickPrevious">
                     &lt; previous </a>
                 <a
                     :disabled="previewPane.pageIndex === barChartDataMatchedPages.length - 1"

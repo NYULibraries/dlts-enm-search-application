@@ -21,8 +21,8 @@
 
                 <a
                     v-show="( ! facetPane.showAllTopics ) && ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )"
-                    @click="facetPane.showAllTopics = ! facetPane.showAllTopics"
-                    class="listui seemore" href="#">
+                    class="listui seemore" href="#"
+                    @click="facetPane.showAllTopics = ! facetPane.showAllTopics">
                     <i class="fa fa-angle-double-down" aria-hidden="true"></i>See All
                 </a>
 
@@ -44,8 +44,8 @@
 
                 <a
                     v-show="( facetPane.showAllTopics ) && ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )"
-                    @click="facetPane.showAllTopics = ! facetPane.showAllTopics"
-                    class="listui seemore" href="#">
+                    class="listui seemore" href="#"
+                    @click="facetPane.showAllTopics = ! facetPane.showAllTopics">
                     <i class="fa fa-angle-double-up" aria-hidden="true"></i>See Less
                 </a>
 
