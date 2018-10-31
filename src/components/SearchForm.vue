@@ -31,6 +31,7 @@
                                         type="checkbox" class="is-medium is-checkbox"
                                         @click="clickFieldCheckbox( $event.checked )">
                                     <label :for="queryField.name + 'Chx'"
+                                           :key="queryField.label"
                                            class="">
                                         {{ queryField.label }}
                                     </label>
