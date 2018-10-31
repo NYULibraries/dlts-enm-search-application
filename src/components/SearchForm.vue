@@ -22,10 +22,10 @@
                             <div class="column is-narrow">
 
                                 <template v-for="queryField in queryFields">
-                                    :key="queryField.name"
                                     <input
                                         :name="queryField.name + 'Chx'"
                                         :id="queryField.name + 'Chx'"
+                                        :key="queryField.name"
                                         :value="queryField.value"
                                         v-model="selectedQueryFields"
                                         @click="clickFieldCheckbox( $event.checked )"
