@@ -5,7 +5,7 @@
         <div v-show="! previewPane.isbn"id="message" class="message is-valign is-centered">
             <p class="message-body has-text-centered">Choose a book at left to view matched pages, or
                 <br>
-                <a v-on:click="loadFirstEpub" href="#">Load the first matched page</a>
+                <a @click="loadFirstEpub" href="#">Load the first matched page</a>
             </p>
         </div>
         <!--PREVIEW: NO EPUB SELECTED-->
@@ -14,7 +14,7 @@
         <div>
             <span v-if="previewPane.isbn" id="preview-isbn" :name="previewPane.isbn" style="display: none"></span>
 
-            <header v-on:click="barChartShowAllPages = ! barChartShowAllPages">
+            <header @click="barChartShowAllPages = ! barChartShowAllPages">
                 <div v-show="previewPane.pageNumberForDisplay" class="enm-pageno">page {{ previewPane.pageNumberForDisplay }}</div>
                 <h2 v-show="previewPane.title" class="title is-spaced">{{ previewPane.title }}</h2>
             </header>
@@ -23,14 +23,14 @@
 
             <div v-show="previewPane.isbn" class="enm-buttons">
                 <a
-                   v-on:click="clickPrevious"
+                   @click="clickPrevious"
                    :disabled="this.previewPane.pageIndex === 0"
                    href="#" class="button" title="View previous matched page in this book">
                     &lt; previous </a>
                 <a
                    :disabled="this.previewPane.pageIndex === this.barChartDataMatchedPages.length - 1"
                    href="#" class="button" title="View next matched page in this book"
-                   v-on:click="clickNext"
+                   @click="clickNext"
                 >
                     next &gt;</a>
             </div>

@@ -25,7 +25,7 @@
                          :id="queryField.name + 'Chx'"
                          :value="queryField.value"
                          v-model="selectedQueryFields"
-                         v-on:click="clickFieldCheckbox( $event.checked )"
+                         @click="clickFieldCheckbox( $event.checked )"
                          type="checkbox" class="is-medium is-checkbox">
                   <label :for="queryField.name + 'Chx'" class="">
                     {{ queryField.label }}

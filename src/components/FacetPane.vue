@@ -22,7 +22,7 @@
                    v-show="( ! facetPane.showAllTopics )
                          &&
                         ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )"
-                   v-on:click="facetPane.showAllTopics = ! facetPane.showAllTopics"
+                   @click="facetPane.showAllTopics = ! facetPane.showAllTopics"
                    class="listui seemore" href="#">
                     <i class="fa fa-angle-double-down" aria-hidden="true"></i>See All
                 </a>
@@ -35,7 +35,7 @@
 
                     <a
                        v-for="topic in topicFacetItemsToggleable"
-                       v-on:click="clickTopicFacetItem"
+                       @click="clickTopicFacetItem"
                        :id="topic.name"
                        href="#">
                         {{ topic.name }}
@@ -48,7 +48,7 @@
                    v-show="( facetPane.showAllTopics )
                          &&
                         ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )"
-                   v-on:click="facetPane.showAllTopics = ! facetPane.showAllTopics"
+                   @click="facetPane.showAllTopics = ! facetPane.showAllTopics"
                    class="listui seemore" href="#">
                     <i class="fa fa-angle-double-up" aria-hidden="true"></i>See Less
                 </a>

@@ -10,7 +10,7 @@
           {{ searchDCI }}
           <button id="search-dci"
                   class="delete is-small"
-                  v-on:click="clickDeleteSearchDCI"></button>
+                  @click="clickDeleteSearchDCI"></button>
         </span>
 
         <span
@@ -20,7 +20,7 @@
           <button
                   :id="topicDCI.id"
                   class="delete is-small"
-                  v-on:click="clickDeleteTopicDCI"></button>
+                  @click="clickDeleteTopicDCI"></button>
         </span>
         </div>
       </div>

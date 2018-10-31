@@ -23,7 +23,7 @@
                      :id="result.groupValue"
                      :name="result.doclist.docs[ 0 ].title"
                      class="box" v-for="result in results"
-                     v-on:click="previewEpub">
+                     @click="previewEpub">
                     <article class="media enm-book">
                         <div class="media-left">
                             <figure class="image enm-thumbnail">
