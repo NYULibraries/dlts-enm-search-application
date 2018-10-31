@@ -9,6 +9,7 @@
 
                     <a
                        v-for="topic in topicFacetItemsAlwaysVisible"
+                       :key="topic.name"
                        v-on:click="clickTopicFacetItem"
                        :id="topic.name"
                        href="#">
@@ -35,6 +36,7 @@
 
                     <a
                        v-for="topic in topicFacetItemsToggleable"
+                       :key="topic.name"
                        @click="clickTopicFacetItem"
                        :id="topic.name"
                        href="#">

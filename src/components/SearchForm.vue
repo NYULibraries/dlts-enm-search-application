@@ -20,6 +20,7 @@
               <div class="column is-narrow">
 
                 <template v-for="queryField in queryFields">
+                          :key="queryField.name"
                   <input
                          :name="queryField.name + 'Chx'"
                          :id="queryField.name + 'Chx'"
@@ -27,7 +28,8 @@
                          v-model="selectedQueryFields"
                          @click="clickFieldCheckbox( $event.checked )"
                          type="checkbox" class="is-medium is-checkbox">
-                  <label :for="queryField.name + 'Chx'" class="">
+                  <label :for="queryField.name + 'Chx'"
+                         class="">
                     {{ queryField.label }}
                   </label>
                 </template>

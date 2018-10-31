@@ -15,6 +15,7 @@
 
         <span
                 v-for="topicDCI in topicDCIs"
+                :key="topicDCI.id"
                 class="tag">
           Topic:&nbsp;<span class="enm-topic">{{ topicDCI.topic }}</span>
           <button

@@ -39,7 +39,9 @@
                 <h3>Topics on this page</h3>
 
                 <ul>
-                    <li v-for="topicOnPage in previewPane.topicsOnPage">
+
+                    <li v-for="topicOnPage in previewPane.topicsOnPage"
+                    :key="topicOnPage">
                         <a href="#"
                            v-html="topicOnPage">
                         </a>
