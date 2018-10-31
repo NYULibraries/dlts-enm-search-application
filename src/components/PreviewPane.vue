@@ -23,14 +23,14 @@
 
             <div v-show="previewPane.isbn" class="enm-buttons">
                 <a
-                   @click="clickPrevious"
-                   :disabled="previewPane.pageIndex === 0"
-                   href="#" class="button" title="View previous matched page in this book">
+                    @click="clickPrevious"
+                    :disabled="previewPane.pageIndex === 0"
+                    href="#" class="button" title="View previous matched page in this book">
                     &lt; previous </a>
                 <a
-                   :disabled="previewPane.pageIndex === barChartDataMatchedPages.length - 1"
-                   href="#" class="button" title="View next matched page in this book"
-                   @click="clickNext"
+                    :disabled="previewPane.pageIndex === barChartDataMatchedPages.length - 1"
+                    href="#" class="button" title="View next matched page in this book"
+                    @click="clickNext"
                 >
                     next &gt;</a>
             </div>
@@ -41,7 +41,7 @@
                 <ul>
 
                     <li v-for="topicOnPage in previewPane.topicsOnPage"
-                    :key="topicOnPage">
+                        :key="topicOnPage">
                         <a href="#"
                            v-html="topicOnPage">
                         </a>
@@ -58,9 +58,9 @@
             <hr>
 
             <div
-                 v-show="previewPane.pageNumberForDisplay"
-                 class="enm-pageText"
-                 v-html="previewPane.pageText">
+                v-show="previewPane.pageNumberForDisplay"
+                class="enm-pageText"
+                v-html="previewPane.pageText">
             </div>
         </div>
     </div>

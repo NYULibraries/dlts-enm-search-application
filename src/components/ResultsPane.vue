@@ -14,17 +14,17 @@
             </header>
             <div class="enm-results" v-show="displayResultsPane">
 
-            <span v-if="! results || results.length === 0">
-              Please try another search.
-            </span>
+                <span v-if="! results || results.length === 0">
+                    Please try another search.
+                </span>
 
                 <!--BOOK-->
                 <div
-                     :id="result.groupValue"
-                     :name="result.doclist.docs[ 0 ].title"
-                     class="box" v-for="result in results"
-                     ;key="result.groupValue"
-                     @click="previewEpub">
+                    :id="result.groupValue"
+                    :name="result.doclist.docs[ 0 ].title"
+                    class="box" v-for="result in results"
+                    ;key="result.groupValue"
+                    @click="previewEpub">
                     <article class="media enm-book">
                         <div class="media-left">
                             <figure class="image enm-thumbnail">
