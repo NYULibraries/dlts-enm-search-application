@@ -2,7 +2,7 @@
     <div class="column enm-pane enm-pane-preview" v-show="displayPreviewPane">
 
         <!--PREVIEW: NO EPUB SELECTED-->
-        <div v-show="! previewPane.isbn"id="message" class="message is-valign is-centered">
+        <div v-show="! previewPane.isbn" id="message" class="message is-valign is-centered">
             <p class="message-body has-text-centered">Choose a book at left to view matched pages, or
                 <br>
                 <a @click="loadFirstEpub" href="#">Load the first matched page</a>
