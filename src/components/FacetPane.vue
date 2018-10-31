@@ -10,9 +10,9 @@
                     <a
                         v-for="topic in topicFacetItemsAlwaysVisible"
                         :key="topic.name"
-                        v-on:click="clickTopicFacetItem"
                         :id="topic.name"
-                        href="#">
+                        href="#"
+                        v-on:click="clickTopicFacetItem">
                         {{ topic.name }}
                         <span class="enm-hitcount">({{ topic.numHits }})</span>
                     </a>

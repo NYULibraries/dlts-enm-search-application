@@ -23,8 +23,8 @@
 
             <div v-show="previewPane.isbn" class="enm-buttons">
                 <a
-                    @click="clickPrevious"
                     :disabled="previewPane.pageIndex === 0"
+                    @click="clickPrevious"
                     href="#" class="button" title="View previous matched page in this book">
                     &lt; previous </a>
                 <a
