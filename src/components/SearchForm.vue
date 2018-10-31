@@ -2,7 +2,7 @@
     <section class="hero is-primary enm-searchbox-hero">
         <div class="hero-body">
             <div class="container is-fluid">
-                <form v-on:submit.prevent="submitSearchForm" class="enm-searchform">
+                <form @:submit.prevent="submitSearchForm" class="enm-searchform">
                     <div class="enm-searchbox">
                         <div class="field columns level">
                             <div class="column level-item">
@@ -28,8 +28,8 @@
                                         :key="queryField.name"
                                         :value="queryField.value"
                                         v-model="selectedQueryFields"
-                                        @click="clickFieldCheckbox( $event.checked )"
-                                        type="checkbox" class="is-medium is-checkbox">
+                                        type="checkbox" class="is-medium is-checkbox"
+                                        @click="clickFieldCheckbox( $event.checked )">
                                     <label :for="queryField.name + 'Chx'"
                                            class="">
                                         {{ queryField.label }}

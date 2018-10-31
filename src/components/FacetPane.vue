@@ -12,7 +12,7 @@
                         :key="topic.name"
                         :id="topic.name"
                         href="#"
-                        v-on:click="clickTopicFacetItem">
+                        @:click="clickTopicFacetItem">
                         {{ topic.name }}
                         <span class="enm-hitcount">({{ topic.numHits }})</span>
                     </a>
