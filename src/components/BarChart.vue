@@ -1,6 +1,25 @@
 <template>
     <div id="bar-chart">
-        BarChart
+        <header @click="barChartShowAllPages = ! barChartShowAllPages">
+            <div v-show="previewPane.pageNumberForDisplay" class="enm-pageno">page {{ previewPane.pageNumberForDisplay }}</div>
+            <h2 v-show="previewPane.title" class="title is-spaced">{{ previewPane.title }}</h2>
+        </header>
+
+        <svg width="572" height="190"></svg>
+
+        <div v-show="previewPane.isbn" class="enm-buttons">
+            <a
+                :disabled="previewPane.pageIndex === 0"
+                href="#" class="button" title="View previous matched page in this book"
+                @click="clickPrevious">
+                &lt; previous </a>
+            <a
+                :disabled="previewPane.pageIndex === barChartDataMatchedPages.length - 1"
+                href="#" class="button" title="View next matched page in this book"
+                @click="clickNext"
+            >
+                next &gt;</a>
+        </div>
     </div>
 </template>
 

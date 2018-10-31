@@ -14,26 +14,7 @@
         <div>
             <span v-if="previewPane.isbn" id="preview-isbn" :name="previewPane.isbn" style="display: none"></span>
 
-            <header @click="barChartShowAllPages = ! barChartShowAllPages">
-                <div v-show="previewPane.pageNumberForDisplay" class="enm-pageno">page {{ previewPane.pageNumberForDisplay }}</div>
-                <h2 v-show="previewPane.title" class="title is-spaced">{{ previewPane.title }}</h2>
-            </header>
-
-            <svg width="572" height="190"></svg>
-
-            <div v-show="previewPane.isbn" class="enm-buttons">
-                <a
-                    :disabled="previewPane.pageIndex === 0"
-                    href="#" class="button" title="View previous matched page in this book"
-                    @click="clickPrevious">
-                    &lt; previous </a>
-                <a
-                    :disabled="previewPane.pageIndex === barChartDataMatchedPages.length - 1"
-                    href="#" class="button" title="View next matched page in this book"
-                    @click="clickNext"
-                >
-                    next &gt;</a>
-            </div>
+            <bar-chart/>
 
             <div v-show="previewPane.pageNumberForDisplay" class="enm-topicsonthispage">
                 <h3>Topics on this page</h3>
