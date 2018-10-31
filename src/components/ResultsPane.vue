@@ -19,9 +19,10 @@
             </span>
 
                 <!--BOOK-->
-                <div class="box" v-for="result in results"
+                <div
                      v-bind:id="result.groupValue"
                      v-bind:name="result.doclist.docs[ 0 ].title"
+                     class="box" v-for="result in results"
                      v-on:click="previewEpub">
                     <article class="media enm-book">
                         <div class="media-left">

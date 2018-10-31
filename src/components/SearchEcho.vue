@@ -4,19 +4,22 @@
       <div class="columns enm-searchecho">
 
         <div class="column">
-        <span class="tag"
-              v-show="searchDCI && displaySearchDCI">
+        <span
+              v-show="searchDCI && displaySearchDCI"
+              class="tag">
           {{ searchDCI }}
-          <button class="delete is-small"
-                  id="search-dci"
+          <button id="search-dci"
+                  class="delete is-small"
                   v-on:click="clickDeleteSearchDCI"></button>
         </span>
 
-        <span class="tag"
-                v-for="topicDCI in topicDCIs">
+        <span
+                v-for="topicDCI in topicDCIs"
+                class="tag">
           Topic:&nbsp;<span class="enm-topic">{{ topicDCI.topic }}</span>
-          <button class="delete is-small"
+          <button
                   v-bind:id="topicDCI.id"
+                  class="delete is-small"
                   v-on:click="clickDeleteTopicDCI"></button>
         </span>
         </div>

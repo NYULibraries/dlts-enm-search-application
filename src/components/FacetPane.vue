@@ -1,50 +1,55 @@
 <template>
     <div class="column enm-pane enm-pane-facets is-2">
 
-        <div class="content" v-show="displayFacetPane">
+        <div v-show="displayFacetPane" class="content">
             <h2 class="enm-pane-heading is-size-5">Limit by Topic</h2>
 
             <div class="enm-facets-list">
                 <div class="enm-topics enm-facets-group-visible">
 
-                    <a href="#"
+                    <a
                        v-for="topic in topicFacetItemsAlwaysVisible"
                        v-on:click="clickTopicFacetItem"
-                       v-bind:id="topic.name">
+                       v-bind:id="topic.name"
+                       href="#">
                         {{ topic.name }}
                         <span class="enm-hitcount">({{ topic.numHits }})</span>
                     </a>
 
                 </div>
 
-                <a class="listui seemore" href="#"
+                <a
                    v-show="( ! facetPane.showAllTopics )
                          &&
                         ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )"
-                   v-on:click="facetPane.showAllTopics = ! facetPane.showAllTopics">
+                   v-on:click="facetPane.showAllTopics = ! facetPane.showAllTopics"
+                   class="listui seemore" href="#">
                     <i class="fa fa-angle-double-down" aria-hidden="true"></i>See All
                 </a>
 
-                <div class="enm-topics enm-facets-group-togglable"
+                <div
                      v-show="( facetPane.showAllTopics )
                           &&
-                          ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )">
+                          ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )"
+                     class="enm-topics enm-facets-group-togglable">
 
-                    <a href="#"
+                    <a
                        v-for="topic in topicFacetItemsToggleable"
                        v-on:click="clickTopicFacetItem"
-                       v-bind:id="topic.name">
+                       v-bind:id="topic.name"
+                       href="#">
                         {{ topic.name }}
                         <span class="enm-hitcount">({{ topic.numHits }})</span>
                     </a>
 
                 </div>
 
-                <a class="listui seemore" href="#"
+                <a
                    v-show="( facetPane.showAllTopics )
                          &&
                         ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )"
-                   v-on:click="facetPane.showAllTopics = ! facetPane.showAllTopics">
+                   v-on:click="facetPane.showAllTopics = ! facetPane.showAllTopics"
+                   class="listui seemore" href="#">
                     <i class="fa fa-angle-double-up" aria-hidden="true"></i>See Less
                 </a>
 
