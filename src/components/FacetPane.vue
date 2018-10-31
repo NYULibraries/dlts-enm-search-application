@@ -10,7 +10,7 @@
                     <a
                        v-for="topic in topicFacetItemsAlwaysVisible"
                        v-on:click="clickTopicFacetItem"
-                       v-bind:id="topic.name"
+                       :id="topic.name"
                        href="#">
                         {{ topic.name }}
                         <span class="enm-hitcount">({{ topic.numHits }})</span>
@@ -36,7 +36,7 @@
                     <a
                        v-for="topic in topicFacetItemsToggleable"
                        v-on:click="clickTopicFacetItem"
-                       v-bind:id="topic.name"
+                       :id="topic.name"
                        href="#">
                         {{ topic.name }}
                         <span class="enm-hitcount">({{ topic.numHits }})</span>

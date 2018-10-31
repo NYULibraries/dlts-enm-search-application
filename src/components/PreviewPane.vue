@@ -24,11 +24,11 @@
             <div v-show="previewPane.isbn" class="enm-buttons">
                 <a
                    v-on:click="clickPrevious"
-                   v-bind:disabled="this.previewPane.pageIndex === 0"
+                   :disabled="this.previewPane.pageIndex === 0"
                    href="#" class="button" title="View previous matched page in this book">
                     &lt; previous </a>
                 <a
-                   v-bind:disabled="this.previewPane.pageIndex === this.barChartDataMatchedPages.length - 1"
+                   :disabled="this.previewPane.pageIndex === this.barChartDataMatchedPages.length - 1"
                    href="#" class="button" title="View next matched page in this book"
                    v-on:click="clickNext"
                 >

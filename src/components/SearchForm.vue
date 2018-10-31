@@ -21,13 +21,13 @@
 
                 <template v-for="queryField in queryFields">
                   <input
-                         v-bind:name="queryField.name + 'Chx'"
-                         v-bind:id="queryField.name + 'Chx'"
-                         v-bind:value="queryField.value"
+                         :name="queryField.name + 'Chx'"
+                         :id="queryField.name + 'Chx'"
+                         :value="queryField.value"
                          v-model="selectedQueryFields"
                          v-on:click="clickFieldCheckbox( $event.checked )"
                          type="checkbox" class="is-medium is-checkbox">
-                  <label v-bind:for="queryField.name + 'Chx'" class="">
+                  <label :for="queryField.name + 'Chx'" class="">
                     {{ queryField.label }}
                   </label>
                 </template>

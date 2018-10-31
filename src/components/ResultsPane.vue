@@ -1,5 +1,5 @@
 <template>
-    <div v-bind:class="previewPane.isbn ? resultsPane.classes.previewPaneLoaded : resultsPane.classes.previewPaneNotLoaded">
+    <div :class="previewPane.isbn ? resultsPane.classes.previewPaneLoaded : resultsPane.classes.previewPaneNotLoaded">
 
         <spinner/>
 
@@ -20,14 +20,14 @@
 
                 <!--BOOK-->
                 <div
-                     v-bind:id="result.groupValue"
-                     v-bind:name="result.doclist.docs[ 0 ].title"
+                     :id="result.groupValue"
+                     :name="result.doclist.docs[ 0 ].title"
                      class="box" v-for="result in results"
                      v-on:click="previewEpub">
                     <article class="media enm-book">
                         <div class="media-left">
                             <figure class="image enm-thumbnail">
-                                <img v-bind:src="'assets/covers/' + result.groupValue + '.jpg'" alt="">
+                                <img :src="'assets/covers/' + result.groupValue + '.jpg'" alt="">
                             </figure>
                         </div>
                         <div class="media-content">

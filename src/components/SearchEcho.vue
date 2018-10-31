@@ -18,7 +18,7 @@
                 class="tag">
           Topic:&nbsp;<span class="enm-topic">{{ topicDCI.topic }}</span>
           <button
-                  v-bind:id="topicDCI.id"
+                  :id="topicDCI.id"
                   class="delete is-small"
                   v-on:click="clickDeleteTopicDCI"></button>
         </span>
