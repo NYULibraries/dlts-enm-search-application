@@ -36,8 +36,8 @@
                             <a class="enm-divlink" href="#">&nbsp;</a>
                             <h3 class="title is-spaced"><a href="#">{{ result.doclist.docs[ 0 ].title }}</a></h3>
                             <div class="meta">
-                                {{ result.doclist.docs[ 0 ].authors.join( '; ' )  +
-                                '; ' +
+                                {{ result.doclist.docs[ 0 ].authors.join( '; ' ) +
+                                    '; ' +
                                 result.doclist.docs[ 0 ].publisher }}
                             </div>
                             <div class="matches">
