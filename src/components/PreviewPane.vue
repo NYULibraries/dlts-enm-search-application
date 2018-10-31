@@ -26,13 +26,13 @@
                    v-on:click="clickPrevious"
                    v-bind:disabled="this.previewPane.pageIndex === 0"
                    href="#" class="button" title="View previous matched page in this book">
-                    < previous </a>
+                    &lt; previous </a>
                 <a
                    v-bind:disabled="this.previewPane.pageIndex === this.barChartDataMatchedPages.length - 1"
                    href="#" class="button" title="View next matched page in this book"
                    v-on:click="clickNext"
                 >
-                    next ></a>
+                    next &gt;</a>
             </div>
 
             <div v-show="previewPane.pageNumberForDisplay" class="enm-topicsonthispage">
