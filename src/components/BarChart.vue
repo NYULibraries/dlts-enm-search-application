@@ -11,7 +11,7 @@
 
         <svg
             width="572"
-            height="190"></svg>
+            height="190"/>
 
         <div
             v-show="previewPane.isbn"
