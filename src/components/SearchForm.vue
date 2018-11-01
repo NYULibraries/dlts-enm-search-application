@@ -2,17 +2,22 @@
     <section class="hero is-primary enm-searchbox-hero">
         <div class="hero-body">
             <div class="container is-fluid">
-                <form class="enm-searchform" @submit.prevent="submitSearchForm">
+                <form
+                    class="enm-searchform"
+                    @submit.prevent="submitSearchForm">
                     <div class="enm-searchbox">
                         <div class="field columns level">
                             <div class="column level-item">
                                 <p class="control has-icons-left">
-                                    <label class="enm-visually-hidden" for="enm-searchinput">Search inside all books</label>
-                                    <input id="enm-searchinput"
-                                           v-model="query"
-                                           class="input is-large"
-                                           type="text"
-                                           placeholder="Search inside all books">
+                                    <label
+                                        class="enm-visually-hidden"
+                                        for="enm-searchinput">Search inside all books</label>
+                                    <input
+                                        id="enm-searchinput"
+                                        v-model="query"
+                                        class="input is-large"
+                                        type="text"
+                                        placeholder="Search inside all books">
                                     <span class="icon is-small is-left">
                                         <i class="fa fa-search"></i>
                                     </span>
@@ -28,11 +33,13 @@
                                         :key="queryField.name"
                                         :value="queryField.value"
                                         v-model="selectedQueryFields"
-                                        type="checkbox" class="is-medium is-checkbox"
+                                        type="checkbox"
+                                        class="is-medium is-checkbox"
                                         @click="clickFieldCheckbox( $event.checked )">
-                                    <label :for="queryField.name + 'Chx'"
-                                           :key="queryField.label"
-                                           class="">
+                                    <label
+                                        :for="queryField.name + 'Chx'"
+                                        :key="queryField.label"
+                                        class="">
                                         {{ queryField.label }}
                                     </label>
                                 </template>

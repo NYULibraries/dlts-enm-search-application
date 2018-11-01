@@ -8,9 +8,10 @@
                         v-show="searchDCI && displaySearchDCI"
                         class="tag">
                         {{ searchDCI }}
-                        <button id="search-dci"
-                                class="delete is-small"
-                                @click="clickDeleteSearchDCI"></button>
+                        <button
+                            id="search-dci"
+                            class="delete is-small"
+                            @click="clickDeleteSearchDCI"></button>
                     </span>
 
                     <span

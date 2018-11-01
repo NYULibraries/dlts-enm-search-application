@@ -12,7 +12,9 @@
             <header v-show="displayResultsPane">
                 <h2 class="is-size-4">Results: {{ resultsHeader }}</h2>
             </header>
-            <div v-show="displayResultsPane" class="enm-results">
+            <div
+                v-show="displayResultsPane"
+                class="enm-results">
 
                 <span v-if="! results || results.length === 0">
                     Please try another search.
@@ -29,12 +31,16 @@
                     <article class="media enm-book">
                         <div class="media-left">
                             <figure class="image enm-thumbnail">
-                                <img :src="'assets/covers/' + result.groupValue + '.jpg'" alt="">
+                                <img
+                                    :src="'assets/covers/' + result.groupValue + '.jpg'"
+                                    alt="">
                             </figure>
                         </div>
                         <div class="media-content">
                             <!-- da70 Here, the link to load the preview is repeated.  THe first one is for fancy "whole div" rollovrers and the second is for accessibility.  Not sure how this will work with vue.js  -->
-                            <a class="enm-divlink" href="#">&nbsp;</a>
+                            <a
+                                class="enm-divlink"
+                                href="#">&nbsp;</a>
                             <h3 class="title is-spaced"><a href="#">{{ result.doclist.docs[ 0 ].title }}</a></h3>
                             <div class="meta">
                                 {{ result.doclist.docs[ 0 ].authors.join( '; ' ) +
