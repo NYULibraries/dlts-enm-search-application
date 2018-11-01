@@ -136,7 +136,6 @@ export default {
         height: 49px;
     }
 
-
     @keyframes rotateAnim {
         from {
             transform: rotate(360deg);
