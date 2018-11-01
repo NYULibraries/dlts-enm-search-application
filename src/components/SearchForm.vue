@@ -2,7 +2,7 @@
     <section class="hero is-primary enm-searchbox-hero">
         <div class="hero-body">
             <div class="container is-fluid">
-                <form class="enm-searchform" @:submit.prevent="submitSearchForm">
+                <form class="enm-searchform" @submit.prevent="submitSearchForm">
                     <div class="enm-searchbox">
                         <div class="field columns level">
                             <div class="column level-item">
