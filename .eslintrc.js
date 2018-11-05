@@ -72,5 +72,14 @@ module.exports = {
         'alignAttributesVertically' : true,
         'ignores'                   : [],
     } ],
+    'vue/html-self-closing': ['error', {
+        'html': {
+            'void': 'never',
+            'normal': 'never',
+            'component': 'always'
+        },
+        'svg': 'always',
+        'math': 'always'
+    } ],
   }
 };

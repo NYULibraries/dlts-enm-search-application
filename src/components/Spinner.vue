@@ -3,7 +3,9 @@
           From: http://cssload.net/en/spinners
           Author: https://codepen.io/Terramaster/
     -->
-    <div v-show="displaySpinner" id="spinner">
+    <div
+        v-show="displaySpinner"
+        id="spinner">
         <div class="overlay-loader">
             <div class="loader">
                 <div></div>
@@ -133,7 +135,6 @@ export default {
         width: 49px;
         height: 49px;
     }
-
 
     @keyframes rotateAnim {
         from {

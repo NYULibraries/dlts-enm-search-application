@@ -1,5 +1,5 @@
 <template>
-    <div v-bind:class="previewPane.isbn ? resultsPane.classes.previewPaneLoaded : resultsPane.classes.previewPaneNotLoaded">
+    <div :class="previewPane.isbn ? resultsPane.classes.previewPaneLoaded : resultsPane.classes.previewPaneNotLoaded">
 
         <spinner/>
 
@@ -12,30 +12,39 @@
             <header v-show="displayResultsPane">
                 <h2 class="is-size-4">Results: {{ resultsHeader }}</h2>
             </header>
-            <div class="enm-results" v-show="displayResultsPane">
+            <div
+                v-show="displayResultsPane"
+                class="enm-results">
 
-            <span v-if="! results || results.length === 0">
-              Please try another search.
-            </span>
+                <span v-if="! results || results.length === 0">
+                    Please try another search.
+                </span>
 
                 <!--BOOK-->
-                <div class="box" v-for="result in results"
-                     v-bind:id="result.groupValue"
-                     v-bind:name="result.doclist.docs[ 0 ].title"
-                     v-on:click="previewEpub">
+                <div
+                    v-for="result in results"
+                    :id="result.groupValue"
+                    :name="result.doclist.docs[ 0 ].title"
+                    :key="result.groupValue"
+                    class="box"
+                    @click="previewEpub">
                     <article class="media enm-book">
                         <div class="media-left">
                             <figure class="image enm-thumbnail">
-                                <img v-bind:src="'assets/covers/' + result.groupValue + '.jpg'" alt="">
+                                <img
+                                    :src="'assets/covers/' + result.groupValue + '.jpg'"
+                                    alt="">
                             </figure>
                         </div>
                         <div class="media-content">
                             <!-- da70 Here, the link to load the preview is repeated.  THe first one is for fancy "whole div" rollovrers and the second is for accessibility.  Not sure how this will work with vue.js  -->
-                            <a class="enm-divlink" href="#">&nbsp;</a>
+                            <a
+                                class="enm-divlink"
+                                href="#">&nbsp;</a>
                             <h3 class="title is-spaced"><a href="#">{{ result.doclist.docs[ 0 ].title }}</a></h3>
                             <div class="meta">
-                                {{ result.doclist.docs[ 0 ].authors.join( '; ' )  +
-                                '; ' +
+                                {{ result.doclist.docs[ 0 ].authors.join( '; ' ) +
+                                    '; ' +
                                 result.doclist.docs[ 0 ].publisher }}
                             </div>
                             <div class="matches">
