@@ -45,7 +45,7 @@ export default {
             this.debug = await this.search();
         },
         async search() {
-            const response = await this.$search( 'art' );
+            const response = await this.$search( 'art', [ 'pageText', 'topicNames' ] );
 
             return response;
         },

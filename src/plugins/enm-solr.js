@@ -34,7 +34,7 @@ async function doFetch( params ) {
     }
 }
 
-async function search( query ) {
+async function search( query, queryFields ) {
     const params = {
         q: query,
         'facet.field': 'topicNames_facet',
@@ -46,7 +46,7 @@ async function search( query ) {
         'group.field': 'isbn',
         group: 'true',
         'group.limit': '999',
-        qf: 'pageText%20topicNames',
+        qf: queryFields.join( '%20' ),
         rows: '1999',
         sort: 'score%20desc,title_facet%20asc',
     };
