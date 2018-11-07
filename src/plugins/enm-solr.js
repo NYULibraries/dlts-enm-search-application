@@ -7,6 +7,13 @@ let solrPort;
 let solrCorePath;
 
 async function doFetch( params ) {
+    params = Object.assign( params, {
+        q : encodeURIComponent( params.q ),
+        defType : 'edismax',
+        indent : 'on',
+        wt : 'json',
+    } );
+
     const queryString = Object.keys( params )
         .map( key => key + '=' + params[ key ] )
         .join( '&' );

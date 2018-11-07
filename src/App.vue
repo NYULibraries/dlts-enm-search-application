@@ -48,7 +48,6 @@ export default {
             const response = await this.$search(
                 {
                     q: 'art',
-                    defType: 'edismax',
                     'facet.field': 'topicNames_facet',
                     'facet.limit': '-1',
                     'facet.mincount': '1',
@@ -58,11 +57,9 @@ export default {
                     'group.field': 'isbn',
                     group: 'true',
                     'group.limit': '999',
-                    indent: 'on',
                     qf: 'pageText%20topicNames',
                     rows: '1999',
                     sort: 'score%20desc,title_facet%20asc',
-                    wt: 'json',
                 }
             );
 
