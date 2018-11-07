@@ -1,18 +1,14 @@
-const DEFAULT_SOLR_HOST = 'localhost';
-const DEFAULT_SOLR_PORT = 8983;
+const DEFAULT_SOLR_HOST      = 'localhost';
+const DEFAULT_SOLR_PORT      = 8983;
+const DEFAULT_SOLR_CORE_PATH = '/solr/enm-pages/';
 
 let solrHost;
 let solrPort;
+let solrCorePath;
 
-export async function $fetch( path, options ) {
-    const finalOptions = Object.assign( {}, {
-        headers     : {
-            'Content-Type' : 'application/json',
-        },
-    }, options );
-
-    const requestUrl = `http://${ solrHost }:${ solrPort }${ path }`;
-    const response = await fetch( requestUrl, finalOptions );
+async function fetchResults( queryString ) {
+    const requestUrl = `http://${ solrHost }:${ solrPort }${ solrCorePath }select?${ queryString }`;
+    const response = await fetch( requestUrl );
 
     if ( response.ok ) {
         const data = await response.json();
@@ -27,13 +23,22 @@ export async function $fetch( path, options ) {
     }
 }
 
+async function search( params ) {
+    const queryString = Object.keys( params )
+        .map( key => key + '=' + params[ key ] )
+        .join( '&' );
+
+    return fetchResults( queryString );
+}
+
 export default {
     install( Vue, options ) {
         // Plugin options
-        solrHost = options.solrHost || DEFAULT_SOLR_HOST;
-        solrPort = options.solrPort || DEFAULT_SOLR_PORT;
+        solrHost     = options.solrHost     || DEFAULT_SOLR_HOST;
+        solrPort     = options.solrPort     || DEFAULT_SOLR_PORT;
+        solrCorePath = options.solrCorePath || DEFAULT_SOLR_CORE_PATH;
 
         // Fetch
-        Vue.prototype.$fetch = $fetch;
+        Vue.prototype.$search = search;
     },
 };

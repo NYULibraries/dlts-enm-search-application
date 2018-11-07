@@ -45,7 +45,26 @@ export default {
             this.debug = await this.search();
         },
         async search() {
-            const response = await this.$fetch( '/solr/enm-pages/select?q=art&defType=edismax&facet.field=topicNames_facet&facet.limit=-1&facet.mincount=1&facet.sort=count&facet=on&fl=title,authors,publisher,yearOfPublication,score&group.field=isbn&group=true&group.limit=999&indent=on&qf=pageText%20topicNames&rows=1999&sort=score%20desc,title_facet%20asc&wt=json' );
+            const response = await this.$search(
+                {
+                    q: 'art',
+                    defType: 'edismax',
+                    'facet.field': 'topicNames_facet',
+                    'facet.limit': '-1',
+                    'facet.mincount': '1',
+                    'facet.sort': 'count',
+                    facet: 'on',
+                    fl: 'title,authors,publisher,yearOfPublication,score',
+                    'group.field': 'isbn',
+                    group: 'true',
+                    'group.limit': '999',
+                    indent: 'on',
+                    qf: 'pageText%20topicNames',
+                    rows: '1999',
+                    sort: 'score%20desc,title_facet%20asc',
+                    wt: 'json',
+                }
+            );
 
             return response;
         },
