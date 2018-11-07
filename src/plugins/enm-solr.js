@@ -6,7 +6,7 @@ let solrHost;
 let solrPort;
 let solrCorePath;
 
-async function fetchResults( queryString ) {
+async function doFetch( queryString ) {
     const requestUrl = `http://${ solrHost }:${ solrPort }${ solrCorePath }select?${ queryString }`;
     const response = await fetch( requestUrl );
 
@@ -28,7 +28,7 @@ async function search( params ) {
         .map( key => key + '=' + params[ key ] )
         .join( '&' );
 
-    return fetchResults( queryString );
+    return doFetch( queryString );
 }
 
 export default {
