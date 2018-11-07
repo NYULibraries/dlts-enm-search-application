@@ -65,6 +65,7 @@ module.exports = {
         }
     ],
     'standard/computed-property-even-spacing': [ 'error', 'always' ],
+    'template-curly-spacing': [ 'error', 'always' ],
     'vue/html-indent': [
         'error', 4, {
         'attribute'                 : 1,
