@@ -34,7 +34,23 @@ async function doFetch( params ) {
     }
 }
 
-async function search( params ) {
+async function search( query ) {
+    const params = {
+        q: query,
+        'facet.field': 'topicNames_facet',
+        'facet.limit': '-1',
+        'facet.mincount': '1',
+        'facet.sort': 'count',
+        facet: 'on',
+        fl: 'title,authors,publisher,yearOfPublication,score',
+        'group.field': 'isbn',
+        group: 'true',
+        'group.limit': '999',
+        qf: 'pageText%20topicNames',
+        rows: '1999',
+        sort: 'score%20desc,title_facet%20asc',
+    };
+
     return doFetch( params );
 }
 
