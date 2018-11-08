@@ -54,25 +54,30 @@
 </template>
 
 <script>
+const QUERY_FIELDS = [
+    {
+        dciLabel : 'full texts',
+        label    : 'Full Text',
+        name     : 'fulltext',
+        value    : 'pageText',
+    },
+    {
+        dciLabel : 'topics',
+        label    : 'Topics',
+        name     : 'topics',
+        value    : 'topicNames',
+    },
+];
+
 export default {
     name: 'SearchForm',
     data() {
         return {
             query: '',
-            queryFields: [
-                {
-                    dciLabel : 'full texts',
-                    label    : 'Full Text',
-                    name     : 'fulltext',
-                    value    : 'pageText',
-                },
-                {
-                    dciLabel : 'topics',
-                    label    : 'Topics',
-                    name     : 'topics',
-                    value    : 'topicNames',
-                },
-            ],
+            queryFields: QUERY_FIELDS,
+            selectedQueryFields: QUERY_FIELDS.map(
+                ( queryField ) => { return queryField.value; }
+            ),
         };
     },
 };
