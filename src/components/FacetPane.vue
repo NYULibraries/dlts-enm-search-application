@@ -2,7 +2,7 @@
     <div class="column enm-pane enm-pane-facets is-2">
 
         <div
-            v-show="displayFacetPane"
+            v-show="display"
             class="content">
             <h2 class="enm-pane-heading is-size-5">Limit by Topic</h2>
 
@@ -22,17 +22,17 @@
                 </div>
 
                 <a
-                    v-show="( ! facetPane.showAllTopics ) && ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )"
+                    v-show="( ! showAllTopics ) && ( topicsFacetList.length > topicsFacetListLimit )"
                     class="listui seemore"
                     href="#"
-                    @click="facetPane.showAllTopics = ! facetPane.showAllTopics">
+                    @click="showAllTopics = ! showAllTopics">
                     <i
                         class="fa fa-angle-double-down"
                         aria-hidden="true"></i>See All
                 </a>
 
                 <div
-                    v-show="( facetPane.showAllTopics ) && ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )"
+                    v-show="( showAllTopics ) && ( topicsFacetList.length > topicsFacetListLimit )"
                     class="enm-topics enm-facets-group-togglable">
 
                     <a
@@ -48,10 +48,10 @@
                 </div>
 
                 <a
-                    v-show="( facetPane.showAllTopics ) && ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )"
+                    v-show="( showAllTopics ) && ( topicsFacetList.length > topicsFacetListLimit )"
                     class="listui seemore"
                     href="#"
-                    @click="facetPane.showAllTopics = ! facetPane.showAllTopics">
+                    @click="showAllTopics = ! showAllTopics">
                     <i
                         class="fa fa-angle-double-up"
                         aria-hidden="true"></i>See Less
@@ -65,8 +65,48 @@
 </template>
 
 <script>
+const DEFAULT_TOPIC_FACET_LIST_LIMIT = 15;
+
 export default {
     name: 'FacetPane',
+    props: {
+        display: {
+            type     : Boolean,
+            required : true,
+            default  : false,
+        },
+        topicsFacetList: {
+            type : Array,
+            required: true,
+            default: function () {
+                return null;
+            },
+        },
+        topicsFacetListLimit: {
+            type : Number,
+            required: true,
+            default: function () {
+                return DEFAULT_TOPIC_FACET_LIST_LIMIT;
+            },
+        },
+    },
+    data() {
+        return {
+            showAllTopics: false,
+        };
+    },
+    computed: {
+        topicFacetItemsAlwaysVisible() {
+            return this.topicsFacetList.slice( 0, this.topicsFacetListLimit );
+        },
+        topicFacetItemsToggleable() {
+            if ( this.showAllTopics ) {
+                return this.topicsFacetList.slice( this.topicsFacetListLimit );
+            } else {
+                return [];
+            }
+        },
+    },
 };
 </script>
 

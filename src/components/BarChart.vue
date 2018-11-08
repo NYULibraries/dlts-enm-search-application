@@ -1,12 +1,12 @@
 <template>
     <div id="bar-chart">
-        <header @click="barChartShowAllPages = ! barChartShowAllPages">
+        <header>
             <div
-                v-show="previewPane.pageNumberForDisplay"
-                class="enm-pageno">page {{ previewPane.pageNumberForDisplay }}</div>
+                v-show="pageNumberForDisplay"
+                class="enm-pageno">page {{ pageNumberForDisplay }}</div>
             <h2
-                v-show="previewPane.title"
-                class="title is-spaced">{{ previewPane.title }}</h2>
+                v-show="title"
+                class="title is-spaced">{{ title }}</h2>
         </header>
 
         <svg
@@ -14,10 +14,10 @@
             height="190"/>
 
         <div
-            v-show="previewPane.isbn"
+            v-show="isbn"
             class="enm-buttons">
             <a
-                :disabled="previewPane.pageIndex === 0"
+                :disabled="pageIndex === 0"
                 href="#"
                 class="button"
                 title="View previous matched page in this book"
@@ -25,7 +25,7 @@
             >
                 &lt; previous </a>
             <a
-                :disabled="previewPane.pageIndex === barChartDataMatchedPages.length - 1"
+                :disabled="pageIndex === barChartDataMatchedPages.length - 1"
                 href="#"
                 class="button"
                 title="View next matched page in this book"
@@ -39,6 +39,36 @@
 <script>
 export default {
     name: 'BarChart',
+    props: {
+        display : {
+            type     : Boolean,
+            required : true,
+            default  : false,
+        },
+        isbn: {
+            type: String,
+            required: true,
+            default: null,
+        },
+        barChartDataMatchedPages: {
+            type: Array,
+            required: true,
+            default: function () {
+                return null;
+            },
+        },
+        title: {
+            type: String,
+            required: true,
+            default: null,
+        },
+    },
+    data() {
+        return {
+            pageNumberForDisplay: null,
+            pageIndex: null,
+        };
+    },
 };
 </script>
 

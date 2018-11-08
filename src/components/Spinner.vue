@@ -4,7 +4,7 @@
           Author: https://codepen.io/Terramaster/
     -->
     <div
-        v-show="displaySpinner"
+        v-show="display"
         id="spinner">
         <div class="overlay-loader">
             <div class="loader">
@@ -23,6 +23,13 @@
 <script>
 export default {
     name: 'Spinner',
+    props: {
+        display : {
+            type     : Boolean,
+            required : true,
+            default  : false,
+        },
+    },
 };
 </script>
 

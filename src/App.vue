@@ -6,12 +6,27 @@
         <div>{{ debug }}</div>
         <search-form/>
         <div v-cloak>
-            <search-echo/>
+            <search-echo
+                :selected-topic-facet-items="[ 'Topic1', 'Topic2', ]"
+                display
+            />
             <div class="container is-fluid">
                 <div class="columns enm-panes">
-                    <facet-pane/>
-                    <results-pane/>
-                    <preview-pane/>
+                    <facet-pane
+                        :topics-facet-list="[ 'Topic1', 'Topic2', ]"
+                        :topics-facet-list-limit="15"
+                        display
+                    />
+                    <results-pane
+                        :num-books="10"
+                        :num-pages="100"
+                        :results="[]"
+                        display
+                    />
+                    <preview-pane
+                        display
+                        isbn="9780814712917"
+                    />
                 </div>
             </div>
         </div>

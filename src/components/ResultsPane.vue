@@ -1,19 +1,19 @@
 <template>
-    <div :class="previewPane.isbn ? resultsPane.classes.previewPaneLoaded : resultsPane.classes.previewPaneNotLoaded">
+    <div :class="isbnOfSelectedEpub ? previewPaneLoadedClass : previewPaneNotLoadedClass">
 
         <spinner/>
 
         <!--RESULTS-->
-        <template v-show="displayResultsPane">
+        <template v-show="display">
             <!-- v-show is necessary on this <header> element for some reason.
                  Its visibility is not being toggled along with the other elements
                  in this <template>.
             -->
-            <header v-show="displayResultsPane">
+            <header v-show="display">
                 <h2 class="is-size-4">Results: {{ resultsHeader }}</h2>
             </header>
             <div
-                v-show="displayResultsPane"
+                v-show="display"
                 class="enm-results">
 
                 <span v-if="! results || results.length === 0">
@@ -68,6 +68,52 @@
 <script>
 export default {
     name: 'ResultsPane',
+    props: {
+        display: {
+            type     : Boolean,
+            required : true,
+            default  : false,
+        },
+        numBooks: {
+            type     : Number,
+            required : true,
+            default  : null,
+        },
+        numPages: {
+            type     : Number,
+            required : true,
+            default  : null,
+        },
+        results: {
+            type     : Array,
+            required : true,
+            default  : function () {
+                return null;
+            },
+        },
+    },
+    data() {
+        return {
+            isbnOfSelectedEpub: null,
+            previewPaneLoadedClass: 'column enm-pane enm-pane-results is-4',
+            previewPaneNotLoadedClass: 'column enm-pane enm-pane-results is-half',
+        };
+    },
+    computed: {
+        numBooksFormatted: function () {
+            return this.numBooks ? this.numBooks.toLocaleString() : '';
+        },
+        numPagesFormatted: function () {
+            return this.numPages ? this.numPages.toLocaleString() : '';
+        },
+        resultsHeader: function () {
+            if ( this.results && this.results.length > 0 ) {
+                return this.numPagesFormatted + ' pages in ' + this.numBooksFormatted + ' books';
+            } else {
+                return 'None';
+            }
+        },
+    },
 };
 </script>
 
