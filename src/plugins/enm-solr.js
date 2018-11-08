@@ -34,7 +34,7 @@ async function doFetch( params ) {
     }
 }
 
-async function search( query, queryFields ) {
+async function solrSearch( query, queryFields ) {
     const params = {
         q: query,
         'facet.field': 'topicNames_facet',
@@ -62,6 +62,6 @@ export default {
         solrCorePath = options.solrCorePath || DEFAULT_SOLR_CORE_PATH;
 
         // Fetch
-        Vue.prototype.$search = search;
+        Vue.prototype.$solrSearch = solrSearch;
     },
 };

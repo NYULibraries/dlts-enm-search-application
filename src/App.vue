@@ -42,10 +42,10 @@ export default {
     },
     methods : {
         async debugSearch() {
-            this.debug = await this.search();
+            this.debug = await this.solrSearch();
         },
-        async search() {
-            const response = await this.$search( 'art', [ 'pageText', 'topicNames' ] );
+        async solrSearch() {
+            const response = await this.$solrSearch( 'art', [ 'pageText', 'topicNames' ] );
 
             return response;
         },
