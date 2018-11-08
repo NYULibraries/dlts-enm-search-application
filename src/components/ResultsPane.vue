@@ -1,5 +1,5 @@
 <template>
-    <div :class="previewPane.isbn ? resultsPane.classes.previewPaneLoaded : resultsPane.classes.previewPaneNotLoaded">
+    <div :class="isbnOfSelectedEpub ? previewPaneLoadedClass : previewPaneNotLoadedClass">
 
         <spinner/>
 
@@ -95,6 +95,8 @@ export default {
     data() {
         return {
             isbnOfSelectedEpub: null,
+            previewPaneLoadedClass: 'column enm-pane enm-pane-results is-4',
+            previewPaneNotLoadedClass: 'column enm-pane enm-pane-results is-half',
         };
     },
     computed: {
