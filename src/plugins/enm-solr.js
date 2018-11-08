@@ -91,6 +91,33 @@ async function solrPreviewEpub( isbn, query, queryFields, selectedTopicFacetItem
     return doFetch( params );
 }
 
+async function solrPreviewPage( isbn, pageNumberForDisplay, query, queryFields ) {
+    const HIGHLIGHT_PRE = '<mark>';
+    const HIGHLIGHT_POST = '</mark>';
+
+    const qf = queryFields.join( '%20' );
+    const highlightFields = qf.replace( 'topicNames', 'topicNamesForDisplay' );
+
+    const params = {
+        q: query,
+        fl: 'topicNames_facet,topicNamesForDisplay,pageText',
+        fq: [
+            encodeURIComponent( 'isbn:' + isbn ),
+            encodeURIComponent( 'pageNumberForDisplay: ' + pageNumberForDisplay ),
+        ],
+        hl: 'on',
+        'hl.fl': highlightFields,
+        'hl.fragsize': 0,
+        'hl.simple.post': encodeURIComponent( HIGHLIGHT_POST ),
+        'hl.simple.pre': encodeURIComponent( HIGHLIGHT_PRE ),
+        qf: qf,
+        rows: 1,
+        sort: 'pageSequenceNumber+asc',
+    };
+
+    return doFetch( params );
+}
+
 export default {
     install( Vue, options ) {
         // Plugin options
@@ -99,6 +126,7 @@ export default {
         solrCorePath = options.solrCorePath || DEFAULT_SOLR_CORE_PATH;
 
         Vue.prototype.$solrPreviewEpub = solrPreviewEpub;
+        Vue.prototype.$solrPreviewPage = solrPreviewPage;
         Vue.prototype.$solrSearch = solrSearch;
     },
 };
