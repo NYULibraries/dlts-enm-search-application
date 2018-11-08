@@ -25,7 +25,12 @@
                 :name="isbn"
                 style="display: none"></span>
 
-            <bar-chart/>
+            <bar-chart
+                :bar-chart-data-matched-pages="[]"
+                display
+                isbn="9780814712917"
+                title="Japanese Lessons"
+            />
 
             <div
                 v-show="pageNumberForDisplay"
