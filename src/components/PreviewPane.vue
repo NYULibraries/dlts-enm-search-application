@@ -1,11 +1,11 @@
 <template>
     <div
-        v-show="displayPreviewPane"
+        v-show="display"
         class="column enm-pane enm-pane-preview">
 
         <!--PREVIEW: NO EPUB SELECTED-->
         <div
-            v-show="! previewPane.isbn"
+            v-show="! isbn"
             id="message"
             class="message is-valign is-centered">
             <p class="message-body has-text-centered">Choose a book at left to view matched pages, or
@@ -20,22 +20,22 @@
         <!--PREVIEW-->
         <div>
             <span
-                v-if="previewPane.isbn"
+                v-if="isbn"
                 id="preview-isbn"
-                :name="previewPane.isbn"
+                :name="isbn"
                 style="display: none"></span>
 
             <bar-chart/>
 
             <div
-                v-show="previewPane.pageNumberForDisplay"
+                v-show="pageNumberForDisplay"
                 class="enm-topicsonthispage">
                 <h3>Topics on this page</h3>
 
                 <ul>
 
                     <li
-                        v-for="topicOnPage in previewPane.topicsOnPage"
+                        v-for="topicOnPage in topicsOnPage"
                         :key="topicOnPage">
                         <a
                             href="#"
@@ -45,7 +45,7 @@
                 </ul>
 
                 <div
-                    v-if="previewPane.topicsOnPage === null || previewPane.topicsOnPage.length === 0"
+                    v-if="topicsOnPage === null || topicsOnPage.length === 0"
                     class="enm-notopics">
                     No topics are associated with this page.
                 </div>
@@ -55,9 +55,9 @@
             <hr>
 
             <div
-                v-show="previewPane.pageNumberForDisplay"
+                v-show="pageNumberForDisplay"
                 class="enm-pageText"
-                v-html="previewPane.pageText">
+                v-html="pageText">
             </div>
         </div>
     </div>
@@ -68,6 +68,25 @@ import BarChart from './BarChart';
 export default {
     name: 'PreviewPane',
     components: { BarChart },
+    props: {
+        display : {
+            type     : Boolean,
+            required : true,
+            default  : false,
+        },
+        isbn: {
+            type: String,
+            required: true,
+            default: null,
+        },
+    },
+    data() {
+        return {
+            pageNumberForDisplay: '',
+            pageText: '',
+            topicsOnPage: [],
+        };
+    },
 };
 </script>
 
