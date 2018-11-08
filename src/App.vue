@@ -21,6 +21,7 @@
                         :num-books="10"
                         :num-pages="100"
                         :results="[]"
+                        :search-in-progress="false"
                         display
                     />
                     <preview-pane

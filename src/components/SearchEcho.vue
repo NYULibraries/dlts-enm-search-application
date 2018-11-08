@@ -62,6 +62,14 @@ export default {
             } );
         },
     },
+    methods: {
+        clickDeleteSearchDCI() {
+
+        },
+        clickDeleteTopicDCI() {
+
+        },
+    },
 };
 </script>
 
