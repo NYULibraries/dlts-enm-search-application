@@ -56,6 +56,25 @@
 <script>
 export default {
     name: 'SearchForm',
+    data() {
+        return {
+            query: '',
+            queryFields: [
+                {
+                    dciLabel : 'full texts',
+                    label    : 'Full Text',
+                    name     : 'fulltext',
+                    value    : 'pageText',
+                },
+                {
+                    dciLabel : 'topics',
+                    label    : 'Topics',
+                    name     : 'topics',
+                    value    : 'topicNames',
+                },
+            ],
+        };
+    },
 };
 </script>
 
