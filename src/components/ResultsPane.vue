@@ -77,18 +77,18 @@ export default {
         numBooks: {
             type     : Number,
             required : true,
-            default  : 0,
+            default  : null,
         },
         numPages: {
             type     : Number,
             required : true,
-            default  : 0,
+            default  : null,
         },
         results: {
             type     : Array,
             required : true,
             default  : function () {
-                return [];
+                return null;
             },
         },
     },

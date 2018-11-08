@@ -79,7 +79,7 @@ export default {
             type : Array,
             required: true,
             default: function () {
-                return [];
+                return null;
             },
         },
         topicsFacetListLimit: {

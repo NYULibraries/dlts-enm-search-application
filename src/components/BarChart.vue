@@ -49,13 +49,13 @@ export default {
             type: Array,
             required: true,
             default: function () {
-                return [];
+                return null;
             },
         },
         title: {
             type: String,
             required: true,
-            default: '',
+            default: null,
         },
     },
     data() {

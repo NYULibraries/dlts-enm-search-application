@@ -43,7 +43,7 @@ export default {
             type: Array,
             required: false,
             default: function () {
-                return [];
+                return null;
             },
         },
     },

@@ -82,9 +82,9 @@ export default {
     },
     data() {
         return {
-            pageNumberForDisplay: '',
-            pageText: '',
-            topicsOnPage: [],
+            pageNumberForDisplay: null,
+            pageText: null,
+            topicsOnPage: null,
         };
     },
 };
