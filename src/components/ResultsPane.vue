@@ -92,9 +92,6 @@ export default {
             },
         },
     },
-    data() {
-        return {};
-    },
     computed: {
         numBooksFormatted: function () {
             return this.numBooks ? this.numBooks.toLocaleString() : '';
