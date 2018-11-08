@@ -42,7 +42,18 @@ export default {
     },
     methods : {
         async debugSearch() {
-            this.debug = await this.solrSearch();
+            this.debug = await this.solrPreviewEpub();
+            // this.debug = await this.solrSearch();
+        },
+        async solrPreviewEpub() {
+            const response = await this.$solrPreviewEpub(
+                '9780472024490',
+                'art',
+                [ 'pageText', 'topicNames' ],
+                [ 'postmodernism', 'Hutcheon, Linda' ],
+            );
+
+            return response;
         },
         async solrSearch() {
             const response = await this.$solrSearch( 'art', [ 'pageText', 'topicNames' ] );

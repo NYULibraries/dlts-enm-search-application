@@ -14,9 +14,21 @@ async function doFetch( params ) {
         wt : 'json',
     } );
 
-    const queryString = Object.keys( params )
-        .map( key => key + '=' + params[ key ] )
-        .join( '&' );
+    const queryStringParams = [];
+    Object.keys( params ).forEach( ( key ) => {
+        const paramValue = params[ key ];
+
+        // Some params like fq can be specified multiple times
+        if ( Array.isArray( paramValue ) ) {
+            paramValue.forEach( ( value ) => {
+                queryStringParams.push( key + '=' + value );
+            } );
+        } else {
+            queryStringParams.push( key + '=' + params[ key ] );
+        }
+    } );
+
+    const queryString = queryStringParams.join( '&' );
 
     const requestUrl = `http://${ solrHost }:${ solrPort }${ solrCorePath }select?${ queryString }`;
     const response = await fetch( requestUrl );
@@ -54,6 +66,31 @@ async function solrSearch( query, queryFields ) {
     return doFetch( params );
 }
 
+async function solrPreviewEpub( isbn, query, queryFields, selectedTopicFacetItems ) {
+    const params = {
+        q: query,
+        fl: 'pageLocalId,pageNumberForDisplay,pageSequenceNumber,epubNumberOfPages,score',
+        fq: encodeURIComponent( 'isbn_facet:"' + isbn + '"' ),
+        qf: queryFields.join( '%20' ),
+        rows: 999,
+        sort: 'pageSequenceNumber+asc',
+    };
+
+    if ( selectedTopicFacetItems ) {
+        params.fq = [ params.fq ].concat(
+            selectedTopicFacetItems.map( ( selectedTopicFacetItem ) => {
+                return encodeURIComponent(
+                    'topicNames_facet:"'                          +
+                    selectedTopicFacetItem.replace( /"/g, '\\"' ) +
+                    '"'
+                );
+            } )
+        );
+    }
+
+    return doFetch( params );
+}
+
 export default {
     install( Vue, options ) {
         // Plugin options
@@ -61,7 +98,7 @@ export default {
         solrPort     = options.solrPort     || DEFAULT_SOLR_PORT;
         solrCorePath = options.solrCorePath || DEFAULT_SOLR_CORE_PATH;
 
-        // Fetch
+        Vue.prototype.$solrPreviewEpub = solrPreviewEpub;
         Vue.prototype.$solrSearch = solrSearch;
     },
 };
