@@ -107,6 +107,11 @@ export default {
             }
         },
     },
+    methods: {
+        clickTopicFacetItem() {
+
+        },
+    },
 };
 </script>
 

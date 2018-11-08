@@ -92,6 +92,11 @@ export default {
             topicsOnPage: null,
         };
     },
+    methods: {
+        loadFirstEpub() {
+
+        },
+    },
 };
 </script>
 

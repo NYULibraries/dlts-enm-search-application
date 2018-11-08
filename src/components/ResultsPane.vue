@@ -114,6 +114,11 @@ export default {
             }
         },
     },
+    methods: {
+        previewEpub() {
+
+        },
+    },
 };
 </script>
 

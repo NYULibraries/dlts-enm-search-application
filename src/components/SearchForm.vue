@@ -80,6 +80,11 @@ export default {
             ),
         };
     },
+    methods: {
+        submitSearchForm() {
+
+        },
+    },
 };
 </script>
 

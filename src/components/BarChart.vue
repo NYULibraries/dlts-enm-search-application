@@ -69,6 +69,14 @@ export default {
             pageIndex: null,
         };
     },
+    methods: {
+        clickNext() {
+
+        },
+        clickPrevious() {
+
+        },
+    },
 };
 </script>
 
