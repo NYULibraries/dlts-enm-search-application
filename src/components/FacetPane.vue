@@ -22,17 +22,17 @@
                 </div>
 
                 <a
-                    v-show="( ! facetPane.showAllTopics ) && ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )"
+                    v-show="( ! showAllTopics ) && ( topicsFacetList.length > topicsFacetListLimit )"
                     class="listui seemore"
                     href="#"
-                    @click="facetPane.showAllTopics = ! facetPane.showAllTopics">
+                    @click="showAllTopics = ! showAllTopics">
                     <i
                         class="fa fa-angle-double-down"
                         aria-hidden="true"></i>See All
                 </a>
 
                 <div
-                    v-show="( facetPane.showAllTopics ) && ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )"
+                    v-show="( showAllTopics ) && ( topicsFacetList.length > topicsFacetListLimit )"
                     class="enm-topics enm-facets-group-togglable">
 
                     <a
@@ -48,10 +48,10 @@
                 </div>
 
                 <a
-                    v-show="( facetPane.showAllTopics ) && ( facetPane.topicsFacetList.length > facetPane.topicsFacetListLimit )"
+                    v-show="( showAllTopics ) && ( topicsFacetList.length > topicsFacetListLimit )"
                     class="listui seemore"
                     href="#"
-                    @click="facetPane.showAllTopics = ! facetPane.showAllTopics">
+                    @click="showAllTopics = ! showAllTopics">
                     <i
                         class="fa fa-angle-double-up"
                         aria-hidden="true"></i>See Less
