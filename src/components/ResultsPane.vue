@@ -92,6 +92,11 @@ export default {
             },
         },
     },
+    data() {
+        return {
+            isbnOfSelectedEpub: null,
+        };
+    },
     computed: {
         numBooksFormatted: function () {
             return this.numBooks ? this.numBooks.toLocaleString() : '';
