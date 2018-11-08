@@ -5,7 +5,7 @@
 
                 <div class="column">
                     <span
-                        v-show="searchDCI && displaySearchDCI"
+                        v-show="searchDCI && display"
                         class="tag">
                         {{ searchDCI }}
                         <button
@@ -33,6 +33,35 @@
 <script>
 export default {
     name: 'SearchEcho',
+    props: {
+        display: {
+            type: Boolean,
+            required: true,
+            default: false,
+        },
+        selectedTopicFacetItems: {
+            type: Array,
+            required: false,
+            default: function () {
+                return [];
+            },
+        },
+    },
+    data() {
+        return {
+            searchDCI: null,
+        };
+    },
+    computed: {
+        topicDCIs() {
+            return this.selectedTopicFacetItems.map( ( topic ) => {
+                return {
+                    id: topic,
+                    topic: topic,
+                };
+            } );
+        },
+    },
 };
 </script>
 
