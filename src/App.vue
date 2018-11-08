@@ -1,5 +1,9 @@
 <template>
     <div id="app">
+        <button
+            id="debug"
+            @click="debugSearch">DEBUG</button>
+        <div>{{ debug }}</div>
         <search-form/>
         <div v-cloak>
             <search-echo/>
@@ -30,6 +34,43 @@ export default {
         SearchEcho,
         SearchForm,
         Spinner,
+    },
+    data() {
+        return {
+            debug : null,
+        };
+    },
+    methods : {
+        async debugSearch() {
+            // this.debug = await this.solrPreviewEpub();
+            this.debug = await this.solrPreviewPage();
+            // this.debug = await this.solrSearch();
+        },
+        async solrPreviewEpub() {
+            const response = await this.$solrPreviewEpub(
+                '9780472024490',
+                'art',
+                [ 'pageText', 'topicNames' ],
+                [ 'postmodernism', 'Hutcheon, Linda' ],
+            );
+
+            return response;
+        },
+        async solrPreviewPage() {
+            const response = await this.$solrPreviewPage(
+                '9780472024490',
+                88,
+                'art',
+                [ 'pageText', 'topicNames' ],
+            );
+
+            return response;
+        },
+        async solrSearch() {
+            const response = await this.$solrSearch( 'art', [ 'pageText', 'topicNames' ] );
+
+            return response;
+        },
     },
 };
 
