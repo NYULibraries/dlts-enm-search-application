@@ -1,8 +1,6 @@
 <template>
     <div :class="isbnOfSelectedEpub ? previewPaneLoadedClass : previewPaneNotLoadedClass">
 
-        <spinner v-if="searchInProgress"/>
-
         <!--RESULTS-->
         <template v-show="display">
             <!-- v-show is necessary on this <header> element for some reason.
@@ -66,18 +64,10 @@
 </template>
 
 <script>
-import Spinner from './Spinner';
-
 export default {
     name: 'ResultsPane',
-    components: { Spinner },
     props: {
         display: {
-            type     : Boolean,
-            required : true,
-            default  : false,
-        },
-        searchInProgress: {
             type     : Boolean,
             required : true,
             default  : false,

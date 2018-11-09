@@ -4,7 +4,9 @@
           Author: https://codepen.io/Terramaster/
     -->
     <div
-        id="spinner">
+        v-show="display"
+        id="spinner"
+        class="column enm-pane enm-pane-results is-half">
         <div class="overlay-loader">
             <div class="loader">
                 <div></div>
@@ -22,6 +24,13 @@
 <script>
 export default {
     name: 'Spinner',
+    props: {
+        display: {
+            type: Boolean,
+            required: true,
+            default: false,
+        },
+    },
 };
 </script>
 

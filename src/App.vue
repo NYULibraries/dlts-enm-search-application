@@ -17,6 +17,9 @@
                         :topics-facet-list-limit="15"
                         display
                     />
+
+                    <spinner display/>
+
                     <results-pane
                         :num-books="10"
                         :num-pages="100"
