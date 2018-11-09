@@ -81,7 +81,7 @@ export default {
     },
     methods: {
         submitSearchForm() {
-
+            this.$emit( 'submit', this.query, this.selectedQueryFields );
         },
     },
 };
