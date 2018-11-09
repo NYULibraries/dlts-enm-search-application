@@ -1,9 +1,5 @@
 <template>
     <div id="app">
-        <button
-            id="debug"
-            @click="debugSearch">DEBUG</button>
-        <div>{{ debug }}</div>
         <search-form @submit="solrSearch"/>
         <div v-cloak>
             <search-echo
@@ -60,11 +56,6 @@ export default {
         };
     },
     methods : {
-        async debugSearch() {
-            // this.debug = await this.solrPreviewEpub();
-            this.debug = await this.solrPreviewPage();
-            // this.debug = await this.solrSearch();
-        },
         async solrPreviewEpub() {
             const response = await this.$solrPreviewEpub(
                 '9780472024490',
