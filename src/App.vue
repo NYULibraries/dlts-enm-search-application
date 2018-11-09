@@ -4,7 +4,7 @@
             id="debug"
             @click="debugSearch">DEBUG</button>
         <div>{{ debug }}</div>
-        <search-form/>
+        <search-form @submit="solrSearch"/>
         <div v-cloak>
             <search-echo
                 :selected-topic-facet-items="[ 'Topic1', 'Topic2', ]"
@@ -85,8 +85,8 @@ export default {
 
             return response;
         },
-        async solrSearch() {
-            const response = await this.$solrSearch( 'art', [ 'pageText', 'topicNames' ] );
+        async solrSearch( query, queryFields ) {
+            const response = await this.$solrSearch( query, queryFields );
 
             return response;
         },
