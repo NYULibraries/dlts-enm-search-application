@@ -39,6 +39,18 @@ export default {
             required: true,
             default: false,
         },
+        query: {
+            type: String,
+            required: true,
+            default: null,
+        },
+        selectedQueryFieldsDCILabels: {
+            type: Array,
+            required: false,
+            default: function () {
+                return null;
+            },
+        },
         selectedTopicFacetItems: {
             type: Array,
             required: false,
