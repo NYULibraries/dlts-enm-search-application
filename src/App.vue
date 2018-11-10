@@ -29,7 +29,7 @@
                     />
                     <preview-pane
                         :display="previewPane.display"
-                        isbn="previewPane.isbn"
+                        :isbn="previewPane.isbn"
                     />
                 </div>
             </div>
