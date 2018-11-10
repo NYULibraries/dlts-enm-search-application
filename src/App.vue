@@ -3,29 +3,29 @@
         <search-form @submit="solrSearch"/>
         <div v-cloak>
             <search-echo
-                :selected-topic-facet-items="[ 'Topic1', 'Topic2', ]"
-                display
+                :display="searchEcho.display"
+                :selected-topic-facet-items="searchEcho.selectedTopicFacetItems"
             />
             <div class="container is-fluid">
                 <div class="columns enm-panes">
                     <facet-pane
-                        :topics-facet-list="[ 'Topic1', 'Topic2', ]"
-                        :topics-facet-list-limit="15"
-                        display
+                        :display="facetPane.display"
+                        :topics-facet-list="facetPane.topicsFacetList"
+                        :topics-facet-list-limit="facetPane.topicsFacetListLimit"
                     />
 
                     <spinner :display="spinner.display"/>
 
                     <results-pane
-                        :num-books="10"
-                        :num-pages="100"
-                        :results="[]"
+                        :display="resultsPane.display"
+                        :num-books="resultsPane.numBooks"
+                        :num-pages="resultsPane.numPages"
+                        :results="resultsPane.results"
                         :search-in-progress="false"
-                        display
                     />
                     <preview-pane
-                        display
-                        isbn="9780814712917"
+                        :display="previewPane.display"
+                        isbn="previewPane.isbn"
                     />
                 </div>
             </div>
@@ -52,6 +52,25 @@ export default {
     },
     data() {
         return {
+            facetPane: {
+                display: false,
+                topicsFacetList: null,
+                topicsFacetListLimit: 15,
+            },
+            previewPane: {
+                display: false,
+                isbn: null,
+            },
+            resultsPane: {
+                display: false,
+                numBooks: null,
+                numPages: null,
+                resuts: null,
+            },
+            searchEcho: {
+                display: false,
+                selectedTopicFacetItems: null,
+            },
             spinner: {
                 display: false,
             },
