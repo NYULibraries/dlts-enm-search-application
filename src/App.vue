@@ -59,6 +59,16 @@ const QUERY_FIELDS = [
     },
 ];
 
+const QUERY_FIELDS_BY_VALUE = ( function () {
+    const queryFieldsByValueMap = {};
+
+    QUERY_FIELDS.forEach( function ( queryField ) {
+        queryFieldsByValueMap[ queryField.value ] = queryField;
+    } );
+
+    return queryFieldsByValueMap;
+} )();
+
 export default {
     name: 'App',
     components : {
