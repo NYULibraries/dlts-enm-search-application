@@ -10,7 +10,7 @@ require( './assets/sass/bulma.scss' );
 Vue.config.productionTip = false;
 
 Vue.use( EnmSolr, {
-    solrHost     : 'dev-discovery.dlib.nyu.edu',
+    solrHost     : 'stagediscovery.dlib.nyu.edu',
     solrPort     : 8983,
     solrCorePath : '/solr/enm-pages/',
 } );
