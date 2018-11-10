@@ -103,6 +103,11 @@ export default {
 
             this.spinner.display = false;
 
+            this.searchEcho.display = true;
+            this.facetPane.display = true;
+            this.resultsPane.display = true;
+            this.previewPane.display = true;
+
             return response;
         },
     },
