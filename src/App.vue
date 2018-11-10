@@ -55,7 +55,7 @@ export default {
         return {
             facetPane: {
                 display: false,
-                topicsFacetList: null,
+                topicsFacetList: [],
                 topicsFacetListLimit: 15,
             },
             previewPane: {
@@ -64,13 +64,15 @@ export default {
             },
             resultsPane: {
                 display: false,
-                numBooks: null,
-                numPages: null,
-                resuts: null,
+                numBooks: 0,
+                numPages: 0,
+                results: [],
             },
             searchEcho: {
                 display: false,
-                selectedTopicFacetItems: null,
+                query: '',
+                selectedQueryFieldsDCILabels: null,
+                selectedTopicFacetItems: [],
             },
             spinner: {
                 display: false,
