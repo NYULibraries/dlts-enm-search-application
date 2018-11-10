@@ -155,6 +155,11 @@ export default {
                 }
             }
         },
+        setResultsPaneFromSolrResponse( solrResponse ) {
+            this.resultsPane.numBooks = solrResponse.grouped.isbn.groups.length;
+            this.resultsPane.numPages = solrResponse.grouped.isbn.matches;
+            this.resultsPane.results  = solrResponse.grouped.isbn.groups;
+        },
         setSearchEcho( query, queryFields, selectedTopicFacetItems ) {
             this.searchEcho.query = query;
             this.searchEcho.selectedQueryFieldsDCILabels = queryFields.map(
@@ -193,6 +198,7 @@ export default {
 
             this.setSearchEcho( query, queryFields, [] );
             this.setFacetPaneFromSolrResponse( response );
+            this.setResultsPaneFromSolrResponse( response );
 
             this.spinner.display = false;
 
