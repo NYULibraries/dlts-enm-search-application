@@ -172,12 +172,15 @@ export default {
                 }
             );
         },
-        setPreviewPaneFromSolrResponse( solrResponse ) {
-            const isbnGroups = solrResponse.grouped.isbn.groups;
-            if ( isbnGroups.length > 0 ) {
-                this.previewPane.isbn = isbnGroups[ 0 ];
+        setPreviewPane( isbn ) {
+            if ( isbn ) {
+                this.previewPane.isbn = isbn;
             } else {
-                this.previewPane.isbn = '';
+                if ( this.resultsPane.results.length > 0 ) {
+                    this.previewPane.isbn = this.resultsPane.results[ 0 ].isbn;
+                } else {
+                    this.previewPane.isbn = '';
+                }
             }
         },
         setResultsPaneFromSolrResponse( solrResponse ) {
@@ -224,7 +227,7 @@ export default {
             this.setSearchEcho( query, queryFields, [] );
             this.setFacetPaneFromSolrResponse( response );
             this.setResultsPaneFromSolrResponse( response );
-            this.setPreviewPaneFromSolrResponse( response );
+            this.setPreviewPane();
 
             this.spinner.display = false;
 
