@@ -177,7 +177,8 @@ export default {
                 this.previewPane.isbn = isbn;
             } else {
                 if ( this.resultsPane.results.length > 0 ) {
-                    this.previewPane.isbn = this.resultsPane.results[ 0 ].isbn;
+                    const firstResult = this.resultsPane.results[ 0 ];
+                    this.previewPane.isbn = firstResult.isbn;
                 } else {
                     this.previewPane.isbn = '';
                 }
