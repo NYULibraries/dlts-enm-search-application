@@ -156,6 +156,21 @@ export default {
                     );
                 }
             }
+
+            // Remove topics already selected by user
+            this.facetPane.selectedTopicFacetItems.forEach(
+                ( selectedTopic ) => {
+                    const found = this.facetPane.topicsFacetList.findIndex(
+                        ( element ) => {
+                            return element.name === selectedTopic;
+                        }
+                    );
+
+                    if ( found !== -1 ) {
+                        this.facetPane.topicsFacetList.splice( found, 1 );
+                    }
+                }
+            );
         },
         setResultsPaneFromSolrResponse( solrResponse ) {
             this.resultsPane.numBooks = solrResponse.grouped.isbn.groups.length;
