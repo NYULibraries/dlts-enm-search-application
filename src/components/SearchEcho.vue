@@ -62,10 +62,12 @@ export default {
     computed: {
         searchDCI() {
             if ( this.query && this.query !== '' ) {
-                this.searchDCI = 'Searching ' + this.selectedQueryFieldsDCILabels
-                    .sort().join( ' and ' ) + ' for: ' + this.query;
+                return 'Searching ' +
+                       this.selectedQueryFieldsDCILabels
+                           .slice()
+                           .sort().join( ' and ' ) + ' for: ' + this.query;
             } else {
-                this.searchDCI = null;
+                return null;
             }
         },
         topicDCIs() {
