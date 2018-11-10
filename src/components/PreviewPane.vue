@@ -28,8 +28,8 @@
             <bar-chart
                 :bar-chart-data-matched-pages="[]"
                 :display="barChart.display"
-                :isbn="barChart.isbn"
-                :title="barChart.title"
+                :isbn="isbn"
+                :title="title"
             />
 
             <div
