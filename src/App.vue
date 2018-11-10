@@ -79,7 +79,11 @@ export default {
             return response;
         },
         async solrSearch( query, queryFields ) {
+            this.spinner.display = true;
+
             const response = await this.$solrSearch( query, queryFields );
+
+            this.spinner.display = false;
 
             return response;
         },
