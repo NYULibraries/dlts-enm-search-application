@@ -111,6 +111,33 @@ export default {
         };
     },
     methods : {
+        displayAllPanes() {
+            this.setPanesDisplay(
+                [
+                    this.searchEcho,
+                    this.facetPane,
+                    this.resultsPane,
+                    this.previewPane,
+                ],
+                true
+            );
+        },
+        setPanesDisplay( panes, state ) {
+            panes.forEach( ( pane ) => {
+                pane.display = state;
+            } );
+        },
+        hideAllPanes() {
+            this.setPanesDisplay(
+                [
+                    this.searchEcho,
+                    this.facetPane,
+                    this.resultsPane,
+                    this.previewPane,
+                ],
+                false
+            );
+        },
         async solrPreviewEpub() {
             const response = await this.$solrPreviewEpub(
                 '9780472024490',
@@ -146,10 +173,7 @@ export default {
             );
             this.searchEcho.selectedTopicFacetItems = [];
 
-            this.searchEcho.display = true;
-            this.facetPane.display = true;
-            this.resultsPane.display = true;
-            this.previewPane.display = true;
+            this.displayAllPanes();
 
             return response;
         },
