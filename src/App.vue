@@ -159,6 +159,8 @@ export default {
             return response;
         },
         async solrSearch( query, queryFields ) {
+            this.hideAllPanes();
+
             this.spinner.display = true;
 
             const response = await this.$solrSearch( query, queryFields );
