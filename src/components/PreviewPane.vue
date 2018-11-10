@@ -84,6 +84,11 @@ export default {
             required: true,
             default: null,
         },
+        title: {
+            type: String,
+            required: true,
+            default: null,
+        },
     },
     data() {
         return {
