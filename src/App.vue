@@ -165,8 +165,6 @@ export default {
 
             const response = await this.$solrSearch( query, queryFields );
 
-            this.spinner.display = false;
-
             this.searchEcho.query = query;
             this.searchEcho.selectedQueryFieldsDCILabels = queryFields.map(
                 function ( selectedQueryField ) {
@@ -174,6 +172,8 @@ export default {
                 }
             );
             this.searchEcho.selectedTopicFacetItems = [];
+
+            this.spinner.display = false;
 
             this.displayAllPanes();
 
