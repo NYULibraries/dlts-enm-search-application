@@ -27,7 +27,7 @@
 
             <bar-chart
                 :bar-chart-data-matched-pages="[]"
-                :display="barChart.display"
+                :display="!!isbn"
                 :isbn="isbn"
                 :title="title"
             />
