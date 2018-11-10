@@ -138,6 +138,23 @@ export default {
                 false
             );
         },
+        setFacetPaneFromSolrResponse( solrResponse ) {
+            const topicFacetItems = solrResponse.facet_counts.facet_fields.topicNames_facet;
+
+            if ( topicFacetItems ) {
+                this.facetPane.topicsFacetList = [];
+                for ( let i = 0; i < topicFacetItems.length; i = i + 2 ) {
+                    const topic = topicFacetItems[ i ];
+                    const numHits = topicFacetItems[ i + 1 ];
+                    this.facetPane.topicsFacetList.push(
+                        {
+                            name: topic,
+                            numHits: numHits.toLocaleString(),
+                        }
+                    );
+                }
+            }
+        },
         setSearchEcho( query, queryFields, selectedTopicFacetItems ) {
             this.searchEcho.query = query;
             this.searchEcho.selectedQueryFieldsDCILabels = queryFields.map(
@@ -175,6 +192,7 @@ export default {
             const response = await this.$solrSearch( query, queryFields );
 
             this.setSearchEcho( query, queryFields, [] );
+            this.setFacetPaneFromSolrResponse( response );
 
             this.spinner.display = false;
 
