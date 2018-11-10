@@ -174,13 +174,15 @@ export default {
                 }
             );
         },
-        setPreviewPane( isbn ) {
+        setPreviewPane( isbn, title ) {
             if ( isbn ) {
                 this.previewPane.isbn = isbn;
+                this.previewPane.title = title;
             } else {
                 if ( this.resultsPane.results.length > 0 ) {
                     const firstResult = this.resultsPane.results[ 0 ];
-                    this.previewPane.isbn = firstResult.isbn;
+                    this.previewPane.isbn  = firstResult.groupValue;
+                    this.previewPane.title = firstResult.doclist.docs[ 0 ].title;
                 } else {
                     this.previewPane.isbn = '';
                 }
