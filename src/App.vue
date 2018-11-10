@@ -172,6 +172,14 @@ export default {
                 }
             );
         },
+        setPreviewPaneFromSolrResponse( solrResponse ) {
+            const isbnGroups = solrResponse.grouped.isbn.groups;
+            if ( isbnGroups.length > 0 ) {
+                this.previewPane.isbn = isbnGroups[ 0 ];
+            } else {
+                this.previewPane.isbn = '';
+            }
+        },
         setResultsPaneFromSolrResponse( solrResponse ) {
             this.resultsPane.numBooks = solrResponse.grouped.isbn.groups.length;
             this.resultsPane.numPages = solrResponse.grouped.isbn.matches;
@@ -216,6 +224,7 @@ export default {
             this.setSearchEcho( query, queryFields, [] );
             this.setFacetPaneFromSolrResponse( response );
             this.setResultsPaneFromSolrResponse( response );
+            this.setPreviewPaneFromSolrResponse( response );
 
             this.spinner.display = false;
 
