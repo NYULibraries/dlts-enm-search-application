@@ -4,6 +4,8 @@
         <div v-cloak>
             <search-echo
                 :display="searchEcho.display"
+                :query="searchEcho.query"
+                :selected-query-fields-d-c-i-labels="searchEcho.selectedQueryFieldsDCILabels"
                 :selected-topic-facet-items="searchEcho.selectedTopicFacetItems"
             />
             <div class="container is-fluid">
