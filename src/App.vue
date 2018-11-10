@@ -138,6 +138,14 @@ export default {
 
             this.spinner.display = false;
 
+            this.searchEcho.query = query;
+            this.searchEcho.selectedQueryFieldsDCILabels = queryFields.map(
+                function ( selectedQueryField ) {
+                    return QUERY_FIELDS_BY_VALUE[ selectedQueryField ].dciLabel;
+                }
+            );
+            this.searchEcho.selectedTopicFacetItems = [];
+
             this.searchEcho.display = true;
             this.facetPane.display = true;
             this.resultsPane.display = true;
