@@ -14,7 +14,7 @@
                         display
                     />
 
-                    <spinner display/>
+                    <spinner :display="spinner.display"/>
 
                     <results-pane
                         :num-books="10"
@@ -52,7 +52,9 @@ export default {
     },
     data() {
         return {
-            debug : null,
+            spinner: {
+                display: false,
+            },
         };
     },
     methods : {
