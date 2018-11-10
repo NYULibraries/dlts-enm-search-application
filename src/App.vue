@@ -14,6 +14,7 @@
                 <div class="columns enm-panes">
                     <facet-pane
                         :display="facetPane.display"
+                        :selected-topic-facet-items="facetPane.selectedTopicFacetItems"
                         :topics-facet-list="facetPane.topicsFacetList"
                         :topics-facet-list-limit="facetPane.topicsFacetListLimit"
                     />
@@ -83,6 +84,7 @@ export default {
         return {
             facetPane: {
                 display: false,
+                selectedTopicFacetItems: [],
                 topicsFacetList: [],
                 topicsFacetListLimit: 15,
             },

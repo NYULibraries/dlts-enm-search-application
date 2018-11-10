@@ -75,6 +75,13 @@ export default {
             required : true,
             default  : false,
         },
+        selectedTopicFacetItems: {
+            type: Array,
+            required: true,
+            default: function () {
+                return null;
+            },
+        },
         topicsFacetList: {
             type : Array,
             required: true,
