@@ -21,7 +21,6 @@
                         :num-books="resultsPane.numBooks"
                         :num-pages="resultsPane.numPages"
                         :results="resultsPane.results"
-                        :search-in-progress="false"
                     />
                     <preview-pane
                         :display="previewPane.display"
