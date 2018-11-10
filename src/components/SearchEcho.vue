@@ -59,11 +59,6 @@ export default {
             },
         },
     },
-    data() {
-        return {
-            searchDCI: null,
-        };
-    },
     computed: {
         searchDCI() {
             if ( this.query && this.query !== '' ) {
