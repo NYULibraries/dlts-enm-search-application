@@ -93,7 +93,6 @@ export default {
     data() {
         return {
             barChart: {
-                display: false,
                 isbn: this.isbn,
                 title: this.title,
             },

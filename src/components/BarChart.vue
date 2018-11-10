@@ -40,11 +40,6 @@
 export default {
     name: 'BarChart',
     props: {
-        display : {
-            type     : Boolean,
-            required : true,
-            default  : false,
-        },
         isbn: {
             type: String,
             required: true,
