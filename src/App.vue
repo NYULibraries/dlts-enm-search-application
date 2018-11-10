@@ -238,6 +238,7 @@ export default {
             this.setSearchEcho( query, queryFields, [] );
             this.setFacetPaneFromSolrResponse( response );
             this.setResultsPaneFromSolrResponse( response );
+            this.setPreviewPane( null );
 
             this.spinner.display = false;
 
