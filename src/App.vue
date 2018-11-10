@@ -115,6 +115,9 @@ export default {
         };
     },
     methods : {
+        clearTopicFilters() {
+            this.facetPane.selectedTopicFacetItems = [];
+        },
         displayAllPanes() {
             this.setPanesDisplay(
                 [
@@ -224,6 +227,8 @@ export default {
             return response;
         },
         async solrSearch( query, queryFields ) {
+            this.clearTopicFilters();
+
             this.hideAllPanes();
 
             this.spinner.display = true;
