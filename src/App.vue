@@ -30,6 +30,7 @@
                     <preview-pane
                         :display="previewPane.display"
                         :isbn="previewPane.isbn"
+                        :title="previewPane.title"
                     />
                 </div>
             </div>
@@ -91,6 +92,7 @@ export default {
             previewPane: {
                 display: false,
                 isbn: null,
+                title: null,
             },
             resultsPane: {
                 display: false,
