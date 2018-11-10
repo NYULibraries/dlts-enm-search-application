@@ -1,6 +1,8 @@
 <template>
     <div id="app">
-        <search-form @submit="solrSearch"/>
+        <search-form
+            :query-fields="searchForm.queryFields"
+            @submit="solrSearch"/>
         <div v-cloak>
             <search-echo
                 :display="searchEcho.display"
@@ -41,6 +43,22 @@ import ResultsPane from './components/ResultsPane';
 import SearchEcho from './components/SearchEcho';
 import SearchForm from './components/SearchForm';
 import Spinner from './components/Spinner';
+
+const QUERY_FIELDS = [
+    {
+        dciLabel : 'full texts',
+        label    : 'Full Text',
+        name     : 'fulltext',
+        value    : 'pageText',
+    },
+    {
+        dciLabel : 'topics',
+        label    : 'Topics',
+        name     : 'topics',
+        value    : 'topicNames',
+    },
+];
+
 export default {
     name: 'App',
     components : {
@@ -73,6 +91,9 @@ export default {
                 query: '',
                 selectedQueryFieldsDCILabels: null,
                 selectedTopicFacetItems: [],
+            },
+            searchForm: {
+                queryFields: QUERY_FIELDS,
             },
             spinner: {
                 display: false,
