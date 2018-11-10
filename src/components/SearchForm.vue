@@ -72,6 +72,16 @@ export default {
     },
     methods: {
         submitSearchForm() {
+            if ( this.selectedQueryFields.length === 0 ) {
+                alert( 'Please check one or more boxes: ' +
+                       this.queryFields.map(
+                           ( e ) => { return e.label; }
+                       ).join( ', ' )
+                );
+
+                return;
+            }
+
             this.$emit( 'submit', this.query, this.selectedQueryFields );
         },
     },
