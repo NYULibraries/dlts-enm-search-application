@@ -6,6 +6,11 @@ let solrHost;
 let solrPort;
 let solrCorePath;
 
+const currentSearch = {
+    query: '',
+    queryFields: [],
+};
+
 async function doFetch( params ) {
     params = Object.assign( params, {
         q : encodeURIComponent( params.q ),
@@ -128,5 +133,7 @@ export default {
         Vue.prototype.$solrPreviewEpub = solrPreviewEpub;
         Vue.prototype.$solrPreviewPage = solrPreviewPage;
         Vue.prototype.$solrSearch = solrSearch;
+
+        Vue.prototype.$currentSearch = currentSearch;
     },
 };
