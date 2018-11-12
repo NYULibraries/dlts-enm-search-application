@@ -219,9 +219,9 @@ export default {
             return response;
         },
         async solrSearch( query, queryFields ) {
-            this.clearTopicFilters();
-
             this.hideAllPanes();
+
+            this.clearTopicFilters();
 
             this.setSearchEcho( query, queryFields, [] );
             this.displayPanes( this.searchEcho );
