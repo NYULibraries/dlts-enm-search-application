@@ -149,6 +149,12 @@ export default {
                 this.previewPane.isbn = '';
             }
         },
+        newQuerySubmitted( query, queryFields ) {
+            this.$currentSearch.query = query;
+            this.$currentSearch.queryFields = queryFields;
+
+            this.solrSearch( query, queryFields );
+        },
         setFacetPaneFromSolrResponse( solrResponse ) {
             const topicFacetItems = solrResponse.facet_counts.facet_fields.topicNames_facet;
 
@@ -218,12 +224,6 @@ export default {
             );
 
             return response;
-        },
-        newQuerySubmitted( query, queryFields ) {
-            this.$currentSearch.query = query;
-            this.$currentSearch.queryFields = queryFields;
-
-            this.solrSearch( query, queryFields );
         },
         async solrSearch( query, queryFields, selectedTopicFacetItems ) {
             this.hideAllPanes();
