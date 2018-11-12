@@ -115,6 +115,9 @@ export default {
         };
     },
     methods : {
+        clearPreviewPane() {
+            this.setPreviewPane( '', '' );
+        },
         clearTopicFilters() {
             this.facetPane.selectedTopicFacetItems = [];
         },
@@ -220,6 +223,7 @@ export default {
             this.hideAllPanes();
 
             this.clearTopicFilters();
+            this.clearPreviewPane();
 
             this.setSearchEcho( query, queryFields, [] );
             this.displayPanes( this.searchEcho );
@@ -230,7 +234,6 @@ export default {
 
             this.setFacetPaneFromSolrResponse( response );
             this.setResultsPaneFromSolrResponse( response );
-            this.setPreviewPane( null );
 
             this.spinner.display = false;
 
