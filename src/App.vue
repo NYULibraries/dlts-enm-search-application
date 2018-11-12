@@ -129,6 +129,13 @@ export default {
                 true
             );
         },
+        displayPanes( panes ) {
+            if ( ! Array.isArray( panes ) ) {
+                panes = [ panes ];
+            }
+
+            this.setPanesDisplay( panes, true );
+        },
         setPanesDisplay( panes, state ) {
             panes.forEach( ( pane ) => {
                 pane.display = state;
@@ -231,11 +238,13 @@ export default {
 
             this.hideAllPanes();
 
+            this.setSearchEcho( query, queryFields, [] );
+            this.displayPanes( this.searchEcho );
+
             this.spinner.display = true;
 
             const response = await this.$solrSearch( query, queryFields );
 
-            this.setSearchEcho( query, queryFields, [] );
             this.setFacetPaneFromSolrResponse( response );
             this.setResultsPaneFromSolrResponse( response );
             this.setPreviewPane( null );
