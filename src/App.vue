@@ -91,8 +91,8 @@ export default {
             },
             previewPane: {
                 display: false,
-                isbn: null,
-                title: null,
+                isbn: '',
+                title: '',
             },
             resultsPane: {
                 display: false,
