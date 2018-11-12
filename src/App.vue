@@ -17,6 +17,7 @@
                         :selected-topic-facet-items="facetPane.selectedTopicFacetItems"
                         :topics-facet-list="facetPane.topicsFacetList"
                         :topics-facet-list-limit="facetPane.topicsFacetListLimit"
+                        @topicclick="newLimitByTopicList"
                     />
 
                     <spinner :display="spinner.display"/>
@@ -148,6 +149,15 @@ export default {
             } else {
                 this.previewPane.isbn = '';
             }
+        },
+        newLimitByTopicList( selectedTopicFacetItems ) {
+            this.$currentSearch.selectedTopicFacetItems = selectedTopicFacetItems;
+
+            this.solrSearch(
+                this.$currentSearch.query,
+                this.$currentSearch.queryFields,
+                selectedTopicFacetItems
+            );
         },
         newQuerySubmitted( query, queryFields ) {
             this.$currentSearch.query = query;
