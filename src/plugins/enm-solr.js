@@ -51,7 +51,7 @@ async function doFetch( params ) {
     }
 }
 
-async function solrSearch( query, queryFields ) {
+async function solrSearch( query, queryFields, selectedTopicFacetItems ) {
     const params = {
         q: query,
         'facet.field': 'topicNames_facet',
@@ -67,6 +67,10 @@ async function solrSearch( query, queryFields ) {
         rows: '1999',
         sort: 'score%20desc,title_facet%20asc',
     };
+
+    if ( this.selectedTopicFacetItems ) {
+        params.fq = selectedTopicFacetItems;
+    }
 
     return doFetch( params );
 }

@@ -225,7 +225,7 @@ export default {
 
             this.solrSearch( query, queryFields );
         },
-        async solrSearch( query, queryFields ) {
+        async solrSearch( query, queryFields, selectedTopicFacetItems ) {
             this.hideAllPanes();
 
             this.clearTopicFilters();
@@ -236,7 +236,7 @@ export default {
 
             this.spinner.display = true;
 
-            const response = await this.$solrSearch( query, queryFields );
+            const response = await this.$solrSearch( query, queryFields, selectedTopicFacetItems );
 
             this.setFacetPaneFromSolrResponse( response );
             this.setResultsPaneFromSolrResponse( response );
