@@ -114,6 +114,11 @@ export default {
             }
         },
     },
+    watch: {
+        topicsFacetList( oldList, newList ) {
+            this.showAllTopics = false;
+        },
+    },
     methods: {
         clickTopicFacetItem() {
 
