@@ -68,8 +68,14 @@ async function solrSearch( query, queryFields, selectedTopicFacetItems ) {
         sort: 'score%20desc,title_facet%20asc',
     };
 
-    if ( this.selectedTopicFacetItems ) {
-        params.fq = selectedTopicFacetItems;
+    if ( selectedTopicFacetItems && selectedTopicFacetItems.length > 0 ) {
+        params.fq = selectedTopicFacetItems.map( ( selectedTopicFacetItem ) => {
+            return encodeURIComponent(
+                'topicNames_facet:"'  +
+                selectedTopicFacetItem.replace( /"/g, '\\"' ) +
+                '"'
+            );
+        } );
     }
 
     return doFetch( params );
