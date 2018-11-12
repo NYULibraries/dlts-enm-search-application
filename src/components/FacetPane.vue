@@ -39,8 +39,8 @@
                         v-for="topic in topicFacetItemsToggleable"
                         :key="topic.name"
                         :id="topic.name"
-                        href="#">
-                        @click="clickTopicFacetItem"
+                        href="#"
+                        @click="clickTopicFacetItem">
                         {{ topic.name }}
                         <span class="enm-hitcount">({{ topic.numHits }})</span>
                     </a>
