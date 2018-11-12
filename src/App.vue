@@ -118,17 +118,6 @@ export default {
         clearTopicFilters() {
             this.facetPane.selectedTopicFacetItems = [];
         },
-        displayAllPanes() {
-            this.setPanesDisplay(
-                [
-                    this.searchEcho,
-                    this.facetPane,
-                    this.resultsPane,
-                    this.previewPane,
-                ],
-                true
-            );
-        },
         displayPanes( ...panes ) {
             this.setPanesDisplay( panes, true );
         },
@@ -247,7 +236,11 @@ export default {
 
             this.spinner.display = false;
 
-            this.displayAllPanes();
+            this.displayPanes(
+                this.facetPane,
+                this.resultsPane,
+                this.previewPane,
+            );
 
             return response;
         },
