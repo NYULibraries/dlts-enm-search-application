@@ -129,11 +129,7 @@ export default {
                 true
             );
         },
-        displayPanes( panes ) {
-            if ( ! Array.isArray( panes ) ) {
-                panes = [ panes ];
-            }
-
+        displayPanes( ...panes ) {
             this.setPanesDisplay( panes, true );
         },
         setPanesDisplay( panes, state ) {
