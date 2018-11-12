@@ -9,6 +9,7 @@ let solrCorePath;
 const currentSearch = {
     query: '',
     queryFields: [],
+    selectedTopicFacetItems: [],
 };
 
 async function doFetch( params ) {

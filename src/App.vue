@@ -152,6 +152,7 @@ export default {
         newQuerySubmitted( query, queryFields ) {
             this.$currentSearch.query = query;
             this.$currentSearch.queryFields = queryFields;
+            this.$currentSearch.selectedTopicFacetItems = [];
 
             this.solrSearch( query, queryFields, [] );
         },
