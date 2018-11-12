@@ -27,9 +27,9 @@
 
             <bar-chart
                 :bar-chart-data-matched-pages="[]"
-                display
-                isbn="9780814712917"
-                title="Japanese Lessons"
+                :display="!!isbn"
+                :isbn="isbn"
+                :title="title"
             />
 
             <div
@@ -84,9 +84,18 @@ export default {
             required: true,
             default: null,
         },
+        title: {
+            type: String,
+            required: true,
+            default: null,
+        },
     },
     data() {
         return {
+            barChart: {
+                isbn: this.isbn,
+                title: this.title,
+            },
             pageNumberForDisplay: null,
             pageText: null,
             topicsOnPage: null,

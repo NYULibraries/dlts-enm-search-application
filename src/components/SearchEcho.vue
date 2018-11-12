@@ -39,6 +39,18 @@ export default {
             required: true,
             default: false,
         },
+        query: {
+            type: String,
+            required: true,
+            default: null,
+        },
+        selectedQueryFieldsDCILabels: {
+            type: Array,
+            required: false,
+            default: function () {
+                return null;
+            },
+        },
         selectedTopicFacetItems: {
             type: Array,
             required: false,
@@ -47,12 +59,17 @@ export default {
             },
         },
     },
-    data() {
-        return {
-            searchDCI: null,
-        };
-    },
     computed: {
+        searchDCI() {
+            if ( this.query && this.query !== '' ) {
+                return 'Searching ' +
+                       this.selectedQueryFieldsDCILabels
+                           .slice()
+                           .sort().join( ' and ' ) + ' for: ' + this.query;
+            } else {
+                return null;
+            }
+        },
         topicDCIs() {
             return this.selectedTopicFacetItems.map( ( topic ) => {
                 return {

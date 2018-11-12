@@ -75,6 +75,13 @@ export default {
             required : true,
             default  : false,
         },
+        selectedTopicFacetItems: {
+            type: Array,
+            required: true,
+            default: function () {
+                return null;
+            },
+        },
         topicsFacetList: {
             type : Array,
             required: true,
@@ -105,6 +112,11 @@ export default {
             } else {
                 return [];
             }
+        },
+    },
+    watch: {
+        topicsFacetList( oldList, newList ) {
+            this.showAllTopics = false;
         },
     },
     methods: {

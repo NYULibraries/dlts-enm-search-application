@@ -34,8 +34,7 @@
                                         :value="queryField.value"
                                         v-model="selectedQueryFields"
                                         type="checkbox"
-                                        class="is-medium is-checkbox"
-                                        @click="clickFieldCheckbox( $event.checked )">
+                                        class="is-medium is-checkbox">
                                     <label
                                         :for="queryField.name + 'Chx'"
                                         :key="queryField.label"
@@ -54,35 +53,36 @@
 </template>
 
 <script>
-const QUERY_FIELDS = [
-    {
-        dciLabel : 'full texts',
-        label    : 'Full Text',
-        name     : 'fulltext',
-        value    : 'pageText',
-    },
-    {
-        dciLabel : 'topics',
-        label    : 'Topics',
-        name     : 'topics',
-        value    : 'topicNames',
-    },
-];
-
 export default {
     name: 'SearchForm',
+    props: {
+        queryFields: {
+            type: Array,
+            required: true,
+            default: null,
+        },
+    },
     data() {
         return {
             query: '',
-            queryFields: QUERY_FIELDS,
-            selectedQueryFields: QUERY_FIELDS.map(
+            selectedQueryFields: this.queryFields.map(
                 ( queryField ) => { return queryField.value; }
             ),
         };
     },
     methods: {
         submitSearchForm() {
+            if ( this.selectedQueryFields.length === 0 ) {
+                alert( 'Please check one or more boxes: ' +
+                       this.queryFields.map(
+                           ( e ) => { return e.label; }
+                       ).join( ', ' )
+                );
 
+                return;
+            }
+
+            this.$emit( 'submit', this.query, this.selectedQueryFields );
         },
     },
 };

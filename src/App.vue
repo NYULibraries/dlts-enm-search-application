@@ -1,35 +1,36 @@
 <template>
     <div id="app">
-        <button
-            id="debug"
-            @click="debugSearch">DEBUG</button>
-        <div>{{ debug }}</div>
-        <search-form/>
+        <search-form
+            :query-fields="searchForm.queryFields"
+            @submit="solrSearch"/>
         <div v-cloak>
             <search-echo
-                :selected-topic-facet-items="[ 'Topic1', 'Topic2', ]"
-                display
+                :display="searchEcho.display"
+                :query="searchEcho.query"
+                :selected-query-fields-d-c-i-labels="searchEcho.selectedQueryFieldsDCILabels"
+                :selected-topic-facet-items="searchEcho.selectedTopicFacetItems"
             />
             <div class="container is-fluid">
                 <div class="columns enm-panes">
                     <facet-pane
-                        :topics-facet-list="[ 'Topic1', 'Topic2', ]"
-                        :topics-facet-list-limit="15"
-                        display
+                        :display="facetPane.display"
+                        :selected-topic-facet-items="facetPane.selectedTopicFacetItems"
+                        :topics-facet-list="facetPane.topicsFacetList"
+                        :topics-facet-list-limit="facetPane.topicsFacetListLimit"
                     />
 
-                    <spinner display/>
+                    <spinner :display="spinner.display"/>
 
                     <results-pane
-                        :num-books="10"
-                        :num-pages="100"
-                        :results="[]"
-                        :search-in-progress="false"
-                        display
+                        :display="resultsPane.display"
+                        :num-books="resultsPane.numBooks"
+                        :num-pages="resultsPane.numPages"
+                        :results="resultsPane.results"
                     />
                     <preview-pane
-                        display
-                        isbn="9780814712917"
+                        :display="previewPane.display"
+                        :isbn="previewPane.isbn"
+                        :title="previewPane.title"
                     />
                 </div>
             </div>
@@ -44,6 +45,32 @@ import ResultsPane from './components/ResultsPane';
 import SearchEcho from './components/SearchEcho';
 import SearchForm from './components/SearchForm';
 import Spinner from './components/Spinner';
+
+const QUERY_FIELDS = [
+    {
+        dciLabel : 'full texts',
+        label    : 'Full Text',
+        name     : 'fulltext',
+        value    : 'pageText',
+    },
+    {
+        dciLabel : 'topics',
+        label    : 'Topics',
+        name     : 'topics',
+        value    : 'topicNames',
+    },
+];
+
+const QUERY_FIELDS_BY_VALUE = ( function () {
+    const queryFieldsByValueMap = {};
+
+    QUERY_FIELDS.forEach( function ( queryField ) {
+        queryFieldsByValueMap[ queryField.value ] = queryField;
+    } );
+
+    return queryFieldsByValueMap;
+} )();
+
 export default {
     name: 'App',
     components : {
@@ -56,14 +83,121 @@ export default {
     },
     data() {
         return {
-            debug : null,
+            facetPane: {
+                display: false,
+                selectedTopicFacetItems: [],
+                topicsFacetList: [],
+                topicsFacetListLimit: 15,
+            },
+            previewPane: {
+                display: false,
+                isbn: '',
+                title: '',
+            },
+            resultsPane: {
+                display: false,
+                numBooks: 0,
+                numPages: 0,
+                results: [],
+            },
+            searchEcho: {
+                display: false,
+                query: '',
+                selectedQueryFieldsDCILabels: null,
+                selectedTopicFacetItems: [],
+            },
+            searchForm: {
+                queryFields: QUERY_FIELDS,
+            },
+            spinner: {
+                display: false,
+            },
         };
     },
     methods : {
-        async debugSearch() {
-            // this.debug = await this.solrPreviewEpub();
-            this.debug = await this.solrPreviewPage();
-            // this.debug = await this.solrSearch();
+        clearPreviewPane() {
+            this.setPreviewPane( '', '' );
+        },
+        clearTopicFilters() {
+            this.facetPane.selectedTopicFacetItems = [];
+        },
+        displayPanes( ...panes ) {
+            this.setPanesDisplay( panes, true );
+        },
+        setPanesDisplay( panes, state ) {
+            panes.forEach( ( pane ) => {
+                pane.display = state;
+            } );
+        },
+        hideAllPanes() {
+            this.setPanesDisplay(
+                [
+                    this.searchEcho,
+                    this.facetPane,
+                    this.resultsPane,
+                    this.previewPane,
+                ],
+                false
+            );
+        },
+        loadFirstResultInPreviewPane() {
+            if ( this.resultsPane.results.length > 0 ) {
+                const firstResult = this.resultsPane.results[ 0 ];
+                this.previewPane.isbn  = firstResult.groupValue;
+                this.previewPane.title = firstResult.doclist.docs[ 0 ].title;
+            } else {
+                this.previewPane.isbn = '';
+            }
+        },
+        setFacetPaneFromSolrResponse( solrResponse ) {
+            const topicFacetItems = solrResponse.facet_counts.facet_fields.topicNames_facet;
+
+            if ( topicFacetItems ) {
+                this.facetPane.topicsFacetList = [];
+                for ( let i = 0; i < topicFacetItems.length; i = i + 2 ) {
+                    const topic = topicFacetItems[ i ];
+                    const numHits = topicFacetItems[ i + 1 ];
+                    this.facetPane.topicsFacetList.push(
+                        {
+                            name: topic,
+                            numHits: numHits.toLocaleString(),
+                        }
+                    );
+                }
+            }
+
+            // Remove topics already selected by user
+            this.facetPane.selectedTopicFacetItems.forEach(
+                ( selectedTopic ) => {
+                    const found = this.facetPane.topicsFacetList.findIndex(
+                        ( element ) => {
+                            return element.name === selectedTopic;
+                        }
+                    );
+
+                    if ( found !== -1 ) {
+                        this.facetPane.topicsFacetList.splice( found, 1 );
+                    }
+                }
+            );
+        },
+        setPreviewPane( isbn, title ) {
+            this.previewPane.isbn = isbn;
+            this.previewPane.title = title;
+        },
+        setResultsPaneFromSolrResponse( solrResponse ) {
+            this.resultsPane.numBooks = solrResponse.grouped.isbn.groups.length;
+            this.resultsPane.numPages = solrResponse.grouped.isbn.matches;
+            this.resultsPane.results  = solrResponse.grouped.isbn.groups;
+        },
+        setSearchEcho( query, queryFields, selectedTopicFacetItems ) {
+            this.searchEcho.query = query;
+            this.searchEcho.selectedQueryFieldsDCILabels = queryFields.map(
+                function ( selectedQueryField ) {
+                    return QUERY_FIELDS_BY_VALUE[ selectedQueryField ].dciLabel;
+                }
+            );
+            this.searchEcho.selectedTopicFacetItems = selectedTopicFacetItems;
         },
         async solrPreviewEpub() {
             const response = await this.$solrPreviewEpub(
@@ -85,8 +219,29 @@ export default {
 
             return response;
         },
-        async solrSearch() {
-            const response = await this.$solrSearch( 'art', [ 'pageText', 'topicNames' ] );
+        async solrSearch( query, queryFields ) {
+            this.hideAllPanes();
+
+            this.clearTopicFilters();
+            this.clearPreviewPane();
+
+            this.setSearchEcho( query, queryFields, [] );
+            this.displayPanes( this.searchEcho );
+
+            this.spinner.display = true;
+
+            const response = await this.$solrSearch( query, queryFields );
+
+            this.setFacetPaneFromSolrResponse( response );
+            this.setResultsPaneFromSolrResponse( response );
+
+            this.spinner.display = false;
+
+            this.displayPanes(
+                this.facetPane,
+                this.resultsPane,
+                this.previewPane,
+            );
 
             return response;
         },
