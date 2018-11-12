@@ -2,7 +2,7 @@
     <div id="app">
         <search-form
             :query-fields="searchForm.queryFields"
-            @submit="solrSearch"/>
+            @submit="newQuerySubmitted"/>
         <div v-cloak>
             <search-echo
                 :display="searchEcho.display"
@@ -218,6 +218,12 @@ export default {
             );
 
             return response;
+        },
+        newQuerySubmitted( query, queryFields ) {
+            this.$currentSearch.query = query;
+            this.$currentSearch.queryFields = queryFields;
+
+            this.solrSearch( query, queryFields );
         },
         async solrSearch( query, queryFields ) {
             this.hideAllPanes();
