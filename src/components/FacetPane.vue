@@ -75,13 +75,6 @@ export default {
             required : true,
             default  : false,
         },
-        selectedTopicFacetItems: {
-            type: Array,
-            required: true,
-            default: function () {
-                return null;
-            },
-        },
         topicsFacetList: {
             type : Array,
             required: true,
@@ -99,6 +92,7 @@ export default {
     },
     data() {
         return {
+            selectedTopicFacetItems: [],
             showAllTopics: false,
         };
     },
@@ -120,8 +114,13 @@ export default {
         },
     },
     methods: {
-        clickTopicFacetItem() {
-
+        clickTopicFacetItem( event ) {
+            // Event name is awkward looking, but convention for native events
+            // seems to be noun-verb all lowercase:
+            // https://developer.mozilla.org/en-US/docs/Web/Events
+            this.selectedTopicFacetItems.push( event.currentTarget.id );
+            // Pass a copy back to parent
+            this.$emit( 'topicclick', this.selectedTopicFacetItems.slice() );
         },
     },
 };
