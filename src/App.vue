@@ -179,10 +179,8 @@ export default {
             );
         },
         setPreviewPane( isbn, title ) {
-            if ( isbn ) {
-                this.previewPane.isbn = isbn;
-                this.previewPane.title = title;
-            }
+            this.previewPane.isbn = isbn;
+            this.previewPane.title = title;
         },
         setResultsPaneFromSolrResponse( solrResponse ) {
             this.resultsPane.numBooks = solrResponse.grouped.isbn.groups.length;
