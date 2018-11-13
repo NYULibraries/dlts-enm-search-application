@@ -9,6 +9,7 @@
                 :query="searchEcho.query"
                 :selected-query-fields-d-c-i-labels="searchEcho.selectedQueryFieldsDCILabels"
                 :selected-topic-facet-items="searchEcho.selectedTopicFacetItems"
+                @search-dci-dismiss="clearQueryOrChangeToWildcard"
                 @topic-dci-dismiss="removeSelectedTopic"
             />
             <div class="container is-fluid">
@@ -131,6 +132,9 @@ export default {
         },
         clearPreviewPane() {
             this.setPreviewPane( '', '' );
+        },
+        clearQueryOrChangeToWildcard() {
+            alert( 'clearQueryOrChangeToWildcard' );
         },
         clearTopicFilters() {
             this.facetPane.selectedTopicFacetItems = [];

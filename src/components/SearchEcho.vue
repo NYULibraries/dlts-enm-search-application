@@ -81,7 +81,7 @@ export default {
     },
     methods: {
         clickDeleteSearchDCI() {
-
+            this.$emit( 'search-dci-dismiss', event.currentTarget.id );
         },
         clickDeleteTopicDCI( event ) {
             this.$emit( 'topic-dci-dismiss', event.currentTarget.id );
