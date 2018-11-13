@@ -1,6 +1,7 @@
 <template>
     <div id="app">
         <search-form
+            :query="searchForm.query"
             :query-fields="searchForm.queryFields"
             @submit="newQuerySubmitted"/>
         <div v-cloak>
@@ -113,6 +114,7 @@ export default {
                 selectedTopicFacetItems: [],
             },
             searchForm: {
+                query: '',
                 queryFields: QUERY_FIELDS,
             },
             spinner: {
@@ -160,6 +162,9 @@ export default {
             }
         },
         newQuerySubmitted( query, queryFields ) {
+            // Keep search form blanking out
+            this.searchForm.query = query;
+
             this.currentSearch.query = query;
             this.currentSearch.queryFields = queryFields;
             this.currentSearch.selectedTopicFacetItems = [];

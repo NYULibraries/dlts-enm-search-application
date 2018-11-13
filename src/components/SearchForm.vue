@@ -56,6 +56,11 @@
 export default {
     name: 'SearchForm',
     props: {
+        query: {
+            type: String,
+            required: true,
+            default: null,
+        },
         queryFields: {
             type: Array,
             required: true,
