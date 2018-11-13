@@ -1,6 +1,7 @@
 <template>
     <div id="app">
         <search-form
+            :query="searchForm.query"
             :query-fields="searchForm.queryFields"
             @submit="newQuerySubmitted"/>
         <div v-cloak>
@@ -9,6 +10,7 @@
                 :query="searchEcho.query"
                 :selected-query-fields-d-c-i-labels="searchEcho.selectedQueryFieldsDCILabels"
                 :selected-topic-facet-items="searchEcho.selectedTopicFacetItems"
+                @search-dci-dismiss="clearQueryOrChangeToWildcard"
                 @topic-dci-dismiss="removeSelectedTopic"
             />
             <div class="container is-fluid">
@@ -112,6 +114,7 @@ export default {
                 selectedTopicFacetItems: [],
             },
             searchForm: {
+                query: '',
                 queryFields: QUERY_FIELDS,
             },
             spinner: {
@@ -131,6 +134,29 @@ export default {
         },
         clearPreviewPane() {
             this.setPreviewPane( '', '' );
+        },
+        clearQueryOrChangeToWildcard() {
+            // Change to blank search if no topic DCIs
+            if ( this.currentSearch.selectedTopicFacetItems.length === 0 ) {
+                this.currentSearch.query = '';
+                this.searchForm.query = '';
+            } else {
+                // If topic DCIs and query is already "*", do nothing
+                if ( this.currentSearch.query === '*' ) {
+                    return;
+                } else {
+                    // If topic DCIs and query was not already "*", change to "*"
+                    // and do a new search
+                    this.currentSearch.query = '*';
+                    this.searchForm.query = '*';
+                }
+            }
+
+            this.solrSearch(
+                this.currentSearch.query,
+                this.currentSearch.queryFields,
+                this.currentSearch.selectedTopicFacetItems
+            );
         },
         clearTopicFilters() {
             this.facetPane.selectedTopicFacetItems = [];
@@ -156,6 +182,9 @@ export default {
             }
         },
         newQuerySubmitted( query, queryFields ) {
+            // Keep search form blanking out
+            this.searchForm.query = query;
+
             this.currentSearch.query = query;
             this.currentSearch.queryFields = queryFields;
             this.currentSearch.selectedTopicFacetItems = [];
