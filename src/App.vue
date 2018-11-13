@@ -106,7 +106,7 @@ export default {
                 results: [],
             },
             searchEcho: {
-                display: false,
+                display: true,
                 query: '',
                 selectedQueryFieldsDCILabels: null,
                 selectedTopicFacetItems: [],
@@ -143,16 +143,8 @@ export default {
                 pane.display = state;
             } );
         },
-        hideAllPanes() {
-            this.setPanesDisplay(
-                [
-                    this.searchEcho,
-                    this.facetPane,
-                    this.resultsPane,
-                    this.previewPane,
-                ],
-                false
-            );
+        hidePanes( ...panes ) {
+            this.setPanesDisplay( panes, false );
         },
         loadFirstResultInPreviewPane() {
             if ( this.resultsPane.results.length > 0 ) {
@@ -258,13 +250,16 @@ export default {
             return response;
         },
         async solrSearch( query, queryFields, selectedTopicFacetItems ) {
-            this.hideAllPanes();
+            this.setSearchEcho( query, queryFields, selectedTopicFacetItems );
+
+            this.hidePanes( [
+                this.facetPane,
+                this.resultsPane,
+                this.previewPane,
+            ] );
 
             this.clearTopicFilters();
             this.clearPreviewPane();
-
-            this.setSearchEcho( query, queryFields, selectedTopicFacetItems );
-            this.displayPanes( this.searchEcho );
 
             this.spinner.display = true;
 
