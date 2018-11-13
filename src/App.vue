@@ -136,7 +136,27 @@ export default {
             this.setPreviewPane( '', '' );
         },
         clearQueryOrChangeToWildcard() {
-            alert( 'clearQueryOrChangeToWildcard' );
+            // Change to blank search if no topic DCIs
+            if ( this.currentSearch.selectedTopicFacetItems.length === 0 ) {
+                this.currentSearch.query = '';
+                this.searchForm.query = '';
+            } else {
+                // If topic DCIs and query is already "*", do nothing
+                if ( this.currentSearch.query === '*' ) {
+                    return;
+                } else {
+                    // If topic DCIs and query was not already "*", change to "*"
+                    // and do a new search
+                    this.currentSearch.query = '*';
+                    this.searchForm.query = '*';
+                }
+            }
+
+            this.solrSearch(
+                this.currentSearch.query,
+                this.currentSearch.queryFields,
+                this.currentSearch.selectedTopicFacetItems
+            );
         },
         clearTopicFilters() {
             this.facetPane.selectedTopicFacetItems = [];
