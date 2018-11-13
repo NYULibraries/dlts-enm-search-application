@@ -9,6 +9,7 @@
                 :query="searchEcho.query"
                 :selected-query-fields-d-c-i-labels="searchEcho.selectedQueryFieldsDCILabels"
                 :selected-topic-facet-items="searchEcho.selectedTopicFacetItems"
+                @topic-dci-dismiss="removeSelectedTopic"
             />
             <div class="container is-fluid">
                 <div class="columns enm-panes">
@@ -168,6 +169,23 @@ export default {
             this.currentSearch.selectedTopicFacetItems = [];
 
             this.solrSearch( query, queryFields, [] );
+        },
+        removeSelectedTopic( topic ) {
+            const found = this.currentSearch.selectedTopicFacetItems.findIndex(
+                ( selectedTopicFacetItem ) => {
+                    return selectedTopicFacetItem === topic;
+                }
+            );
+
+            if ( found !== -1 ) {
+                this.currentSearch.selectedTopicFacetItems.splice( found, 1 );
+            }
+
+            this.solrSearch(
+                this.currentSearch.query,
+                this.currentSearch.queryFields,
+                this.currentSearch.selectedTopicFacetItems
+            );
         },
         setFacetPaneFromSolrResponse( solrResponse ) {
             const topicFacetItems = solrResponse.facet_counts.facet_fields.topicNames_facet;
