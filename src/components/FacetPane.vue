@@ -108,7 +108,7 @@ export default {
         },
     },
     watch: {
-        topicsFacetList( oldList, newList ) {
+        topicsFacetList( newList, oldList ) {
             this.showAllTopics = false;
         },
     },
