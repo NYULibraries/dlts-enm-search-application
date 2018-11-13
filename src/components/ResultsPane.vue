@@ -116,8 +116,8 @@ export default {
         },
     },
     methods: {
-        previewEpub() {
-
+        previewEpub( event ) {
+            this.$emit( 'epub-click', event.currentTarget.id, event.currentTarget.name );
         },
     },
 };

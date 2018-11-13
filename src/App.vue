@@ -29,6 +29,7 @@
                         :num-books="resultsPane.numBooks"
                         :num-pages="resultsPane.numPages"
                         :results="resultsPane.results"
+                        @epub-click="setPreviewPane"
                     />
                     <preview-pane
                         :display="previewPane.display"
