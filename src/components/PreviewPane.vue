@@ -74,6 +74,11 @@ export default {
     name: 'PreviewPane',
     components: { BarChart },
     props: {
+        currentSearch: {
+            type: Object,
+            required: true,
+            default: null,
+        },
         display : {
             type     : Boolean,
             required : true,
