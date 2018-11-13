@@ -35,7 +35,10 @@
                             </figure>
                         </div>
                         <div class="media-content">
-                            <!-- da70 Here, the link to load the preview is repeated.  THe first one is for fancy "whole div" rollovrers and the second is for accessibility.  Not sure how this will work with vue.js  -->
+                            <!-- The link to load the preview is repeated.
+                                 Tte first one is for fancy "whole div" rollovers
+                                 and the second is for accessibility.
+                                 TODO: Check with Laura to see if the above still holds. -->
                             <a
                                 class="enm-divlink"
                                 href="#">&nbsp;</a>
