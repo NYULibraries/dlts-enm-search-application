@@ -97,11 +97,11 @@ export default {
     },
     computed: {
         topicFacetItemsAlwaysVisible() {
-            return this.topicFacetListSelectedItemsRemoved.slice( 0, this.topicsFacetListLimit );
+            return this.topicsFacetList.slice( 0, this.topicsFacetListLimit );
         },
         topicFacetItemsToggleable() {
             if ( this.showAllTopics ) {
-                return this.topicFacetListSelectedItemsRemoved.slice( this.topicsFacetListLimit );
+                return this.topicsFacetList.slice( this.topicsFacetListLimit );
             } else {
                 return [];
             }
