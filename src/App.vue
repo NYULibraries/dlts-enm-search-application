@@ -252,11 +252,11 @@ export default {
         async solrSearch( query, queryFields, selectedTopicFacetItems ) {
             this.setSearchEcho( query, queryFields, selectedTopicFacetItems );
 
-            this.hidePanes( [
+            this.hidePanes(
                 this.facetPane,
                 this.resultsPane,
                 this.previewPane,
-            ] );
+            );
 
             this.clearTopicFilters();
             this.clearPreviewPane();
