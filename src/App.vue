@@ -2,21 +2,22 @@
     <div id="app">
         <search-form
             :query-fields="searchForm.queryFields"
-            @submit="solrSearch"/>
+            @submit="newQuerySubmitted"/>
         <div v-cloak>
             <search-echo
                 :display="searchEcho.display"
                 :query="searchEcho.query"
                 :selected-query-fields-d-c-i-labels="searchEcho.selectedQueryFieldsDCILabels"
                 :selected-topic-facet-items="searchEcho.selectedTopicFacetItems"
+                @topic-dci-dismiss="removeSelectedTopic"
             />
             <div class="container is-fluid">
                 <div class="columns enm-panes">
                     <facet-pane
                         :display="facetPane.display"
-                        :selected-topic-facet-items="facetPane.selectedTopicFacetItems"
                         :topics-facet-list="facetPane.topicsFacetList"
                         :topics-facet-list-limit="facetPane.topicsFacetListLimit"
+                        @topic-click="addSelectedTopic"
                     />
 
                     <spinner :display="spinner.display"/>
@@ -83,9 +84,13 @@ export default {
     },
     data() {
         return {
+            currentSearch: {
+                query: '',
+                queryFields: [],
+                selectedTopicFacetItems: [],
+            },
             facetPane: {
                 display: false,
-                selectedTopicFacetItems: [],
                 topicsFacetList: [],
                 topicsFacetListLimit: 15,
             },
@@ -101,7 +106,7 @@ export default {
                 results: [],
             },
             searchEcho: {
-                display: false,
+                display: true,
                 query: '',
                 selectedQueryFieldsDCILabels: null,
                 selectedTopicFacetItems: [],
@@ -115,6 +120,15 @@ export default {
         };
     },
     methods : {
+        addSelectedTopic( topic ) {
+            this.currentSearch.selectedTopicFacetItems.push( topic );
+
+            this.solrSearch(
+                this.currentSearch.query,
+                this.currentSearch.queryFields,
+                this.currentSearch.selectedTopicFacetItems
+            );
+        },
         clearPreviewPane() {
             this.setPreviewPane( '', '' );
         },
@@ -129,16 +143,8 @@ export default {
                 pane.display = state;
             } );
         },
-        hideAllPanes() {
-            this.setPanesDisplay(
-                [
-                    this.searchEcho,
-                    this.facetPane,
-                    this.resultsPane,
-                    this.previewPane,
-                ],
-                false
-            );
+        hidePanes( ...panes ) {
+            this.setPanesDisplay( panes, false );
         },
         loadFirstResultInPreviewPane() {
             if ( this.resultsPane.results.length > 0 ) {
@@ -148,6 +154,30 @@ export default {
             } else {
                 this.previewPane.isbn = '';
             }
+        },
+        newQuerySubmitted( query, queryFields ) {
+            this.currentSearch.query = query;
+            this.currentSearch.queryFields = queryFields;
+            this.currentSearch.selectedTopicFacetItems = [];
+
+            this.solrSearch( query, queryFields, [] );
+        },
+        removeSelectedTopic( topic ) {
+            const found = this.currentSearch.selectedTopicFacetItems.findIndex(
+                ( selectedTopicFacetItem ) => {
+                    return selectedTopicFacetItem === topic;
+                }
+            );
+
+            if ( found !== -1 ) {
+                this.currentSearch.selectedTopicFacetItems.splice( found, 1 );
+            }
+
+            this.solrSearch(
+                this.currentSearch.query,
+                this.currentSearch.queryFields,
+                this.currentSearch.selectedTopicFacetItems
+            );
         },
         setFacetPaneFromSolrResponse( solrResponse ) {
             const topicFacetItems = solrResponse.facet_counts.facet_fields.topicNames_facet;
@@ -167,7 +197,7 @@ export default {
             }
 
             // Remove topics already selected by user
-            this.facetPane.selectedTopicFacetItems.forEach(
+            this.currentSearch.selectedTopicFacetItems.forEach(
                 ( selectedTopic ) => {
                     const found = this.facetPane.topicsFacetList.findIndex(
                         ( element ) => {
@@ -219,18 +249,21 @@ export default {
 
             return response;
         },
-        async solrSearch( query, queryFields ) {
-            this.hideAllPanes();
+        async solrSearch( query, queryFields, selectedTopicFacetItems ) {
+            this.setSearchEcho( query, queryFields, selectedTopicFacetItems );
+
+            this.hidePanes( [
+                this.facetPane,
+                this.resultsPane,
+                this.previewPane,
+            ] );
 
             this.clearTopicFilters();
             this.clearPreviewPane();
 
-            this.setSearchEcho( query, queryFields, [] );
-            this.displayPanes( this.searchEcho );
-
             this.spinner.display = true;
 
-            const response = await this.$solrSearch( query, queryFields );
+            const response = await this.$solrSearch( query, queryFields, selectedTopicFacetItems );
 
             this.setFacetPaneFromSolrResponse( response );
             this.setResultsPaneFromSolrResponse( response );
