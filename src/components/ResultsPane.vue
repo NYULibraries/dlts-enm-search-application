@@ -117,7 +117,11 @@ export default {
     },
     methods: {
         previewEpub( event ) {
-            this.$emit( 'epub-click', event.currentTarget.id, event.currentTarget.name );
+            this.$emit(
+                'epub-click',
+                event.currentTarget.id,
+                event.currentTarget.getAttribute( 'name' )
+            );
         },
     },
 };
