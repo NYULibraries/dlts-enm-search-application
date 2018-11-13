@@ -105,6 +105,26 @@ export default {
         loadFirstEpub() {
 
         },
+        async solrPreviewEpub() {
+            const response = await this.$solrPreviewEpub(
+                '9780472024490',
+                'art',
+                [ 'pageText', 'topicNames' ],
+                [ 'postmodernism', 'Hutcheon, Linda' ],
+            );
+
+            return response;
+        },
+        async solrPreviewPage() {
+            const response = await this.$solrPreviewPage(
+                '9780472024490',
+                88,
+                'art',
+                [ 'pageText', 'topicNames' ],
+            );
+
+            return response;
+        },
     },
 };
 </script>
