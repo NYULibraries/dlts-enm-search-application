@@ -83,6 +83,11 @@ export default {
     },
     data() {
         return {
+            currentSearch: {
+                query: '',
+                queryFields: [],
+                selectedTopicFacetItems: [],
+            },
             facetPane: {
                 display: false,
                 topicsFacetList: [],
