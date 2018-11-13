@@ -154,18 +154,18 @@ export default {
             }
         },
         newLimitByTopicList( selectedTopicFacetItems ) {
-            this.$currentSearch.selectedTopicFacetItems = selectedTopicFacetItems;
+            this.currentSearch.selectedTopicFacetItems = selectedTopicFacetItems;
 
             this.solrSearch(
-                this.$currentSearch.query,
-                this.$currentSearch.queryFields,
+                this.currentSearch.query,
+                this.currentSearch.queryFields,
                 selectedTopicFacetItems
             );
         },
         newQuerySubmitted( query, queryFields ) {
-            this.$currentSearch.query = query;
-            this.$currentSearch.queryFields = queryFields;
-            this.$currentSearch.selectedTopicFacetItems = [];
+            this.currentSearch.query = query;
+            this.currentSearch.queryFields = queryFields;
+            this.currentSearch.selectedTopicFacetItems = [];
 
             this.solrSearch( query, queryFields, [] );
         },
