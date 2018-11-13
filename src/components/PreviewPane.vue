@@ -106,6 +106,15 @@ export default {
             topicsOnPage: null,
         };
     },
+    watch: {
+        isbn( newIsbn, oldIsbn ) {
+            if ( newIsbn === '' ) {
+                return;
+            }
+
+            console.log( `${ oldIsbn } => ${ newIsbn }` );
+        },
+    },
     methods: {
         loadFirstEpub() {
 
