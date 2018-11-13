@@ -97,12 +97,30 @@ export default {
         };
     },
     computed: {
+        topicFacetListSelectedItemsRemoved() {
+            const topicFacetListSelectedItemsRemoved = this.topicsFacetList.slice();
+
+            // Remove topics already selected by user
+            this.selectedTopicFacetItems.forEach( ( selectedTopic ) => {
+                const found = topicFacetListSelectedItemsRemoved.findIndex(
+                    ( element ) => {
+                        return element.name === selectedTopic;
+                    }
+                );
+
+                if ( found !== -1 ) {
+                    topicFacetListSelectedItemsRemoved.splice( found, 1 );
+                }
+            } );
+
+            return topicFacetListSelectedItemsRemoved;
+        },
         topicFacetItemsAlwaysVisible() {
-            return this.topicsFacetList.slice( 0, this.topicsFacetListLimit );
+            return this.topicFacetListSelectedItemsRemoved.slice( 0, this.topicsFacetListLimit );
         },
         topicFacetItemsToggleable() {
             if ( this.showAllTopics ) {
-                return this.topicsFacetList.slice( this.topicsFacetListLimit );
+                return this.topicFacetListSelectedItemsRemoved.slice( this.topicsFacetListLimit );
             } else {
                 return [];
             }
