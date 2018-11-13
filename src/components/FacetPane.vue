@@ -75,6 +75,13 @@ export default {
             required : true,
             default  : false,
         },
+        selectedTopicFacetItems: {
+            type: Array,
+            required: true,
+            default: function  () {
+                return null;
+            },
+        },
         topicsFacetList: {
             type : Array,
             required: true,
@@ -92,7 +99,6 @@ export default {
     },
     data() {
         return {
-            selectedTopicFacetItems: [],
             showAllTopics: false,
         };
     },
@@ -133,10 +139,9 @@ export default {
     },
     methods: {
         clickTopicFacetItem( event ) {
-            this.selectedTopicFacetItems.push( event.currentTarget.id );
             // Recommended to always use kebab-case for event names
             // https://vuejs.org/v2/guide/components-custom-events.html#Event-Names
-            this.$emit( 'topic-click', this.selectedTopicFacetItems.slice() );
+            this.$emit( 'topic-click', event.currentTarget.id );
         },
     },
 };
