@@ -83,8 +83,8 @@ export default {
         clickDeleteSearchDCI() {
 
         },
-        clickDeleteTopicDCI() {
-
+        clickDeleteTopicDCI( event ) {
+            this.$emit( 'topic-dci-dismiss', event.currentTarget.id );
         },
     },
 };
