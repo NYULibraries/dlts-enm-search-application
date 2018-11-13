@@ -16,7 +16,7 @@
                         :display="facetPane.display"
                         :topics-facet-list="facetPane.topicsFacetList"
                         :topics-facet-list-limit="facetPane.topicsFacetListLimit"
-                        @topic-click="newLimitByTopicList"
+                        @topic-click="addSelectedTopic"
                     />
 
                     <spinner :display="spinner.display"/>
@@ -119,6 +119,15 @@ export default {
         };
     },
     methods : {
+        addSelectedTopic( topic ) {
+            this.currentSearch.selectedTopicFacetItems.push( topic );
+
+            this.solrSearch(
+                this.currentSearch.query,
+                this.currentSearch.queryFields,
+                this.currentSearch.selectedTopicFacetItems
+            );
+        },
         clearPreviewPane() {
             this.setPreviewPane( '', '' );
         },
@@ -152,15 +161,6 @@ export default {
             } else {
                 this.previewPane.isbn = '';
             }
-        },
-        newLimitByTopicList( selectedTopicFacetItems ) {
-            this.currentSearch.selectedTopicFacetItems = selectedTopicFacetItems;
-
-            this.solrSearch(
-                this.currentSearch.query,
-                this.currentSearch.queryFields,
-                selectedTopicFacetItems
-            );
         },
         newQuerySubmitted( query, queryFields ) {
             this.currentSearch.query = query;
