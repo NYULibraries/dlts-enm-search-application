@@ -110,7 +110,7 @@ export default {
         loadFirstEpub() {
 
         },
-        async solrPreviewEpub() {
+        async solrPreviewEpub( isbn, query, queryFields, selectedTopicFacetFields ) {
             const response = await this.$solrPreviewEpub(
                 '9780472024490',
                 'art',
