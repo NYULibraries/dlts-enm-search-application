@@ -56,7 +56,7 @@
 export default {
     name: 'SearchForm',
     props: {
-        query: {
+        queryOverride: {
             type: String,
             required: true,
             default: null,
@@ -74,6 +74,11 @@ export default {
                 ( queryField ) => { return queryField.value; }
             ),
         };
+    },
+    watch: {
+        queryOverride( newQuery, oldQuery ) {
+            this.query = newQuery;
+        },
     },
     methods: {
         submitSearchForm() {
