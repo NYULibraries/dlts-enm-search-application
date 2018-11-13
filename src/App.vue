@@ -17,7 +17,7 @@
                         :selected-topic-facet-items="facetPane.selectedTopicFacetItems"
                         :topics-facet-list="facetPane.topicsFacetList"
                         :topics-facet-list-limit="facetPane.topicsFacetListLimit"
-                        @topicclick="newLimitByTopicList"
+                        @topic-click="newLimitByTopicList"
                     />
 
                     <spinner :display="spinner.display"/>

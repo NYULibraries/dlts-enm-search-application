@@ -133,12 +133,10 @@ export default {
     },
     methods: {
         clickTopicFacetItem( event ) {
-            // Event name is awkward looking, but convention for native events
-            // seems to be noun-verb all lowercase:
-            // https://developer.mozilla.org/en-US/docs/Web/Events
             this.selectedTopicFacetItems.push( event.currentTarget.id );
-            // Pass a copy back to parent
-            this.$emit( 'topicclick', this.selectedTopicFacetItems.slice() );
+            // Recommended to always use kebab-case for event names
+            // https://vuejs.org/v2/guide/components-custom-events.html#Event-Names
+            this.$emit( 'topic-click', this.selectedTopicFacetItems.slice() );
         },
     },
 };
