@@ -45,7 +45,7 @@ export default {
             required: true,
             default: null,
         },
-        barChartDataMatchedPages: {
+        barChartData: {
             type: Array,
             required: true,
             default: function () {
