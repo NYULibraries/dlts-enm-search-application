@@ -37,6 +37,9 @@
 </template>
 
 <script>
+import * as d3 from 'd3';
+import d3Tip from 'd3-tip';
+
 export default {
     name: 'BarChart',
     props: {
@@ -62,14 +65,80 @@ export default {
         return {
             pageNumberForDisplay: null,
             pageIndex: null,
+            tip: null,
         };
     },
+    mounted() {
+        this.tip = d3Tip()
+            .attr( 'class', 'd3-tip' )
+            .offset( [ -10, 0 ] )
+            .html( function ( d ) {
+                return 'Page: ' + d.page +
+                       '<br>' +
+                       '<span class="tooltip-score">' +
+                       'Score: ' + d.score +
+                       '</span>';
+            } );
+
+        d3.select( 'svg' ).call( this.tip );
+    },
     methods: {
+        clearBarChart() {
+            d3.selectAll( 'svg > *' ).remove();
+        },
         clickNext() {
 
         },
         clickPrevious() {
 
+        },
+        drawBarChart() {
+            this.clearBarChart();
+
+            // Based on https://bl.ocks.org/mbostock/3885304, with tooltips added using
+            // https://github.com/Caged/d3-tip.
+
+            const svg   = d3.select( 'svg' );
+            const width = svg.attr( 'width' );
+            const height = svg.attr( 'height' );
+
+            const x = d3.scaleBand().rangeRound( [ 0, width ] ).padding( 0.1 );
+            const y = d3.scaleLinear().rangeRound( [ height, 0 ] );
+
+            const g = svg.append( 'g' );
+
+            x.domain( this.barChartData.map( function ( d ) {
+                return d.page;
+            } ) );
+            y.domain(
+                [
+                    0,
+                    d3.max( this.barChartData, ( d ) => {
+                        return d.score;
+                    } ),
+                ] );
+
+            g.selectAll( '.bar' )
+                .data( this.barChartData )
+                .enter().append( 'rect' )
+                .attr( 'class', 'bar' )
+                .attr( 'name', ( d ) => {
+                    return d.page;
+                } )
+                .attr( 'x', ( d ) => {
+                    return x( d.page );
+                } )
+                .attr( 'y', function ( d ) {
+                    return y( d.score );
+                } )
+                .attr( 'width', x.bandwidth() )
+                .attr( 'height', function ( d ) {
+                    return height - y( d.score );
+                } )
+                .attr( 'stroke', 'black' )
+                .on( 'click', this.previewEpubPage )
+                .on( 'mouseover', this.tip.show )
+                .on( 'mouseout', this.tip.hide );
         },
     },
 };
