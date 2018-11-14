@@ -68,6 +68,11 @@ export default {
             tip: null,
         };
     },
+    watch: {
+        barChartData() {
+            this.drawBarChart();
+        },
+    },
     mounted() {
         this.tip = d3Tip()
             .attr( 'class', 'd3-tip' )
