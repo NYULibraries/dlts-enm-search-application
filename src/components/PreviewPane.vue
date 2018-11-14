@@ -26,7 +26,7 @@
                 style="display: none"></span>
 
             <bar-chart
-                :bar-chart-data-matched-pages="[]"
+                :bar-chart-data="barChart.barChartData"
                 :display="!!isbn"
                 :isbn="isbn"
                 :title="title"
@@ -98,6 +98,7 @@ export default {
     data() {
         return {
             barChart: {
+                barChartData: [],
                 isbn: this.isbn,
                 title: this.title,
             },
@@ -109,15 +110,42 @@ export default {
     watch: {
         isbn( newIsbn, oldIsbn ) {
             if ( newIsbn === '' ) {
+                this.barChart.barChartData = [];
+
                 return;
             }
 
-            console.log( `${ oldIsbn } => ${ newIsbn }` );
+            this.previewEpub();
         },
     },
     methods: {
         loadFirstEpub() {
 
+        },
+        async previewEpub() {
+            const response = await this.solrPreviewEpub(
+                this.isbn,
+                this.currentSearch.query,
+                this.currentSearch.queryFields,
+                this.currentSearch.selectedTopicFacetFields,
+            );
+
+            const barChartData = [];
+
+            // docs are sorted by pageSequenceNumber in asc order
+            response.response.docs.forEach( ( doc ) => {
+                barChartData.push(
+                    {
+                        page  : doc.pageNumberForDisplay,
+                        score : doc.score,
+                    }
+                );
+            } );
+
+            this.barChart.barChartData = barChartData;
+
+            // Draw bar chart
+            // Trigger click of bar for first matched page
         },
         async solrPreviewEpub( isbn, query, queryFields, selectedTopicFacetFields ) {
             const response = await this.$solrPreviewEpub(
