@@ -25,7 +25,7 @@
             >
                 &lt; previous </a>
             <a
-                :disabled="pageIndex === barChartDataMatchedPages.length - 1"
+                :disabled="pageIndex === barChartData.length - 1"
                 href="#"
                 class="button"
                 title="View next matched page in this book"
