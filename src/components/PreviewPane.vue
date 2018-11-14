@@ -121,10 +121,10 @@ export default {
         },
         async solrPreviewEpub( isbn, query, queryFields, selectedTopicFacetFields ) {
             const response = await this.$solrPreviewEpub(
-                '9780472024490',
-                'art',
-                [ 'pageText', 'topicNames' ],
-                [ 'postmodernism', 'Hutcheon, Linda' ],
+                isbn,
+                query,
+                queryFields,
+                selectedTopicFacetFields,
             );
 
             return response;
