@@ -33,7 +33,7 @@
             />
 
             <div
-                v-show="pageNumberForDisplay"
+                v-show="selectedPageNumber"
                 class="enm-topicsonthispage">
                 <h3>Topics on this page</h3>
 
@@ -60,7 +60,7 @@
             <hr>
 
             <div
-                v-show="pageNumberForDisplay"
+                v-show="selectedPageNumber"
                 class="enm-pageText"
                 v-html="pageText">
             </div>
@@ -102,7 +102,7 @@ export default {
                 isbn: this.isbn,
                 title: this.title,
             },
-            pageNumberForDisplay: null,
+            selectedPageNumber: null,
             pageText: null,
             topicsOnPage: null,
         };
