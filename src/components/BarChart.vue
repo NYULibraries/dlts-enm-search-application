@@ -63,8 +63,8 @@ export default {
     },
     data() {
         return {
-            pageNumberForDisplay: null,
             pageIndex: null,
+            pageNumberForDisplay: null,
             tip: null,
         };
     },
