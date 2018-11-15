@@ -174,15 +174,6 @@ export default {
         hidePanes( ...panes ) {
             this.setPanesDisplay( panes, false );
         },
-        loadFirstResultInPreviewPane() {
-            if ( this.resultsPane.results.length > 0 ) {
-                const firstResult = this.resultsPane.results[ 0 ];
-                this.previewPane.isbn  = firstResult.groupValue;
-                this.previewPane.title = firstResult.doclist.docs[ 0 ].title;
-            } else {
-                this.previewPane.isbn = '';
-            }
-        },
         newQuerySubmitted( query, queryFields ) {
             this.currentSearch.query = query;
             this.currentSearch.queryFields = queryFields;
