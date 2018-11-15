@@ -30,6 +30,7 @@
                 :display="!!isbn"
                 :isbn="isbn"
                 :title="title"
+                @bar-click="previewEpubPage"
             />
 
             <div
