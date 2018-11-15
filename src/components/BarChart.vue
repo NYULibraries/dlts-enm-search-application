@@ -77,11 +77,6 @@ export default {
             } );
 
             this.drawBarChart();
-
-            this.selectedBarIndex = 0;
-        },
-        selectedBarIndex( newBarIndex, oldBarIndex ) {
-            this.$emit( 'bar-click', newBarIndex );
         },
     },
     mounted() {
@@ -155,6 +150,9 @@ export default {
                 .on( 'click', this.previewEpubPage )
                 .on( 'mouseover', this.tip.show )
                 .on( 'mouseout', this.tip.hide );
+        },
+        selectPage( event ) {
+            this.$emit( 'bar-click', event.page );
         },
     },
 };
