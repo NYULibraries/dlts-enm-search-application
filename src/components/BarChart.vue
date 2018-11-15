@@ -147,7 +147,7 @@ export default {
                     return height - y( d.score );
                 } )
                 .attr( 'stroke', 'black' )
-                .on( 'click', this.previewEpubPage )
+                .on( 'click', this.selectPage )
                 .on( 'mouseover', this.tip.show )
                 .on( 'mouseout', this.tip.hide );
         },
