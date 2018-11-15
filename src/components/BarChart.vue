@@ -64,12 +64,18 @@ export default {
     data() {
         return {
             pageIndex: null,
+            pageToBarIndexMap    : {},
             pageNumberForDisplay: null,
             tip: null,
         };
     },
     watch: {
-        barChartData() {
+        barChartData( newBarChartData, oldBarChartData ) {
+            this.pageToBarIndexMap = {};
+            this.barChartData.forEach( ( matchedPage, index ) => {
+                this.pageToBarIndexMap[ matchedPage.page ] = index;
+            } );
+
             this.drawBarChart();
         },
     },
