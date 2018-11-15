@@ -77,6 +77,8 @@ export default {
             } );
 
             this.drawBarChart();
+            // Load first page
+            this.triggerClickPage( this.barChartData[ 0 ].page );
         },
         selectedPageNumber: ( newSelectedPageNumber, oldSelectedPageNumber ) => {
             d3.select( '.enm-page-active' )
