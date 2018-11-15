@@ -12,7 +12,7 @@
                 <br>
                 <a
                     href="#"
-                    @click="loadFirstEpub">Load the first matched page</a>
+                    @click="loadFirstMatchedPage">Load the first matched page</a>
             </p>
         </div>
         <!--PREVIEW: NO EPUB SELECTED-->
@@ -124,6 +124,9 @@ export default {
         },
     },
     methods: {
+        loadFirstMatchedPage() {
+
+        },
         async previewEpub() {
             let response;
             try {
