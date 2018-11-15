@@ -98,10 +98,10 @@ export default {
             d3.selectAll( 'svg > *' ).remove();
         },
         clickNext() {
-
+            this.selectedBarIndex++;
         },
         clickPrevious() {
-
+            this.selectedBarIndex--;
         },
         drawBarChart() {
             this.clearBarChart();
