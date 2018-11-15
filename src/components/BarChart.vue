@@ -17,7 +17,7 @@
             v-show="isbn"
             class="enm-buttons">
             <a
-                :disabled="pageIndex === 0"
+                :disabled="selectedBarIndex === 0"
                 href="#"
                 class="button"
                 title="View previous matched page in this book"
@@ -25,7 +25,7 @@
             >
                 &lt; previous </a>
             <a
-                :disabled="pageIndex === barChartData.length - 1"
+                :disabled="selectedBarIndex === barChartData.length - 1"
                 href="#"
                 class="button"
                 title="View next matched page in this book"
@@ -63,8 +63,8 @@ export default {
     },
     data() {
         return {
-            pageIndex: null,
             pageToBarIndexMap    : {},
+            selectedBarIndex: null,
             pageNumberForDisplay: null,
             tip: null,
         };
