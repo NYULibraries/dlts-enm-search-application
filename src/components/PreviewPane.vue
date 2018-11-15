@@ -128,12 +128,22 @@ export default {
 
         },
         async previewEpub() {
-            const response = await this.solrPreviewEpub(
-                this.isbn,
-                this.currentSearch.query,
-                this.currentSearch.queryFields,
-                this.currentSearch.selectedTopicFacetFields,
-            );
+            let response;
+            try {
+                response = await this.solrPreviewEpub(
+                    this.isbn,
+                    this.currentSearch.query,
+                    this.currentSearch.queryFields,
+                    this.currentSearch.selectedTopicFacetFields,
+                );
+            } catch( e ) {
+                console.error( 'ERROR in PreviewPane.previewEpub: ' + e );
+
+                // TODO: replace this with something more user-friendly
+                alert( 'Sorry, the server has returned an error or is not responding.' );
+
+                return;
+            }
 
             const barChartData = [];
 
