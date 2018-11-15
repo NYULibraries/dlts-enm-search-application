@@ -14,7 +14,7 @@
             height="190"/>
 
         <div
-            v-show="isbn"
+            v-show="barChartData.length > 0"
             class="enm-buttons">
             <a
                 :disabled="selectedBarIndex === 0"
@@ -43,11 +43,6 @@ import d3Tip from 'd3-tip';
 export default {
     name  : 'BarChart',
     props : {
-        isbn                       : {
-            type     : String,
-            required : true,
-            default  : null,
-        },
         barChartData               : {
             type     : Array,
             required : true,
