@@ -117,6 +117,9 @@ export default {
         isbn( newIsbn, oldIsbn ) {
             if ( newIsbn === '' ) {
                 this.barChart.barChartData = [];
+                this.pageText = null;
+                this.selectedPageNumber = null;
+                this.topicsOnPage = null;
 
                 return;
             }
