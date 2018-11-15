@@ -288,11 +288,15 @@ export default {
 
             this.spinner.display = false;
 
-            this.displayPanes(
-                this.facetPane,
-                this.resultsPane,
-                this.previewPane,
-            );
+            if ( this.resultsPane.results.length > 0 ) {
+                this.displayPanes(
+                    this.facetPane,
+                    this.resultsPane,
+                    this.previewPane,
+                );
+            } else {
+                this.displayPanes( this.resultsPane );
+            }
 
             return response;
         },
