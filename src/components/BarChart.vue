@@ -2,8 +2,8 @@
     <div id="bar-chart">
         <header>
             <div
-                v-show="pageNumberForDisplay"
-                class="enm-pageno">page {{ pageNumberForDisplay }}</div>
+                v-show="selectedPageNumber"
+                class="enm-pageno">page {{ selectedPageNumber }}</div>
             <h2
                 v-show="title"
                 class="title is-spaced">{{ title }}</h2>
@@ -65,7 +65,7 @@ export default {
         return {
             pageToBarIndexMap    : {},
             selectedBarIndex: null,
-            pageNumberForDisplay: null,
+            selectedPageNumber: null,
             tip: null,
         };
     },
