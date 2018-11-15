@@ -102,8 +102,8 @@ export default {
                 isbn         : this.isbn,
                 title        : this.title,
             },
-            selectedPageNumber : null,
             pageText           : null,
+            selectedPageNumber : null,
             topicsOnPage       : null,
         };
     },
