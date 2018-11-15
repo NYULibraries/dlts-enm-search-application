@@ -77,6 +77,11 @@ export default {
             } );
 
             this.drawBarChart();
+
+            this.selectedBarIndex = 0;
+        },
+        selectedBarIndex( newBarIndex, oldBarIndex ) {
+            this.$emit( 'bar-click', newBarIndex );
         },
     },
     mounted() {
