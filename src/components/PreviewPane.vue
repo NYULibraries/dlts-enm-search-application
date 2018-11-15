@@ -157,12 +157,12 @@ export default {
 
             return response;
         },
-        async solrPreviewPage() {
+        async solrPreviewPage( isbn, pageNumberForDisplay, query, queryFields ) {
             const response = await this.$solrPreviewPage(
-                '9780472024490',
-                88,
-                'art',
-                [ 'pageText', 'topicNames' ],
+                isbn,
+                pageNumberForDisplay,
+                query,
+                queryFields
             );
 
             return response;
