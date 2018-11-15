@@ -78,6 +78,15 @@ export default {
 
             this.drawBarChart();
         },
+        selectedPageNumber: ( newSelectedPageNumber, oldSelectedPageNumber ) => {
+            d3.select( '.enm-page-active' )
+                .classed( 'enm-page-active', false );
+            d3.select( 'rect[ name = "' + newSelectedPageNumber + '" ]' )
+                .classed( 'enm-page-active', true );
+
+            this.selectedBarIndex =
+                this.pageToBarIndexMap[ this.previewPane.pageNumberForDisplay ];
+        },
     },
     mounted() {
         this.tip = d3Tip()
@@ -152,7 +161,10 @@ export default {
                 .on( 'mouseout', this.tip.hide );
         },
         selectPage( event ) {
-            this.$emit( 'bar-click', event.page );
+            const page = event.page;
+
+            this.selectedPageNumber = page;
+            this.$emit( 'bar-click', page );
         },
     },
 };
