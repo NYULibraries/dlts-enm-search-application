@@ -176,7 +176,7 @@ export default {
 };
 
 function namesListContainsHighlights( alternateNames ) {
-    return alternateNames.filter( function( alternateName ) {
+    return alternateNames.filter( ( alternateName ) => {
         return alternateName.indexOf( HIGHLIGHT_PRE ) !== -1 &&
                alternateName.indexOf( HIGHLIGHT_POST ) !== -1;
     } ).length > 0;
