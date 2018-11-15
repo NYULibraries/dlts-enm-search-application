@@ -107,10 +107,22 @@ export default {
             d3.selectAll( 'svg > *' ).remove();
         },
         clickNext() {
-            this.selectedBarIndex++;
+            // Next button should disable itself automatically if on last matched page, but just in case, disable
+            // here, too.
+            if ( this.selectedBarIndex === this.barChartData.length - 1 ) {
+                return;
+            }
+
+            this.triggerClickPage( this.selectedBarIndex + 1 );
         },
         clickPrevious() {
-            this.selectedBarIndex--;
+            // Previous button should disable itself automatically if on first matched page, but just in case, disable
+            // here, too.
+            if ( this.selectedBarIndex === 0 ) {
+                return;
+            }
+
+            this.triggerClickPage( this.selectedBarIndex - 1 );
         },
         drawBarChart() {
             this.clearBarChart();
