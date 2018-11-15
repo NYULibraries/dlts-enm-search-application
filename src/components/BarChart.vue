@@ -66,6 +66,13 @@ export default {
     },
     watch: {
         barChartData( newBarChartData, oldBarChartData ) {
+            if ( newBarChartData.length === 0 ) {
+                this.clearBarChart();
+                this.selectedPageNumber = null;
+
+                return;
+            }
+
             this.pageToBarIndexMap = {};
             this.barChartData.forEach( ( matchedPage, index ) => {
                 this.pageToBarIndexMap[ matchedPage.page ] = index;
