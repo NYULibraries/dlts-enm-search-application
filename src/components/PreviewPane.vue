@@ -127,7 +127,7 @@ export default {
     },
     methods: {
         loadFirstMatchedPage() {
-
+            this.$emit( 'load-first-matched-page-link-click' );
         },
         async previewEpub() {
             let response;

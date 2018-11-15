@@ -36,6 +36,7 @@
                         :display="previewPane.display"
                         :isbn="previewPane.isbn"
                         :title="previewPane.title"
+                        @load-first-matched-page-link-click="previewFirstEpub"
                     />
                 </div>
             </div>
@@ -168,6 +169,12 @@ export default {
         },
         hidePanes( ...panes ) {
             this.setPanesDisplay( panes, false );
+        },
+        previewFirstEpub() {
+            this.setPreviewPane(
+                this.resultsPane.results[ 0 ].groupValue,
+                this.resultsPane.results[ 0 ].doclist.docs[ 0 ].title,
+            );
         },
         newQuerySubmitted( query, queryFields ) {
             this.currentSearch.query = query;
