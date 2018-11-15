@@ -68,24 +68,24 @@
 
 <script>
 export default {
-    name: 'ResultsPane',
-    props: {
-        display: {
+    name  : 'ResultsPane',
+    props : {
+        display  : {
             type     : Boolean,
             required : true,
             default  : false,
         },
-        numBooks: {
+        numBooks : {
             type     : Number,
             required : true,
             default  : null,
         },
-        numPages: {
+        numPages : {
             type     : Number,
             required : true,
             default  : null,
         },
-        results: {
+        results  : {
             type     : Array,
             required : true,
             default  : function () {

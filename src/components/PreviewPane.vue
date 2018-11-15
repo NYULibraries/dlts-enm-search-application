@@ -71,40 +71,40 @@
 <script>
 import BarChart from './BarChart';
 export default {
-    name: 'PreviewPane',
-    components: { BarChart },
-    props: {
-        currentSearch: {
-            type: Object,
-            required: true,
-            default: null,
+    name       : 'PreviewPane',
+    components : { BarChart },
+    props      : {
+        currentSearch : {
+            type     : Object,
+            required : true,
+            default  : null,
         },
-        display : {
+        display       : {
             type     : Boolean,
             required : true,
             default  : false,
         },
-        isbn: {
-            type: String,
-            required: true,
-            default: null,
+        isbn          : {
+            type     : String,
+            required : true,
+            default  : null,
         },
-        title: {
-            type: String,
-            required: true,
-            default: null,
+        title         : {
+            type     : String,
+            required : true,
+            default  : null,
         },
     },
     data() {
         return {
-            barChart: {
-                barChartData: [],
-                isbn: this.isbn,
-                title: this.title,
+            barChart           : {
+                barChartData : [],
+                isbn         : this.isbn,
+                title        : this.title,
             },
-            selectedPageNumber: null,
-            pageText: null,
-            topicsOnPage: null,
+            selectedPageNumber : null,
+            pageText           : null,
+            topicsOnPage       : null,
         };
     },
     watch: {

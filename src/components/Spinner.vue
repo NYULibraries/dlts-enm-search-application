@@ -23,12 +23,12 @@
 
 <script>
 export default {
-    name: 'Spinner',
-    props: {
-        display: {
-            type: Boolean,
-            required: true,
-            default: false,
+    name  : 'Spinner',
+    props : {
+        display : {
+            type     : Boolean,
+            required : true,
+            default  : false,
         },
     },
 };

@@ -41,32 +41,32 @@ import * as d3 from 'd3';
 import d3Tip from 'd3-tip';
 
 export default {
-    name: 'BarChart',
-    props: {
-        isbn: {
-            type: String,
-            required: true,
-            default: null,
+    name  : 'BarChart',
+    props : {
+        isbn         : {
+            type     : String,
+            required : true,
+            default  : null,
         },
-        barChartData: {
-            type: Array,
-            required: true,
-            default: function () {
+        barChartData : {
+            type     : Array,
+            required : true,
+            default  : function () {
                 return null;
             },
         },
-        title: {
-            type: String,
-            required: true,
-            default: null,
+        title        : {
+            type     : String,
+            required : true,
+            default  : null,
         },
     },
     data() {
         return {
-            pageToBarIndexMap    : {},
-            selectedBarIndex: null,
-            selectedPageNumber: null,
-            tip: null,
+            selectedBarIndex   : null,
+            pageToBarIndexMap  : {},
+            selectedPageNumber : null,
+            tip                : null,
         };
     },
     watch: {
