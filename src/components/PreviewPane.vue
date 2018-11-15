@@ -124,9 +124,6 @@ export default {
         },
     },
     methods: {
-        loadFirstEpub() {
-
-        },
         async previewEpub() {
             let response;
             try {
