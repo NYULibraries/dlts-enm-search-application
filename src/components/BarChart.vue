@@ -166,6 +166,18 @@ export default {
             this.selectedPageNumber = page;
             this.$emit( 'bar-click', page );
         },
+        triggerClickPage: ( page ) => {
+            let pageNameForDisplay;
+
+            if ( typeof page === 'string' ) {
+                pageNameForDisplay = page;
+            } else if ( typeof page === 'number' ) {
+                pageNameForDisplay = this.barChartData[ page ].page;
+            }
+
+            d3.select( 'rect[ name = "' + pageNameForDisplay + '" ]' )
+                .dispatch( 'click' );
+        },
     },
 };
 </script>
