@@ -27,7 +27,6 @@
 
             <bar-chart
                 :bar-chart-data="barChart.barChartData"
-                :display="!!isbn"
                 :title="title"
                 @bar-click="previewEpubPage"
             />
