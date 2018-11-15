@@ -129,7 +129,7 @@ export default {
         addSelectedTopic( topic ) {
             this.currentSearch.selectedTopicFacetItems.push( topic );
 
-            this.solrSearch(
+            this.search(
                 this.currentSearch.query,
                 this.currentSearch.queryFields,
                 this.currentSearch.selectedTopicFacetItems
@@ -155,7 +155,7 @@ export default {
                 }
             }
 
-            this.solrSearch(
+            this.search(
                 this.currentSearch.query,
                 this.currentSearch.queryFields,
                 this.currentSearch.selectedTopicFacetItems
@@ -181,7 +181,7 @@ export default {
             this.currentSearch.queryFields = queryFields;
             this.currentSearch.selectedTopicFacetItems = [];
 
-            this.solrSearch( query, queryFields, [] );
+            this.search( query, queryFields, [] );
         },
         removeSelectedTopic( topic ) {
             const found = this.currentSearch.selectedTopicFacetItems.findIndex(
@@ -194,7 +194,7 @@ export default {
                 this.currentSearch.selectedTopicFacetItems.splice( found, 1 );
             }
 
-            this.solrSearch(
+            this.search(
                 this.currentSearch.query,
                 this.currentSearch.queryFields,
                 this.currentSearch.selectedTopicFacetItems
@@ -255,7 +255,7 @@ export default {
             );
             this.searchEcho.selectedTopicFacetItems = selectedTopicFacetItems;
         },
-        async solrSearch( query, queryFields, selectedTopicFacetItems ) {
+        async search( query, queryFields, selectedTopicFacetItems ) {
             this.setSearchEcho( query, queryFields, selectedTopicFacetItems );
 
             this.hidePanes(
