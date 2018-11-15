@@ -43,19 +43,19 @@ import d3Tip from 'd3-tip';
 export default {
     name  : 'BarChart',
     props : {
-        isbn         : {
+        isbn                       : {
             type     : String,
             required : true,
             default  : null,
         },
-        barChartData : {
+        barChartData               : {
             type     : Array,
             required : true,
             default  : function () {
                 return null;
             },
         },
-        title        : {
+        title                      : {
             type     : String,
             required : true,
             default  : null,
