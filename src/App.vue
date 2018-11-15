@@ -166,11 +166,6 @@ export default {
         displayPanes( ...panes ) {
             this.setPanesDisplay( panes, true );
         },
-        setPanesDisplay( panes, state ) {
-            panes.forEach( ( pane ) => {
-                pane.display = state;
-            } );
-        },
         hidePanes( ...panes ) {
             this.setPanesDisplay( panes, false );
         },
@@ -229,6 +224,11 @@ export default {
                     }
                 }
             );
+        },
+        setPanesDisplay( panes, state ) {
+            panes.forEach( ( pane ) => {
+                pane.display = state;
+            } );
         },
         setPreviewPane( isbn, title ) {
             this.previewPane.isbn = isbn;
