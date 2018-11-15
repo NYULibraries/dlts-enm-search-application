@@ -80,9 +80,6 @@ export default {
                 .classed( 'enm-page-active', false );
             d3.select( 'rect[ name = "' + newSelectedPageNumber + '" ]' )
                 .classed( 'enm-page-active', true );
-
-            this.selectedBarIndex =
-                this.pageToBarIndexMap[ this.previewPane.pageNumberForDisplay ];
         },
     },
     mounted() {
@@ -173,6 +170,12 @@ export default {
             const page = event.page;
 
             this.selectedPageNumber = page;
+            // Can't make this a computed property or set it in a selectedPageNumber
+            // watcher because this.pageToBarIndexMap is undefined when an EPUB
+            // is first selected in ResultsPane and the first page bar needs to
+            // be clicked when the BarChart is first created.
+            this.selectedBarIndex =
+                this.pageToBarIndexMap[ this.selectedPageNumber ];
             this.$emit( 'bar-click', page );
         },
         triggerClickPage: ( page ) => {
