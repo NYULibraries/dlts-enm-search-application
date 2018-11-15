@@ -178,7 +178,7 @@ export default {
                 this.pageToBarIndexMap[ this.selectedPageNumber ];
             this.$emit( 'bar-click', page );
         },
-        triggerClickPage: ( page ) => {
+        triggerClickPage( page ) {
             let pageNameForDisplay;
 
             if ( typeof page === 'string' ) {
