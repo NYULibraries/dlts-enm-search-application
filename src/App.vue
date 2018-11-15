@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <search-form
-            :query="searchForm.query"
+            :query-override="searchForm.queryOverride"
             :query-fields="searchForm.queryFields"
             @submit="newQuerySubmitted"/>
         <div v-cloak>
@@ -29,11 +29,14 @@
                         :num-books="resultsPane.numBooks"
                         :num-pages="resultsPane.numPages"
                         :results="resultsPane.results"
+                        @epub-click="setPreviewPane"
                     />
                     <preview-pane
+                        :current-search="currentSearch"
                         :display="previewPane.display"
                         :isbn="previewPane.isbn"
                         :title="previewPane.title"
+                        @load-first-matched-page-link-click="previewFirstEpub"
                     />
                 </div>
             </div>
@@ -114,7 +117,7 @@ export default {
                 selectedTopicFacetItems: [],
             },
             searchForm: {
-                query: '',
+                queryOverride: '',
                 queryFields: QUERY_FIELDS,
             },
             spinner: {
@@ -139,7 +142,7 @@ export default {
             // Change to blank search if no topic DCIs
             if ( this.currentSearch.selectedTopicFacetItems.length === 0 ) {
                 this.currentSearch.query = '';
-                this.searchForm.query = '';
+                this.searchForm.queryOverride = '';
             } else {
                 // If topic DCIs and query is already "*", do nothing
                 if ( this.currentSearch.query === '*' ) {
@@ -148,7 +151,7 @@ export default {
                     // If topic DCIs and query was not already "*", change to "*"
                     // and do a new search
                     this.currentSearch.query = '*';
-                    this.searchForm.query = '*';
+                    this.searchForm.queryOverride = '*';
                 }
             }
 
@@ -164,27 +167,16 @@ export default {
         displayPanes( ...panes ) {
             this.setPanesDisplay( panes, true );
         },
-        setPanesDisplay( panes, state ) {
-            panes.forEach( ( pane ) => {
-                pane.display = state;
-            } );
-        },
         hidePanes( ...panes ) {
             this.setPanesDisplay( panes, false );
         },
-        loadFirstResultInPreviewPane() {
-            if ( this.resultsPane.results.length > 0 ) {
-                const firstResult = this.resultsPane.results[ 0 ];
-                this.previewPane.isbn  = firstResult.groupValue;
-                this.previewPane.title = firstResult.doclist.docs[ 0 ].title;
-            } else {
-                this.previewPane.isbn = '';
-            }
+        previewFirstEpub() {
+            this.setPreviewPane(
+                this.resultsPane.results[ 0 ].groupValue,
+                this.resultsPane.results[ 0 ].doclist.docs[ 0 ].title,
+            );
         },
         newQuerySubmitted( query, queryFields ) {
-            // Keep search form blanking out
-            this.searchForm.query = query;
-
             this.currentSearch.query = query;
             this.currentSearch.queryFields = queryFields;
             this.currentSearch.selectedTopicFacetItems = [];
@@ -240,6 +232,11 @@ export default {
                 }
             );
         },
+        setPanesDisplay( panes, state ) {
+            panes.forEach( ( pane ) => {
+                pane.display = state;
+            } );
+        },
         setPreviewPane( isbn, title ) {
             this.previewPane.isbn = isbn;
             this.previewPane.title = title;
@@ -258,26 +255,6 @@ export default {
             );
             this.searchEcho.selectedTopicFacetItems = selectedTopicFacetItems;
         },
-        async solrPreviewEpub() {
-            const response = await this.$solrPreviewEpub(
-                '9780472024490',
-                'art',
-                [ 'pageText', 'topicNames' ],
-                [ 'postmodernism', 'Hutcheon, Linda' ],
-            );
-
-            return response;
-        },
-        async solrPreviewPage() {
-            const response = await this.$solrPreviewPage(
-                '9780472024490',
-                88,
-                'art',
-                [ 'pageText', 'topicNames' ],
-            );
-
-            return response;
-        },
         async solrSearch( query, queryFields, selectedTopicFacetItems ) {
             this.setSearchEcho( query, queryFields, selectedTopicFacetItems );
 
@@ -292,7 +269,19 @@ export default {
 
             this.spinner.display = true;
 
-            const response = await this.$solrSearch( query, queryFields, selectedTopicFacetItems );
+            let response;
+            try {
+                response = await this.$solrSearch( query, queryFields, selectedTopicFacetItems );
+            } catch( e ) {
+                this.spinner.display = false;
+
+                console.error( 'ERROR in App.solrSearch: ' + e );
+
+                // TODO: replace this with something more user-friendly
+                alert( 'Sorry, the server has returned an error or is not responding.' );
+
+                return;
+            }
 
             this.setFacetPaneFromSolrResponse( response );
             this.setResultsPaneFromSolrResponse( response );

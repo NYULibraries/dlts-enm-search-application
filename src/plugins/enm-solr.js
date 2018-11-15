@@ -73,7 +73,11 @@ async function solrSearch( query, queryFields, selectedTopicFacetItems ) {
         } );
     }
 
-    return doFetch( params );
+    try {
+        return doFetch( params );
+    } catch( e ) {
+        throw e;
+    }
 }
 
 async function solrPreviewEpub( isbn, query, queryFields, selectedTopicFacetItems ) {
@@ -98,7 +102,11 @@ async function solrPreviewEpub( isbn, query, queryFields, selectedTopicFacetItem
         );
     }
 
-    return doFetch( params );
+    try {
+        return doFetch( params );
+    } catch( e ) {
+        throw e;
+    }
 }
 
 async function solrPreviewPage( isbn, pageNumberForDisplay, query, queryFields ) {
@@ -125,7 +133,11 @@ async function solrPreviewPage( isbn, pageNumberForDisplay, query, queryFields )
         sort: 'pageSequenceNumber+asc',
     };
 
-    return doFetch( params );
+    try {
+        return doFetch( params );
+    } catch( e ) {
+        throw e;
+    }
 }
 
 export default {

@@ -33,28 +33,28 @@
 <script>
 export default {
     name: 'SearchEcho',
-    props: {
-        display: {
-            type: Boolean,
-            required: true,
-            default: false,
+    props : {
+        display                      : {
+            type     : Boolean,
+            required : true,
+            default  : false,
         },
-        query: {
-            type: String,
-            required: true,
-            default: null,
+        query                        : {
+            type     : String,
+            required : true,
+            default  : null,
         },
-        selectedQueryFieldsDCILabels: {
-            type: Array,
-            required: false,
-            default: function () {
+        selectedQueryFieldsDCILabels : {
+            type     : Array,
+            required : false,
+            default  : function () {
                 return null;
             },
         },
-        selectedTopicFacetItems: {
-            type: Array,
-            required: false,
-            default: function () {
+        selectedTopicFacetItems      : {
+            type     : Array,
+            required : false,
+            default  : function () {
                 return null;
             },
         },

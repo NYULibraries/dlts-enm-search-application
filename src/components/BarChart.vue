@@ -2,8 +2,8 @@
     <div id="bar-chart">
         <header>
             <div
-                v-show="pageNumberForDisplay"
-                class="enm-pageno">page {{ pageNumberForDisplay }}</div>
+                v-show="selectedPageNumber"
+                class="enm-pageno">page {{ selectedPageNumber }}</div>
             <h2
                 v-show="title"
                 class="title is-spaced">{{ title }}</h2>
@@ -14,10 +14,10 @@
             height="190"/>
 
         <div
-            v-show="isbn"
+            v-show="barChartData.length > 0"
             class="enm-buttons">
             <a
-                :disabled="pageIndex === 0"
+                :disabled="selectedBarIndex === 0"
                 href="#"
                 class="button"
                 title="View previous matched page in this book"
@@ -25,7 +25,7 @@
             >
                 &lt; previous </a>
             <a
-                :disabled="pageIndex === barChartDataMatchedPages.length - 1"
+                :disabled="selectedBarIndex === barChartData.length - 1"
                 href="#"
                 class="button"
                 title="View next matched page in this book"
@@ -37,39 +37,158 @@
 </template>
 
 <script>
+import * as d3 from 'd3';
+import d3Tip from 'd3-tip';
+
 export default {
-    name: 'BarChart',
-    props: {
-        isbn: {
-            type: String,
-            required: true,
-            default: null,
-        },
-        barChartDataMatchedPages: {
-            type: Array,
-            required: true,
-            default: function () {
+    name  : 'BarChart',
+    props : {
+        barChartData               : {
+            type     : Array,
+            required : true,
+            default  : function () {
                 return null;
             },
         },
-        title: {
-            type: String,
-            required: true,
-            default: null,
+        title                      : {
+            type     : String,
+            required : true,
+            default  : null,
         },
     },
     data() {
         return {
-            pageNumberForDisplay: null,
-            pageIndex: null,
+            selectedBarIndex   : null,
+            pageToBarIndexMap  : {},
+            selectedPageNumber : null,
+            tip                : null,
         };
     },
-    methods: {
-        clickNext() {
+    watch: {
+        barChartData( newBarChartData, oldBarChartData ) {
+            this.pageToBarIndexMap = {};
+            this.barChartData.forEach( ( matchedPage, index ) => {
+                this.pageToBarIndexMap[ matchedPage.page ] = index;
+            } );
 
+            this.drawBarChart();
+            // Load first page
+            this.triggerClickPage( this.barChartData[ 0 ].page );
+        },
+        selectedPageNumber: ( newSelectedPageNumber, oldSelectedPageNumber ) => {
+            d3.select( '.enm-page-active' )
+                .classed( 'enm-page-active', false );
+            d3.select( 'rect[ name = "' + newSelectedPageNumber + '" ]' )
+                .classed( 'enm-page-active', true );
+        },
+    },
+    mounted() {
+        this.tip = d3Tip()
+            .attr( 'class', 'd3-tip' )
+            .offset( [ -10, 0 ] )
+            .html( function ( d ) {
+                return 'Page: ' + d.page +
+                       '<br>' +
+                       '<span class="tooltip-score">' +
+                       'Score: ' + d.score +
+                       '</span>';
+            } );
+
+        d3.select( 'svg' ).call( this.tip );
+    },
+    methods: {
+        clearBarChart() {
+            d3.selectAll( 'svg > *' ).remove();
+        },
+        clickNext() {
+            // Next button should disable itself automatically if on last matched page, but just in case, disable
+            // here, too.
+            if ( this.selectedBarIndex === this.barChartData.length - 1 ) {
+                return;
+            }
+
+            this.triggerClickPage( this.selectedBarIndex + 1 );
         },
         clickPrevious() {
+            // Previous button should disable itself automatically if on first matched page, but just in case, disable
+            // here, too.
+            if ( this.selectedBarIndex === 0 ) {
+                return;
+            }
 
+            this.triggerClickPage( this.selectedBarIndex - 1 );
+        },
+        drawBarChart() {
+            this.clearBarChart();
+
+            // Based on https://bl.ocks.org/mbostock/3885304, with tooltips added using
+            // https://github.com/Caged/d3-tip.
+
+            const svg   = d3.select( 'svg' );
+            const width = svg.attr( 'width' );
+            const height = svg.attr( 'height' );
+
+            const x = d3.scaleBand().rangeRound( [ 0, width ] ).padding( 0.1 );
+            const y = d3.scaleLinear().rangeRound( [ height, 0 ] );
+
+            const g = svg.append( 'g' );
+
+            x.domain( this.barChartData.map( function ( d ) {
+                return d.page;
+            } ) );
+            y.domain(
+                [
+                    0,
+                    d3.max( this.barChartData, ( d ) => {
+                        return d.score;
+                    } ),
+                ] );
+
+            g.selectAll( '.bar' )
+                .data( this.barChartData )
+                .enter().append( 'rect' )
+                .attr( 'class', 'bar' )
+                .attr( 'name', ( d ) => {
+                    return d.page;
+                } )
+                .attr( 'x', ( d ) => {
+                    return x( d.page );
+                } )
+                .attr( 'y', function ( d ) {
+                    return y( d.score );
+                } )
+                .attr( 'width', x.bandwidth() )
+                .attr( 'height', function ( d ) {
+                    return height - y( d.score );
+                } )
+                .attr( 'stroke', 'black' )
+                .on( 'click', this.selectPage )
+                .on( 'mouseover', this.tip.show )
+                .on( 'mouseout', this.tip.hide );
+        },
+        selectPage( event ) {
+            const page = event.page;
+
+            this.selectedPageNumber = page;
+            // Can't make this a computed property or set it in a selectedPageNumber
+            // watcher because this.pageToBarIndexMap is undefined when an EPUB
+            // is first selected in ResultsPane and the first page bar needs to
+            // be clicked when the BarChart is first created.
+            this.selectedBarIndex =
+                this.pageToBarIndexMap[ this.selectedPageNumber ];
+            this.$emit( 'bar-click', page );
+        },
+        triggerClickPage( page ) {
+            let pageNameForDisplay;
+
+            if ( typeof page === 'string' ) {
+                pageNameForDisplay = page;
+            } else if ( typeof page === 'number' ) {
+                pageNameForDisplay = this.barChartData[ page ].page;
+            }
+
+            d3.select( 'rect[ name = "' + pageNameForDisplay + '" ]' )
+                .dispatch( 'click' );
         },
     },
 };

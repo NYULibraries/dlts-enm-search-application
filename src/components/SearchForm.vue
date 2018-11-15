@@ -55,16 +55,16 @@
 <script>
 export default {
     name: 'SearchForm',
-    props: {
-        query: {
-            type: String,
-            required: true,
-            default: null,
+    props : {
+        queryOverride : {
+            type     : String,
+            required : true,
+            default  : null,
         },
-        queryFields: {
-            type: Array,
-            required: true,
-            default: null,
+        queryFields   : {
+            type     : Array,
+            required : true,
+            default  : null,
         },
     },
     data() {
@@ -74,6 +74,11 @@ export default {
                 ( queryField ) => { return queryField.value; }
             ),
         };
+    },
+    watch: {
+        queryOverride( newQuery, oldQuery ) {
+            this.query = newQuery;
+        },
     },
     methods: {
         submitSearchForm() {

@@ -68,24 +68,24 @@
 const DEFAULT_TOPIC_FACET_LIST_LIMIT = 15;
 
 export default {
-    name: 'FacetPane',
-    props: {
-        display: {
+    name  : 'FacetPane',
+    props : {
+        display              : {
             type     : Boolean,
             required : true,
             default  : false,
         },
-        topicsFacetList: {
-            type : Array,
-            required: true,
-            default: function () {
+        topicsFacetList      : {
+            type     : Array,
+            required : true,
+            default  : function () {
                 return null;
             },
         },
-        topicsFacetListLimit: {
-            type : Number,
-            required: true,
-            default: function () {
+        topicsFacetListLimit : {
+            type     : Number,
+            required : true,
+            default  : function () {
                 return DEFAULT_TOPIC_FACET_LIST_LIMIT;
             },
         },
@@ -108,7 +108,7 @@ export default {
         },
     },
     watch: {
-        topicsFacetList( oldList, newList ) {
+        topicsFacetList( newList, oldList ) {
             this.showAllTopics = false;
         },
     },
