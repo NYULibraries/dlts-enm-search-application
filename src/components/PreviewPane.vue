@@ -162,9 +162,94 @@ export default {
             } );
 
             this.barChart.barChartData = barChartData;
+        },
+        async previewEpubPage( pageNumberForDisplay ) {
+            this.selectedPageNumber = pageNumberForDisplay;
 
-            // Draw bar chart
-            // Trigger click of bar for first matched page
+            let response;
+            try {
+                response = await this.solrPreviewPage(
+                    this.isbn,
+                    this.selectedPageNumber,
+                    this.currentSearch.query,
+                    this.currentSearch.queryFields
+                );
+            } catch( e ) {
+                console.error( 'ERROR in PreviewPane.previewEpubPage: ' + e );
+
+                // TODO: replace this with something more user-friendly
+                alert( 'Sorry, the server has returned an error or is not responding.' );
+
+                return;
+            }
+
+            const doc = response.response.docs[ 0 ];
+            const highlights = response.highlighting[
+                Object.keys( response.highlighting )[ 0 ]
+            ];
+
+            let topicHighlights, topicsOnPage = [];
+            let topicNamesLists;
+
+            if ( highlights.pageText ) {
+                this.pageText = highlights.pageText[ 0 ];
+            } else {
+                this.pageText = doc.pageText;
+            }
+
+            if ( highlights.topicNamesForDisplay ) {
+                // Sample of prettified JSON string (without wrapping quotes):
+                // [
+                //     [
+                //         "Conference on Critical Legal Studies"
+                //     ],
+                //     [
+                //         "<mark>identity</mark> -- politics of",
+                //         "<mark>Identity</mark> politics",
+                //         "\"<mark>Identity</mark> politics\"",
+                //         "Politics of <mark>identity</mark>"
+                //     ],
+                //     [
+                //         "Ideology of the subject"
+                //     ]
+                // ]
+
+                topicHighlights = JSON.parse( highlights.topicNamesForDisplay );
+                topicHighlights.forEach( ( topicHighlightArray ) => {
+                    const preferredName = topicHighlightArray.shift();
+                    const alternateNames = topicHighlightArray;
+
+                    if ( alternateNames.length === 0 ) {
+                        // No alternate names
+                        topicsOnPage.push( preferredName );
+                    } else {
+                        if ( namesListContainsHighlights( alternateNames ) ) {
+                            // Display alternate names - they contain highlights
+                            topicsOnPage.push(
+                                preferredName +
+                                ' <span class="enm-alt-names">(also: ' +
+                                alternateNames.join( ALTERNATE_NAMES_LIST_SEPARATOR ) +
+                                ')</span>'
+                            );
+                        } else {
+                            // Do not display alternate names - they do not contain highlights
+                            topicsOnPage.push( preferredName );
+                        }
+                    }
+                } );
+
+                this.topicsOnPage = topicsOnPage;
+            } else if ( doc.topicNamesForDisplay ) {
+                topicNamesLists = JSON.parse( doc.topicNamesForDisplay );
+                this.topicsOnPage = topicNamesLists.map(
+                    ( topicNamesList ) => {
+                        // The display/preferred name is the first element
+                        return topicNamesList.shift();
+                    }
+                );
+            } else {
+                this.topicsOnPage = [];
+            }
         },
         async solrPreviewEpub( isbn, query, queryFields, selectedTopicFacetFields ) {
             const response = await this.$solrPreviewEpub(
