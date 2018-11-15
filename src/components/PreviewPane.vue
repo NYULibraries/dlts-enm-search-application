@@ -70,6 +70,11 @@
 
 <script>
 import BarChart from './BarChart';
+
+const ALTERNATE_NAMES_LIST_SEPARATOR = '&nbsp;&bull;&nbsp;';
+const HIGHLIGHT_PRE = '<mark>';
+const HIGHLIGHT_POST = '</mark>';
+
 export default {
     name       : 'PreviewPane',
     components : { BarChart },
