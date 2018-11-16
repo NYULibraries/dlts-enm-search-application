@@ -69,7 +69,7 @@
             "isbn": "9780472120932",
             "maximumPageRelevanceScore": "6.140698",
             "numMatchedPages": 2,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780472120932.jpg",
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472120932.jpg",
             "title": "Interdisciplining Digital Humanities: Boundary Work in an Emerging Field"
         },
         {
@@ -77,7 +77,7 @@
             "isbn": "9780814766569",
             "maximumPageRelevanceScore": "4.427009",
             "numMatchedPages": 3,
-            "thumbnail": "http://localhost/enm/prototypes/search-results/assets/covers/9780814766569.jpg",
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814766569.jpg",
             "title": "Imagined Human Beings"
         }
     ],
