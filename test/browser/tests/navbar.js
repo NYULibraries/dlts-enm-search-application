@@ -56,6 +56,9 @@ suite( 'Navbar', function () {
     test( 'Clicking "Search" takes user to search application', function () {
         SearchPage.navbar.search.click();
 
-        assert.equal(  SearchPage.currentUrl, SearchPage.baseUrl + SearchPage.paths.search + '/' );
+        assert(
+            SearchPage.currentUrl === SearchPage.baseUrl + SearchPage.paths.search + '/' ||
+            SearchPage.currentUrl === SearchPage.baseUrl + SearchPage.paths.search + '/#/'
+        );
     } );
 } );
