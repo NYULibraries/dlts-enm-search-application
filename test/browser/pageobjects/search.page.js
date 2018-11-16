@@ -38,7 +38,7 @@ class SearchPage extends Page {
             browse         : 'browse-topics-lists/enm-picks.html',
             home           : '',
             featuredTopics : 'browse-topics-lists/enm-picks.html',
-            search         : 'search-results',
+            search         : 'search',
         };
     }
 
