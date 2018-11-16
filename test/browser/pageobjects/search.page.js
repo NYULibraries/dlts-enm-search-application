@@ -33,12 +33,12 @@ class SearchPage extends Page {
 
     get paths() {
         return {
-            about          : 'prototypes/about.html',
-            allTopics      : 'prototypes/browse-topics-lists/a.html',
-            browse         : 'prototypes/browse-topics-lists/enm-picks.html',
-            home           : 'prototypes/',
-            featuredTopics : 'prototypes/browse-topics-lists/enm-picks.html',
-            search         : 'prototypes/search-results',
+            about          : 'about.html',
+            allTopics      : 'browse-topics-lists/a.html',
+            browse         : 'browse-topics-lists/enm-picks.html',
+            home           : '',
+            featuredTopics : 'browse-topics-lists/enm-picks.html',
+            search         : 'search-results',
         };
     }
 
