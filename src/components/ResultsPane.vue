@@ -120,6 +120,8 @@ export default {
             const isbn = event.currentTarget.id;
             const title = event.currentTarget.getAttribute( 'name' );
 
+            this.isbnOfSelectedEpub = isbn;
+
             this.$emit( 'epub-click', isbn, title );
         },
     },
