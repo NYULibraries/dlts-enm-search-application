@@ -1,8 +1,8 @@
 <template>
     <div id="app">
         <search-form
-            :query-override="searchForm.queryOverride"
-            :query-fields="searchForm.queryFields"
+            :query-u-i="searchForm.queryUI"
+            :query-fields-u-i="searchForm.queryFieldsUI"
             @submit="newQuerySubmitted"/>
         <div v-cloak>
             <search-echo
@@ -117,8 +117,8 @@ export default {
                 selectedTopicFacetItems: [],
             },
             searchForm: {
-                queryOverride: '',
-                queryFields: QUERY_FIELDS,
+                queryUI       : '',
+                queryFieldsUI : QUERY_FIELDS,
             },
             spinner: {
                 display: false,
@@ -142,7 +142,7 @@ export default {
             // Change to blank search if no topic DCIs
             if ( this.currentSearch.selectedTopicFacetItems.length === 0 ) {
                 this.currentSearch.query = '';
-                this.searchForm.queryOverride = '';
+                this.searchForm.queryUI  = '';
             } else {
                 // If topic DCIs and query is already "*", do nothing
                 if ( this.currentSearch.query === '*' ) {
@@ -151,7 +151,7 @@ export default {
                     // If topic DCIs and query was not already "*", change to "*"
                     // and do a new search
                     this.currentSearch.query = '*';
-                    this.searchForm.queryOverride = '*';
+                    this.searchForm.queryUI  = '*';
                 }
             }
 
@@ -177,6 +177,8 @@ export default {
             );
         },
         newQuerySubmitted( query, queryFields ) {
+            this.searchForm.queryUI = query;
+
             this.currentSearch.query = query;
             this.currentSearch.queryFields = queryFields;
             this.currentSearch.selectedTopicFacetItems = [];
