@@ -14,7 +14,7 @@
                                         for="enm-searchinput">Search inside all books</label>
                                     <input
                                         id="enm-searchinput"
-                                        v-model="query"
+                                        v-model="queryUI"
                                         class="input is-large"
                                         type="text"
                                         placeholder="Search inside all books">
@@ -26,20 +26,20 @@
 
                             <div class="column is-narrow">
 
-                                <template v-for="queryField in queryFields">
+                                <template v-for="queryFieldUI in queryFieldsUI">
                                     <input
-                                        :name="queryField.name + 'Chx'"
-                                        :id="queryField.name + 'Chx'"
-                                        :key="queryField.name"
-                                        :value="queryField.value"
+                                        :name="queryFieldUI.name + 'Chx'"
+                                        :id="queryFieldUI.name + 'Chx'"
+                                        :key="queryFieldUI.name"
+                                        :value="queryFieldUI.value"
                                         v-model="selectedQueryFields"
                                         type="checkbox"
                                         class="is-medium is-checkbox">
                                     <label
-                                        :for="queryField.name + 'Chx'"
-                                        :key="queryField.label"
+                                        :for="queryFieldUI.name + 'Chx'"
+                                        :key="queryFieldUI.label"
                                         class="">
-                                        {{ queryField.label }}
+                                        {{ queryFieldUI.label }}
                                     </label>
                                 </template>
 
@@ -56,12 +56,12 @@
 export default {
     name: 'SearchForm',
     props : {
-        queryOverride : {
+        queryUI       : {
             type     : String,
             required : true,
             default  : null,
         },
-        queryFields   : {
+        queryFieldsUI : {
             type     : Array,
             required : true,
             default  : null,
@@ -70,21 +70,16 @@ export default {
     data() {
         return {
             query: '',
-            selectedQueryFields: this.queryFields.map(
+            selectedQueryFields: this.queryFieldsUI.map(
                 ( queryField ) => { return queryField.value; }
             ),
         };
-    },
-    watch: {
-        queryOverride( newQuery, oldQuery ) {
-            this.query = newQuery;
-        },
     },
     methods: {
         submitSearchForm() {
             if ( this.selectedQueryFields.length === 0 ) {
                 alert( 'Please check one or more boxes: ' +
-                       this.queryFields.map(
+                       this.queryFieldsUI.map(
                            ( e ) => { return e.label; }
                        ).join( ', ' )
                 );
@@ -92,6 +87,7 @@ export default {
                 return;
             }
 
+            this.query = this.queryUI;
             this.$emit( 'submit', this.query, this.selectedQueryFields );
         },
     },
