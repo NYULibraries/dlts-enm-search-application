@@ -136,7 +136,7 @@ export default {
                     this.isbn,
                     this.currentSearch.query,
                     this.currentSearch.queryFields,
-                    this.currentSearch.selectedTopicFacetFields,
+                    this.currentSearch.selectedTopicFacetItems,
                 );
             } catch( e ) {
                 console.error( 'ERROR in PreviewPane.previewEpub: ' + e );
