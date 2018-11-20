@@ -34,7 +34,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
     /*
     From: http://cssload.net/en/spinners/
     Author: https://codepen.io/Terramaster/
