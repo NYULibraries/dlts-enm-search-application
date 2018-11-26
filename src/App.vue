@@ -131,6 +131,11 @@ export default {
             ]
         ),
     },
+    watch : {
+        selectedTopicFacetItems() {
+            this.search();
+        },
+    },
     methods : {
         ...mapActions(
             [
