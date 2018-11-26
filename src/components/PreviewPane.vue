@@ -80,11 +80,6 @@ export default {
     name       : 'PreviewPane',
     components : { BarChart },
     props      : {
-        currentSearch : {
-            type     : Object,
-            required : true,
-            default  : null,
-        },
         display       : {
             type     : Boolean,
             required : true,
@@ -145,9 +140,9 @@ export default {
             try {
                 response = await this.solrPreviewEpub(
                     this.isbn,
-                    this.currentSearch.query,
-                    this.currentSearch.queryFields,
-                    this.currentSearch.selectedTopicFacetItems,
+                    this.query,
+                    this.queryFields,
+                    this.selectedTopicFacetItems,
                 );
             } catch( e ) {
                 console.error( 'ERROR in PreviewPane.previewEpub: ' + e );
@@ -180,8 +175,8 @@ export default {
                 response = await this.solrPreviewPage(
                     this.isbn,
                     this.selectedPageNumber,
-                    this.currentSearch.query,
-                    this.currentSearch.queryFields
+                    this.query,
+                    this.queryFields
                 );
             } catch( e ) {
                 console.error( 'ERROR in PreviewPane.previewEpubPage: ' + e );

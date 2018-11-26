@@ -27,7 +27,6 @@
                         @epub-click="setPreviewPane"
                     />
                     <preview-pane
-                        :current-search="currentSearch"
                         :display="previewPane.display"
                         :isbn="previewPane.isbn"
                         :title="previewPane.title"
