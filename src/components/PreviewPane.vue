@@ -70,7 +70,7 @@
 <script>
 import BarChart from './BarChart';
 
-import { mapGetters, mapActions } from 'vuex';
+import { mapGetters } from 'vuex';
 
 const ALTERNATE_NAMES_LIST_SEPARATOR = '&nbsp;&bull;&nbsp;';
 const HIGHLIGHT_PRE = '<mark>';
