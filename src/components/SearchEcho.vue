@@ -48,13 +48,6 @@ export default {
                 return null;
             },
         },
-        selectedTopicFacetItems      : {
-            type     : Array,
-            required : false,
-            default  : function () {
-                return null;
-            },
-        },
     },
     computed: {
         ...mapGetters(
