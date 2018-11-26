@@ -2,7 +2,7 @@
     <div id="app">
         <search-form
             :query-fields-u-i="searchForm.queryFieldsUI"
-            @submit="newQuerySubmitted"/>
+            @submit="searchFormSubmitted"/>
         <div v-cloak>
             <search-echo
                 :display="searchEcho.display"
@@ -189,7 +189,7 @@ export default {
                 this.resultsPane.results[ 0 ].doclist.docs[ 0 ].title,
             );
         },
-        newQuerySubmitted( query, queryFields ) {
+        searchFormSubmitted( query, queryFields ) {
             this.searchForm.queryUI = query;
 
             this.currentSearch.query = query;
