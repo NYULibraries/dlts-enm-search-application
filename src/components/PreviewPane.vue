@@ -137,14 +137,6 @@ export default {
         },
     },
     methods: {
-        ...mapActions(
-            [
-                'addSelectedTopicFacetItems',
-                'removeSelectedTopicFacetItems',
-                'setQuery',
-                'setQueryFields',
-            ]
-        ),
         loadFirstMatchedPage() {
             this.$emit( 'load-first-matched-page-link-click' );
         },
