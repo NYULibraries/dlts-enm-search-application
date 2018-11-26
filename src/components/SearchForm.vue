@@ -58,11 +58,6 @@ import { mapGetters, mapActions } from 'vuex';
 export default {
     name: 'SearchForm',
     props : {
-        queryUI       : {
-            type     : String,
-            required : true,
-            default  : null,
-        },
         queryFieldsUI : {
             type     : Array,
             required : true,
@@ -71,6 +66,8 @@ export default {
     },
     data() {
         return {
+            queryUI : null,
+
             selectedQueryFields: this.queryFieldsUI.map(
                 ( queryField ) => { return queryField.value; }
             ),

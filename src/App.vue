@@ -1,7 +1,6 @@
 <template>
     <div id="app">
         <search-form
-            :query-u-i="searchForm.queryUI"
             :query-fields-u-i="searchForm.queryFieldsUI"
             @submit="newQuerySubmitted"/>
         <div v-cloak>
