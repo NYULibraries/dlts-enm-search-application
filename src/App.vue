@@ -6,7 +6,7 @@
         <div v-cloak>
             <search-echo
                 :display="searchEcho.display"
-                :selected-query-fields-d-c-i-labels="searchEcho.selectedQueryFieldsDCILabels"
+                :query-fields-u-i="searchForm.queryFieldsUI"
                 @search-dci-dismiss="clearQueryOrChangeToWildcard"
             />
             <div class="container is-fluid">
@@ -64,16 +64,6 @@ const QUERY_FIELDS = [
     },
 ];
 
-const QUERY_FIELDS_BY_VALUE = ( function () {
-    const queryFieldsByValueMap = {};
-
-    QUERY_FIELDS.forEach( function ( queryField ) {
-        queryFieldsByValueMap[ queryField.value ] = queryField;
-    } );
-
-    return queryFieldsByValueMap;
-} )();
-
 export default {
     name: 'App',
     components : {
@@ -109,7 +99,7 @@ export default {
             },
             searchEcho: {
                 display: true,
-                selectedQueryFieldsDCILabels: null,
+                queryFieldsUI: QUERY_FIELDS,
             },
             searchForm: {
                 queryUI       : '',
@@ -232,16 +222,7 @@ export default {
         submitSearchForm() {
             this.search();
         },
-        updateSearchEcho() {
-            this.searchEcho.selectedQueryFieldsDCILabels = this.queryFields.map(
-                function ( selectedQueryField ) {
-                    return QUERY_FIELDS_BY_VALUE[ selectedQueryField ].dciLabel;
-                }
-            );
-        },
         async search() {
-            this.updateSearchEcho();
-
             this.hidePanes(
                 this.facetPane,
                 this.resultsPane,

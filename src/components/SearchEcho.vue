@@ -41,13 +41,16 @@ export default {
             required : true,
             default  : false,
         },
-        selectedQueryFieldsDCILabels : {
+        queryFieldsUI : {
             type     : Array,
-            required : false,
-            default  : function () {
-                return null;
-            },
+            required : true,
+            default  : null,
         },
+    },
+    data() {
+        return {
+            queryFieldsByValueMap : {},
+        };
     },
     computed: {
         ...mapGetters(
@@ -58,9 +61,17 @@ export default {
             ]
         ),
         searchDCI() {
+            const that = this;
+
             if ( this.query && this.query !== '' ) {
+                const selectedQueryFieldsDCILabels = this.queryFields.map(
+                    function ( selectedQueryField ) {
+                        return that.queryFieldsByValueMap[ selectedQueryField ].dciLabel;
+                    }
+                );
+
                 return 'Searching ' +
-                       this.selectedQueryFieldsDCILabels
+                       selectedQueryFieldsDCILabels
                            .slice()
                            .sort().join( ' and ' ) + ' for: ' + this.query;
             } else {
@@ -75,6 +86,11 @@ export default {
                 };
             } );
         },
+    },
+    created() {
+        this.queryFieldsUI.forEach( queryField => {
+            this.queryFieldsByValueMap[ queryField.value ] = queryField;
+        } );
     },
     methods: {
         ...mapActions(
