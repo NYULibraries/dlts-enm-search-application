@@ -103,6 +103,8 @@ export default {
             }
 
             this.setQuery( this.queryUI );
+            this.setQueryFields( this.selectedQueryFields );
+
             this.$emit( 'submit', this.query, this.selectedQueryFields );
         },
     },
