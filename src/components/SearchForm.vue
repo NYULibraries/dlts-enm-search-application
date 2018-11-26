@@ -53,6 +53,8 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
     name: 'SearchForm',
     props : {
@@ -75,7 +77,23 @@ export default {
             ),
         };
     },
+    computed : {
+        ...mapGetters(
+            [
+                'query',
+                'queryFields',
+                'selectedTopicFacetItems',
+            ]
+        ),
+    },
     methods: {
+        ...mapActions(
+            [
+                'setQuery',
+                'setQueryFields',
+                'setSelectedTopicFacetItems',
+            ]
+        ),
         submitSearchForm() {
             if ( this.selectedQueryFields.length === 0 ) {
                 alert( 'Please check one or more boxes: ' +

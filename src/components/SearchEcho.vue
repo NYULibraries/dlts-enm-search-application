@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
     name: 'SearchEcho',
     props : {
@@ -60,6 +62,13 @@ export default {
         },
     },
     computed: {
+        ...mapGetters(
+            [
+                'query',
+                'queryFields',
+                'selectedTopicFacetItems',
+            ]
+        ),
         searchDCI() {
             if ( this.query && this.query !== '' ) {
                 return 'Searching ' +
@@ -80,6 +89,13 @@ export default {
         },
     },
     methods: {
+        ...mapActions(
+            [
+                'setQuery',
+                'setQueryFields',
+                'setSelectedTopicFacetItems',
+            ]
+        ),
         clickDeleteSearchDCI() {
             this.$emit( 'search-dci-dismiss', event.currentTarget.id );
         },

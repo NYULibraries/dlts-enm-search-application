@@ -52,6 +52,8 @@ import SearchEcho from './components/SearchEcho';
 import SearchForm from './components/SearchForm';
 import Spinner from './components/Spinner';
 
+import { mapGetters, mapActions } from 'vuex';
+
 const QUERY_FIELDS = [
     {
         dciLabel : 'full texts',
@@ -125,7 +127,23 @@ export default {
             },
         };
     },
+    computed : {
+        ...mapGetters(
+            [
+                'query',
+                'queryFields',
+                'selectedTopicFacetItems',
+            ]
+        ),
+    },
     methods : {
+        ...mapActions(
+            [
+                'setQuery',
+                'setQueryFields',
+                'setSelectedTopicFacetItems',
+            ]
+        ),
         addSelectedTopic( topic ) {
             this.currentSearch.selectedTopicFacetItems.push( topic );
 

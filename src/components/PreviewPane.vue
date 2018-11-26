@@ -70,6 +70,8 @@
 <script>
 import BarChart from './BarChart';
 
+import { mapGetters, mapActions } from 'vuex';
+
 const ALTERNATE_NAMES_LIST_SEPARATOR = '&nbsp;&bull;&nbsp;';
 const HIGHLIGHT_PRE = '<mark>';
 const HIGHLIGHT_POST = '</mark>';
@@ -111,6 +113,15 @@ export default {
             topicsOnPage       : null,
         };
     },
+    computed : {
+        ...mapGetters(
+            [
+                'query',
+                'queryFields',
+                'selectedTopicFacetItems',
+            ]
+        ),
+    },
     watch: {
         isbn( newIsbn, oldIsbn ) {
             if ( newIsbn === '' ) {
@@ -126,6 +137,13 @@ export default {
         },
     },
     methods: {
+        ...mapActions(
+            [
+                'setQuery',
+                'setQueryFields',
+                'setSelectedTopicFacetItems',
+            ]
+        ),
         loadFirstMatchedPage() {
             this.$emit( 'load-first-matched-page-link-click' );
         },
