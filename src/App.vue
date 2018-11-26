@@ -8,7 +8,6 @@
                 :display="searchEcho.display"
                 :selected-query-fields-d-c-i-labels="searchEcho.selectedQueryFieldsDCILabels"
                 @search-dci-dismiss="clearQueryOrChangeToWildcard"
-                @topic-dci-dismiss="removeSelectedTopic"
             />
             <div class="container is-fluid">
                 <div class="columns enm-panes">
@@ -182,23 +181,6 @@ export default {
             this.setPreviewPane(
                 this.resultsPane.results[ 0 ].groupValue,
                 this.resultsPane.results[ 0 ].doclist.docs[ 0 ].title,
-            );
-        },
-        removeSelectedTopic( topic ) {
-            const found = this.currentSearch.selectedTopicFacetItems.findIndex(
-                ( selectedTopicFacetItem ) => {
-                    return selectedTopicFacetItem === topic;
-                }
-            );
-
-            if ( found !== -1 ) {
-                this.currentSearch.selectedTopicFacetItems.splice( found, 1 );
-            }
-
-            this.search(
-                this.currentSearch.query,
-                this.currentSearch.queryFields,
-                this.currentSearch.selectedTopicFacetItems
             );
         },
         setFacetPaneFromSolrResponse( solrResponse ) {
