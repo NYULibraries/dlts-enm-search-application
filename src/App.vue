@@ -75,11 +75,6 @@ export default {
     },
     data() {
         return {
-            currentSearch: {
-                query: '',
-                queryFields: [],
-                selectedTopicFacetItems: [],
-            },
             facetPane: {
                 display: false,
                 topicsFacetList: [],
@@ -137,26 +132,22 @@ export default {
         },
         clearQueryOrChangeToWildcard() {
             // Change to blank search if no topic DCIs
-            if ( this.currentSearch.selectedTopicFacetItems.length === 0 ) {
-                this.currentSearch.query = '';
+            if ( this.selectedTopicFacetItems.length === 0 ) {
+                this.setQuery( '' );
                 this.searchForm.queryUI  = '';
             } else {
                 // If topic DCIs and query is already "*", do nothing
-                if ( this.currentSearch.query === '*' ) {
+                if ( this.query === '*' ) {
                     return;
                 } else {
                     // If topic DCIs and query was not already "*", change to "*"
                     // and do a new search
-                    this.currentSearch.query = '*';
+                    this.setQuery( '*' );
                     this.searchForm.queryUI  = '*';
                 }
             }
 
-            this.search(
-                this.currentSearch.query,
-                this.currentSearch.queryFields,
-                this.currentSearch.selectedTopicFacetItems
-            );
+            this.search();
         },
         displayPanes( ...panes ) {
             this.setPanesDisplay( panes, true );
