@@ -18,7 +18,7 @@ const store = new Vuex.Store( {
 
         queryFields: state => state.queryFields,
 
-        selectedTopicFacetItems: state => state.queryFields,
+        selectedTopicFacetItems: state => state.selectedTopicFacetItems,
     },
     mutations: {
         addSelectedTopicFacetItem( state, topicFacetItem ) {
