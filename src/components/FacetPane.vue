@@ -65,7 +65,7 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex';
+import { mapActions } from 'vuex';
 
 const DEFAULT_TOPIC_FACET_LIST_LIMIT = 15;
 
