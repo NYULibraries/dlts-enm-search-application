@@ -255,7 +255,7 @@ export default {
             this.resultsPane.numPages = solrResponse.grouped.isbn.matches;
             this.resultsPane.results  = solrResponse.grouped.isbn.groups;
         },
-        setSearchEcho() {
+        updateSearchEcho() {
             this.searchEcho.selectedQueryFieldsDCILabels = this.queryFields.map(
                 function ( selectedQueryField ) {
                     return QUERY_FIELDS_BY_VALUE[ selectedQueryField ].dciLabel;
@@ -263,7 +263,7 @@ export default {
             );
         },
         async search() {
-            this.setSearchEcho();
+            this.updateSearchEcho();
 
             this.hidePanes(
                 this.facetPane,
