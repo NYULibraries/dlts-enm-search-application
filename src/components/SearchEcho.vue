@@ -11,7 +11,7 @@
                         <button
                             id="search-dci"
                             class="delete is-small"
-                            @click="clickDeleteSearchDCI"></button>
+                            @click="clickDismissSearchDCI"></button>
                     </span>
 
                     <span
@@ -22,7 +22,7 @@
                         <button
                             :id="topicDCI.id"
                             class="delete is-small"
-                            @click="clickDeleteTopicDCI"></button>
+                            @click="clickDismissTopicDCI"></button>
                     </span>
                 </div>
             </div>
@@ -100,10 +100,10 @@ export default {
                 'setQueryFields',
             ]
         ),
-        clickDeleteSearchDCI() {
+        clickDismissSearchDCI() {
             this.$emit( 'search-dci-dismiss', event.currentTarget.id );
         },
-        clickDeleteTopicDCI( event ) {
+        clickDismissTopicDCI( event ) {
             this.removeSelectedTopicFacetItem( event.currentTarget.id );
         },
     },
