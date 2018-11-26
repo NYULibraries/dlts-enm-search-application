@@ -188,7 +188,7 @@ export default {
             }
 
             // Remove topics already selected by user
-            this.currentSearch.selectedTopicFacetItems.forEach(
+            this.selectedTopicFacetItems.forEach(
                 ( selectedTopic ) => {
                     const found = this.facetPane.topicsFacetList.findIndex(
                         ( element ) => {
