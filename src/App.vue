@@ -158,9 +158,6 @@ export default {
                 this.currentSearch.selectedTopicFacetItems
             );
         },
-        clearTopicFilters() {
-            this.facetPane.selectedTopicFacetItems = [];
-        },
         displayPanes( ...panes ) {
             this.setPanesDisplay( panes, true );
         },
@@ -229,7 +226,6 @@ export default {
                 this.previewPane,
             );
 
-            this.clearTopicFilters();
             this.clearPreviewPane();
 
             this.spinner.display = true;
