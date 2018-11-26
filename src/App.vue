@@ -189,14 +189,8 @@ export default {
                 this.resultsPane.results[ 0 ].doclist.docs[ 0 ].title,
             );
         },
-        submitSearchForm( query, queryFields ) {
-            this.searchForm.queryUI = query;
-
-            this.currentSearch.query = query;
-            this.currentSearch.queryFields = queryFields;
-            this.currentSearch.selectedTopicFacetItems = [];
-
-            this.search( query, queryFields, [] );
+        submitSearchForm() {
+            this.search();
         },
         removeSelectedTopic( topic ) {
             const found = this.currentSearch.selectedTopicFacetItems.findIndex(
@@ -270,8 +264,12 @@ export default {
             );
             this.searchEcho.selectedTopicFacetItems = selectedTopicFacetItems;
         },
-        async search( query, queryFields, selectedTopicFacetItems ) {
-            this.setSearchEcho( query, queryFields, selectedTopicFacetItems );
+        async search() {
+            this.setSearchEcho(
+                this.query,
+                this.queryFields,
+                this.selectedTopicFacetItems
+            );
 
             this.hidePanes(
                 this.facetPane,
@@ -286,7 +284,11 @@ export default {
 
             let response;
             try {
-                response = await this.$solrSearch( query, queryFields, selectedTopicFacetItems );
+                response = await this.$solrSearch(
+                    this.query,
+                    this.queryFields,
+                    this.selectedTopicFacetItems
+                );
             } catch( e ) {
                 this.spinner.display = false;
 
