@@ -16,7 +16,6 @@
                         :display="facetPane.display"
                         :topics-facet-list="facetPane.topicsFacetList"
                         :topics-facet-list-limit="facetPane.topicsFacetListLimit"
-                        @topic-click="addSelectedTopic"
                     />
 
                     <spinner :display="spinner.display"/>
@@ -144,15 +143,6 @@ export default {
                 'setSelectedTopicFacetItems',
             ]
         ),
-        addSelectedTopic( topic ) {
-            this.currentSearch.selectedTopicFacetItems.push( topic );
-
-            this.search(
-                this.currentSearch.query,
-                this.currentSearch.queryFields,
-                this.currentSearch.selectedTopicFacetItems
-            );
-        },
         clearPreviewPane() {
             this.setPreviewPane( '', '' );
         },
