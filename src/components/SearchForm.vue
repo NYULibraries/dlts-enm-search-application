@@ -105,7 +105,7 @@ export default {
                 return;
             }
 
-            this.query = this.queryUI;
+            this.setQuery( this.queryUI );
             this.$emit( 'submit', this.query, this.selectedQueryFields );
         },
     },
