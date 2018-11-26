@@ -117,7 +117,8 @@ export default {
     methods: {
         ...mapActions(
             [
-                'setSelectedTopicFacetItems',
+                'addSelectedTopicFacetItems',
+                'removeSelectedTopicFacetItems',
             ]
         ),
         clickTopicFacetItem( event ) {

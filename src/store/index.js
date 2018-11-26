@@ -21,25 +21,34 @@ const store = new Vuex.Store( {
         selectedTopicFacetItems: state => state.queryFields,
     },
     mutations: {
+        addSelectedTopicFacetItem( state, topicFacetItem ) {
+            state.selectedTopicFacetItems.push( topicFacetItem );
+        },
+        removeSelectedTopicFacetItem( state, topicFacetItem ) {
+            const index = state.selectedTopicFacetItems.indexOf( topicFacetItem );
+            if ( index > -1 ) {
+                state.selectedTopicFacetItems.splice( index, 1 );
+            }
+        },
         setQuery( state, query ) {
             state.query = query;
         },
         setQueryFields( state, queryFields ) {
             state.queryFields = queryFields;
         },
-        setSelectedTopicFacetItems( state, selectedTopicFacetItems ) {
-            state.selectedTopicFacetItems = selectedTopicFacetItems;
-        },
     },
     actions: {
+        addSelectedTopicFacetItem( { commit }, topicFacetItem ) {
+            commit( 'addSelectedTopicFacetItem', topicFacetItem );
+        },
+        removeSelectedTopicFacetItem( { commit }, topicFacetItem ) {
+            commit( 'removeSelectedTopicFacetItem', topicFacetItem );
+        },
         setQuery( { commit }, query ) {
             commit( 'setQuery', query );
         },
         setQueryFields( { commit }, queryFields ) {
             commit( 'setQueryFields', queryFields );
-        },
-        setSelectedTopicFacetItems( { commit }, setSelectedTopicFacetItems ) {
-            commit( 'setSelectedTopicFacetItems', setSelectedTopicFacetItems );
         },
     },
 } );
