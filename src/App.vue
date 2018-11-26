@@ -194,9 +194,6 @@ export default {
                 this.resultsPane.results[ 0 ].doclist.docs[ 0 ].title,
             );
         },
-        submitSearchForm() {
-            this.search();
-        },
         removeSelectedTopic( topic ) {
             const found = this.currentSearch.selectedTopicFacetItems.findIndex(
                 ( selectedTopicFacetItem ) => {
@@ -259,6 +256,9 @@ export default {
             this.resultsPane.numBooks = solrResponse.grouped.isbn.groups.length;
             this.resultsPane.numPages = solrResponse.grouped.isbn.matches;
             this.resultsPane.results  = solrResponse.grouped.isbn.groups;
+        },
+        submitSearchForm() {
+            this.search();
         },
         updateSearchEcho() {
             this.searchEcho.selectedQueryFieldsDCILabels = this.queryFields.map(
