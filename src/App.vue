@@ -7,9 +7,7 @@
         <div v-cloak>
             <search-echo
                 :display="searchEcho.display"
-                :query="searchEcho.query"
                 :selected-query-fields-d-c-i-labels="searchEcho.selectedQueryFieldsDCILabels"
-                :selected-topic-facet-items="searchEcho.selectedTopicFacetItems"
                 @search-dci-dismiss="clearQueryOrChangeToWildcard"
                 @topic-dci-dismiss="removeSelectedTopic"
             />
@@ -114,9 +112,7 @@ export default {
             },
             searchEcho: {
                 display: true,
-                query: '',
                 selectedQueryFieldsDCILabels: null,
-                selectedTopicFacetItems: [],
             },
             searchForm: {
                 queryUI       : '',
