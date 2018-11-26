@@ -7,7 +7,7 @@
             <search-echo
                 :display="searchEcho.display"
                 :query-fields-u-i="searchForm.queryFieldsUI"
-                @search-dci-dismiss="clearQueryOrChangeToWildcard"
+                @search-dci-dismiss="clickDismissSearchDCI"
             />
             <div class="container is-fluid">
                 <div class="columns enm-panes">
@@ -130,7 +130,7 @@ export default {
         clearPreviewPane() {
             this.setPreviewPane( '', '' );
         },
-        clearQueryOrChangeToWildcard() {
+        clickDismissSearchDCI() {
             // Change to blank search if no topic DCIs
             if ( this.selectedTopicFacetItems.length === 0 ) {
                 this.setQuery( '' );
