@@ -255,21 +255,15 @@ export default {
             this.resultsPane.numPages = solrResponse.grouped.isbn.matches;
             this.resultsPane.results  = solrResponse.grouped.isbn.groups;
         },
-        setSearchEcho( query, queryFields, selectedTopicFacetItems ) {
-            this.searchEcho.query = query;
-            this.searchEcho.selectedQueryFieldsDCILabels = queryFields.map(
+        setSearchEcho() {
+            this.searchEcho.selectedQueryFieldsDCILabels = this.queryFields.map(
                 function ( selectedQueryField ) {
                     return QUERY_FIELDS_BY_VALUE[ selectedQueryField ].dciLabel;
                 }
             );
-            this.searchEcho.selectedTopicFacetItems = selectedTopicFacetItems;
         },
         async search() {
-            this.setSearchEcho(
-                this.query,
-                this.queryFields,
-                this.selectedTopicFacetItems
-            );
+            this.setSearchEcho();
 
             this.hidePanes(
                 this.facetPane,
