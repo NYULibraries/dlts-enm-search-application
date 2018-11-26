@@ -104,7 +104,7 @@ export default {
             this.$emit( 'search-dci-dismiss', event.currentTarget.id );
         },
         clickDeleteTopicDCI( event ) {
-            this.$emit( 'topic-dci-dismiss', event.currentTarget.id );
+            this.removeSelectedTopicFacetItem( event.currentTarget.id );
         },
     },
 };
