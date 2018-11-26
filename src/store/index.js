@@ -24,6 +24,9 @@ const store = new Vuex.Store( {
         addSelectedTopicFacetItem( state, topicFacetItem ) {
             state.selectedTopicFacetItems.push( topicFacetItem );
         },
+        clearSelectedTopicFacetItems( state ) {
+            state.selectedTopicFacetItems = [];
+        },
         removeSelectedTopicFacetItem( state, topicFacetItem ) {
             const index = state.selectedTopicFacetItems.indexOf( topicFacetItem );
             if ( index > -1 ) {
@@ -40,6 +43,9 @@ const store = new Vuex.Store( {
     actions: {
         addSelectedTopicFacetItem( { commit }, topicFacetItem ) {
             commit( 'addSelectedTopicFacetItem', topicFacetItem );
+        },
+        clearSelectedTopicFacetItems( { commit } ) {
+            commit( 'clearSelectedTopicFacetItems' );
         },
         removeSelectedTopicFacetItem( { commit }, topicFacetItem ) {
             commit( 'removeSelectedTopicFacetItem', topicFacetItem );

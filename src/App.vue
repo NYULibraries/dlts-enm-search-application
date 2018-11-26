@@ -127,6 +127,7 @@ export default {
     methods : {
         ...mapActions(
             [
+                'clearSelectedTopicFacetItems',
                 'setQuery',
                 'setQueryFields',
                 'setSelectedTopicFacetItems',
@@ -217,6 +218,7 @@ export default {
             this.resultsPane.results  = solrResponse.grouped.isbn.groups;
         },
         submitSearchForm() {
+            this.clearSelectedTopicFacetItems();
             this.search();
         },
         async search() {
