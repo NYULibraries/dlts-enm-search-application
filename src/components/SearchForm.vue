@@ -71,7 +71,6 @@ export default {
     },
     data() {
         return {
-            query: '',
             selectedQueryFields: this.queryFieldsUI.map(
                 ( queryField ) => { return queryField.value; }
             ),
