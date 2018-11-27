@@ -65,6 +65,8 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 const DEFAULT_TOPIC_FACET_LIST_LIMIT = 15;
 
 export default {
@@ -113,10 +115,13 @@ export default {
         },
     },
     methods: {
+        ...mapActions(
+            [
+                'addSelectedTopicFacetItem',
+            ]
+        ),
         clickTopicFacetItem( event ) {
-            // Recommended to always use kebab-case for event names
-            // https://vuejs.org/v2/guide/components-custom-events.html#Event-Names
-            this.$emit( 'topic-click', event.currentTarget.id );
+            this.addSelectedTopicFacetItem( event.currentTarget.id );
         },
     },
 };

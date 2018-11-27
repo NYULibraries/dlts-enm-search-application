@@ -70,6 +70,8 @@
 <script>
 import BarChart from './BarChart';
 
+import { mapGetters } from 'vuex';
+
 const ALTERNATE_NAMES_LIST_SEPARATOR = '&nbsp;&bull;&nbsp;';
 const HIGHLIGHT_PRE = '<mark>';
 const HIGHLIGHT_POST = '</mark>';
@@ -78,11 +80,6 @@ export default {
     name       : 'PreviewPane',
     components : { BarChart },
     props      : {
-        currentSearch : {
-            type     : Object,
-            required : true,
-            default  : null,
-        },
         display       : {
             type     : Boolean,
             required : true,
@@ -111,6 +108,15 @@ export default {
             topicsOnPage       : null,
         };
     },
+    computed : {
+        ...mapGetters(
+            [
+                'query',
+                'queryFields',
+                'selectedTopicFacetItems',
+            ]
+        ),
+    },
     watch: {
         isbn( newIsbn, oldIsbn ) {
             if ( newIsbn === '' ) {
@@ -134,9 +140,9 @@ export default {
             try {
                 response = await this.solrPreviewEpub(
                     this.isbn,
-                    this.currentSearch.query,
-                    this.currentSearch.queryFields,
-                    this.currentSearch.selectedTopicFacetItems,
+                    this.query,
+                    this.queryFields,
+                    this.selectedTopicFacetItems,
                 );
             } catch( e ) {
                 console.error( 'ERROR in PreviewPane.previewEpub: ' + e );
@@ -169,8 +175,8 @@ export default {
                 response = await this.solrPreviewPage(
                     this.isbn,
                     this.selectedPageNumber,
-                    this.currentSearch.query,
-                    this.currentSearch.queryFields
+                    this.query,
+                    this.queryFields
                 );
             } catch( e ) {
                 console.error( 'ERROR in PreviewPane.previewEpubPage: ' + e );

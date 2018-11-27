@@ -11,7 +11,7 @@
                         <button
                             id="search-dci"
                             class="delete is-small"
-                            @click="clickDeleteSearchDCI"></button>
+                            @click="clickDismissSearchDCI"></button>
                     </span>
 
                     <span
@@ -22,7 +22,7 @@
                         <button
                             :id="topicDCI.id"
                             class="delete is-small"
-                            @click="clickDeleteTopicDCI"></button>
+                            @click="clickDismissTopicDCI"></button>
                     </span>
                 </div>
             </div>
@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
     name: 'SearchEcho',
     props : {
@@ -39,31 +41,37 @@ export default {
             required : true,
             default  : false,
         },
-        query                        : {
-            type     : String,
+        queryFieldsUI : {
+            type     : Array,
             required : true,
             default  : null,
         },
-        selectedQueryFieldsDCILabels : {
-            type     : Array,
-            required : false,
-            default  : function () {
-                return null;
-            },
-        },
-        selectedTopicFacetItems      : {
-            type     : Array,
-            required : false,
-            default  : function () {
-                return null;
-            },
-        },
+    },
+    data() {
+        return {
+            queryFieldsByValueMap : {},
+        };
     },
     computed: {
+        ...mapGetters(
+            [
+                'query',
+                'queryFields',
+                'selectedTopicFacetItems',
+            ]
+        ),
         searchDCI() {
+            const that = this;
+
             if ( this.query && this.query !== '' ) {
+                const selectedQueryFieldsDCILabels = this.queryFields.map(
+                    function ( selectedQueryField ) {
+                        return that.queryFieldsByValueMap[ selectedQueryField ].dciLabel;
+                    }
+                );
+
                 return 'Searching ' +
-                       this.selectedQueryFieldsDCILabels
+                       selectedQueryFieldsDCILabels
                            .slice()
                            .sort().join( ' and ' ) + ' for: ' + this.query;
             } else {
@@ -79,12 +87,38 @@ export default {
             } );
         },
     },
+    created() {
+        this.queryFieldsUI.forEach( queryField => {
+            this.queryFieldsByValueMap[ queryField.value ] = queryField;
+        } );
+    },
     methods: {
-        clickDeleteSearchDCI() {
+        ...mapActions(
+            [
+                'removeSelectedTopicFacetItem',
+                'setQuery',
+                'setQueryFields',
+            ]
+        ),
+        clickDismissSearchDCI() {
+            // Change to blank search if no topic DCIs
+            if ( this.selectedTopicFacetItems.length === 0 ) {
+                this.setQuery( '' );
+            } else {
+                // If topic DCIs and query is already "*", do nothing
+                if ( this.query === '*' ) {
+                    return;
+                } else {
+                    // If topic DCIs and query was not already "*", change to "*"
+                    // and do a new search
+                    this.setQuery( '*' );
+                }
+            }
+
             this.$emit( 'search-dci-dismiss', event.currentTarget.id );
         },
-        clickDeleteTopicDCI( event ) {
-            this.$emit( 'topic-dci-dismiss', event.currentTarget.id );
+        clickDismissTopicDCI( event ) {
+            this.removeSelectedTopicFacetItem( event.currentTarget.id );
         },
     },
 };

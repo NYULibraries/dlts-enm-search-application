@@ -7,8 +7,17 @@ let solrPort;
 let solrCorePath;
 
 async function doFetch( params ) {
+    // Shouldn't ever have null or undefined params, but test and remove just
+    // in case, otherwise we end up with param=null or param=undefined.
+    Object.keys( params ).forEach( key => {
+        if ( params[ key ] === null || params[ key ] === undefined ) {
+            delete params[ key ];
+        }
+    } );
+
     params = Object.assign( params, {
-        q : encodeURIComponent( params.q ),
+        // Avoid `q : undefined` if q was deleted above or never present
+        q : params.q !== undefined ? encodeURIComponent( params.q ) : '',
         defType : 'edismax',
         indent : 'on',
         wt : 'json',

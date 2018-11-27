@@ -53,14 +53,11 @@
 </template>
 
 <script>
+import { mapGetters, mapActions } from 'vuex';
+
 export default {
     name: 'SearchForm',
     props : {
-        queryUI       : {
-            type     : String,
-            required : true,
-            default  : null,
-        },
         queryFieldsUI : {
             type     : Array,
             required : true,
@@ -69,13 +66,45 @@ export default {
     },
     data() {
         return {
-            query: '',
+            queryUI : '',
+
             selectedQueryFields: this.queryFieldsUI.map(
                 ( queryField ) => { return queryField.value; }
             ),
         };
     },
+    computed : {
+        ...mapGetters(
+            [
+                'query',
+                'queryFields',
+                'selectedTopicFacetItems',
+            ]
+        ),
+    },
+    watch : {
+        query( newValue, oldValue ) {
+            // This watcher is for updating the form when another component
+            // changes the query.  Note that this watcher forms a loop in the case of
+            // the user submitting a new query via this component's own form,
+            // since the submit form code changes the query.  It's a very fast
+            // and finite loop however, and there may in fact come a time when in
+            // the loop we would want to change the queryUI value -- for example,
+            // for stopword removal or some other query rewrite that happens on
+            // submission.
+            // The loop could be broken by moving queryUI from data to props and
+            // having App set it when another component changes the query, but
+            // doing that doesn't seem worth the added complexity.
+            this.queryUI = newValue;
+        },
+    },
     methods: {
+        ...mapActions(
+            [
+                'setQuery',
+                'setQueryFields',
+            ]
+        ),
         submitSearchForm() {
             if ( this.selectedQueryFields.length === 0 ) {
                 alert( 'Please check one or more boxes: ' +
@@ -87,8 +116,10 @@ export default {
                 return;
             }
 
-            this.query = this.queryUI;
-            this.$emit( 'submit', this.query, this.selectedQueryFields );
+            this.setQuery( this.queryUI );
+            this.setQueryFields( this.selectedQueryFields );
+
+            this.$emit( 'submit' );
         },
     },
 };

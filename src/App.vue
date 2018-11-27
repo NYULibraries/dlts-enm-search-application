@@ -1,17 +1,13 @@
 <template>
     <div id="app">
         <search-form
-            :query-u-i="searchForm.queryUI"
             :query-fields-u-i="searchForm.queryFieldsUI"
-            @submit="newQuerySubmitted"/>
+            @submit="submitSearchForm"/>
         <div v-cloak>
             <search-echo
                 :display="searchEcho.display"
-                :query="searchEcho.query"
-                :selected-query-fields-d-c-i-labels="searchEcho.selectedQueryFieldsDCILabels"
-                :selected-topic-facet-items="searchEcho.selectedTopicFacetItems"
-                @search-dci-dismiss="clearQueryOrChangeToWildcard"
-                @topic-dci-dismiss="removeSelectedTopic"
+                :query-fields-u-i="searchForm.queryFieldsUI"
+                @search-dci-dismiss="clickDismissSearchDCI"
             />
             <div class="container is-fluid">
                 <div class="columns enm-panes">
@@ -19,7 +15,6 @@
                         :display="facetPane.display"
                         :topics-facet-list="facetPane.topicsFacetList"
                         :topics-facet-list-limit="facetPane.topicsFacetListLimit"
-                        @topic-click="addSelectedTopic"
                     />
 
                     <spinner :display="spinner.display"/>
@@ -32,7 +27,6 @@
                         @epub-click="setPreviewPane"
                     />
                     <preview-pane
-                        :current-search="currentSearch"
                         :display="previewPane.display"
                         :isbn="previewPane.isbn"
                         :title="previewPane.title"
@@ -52,6 +46,8 @@ import SearchEcho from './components/SearchEcho';
 import SearchForm from './components/SearchForm';
 import Spinner from './components/Spinner';
 
+import { mapGetters, mapActions } from 'vuex';
+
 const QUERY_FIELDS = [
     {
         dciLabel : 'full texts',
@@ -67,16 +63,6 @@ const QUERY_FIELDS = [
     },
 ];
 
-const QUERY_FIELDS_BY_VALUE = ( function () {
-    const queryFieldsByValueMap = {};
-
-    QUERY_FIELDS.forEach( function ( queryField ) {
-        queryFieldsByValueMap[ queryField.value ] = queryField;
-    } );
-
-    return queryFieldsByValueMap;
-} )();
-
 export default {
     name: 'App',
     components : {
@@ -89,11 +75,6 @@ export default {
     },
     data() {
         return {
-            currentSearch: {
-                query: '',
-                queryFields: [],
-                selectedTopicFacetItems: [],
-            },
             facetPane: {
                 display: false,
                 topicsFacetList: [],
@@ -112,9 +93,7 @@ export default {
             },
             searchEcho: {
                 display: true,
-                query: '',
-                selectedQueryFieldsDCILabels: null,
-                selectedTopicFacetItems: [],
+                queryFieldsUI: QUERY_FIELDS,
             },
             searchForm: {
                 queryUI       : '',
@@ -125,44 +104,34 @@ export default {
             },
         };
     },
-    methods : {
-        addSelectedTopic( topic ) {
-            this.currentSearch.selectedTopicFacetItems.push( topic );
-
-            this.search(
-                this.currentSearch.query,
-                this.currentSearch.queryFields,
-                this.currentSearch.selectedTopicFacetItems
-            );
+    computed : {
+        ...mapGetters(
+            [
+                'query',
+                'queryFields',
+                'selectedTopicFacetItems',
+            ]
+        ),
+    },
+    watch : {
+        selectedTopicFacetItems() {
+            this.search();
         },
+    },
+    methods : {
+        ...mapActions(
+            [
+                'clearSelectedTopicFacetItems',
+                'setQuery',
+                'setQueryFields',
+                'setSelectedTopicFacetItems',
+            ]
+        ),
         clearPreviewPane() {
             this.setPreviewPane( '', '' );
         },
-        clearQueryOrChangeToWildcard() {
-            // Change to blank search if no topic DCIs
-            if ( this.currentSearch.selectedTopicFacetItems.length === 0 ) {
-                this.currentSearch.query = '';
-                this.searchForm.queryUI  = '';
-            } else {
-                // If topic DCIs and query is already "*", do nothing
-                if ( this.currentSearch.query === '*' ) {
-                    return;
-                } else {
-                    // If topic DCIs and query was not already "*", change to "*"
-                    // and do a new search
-                    this.currentSearch.query = '*';
-                    this.searchForm.queryUI  = '*';
-                }
-            }
-
-            this.search(
-                this.currentSearch.query,
-                this.currentSearch.queryFields,
-                this.currentSearch.selectedTopicFacetItems
-            );
-        },
-        clearTopicFilters() {
-            this.facetPane.selectedTopicFacetItems = [];
+        clickDismissSearchDCI() {
+            this.search();
         },
         displayPanes( ...panes ) {
             this.setPanesDisplay( panes, true );
@@ -174,32 +143,6 @@ export default {
             this.setPreviewPane(
                 this.resultsPane.results[ 0 ].groupValue,
                 this.resultsPane.results[ 0 ].doclist.docs[ 0 ].title,
-            );
-        },
-        newQuerySubmitted( query, queryFields ) {
-            this.searchForm.queryUI = query;
-
-            this.currentSearch.query = query;
-            this.currentSearch.queryFields = queryFields;
-            this.currentSearch.selectedTopicFacetItems = [];
-
-            this.search( query, queryFields, [] );
-        },
-        removeSelectedTopic( topic ) {
-            const found = this.currentSearch.selectedTopicFacetItems.findIndex(
-                ( selectedTopicFacetItem ) => {
-                    return selectedTopicFacetItem === topic;
-                }
-            );
-
-            if ( found !== -1 ) {
-                this.currentSearch.selectedTopicFacetItems.splice( found, 1 );
-            }
-
-            this.search(
-                this.currentSearch.query,
-                this.currentSearch.queryFields,
-                this.currentSearch.selectedTopicFacetItems
             );
         },
         setFacetPaneFromSolrResponse( solrResponse ) {
@@ -220,7 +163,7 @@ export default {
             }
 
             // Remove topics already selected by user
-            this.currentSearch.selectedTopicFacetItems.forEach(
+            this.selectedTopicFacetItems.forEach(
                 ( selectedTopic ) => {
                     const found = this.facetPane.topicsFacetList.findIndex(
                         ( element ) => {
@@ -248,32 +191,28 @@ export default {
             this.resultsPane.numPages = solrResponse.grouped.isbn.matches;
             this.resultsPane.results  = solrResponse.grouped.isbn.groups;
         },
-        setSearchEcho( query, queryFields, selectedTopicFacetItems ) {
-            this.searchEcho.query = query;
-            this.searchEcho.selectedQueryFieldsDCILabels = queryFields.map(
-                function ( selectedQueryField ) {
-                    return QUERY_FIELDS_BY_VALUE[ selectedQueryField ].dciLabel;
-                }
-            );
-            this.searchEcho.selectedTopicFacetItems = selectedTopicFacetItems;
+        submitSearchForm() {
+            this.clearSelectedTopicFacetItems();
+            this.search();
         },
-        async search( query, queryFields, selectedTopicFacetItems ) {
-            this.setSearchEcho( query, queryFields, selectedTopicFacetItems );
-
+        async search() {
             this.hidePanes(
                 this.facetPane,
                 this.resultsPane,
                 this.previewPane,
             );
 
-            this.clearTopicFilters();
             this.clearPreviewPane();
 
             this.spinner.display = true;
 
             let response;
             try {
-                response = await this.$solrSearch( query, queryFields, selectedTopicFacetItems );
+                response = await this.$solrSearch(
+                    this.query,
+                    this.queryFields,
+                    this.selectedTopicFacetItems
+                );
             } catch( e ) {
                 this.spinner.display = false;
 
