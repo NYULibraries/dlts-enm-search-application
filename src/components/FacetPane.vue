@@ -118,7 +118,6 @@ export default {
         ...mapActions(
             [
                 'addSelectedTopicFacetItem',
-                'removeSelectedTopicFacetItem',
             ]
         ),
         clickTopicFacetItem( event ) {
