@@ -101,8 +101,6 @@ export default {
     methods: {
         ...mapActions(
             [
-                'addSelectedTopicFacetItems',
-                'removeSelectedTopicFacetItems',
                 'setQuery',
                 'setQueryFields',
             ]
