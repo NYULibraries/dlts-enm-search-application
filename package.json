@@ -11,6 +11,9 @@
     "test:browser:local": "node_modules/.bin/wdio test/browser/conf/wdio.local.conf.js",
     "test:browser:local:debug:chrome": "node_modules/.bin/wdio test/browser/conf/wdio.local.debug-chrome.conf.js",
     "test:browser:local:debug:firefox": "node_modules/.bin/wdio test/browser/conf/wdio.local.debug-firefox.conf.js",
+    "test:browser:dev": "node_modules/.bin/wdio test/browser/conf/wdio.dev.conf.js",
+    "test:browser:stage": "node_modules/.bin/wdio test/browser/conf/wdio.stage.conf.js",
+    "test:browser:prod": "node_modules/.bin/wdio test/browser/conf/wdio.prod.conf.js",
     "test:unit": "jest --config test/unit/jest.conf.js --coverage",
     "lint": "eslint --ext .js,.vue src test/unit",
     "build": "node $NODE_DEBUG_OPTION build/build.js"
