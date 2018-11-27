@@ -11,7 +11,7 @@ function getScreenshotName( basePath ) {
         let browserWidth = browserViewport.width;
         let browserHeight = browserViewport.height;
 
-        return path.join( basePath, `${testName}_${type}_${browserName}_v${browserVersion}_${browserWidth}x${browserHeight}.png` );
+        return path.join( basePath, `${ testName }_${ type }_${ browserName }_v${ browserVersion }_${ browserWidth }x${ browserHeight }.png` );
     };
 }
 
