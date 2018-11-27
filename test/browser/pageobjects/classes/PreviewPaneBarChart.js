@@ -86,7 +86,7 @@ class PreviewPaneBarChart {
         // '<div class="d3-tip n" style="position: absolute;top: 271.391px;opacity: 0;pointer-events: none;box-sizing: border-box;left: 888.484px;">Page: 156<br><span class="tooltip-score">Score: 6.755904</span></div>'
         //     >
 
-        let tooltipHtml = this.tooltip.getHTML()
+        let tooltipHtml = this.tooltip.getHTML();
         let found       = tooltipHtml.match( /Page: (\S+)<br>.*Score: ([\d.]+)<\/span>/ );
 
         if ( found ) {
