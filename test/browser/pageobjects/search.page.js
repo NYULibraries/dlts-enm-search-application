@@ -83,7 +83,7 @@ class SearchPage extends Page {
 
     getPreviewId( query, searchFulltext, searchTopics, topicDCIsTopics, isbn, pageNumber ) {
         return this.getSearchId( query, searchFulltext, searchTopics, topicDCIsTopics ) +
-               `-${isbn}-${pageNumber}`;
+               `-${ isbn }-${ pageNumber }`;
     }
 
     getPreviewIdForCurrentPreview() {

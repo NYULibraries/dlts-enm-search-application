@@ -33,7 +33,7 @@ suite( 'Search Echo', function () {
             const EXPECTED_LABEL = 'Searching full texts for';
             assert(
                 label === EXPECTED_LABEL,
-                `Search DCI label was "${label}"; was expecting ${EXPECTED_LABEL}`
+                `Search DCI label was "${ label }"; was expecting ${ EXPECTED_LABEL }`
             );
         } );
 
@@ -46,7 +46,7 @@ suite( 'Search Echo', function () {
             const EXPECTED_LABEL = 'Searching topics for';
             assert(
                 label === EXPECTED_LABEL,
-                `Got search DCI label "${label}"; expected "${EXPECTED_LABEL}"`
+                `Got search DCI label "${ label }"; expected "${ EXPECTED_LABEL }"`
             );
         } );
 
@@ -57,7 +57,7 @@ suite( 'Search Echo', function () {
             const EXPECTED_LABEL = 'Searching full texts and topics for';
             assert(
                 label === EXPECTED_LABEL,
-                `Got search DCI label "${label}"; expected "${EXPECTED_LABEL}"`
+                `Got search DCI label "${ label }"; expected "${ EXPECTED_LABEL }"`
             );
         } );
 
@@ -73,7 +73,7 @@ suite( 'Search Echo', function () {
             const EXPECTED_LABEL = 'Searching full texts and topics for';
             assert(
                 label === EXPECTED_LABEL,
-                `Got search DCI label "${label}"; expected "${EXPECTED_LABEL}"`
+                `Got search DCI label "${ label }"; expected "${ EXPECTED_LABEL }"`
             );
         } );
     } );
@@ -92,7 +92,7 @@ suite( 'Search Echo', function () {
             const query = SearchPage.searchForm.searchBox.getValue();
             assert(
                 query === '',
-                `Got query "${query}"; expected empty query`
+                `Got query "${ query }"; expected empty query`
             );
 
             assert(
@@ -148,10 +148,10 @@ suite( 'Search Echo', function () {
 
             // Make exception to one-assert-per-test
             const searchBoxQuery = SearchPage.searchForm.searchBox.getValue();
-            assert( searchBoxQuery === '*', `Got search form query "${searchBoxQuery}"; expected "*"` );
+            assert( searchBoxQuery === '*', `Got search form query "${ searchBoxQuery }"; expected "*"` );
 
             const searchDCIQuery = SearchPage.searchEcho.searchDCI.query;
-            assert( searchDCIQuery === '*', `Got search DCI query ${searchDCIQuery}; expected "*"` );
+            assert( searchDCIQuery === '*', `Got search DCI query ${ searchDCIQuery }; expected "*"` );
         } );
 
         test( 'Change to "*" if topic DCIs and reset Preview Pane if original query was not "*"', function () {
@@ -167,10 +167,10 @@ suite( 'Search Echo', function () {
 
             // Make exception to one-assert-per-test
             const searchBoxQuery = SearchPage.searchForm.searchBox.getValue();
-            assert( searchBoxQuery === '*', `Got search form query "${searchBoxQuery}"; expected "*"` );
+            assert( searchBoxQuery === '*', `Got search form query "${ searchBoxQuery }"; expected "*"` );
 
             const searchDCIQuery = SearchPage.searchEcho.searchDCI.query;
-            assert( searchDCIQuery === '*', `Got search DCI query ${searchDCIQuery}; expected "*"` );
+            assert( searchDCIQuery === '*', `Got search DCI query ${ searchDCIQuery }; expected "*"` );
 
             assert(
                 SearchPage.previewPane.loadTheFirstMatchedPageLink.isVisible(),
@@ -203,7 +203,7 @@ suite( 'Search Echo', function () {
 
             const result = compareActualToGolden();
 
-            assert( result.ok, `Dismissal of ${dismissedTopic} resulted in incorrect search: ${result.message}` );
+            assert( result.ok, `Dismissal of ${ dismissedTopic } resulted in incorrect search: ${ result.message }` );
         } );
 
         test( 'Dismissing topic DCI resets Preview Pane', function () {
@@ -228,7 +228,7 @@ suite( 'Search Echo', function () {
 } );
 
 function getCurrentPreviewPanePage( title, pageNumber ) {
-    return `${title}|${pageNumber}`;
+    return `${ title }|${ pageNumber }`;
 }
 
 function getSearchFailureMessage( snapshot ) {
@@ -245,7 +245,7 @@ function getSearchFailureMessage( snapshot ) {
         searchId
     );
 
-    return `Search for '${query}' `                                +
+    return `Search for '${ query }' `                              +
         ( searchFulltext ? 'fulltext=TRUE ' : 'fulltext=FALSE ' )  +
         ( searchTopics   ? 'topics=TRUE '   : 'topics=FALSE '   )  +
         ' topic-facet-values=[' + topicsDCIs + ']'                 +

@@ -25,7 +25,7 @@ suite( 'Limit by Topic Pane', function () {
 
         assert(
             newLimitByTopicList.includes( testTopic ) === false,
-            `"${testTopic}" appears in new Limit by Topic after it has already been selected`
+            `"${ testTopic }" appears in new Limit by Topic after it has already been selected`
         );
     } );
 
@@ -104,7 +104,7 @@ suite( 'Limit by Topic Pane', function () {
             const actualLimitByTopicsAfterSeeLess = SearchPage.limitByTopicPane.topicNames;
 
             const inActualNotExpected = _.difference( actualLimitByTopicsAfterSeeLess, initialShortList );
-            const inExpectedNotActual = _.difference( initialShortList, actualLimitByTopicsAfterSeeLess);
+            const inExpectedNotActual = _.difference( initialShortList, actualLimitByTopicsAfterSeeLess );
 
             const ok = ( inActualNotExpected.length === 0 && inExpectedNotActual.length === 0 );
             let message = '';

@@ -64,7 +64,7 @@ function testSearchResults( golden ) {
     const searchFulltext = golden.searchFulltext;
     const searchTopics   = golden.searchTopics;
 
-    const testTitle = `Search for '${query}' `                                +
+    const testTitle = `Search for '${ query }' `                              +
                     ( searchFulltext ? 'fulltext=TRUE ' : 'fulltext=FALSE ' ) +
                     ( searchTopics   ? 'topics=TRUE '   : 'topics=FALSE '   ) +
                     ' topic-facet-values=[' + topicsDCIs + ']'                +
@@ -101,7 +101,7 @@ function testSearchResults( golden ) {
         if ( updateGoldenFiles ) {
             fs.writeFileSync( goldenFile, stringifiedSnapshot );
 
-            console.log( `Updated golden file ${goldenFile}` );
+            console.log( `Updated golden file ${ goldenFile }` );
 
             return;
         }

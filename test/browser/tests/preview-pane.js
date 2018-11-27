@@ -160,7 +160,7 @@ function testPreviewOfPage( goldenFile ) {
     const searchTopics   = golden.searchTopics;
     const title          = golden.title;
 
-    const testTitle = `Preview pane for'${query}' `                           +
+    const testTitle = `Preview pane for'${ query }' `                         +
                     ( searchFulltext ? 'fulltext=TRUE ' : 'fulltext=FALSE ' ) +
                     ( searchTopics   ? 'topics=TRUE '   : 'topics=FALSE '   ) +
                     ' title=' + title + ' pageNumber=' + pageNumber +
@@ -192,7 +192,7 @@ function testPreviewOfPage( goldenFile ) {
             );
         }
 
-        assert( ok, `Preview of page ${pageNumber} of _${title}_ failed. ` + message );
+        assert( ok, `Preview of page ${ pageNumber } of _${ title }_ failed. ` + message );
     } );
 }
 
@@ -209,7 +209,7 @@ function compareActualToGolden( goldenFile ) {
     if ( updateGoldenFiles ) {
         fs.writeFileSync( goldenFile, stringifiedSnapshot );
 
-        console.log( `Updated golden file ${goldenFile}` );
+        console.log( `Updated golden file ${ goldenFile }` );
 
         return true;
     }
