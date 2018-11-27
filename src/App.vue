@@ -131,22 +131,6 @@ export default {
             this.setPreviewPane( '', '' );
         },
         clickDismissSearchDCI() {
-            // Change to blank search if no topic DCIs
-            if ( this.selectedTopicFacetItems.length === 0 ) {
-                this.setQuery( '' );
-                this.searchForm.queryUI  = '';
-            } else {
-                // If topic DCIs and query is already "*", do nothing
-                if ( this.query === '*' ) {
-                    return;
-                } else {
-                    // If topic DCIs and query was not already "*", change to "*"
-                    // and do a new search
-                    this.setQuery( '*' );
-                    this.searchForm.queryUI  = '*';
-                }
-            }
-
             this.search();
         },
         displayPanes( ...panes ) {

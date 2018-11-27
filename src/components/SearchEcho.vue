@@ -101,6 +101,20 @@ export default {
             ]
         ),
         clickDismissSearchDCI() {
+            // Change to blank search if no topic DCIs
+            if ( this.selectedTopicFacetItems.length === 0 ) {
+                this.setQuery( '' );
+            } else {
+                // If topic DCIs and query is already "*", do nothing
+                if ( this.query === '*' ) {
+                    return;
+                } else {
+                    // If topic DCIs and query was not already "*", change to "*"
+                    // and do a new search
+                    this.setQuery( '*' );
+                }
+            }
+
             this.$emit( 'search-dci-dismiss', event.currentTarget.id );
         },
         clickDismissTopicDCI( event ) {
