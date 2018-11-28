@@ -30,7 +30,20 @@ module.exports = {
     // allow async-await
     'generator-star-spacing': 'off',
     'indent': [ 'warn', 4 ],
-    'key-spacing': 'off',
+    'key-spacing': [
+        'error',
+        {
+            'beforeColon': true,
+            'afterColon': true,
+            'mode': 'minimum',
+            'align': {
+                'beforeColon': true,
+                'afterColon': true,
+                'on': 'colon',
+                'mode': 'minimum'
+            }
+        }
+    ],
     'keyword-spacing': [
         'error',
         {
