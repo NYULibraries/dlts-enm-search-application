@@ -117,7 +117,7 @@ export default {
             ]
         ),
     },
-    watch: {
+    watch : {
         isbn( newIsbn, oldIsbn ) {
             if ( newIsbn === '' ) {
                 this.barChart.barChartData = [];
@@ -131,7 +131,7 @@ export default {
             this.previewEpub();
         },
     },
-    methods: {
+    methods : {
         loadFirstMatchedPage() {
             this.$emit( 'load-first-matched-page-link-click' );
         },

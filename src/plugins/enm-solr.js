@@ -17,10 +17,10 @@ async function doFetch( params ) {
 
     params = Object.assign( params, {
         // Avoid `q : undefined` if q was deleted above or never present
-        q : params.q !== undefined ? encodeURIComponent( params.q ) : '',
+        q       : params.q !== undefined ? encodeURIComponent( params.q ) : '',
         defType : 'edismax',
-        indent : 'on',
-        wt : 'json',
+        indent  : 'on',
+        wt      : 'json',
     } );
 
     const queryStringParams = [];
@@ -57,19 +57,19 @@ async function doFetch( params ) {
 
 async function solrSearch( query, queryFields, selectedTopicFacetItems ) {
     const params = {
-        q: query,
-        'facet.field': 'topicNames_facet',
-        'facet.limit': '-1',
-        'facet.mincount': '1',
-        'facet.sort': 'count',
-        facet: 'on',
-        fl: 'title,authors,publisher,yearOfPublication,score',
-        'group.field': 'isbn',
-        group: 'true',
-        'group.limit': '999',
-        qf: queryFields.join( '%20' ),
-        rows: '1999',
-        sort: 'score%20desc,title_facet%20asc',
+        q                : query,
+        'facet.field'    : 'topicNames_facet',
+        'facet.limit'    : '-1',
+        'facet.mincount' : '1',
+        'facet.sort'     : 'count',
+        facet            : 'on',
+        fl               : 'title,authors,publisher,yearOfPublication,score',
+        'group.field'    : 'isbn',
+        group            : 'true',
+        'group.limit'    : '999',
+        qf               : queryFields.join( '%20' ),
+        rows             : '1999',
+        sort             : 'score%20desc,title_facet%20asc',
     };
 
     if ( selectedTopicFacetItems && selectedTopicFacetItems.length > 0 ) {
@@ -91,12 +91,12 @@ async function solrSearch( query, queryFields, selectedTopicFacetItems ) {
 
 async function solrPreviewEpub( isbn, query, queryFields, selectedTopicFacetItems ) {
     const params = {
-        q: query,
-        fl: 'pageLocalId,pageNumberForDisplay,pageSequenceNumber,epubNumberOfPages,score',
-        fq: encodeURIComponent( 'isbn_facet:"' + isbn + '"' ),
-        qf: queryFields.join( '%20' ),
-        rows: 999,
-        sort: 'pageSequenceNumber+asc',
+        q    : query,
+        fl   : 'pageLocalId,pageNumberForDisplay,pageSequenceNumber,epubNumberOfPages,score',
+        fq   : encodeURIComponent( 'isbn_facet:"' + isbn + '"' ),
+        qf   : queryFields.join( '%20' ),
+        rows : 999,
+        sort : 'pageSequenceNumber+asc',
     };
 
     if ( selectedTopicFacetItems ) {
@@ -126,20 +126,20 @@ async function solrPreviewPage( isbn, pageNumberForDisplay, query, queryFields )
     const highlightFields = qf.replace( 'topicNames', 'topicNamesForDisplay' );
 
     const params = {
-        q: query,
-        fl: 'topicNames_facet,topicNamesForDisplay,pageText',
-        fq: [
+        q  : query,
+        fl : 'topicNames_facet,topicNamesForDisplay,pageText',
+        fq : [
             encodeURIComponent( 'isbn:' + isbn ),
             encodeURIComponent( 'pageNumberForDisplay: ' + pageNumberForDisplay ),
         ],
-        hl: 'on',
-        'hl.fl': highlightFields,
-        'hl.fragsize': 0,
-        'hl.simple.post': encodeURIComponent( HIGHLIGHT_POST ),
-        'hl.simple.pre': encodeURIComponent( HIGHLIGHT_PRE ),
-        qf: qf,
-        rows: 1,
-        sort: 'pageSequenceNumber+asc',
+        hl               : 'on',
+        'hl.fl'          : highlightFields,
+        'hl.fragsize'    : 0,
+        'hl.simple.post' : encodeURIComponent( HIGHLIGHT_POST ),
+        'hl.simple.pre'  : encodeURIComponent( HIGHLIGHT_PRE ),
+        qf               : qf,
+        rows             : 1,
+        sort             : 'pageSequenceNumber+asc',
     };
 
     try {

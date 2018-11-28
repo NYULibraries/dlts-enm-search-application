@@ -56,7 +56,7 @@
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
-    name: 'SearchForm',
+    name  : 'SearchForm',
     props : {
         queryFieldsUI : {
             type     : Array,
@@ -68,7 +68,7 @@ export default {
         return {
             queryUI : '',
 
-            selectedQueryFields: this.queryFieldsUI.map(
+            selectedQueryFields : this.queryFieldsUI.map(
                 ( queryField ) => { return queryField.value; }
             ),
         };
@@ -98,7 +98,7 @@ export default {
             this.queryUI = newValue;
         },
     },
-    methods: {
+    methods : {
         ...mapActions(
             [
                 'setQuery',

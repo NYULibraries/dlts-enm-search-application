@@ -94,10 +94,10 @@ export default {
     },
     data() {
         return {
-            showAllTopics: false,
+            showAllTopics : false,
         };
     },
-    computed: {
+    computed : {
         topicFacetItemsAlwaysVisible() {
             return this.topicsFacetList.slice( 0, this.topicsFacetListLimit );
         },
@@ -109,12 +109,12 @@ export default {
             }
         },
     },
-    watch: {
+    watch : {
         topicsFacetList( newList, oldList ) {
             this.showAllTopics = false;
         },
     },
-    methods: {
+    methods : {
         ...mapActions(
             [
                 'addSelectedTopicFacetItem',

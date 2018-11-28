@@ -64,7 +64,7 @@ const QUERY_FIELDS = [
 ];
 
 export default {
-    name: 'App',
+    name       : 'App',
     components : {
         FacetPane,
         PreviewPane,
@@ -75,32 +75,32 @@ export default {
     },
     data() {
         return {
-            facetPane: {
-                display: false,
-                topicsFacetList: [],
-                topicsFacetListLimit: 15,
+            facetPane : {
+                display              : false,
+                topicsFacetList      : [],
+                topicsFacetListLimit : 15,
             },
-            previewPane: {
-                display: false,
-                isbn: '',
-                title: '',
+            previewPane : {
+                display : false,
+                isbn    : '',
+                title   : '',
             },
-            resultsPane: {
-                display: false,
-                numBooks: 0,
-                numPages: 0,
-                results: [],
+            resultsPane : {
+                display  : false,
+                numBooks : 0,
+                numPages : 0,
+                results  : [],
             },
-            searchEcho: {
-                display: true,
-                queryFieldsUI: QUERY_FIELDS,
+            searchEcho : {
+                display       : true,
+                queryFieldsUI : QUERY_FIELDS,
             },
-            searchForm: {
+            searchForm : {
                 queryUI       : '',
                 queryFieldsUI : QUERY_FIELDS,
             },
-            spinner: {
-                display: false,
+            spinner : {
+                display : false,
             },
         };
     },
@@ -155,8 +155,8 @@ export default {
                     const numHits = topicFacetItems[ i + 1 ];
                     this.facetPane.topicsFacetList.push(
                         {
-                            name: topic,
-                            numHits: numHits.toLocaleString(),
+                            name    : topic,
+                            numHits : numHits.toLocaleString(),
                         }
                     );
                 }

@@ -18,9 +18,9 @@ Vue.use( EnmSolr, {
 
 // eslint-disable-next-line no-new
 new Vue( {
-    el: '#app',
+    el         : '#app',
     router,
     store,
-    components: { App },
-    template: '<App/>',
+    components : { App },
+    template   : '<App/>',
 } );

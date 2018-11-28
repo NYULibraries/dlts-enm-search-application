@@ -95,19 +95,19 @@ export default {
     },
     data() {
         return {
-            isbnOfSelectedEpub: null,
-            previewPaneLoadedClass: 'column enm-pane enm-pane-results is-4',
-            previewPaneNotLoadedClass: 'column enm-pane enm-pane-results is-half',
+            isbnOfSelectedEpub        : null,
+            previewPaneLoadedClass    : 'column enm-pane enm-pane-results is-4',
+            previewPaneNotLoadedClass : 'column enm-pane enm-pane-results is-half',
         };
     },
-    computed: {
-        numBooksFormatted: function () {
+    computed : {
+        numBooksFormatted : function () {
             return this.numBooks ? this.numBooks.toLocaleString() : '';
         },
-        numPagesFormatted: function () {
+        numPagesFormatted : function () {
             return this.numPages ? this.numPages.toLocaleString() : '';
         },
-        resultsHeader: function () {
+        resultsHeader : function () {
             if ( this.results && this.results.length > 0 ) {
                 return this.numPagesFormatted + ' pages in ' + this.numBooksFormatted + ' books';
             } else {
@@ -115,7 +115,7 @@ export default {
             }
         },
     },
-    methods: {
+    methods : {
         previewEpub( event ) {
             const isbn = event.currentTarget.id;
             const title = event.currentTarget.getAttribute( 'name' );

@@ -64,7 +64,7 @@ export default {
             tip                : null,
         };
     },
-    watch: {
+    watch : {
         barChartData( newBarChartData, oldBarChartData ) {
             if ( newBarChartData.length === 0 ) {
                 this.clearBarChart();
@@ -82,7 +82,7 @@ export default {
             // Load first page
             this.triggerClickPage( this.barChartData[ 0 ].page );
         },
-        selectedPageNumber: ( newSelectedPageNumber, oldSelectedPageNumber ) => {
+        selectedPageNumber : ( newSelectedPageNumber, oldSelectedPageNumber ) => {
             d3.select( '.enm-page-active' )
                 .classed( 'enm-page-active', false );
             d3.select( 'rect[ name = "' + newSelectedPageNumber + '" ]' )
@@ -103,7 +103,7 @@ export default {
 
         d3.select( 'svg' ).call( this.tip );
     },
-    methods: {
+    methods : {
         clearBarChart() {
             d3.selectAll( 'svg > *' ).remove();
         },

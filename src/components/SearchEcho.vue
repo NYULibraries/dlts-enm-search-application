@@ -34,7 +34,7 @@
 import { mapGetters, mapActions } from 'vuex';
 
 export default {
-    name: 'SearchEcho',
+    name  : 'SearchEcho',
     props : {
         display                      : {
             type     : Boolean,
@@ -52,7 +52,7 @@ export default {
             queryFieldsByValueMap : {},
         };
     },
-    computed: {
+    computed : {
         ...mapGetters(
             [
                 'query',
@@ -81,8 +81,8 @@ export default {
         topicDCIs() {
             return this.selectedTopicFacetItems.map( ( topic ) => {
                 return {
-                    id: topic,
-                    topic: topic,
+                    id    : topic,
+                    topic : topic,
                 };
             } );
         },
@@ -92,7 +92,7 @@ export default {
             this.queryFieldsByValueMap[ queryField.value ] = queryField;
         } );
     },
-    methods: {
+    methods : {
         ...mapActions(
             [
                 'removeSelectedTopicFacetItem',

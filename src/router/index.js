@@ -5,11 +5,11 @@ import App from '@/App';
 Vue.use( Router );
 
 export default new Router( {
-    routes: [
+    routes : [
         {
-            path: '/',
-            name: 'Home',
-            component: App,
+            path      : '/',
+            name      : 'Home',
+            component : App,
         },
     ],
 } );

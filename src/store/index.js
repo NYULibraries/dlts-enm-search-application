@@ -4,23 +4,23 @@ import Vuex from 'vuex';
 Vue.use( Vuex );
 
 const store = new Vuex.Store( {
-    strict: process.env.NODE_ENV !== 'production',
+    strict : process.env.NODE_ENV !== 'production',
 
     state() {
         return {
-            query: null,
-            queryFields: [],
-            selectedTopicFacetItems: [],
+            query                   : null,
+            queryFields             : [],
+            selectedTopicFacetItems : [],
         };
     },
-    getters: {
-        query: state => state.query,
+    getters : {
+        query : state => state.query,
 
-        queryFields: state => state.queryFields,
+        queryFields : state => state.queryFields,
 
-        selectedTopicFacetItems: state => state.selectedTopicFacetItems,
+        selectedTopicFacetItems : state => state.selectedTopicFacetItems,
     },
-    mutations: {
+    mutations : {
         addSelectedTopicFacetItem( state, topicFacetItem ) {
             state.selectedTopicFacetItems.push( topicFacetItem );
         },
@@ -40,7 +40,7 @@ const store = new Vuex.Store( {
             state.queryFields = queryFields;
         },
     },
-    actions: {
+    actions : {
         addSelectedTopicFacetItem( { commit }, topicFacetItem ) {
             commit( 'addSelectedTopicFacetItem', topicFacetItem );
         },
