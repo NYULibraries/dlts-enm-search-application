@@ -26,7 +26,7 @@ exports.config = {
     // NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
-    specs: [
+    specs : [
         'test/browser/tests/limit-by-topic-pane.js',
         'test/browser/tests/navbar.js',
         'test/browser/tests/preview-pane.js',
@@ -35,26 +35,26 @@ exports.config = {
         'test/browser/tests/search-results.js',
     ],
     // Patterns to exclude.
-    exclude: [
+    exclude : [
         // 'path/to/excluded/files'
     ],
-    suites: {
-        'limit-by-topic-pane': [
+    suites : {
+        'limit-by-topic-pane' : [
             'test/browser/tests/limit-by-topic-pane.js',
         ],
-        'navbar': [
+        'navbar' : [
             'test/browser/tests/navbar.js',
         ],
-        'preview-pane': [
+        'preview-pane' : [
             'test/browser/tests/preview-pane.js',
         ],
-        'search-echo': [
+        'search-echo' : [
             'test/browser/tests/search-echo.js',
         ],
-        'search-form': [
+        'search-form' : [
             'test/browser/tests/search-form.js',
         ],
-        'search-results': [
+        'search-results' : [
             'test/browser/tests/search-results.js',
         ],
     },
@@ -74,36 +74,36 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 12,
+    maxInstances : 12,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [
+    capabilities : [
         {
             // maxInstances can get overwritten per capability. So if you have an in-house Selenium
             // grid with only 5 firefox instances available you can make sure that not more than
             // 5 instances get started at a time.
-            maxInstances: 6,
+            maxInstances  : 6,
             //
-            browserName: 'chrome',
-            chromeOptions: {
+            browserName   : 'chrome',
+            chromeOptions : {
                 // to run chrome headless the following flags are required
                 // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
-                args: [ '--headless' ],
+                args : [ '--headless' ],
             },
         },
         {
             // maxInstances can get overwritten per capability. So if you have an in-house Selenium
             // grid with only 5 firefox instances available you can make sure that not more than
             // 5 instances get started at a time.
-            maxInstances: 6,
+            maxInstances         : 6,
             //
-            browserName: 'firefox',
-            'moz:firefoxOptions': {
+            browserName          : 'firefox',
+            'moz:firefoxOptions' : {
                 // flag to activate Firefox headless mode (see https://github.com/mozilla/geckodriver/blob/master/README.md#firefox-capabilities for more details about moz:firefoxOptions)
-                args: ['-headless'],
+                args : ['-headless'],
             },
         },
     ],
@@ -116,41 +116,41 @@ exports.config = {
     // By default WebdriverIO commands are executed in a synchronous way using
     // the wdio-sync package. If you still want to run your tests in an async way
     // e.g. using promises you can set the sync option to false.
-    sync: true,
+    sync                   : true,
     //
     // Level of logging verbosity: silent | verbose | command | data | result | error
-    logLevel: 'silent',
+    logLevel               : 'silent',
     //
     // Enables colors for log output.
-    coloredLogs: true,
+    coloredLogs            : true,
     //
     // Warns when a deprecated command is used
     // TODO: re-enable this after finding a way to fix https://jira.nyu.edu/jira/browse/NYUP-451
     // without using browser.submitForm()
-    deprecationWarnings: false,
+    deprecationWarnings    : false,
     //
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
-    bail: 0,
+    bail                   : 0,
     //
     // Saves a screenshot to a given path if a command fails.
-    screenshotPath: './test/browser/errorShots/',
+    screenshotPath         : './test/browser/errorShots/',
     //
     // Set a base URL in order to shorten url command calls. If your `url` parameter starts
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost/enm/',
+    baseUrl                : 'http://localhost/enm/',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 30000,
+    waitforTimeout         : 30000,
     //
     // Default timeout in milliseconds for request
     // if Selenium Grid doesn't send response
-    connectionRetryTimeout: 90000,
+    connectionRetryTimeout : 90000,
     //
     // Default request retries count
-    connectionRetryCount: 3,
+    connectionRetryCount   : 3,
     //
     // Initialize the browser instance with a WebdriverIO plugin. The object should have the
     // plugin name as key and the desired plugin options as properties. Make sure you have
@@ -174,23 +174,23 @@ exports.config = {
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    services: ['selenium-standalone', 'visual-regression', 'chromedriver', 'screenshots-cleanup'],
-    cleanScreenshotsFolder: {
-        folder: './test/browser/errorShots/',
-        pattern: '/**/ERROR_*',
+    services               : ['selenium-standalone', 'visual-regression', 'chromedriver', 'screenshots-cleanup'],
+    cleanScreenshotsFolder : {
+        folder  : './test/browser/errorShots/',
+        pattern : '/**/ERROR_*',
     },
-    visualRegression: {
-        compare: new VisualRegressionCompare.LocalCompare(
+    visualRegression : {
+        compare : new VisualRegressionCompare.LocalCompare(
             {
-                referenceName: getScreenshotName( path.join( process.cwd(), 'screenshots/reference' ) ),
-                screenshotName: getScreenshotName( path.join( process.cwd(), 'screenshots/screen' ) ),
-                diffName: getScreenshotName( path.join( process.cwd(), 'screenshots/diff' ) ),
-                misMatchTolerance: 0.01,
+                referenceName     : getScreenshotName( path.join( process.cwd(), 'screenshots/reference' ) ),
+                screenshotName    : getScreenshotName( path.join( process.cwd(), 'screenshots/screen' ) ),
+                diffName          : getScreenshotName( path.join( process.cwd(), 'screenshots/diff' ) ),
+                misMatchTolerance : 0.01,
             }
         ),
-        viewportChangePause: 300,
-        viewports: [{ width: 320, height: 480 }, { width: 480, height: 320 }, { width: 1024, height: 768 }],
-        orientations: ['landscape', 'portrait'],
+        viewportChangePause : 300,
+        viewports           : [{ width : 320, height : 480 }, { width : 480, height : 320 }, { width : 1024, height : 768 }],
+        orientations        : ['landscape', 'portrait'],
     },
     //
     // Framework you want to run your specs with.
@@ -199,20 +199,20 @@ exports.config = {
     //
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
-    framework: 'mocha',
+    framework : 'mocha',
     //
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: http://webdriver.io/guide/reporters/dot.html
-    reporters: [ 'spec' ],
+    reporters : [ 'spec' ],
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
-    mochaOpts: {
-        compilers: ['js:babel-core/register'],
-        retries: 5,
-        timeout: 30000,
-        ui: 'tdd',
+    mochaOpts : {
+        compilers : ['js:babel-core/register'],
+        retries   : 5,
+        timeout   : 30000,
+        ui        : 'tdd',
     },
     //
     // =====

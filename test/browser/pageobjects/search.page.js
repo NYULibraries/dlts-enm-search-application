@@ -146,7 +146,7 @@ class SearchPage extends Page {
             query : this.searchForm.searchBox.getValue(),
 
             searchFulltext : this.searchForm.fulltextCheckbox.isSelected,
-            searchTopics : this.searchForm.topicsCheckbox.isSelected,
+            searchTopics   : this.searchForm.topicsCheckbox.isSelected,
 
             topicsOnThisPage           : this.previewPane.topicsOnThisPage,
             topicsOnThisPageHighlights : this.previewPane.topicsOnThisPageHighlights,

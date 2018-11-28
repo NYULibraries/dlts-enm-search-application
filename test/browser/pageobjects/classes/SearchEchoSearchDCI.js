@@ -27,8 +27,8 @@ class SearchEchoSearchDCI {
             };
         } else {
             return {
-                label: null,
-                query: null,
+                label : null,
+                query : null,
             };
         }
     };
