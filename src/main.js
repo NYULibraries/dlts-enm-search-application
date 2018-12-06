@@ -12,8 +12,9 @@ Vue.config.productionTip = false;
 
 Vue.use( EnmSolr, {
     solrCorePath : '/solr/enm-pages/',
-    solrHost     : 'dev-discovery.dlib.nyu.edu',
-    solrPort     : 8983,
+    solrHost     : process.env.SOLR_HOST,
+    solrPort     : process.env.SOLR_PORT,
+    solrProtocol : process.env.SOLR_PROTOCOL,
 } );
 
 // eslint-disable-next-line no-new
