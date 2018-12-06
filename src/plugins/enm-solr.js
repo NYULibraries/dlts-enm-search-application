@@ -1,10 +1,10 @@
+const DEFAULT_SOLR_CORE_PATH = '/solr/enm-pages/';
 const DEFAULT_SOLR_HOST      = 'localhost';
 const DEFAULT_SOLR_PORT      = 8983;
-const DEFAULT_SOLR_CORE_PATH = '/solr/enm-pages/';
 
+let solrCorePath;
 let solrHost;
 let solrPort;
-let solrCorePath;
 
 async function doFetch( params ) {
     // Shouldn't ever have null or undefined params, but test and remove just
@@ -152,9 +152,9 @@ async function solrPreviewPage( isbn, pageNumberForDisplay, query, queryFields )
 export default {
     install( Vue, options ) {
         // Plugin options
+        solrCorePath = options.solrCorePath || DEFAULT_SOLR_CORE_PATH;
         solrHost     = options.solrHost     || DEFAULT_SOLR_HOST;
         solrPort     = options.solrPort     || DEFAULT_SOLR_PORT;
-        solrCorePath = options.solrCorePath || DEFAULT_SOLR_CORE_PATH;
 
         Vue.prototype.$solrPreviewEpub = solrPreviewEpub;
         Vue.prototype.$solrPreviewPage = solrPreviewPage;
