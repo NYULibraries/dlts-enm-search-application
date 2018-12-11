@@ -13,6 +13,7 @@ module.exports = {
     env : {
         browser : true,
         es6     : true,
+        node    : true,
     },
     extends : [
     // https://github.com/standard/standard/blob/master/docs/RULES-en.md
