@@ -1,18 +1,23 @@
 <template>
     <div
         v-show="display"
-        class="column enm-pane enm-pane-preview">
-
-        <!--PREVIEW: NO EPUB SELECTED-->
+        class="column enm-pane enm-pane-preview"
+>
+<!--PREVIEW: NO EPUB SELECTED-->
         <div
             v-show="! isbn"
             id="message"
-            class="message is-valign is-centered">
-            <p class="message-body has-text-centered">Choose a book at left to view matched pages, or
+            class="message is-valign is-centered"
+>
+            <p class="message-body has-text-centered">
+Choose a book at left to view matched pages, or
                 <br>
                 <a
                     href="#"
-                    @click="loadFirstMatchedPage">Load the first matched page</a>
+                    @click="loadFirstMatchedPage"
+>
+Load the first matched page
+</a>
             </p>
         </div>
         <!--PREVIEW: NO EPUB SELECTED-->
@@ -23,7 +28,8 @@
                 v-if="isbn"
                 id="preview-isbn"
                 :name="isbn"
-                style="display: none"></span>
+                style="display: none"
+></span>
 
             <BarChart
                 :bar-chart-data="barChart.barChartData"
@@ -33,35 +39,38 @@
 
             <div
                 v-show="selectedPageNumber"
-                class="enm-topicsonthispage">
+                class="enm-topicsonthispage"
+>
                 <h3>Topics on this page</h3>
 
                 <ul>
-
-                    <li
+<li
                         v-for="topicOnPage in topicsOnPage"
-                        :key="topicOnPage">
+                        :key="topicOnPage"
+>
                         <a
                             href="#"
-                            v-html="topicOnPage">
+                            v-html="topicOnPage"
+>
                         </a>
                     </li>
                 </ul>
 
                 <div
                     v-if="topicsOnPage === null || topicsOnPage.length === 0"
-                    class="enm-notopics">
+                    class="enm-notopics"
+>
                     No topics are associated with this page.
                 </div>
-
-            </div>
+</div>
 
             <hr>
 
             <div
                 v-show="selectedPageNumber"
                 class="enm-pageText"
-                v-html="pageText">
+                v-html="pageText"
+>
             </div>
         </div>
     </div>

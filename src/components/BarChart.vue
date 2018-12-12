@@ -3,19 +3,27 @@
         <header>
             <div
                 v-show="selectedPageNumber"
-                class="enm-pageno">page {{ selectedPageNumber }}</div>
+                class="enm-pageno"
+>
+page {{ selectedPageNumber }}
+</div>
             <h2
                 v-show="title"
-                class="title is-spaced">{{ title }}</h2>
+                class="title is-spaced"
+>
+{{ title }}
+</h2>
         </header>
 
         <svg
             width="572"
-            height="190"/>
+            height="190"
+/>
 
         <div
             v-show="barChartData.length > 0"
-            class="enm-buttons">
+            class="enm-buttons"
+>
             <a
                 :disabled="selectedBarIndex === 0"
                 href="#"
@@ -23,7 +31,8 @@
                 title="View previous matched page in this book"
                 @click="clickPrevious"
             >
-                &lt; previous </a>
+                &lt; previous
+</a>
             <a
                 :disabled="selectedBarIndex === barChartData.length - 1"
                 href="#"
@@ -31,7 +40,8 @@
                 title="View next matched page in this book"
                 @click="clickNext"
             >
-                next &gt;</a>
+                next &gt;
+</a>
         </div>
     </div>
 </template>

@@ -2,27 +2,32 @@
     <section class="hero searchecho">
         <div class="container is-fluid">
             <div class="columns enm-searchecho">
-
-                <div class="column">
+<div class="column">
                     <span
                         v-show="searchDCI && display"
-                        class="tag">
+                        class="tag"
+>
                         {{ searchDCI }}
                         <button
                             id="search-dci"
                             class="delete is-small"
-                            @click="clickDismissSearchDCI"></button>
+                            @click="clickDismissSearchDCI"
+></button>
                     </span>
 
                     <span
                         v-for="topicDCI in topicDCIs"
                         :key="topicDCI.id"
-                        class="tag">
-                        Topic:&nbsp;<span class="enm-topic">{{ topicDCI.topic }}</span>
+                        class="tag"
+>
+                        Topic:&nbsp;<span class="enm-topic">
+{{ topicDCI.topic }}
+</span>
                         <button
                             :id="topicDCI.id"
                             class="delete is-small"
-                            @click="clickDismissTopicDCI"></button>
+                            @click="clickDismissTopicDCI"
+></button>
                     </span>
                 </div>
             </div>
