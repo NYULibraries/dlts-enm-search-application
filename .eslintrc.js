@@ -82,6 +82,8 @@ module.exports = {
         ],
         'standard/computed-property-even-spacing' : [ 'error', 'always' ],
         'template-curly-spacing'                  : [ 'error', 'always' ],
+        'vue/attributes-order'                    : 'error',
+        'vue/html-end-tags'                       : 'error',
         'vue/html-indent'                         : [
             'error', 4, {
                 'attribute'                 : 1,
@@ -98,5 +100,13 @@ module.exports = {
             'svg'  : 'always',
             'math' : 'always',
         } ],
-    },
+        'vue/html-quotes'                    : 'error',
+        'vue/max-attributes-per-line'        : 'error',
+        'vue/mustache-interpolation-spacing' : 'error',
+        'vue/name-property-casing'           : 'error',
+        'vue/require-default-prop'           : 'error',
+        'vue/require-prop-types'             : 'error',
+        'vue/v-bind-style'                   : 'error',
+        'vue/v-on-style'                     : 'error',
+  },
 };
