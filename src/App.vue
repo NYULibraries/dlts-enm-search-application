@@ -1,32 +1,33 @@
 <template>
     <div id="app">
-        <search-form
+        <SearchForm
             :query-fields-u-i="searchForm.queryFieldsUI"
-            @submit="submitSearchForm"/>
+            @submit="submitSearchForm"
+        />
         <div v-cloak>
-            <search-echo
+            <SearchEcho
                 :display="searchEcho.display"
                 :query-fields-u-i="searchForm.queryFieldsUI"
                 @search-dci-dismiss="clickDismissSearchDCI"
             />
             <div class="container is-fluid">
                 <div class="columns enm-panes">
-                    <facet-pane
+                    <FacetPane
                         :display="facetPane.display"
                         :topics-facet-list="facetPane.topicsFacetList"
                         :topics-facet-list-limit="facetPane.topicsFacetListLimit"
                     />
 
-                    <spinner :display="spinner.display"/>
+                    <Spinner :display="spinner.display" />
 
-                    <results-pane
+                    <ResultsPane
                         :display="resultsPane.display"
                         :num-books="resultsPane.numBooks"
                         :num-pages="resultsPane.numPages"
                         :results="resultsPane.results"
                         @epub-click="setPreviewPane"
                     />
-                    <preview-pane
+                    <PreviewPane
                         :display="previewPane.display"
                         :isbn="previewPane.isbn"
                         :title="previewPane.title"

@@ -25,7 +25,7 @@
                 :name="isbn"
                 style="display: none"></span>
 
-            <bar-chart
+            <BarChart
                 :bar-chart-data="barChart.barChartData"
                 :title="title"
                 @bar-click="previewEpubPage"
