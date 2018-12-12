@@ -1,6 +1,8 @@
 {
-  "name": "new-version",
-  "version": "0.1.0",
+  "name": "enm-search-application",
+  "version": "1.0.0",
+  "description": "Vue.js/D3 search SPA for the DLTS Enhanced Networked Monographs website.",
+  "author": "David <da70@nyu.edu>",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
