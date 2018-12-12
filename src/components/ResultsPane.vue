@@ -1,6 +1,6 @@
 <template>
     <div :class="isbnOfSelectedEpub ? previewPaneLoadedClass : previewPaneNotLoadedClass">
-<!--RESULTS-->
+        <!--RESULTS-->
         <template v-show="display">
             <!-- v-show is necessary on this <header> element for some reason.
                  Its visibility is not being toggled along with the other elements
@@ -8,14 +8,14 @@
             -->
             <header v-show="display">
                 <h2 class="is-size-4">
-Results: {{ resultsHeader }}
-</h2>
+                    Results: {{ resultsHeader }}
+                </h2>
             </header>
             <div
                 v-show="display"
                 class="enm-results"
->
-<span v-if="! results || results.length === 0">
+            >
+                <span v-if="! results || results.length === 0">
                     Please try another search.
                 </span>
 
@@ -27,14 +27,14 @@ Results: {{ resultsHeader }}
                     :name="result.doclist.docs[ 0 ].title"
                     class="box"
                     @click="previewEpub"
->
+                >
                     <article class="media enm-book">
                         <div class="media-left">
                             <figure class="image enm-thumbnail">
                                 <img
                                     :src="'/enm/search/assets/covers/' + result.groupValue + '.jpg'"
                                     alt=""
->
+                                >
                             </figure>
                         </div>
                         <div class="media-content">
@@ -45,18 +45,18 @@ Results: {{ resultsHeader }}
                             <a
                                 class="enm-divlink"
                                 href="#"
->
+                            >
 &nbsp;
-</a>
+                            </a>
                             <h3 class="title is-spaced">
-<a href="#">
-{{ result.doclist.docs[ 0 ].title }}
-</a>
-</h3>
+                                <a href="#">
+                                    {{ result.doclist.docs[ 0 ].title }}
+                                </a>
+                            </h3>
                             <div class="meta">
                                 {{ result.doclist.docs[ 0 ].authors.join( '; ' ) +
                                     '; ' +
-                                result.doclist.docs[ 0 ].publisher }}
+                                    result.doclist.docs[ 0 ].publisher }}
                             </div>
                             <div class="matches">
                                 {{ result.doclist.numFound.toLocaleString() }} matched pages
@@ -68,10 +68,10 @@ Results: {{ resultsHeader }}
                     </article>
                 </div>
                 <!--BOOK-->
-</div>
+            </div>
         </template>
         <!--RESULTS-->
-</div>
+    </div>
 </template>
 
 <script>

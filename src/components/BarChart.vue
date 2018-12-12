@@ -4,26 +4,26 @@
             <div
                 v-show="selectedPageNumber"
                 class="enm-pageno"
->
-page {{ selectedPageNumber }}
-</div>
+            >
+                page {{ selectedPageNumber }}
+            </div>
             <h2
                 v-show="title"
                 class="title is-spaced"
->
-{{ title }}
-</h2>
+            >
+                {{ title }}
+            </h2>
         </header>
 
         <svg
             width="572"
             height="190"
-/>
+        />
 
         <div
             v-show="barChartData.length > 0"
             class="enm-buttons"
->
+        >
             <a
                 :disabled="selectedBarIndex === 0"
                 href="#"
@@ -32,7 +32,7 @@ page {{ selectedPageNumber }}
                 @click="clickPrevious"
             >
                 &lt; previous
-</a>
+            </a>
             <a
                 :disabled="selectedBarIndex === barChartData.length - 1"
                 href="#"
@@ -41,7 +41,7 @@ page {{ selectedPageNumber }}
                 @click="clickNext"
             >
                 next &gt;
-</a>
+            </a>
         </div>
     </div>
 </template>

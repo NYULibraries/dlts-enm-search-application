@@ -1,73 +1,73 @@
 <template>
     <div class="column enm-pane enm-pane-facets is-2">
-<div
+        <div
             v-show="display"
             class="content"
->
+        >
             <h2 class="enm-pane-heading is-size-5">
-Limit by Topic
-</h2>
+                Limit by Topic
+            </h2>
 
             <div class="enm-facets-list">
                 <div class="enm-topics enm-facets-group-visible">
-<a
+                    <a
                         v-for="topic in topicFacetItemsAlwaysVisible"
                         :id="topic.name"
                         :key="topic.name"
                         href="#"
                         @click="clickTopicFacetItem"
->
+                    >
                         {{ topic.name }}
                         <span class="enm-hitcount">
-({{ topic.numHits }})
-</span>
+                            ({{ topic.numHits }})
+                        </span>
                     </a>
-</div>
+                </div>
 
                 <a
                     v-show="( ! showAllTopics ) && ( topicsFacetList.length > topicsFacetListLimit )"
                     class="listui seemore"
                     href="#"
                     @click="showAllTopics = ! showAllTopics"
->
+                >
                     <i
                         class="fa fa-angle-double-down"
                         aria-hidden="true"
-></i>See All
+                    ></i>See All
                 </a>
 
                 <div
                     v-show="( showAllTopics ) && ( topicsFacetList.length > topicsFacetListLimit )"
                     class="enm-topics enm-facets-group-togglable"
->
-<a
+                >
+                    <a
                         v-for="topic in topicFacetItemsToggleable"
                         :id="topic.name"
                         :key="topic.name"
                         href="#"
                         @click="clickTopicFacetItem"
->
+                    >
                         {{ topic.name }}
                         <span class="enm-hitcount">
-({{ topic.numHits }})
-</span>
+                            ({{ topic.numHits }})
+                        </span>
                     </a>
-</div>
+                </div>
 
                 <a
                     v-show="( showAllTopics ) && ( topicsFacetList.length > topicsFacetListLimit )"
                     class="listui seemore"
                     href="#"
                     @click="showAllTopics = ! showAllTopics"
->
+                >
                     <i
                         class="fa fa-angle-double-up"
                         aria-hidden="true"
-></i>See Less
+                    ></i>See Less
                 </a>
-</div>
-</div>
-</div>
+            </div>
+        </div>
+    </div>
 </template>
 
 <script>

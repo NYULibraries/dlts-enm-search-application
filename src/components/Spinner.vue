@@ -7,7 +7,7 @@
         v-show="display"
         id="spinner"
         class="column enm-pane enm-pane-results is-half"
->
+    >
         <div class="overlay-loader">
             <div class="loader">
                 <div></div>
