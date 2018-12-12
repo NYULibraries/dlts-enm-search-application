@@ -17,9 +17,9 @@ module.exports = {
         node    : true,
     },
     extends : [
-    // https://github.com/standard/standard/blob/master/docs/RULES-en.md
-        'standard',
-        // https://github.com/vuejs/eslint-plugin-vue#bulb-rules
+        // https://github.com/standard/eslint-config-standard/blob/ddd325066548a9e94b31fe2c8fa968ae5a49edfb/eslintrc.json
+        '@vue/standard`',
+        // https://github.com/vuejs/eslint-plugin-vue/blob/9fdf8e030c880e99f9bfa63fe10c3408961ee256/lib/configs/recommended.js
         'plugin:vue/recommended',
     ],
     // required to lint *.vue files
