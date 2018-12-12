@@ -28,16 +28,16 @@
 
                                 <template v-for="queryFieldUI in queryFieldsUI">
                                     <input
-                                        :name="queryFieldUI.name + 'Chx'"
                                         :id="queryFieldUI.name + 'Chx'"
                                         :key="queryFieldUI.name"
-                                        :value="queryFieldUI.value"
                                         v-model="selectedQueryFields"
+                                        :name="queryFieldUI.name + 'Chx'"
+                                        :value="queryFieldUI.value"
                                         type="checkbox"
                                         class="is-medium is-checkbox">
                                     <label
-                                        :for="queryFieldUI.name + 'Chx'"
                                         :key="queryFieldUI.label"
+                                        :for="queryFieldUI.name + 'Chx'"
                                         class="">
                                         {{ queryFieldUI.label }}
                                     </label>

@@ -11,8 +11,8 @@
 
                     <a
                         v-for="topic in topicFacetItemsAlwaysVisible"
-                        :key="topic.name"
                         :id="topic.name"
+                        :key="topic.name"
                         href="#"
                         @click="clickTopicFacetItem">
                         {{ topic.name }}
@@ -37,8 +37,8 @@
 
                     <a
                         v-for="topic in topicFacetItemsToggleable"
-                        :key="topic.name"
                         :id="topic.name"
+                        :key="topic.name"
                         href="#"
                         @click="clickTopicFacetItem">
                         {{ topic.name }}

@@ -22,8 +22,8 @@
                 <div
                     v-for="result in results"
                     :id="result.groupValue"
-                    :name="result.doclist.docs[ 0 ].title"
                     :key="result.groupValue"
+                    :name="result.doclist.docs[ 0 ].title"
                     class="box"
                     @click="previewEpub">
                     <article class="media enm-book">
