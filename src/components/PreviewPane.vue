@@ -154,8 +154,6 @@ export default {
                     this.selectedTopicFacetItems,
                 );
             } catch( e ) {
-                console.error( 'ERROR in PreviewPane.previewEpub: ' + e );
-
                 // TODO: replace this with something more user-friendly
                 alert( 'Sorry, the server has returned an error or is not responding.' );
 
