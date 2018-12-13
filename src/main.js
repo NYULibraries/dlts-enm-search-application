@@ -23,5 +23,8 @@ new Vue( {
     router,
     store,
     components : { App },
-    template   : '<App/>',
-} );
+    // Can't use template option unless in vue.config.js `runtimeCompiler` is set to true.
+    // See https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
+    // template   : '<App/>',
+    render     : h => h( App ),
+} ).$mount( '#app' );
