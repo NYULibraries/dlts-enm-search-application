@@ -27,12 +27,12 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs : [
-        'test/browser/tests/limit-by-topic-pane.js',
-        'test/browser/tests/navbar.js',
-        'test/browser/tests/preview-pane.js',
-        'test/browser/tests/search-echo.js',
-        'test/browser/tests/search-form.js',
-        'test/browser/tests/search-results.js',
+        'tests/browser/tests/limit-by-topic-pane.js',
+        'tests/browser/tests/navbar.js',
+        'tests/browser/tests/preview-pane.js',
+        'tests/browser/tests/search-echo.js',
+        'tests/browser/tests/search-form.js',
+        'tests/browser/tests/search-results.js',
     ],
     // Patterns to exclude.
     exclude : [
@@ -40,22 +40,22 @@ exports.config = {
     ],
     suites : {
         'limit-by-topic-pane' : [
-            'test/browser/tests/limit-by-topic-pane.js',
+            'tests/browser/tests/limit-by-topic-pane.js',
         ],
         'navbar' : [
-            'test/browser/tests/navbar.js',
+            'tests/browser/tests/navbar.js',
         ],
         'preview-pane' : [
-            'test/browser/tests/preview-pane.js',
+            'tests/browser/tests/preview-pane.js',
         ],
         'search-echo' : [
-            'test/browser/tests/search-echo.js',
+            'tests/browser/tests/search-echo.js',
         ],
         'search-form' : [
-            'test/browser/tests/search-form.js',
+            'tests/browser/tests/search-form.js',
         ],
         'search-results' : [
-            'test/browser/tests/search-results.js',
+            'tests/browser/tests/search-results.js',
         ],
     },
     //
@@ -134,7 +134,7 @@ exports.config = {
     bail                   : 0,
     //
     // Saves a screenshot to a given path if a command fails.
-    screenshotPath         : './test/browser/errorShots/',
+    screenshotPath         : './tests/browser/errorShots/',
     //
     // Set a base URL in order to shorten url command calls. If your `url` parameter starts
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
@@ -176,7 +176,7 @@ exports.config = {
     // commands. Instead, they hook themselves up into the test process.
     services               : ['selenium-standalone', 'visual-regression', 'chromedriver', 'screenshots-cleanup'],
     cleanScreenshotsFolder : {
-        folder  : './test/browser/errorShots/',
+        folder  : './tests/browser/errorShots/',
         pattern : '/**/ERROR_*',
     },
     visualRegression : {
