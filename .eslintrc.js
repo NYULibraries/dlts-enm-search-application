@@ -107,5 +107,5 @@ module.exports = {
         'vue/require-prop-types'             : 'error',
         'vue/v-bind-style'                   : 'error',
         'vue/v-on-style'                     : 'error',
-  },
+    },
 };
