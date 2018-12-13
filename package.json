@@ -9,12 +9,12 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "test": "npm run test:unit && npm run test:browser:local",
-    "test:browser:local": "node_modules/.bin/wdio test/browser/conf/wdio.local.conf.js",
-    "test:browser:local:debug:chrome": "node_modules/.bin/wdio test/browser/conf/wdio.local.debug-chrome.conf.js",
-    "test:browser:local:debug:firefox": "node_modules/.bin/wdio test/browser/conf/wdio.local.debug-firefox.conf.js",
-    "test:browser:dev": "node_modules/.bin/wdio test/browser/conf/wdio.dev.conf.js",
-    "test:browser:stage": "node_modules/.bin/wdio test/browser/conf/wdio.stage.conf.js",
-    "test:browser:prod": "node_modules/.bin/wdio test/browser/conf/wdio.prod.conf.js",
+    "test:browser:local": "node_modules/.bin/wdio tests/browser/conf/wdio.local.conf.js",
+    "test:browser:local:debug:chrome": "node_modules/.bin/wdio tests/browser/conf/wdio.local.debug-chrome.conf.js",
+    "test:browser:local:debug:firefox": "node_modules/.bin/wdio tests/browser/conf/wdio.local.debug-firefox.conf.js",
+    "test:browser:dev": "node_modules/.bin/wdio tests/browser/conf/wdio.dev.conf.js",
+    "test:browser:stage": "node_modules/.bin/wdio tests/browser/conf/wdio.stage.conf.js",
+    "test:browser:prod": "node_modules/.bin/wdio tests/browser/conf/wdio.prod.conf.js",
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
