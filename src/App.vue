@@ -217,8 +217,6 @@ export default {
             } catch( e ) {
                 this.spinner.display = false;
 
-                console.error( 'ERROR in App.solrSearch: ' + e );
-
                 // TODO: replace this with something more user-friendly
                 alert( 'Sorry, the server has returned an error or is not responding.' );
 
