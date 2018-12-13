@@ -17,7 +17,6 @@ Vue.use( EnmSolr, {
     solrProtocol : process.env.SOLR_PROTOCOL,
 } );
 
-// eslint-disable-next-line no-new
 new Vue( {
     el         : '#app',
     router,
