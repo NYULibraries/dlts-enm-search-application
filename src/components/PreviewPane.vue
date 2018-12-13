@@ -188,8 +188,6 @@ export default {
                     this.queryFields
                 );
             } catch( e ) {
-                console.error( 'ERROR in PreviewPane.previewEpubPage: ' + e );
-
                 // TODO: replace this with something more user-friendly
                 alert( 'Sorry, the server has returned an error or is not responding.' );
 
