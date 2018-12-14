@@ -48,10 +48,12 @@
                         v-for="topicOnPage in topicsOnPage"
                         :key="topicOnPage"
                     >
+                        <!-- eslint-disable vue/no-v-html -->
                         <a
                             href="#"
                             v-html="topicOnPage"
                         >
+                        <!-- eslint-disable -->
                         </a>
                     </li>
                 </ul>
@@ -66,11 +68,13 @@
 
             <hr>
 
+            <!-- eslint-disable vue/no-v-html -->
             <div
                 v-show="selectedPageNumber"
                 class="enm-pageText"
                 v-html="pageText"
             >
+            <!-- eslint-enable -->
             </div>
         </div>
     </div>
