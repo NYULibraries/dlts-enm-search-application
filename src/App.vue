@@ -1,32 +1,33 @@
 <template>
     <div id="app">
-        <search-form
+        <SearchForm
             :query-fields-u-i="searchForm.queryFieldsUI"
-            @submit="submitSearchForm"/>
+            @submit="submitSearchForm"
+        />
         <div v-cloak>
-            <search-echo
+            <SearchEcho
                 :display="searchEcho.display"
                 :query-fields-u-i="searchForm.queryFieldsUI"
                 @search-dci-dismiss="clickDismissSearchDCI"
             />
             <div class="container is-fluid">
                 <div class="columns enm-panes">
-                    <facet-pane
+                    <FacetPane
                         :display="facetPane.display"
                         :topics-facet-list="facetPane.topicsFacetList"
                         :topics-facet-list-limit="facetPane.topicsFacetListLimit"
                     />
 
-                    <spinner :display="spinner.display"/>
+                    <Spinner :display="spinner.display" />
 
-                    <results-pane
+                    <ResultsPane
                         :display="resultsPane.display"
                         :num-books="resultsPane.numBooks"
                         :num-pages="resultsPane.numPages"
                         :results="resultsPane.results"
                         @epub-click="setPreviewPane"
                     />
-                    <preview-pane
+                    <PreviewPane
                         :display="previewPane.display"
                         :isbn="previewPane.isbn"
                         :title="previewPane.title"
@@ -75,6 +76,10 @@ export default {
     },
     data() {
         return {
+            disableWatch : {
+                selectedTopicFacetItems : false,
+            },
+
             facetPane : {
                 display              : false,
                 topicsFacetList      : [],
@@ -115,6 +120,13 @@ export default {
     },
     watch : {
         selectedTopicFacetItems() {
+            if ( this.disableWatch.selectedTopicFacetItems ) {
+                // We allow only one-time disabling of this watch
+                this.disableWatch.selectedTopicFacetItems = false;
+
+                return;
+            }
+
             this.search();
         },
     },
@@ -192,6 +204,9 @@ export default {
             this.resultsPane.results  = solrResponse.grouped.isbn.groups;
         },
         submitSearchForm() {
+            // If we don't disable selectedTopicFacetItems watch, clearSelectedTopicFacetItems
+            // will trigger another search.
+            this.disableWatch.selectedTopicFacetItems = true;
             this.clearSelectedTopicFacetItems();
             this.search();
         },
@@ -215,8 +230,6 @@ export default {
                 );
             } catch( e ) {
                 this.spinner.display = false;
-
-                console.error( 'ERROR in App.solrSearch: ' + e );
 
                 // TODO: replace this with something more user-friendly
                 alert( 'Sorry, the server has returned an error or is not responding.' );

@@ -36,12 +36,15 @@ suite( 'Preview Pane', function () {
 
     setup( function () {
         SearchPage.open();
-        // Setting to wider width might help prevent errors with not being able
+        // Setting to wider width helps prevent errors with not being able
         // to click rightmost bar in bar chart.
+        // Was keeping it at the exact threshold for a while, which recently changed
+        // from 1600 to 1601 in Firefox!...so instead let's just set it much higher
+        // than we need.
         SearchPage.setViewportSize(
             {
                 height : 851,
-                width  : 1600,
+                width  : 1700,
             }
         );
     } );

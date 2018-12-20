@@ -1,11 +1,15 @@
 .DS_Store
-node_modules/
-/dist/
+node_modules
+/dist
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-/test/browser/errorShots/
-/test/unit/coverage/
 
 # Editor directories and files
 .idea
@@ -14,23 +18,27 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+*.sw*
 
-test/browser/tests/testdata/actual/*
+/tests/browser/errorShots/
+/tests/unit/coverage/
 
-!test/browser/tests/testdata/actual/search-results/
-test/browser/tests/testdata/actual/search-results/*
-!test/browser/tests/testdata/actual/search-results/.commit-empty-directory
+/tests/browser/tests/testdata/actual/*
 
-!test/browser/tests/testdata/actual/preview-pane/
-test/browser/tests/testdata/actual/preview-pane/*
-!test/browser/tests/testdata/actual/preview-pane/.commit-empty-directory
+!/tests/browser/tests/testdata/actual/search-results/
+/tests/browser/tests/testdata/actual/search-results/*
+!/tests/browser/tests/testdata/actual/search-results/.commit-empty-directory
 
-test/browser/tests/testdata/diffs/*
+!/tests/browser/tests/testdata/actual/preview-pane/
+/tests/browser/tests/testdata/actual/preview-pane/*
+!/tests/browser/tests/testdata/actual/preview-pane/.commit-empty-directory
 
-!test/browser/tests/testdata/diffs/preview-pane/
-test/browser/tests/testdata/diffs/preview-pane/*
-!test/browser/tests/testdata/diffs/preview-pane/.commit-empty-directory
+/tests/browser/tests/testdata/diffs/*
 
-!test/browser/tests/testdata/diffs/search-results/
-test/browser/tests/testdata/diffs/search-results/*
-!test/browser/tests/testdata/diffs/search-results/.commit-empty-directory
+!/tests/browser/tests/testdata/diffs/preview-pane/
+/tests/browser/tests/testdata/diffs/preview-pane/*
+!/tests/browser/tests/testdata/diffs/preview-pane/.commit-empty-directory
+
+!/tests/browser/tests/testdata/diffs/search-results/
+/tests/browser/tests/testdata/diffs/search-results/*
+!/tests/browser/tests/testdata/diffs/search-results/.commit-empty-directory

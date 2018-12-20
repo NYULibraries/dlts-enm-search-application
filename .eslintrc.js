@@ -13,11 +13,12 @@ module.exports = {
     env : {
         browser : true,
         es6     : true,
+        node    : true,
     },
     extends : [
-    // https://github.com/standard/standard/blob/master/docs/RULES-en.md
-        'standard',
-        // https://github.com/vuejs/eslint-plugin-vue#bulb-rules
+        // https://github.com/standard/eslint-config-standard/blob/ddd325066548a9e94b31fe2c8fa968ae5a49edfb/eslintrc.json
+        '@vue/standard',
+        // https://github.com/vuejs/eslint-plugin-vue/blob/9fdf8e030c880e99f9bfa63fe10c3408961ee256/lib/configs/recommended.js
         'plugin:vue/recommended',
     ],
     // required to lint *.vue files
@@ -52,6 +53,7 @@ module.exports = {
                 },
             },
         ],
+        'no-console'                  : process.env.NODE_ENV === 'production' ? 'error' : 'off',
         // allow debugger during development
         'no-debugger'                 : process.env.NODE_ENV === 'production' ? 'error' : 'off',
         'no-multi-spaces'             : 'off',
@@ -79,6 +81,8 @@ module.exports = {
         ],
         'standard/computed-property-even-spacing' : [ 'error', 'always' ],
         'template-curly-spacing'                  : [ 'error', 'always' ],
+        'vue/attributes-order'                    : 'error',
+        'vue/html-end-tags'                       : 'error',
         'vue/html-indent'                         : [
             'error', 4, {
                 'attribute'                 : 1,
@@ -95,5 +99,13 @@ module.exports = {
             'svg'  : 'always',
             'math' : 'always',
         } ],
+        'vue/html-quotes'                    : 'error',
+        'vue/max-attributes-per-line'        : 'error',
+        'vue/mustache-interpolation-spacing' : 'error',
+        'vue/name-property-casing'           : 'error',
+        'vue/require-default-prop'           : 'error',
+        'vue/require-prop-types'             : 'error',
+        'vue/v-bind-style'                   : 'error',
+        'vue/v-on-style'                     : 'error',
     },
 };

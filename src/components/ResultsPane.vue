@@ -1,6 +1,5 @@
 <template>
     <div :class="isbnOfSelectedEpub ? previewPaneLoadedClass : previewPaneNotLoadedClass">
-
         <!--RESULTS-->
         <template v-show="display">
             <!-- v-show is necessary on this <header> element for some reason.
@@ -8,12 +7,14 @@
                  in this <template>.
             -->
             <header v-show="display">
-                <h2 class="is-size-4">Results: {{ resultsHeader }}</h2>
+                <h2 class="is-size-4">
+                    Results: {{ resultsHeader }}
+                </h2>
             </header>
             <div
                 v-show="display"
-                class="enm-results">
-
+                class="enm-results"
+            >
                 <span v-if="! results || results.length === 0">
                     Please try another search.
                 </span>
@@ -22,16 +23,18 @@
                 <div
                     v-for="result in results"
                     :id="result.groupValue"
-                    :name="result.doclist.docs[ 0 ].title"
                     :key="result.groupValue"
+                    :name="result.doclist.docs[ 0 ].title"
                     class="box"
-                    @click="previewEpub">
+                    @click="previewEpub"
+                >
                     <article class="media enm-book">
                         <div class="media-left">
                             <figure class="image enm-thumbnail">
                                 <img
                                     :src="'/enm/search/assets/covers/' + result.groupValue + '.jpg'"
-                                    alt="">
+                                    alt=""
+                                >
                             </figure>
                         </div>
                         <div class="media-content">
@@ -41,12 +44,19 @@
                                  TODO: Check with Laura to see if the above still holds. -->
                             <a
                                 class="enm-divlink"
-                                href="#">&nbsp;</a>
-                            <h3 class="title is-spaced"><a href="#">{{ result.doclist.docs[ 0 ].title }}</a></h3>
+                                href="#"
+                            >
+&nbsp;
+                            </a>
+                            <h3 class="title is-spaced">
+                                <a href="#">
+                                    {{ result.doclist.docs[ 0 ].title }}
+                                </a>
+                            </h3>
                             <div class="meta">
                                 {{ result.doclist.docs[ 0 ].authors.join( '; ' ) +
                                     '; ' +
-                                result.doclist.docs[ 0 ].publisher }}
+                                    result.doclist.docs[ 0 ].publisher }}
                             </div>
                             <div class="matches">
                                 {{ result.doclist.numFound.toLocaleString() }} matched pages
@@ -58,11 +68,9 @@
                     </article>
                 </div>
                 <!--BOOK-->
-
             </div>
         </template>
         <!--RESULTS-->
-
     </div>
 </template>
 

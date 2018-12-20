@@ -4,20 +4,25 @@
             <div class="container is-fluid">
                 <form
                     class="enm-searchform"
-                    @submit.prevent="submitSearchForm">
+                    @submit.prevent="submitSearchForm"
+                >
                     <div class="enm-searchbox">
                         <div class="field columns level">
                             <div class="column level-item">
                                 <p class="control has-icons-left">
                                     <label
                                         class="enm-visually-hidden"
-                                        for="enm-searchinput">Search inside all books</label>
+                                        for="enm-searchinput"
+                                    >
+                                        Search inside all books
+                                    </label>
                                     <input
                                         id="enm-searchinput"
                                         v-model="queryUI"
                                         class="input is-large"
                                         type="text"
-                                        placeholder="Search inside all books">
+                                        placeholder="Search inside all books"
+                                    >
                                     <span class="icon is-small is-left">
                                         <i class="fa fa-search"></i>
                                     </span>
@@ -25,24 +30,24 @@
                             </div>
 
                             <div class="column is-narrow">
-
                                 <template v-for="queryFieldUI in queryFieldsUI">
                                     <input
-                                        :name="queryFieldUI.name + 'Chx'"
                                         :id="queryFieldUI.name + 'Chx'"
                                         :key="queryFieldUI.name"
-                                        :value="queryFieldUI.value"
                                         v-model="selectedQueryFields"
+                                        :name="queryFieldUI.name + 'Chx'"
+                                        :value="queryFieldUI.value"
                                         type="checkbox"
-                                        class="is-medium is-checkbox">
+                                        class="is-medium is-checkbox"
+                                    >
                                     <label
-                                        :for="queryFieldUI.name + 'Chx'"
                                         :key="queryFieldUI.label"
-                                        class="">
+                                        :for="queryFieldUI.name + 'Chx'"
+                                        class=""
+                                    >
                                         {{ queryFieldUI.label }}
                                     </label>
                                 </template>
-
                             </div>
                         </div>
                     </div>
