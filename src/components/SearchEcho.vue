@@ -105,7 +105,7 @@ export default {
                 'setQueryFields',
             ]
         ),
-        clickDismissSearchDCI() {
+        clickDismissSearchDCI( event ) {
             // Change to blank search if no topic DCIs
             if ( this.selectedTopicFacetItems.length === 0 ) {
                 this.setQuery( '' );
