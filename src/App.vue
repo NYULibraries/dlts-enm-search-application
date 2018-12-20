@@ -76,6 +76,10 @@ export default {
     },
     data() {
         return {
+            disableWatch : {
+                selectedTopicFacetItems : false,
+            },
+
             facetPane : {
                 display              : false,
                 topicsFacetList      : [],
@@ -116,6 +120,13 @@ export default {
     },
     watch : {
         selectedTopicFacetItems() {
+            if ( this.disableWatch.selectedTopicFacetItems ) {
+                // We allow only one-time disabling of this watch
+                this.disableWatch.selectedTopicFacetItems = false;
+
+                return;
+            }
+
             this.search();
         },
     },
@@ -193,6 +204,9 @@ export default {
             this.resultsPane.results  = solrResponse.grouped.isbn.groups;
         },
         submitSearchForm() {
+            // If we don't disable selectedTopicFacetItems watch, clearSelectedTopicFacetItems
+            // will trigger another search.
+            this.disableWatch.selectedTopicFacetItems = true;
             this.clearSelectedTopicFacetItems();
             this.search();
         },
