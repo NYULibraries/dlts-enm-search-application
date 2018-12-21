@@ -1,12 +1,10 @@
 const DEFAULT_SOLR_CORE_PATH = '/solr/enm-pages/';
 const DEFAULT_SOLR_HOST      = 'localhost';
 const DEFAULT_SOLR_PORT      = 8983;
-const DEFAULT_SOLR_PROTOCOL  = 'http';
 
 let solrCorePath;
 let solrHost;
 let solrPort;
-let solrProtocol;
 
 async function doFetch( params ) {
     // Shouldn't ever have null or undefined params, but test and remove just
@@ -41,7 +39,7 @@ async function doFetch( params ) {
 
     const queryString = queryStringParams.join( '&' );
 
-    const requestUrl = `${ solrProtocol }://${ solrHost }:${ solrPort }${ solrCorePath }select?${ queryString }`;
+    const requestUrl = `http://${ solrHost }:${ solrPort }${ solrCorePath }select?${ queryString }`;
     const response = await fetch( requestUrl );
 
     if ( response.ok ) {
@@ -157,7 +155,6 @@ export default {
         solrCorePath = options.solrCorePath || DEFAULT_SOLR_CORE_PATH;
         solrHost     = options.solrHost     || DEFAULT_SOLR_HOST;
         solrPort     = options.solrPort     || DEFAULT_SOLR_PORT;
-        solrProtocol = options.solrProtocol || DEFAULT_SOLR_PROTOCOL;
 
         Vue.prototype.$solrPreviewEpub = solrPreviewEpub;
         Vue.prototype.$solrPreviewPage = solrPreviewPage;
