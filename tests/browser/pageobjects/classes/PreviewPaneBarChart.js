@@ -1,4 +1,4 @@
-/* global $:false $$:false */
+/* global browser:false $:false $$:false */
 
 class PreviewPaneBarChart {
     get data() {
@@ -27,6 +27,29 @@ class PreviewPaneBarChart {
         return $( '.enm-pane-preview svg rect[ name = "' + pageNumber + '"]' );
     }
 
+    clickBarForPageNumber( pageNumber ) {
+        const MAX_ATTEMPTS = 3;
+        const PAUSE_DURATION = 1000;
+
+        let numTries = 0;
+        // Sometimes in Firefox the rightmost bar is temporarily obscured by
+        // a vertical scrollbar which will disappear after a moment.  Also,
+        // apparently clicks sometimes happen when bar chart hasn't loaded yet.
+        while ( true ) {
+            numTries++;
+            try {
+                this.barForPageNumber( pageNumber ).click();
+
+                break;
+            } catch( e ) {
+                if ( numTries === MAX_ATTEMPTS ) {
+                    throw e;
+                }
+
+                browser.pause( PAUSE_DURATION );
+            }
+        }
+    }
     // This doesn't work.  Perhaps `moveToObject()` can't trigger `mouseon` event
     // of an SVG element.
     // hoverBarForPageNumber( pageNumber ) {

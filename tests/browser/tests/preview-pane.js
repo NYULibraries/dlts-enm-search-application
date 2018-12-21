@@ -72,7 +72,7 @@ suite( 'Preview Pane', function () {
     test( '"Previous" button disabled for preview of first page hit', function () {
         SearchPage.searchAndWaitForResults( 'art' );
         SearchPage.resultsPane.results.book( 'Japanese lessons' ).click();
-        SearchPage.previewPane.barChart.barForPageNumber( 12 ).click();
+        SearchPage.previewPane.barChart.clickBarForPageNumber( 12 );
 
         // `isEnabled()` doesn't report correctly:
         //
@@ -90,7 +90,7 @@ suite( 'Preview Pane', function () {
     test( '"Next" button disabled for preview of last page hit', function () {
         SearchPage.searchAndWaitForResults( 'art' );
         SearchPage.resultsPane.results.book( 'Japanese lessons' ).click();
-        SearchPage.previewPane.barChart.barForPageNumber( 262 ).click();
+        SearchPage.previewPane.barChart.clickBarForPageNumber( 262 );
 
         // `isEnabled()` doesn't report correctly:
         //
@@ -108,7 +108,7 @@ suite( 'Preview Pane', function () {
     test( '"Previous" button brings up correct preview for previous page', function () {
         SearchPage.searchAndWaitForResults( 'art' );
         SearchPage.resultsPane.results.book( 'Japanese lessons' ).click();
-        SearchPage.previewPane.barChart.barForPageNumber( 154 ).click();
+        SearchPage.previewPane.barChart.clickBarForPageNumber( 154 );
         SearchPage.previewPane.previous.click();
 
         const previewId = SearchPage.getPreviewId( 'art', true, true, [], 9780814712917, 153 );
@@ -130,7 +130,7 @@ suite( 'Preview Pane', function () {
     test( '"Next" button brings up correct preview for next page', function () {
         SearchPage.searchAndWaitForResults( 'art' );
         SearchPage.resultsPane.results.book( 'Japanese lessons' ).click();
-        SearchPage.previewPane.barChart.barForPageNumber( 145 ).click();
+        SearchPage.previewPane.barChart.clickBarForPageNumber( 145 );
         SearchPage.previewPane.next.click();
 
         const previewId = SearchPage.getPreviewId( 'art', true, true, [], 9780814712917, 153 );
@@ -182,7 +182,7 @@ function testPreviewOfPage( goldenFile ) {
         SearchPage.searchAndWaitForResults( query );
 
         SearchPage.resultsPane.results.book( title ).click();
-        SearchPage.previewPane.barChart.barForPageNumber( pageNumber ).click();
+        SearchPage.previewPane.barChart.clickBarForPageNumber( pageNumber );
 
         const ok = compareActualToGolden( goldenFile );
         let message;
