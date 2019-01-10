@@ -3,7 +3,6 @@
 import Vue from 'vue';
 import App from './App';
 import EnmSolr from './plugins/enm-solr';
-import router from './router';
 import store from './store';
 
 require( './assets/sass/bulma.scss' );
@@ -19,7 +18,6 @@ Vue.use( EnmSolr, {
 
 new Vue( {
     el         : '#app',
-    router,
     store,
     components : { App },
     // Can't use template option unless in vue.config.js `runtimeCompiler` is set to true.
