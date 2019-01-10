@@ -45,6 +45,7 @@
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
     "json-stable-stringify": "^1.0.1",
+    "mockttp": "^0.12.5",
     "node-sass": "^4.9.0",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.1",
