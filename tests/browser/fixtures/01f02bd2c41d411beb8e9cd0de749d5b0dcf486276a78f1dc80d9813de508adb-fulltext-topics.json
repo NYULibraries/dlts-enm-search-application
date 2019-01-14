@@ -1,0 +1,871 @@
+{
+    "facet_counts": {
+        "facet_fields": {
+            "topicNames_facet": [
+                "Ableggen, James",
+                1,
+                "American Revolution -- Continental Congress",
+                1,
+                "Anderson, Stanley",
+                1,
+                "Anne Elliot (Persuasion)",
+                1,
+                "Anything That Moves: Beyond the Myths of Bisexuality",
+                1,
+                "Appiah, Kwame Anthony",
+                1,
+                "Austen, Jane",
+                1,
+                "Austen, Jane -- Sense and Sensibility",
+                1,
+                "Baker, James A. III",
+                1,
+                "Berger, S.",
+                1,
+                "Bi Women",
+                1,
+                "Boas, Franz",
+                1,
+                "Boskin, Michael J.",
+                1,
+                "Brutus (Julius Caesar)",
+                1,
+                "Call, William",
+                1,
+                "Cheney, Richard",
+                1,
+                "Chrysanthemum Club",
+                1,
+                "Clarissa (Richardson)",
+                1,
+                "Clarissa Harlowe (Clarissa)",
+                1,
+                "Cohen, Elliot",
+                1,
+                "Columbia University strike (1968)",
+                1,
+                "Cordelia (King Lear)",
+                1,
+                "Coriolanus (Coriolanus)",
+                1,
+                "Dajenya",
+                1,
+                "Darman, Richard",
+                1,
+                "Detached (resigned) solution -- defensive strategies of",
+                1,
+                "Elinor Dashwood (Sense and Sensibility)",
+                1,
+                "Elliot, B.",
+                1,
+                "Elliot, Rogers",
+                1,
+                "Ellis, P.",
+                1,
+                "Feminism -- lesbian feminists",
+                1,
+                "Frazin, J.",
+                1,
+                "Hobson, Laura",
+                1,
+                "Hoffman, Irwin",
+                1,
+                "Japan as Number One (Vogel)",
+                1,
+                "Ka'ahumanu, L.",
+                1,
+                "Kaplan, Rebecca",
+                1,
+                "Lippman, Walter",
+                1,
+                "Macbeth",
+                1,
+                "Mansfield, Mike",
+                1,
+                "March on Washington (MOW 93)",
+                1,
+                "Mules and Men (Hurston)",
+                1,
+                "Newsweek",
+                1,
+                "Norrgard, L.",
+                1,
+                "North Bi Northwest",
+                1,
+                "Northampton Pride March",
+                1,
+                "Ochs, R.",
+                1,
+                "People's Park (Berkeley, Calif.)",
+                1,
+                "Perfectionistic solution -- examples of, in literature",
+                1,
+                "Persuasion (Austen)",
+                1,
+                "Race/ethnicity -- multiculturalism in bisexual communities",
+                1,
+                "Randolph, Edmund",
+                1,
+                "Reischauer, Edwin, on revisionists",
+                1,
+                "Revisionists",
+                1,
+                "Richardson, Elliot",
+                1,
+                "Richardson, Samuel",
+                1,
+                "Schneider, A.",
+                1,
+                "Shakespeare, works of -- Coriolanus",
+                1,
+                "Shakespeare, works of -- Julius Caesar",
+                1,
+                "Shakespeare, works of -- King Lear",
+                1,
+                "Shakespeare, works of -- Othello",
+                1,
+                "Strawberry Statement, The (Hagmann)",
+                1,
+                "Sullivan, Harry Stack",
+                1,
+                "Tucker, N.",
+                1,
+                "Vogel, Ezra",
+                1,
+                "Walker, Alice",
+                1,
+                "Weise, E. R.",
+                1,
+                "free exercise clause",
+                1,
+                "freedom of conscience",
+                1,
+                "on meaning of intelligence -- on race",
+                1,
+                "patriarchy",
+                1
+            ]
+        },
+        "facet_heatmaps": {
+        },
+        "facet_intervals": {
+        },
+        "facet_queries": {
+        },
+        "facet_ranges": {
+        }
+    },
+    "grouped": {
+        "isbn": {
+            "groups": [
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Seth Forman"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 12.112393,
+                                "title": "Blacks in the Jewish Mind",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Seth Forman"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.789548,
+                                "title": "Blacks in the Jewish Mind",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Seth Forman"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 4.940275,
+                                "title": "Blacks in the Jewish Mind",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 12.112393,
+                        "numFound": 3,
+                        "start": 0
+                    },
+                    "groupValue": "9780814726815"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Yochim, Emily Chivers"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 10.589468,
+                                "title": "Skate Life: Re-Imagining White Masculinity",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Yochim, Emily Chivers"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 6.5166416,
+                                "title": "Skate Life: Re-Imagining White Masculinity",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Yochim, Emily Chivers"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 5.789548,
+                                "title": "Skate Life: Re-Imagining White Masculinity",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Yochim, Emily Chivers"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 5.789548,
+                                "title": "Skate Life: Re-Imagining White Masculinity",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 10.589468,
+                        "numFound": 4,
+                        "start": 0
+                    },
+                    "groupValue": "9780472026609"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Steven T. Katz"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 9.004518,
+                                "title": "The Essential Agus",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Steven T. Katz"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 8.440345,
+                                "title": "The Essential Agus",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Steven T. Katz"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 8.440345,
+                                "title": "The Essential Agus",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 9.004518,
+                        "numFound": 3,
+                        "start": 0
+                    },
+                    "groupValue": "9780814746929"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Robert L. Hayman"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 8.793581,
+                                "title": "The Smart Culture",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Robert L. Hayman"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 4.940275,
+                                "title": "The Smart Culture",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Robert L. Hayman"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 4.940275,
+                                "title": "The Smart Culture",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 8.793581,
+                        "numFound": 3,
+                        "start": 0
+                    },
+                    "groupValue": "9780814735336"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "John Marshall"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 8.780999,
+                                "title": "Seriatim",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "John Marshall"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 7.352067,
+                                "title": "Seriatim",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "John Marshall"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 4.940275,
+                                "title": "Seriatim",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "John Marshall"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 4.940275,
+                                "title": "Seriatim",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "John Marshall"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 4.940275,
+                                "title": "Seriatim",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 8.780999,
+                        "numFound": 5,
+                        "start": 0
+                    },
+                    "groupValue": "9780814731437"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Steve Kroll-Smith"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 8.686105,
+                                "title": "Bodies in Protest",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Steve Kroll-Smith"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 6.225163,
+                                "title": "Bodies in Protest",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 8.686105,
+                        "numFound": 2,
+                        "start": 0
+                    },
+                    "groupValue": "9780814746622"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Niobe Way"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 7.645864,
+                                "title": "Everyday Courage",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Niobe Way"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.789548,
+                                "title": "Everyday Courage",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Niobe Way"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.789548,
+                                "title": "Everyday Courage",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Niobe Way"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.789548,
+                                "title": "Everyday Courage",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Niobe Way"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.789548,
+                                "title": "Everyday Courage",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 7.645864,
+                        "numFound": 5,
+                        "start": 0
+                    },
+                    "groupValue": "9780814793398"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Peter L. Rudnytsky"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 6.5166416,
+                                "title": "Ferenczi’s Turn in Psychoanalysis",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 6.5166416,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780814774755"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Katherine J. Mayberry"
+                                ],
+                                "publisher": [
+                                    "York University Press"
+                                ],
+                                "score": 6.5166416,
+                                "title": "Teaching What You’re Not",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 6.5166416,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780814755471"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Ryuzo Sato"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 6.5166416,
+                                "title": "The Chrysanthemum and the Eagle",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ryuzo Sato"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.789548,
+                                "title": "The Chrysanthemum and the Eagle",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 6.5166416,
+                        "numFound": 2,
+                        "start": 0
+                    },
+                    "groupValue": "9780814780213"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Bernard J. Paris"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.789548,
+                                "title": "Imagined Human Beings",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Bernard J. Paris"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 4.940275,
+                                "title": "Imagined Human Beings",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 5.789548,
+                        "numFound": 2,
+                        "start": 0
+                    },
+                    "groupValue": "9780814766569"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Barbara Fass Leavy"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.789548,
+                                "title": "In Search of the Swan Maiden",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 5.789548,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780814751008"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "John W. Chapman"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.789548,
+                                "title": "Markets and Justice",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 5.789548,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780814714218"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Keith Beattie"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.789548,
+                                "title": "The Scar That Binds",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 5.789548,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780814713266"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Matthew A. Taylor"
+                                ],
+                                "publisher": [
+                                    "University of Minnesota Press"
+                                ],
+                                "score": 5.789548,
+                                "title": "Universes without Us",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 5.789548,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780816680610"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Paula C. Rust"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 4.940275,
+                                "title": "Bisexuality and the Challenge to Lesbian Politics",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Paula C. Rust"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 4.940275,
+                                "title": "Bisexuality and the Challenge to Lesbian Politics",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Paula C. Rust"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 3.9735794,
+                                "title": "Bisexuality and the Challenge to Lesbian Politics",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 4.940275,
+                        "numFound": 3,
+                        "start": 0
+                    },
+                    "groupValue": "9780814774458"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Henry Jenkins et al"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 4.940275,
+                                "title": "By Any Media Necessary",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 4.940275,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9781479899982"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Usher, Nikki"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 4.940275,
+                                "title": "Making News at The New York Times",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 4.940275,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780472120499"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Stephen M. Feldman."
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 4.940275,
+                                "title": "Please don’t Wish me a Merry Christmas",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Stephen M. Feldman."
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 3.9735794,
+                                "title": "Please don’t Wish me a Merry Christmas",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Stephen M. Feldman."
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 3.9735794,
+                                "title": "Please don’t Wish me a Merry Christmas",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 4.940275,
+                        "numFound": 3,
+                        "start": 0
+                    },
+                    "groupValue": "9780814726846"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Mark Hertzog"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 4.940275,
+                                "title": "The Lavender Vote",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 4.940275,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780814735305"
+                }
+            ],
+            "matches": 44
+        }
+    },
+    "responseHeader": {
+        "QTime": 2,
+        "params": {
+            "defType": "edismax",
+            "facet": "on",
+            "facet.field": "topicNames_facet",
+            "facet.limit": "-1",
+            "facet.mincount": "1",
+            "facet.sort": "count",
+            "fl": "title,authors,publisher,yearOfPublication,score",
+            "group": "true",
+            "group.field": "isbn",
+            "group.limit": "999",
+            "indent": "on",
+            "q": "Elliot",
+            "qf": "pageText topicNames",
+            "rows": "1999",
+            "sort": "score desc,title_facet asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}

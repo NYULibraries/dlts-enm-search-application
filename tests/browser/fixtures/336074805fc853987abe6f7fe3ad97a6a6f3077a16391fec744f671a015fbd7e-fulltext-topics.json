@@ -1,0 +1,948 @@
+{
+    "response": {
+        "docs": [
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_vii",
+                "pageNumberForDisplay": "vii",
+                "pageSequenceNumber": 7,
+                "score": 1.6458015
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_x",
+                "pageNumberForDisplay": "x",
+                "pageSequenceNumber": 10,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_xi",
+                "pageNumberForDisplay": "xi",
+                "pageSequenceNumber": 11,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_xii",
+                "pageNumberForDisplay": "xii",
+                "pageSequenceNumber": 12,
+                "score": 1.6387407
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_xiii",
+                "pageNumberForDisplay": "xiii",
+                "pageSequenceNumber": 13,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_3",
+                "pageNumberForDisplay": "3",
+                "pageSequenceNumber": 21,
+                "score": 1.91604
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_4",
+                "pageNumberForDisplay": "4",
+                "pageSequenceNumber": 22,
+                "score": 6.564586
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_6",
+                "pageNumberForDisplay": "6",
+                "pageSequenceNumber": 24,
+                "score": 1.8734493
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_7",
+                "pageNumberForDisplay": "7",
+                "pageSequenceNumber": 25,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_9",
+                "pageNumberForDisplay": "9",
+                "pageSequenceNumber": 27,
+                "score": 1.6387407
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_10",
+                "pageNumberForDisplay": "10",
+                "pageSequenceNumber": 28,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_14",
+                "pageNumberForDisplay": "14",
+                "pageSequenceNumber": 32,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_16",
+                "pageNumberForDisplay": "16",
+                "pageSequenceNumber": 34,
+                "score": 1.91604
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_18",
+                "pageNumberForDisplay": "18",
+                "pageSequenceNumber": 36,
+                "score": 1.3437747
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_20",
+                "pageNumberForDisplay": "20",
+                "pageSequenceNumber": 38,
+                "score": 1.8734493
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_23",
+                "pageNumberForDisplay": "23",
+                "pageSequenceNumber": 41,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_25",
+                "pageNumberForDisplay": "25",
+                "pageSequenceNumber": 43,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_32",
+                "pageNumberForDisplay": "32",
+                "pageSequenceNumber": 50,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_34",
+                "pageNumberForDisplay": "34",
+                "pageSequenceNumber": 52,
+                "score": 1.3437747
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_36",
+                "pageNumberForDisplay": "36",
+                "pageSequenceNumber": 54,
+                "score": 2.0787392
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_38",
+                "pageNumberForDisplay": "38",
+                "pageSequenceNumber": 56,
+                "score": 1.8240651
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_39",
+                "pageNumberForDisplay": "39",
+                "pageSequenceNumber": 57,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_46",
+                "pageNumberForDisplay": "46",
+                "pageSequenceNumber": 64,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_47",
+                "pageNumberForDisplay": "47",
+                "pageSequenceNumber": 65,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_48",
+                "pageNumberForDisplay": "48",
+                "pageSequenceNumber": 66,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_49",
+                "pageNumberForDisplay": "49",
+                "pageSequenceNumber": 67,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_50",
+                "pageNumberForDisplay": "50",
+                "pageSequenceNumber": 68,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_55",
+                "pageNumberForDisplay": "55",
+                "pageSequenceNumber": 73,
+                "score": 7.2069173
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_59",
+                "pageNumberForDisplay": "59",
+                "pageSequenceNumber": 77,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_62",
+                "pageNumberForDisplay": "62",
+                "pageSequenceNumber": 80,
+                "score": 0.90295917
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_64",
+                "pageNumberForDisplay": "64",
+                "pageSequenceNumber": 82,
+                "score": 1.3974735
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_70",
+                "pageNumberForDisplay": "70",
+                "pageSequenceNumber": 88,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_75",
+                "pageNumberForDisplay": "75",
+                "pageSequenceNumber": 93,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_80",
+                "pageNumberForDisplay": "80",
+                "pageSequenceNumber": 98,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_82",
+                "pageNumberForDisplay": "82",
+                "pageSequenceNumber": 100,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_87",
+                "pageNumberForDisplay": "87",
+                "pageSequenceNumber": 105,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_89",
+                "pageNumberForDisplay": "89",
+                "pageSequenceNumber": 107,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_91",
+                "pageNumberForDisplay": "91",
+                "pageSequenceNumber": 109,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_93",
+                "pageNumberForDisplay": "93",
+                "pageSequenceNumber": 111,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_96",
+                "pageNumberForDisplay": "96",
+                "pageSequenceNumber": 114,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_100",
+                "pageNumberForDisplay": "100",
+                "pageSequenceNumber": 118,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_106",
+                "pageNumberForDisplay": "106",
+                "pageSequenceNumber": 124,
+                "score": 0.90295917
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_117",
+                "pageNumberForDisplay": "117",
+                "pageSequenceNumber": 135,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_119",
+                "pageNumberForDisplay": "119",
+                "pageSequenceNumber": 137,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_120",
+                "pageNumberForDisplay": "120",
+                "pageSequenceNumber": 138,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_121",
+                "pageNumberForDisplay": "121",
+                "pageSequenceNumber": 139,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_122",
+                "pageNumberForDisplay": "122",
+                "pageSequenceNumber": 140,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_129",
+                "pageNumberForDisplay": "129",
+                "pageSequenceNumber": 147,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_130",
+                "pageNumberForDisplay": "130",
+                "pageSequenceNumber": 148,
+                "score": 1.3437747
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_131",
+                "pageNumberForDisplay": "131",
+                "pageSequenceNumber": 149,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_132",
+                "pageNumberForDisplay": "132",
+                "pageSequenceNumber": 150,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_135",
+                "pageNumberForDisplay": "135",
+                "pageSequenceNumber": 153,
+                "score": 0.90295917
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_136",
+                "pageNumberForDisplay": "136",
+                "pageSequenceNumber": 154,
+                "score": 1.6387407
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_138",
+                "pageNumberForDisplay": "138",
+                "pageSequenceNumber": 156,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_139",
+                "pageNumberForDisplay": "139",
+                "pageSequenceNumber": 157,
+                "score": 1.3437747
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_140",
+                "pageNumberForDisplay": "140",
+                "pageSequenceNumber": 158,
+                "score": 1.3974735
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_143",
+                "pageNumberForDisplay": "143",
+                "pageSequenceNumber": 161,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_144",
+                "pageNumberForDisplay": "144",
+                "pageSequenceNumber": 162,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_146",
+                "pageNumberForDisplay": "146",
+                "pageSequenceNumber": 164,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_150",
+                "pageNumberForDisplay": "150",
+                "pageSequenceNumber": 168,
+                "score": 1.6387407
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_152",
+                "pageNumberForDisplay": "152",
+                "pageSequenceNumber": 170,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_158",
+                "pageNumberForDisplay": "158",
+                "pageSequenceNumber": 176,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_160",
+                "pageNumberForDisplay": "160",
+                "pageSequenceNumber": 178,
+                "score": 1.7577121
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_161",
+                "pageNumberForDisplay": "161",
+                "pageSequenceNumber": 179,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_162",
+                "pageNumberForDisplay": "162",
+                "pageSequenceNumber": 180,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_164",
+                "pageNumberForDisplay": "164",
+                "pageSequenceNumber": 182,
+                "score": 0.90295917
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_169",
+                "pageNumberForDisplay": "169",
+                "pageSequenceNumber": 187,
+                "score": 1.3437747
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_176",
+                "pageNumberForDisplay": "176",
+                "pageSequenceNumber": 194,
+                "score": 1.6387407
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_177",
+                "pageNumberForDisplay": "177",
+                "pageSequenceNumber": 195,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_178",
+                "pageNumberForDisplay": "178",
+                "pageSequenceNumber": 196,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_180",
+                "pageNumberForDisplay": "180",
+                "pageSequenceNumber": 198,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_182",
+                "pageNumberForDisplay": "182",
+                "pageSequenceNumber": 200,
+                "score": 1.3437747
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_185",
+                "pageNumberForDisplay": "185",
+                "pageSequenceNumber": 203,
+                "score": 1.5426848
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_186",
+                "pageNumberForDisplay": "186",
+                "pageSequenceNumber": 204,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_187",
+                "pageNumberForDisplay": "187",
+                "pageSequenceNumber": 205,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_197",
+                "pageNumberForDisplay": "197",
+                "pageSequenceNumber": 215,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_199",
+                "pageNumberForDisplay": "199",
+                "pageSequenceNumber": 217,
+                "score": 1.3974735
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_201",
+                "pageNumberForDisplay": "201",
+                "pageSequenceNumber": 219,
+                "score": 1.6049478
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_207",
+                "pageNumberForDisplay": "207",
+                "pageSequenceNumber": 225,
+                "score": 0.90295917
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_209",
+                "pageNumberForDisplay": "209",
+                "pageSequenceNumber": 227,
+                "score": 1.8240651
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_210",
+                "pageNumberForDisplay": "210",
+                "pageSequenceNumber": 228,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_214",
+                "pageNumberForDisplay": "214",
+                "pageSequenceNumber": 232,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_216",
+                "pageNumberForDisplay": "216",
+                "pageSequenceNumber": 234,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_217",
+                "pageNumberForDisplay": "217",
+                "pageSequenceNumber": 235,
+                "score": 0.90295917
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_219",
+                "pageNumberForDisplay": "219",
+                "pageSequenceNumber": 237,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_227",
+                "pageNumberForDisplay": "227",
+                "pageSequenceNumber": 245,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_228",
+                "pageNumberForDisplay": "228",
+                "pageSequenceNumber": 246,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_230",
+                "pageNumberForDisplay": "230",
+                "pageSequenceNumber": 248,
+                "score": 0.90295917
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_233",
+                "pageNumberForDisplay": "233",
+                "pageSequenceNumber": 251,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_236",
+                "pageNumberForDisplay": "236",
+                "pageSequenceNumber": 254,
+                "score": 1.7577121
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_237",
+                "pageNumberForDisplay": "237",
+                "pageSequenceNumber": 255,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_238",
+                "pageNumberForDisplay": "238",
+                "pageSequenceNumber": 256,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_246",
+                "pageNumberForDisplay": "246",
+                "pageSequenceNumber": 264,
+                "score": 1.8240651
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_248",
+                "pageNumberForDisplay": "248",
+                "pageSequenceNumber": 266,
+                "score": 1.6049478
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_250",
+                "pageNumberForDisplay": "250",
+                "pageSequenceNumber": 268,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_251",
+                "pageNumberForDisplay": "251",
+                "pageSequenceNumber": 269,
+                "score": 1.3974735
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_252",
+                "pageNumberForDisplay": "252",
+                "pageSequenceNumber": 270,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_253",
+                "pageNumberForDisplay": "253",
+                "pageSequenceNumber": 271,
+                "score": 1.7577121
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_255",
+                "pageNumberForDisplay": "255",
+                "pageSequenceNumber": 273,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_257",
+                "pageNumberForDisplay": "257",
+                "pageSequenceNumber": 275,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_258",
+                "pageNumberForDisplay": "258",
+                "pageSequenceNumber": 276,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_262",
+                "pageNumberForDisplay": "262",
+                "pageSequenceNumber": 280,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_264",
+                "pageNumberForDisplay": "264",
+                "pageSequenceNumber": 282,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_265",
+                "pageNumberForDisplay": "265",
+                "pageSequenceNumber": 283,
+                "score": 1.3437747
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_268",
+                "pageNumberForDisplay": "268",
+                "pageSequenceNumber": 286,
+                "score": 2.0306945
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_269",
+                "pageNumberForDisplay": "269",
+                "pageSequenceNumber": 287,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_271",
+                "pageNumberForDisplay": "271",
+                "pageSequenceNumber": 289,
+                "score": 2.0255098
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_273",
+                "pageNumberForDisplay": "273",
+                "pageSequenceNumber": 291,
+                "score": 1.91604
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_274",
+                "pageNumberForDisplay": "274",
+                "pageSequenceNumber": 292,
+                "score": 1.6387407
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_280",
+                "pageNumberForDisplay": "280",
+                "pageSequenceNumber": 298,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_281",
+                "pageNumberForDisplay": "281",
+                "pageSequenceNumber": 299,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_282",
+                "pageNumberForDisplay": "282",
+                "pageSequenceNumber": 300,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_288",
+                "pageNumberForDisplay": "288",
+                "pageSequenceNumber": 306,
+                "score": 1.3974735
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_291",
+                "pageNumberForDisplay": "291",
+                "pageSequenceNumber": 309,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_292",
+                "pageNumberForDisplay": "292",
+                "pageSequenceNumber": 310,
+                "score": 5.2322116
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_293",
+                "pageNumberForDisplay": "293",
+                "pageSequenceNumber": 311,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_295",
+                "pageNumberForDisplay": "295",
+                "pageSequenceNumber": 313,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_298",
+                "pageNumberForDisplay": "298",
+                "pageSequenceNumber": 316,
+                "score": 1.3974735
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_302",
+                "pageNumberForDisplay": "302",
+                "pageSequenceNumber": 320,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_305",
+                "pageNumberForDisplay": "305",
+                "pageSequenceNumber": 323,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_313",
+                "pageNumberForDisplay": "313",
+                "pageSequenceNumber": 331,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_315",
+                "pageNumberForDisplay": "315",
+                "pageSequenceNumber": 333,
+                "score": 2.0306945
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_316",
+                "pageNumberForDisplay": "316",
+                "pageSequenceNumber": 334,
+                "score": 1.0581851
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_319",
+                "pageNumberForDisplay": "319",
+                "pageSequenceNumber": 337,
+                "score": 1.8240651
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_320",
+                "pageNumberForDisplay": "320",
+                "pageSequenceNumber": 338,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_321",
+                "pageNumberForDisplay": "321",
+                "pageSequenceNumber": 339,
+                "score": 1.6387407
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_337",
+                "pageNumberForDisplay": "337",
+                "pageSequenceNumber": 355,
+                "score": 1.3974735
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_339",
+                "pageNumberForDisplay": "339",
+                "pageSequenceNumber": 357,
+                "score": 1.8240651
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_340",
+                "pageNumberForDisplay": "340",
+                "pageSequenceNumber": 358,
+                "score": 1.5084217
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_341",
+                "pageNumberForDisplay": "341",
+                "pageSequenceNumber": 359,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_346",
+                "pageNumberForDisplay": "346",
+                "pageSequenceNumber": 364,
+                "score": 1.1910797
+            },
+            {
+                "epubNumberOfPages": 408,
+                "pageLocalId": "page_387",
+                "pageNumberForDisplay": "387",
+                "pageSequenceNumber": 405,
+                "score": 0.72627133
+            }
+        ],
+        "maxScore": 7.2069173,
+        "numFound": 132,
+        "start": 0
+    },
+    "responseHeader": {
+        "QTime": 0,
+        "params": {
+            "defType": "edismax",
+            "fl": "pageLocalId,pageNumberForDisplay,pageSequenceNumber,epubNumberOfPages,score",
+            "fq": "isbn_facet:\"9780814787922\"",
+            "indent": "on",
+            "q": "time",
+            "qf": "pageText topicNames",
+            "rows": "999",
+            "sort": "pageSequenceNumber asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}

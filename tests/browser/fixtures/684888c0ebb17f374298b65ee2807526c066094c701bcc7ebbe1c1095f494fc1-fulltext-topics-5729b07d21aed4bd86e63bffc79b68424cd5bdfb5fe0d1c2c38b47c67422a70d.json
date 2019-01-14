@@ -1,0 +1,118 @@
+{
+    "facet_counts": {
+        "facet_fields": {
+            "topicNames_facet": [
+                "B & C (British and Colonial Kinematograph Company)",
+                1,
+                "Doyle, Arthur Conan",
+                1,
+                "Doyle, Arthur Conan -- Sherlock Holmes",
+                1,
+                "Eviction, The (1904)",
+                1,
+                "Exploits of Three-Fingered Kate (series)",
+                1,
+                "Gaumont",
+                1,
+                "Ireland",
+                1,
+                "Martinek, Ivy",
+                1,
+                "Queen of Criminals",
+                1,
+                "Sheerluck Jones (1901)",
+                1,
+                "Sherlock Holmes Baffled (1901)",
+                1,
+                "Singer, Ben",
+                1,
+                "United States -- U.S. films / film industry",
+                1,
+                "class",
+                1,
+                "feminism",
+                1,
+                "film -- crime film",
+                1,
+                "film -- serial queen films",
+                1,
+                "film(s)",
+                1,
+                "melodramas",
+                1,
+                "nationalism / national identity",
+                1,
+                "seriality / serialization",
+                1,
+                "theater",
+                1,
+                "Éclair",
+                1
+            ]
+        },
+        "facet_heatmaps": {
+        },
+        "facet_intervals": {
+        },
+        "facet_queries": {
+        },
+        "facet_ranges": {
+        }
+    },
+    "grouped": {
+        "isbn": {
+            "groups": [
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Elizabeth Carolyn Miller"
+                                ],
+                                "publisher": [
+                                    "University of Michigan Press and University of Michigan Library"
+                                ],
+                                "score": 1,
+                                "title": "Framed: The New Woman Criminal in British Culture at the Fin de Siecle",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 1,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780472024469"
+                }
+            ],
+            "matches": 1
+        }
+    },
+    "responseHeader": {
+        "QTime": 12,
+        "params": {
+            "defType": "edismax",
+            "facet": "on",
+            "facet.field": "topicNames_facet",
+            "facet.limit": "-1",
+            "facet.mincount": "1",
+            "facet.sort": "count",
+            "fl": "title,authors,publisher,yearOfPublication,score",
+            "fq": [
+                "topicNames_facet:\"feminism\"",
+                "topicNames_facet:\"class\"",
+                "topicNames_facet:\"Doyle, Arthur Conan\"",
+                "topicNames_facet:\"film(s)\""
+            ],
+            "group": "true",
+            "group.field": "isbn",
+            "group.limit": "999",
+            "indent": "on",
+            "q": "*",
+            "qf": "pageText topicNames",
+            "rows": "1999",
+            "sort": "score desc,title_facet asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}

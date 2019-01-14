@@ -1,0 +1,41 @@
+{
+    "highlighting": {
+        "21423": {
+            "pageText": [
+                "GNP price deflator is the weighted sum of several component price indices, such as the personal consumption expenditures index (which, in turn, has several components), and the indices for exports, imports, government purchases of goods and services, and private investment. Numbers are indexed around a base year, currently 1982. Over <mark>time</mark>, the price index for the government purchases of goods and services has risen significantly more than for other components. For example, in 1982 it is estimated that the aggregate price of government goods and services averaged 8.13 times the 1946 level, compared with “only” a 4.55-fold increase in the price of consumer goods. Since 1982 is set equal to 100, that means that the 1946 index number for the government goods and services price deflator is 12.3 (100 divided by 8.13); the figure for the personal consumption expenditure deflator is 22.0.19\nAs reconversion proceeded, the weights used to measure consumption’s contribution to the aggregate price index dramatically increased, while the weights used to measure the government purchases contribution dramatically decreased. Since the consumption index had a bigger number (22 in 1946) than the government purchases index (only 12.3), the calculated aggregate GNP deflator rose in part merely as a result of the shift from government spending to consumer spending.\nThe 1990 data show that the total GNP price deflator rose from 15.7 to 19.4 from 1945 to 1946, an increase of 23.6 percent. Yet the subcomponents of the index are all reported to have increased less—consumption by less than 9 percent, investment by about 15 percent, government purchases by 4 percent, etc. Only by changing the weights and by arbitrarily giving higher numbers to the nongovernment purchases component of the index does one get this type of result, which is then used with nominal GNP data in calculating equally artificial real GNP. Had prices of governmental purchases risen exactly the same as other components in the index over <mark>time</mark>, the distortion would not have been observed. In earlier years, the distortion was smaller because the disparity between the government purchases price index and the other index components was much smaller than observed now. Since then, the series have diverged more over <mark>time</mark> because of consistently faster increases in the prices of government goods and services.\nAs indicated above, the true postwar picture may have been even more robust than the very modest decline already indicated for 1946, to the extent that government-produced output had a value less than that indicated by government expenditures on that output. Taking this factor into account, it is easy to derive estimates that show no GNP decline in 1946 and a major upsurge by 1947. Rather than a postwar depression, we entered a boom.\n"
+            ]
+        }
+    },
+    "response": {
+        "docs": [
+            {
+                "pageText": "GNP price deflator is the weighted sum of several component price indices, such as the personal consumption expenditures index (which, in turn, has several components), and the indices for exports, imports, government purchases of goods and services, and private investment. Numbers are indexed around a base year, currently 1982. Over time, the price index for the government purchases of goods and services has risen significantly more than for other components. For example, in 1982 it is estimated that the aggregate price of government goods and services averaged 8.13 times the 1946 level, compared with “only” a 4.55-fold increase in the price of consumer goods. Since 1982 is set equal to 100, that means that the 1946 index number for the government goods and services price deflator is 12.3 (100 divided by 8.13); the figure for the personal consumption expenditure deflator is 22.0.19\nAs reconversion proceeded, the weights used to measure consumption’s contribution to the aggregate price index dramatically increased, while the weights used to measure the government purchases contribution dramatically decreased. Since the consumption index had a bigger number (22 in 1946) than the government purchases index (only 12.3), the calculated aggregate GNP deflator rose in part merely as a result of the shift from government spending to consumer spending.\nThe 1990 data show that the total GNP price deflator rose from 15.7 to 19.4 from 1945 to 1946, an increase of 23.6 percent. Yet the subcomponents of the index are all reported to have increased less—consumption by less than 9 percent, investment by about 15 percent, government purchases by 4 percent, etc. Only by changing the weights and by arbitrarily giving higher numbers to the nongovernment purchases component of the index does one get this type of result, which is then used with nominal GNP data in calculating equally artificial real GNP. Had prices of governmental purchases risen exactly the same as other components in the index over time, the distortion would not have been observed. In earlier years, the distortion was smaller because the disparity between the government purchases price index and the other index components was much smaller than observed now. Since then, the series have diverged more over time because of consistently faster increases in the prices of government goods and services.\nAs indicated above, the true postwar picture may have been even more robust than the very modest decline already indicated for 1946, to the extent that government-produced output had a value less than that indicated by government expenditures on that output. Taking this factor into account, it is easy to derive estimates that show no GNP decline in 1946 and a major upsurge by 1947. Rather than a postwar depression, we entered a boom.\n",
+                "topicNamesForDisplay": "[]"
+            }
+        ],
+        "numFound": 1,
+        "start": 0
+    },
+    "responseHeader": {
+        "QTime": 0,
+        "params": {
+            "defType": "edismax",
+            "fl": "topicNames_facet,topicNamesForDisplay,pageText",
+            "fq": [
+                "isbn:9780814787922",
+                "pageNumberForDisplay:160"
+            ],
+            "hl": "on",
+            "hl.fl": "pageText topicNamesForDisplay",
+            "hl.fragsize": "0",
+            "hl.simple.post": "</mark>",
+            "hl.simple.pre": "<mark>",
+            "indent": "on",
+            "q": "time",
+            "qf": "pageText topicNames",
+            "rows": "1",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}

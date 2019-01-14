@@ -1,0 +1,41 @@
+{
+    "highlighting": {
+        "10296": {
+            "pageText": [
+                "frequently. I was always impressed with their neatness, accuracy, and pleasant appearance. I myself could barely produce an intelligible map of how to get to our house from the train station. At some point I began to wonder why everyone in Japan could draw and I couldn’t. Of course, I’d known since about second grade that I wasn’t good at <mark>art</mark>, and I hadn’t drawn anything since then. I had only vague memories of any <mark>art</mark> classes in school, though I enjoyed wood carving, weaving, and some other crafts in seventh grade.\nWhen I started reading about the Japanese philosophy of education, the “anyone can do anything” school of thought, I wondered how teachers could sustain this attitude in the face of what seemed to me to be overwhelming evidence of natural differences in talents and inclinations, especially in the arts. But not being able to draw bothered me more and more as I reflected on my friends’ competence and comfort in drawing. Surely not all 120 million Japanese could be more talented than I.\nI finally decided that I would make a private test of the Japanese approach, and I signed up for beginners’ drawing lessons at a local museum. I learned that I could learn to draw. I still think I have no talent, and it would take more than eight Sunday afternoons to become competent, but I’m sure I could do it. Drawing is a very physical skill, I was somehow surprised to discover, and practice pays off, just as it does in music. The confidence those eight afternoons gave me enabled me to avoid quitting in panic when I discovered that my flower arranging lessons in Japan included making a drawing of my finished arrangement at the end of each class. Teachers and fellow students were polite enough not to comment.\nIn the United States Sam and Ellen had both had <mark>art</mark> as a regularly scheduled subject with specialist teachers. Sam had brought home some <mark>art</mark> projects that seemed interesting and good to us, usually constructed, three-dimensional things rather than drawings. Ellen has always been considered the one in our family who is “good at <mark>art</mark>,” the "
+            ]
+        }
+    },
+    "response": {
+        "docs": [
+            {
+                "pageText": "frequently. I was always impressed with their neatness, accuracy, and pleasant appearance. I myself could barely produce an intelligible map of how to get to our house from the train station. At some point I began to wonder why everyone in Japan could draw and I couldn’t. Of course, I’d known since about second grade that I wasn’t good at art, and I hadn’t drawn anything since then. I had only vague memories of any art classes in school, though I enjoyed wood carving, weaving, and some other crafts in seventh grade.\nWhen I started reading about the Japanese philosophy of education, the “anyone can do anything” school of thought, I wondered how teachers could sustain this attitude in the face of what seemed to me to be overwhelming evidence of natural differences in talents and inclinations, especially in the arts. But not being able to draw bothered me more and more as I reflected on my friends’ competence and comfort in drawing. Surely not all 120 million Japanese could be more talented than I.\nI finally decided that I would make a private test of the Japanese approach, and I signed up for beginners’ drawing lessons at a local museum. I learned that I could learn to draw. I still think I have no talent, and it would take more than eight Sunday afternoons to become competent, but I’m sure I could do it. Drawing is a very physical skill, I was somehow surprised to discover, and practice pays off, just as it does in music. The confidence those eight afternoons gave me enabled me to avoid quitting in panic when I discovered that my flower arranging lessons in Japan included making a drawing of my finished arrangement at the end of each class. Teachers and fellow students were polite enough not to comment.\nIn the United States Sam and Ellen had both had art as a regularly scheduled subject with specialist teachers. Sam had brought home some art projects that seemed interesting and good to us, usually constructed, three-dimensional things rather than drawings. Ellen has always been considered the one in our family who is “good at art,” the ",
+                "topicNamesForDisplay": "[]"
+            }
+        ],
+        "numFound": 1,
+        "start": 0
+    },
+    "responseHeader": {
+        "QTime": 30,
+        "params": {
+            "defType": "edismax",
+            "fl": "topicNames_facet,topicNamesForDisplay,pageText",
+            "fq": [
+                "isbn:9780814712917",
+                "pageNumberForDisplay:154"
+            ],
+            "hl": "on",
+            "hl.fl": "pageText topicNamesForDisplay",
+            "hl.fragsize": "0",
+            "hl.simple.post": "</mark>",
+            "hl.simple.pre": "<mark>",
+            "indent": "on",
+            "q": "art",
+            "qf": "pageText topicNames",
+            "rows": "1",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}
