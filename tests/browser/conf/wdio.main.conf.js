@@ -1,6 +1,9 @@
 const path = require( 'path' );
 const VisualRegressionCompare = require( 'wdio-visual-regression-service/compare' );
 
+const solrFake = require( path.join( __dirname, '..', 'solr-fake' ) );
+const SOLR_FAKE_RESPONSES_DIRECTORY = path.join( __dirname, '../fixtures' );
+
 function getScreenshotName( basePath ) {
     return function ( context ) {
         let type = context.type;
@@ -230,8 +233,9 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+    onPrepare : function ( config, capabilities ) {
+        solrFake.startSolrFake( SOLR_FAKE_RESPONSES_DIRECTORY );
+    },
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
      * to manipulate configurations depending on the capability or spec.
