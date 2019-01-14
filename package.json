@@ -40,6 +40,7 @@
     "chai": "^4.1.2",
     "chromedriver": "^2.31.0",
     "command-exists": "^1.2.7",
+    "dlts-solr-fake": "https://github.com/nyulibraries/dlts-solr-fake",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
     "json-stable-stringify": "^1.0.1",
