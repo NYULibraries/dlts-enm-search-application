@@ -42,6 +42,7 @@
     "command-exists": "^1.2.7",
     "eslint": "^5.8.0",
     "eslint-plugin-vue": "^5.0.0-0",
+    "json-server": "^0.14.2",
     "json-stable-stringify": "^1.0.1",
     "mockttp": "^0.12.5",
     "node-sass": "^4.9.0",
