@@ -64,7 +64,7 @@
         }
     },
     "responseHeader": {
-        "QTime": 1,
+        "QTime": 131,
         "params": {
             "defType": "edismax",
             "facet": "on",

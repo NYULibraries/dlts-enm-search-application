@@ -1802,7 +1802,7 @@
         }
     },
     "responseHeader": {
-        "QTime": 2,
+        "QTime": 3,
         "params": {
             "defType": "edismax",
             "facet": "on",
