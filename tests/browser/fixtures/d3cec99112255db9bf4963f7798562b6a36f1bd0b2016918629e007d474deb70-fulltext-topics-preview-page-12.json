@@ -1,0 +1,44 @@
+{
+    "highlighting": {
+        "10154": {
+            "pageText": [
+                "The school gave these packs to our children, a gesture we appreciated on both a symbolic and a practical level—they cost a minimum of one hundred dollars each, usually closer to two hundred dollars. Later in our stay as we watched Japanese children prepare to enter first grade, we became more aware of the importance of the packs. They are bought after much discussion within the family about price and quality and are often a present from grandparents. They are the badge and uniform of a child’s status. Just as other occupations are marked by appropriate clothing and accessories, the occupation of schoolchild in Japan is announced through the wearing of the backpack. Though public school elementary students do not wear uniform clothing, this backpack is as much a marker of status as a blue suit and white shirt for salaried employees, split-toe boots and gaitered baggy pants for construction workers, or briefcases for professionals. Sam and Ellen could now be identified by anyone in Japan as proper elementary school students, especially when they also had the official school name tags they were to wear each day pinned to their clothes, giving their name, the school name, and their grade and class.\nNext, each teacher gave them their textbooks. Sam received fifteen, Ellen ten. Besides the ones we expected for mathematics, social studies, and Japanese, there were texts for physical education, music, morals, <mark>art</mark>, and calligraphy, among others. Ellen also had a communication notebook, which a parent had to sign each day, used for sending individual messages between parents and teachers as well as notations about special things needed the next day at school and homework assignments. I was familiar with this concept because the preschool and day care centers had also used such booklets.\nThe textbooks are free and do not have to be returned to the school at the end of the year; only replacements for lost ones must be paid for. The books themselves are attractive, nicely illustrated paperbacks, smaller than most U.S. textbooks, most of them nine by five inches or ten by six inches, 100–130 pages. They are light in weight and all of them are supposed to come home every night, the idea being that if "
+            ]
+        }
+    },
+    "response": {
+        "docs": [
+            {
+                "pageText": "The school gave these packs to our children, a gesture we appreciated on both a symbolic and a practical level—they cost a minimum of one hundred dollars each, usually closer to two hundred dollars. Later in our stay as we watched Japanese children prepare to enter first grade, we became more aware of the importance of the packs. They are bought after much discussion within the family about price and quality and are often a present from grandparents. They are the badge and uniform of a child’s status. Just as other occupations are marked by appropriate clothing and accessories, the occupation of schoolchild in Japan is announced through the wearing of the backpack. Though public school elementary students do not wear uniform clothing, this backpack is as much a marker of status as a blue suit and white shirt for salaried employees, split-toe boots and gaitered baggy pants for construction workers, or briefcases for professionals. Sam and Ellen could now be identified by anyone in Japan as proper elementary school students, especially when they also had the official school name tags they were to wear each day pinned to their clothes, giving their name, the school name, and their grade and class.\nNext, each teacher gave them their textbooks. Sam received fifteen, Ellen ten. Besides the ones we expected for mathematics, social studies, and Japanese, there were texts for physical education, music, morals, art, and calligraphy, among others. Ellen also had a communication notebook, which a parent had to sign each day, used for sending individual messages between parents and teachers as well as notations about special things needed the next day at school and homework assignments. I was familiar with this concept because the preschool and day care centers had also used such booklets.\nThe textbooks are free and do not have to be returned to the school at the end of the year; only replacements for lost ones must be paid for. The books themselves are attractive, nicely illustrated paperbacks, smaller than most U.S. textbooks, most of them nine by five inches or ten by six inches, 100–130 pages. They are light in weight and all of them are supposed to come home every night, the idea being that if ",
+                "topicNamesForDisplay": "[[\"Textbooks -- Sam and Ellen's\"]]",
+                "topicNames_facet": [
+                    "Textbooks -- Sam and Ellen's"
+                ]
+            }
+        ],
+        "numFound": 1,
+        "start": 0
+    },
+    "responseHeader": {
+        "QTime": 1,
+        "params": {
+            "defType": "edismax",
+            "fl": "topicNames_facet,topicNamesForDisplay,pageText",
+            "fq": [
+                "isbn:9780814712917",
+                "pageNumberForDisplay:12"
+            ],
+            "hl": "on",
+            "hl.fl": "pageText topicNamesForDisplay",
+            "hl.fragsize": "0",
+            "hl.simple.post": "</mark>",
+            "hl.simple.pre": "<mark>",
+            "indent": "on",
+            "q": "art",
+            "qf": "pageText topicNames",
+            "rows": "1",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}

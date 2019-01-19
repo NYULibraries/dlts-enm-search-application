@@ -443,7 +443,7 @@
         }
     },
     "responseHeader": {
-        "QTime": 0,
+        "QTime": 1,
         "params": {
             "defType": "edismax",
             "facet": "on",

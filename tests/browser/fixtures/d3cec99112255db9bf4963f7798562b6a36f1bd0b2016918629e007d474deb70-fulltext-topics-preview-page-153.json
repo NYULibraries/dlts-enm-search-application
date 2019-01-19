@@ -1,0 +1,47 @@
+{
+    "highlighting": {
+        "10295": {
+            "pageText": [
+                "and bicyclists. In fact, Saitama prefecture supplements these sections with additional small textbooks devoted solely to safety, mostly concerned with traffic and roads, the setting of most injuries to children.\nChildren in America often dislike physical education for various reasons. Those who are physically proficient view it as additional playtime hampered by the interference of adults, while those who are not proficient feel that they are not “taught,” that the classes do not give them new skills or competencies but simply highlight their inabilities vis-à-vis more athletic classmates. The range of activities in Japanese physical education classes is wide, very little of it is competitive, and there is an emphasis on learning skills. After all, this is another area in which native talent is thought to play only a very small role; everyone needs to learn and practice, and ability follows. Even the best students are thus willing to do drills and accept instruction, making their activities in class not so different from those of other students. It turns out to be true that almost everyone can become competent at these activities and improve performance to acceptable and enjoyable levels. For, though students do not compete directly with each other, there are many activities in which they try to reach or exceed standards set from outside by the Ministry of Education, which determines how far first graders should be able to throw a softball and how many seconds fifth-grade girls should take to run fifty meters. When I watched children during physical education classes, I noticed that most of them seemed happy, all of them were active almost all of the time (no waiting passively in line for one’s turn), and their activity was focused, not just horsing around.\n<mark>ART</mark> AND MUSIC\nWhen friends in Japan needed to explain a word to me, or ask for a word in English, they often drew a picture. I can’t draw, so I was denied this useful technique. Addresses in Japan only get you to the general neighborhood, so people draw maps to help one another quite "
+            ],
+            "topicNamesForDisplay": [
+                "[[\"<mark>art</mark>\",\"<mark>Art</mark>\"]]"
+            ]
+        }
+    },
+    "response": {
+        "docs": [
+            {
+                "pageText": "and bicyclists. In fact, Saitama prefecture supplements these sections with additional small textbooks devoted solely to safety, mostly concerned with traffic and roads, the setting of most injuries to children.\nChildren in America often dislike physical education for various reasons. Those who are physically proficient view it as additional playtime hampered by the interference of adults, while those who are not proficient feel that they are not “taught,” that the classes do not give them new skills or competencies but simply highlight their inabilities vis-à-vis more athletic classmates. The range of activities in Japanese physical education classes is wide, very little of it is competitive, and there is an emphasis on learning skills. After all, this is another area in which native talent is thought to play only a very small role; everyone needs to learn and practice, and ability follows. Even the best students are thus willing to do drills and accept instruction, making their activities in class not so different from those of other students. It turns out to be true that almost everyone can become competent at these activities and improve performance to acceptable and enjoyable levels. For, though students do not compete directly with each other, there are many activities in which they try to reach or exceed standards set from outside by the Ministry of Education, which determines how far first graders should be able to throw a softball and how many seconds fifth-grade girls should take to run fifty meters. When I watched children during physical education classes, I noticed that most of them seemed happy, all of them were active almost all of the time (no waiting passively in line for one’s turn), and their activity was focused, not just horsing around.\nART AND MUSIC\nWhen friends in Japan needed to explain a word to me, or ask for a word in English, they often drew a picture. I can’t draw, so I was denied this useful technique. Addresses in Japan only get you to the general neighborhood, so people draw maps to help one another quite ",
+                "topicNamesForDisplay": "[[\"art\",\"Art\"]]",
+                "topicNames_facet": [
+                    "art"
+                ]
+            }
+        ],
+        "numFound": 1,
+        "start": 0
+    },
+    "responseHeader": {
+        "QTime": 1,
+        "params": {
+            "defType": "edismax",
+            "fl": "topicNames_facet,topicNamesForDisplay,pageText",
+            "fq": [
+                "isbn:9780814712917",
+                "pageNumberForDisplay:153"
+            ],
+            "hl": "on",
+            "hl.fl": "pageText topicNamesForDisplay",
+            "hl.fragsize": "0",
+            "hl.simple.post": "</mark>",
+            "hl.simple.pre": "<mark>",
+            "indent": "on",
+            "q": "art",
+            "qf": "pageText topicNames",
+            "rows": "1",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}
