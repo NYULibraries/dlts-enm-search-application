@@ -1,0 +1,299 @@
+{
+    "id": "1554fc76c25040f83ac969a355aee85aed80f408f9469e255b829801213bf8d3-fulltext-topics",
+    "limitByTopics": [
+        [
+            "Plato",
+            37
+        ],
+        [
+            "Aristotle",
+            8
+        ],
+        [
+            "Plato -- Apology",
+            8
+        ],
+        [
+            "Plato -- Crito",
+            6
+        ],
+        [
+            "Socrates",
+            6
+        ],
+        [
+            "Negativity of Socrates",
+            4
+        ],
+        [
+            "Plato -- Gorgias",
+            4
+        ],
+        [
+            "Plato -- anti-Semitism in",
+            4
+        ],
+        [
+            "Kant -- Immanuel",
+            3
+        ],
+        [
+            "Ovid",
+            3
+        ],
+        [
+            "Rousseau, Jean Jacques",
+            3
+        ],
+        [
+            "Socrates -- and retaliation",
+            3
+        ],
+        [
+            "Arabic",
+            2
+        ],
+        [
+            "Baron, Lawrence",
+            2
+        ],
+        [
+            "Cicero",
+            2
+        ]
+    ],
+    "query": "Plato",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Ian Shapiro; New York University Press",
+            "isbn": "9780814780978",
+            "maximumPageRelevanceScore": "10.518733",
+            "numMatchedPages": 20,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814780978.jpg",
+            "title": "Integrity and Conscience"
+        },
+        {
+            "authorsAndPublisher": "Ben-Ami Scharfstein; New York University Press",
+            "isbn": "9780814779163",
+            "maximumPageRelevanceScore": "9.658711",
+            "numMatchedPages": 16,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814779163.jpg",
+            "title": "The Dilemma of Context"
+        },
+        {
+            "authorsAndPublisher": "M. Guy Thompson; New York University Press",
+            "isbn": "9780814782194",
+            "maximumPageRelevanceScore": "8.356552",
+            "numMatchedPages": 7,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814782194.jpg",
+            "title": "The truth about Freud’s technique"
+        },
+        {
+            "authorsAndPublisher": "Stephen M. Feldman.; New York University Press",
+            "isbn": "9780814726846",
+            "maximumPageRelevanceScore": "8.251241",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814726846.jpg",
+            "title": "Please don’t Wish me a Merry Christmas"
+        },
+        {
+            "authorsAndPublisher": "Katherine J. Mayberry; York University Press",
+            "isbn": "9780814755471",
+            "maximumPageRelevanceScore": "7.843624",
+            "numMatchedPages": 5,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814755471.jpg",
+            "title": "Teaching What You’re Not"
+        },
+        {
+            "authorsAndPublisher": "Pearl M. Oliner; New York University Press",
+            "isbn": "9780814761908",
+            "maximumPageRelevanceScore": "7.801562",
+            "numMatchedPages": 6,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814761908.jpg",
+            "title": "Embracing the Other"
+        },
+        {
+            "authorsAndPublisher": "Stein, Kevin; The University of Michigan Press",
+            "isbn": "9780472026708",
+            "maximumPageRelevanceScore": "7.801562",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472026708.jpg",
+            "title": "Poetry's Afterlife: Verse in the Digital Age"
+        },
+        {
+            "authorsAndPublisher": "Kee, Kevin; The University of Michigan Press",
+            "isbn": "9780472120482",
+            "maximumPageRelevanceScore": "7.2198687",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472120482.jpg",
+            "title": "Pastplay: Teaching and Learning History with Technology"
+        },
+        {
+            "authorsAndPublisher": "James Darsey; New York University Press",
+            "isbn": "9780814718766",
+            "maximumPageRelevanceScore": "7.2198687",
+            "numMatchedPages": 9,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814718766.jpg",
+            "title": "The Prophetic Tradition and Radical Rhetoric in America"
+        },
+        {
+            "authorsAndPublisher": "Jay M. Harris; New York University Press",
+            "isbn": "9780814735084",
+            "maximumPageRelevanceScore": "7.1597853",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814735084.jpg",
+            "title": "Nachman Krochmal"
+        },
+        {
+            "authorsAndPublisher": "Eisner, Caroline; Vicinus, Martha; University of Michigan Press and University of Michigan Library",
+            "isbn": "9780472024445",
+            "maximumPageRelevanceScore": "7.0168014",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472024445.jpg",
+            "title": "Originality, Imitation, and Plagiarism"
+        },
+        {
+            "authorsAndPublisher": "Anselm Haverkamp; New York University Press",
+            "isbn": "9780814735190",
+            "maximumPageRelevanceScore": "6.6888294",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814735190.jpg",
+            "title": "Deconstruction is/in America"
+        },
+        {
+            "authorsAndPublisher": "David Mitchell; University of Minnesota Press",
+            "isbn": "9780816689972",
+            "maximumPageRelevanceScore": "6.218126",
+            "numMatchedPages": 11,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780816689972.jpg",
+            "title": "Becoming Human"
+        },
+        {
+            "authorsAndPublisher": "David Kleinbard; New York University Press",
+            "isbn": "9780814746677",
+            "maximumPageRelevanceScore": "6.042511",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814746677.jpg",
+            "title": "The Beginning of Terror"
+        },
+        {
+            "authorsAndPublisher": "Steven Goldberg; New York University Press",
+            "isbn": "9780814730911",
+            "maximumPageRelevanceScore": "5.700952",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814730911.jpg",
+            "title": "Culture Clash"
+        },
+        {
+            "authorsAndPublisher": "Ellen E. Berry; New York University Press",
+            "isbn": "9780814712481",
+            "maximumPageRelevanceScore": "5.700952",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814712481.jpg",
+            "title": "Postcommunism And The Body Politic"
+        },
+        {
+            "authorsAndPublisher": "Steven T. Katz; New York University Press",
+            "isbn": "9780814746929",
+            "maximumPageRelevanceScore": "5.700952",
+            "numMatchedPages": 15,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814746929.jpg",
+            "title": "The Essential Agus"
+        },
+        {
+            "authorsAndPublisher": "Mark E. Kann; New York University Press",
+            "isbn": "9780814747148",
+            "maximumPageRelevanceScore": "5.064869",
+            "numMatchedPages": 4,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814747148.jpg",
+            "title": "A Republic of Men"
+        },
+        {
+            "authorsAndPublisher": "Natalie Clifford Barney, John Spalding Gatton; New York University Press",
+            "isbn": "9780814711774",
+            "maximumPageRelevanceScore": "5.064869",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814711774.jpg",
+            "title": "Adventures of the Mind"
+        },
+        {
+            "authorsAndPublisher": "Joseph Dan; New York University Press",
+            "isbn": "9780814718124",
+            "maximumPageRelevanceScore": "5.064869",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814718124.jpg",
+            "title": "Gershom Scholem and the Mystical Dimension of Jewish History"
+        },
+        {
+            "authorsAndPublisher": "Barbara Fass Leavy; New York University Press",
+            "isbn": "9780814751008",
+            "maximumPageRelevanceScore": "5.064869",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814751008.jpg",
+            "title": "In Search of the Swan Maiden"
+        },
+        {
+            "authorsAndPublisher": "Cary Nelson; New York University Press",
+            "isbn": "9780814757970",
+            "maximumPageRelevanceScore": "5.064869",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814757970.jpg",
+            "title": "Manifesto of a Tenured Radical"
+        },
+        {
+            "authorsAndPublisher": "Marshall W. Alcorn, Jr.; New York University Press",
+            "isbn": "9780814706657",
+            "maximumPageRelevanceScore": "5.064869",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814706657.jpg",
+            "title": "Narcissism and the Literary Libido"
+        },
+        {
+            "authorsAndPublisher": "Schur, Richard L.; The University of Michigan Press and The University of Michigan Library",
+            "isbn": "9780472024490",
+            "maximumPageRelevanceScore": "5.064869",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472024490.jpg",
+            "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law"
+        },
+        {
+            "authorsAndPublisher": "R. Jeffrey Ringer; New York University Press",
+            "isbn": "9780814774410",
+            "maximumPageRelevanceScore": "5.064869",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814774410.jpg",
+            "title": "Queer Words, Queer Images: Communication and the Construction of Homosexuality"
+        },
+        {
+            "authorsAndPublisher": "Amia Lieblich; New York University Press",
+            "isbn": "9780814750957",
+            "maximumPageRelevanceScore": "5.064869",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814750957.jpg",
+            "title": "Seasons of Captivity"
+        },
+        {
+            "authorsAndPublisher": "Mark Hertzog; New York University Press",
+            "isbn": "9780814735305",
+            "maximumPageRelevanceScore": "5.064869",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814735305.jpg",
+            "title": "The Lavender Vote"
+        },
+        {
+            "authorsAndPublisher": "Cummings, Robert E.; Barton, Matt; University of Michigan Press and University of Michigan Library",
+            "isbn": "9780472024513",
+            "maximumPageRelevanceScore": "5.064869",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472024513.jpg",
+            "title": "Wiki Writing: Collaborative Learning in the College Classroom"
+        }
+    ],
+    "resultsNumBooks": 28,
+    "resultsNumPages": 128,
+    "searchDCI": "Plato",
+    "searchFulltext": true,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}

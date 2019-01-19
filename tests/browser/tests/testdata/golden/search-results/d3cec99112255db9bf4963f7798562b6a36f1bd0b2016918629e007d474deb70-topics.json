@@ -1,0 +1,307 @@
+{
+    "id": "d3cec99112255db9bf4963f7798562b6a36f1bd0b2016918629e007d474deb70-topics",
+    "limitByTopics": [
+        [
+            "Rilke's writings -- Notebooks of Malte Laurids Brigge, The (Die Aufzeichnungnen des Malte Laurids Brigge)",
+            13
+        ],
+        [
+            "art",
+            10
+        ],
+        [
+            "Appropriation art",
+            9
+        ],
+        [
+            "Copyright symbols in art",
+            9
+        ],
+        [
+            "Piper, Adrian -- Appropriation art",
+            9
+        ],
+        [
+            "Chicago, IL",
+            8
+        ],
+        [
+            "University of Michigan -- School of Art and Design",
+            8
+        ],
+        [
+            "modernism",
+            8
+        ],
+        [
+            "Michigan, University of",
+            7
+        ],
+        [
+            "Prison Creative Arts Project (PCAP) -- art workshops",
+            7
+        ],
+        [
+            "art -- of filmmaking",
+            7
+        ],
+        [
+            "art films",
+            7
+        ],
+        [
+            "art-horror",
+            7
+        ],
+        [
+            "Appropriation",
+            6
+        ],
+        [
+            "Art -- irony",
+            6
+        ]
+    ],
+    "query": "art",
+    "resultsMetadata": [
+        {
+            "authorsAndPublisher": "Gail R. Benjamin; New York University Press",
+            "isbn": "9780814712917",
+            "maximumPageRelevanceScore": "8.303877",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814712917.jpg",
+            "title": "Japanese lessons"
+        },
+        {
+            "authorsAndPublisher": "Steven Chung; University of Minnesota Press",
+            "isbn": "9781452941516",
+            "maximumPageRelevanceScore": "7.5761976",
+            "numMatchedPages": 25,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9781452941516.jpg",
+            "title": "Split Screen Korea"
+        },
+        {
+            "authorsAndPublisher": "Peter N. Stearns; New York University Press",
+            "isbn": "9780814779965",
+            "maximumPageRelevanceScore": "7.2305417",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814779965.jpg",
+            "title": "American Cool"
+        },
+        {
+            "authorsAndPublisher": "R. Jeffrey Ringer; New York University Press",
+            "isbn": "9780814774410",
+            "maximumPageRelevanceScore": "7.2305417",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814774410.jpg",
+            "title": "Queer Words, Queer Images: Communication and the Construction of Homosexuality"
+        },
+        {
+            "authorsAndPublisher": "David Kleinbard; New York University Press",
+            "isbn": "9780814746677",
+            "maximumPageRelevanceScore": "7.2305417",
+            "numMatchedPages": 38,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814746677.jpg",
+            "title": "The Beginning of Terror"
+        },
+        {
+            "authorsAndPublisher": "Ben-Ami Scharfstein; New York University Press",
+            "isbn": "9780814779163",
+            "maximumPageRelevanceScore": "7.2305417",
+            "numMatchedPages": 4,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814779163.jpg",
+            "title": "The Dilemma of Context"
+        },
+        {
+            "authorsAndPublisher": "Eisner, Caroline; Vicinus, Martha; University of Michigan Press and University of Michigan Library",
+            "isbn": "9780472024445",
+            "maximumPageRelevanceScore": "7.137437",
+            "numMatchedPages": 13,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472024445.jpg",
+            "title": "Originality, Imitation, and Plagiarism"
+        },
+        {
+            "authorsAndPublisher": "Stein, Kevin; The University of Michigan Press",
+            "isbn": "9780472026708",
+            "maximumPageRelevanceScore": "6.5915394",
+            "numMatchedPages": 8,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472026708.jpg",
+            "title": "Poetry's Afterlife: Verse in the Digital Age"
+        },
+        {
+            "authorsAndPublisher": "Seth Forman; New York University Press",
+            "isbn": "9780814726815",
+            "maximumPageRelevanceScore": "6.1537704",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814726815.jpg",
+            "title": "Blacks in the Jewish Mind"
+        },
+        {
+            "authorsAndPublisher": "Schur, Richard L.; The University of Michigan Press and The University of Michigan Library",
+            "isbn": "9780472024490",
+            "maximumPageRelevanceScore": "6.130814",
+            "numMatchedPages": 29,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472024490.jpg",
+            "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law"
+        },
+        {
+            "authorsAndPublisher": "Alexander, Buzz; The University of Michigan Press and The University of Michigan Library",
+            "isbn": "9780472027446",
+            "maximumPageRelevanceScore": "5.778642",
+            "numMatchedPages": 31,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472027446.jpg",
+            "title": "Is William Martinez Not Our Brother?: Twenty Years of the Prison Creative Arts Project"
+        },
+        {
+            "authorsAndPublisher": "Perron, Bernard; The University of Michigan Press",
+            "isbn": "9780472027835",
+            "maximumPageRelevanceScore": "5.6475453",
+            "numMatchedPages": 9,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472027835.jpg",
+            "title": "Silent Hill: The Terror Engine"
+        },
+        {
+            "authorsAndPublisher": "M. Guy Thompson; New York University Press",
+            "isbn": "9780814782194",
+            "maximumPageRelevanceScore": "5.6475453",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814782194.jpg",
+            "title": "The truth about Freud’s technique"
+        },
+        {
+            "authorsAndPublisher": "Paul Harris; New York University",
+            "isbn": "9780814735923",
+            "maximumPageRelevanceScore": "4.9047766",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814735923.jpg",
+            "title": "Black Rage Confronts the Law"
+        },
+        {
+            "authorsAndPublisher": "Bernard J. Paris; New York University Press",
+            "isbn": "9780814766569",
+            "maximumPageRelevanceScore": "4.9047766",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814766569.jpg",
+            "title": "Imagined Human Beings"
+        },
+        {
+            "authorsAndPublisher": "Natalie Clifford Barney, John Spalding Gatton; New York University Press",
+            "isbn": "9780814711774",
+            "maximumPageRelevanceScore": "4.766254",
+            "numMatchedPages": 2,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814711774.jpg",
+            "title": "Adventures of the Mind"
+        },
+        {
+            "authorsAndPublisher": "Diane Helene Miller; New York University Press",
+            "isbn": "9780814755969",
+            "maximumPageRelevanceScore": "4.766254",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814755969.jpg",
+            "title": "Freedom to Differ"
+        },
+        {
+            "authorsAndPublisher": "Klein, Julie Thompson; University of Michigan Press",
+            "isbn": "9780472120932",
+            "maximumPageRelevanceScore": "4.766254",
+            "numMatchedPages": 4,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472120932.jpg",
+            "title": "Interdisciplining Digital Humanities: Boundary Work in an Emerging Field"
+        },
+        {
+            "authorsAndPublisher": "David Holbrook; New York University Press",
+            "isbn": "9780814735282",
+            "maximumPageRelevanceScore": "4.411416",
+            "numMatchedPages": 8,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814735282.jpg",
+            "title": "Charles Dickens and the Image of Woman"
+        },
+        {
+            "authorsAndPublisher": "Shackelford, Laura; University of Michigan Press",
+            "isbn": "9780472120680",
+            "maximumPageRelevanceScore": "4.411416",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472120680.jpg",
+            "title": "Tactics of the Human: Experimental Technics in American Fiction"
+        },
+        {
+            "authorsAndPublisher": "Amy Koritz and George J. Sanchez; University of Michigan Press",
+            "isbn": "9780472024483",
+            "maximumPageRelevanceScore": "3.8194742",
+            "numMatchedPages": 3,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472024483.jpg",
+            "title": "Civic Engagement in the Wake of Katrina"
+        },
+        {
+            "authorsAndPublisher": "Sonia Livingstone and Julian Sefton-Green; New York University Press",
+            "isbn": "9781479824243",
+            "maximumPageRelevanceScore": "3.8194742",
+            "numMatchedPages": 5,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9781479824243.jpg",
+            "title": "The Class: Living and Learning in the Digital Age"
+        },
+        {
+            "authorsAndPublisher": "Keith Beattie; New York University Press",
+            "isbn": "9780814713266",
+            "maximumPageRelevanceScore": "3.8194742",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814713266.jpg",
+            "title": "The Scar That Binds"
+        },
+        {
+            "authorsAndPublisher": "Thomas Cushman; New York University Press",
+            "isbn": "9780814715352",
+            "maximumPageRelevanceScore": "3.8194742",
+            "numMatchedPages": 4,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814715352.jpg",
+            "title": "This Time We Knew"
+        },
+        {
+            "authorsAndPublisher": "Matthew A. Taylor; University of Minnesota Press",
+            "isbn": "9780816680610",
+            "maximumPageRelevanceScore": "3.8194742",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780816680610.jpg",
+            "title": "Universes without Us"
+        },
+        {
+            "authorsAndPublisher": "Jenna M. Loyd; University of Minnesota Press",
+            "isbn": "9780816676507",
+            "maximumPageRelevanceScore": "3.1242151",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780816676507.jpg",
+            "title": "Health Rights Are Civil Rights"
+        },
+        {
+            "authorsAndPublisher": "Bonnie A. Nardi; The University of Michigan Press",
+            "isbn": "9780472026715",
+            "maximumPageRelevanceScore": "3.1242151",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472026715.jpg",
+            "title": "My Life as a Night Elf Priest"
+        },
+        {
+            "authorsAndPublisher": "Elizabeth Carolyn Miller; University of Michigan Press and University of Michigan Library",
+            "isbn": "9780472024469",
+            "maximumPageRelevanceScore": "1.9284675",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780472024469.jpg",
+            "title": "Framed: The New Woman Criminal in British Culture at the Fin de Siecle"
+        },
+        {
+            "authorsAndPublisher": "James Darsey; New York University Press",
+            "isbn": "9780814718766",
+            "maximumPageRelevanceScore": "1.9284675",
+            "numMatchedPages": 1,
+            "thumbnail": "http://localhost/enm/search/assets/covers/9780814718766.jpg",
+            "title": "The Prophetic Tradition and Radical Rhetoric in America"
+        }
+    ],
+    "resultsNumBooks": 29,
+    "resultsNumPages": 205,
+    "searchDCI": "art",
+    "searchFulltext": false,
+    "searchTopics": true,
+    "topicsDCIs": [
+    ]
+}
