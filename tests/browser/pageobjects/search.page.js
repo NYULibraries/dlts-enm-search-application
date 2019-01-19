@@ -54,7 +54,7 @@ class SearchPage extends Page {
         // This is the real path, after the build is implemented.
         // super.open( 'search' );
         // For now use the prototype for writing of the tests.
-        super.open( this.paths.search );
+        super.open( this.paths.search + `?solr=${ browser.options.solrFake.url }` );
     }
 
     dismissSearchDCIAndWaitForResults() {
