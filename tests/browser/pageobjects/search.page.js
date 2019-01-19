@@ -51,7 +51,13 @@ class SearchPage extends Page {
     };
 
     open() {
-        super.open( this.paths.search + `?solr=${ browser.options.solrFake.url }` );
+        let url = this.paths.search;
+
+        if ( browser.options.solrFake ) {
+            url += `?solr=${ browser.options.solrFake.url }`;
+        }
+
+        super.open( url );
     }
 
     dismissSearchDCIAndWaitForResults() {

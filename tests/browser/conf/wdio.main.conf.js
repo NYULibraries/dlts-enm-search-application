@@ -239,7 +239,9 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      */
     onPrepare : function ( config, capabilities ) {
-        solrFake.startSolrFake( SOLR_FAKE_RESPONSES_INDEX, SOLR_FAKE_RESPONSES_DIRECTORY );
+        if ( this.solrFake ) {
+            solrFake.startSolrFake( SOLR_FAKE_RESPONSES_INDEX, SOLR_FAKE_RESPONSES_DIRECTORY );
+        }
     },
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
