@@ -3447,11 +3447,12 @@ dir-glob@^2.0.0:
     arrify "^1.0.1"
     path-type "^3.0.0"
 
-"dlts-solr-fake@https://github.com/nyulibraries/dlts-solr-fake":
-  version "0.0.1"
-  resolved "https://github.com/nyulibraries/dlts-solr-fake#20d9a9f23a1f7e3247c7b55d066fc5bd613a49bd"
+"dlts-solr-fake@https://github.com/nyulibraries/dlts-solr-fake#v0.0.2":
+  version "0.0.2"
+  resolved "https://github.com/nyulibraries/dlts-solr-fake#0ffa9379987ae6903b248983f31ebcf5a18a08be"
   dependencies:
     json-server "^0.14.2"
+    json-stable-stringify "^1.0.1"
     minimist "^1.2.0"
 
 dns-equal@^1.0.0:
