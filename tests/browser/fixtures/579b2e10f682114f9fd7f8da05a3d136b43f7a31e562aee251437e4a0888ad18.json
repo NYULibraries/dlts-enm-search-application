@@ -1,0 +1,88 @@
+{
+    "facet_counts": {
+        "facet_fields": {
+            "topicNames_facet": [
+                "Civil Wars storyline",
+                1,
+                "DREAMers",
+                1,
+                "Huerta, Erick",
+                1,
+                "Justice League",
+                1,
+                "Marvel Comics",
+                1,
+                "Spider-Man",
+                1,
+                "Superman",
+                1,
+                "Wolverine",
+                1,
+                "X-Men",
+                1,
+                "YouTube.com",
+                1,
+                "Zimmerman, Arely M.",
+                1
+            ]
+        },
+        "facet_heatmaps": {
+        },
+        "facet_intervals": {
+        },
+        "facet_queries": {
+        },
+        "facet_ranges": {
+        }
+    },
+    "grouped": {
+        "isbn": {
+            "groups": [
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Henry Jenkins et al"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 7.93449,
+                                "title": "By Any Media Necessary",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 7.93449,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9781479899982"
+                }
+            ],
+            "matches": 1
+        }
+    },
+    "responseHeader": {
+        "QTime": 1,
+        "params": {
+            "defType": "edismax",
+            "facet": "on",
+            "facet.field": "topicNames_facet",
+            "facet.limit": "-1",
+            "facet.mincount": "1",
+            "facet.sort": "count",
+            "fl": "title,authors,publisher,yearOfPublication,score",
+            "group": "true",
+            "group.field": "isbn",
+            "group.limit": "999",
+            "indent": "on",
+            "q": "wolverine",
+            "qf": "topicNames",
+            "rows": "1999",
+            "sort": "score desc,title_facet asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}

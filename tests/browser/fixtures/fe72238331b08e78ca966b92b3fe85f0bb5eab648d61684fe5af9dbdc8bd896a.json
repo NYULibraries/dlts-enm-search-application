@@ -1,0 +1,1667 @@
+{
+    "facet_counts": {
+        "facet_fields": {
+            "topicNames_facet": [
+                "Plato",
+                37,
+                "Plato -- Apology",
+                8,
+                "Aristotle",
+                7,
+                "Plato -- Crito",
+                6,
+                "Socrates",
+                6,
+                "Negativity of Socrates",
+                4,
+                "Plato -- Gorgias",
+                4,
+                "Plato -- anti-Semitism in",
+                4,
+                "Ovid",
+                3,
+                "Rousseau, Jean Jacques",
+                3,
+                "Socrates -- and retaliation",
+                3,
+                "Arabic",
+                2,
+                "Baron, Lawrence",
+                2,
+                "Conversion of rescued",
+                2,
+                "Dutch rescuers of Jews",
+                2,
+                "Freud, Sigmund",
+                2,
+                "Graham, Angus C.",
+                2,
+                "Greek language",
+                2,
+                "Hobbes -- Thomas",
+                2,
+                "Kant -- Immanuel",
+                2,
+                "Kurek-Lesik, Ewa",
+                2,
+                "Locke -- John",
+                2,
+                "Noncompliance, of Socrates",
+                2,
+                "Nuns",
+                2,
+                "Plato -- Phaedrus",
+                2,
+                "Plato -- The Republic",
+                2,
+                "Plato, \"The Symposium\"",
+                2,
+                "Socrates -- view of citizenship",
+                2,
+                "Socratic integrity",
+                2,
+                "artificial life, automata and animation and",
+                2,
+                "identity",
+                2,
+                "mess, the",
+                2,
+                "physics",
+                2,
+                "speech",
+                2,
+                "table -- Platonic form and",
+                2,
+                "\"Battle Hymn of the Republic\"",
+                1,
+                "\"DeWitt, John\"",
+                1,
+                "Aarsleff, Hans",
+                1,
+                "Abraham ibn Ezra, Rabbi",
+                1,
+                "Abstractions",
+                1,
+                "Adams, Marilyn M.",
+                1,
+                "Afterlife",
+                1,
+                "Agamben, Georgio",
+                1,
+                "Agape",
+                1,
+                "Albertus Magnus",
+                1,
+                "Alexander the Great",
+                1,
+                "Allerton, Robert",
+                1,
+                "Analogies",
+                1,
+                "Anti-Semitism -- in Poland",
+                1,
+                "Antifederalists -- and change",
+                1,
+                "Aristotle -- on modes of proof",
+                1,
+                "Arnold, Matthew",
+                1,
+                "Articles of Confederation",
+                1,
+                "Auerbach, Erich",
+                1,
+                "Aufhebung, Krochmal on",
+                1,
+                "Augustine, Saint",
+                1,
+                "Authority -- in Socrates",
+                1,
+                "Bacon, Francis",
+                1,
+                "Bartoszewski, W.",
+                1,
+                "Bell, Daniel",
+                1,
+                "Bell, Derrick",
+                1,
+                "Berger, Peter L.",
+                1,
+                "Bernardus Silvestris",
+                1,
+                "Bhattacharya, K.",
+                1,
+                "Biology",
+                1,
+                "Bisexuality",
+                1,
+                "Bisexuality -- hermaphroditic motherhood",
+                1,
+                "Bishop, Elizabeth",
+                1,
+                "Blair, Hugh",
+                1,
+                "Blum, Lawrence",
+                1,
+                "Boethius",
+                1,
+                "Bogan, Louise",
+                1,
+                "Bolingbroke, Lord",
+                1,
+                "British Empiricism -- Romantic view of",
+                1,
+                "Brooks, Gwendolyn",
+                1,
+                "Brown, Norman O.",
+                1,
+                "Brumberg, Abraham",
+                1,
+                "Brumble, H. D.",
+                1,
+                "Burke, Edmund",
+                1,
+                "Bynum, Caroline Walker",
+                1,
+                "Caesar, Augustus",
+                1,
+                "Caesar, Julius",
+                1,
+                "Calvinism",
+                1,
+                "Campbell, George",
+                1,
+                "Canon -- political theory",
+                1,
+                "Carlyle, Thomas -- on poetry",
+                1,
+                "Carnes, Mark C.: \"Liminal Classroom\"",
+                1,
+                "Catholicism",
+                1,
+                "Chadwick, Nora Kershaw, on prophecy and poetry",
+                1,
+                "Charles, Michael Ray -- (Forever Free) Aneminentevaluation",
+                1,
+                "Chaucer, Geoffrey -- General Prologue",
+                1,
+                "Chaucer, Geoffrey -- The Canterbury Tales",
+                1,
+                "Chaucer, Geoffrey -- childlike persona",
+                1,
+                "Chinese language",
+                1,
+                "Christ -- dolls and effigies of",
+                1,
+                "Christianity",
+                1,
+                "Cicero",
+                1,
+                "Civil Rights Movement -- Limits",
+                1,
+                "Civil Rights Movement -- Litigation strategy",
+                1,
+                "Clorox bleach",
+                1,
+                "Coleridge, Samuel Taylor -- and Romanticism",
+                1,
+                "College of Saint Benedict",
+                1,
+                "Confucius -- The Analects",
+                1,
+                "Connell, R. W",
+                1,
+                "Conscience -- as deflationary",
+                1,
+                "Constitution -- Color-blindness",
+                1,
+                "Constitution, U.S -- Bill of Rights",
+                1,
+                "Contextualism",
+                1,
+                "Creativity -- genius in",
+                1,
+                "Criminal subculture",
+                1,
+                "Critical legal studies (CLS)",
+                1,
+                "D' Emilio, John",
+                1,
+                "Daedalus",
+                1,
+                "Davis, P. J.",
+                1,
+                "Delgado, Richard",
+                1,
+                "Derrida, Jacques",
+                1,
+                "Descartes, Rene",
+                1,
+                "Dobraczynski, J.",
+                1,
+                "Dulany, Daniel",
+                1,
+                "Duns Scotus, John",
+                1,
+                "Effeminacy",
+                1,
+                "Efros, I.",
+                1,
+                "Elias, Norbert",
+                1,
+                "Empathy -- as motivation of altruism",
+                1,
+                "Essay on Human Understanding",
+                1,
+                "Estrich, Susan: Real Rape",
+                1,
+                "Fame",
+                1,
+                "Fatherhood -- and obsolescence",
+                1,
+                "Faust, David",
+                1,
+                "Federalists -- and change",
+                1,
+                "Feminism -- definition of",
+                1,
+                "Filmer, Sir Robert",
+                1,
+                "Fitch, Thomas",
+                1,
+                "Freedman, David, on prophecy and poetry",
+                1,
+                "Freud, Sigmund -- influenced by Aristotle",
+                1,
+                "Friend, Christy",
+                1,
+                "Frost, Robert",
+                1,
+                "Frye, Northrop -- on Romantic poets",
+                1,
+                "Gardet, L.",
+                1,
+                "Gates, Henry Louis -- Signifyin'",
+                1,
+                "Generalizations",
+                1,
+                "George III, king of England",
+                1,
+                "Gilligan, Carol: A Different Voice",
+                1,
+                "Gilmore, Grant, on the evolution of American law",
+                1,
+                "Gracia, J. G.",
+                1,
+                "Graeco-Roman tradition (in rhetoric)",
+                1,
+                "Gross, Kenneth",
+                1,
+                "Gutièrrez-Jones, Carl",
+                1,
+                "Hamilton, Alexander",
+                1,
+                "Harvey, I. E.",
+                1,
+                "Hebrew",
+                1,
+                "Hegel, G. W. F. -- and Romanticism",
+                1,
+                "Hegel, Georg W. F.",
+                1,
+                "Hegemony -- and masculinity",
+                1,
+                "Heidegger, Martin",
+                1,
+                "Henry, Patrick",
+                1,
+                "Hersh, Reuben",
+                1,
+                "Higley, Sarah L.",
+                1,
+                "Hildegard of Bingen",
+                1,
+                "Hip-hop -- Materialism",
+                1,
+                "Holocaust",
+                1,
+                "Hovannisian, Richard",
+                1,
+                "Howe, General William",
+                1,
+                "Humboldt, Wilhelm von",
+                1,
+                "Idel, Moshe",
+                1,
+                "Individuality -- of language",
+                1,
+                "Infamy",
+                1,
+                "Intuition",
+                1,
+                "Irony -- Critical race theory",
+                1,
+                "Irony -- Vanilla Nightmare Series",
+                1,
+                "Irwin-Zarecka, I.",
+                1,
+                "Isidore of Seville",
+                1,
+                "Jefferson, Thomas",
+                1,
+                "Jefferson, Thomas -- and Louisiana Purchase",
+                1,
+                "Judaism",
+                1,
+                "Jurkowski, Henryk",
+                1,
+                "Kahn, Charles",
+                1,
+                "Kempe, Margery",
+                1,
+                "Klapisch-Zuber, Christiane",
+                1,
+                "Konarzewski, Krzysztof",
+                1,
+                "Langland, William: Piers Plowman",
+                1,
+                "Languages -- and thought",
+                1,
+                "Languages -- uniqueness of",
+                1,
+                "Lanham, Richard A.: Handlist of Rhetorical Terms",
+                1,
+                "Law -- legitimacy of",
+                1,
+                "Layering -- Vanilla Nightmare Series",
+                1,
+                "Leadership -- need for",
+                1,
+                "Levi, Primo",
+                1,
+                "Libertines",
+                1,
+                "Love -- historical views on",
+                1,
+                "Machiavelli",
+                1,
+                "Machiavelli, Niccolo",
+                1,
+                "Macrobius",
+                1,
+                "Madison, James",
+                1,
+                "Madison, James -- and Bill of Rights",
+                1,
+                "Males -- order in the ranks of",
+                1,
+                "Margaretha von Ebner",
+                1,
+                "Marriage -- and adultery",
+                1,
+                "Marx, Karl",
+                1,
+                "Massignon, Louis",
+                1,
+                "Mathematics",
+                1,
+                "Meletus",
+                1,
+                "Merrill, James",
+                1,
+                "Metaphors",
+                1,
+                "Mill, John Stuart",
+                1,
+                "Miller, A. I.",
+                1,
+                "Moral opportunism",
+                1,
+                "Murti, T. R. V.",
+                1,
+                "My Space",
+                1,
+                "Nagarjuna",
+                1,
+                "Nazism",
+                1,
+                "Neal, Mark Anthony",
+                1,
+                "Nelson, Victoria",
+                1,
+                "Nietzsche, Friedrich",
+                1,
+                "Nominalism",
+                1,
+                "Norris, Frank",
+                1,
+                "Northwestern University",
+                1,
+                "Old Testament",
+                1,
+                "Other-regarding feelings",
+                1,
+                "Paine, Thomas -- and women",
+                1,
+                "Parker, T.",
+                1,
+                "Patriarchy -- traditional",
+                1,
+                "Pedagogy -- cooperative",
+                1,
+                "Peer reviews",
+                1,
+                "Philo",
+                1,
+                "Philosophy -- and distinction between nominalism and realism",
+                1,
+                "Piper, Adrian -- Allegory of the cave",
+                1,
+                "Plato -- Euthyphro",
+                1,
+                "Plato -- and Romanticism",
+                1,
+                "Plato -- and transcendental law",
+                1,
+                "Plato -- on poetry and madness",
+                1,
+                "Pliny",
+                1,
+                "Plutarch",
+                1,
+                "Post–Civil Rights era -- (meaning of) Race",
+                1,
+                "Post–Civil Rights era -- Cultural production",
+                1,
+                "Prerogative -- political",
+                1,
+                "Prerogative -- royal and parliamentary",
+                1,
+                "Proclamation of Neutrality",
+                1,
+                "Property rights -- Imaginary domain",
+                1,
+                "Property rights -- Within African American life",
+                1,
+                "Protest, as motivation of altruism",
+                1,
+                "Psychologism",
+                1,
+                "Quantum mechanics",
+                1,
+                "Quintillian",
+                1,
+                "Quintillian -- Institutio Oratorio",
+                1,
+                "Reasoning",
+                1,
+                "Relativism -- extreme",
+                1,
+                "Relativism: in conscience",
+                1,
+                "Relativity theory",
+                1,
+                "Repression -- of erotic longings",
+                1,
+                "Republic",
+                1,
+                "Rhythmic asymmetry/flow -- Charles, Michael Ray",
+                1,
+                "Rich, Adrienne -- \"Compulsory Heterosexuality and Lesbian Existence\"",
+                1,
+                "Righteous gentiles -- rescuers as",
+                1,
+                "Rilke's writings -- Book of Hours, The (Das Stunden-Buch)",
+                1,
+                "Rublack, Ulinka",
+                1,
+                "Saint John's University",
+                1,
+                "Sampling -- Critical function",
+                1,
+                "Sampling -- Smith, Anna Deavere",
+                1,
+                "Sanskrit",
+                1,
+                "Scharfstein, B. -A.",
+                1,
+                "Scientism",
+                1,
+                "Scott, R. B. Y. -- on prophecy and poetry",
+                1,
+                "Serres, Michel",
+                1,
+                "Sextus Empiricus",
+                1,
+                "Signifyin'",
+                1,
+                "Smith, Anna Deavere",
+                1,
+                "Social sciences",
+                1,
+                "Socrates -- attitude to death",
+                1,
+                "Socratic integrity -- intellectual",
+                1,
+                "Sophist",
+                1,
+                "Spinoza, B.",
+                1,
+                "St. John",
+                1,
+                "Stewart, Susan",
+                1,
+                "Strauss, Leo",
+                1,
+                "Subcultures",
+                1,
+                "Tec, Nechama",
+                1,
+                "Temperament",
+                1,
+                "Theaetetus",
+                1,
+                "Thisness",
+                1,
+                "Thought -- and models",
+                1,
+                "Tillis, Steve",
+                1,
+                "Trocmé, André and Magda",
+                1,
+                "Turowicz, J.",
+                1,
+                "Unconscious -- acts of",
+                1,
+                "Unitarianism",
+                1,
+                "United States Constitution",
+                1,
+                "Universals -- and contextual dilemmas",
+                1,
+                "Usk, Thomas: Testament of Love, The",
+                1,
+                "Wagner, Richard",
+                1,
+                "Warren, Robert Penn",
+                1,
+                "Washington, George",
+                1,
+                "Washington, George -- and foreign policy",
+                1,
+                "Weaver, Richard",
+                1,
+                "Whately, Richard",
+                1,
+                "Willard van Orman Quine",
+                1,
+                "Williams, Patricia",
+                1,
+                "Williams, William Carlos",
+                1,
+                "Wolf, Naomi",
+                1,
+                "Wolfson, Harry",
+                1,
+                "Wollstonecraft, Mary",
+                1,
+                "Wordsworth, William, and Romanticism",
+                1,
+                "World War II -- as marker of postmodernism",
+                1,
+                "Yale Law School Storrs Lectures",
+                1,
+                "Zamir, Tzachi",
+                1,
+                "allegory",
+                1,
+                "animals -- embryology and",
+                1,
+                "animals -- universe as zoion (animal)",
+                1,
+                "anthropocentrism",
+                1,
+                "attention",
+                1,
+                "authority",
+                1,
+                "autonomy, lack of",
+                1,
+                "biosocial being",
+                1,
+                "capital, commerce and",
+                1,
+                "chaos",
+                1,
+                "charisma",
+                1,
+                "child -- conduct and courtesy and",
+                1,
+                "childish, literary conceit of",
+                1,
+                "commensality",
+                1,
+                "commodity form, fetish and",
+                1,
+                "community -- American",
+                1,
+                "cosmic egg",
+                1,
+                "cosmogony",
+                1,
+                "craft labour",
+                1,
+                "critical race theory (CRT)",
+                1,
+                "desire",
+                1,
+                "direction of fit",
+                1,
+                "displacement",
+                1,
+                "eating -- dining and",
+                1,
+                "eating, dining and -- banqueting scenes",
+                1,
+                "eating, dining and -- table talk and",
+                1,
+                "ecologies",
+                1,
+                "eggs",
+                1,
+                "entelechy",
+                1,
+                "epigenesis",
+                1,
+                "equipmentality: Heidegger's concept of",
+                1,
+                "ethics",
+                1,
+                "ethos -- Aristotle on",
+                1,
+                "etiquette (manners)",
+                1,
+                "feedback, feed system and",
+                1,
+                "fiction, literature and",
+                1,
+                "fire (as radical metaphor) -- \"fire and strength\"",
+                1,
+                "gay liberation -- as narrowly legalistic",
+                1,
+                "gnosis",
+                1,
+                "golem",
+                1,
+                "history -- Carlyle's theory of",
+                1,
+                "history -- as didactic narrative",
+                1,
+                "history -- cyclical versus progressive",
+                1,
+                "household literature, conduct and writing and",
+                1,
+                "human, ideas of",
+                1,
+                "humanitas, the humanities and",
+                1,
+                "hylomorphism, formed matter and",
+                1,
+                "imitation -- and creative writing",
+                1,
+                "individuation, process of",
+                1,
+                "infant universe",
+                1,
+                "justice",
+                1,
+                "law -- changing nature of",
+                1,
+                "life -- material foundations and medium of",
+                1,
+                "logos -- Aristotle on",
+                1,
+                "macrocosm, microcosm and",
+                1,
+                "matter -- Silva or Hyle",
+                1,
+                "matter -- etymology of",
+                1,
+                "matter -- four elements",
+                1,
+                "mechanical animals",
+                1,
+                "metaphysics",
+                1,
+                "mimesis",
+                1,
+                "miniatures -- devotional objects",
+                1,
+                "miniatures -- dolls, dollhouses and",
+                1,
+                "miniaturization -- fictional forms of",
+                1,
+                "modeling",
+                1,
+                "morality",
+                1,
+                "morphogenesis",
+                1,
+                "mystery religions",
+                1,
+                "natural law -- decay of in American thought",
+                1,
+                "object, the thing and -- commodities",
+                1,
+                "object, the thing and -- discourse and",
+                1,
+                "objects, subjects and",
+                1,
+                "occult sciences",
+                1,
+                "ordinary, the everyday and",
+                1,
+                "originality",
+                1,
+                "pathos -- Aristotle on",
+                1,
+                "periodization",
+                1,
+                "personification",
+                1,
+                "philosophy",
+                1,
+                "plagiarism -- cases of",
+                1,
+                "play, games and -- literary forms of",
+                1,
+                "poetic -- Old Testament as",
+                1,
+                "poetic -- and history, Romantic view",
+                1,
+                "poetic -- and rhetoric",
+                1,
+                "poetic -- as sign of charisma",
+                1,
+                "postmodernism -- and religious decay",
+                1,
+                "prophecy",
+                1,
+                "psychopathology -- Plato on",
+                1,
+                "puppets",
+                1,
+                "radicalism",
+                1,
+                "realism",
+                1,
+                "rhetoric",
+                1,
+                "romanticism",
+                1,
+                "sacred principle",
+                1,
+                "science",
+                1,
+                "table -- Daedalus and",
+                1,
+                "table -- paradigmatic object",
+                1,
+                "table -- tragedy and",
+                1,
+                "temperance",
+                1,
+                "time -- cosmogony and",
+                1,
+                "time -- scales of",
+                1,
+                "timing",
+                1,
+                "toy ontology",
+                1,
+                "toys, playthings and -- castoffs and makeshifts",
+                1,
+                "wood",
+                1,
+                "world soul",
+                1
+            ]
+        },
+        "facet_heatmaps": {
+        },
+        "facet_intervals": {
+        },
+        "facet_queries": {
+        },
+        "facet_ranges": {
+        }
+    },
+    "grouped": {
+        "isbn": {
+            "groups": [
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Ian Shapiro"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 10.518733,
+                                "title": "Integrity and Conscience",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ian Shapiro"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 10.518733,
+                                "title": "Integrity and Conscience",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ian Shapiro"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 10.111395,
+                                "title": "Integrity and Conscience",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ian Shapiro"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 9.166659,
+                                "title": "Integrity and Conscience",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ian Shapiro"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 9.166659,
+                                "title": "Integrity and Conscience",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ian Shapiro"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 9.166659,
+                                "title": "Integrity and Conscience",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ian Shapiro"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 8.971231,
+                                "title": "Integrity and Conscience",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ian Shapiro"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 8.356552,
+                                "title": "Integrity and Conscience",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ian Shapiro"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 8.247312,
+                                "title": "Integrity and Conscience",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ian Shapiro"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 7.801562,
+                                "title": "Integrity and Conscience",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ian Shapiro"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 7.801562,
+                                "title": "Integrity and Conscience",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ian Shapiro"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 7.1597853,
+                                "title": "Integrity and Conscience",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ian Shapiro"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 7.1597853,
+                                "title": "Integrity and Conscience",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 10.518733,
+                        "numFound": 13,
+                        "start": 0
+                    },
+                    "groupValue": "9780814780978"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Ben-Ami Scharfstein"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 8.564928,
+                                "title": "The Dilemma of Context",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ben-Ami Scharfstein"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 7.1597853,
+                                "title": "The Dilemma of Context",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ben-Ami Scharfstein"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 6.218126,
+                                "title": "The Dilemma of Context",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ben-Ami Scharfstein"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 6.218126,
+                                "title": "The Dilemma of Context",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ben-Ami Scharfstein"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 6.218126,
+                                "title": "The Dilemma of Context",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ben-Ami Scharfstein"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 6.218126,
+                                "title": "The Dilemma of Context",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ben-Ami Scharfstein"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.5926585,
+                                "title": "The Dilemma of Context",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ben-Ami Scharfstein"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.5926585,
+                                "title": "The Dilemma of Context",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ben-Ami Scharfstein"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.5926585,
+                                "title": "The Dilemma of Context",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ben-Ami Scharfstein"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.5926585,
+                                "title": "The Dilemma of Context",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ben-Ami Scharfstein"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 3.9607844,
+                                "title": "The Dilemma of Context",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ben-Ami Scharfstein"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 3.9607844,
+                                "title": "The Dilemma of Context",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Ben-Ami Scharfstein"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 3.9607844,
+                                "title": "The Dilemma of Context",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 8.564928,
+                        "numFound": 13,
+                        "start": 0
+                    },
+                    "groupValue": "9780814779163"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "M. Guy Thompson"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 8.356552,
+                                "title": "The truth about  Freud’s technique",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "M. Guy Thompson"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 6.218126,
+                                "title": "The truth about  Freud’s technique",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 8.356552,
+                        "numFound": 2,
+                        "start": 0
+                    },
+                    "groupValue": "9780814782194"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Pearl M. Oliner"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 7.801562,
+                                "title": "Embracing the Other",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Pearl M. Oliner"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 6.218126,
+                                "title": "Embracing the Other",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Pearl M. Oliner"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 6.218126,
+                                "title": "Embracing the Other",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Pearl M. Oliner"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 5.5926585,
+                                "title": "Embracing the Other",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Pearl M. Oliner"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 4.8422127,
+                                "title": "Embracing the Other",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 7.801562,
+                        "numFound": 5,
+                        "start": 0
+                    },
+                    "groupValue": "9780814761908"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Stephen M. Feldman."
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 7.801562,
+                                "title": "Please don’t Wish me a Merry Christmas",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 7.801562,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780814726846"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Stein, Kevin"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 7.801562,
+                                "title": "Poetry's Afterlife: Verse in the Digital Age",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 7.801562,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780472026708"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Jay M. Harris"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 7.1597853,
+                                "title": "Nachman Krochmal",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 7.1597853,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780814735084"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Eisner, Caroline; Vicinus, Martha"
+                                ],
+                                "publisher": [
+                                    "University of Michigan Press and University of Michigan Library"
+                                ],
+                                "score": 7.0168014,
+                                "title": "Originality, Imitation, and Plagiarism",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Eisner, Caroline; Vicinus, Martha"
+                                ],
+                                "publisher": [
+                                    "University of Michigan Press and University of Michigan Library"
+                                ],
+                                "score": 3.9607844,
+                                "title": "Originality, Imitation, and Plagiarism",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 7.0168014,
+                        "numFound": 2,
+                        "start": 0
+                    },
+                    "groupValue": "9780472024445"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "David Mitchell"
+                                ],
+                                "publisher": [
+                                    "University of Minnesota Press"
+                                ],
+                                "score": 6.218126,
+                                "title": "Becoming Human",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "David Mitchell"
+                                ],
+                                "publisher": [
+                                    "University of Minnesota Press"
+                                ],
+                                "score": 4.8422127,
+                                "title": "Becoming Human",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "David Mitchell"
+                                ],
+                                "publisher": [
+                                    "University of Minnesota Press"
+                                ],
+                                "score": 4.8422127,
+                                "title": "Becoming Human",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "David Mitchell"
+                                ],
+                                "publisher": [
+                                    "University of Minnesota Press"
+                                ],
+                                "score": 4.8422127,
+                                "title": "Becoming Human",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "David Mitchell"
+                                ],
+                                "publisher": [
+                                    "University of Minnesota Press"
+                                ],
+                                "score": 3.9607844,
+                                "title": "Becoming Human",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "David Mitchell"
+                                ],
+                                "publisher": [
+                                    "University of Minnesota Press"
+                                ],
+                                "score": 3.9607844,
+                                "title": "Becoming Human",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "David Mitchell"
+                                ],
+                                "publisher": [
+                                    "University of Minnesota Press"
+                                ],
+                                "score": 2.9666555,
+                                "title": "Becoming Human",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "David Mitchell"
+                                ],
+                                "publisher": [
+                                    "University of Minnesota Press"
+                                ],
+                                "score": 1.9235656,
+                                "title": "Becoming Human",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 6.218126,
+                        "numFound": 8,
+                        "start": 0
+                    },
+                    "groupValue": "9780816689972"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Katherine J. Mayberry"
+                                ],
+                                "publisher": [
+                                    "York University Press"
+                                ],
+                                "score": 6.218126,
+                                "title": "Teaching What You’re Not",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Katherine J. Mayberry"
+                                ],
+                                "publisher": [
+                                    "York University Press"
+                                ],
+                                "score": 3.9607844,
+                                "title": "Teaching What You’re Not",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Katherine J. Mayberry"
+                                ],
+                                "publisher": [
+                                    "York University Press"
+                                ],
+                                "score": 3.9607844,
+                                "title": "Teaching What You’re Not",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 6.218126,
+                        "numFound": 3,
+                        "start": 0
+                    },
+                    "groupValue": "9780814755471"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "David Kleinbard"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 6.042511,
+                                "title": "The Beginning of Terror",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 6.042511,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780814746677"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "James Darsey"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 6.042511,
+                                "title": "The Prophetic Tradition and Radical Rhetoric in America",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "James Darsey"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 3.9607844,
+                                "title": "The Prophetic Tradition and Radical Rhetoric in America",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "James Darsey"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 3.9607844,
+                                "title": "The Prophetic Tradition and Radical Rhetoric in America",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "James Darsey"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 3.9607844,
+                                "title": "The Prophetic Tradition and Radical Rhetoric in America",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "James Darsey"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 2.9666555,
+                                "title": "The Prophetic Tradition and Radical Rhetoric in America",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 6.042511,
+                        "numFound": 5,
+                        "start": 0
+                    },
+                    "groupValue": "9780814718766"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Mark E. Kann"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 3.9607844,
+                                "title": "A Republic of Men",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Mark E. Kann"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 3.9607844,
+                                "title": "A Republic of Men",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Mark E. Kann"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 2.9666555,
+                                "title": "A Republic of Men",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 3.9607844,
+                        "numFound": 3,
+                        "start": 0
+                    },
+                    "groupValue": "9780814747148"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 3.9607844,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 2.444852,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 3.9607844,
+                        "numFound": 2,
+                        "start": 0
+                    },
+                    "groupValue": "9780472024490"
+                }
+            ],
+            "matches": 60
+        }
+    },
+    "responseHeader": {
+        "QTime": 1,
+        "params": {
+            "defType": "edismax",
+            "facet": "on",
+            "facet.field": "topicNames_facet",
+            "facet.limit": "-1",
+            "facet.mincount": "1",
+            "facet.sort": "count",
+            "fl": "title,authors,publisher,yearOfPublication,score",
+            "group": "true",
+            "group.field": "isbn",
+            "group.limit": "999",
+            "indent": "on",
+            "q": "Plato",
+            "qf": "topicNames",
+            "rows": "1999",
+            "sort": "score desc,title_facet asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}
