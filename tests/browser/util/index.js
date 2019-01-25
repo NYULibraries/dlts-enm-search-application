@@ -100,7 +100,11 @@ function getDiffFilePath( suiteName, id ) {
 }
 
 function getDiffFilesDirectory( suiteNameArg ) {
-    return path.resolve( DIFF_FILES_ROOT, `${ suiteNameArg }/` );
+    return path.resolve(
+        DIFF_FILES_ROOT,
+        `${ suiteNameArg }/`,
+        getBrowserName(),
+    );
 }
 
 function getGoldenFilePath( suiteName, id ) {
