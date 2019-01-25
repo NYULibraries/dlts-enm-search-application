@@ -1,0 +1,148 @@
+{
+    "facet_counts": {
+        "facet_fields": {
+            "topicNames_facet": [
+                "Asterix",
+                1,
+                "Cinquième Evangile, Le",
+                1,
+                "Civil Wars storyline",
+                1,
+                "DREAMers",
+                1,
+                "Génie des Alpages, Le",
+                1,
+                "Hermelin, François",
+                1,
+                "Huerta, Erick",
+                1,
+                "Iznogoud",
+                1,
+                "Japanese anime and manga -- in U.S.",
+                1,
+                "Justice League",
+                1,
+                "Lanfeust de Troy",
+                1,
+                "Lucky Luke",
+                1,
+                "Marvel Comics",
+                1,
+                "Quête de l'Oiseau du Temps, La",
+                1,
+                "Rubrique à Brac",
+                1,
+                "Smurfs, The",
+                1,
+                "Spider-Man",
+                1,
+                "Superman",
+                1,
+                "Tintin series",
+                1,
+                "Tuniques Bleues, Les",
+                1,
+                "Wolverine",
+                1,
+                "X-Men",
+                1,
+                "Yoko Tsuno",
+                1,
+                "YouTube.com",
+                1,
+                "Zimmerman, Arely M.",
+                1
+            ]
+        },
+        "facet_heatmaps": {
+        },
+        "facet_intervals": {
+        },
+        "facet_queries": {
+        },
+        "facet_ranges": {
+        }
+    },
+    "grouped": {
+        "isbn": {
+            "groups": [
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Henry Jenkins et al"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 9.03169,
+                                "title": "By Any Media Necessary",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Henry Jenkins et al"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 8.02398,
+                                "title": "By Any Media Necessary",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 9.03169,
+                        "numFound": 2,
+                        "start": 0
+                    },
+                    "groupValue": "9781479899982"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Darling-Wolf, Fabienne"
+                                ],
+                                "publisher": [
+                                    "University of Michigan Press"
+                                ],
+                                "score": 6.846936,
+                                "title": "Imagining the Global: Transnational Media and Popular Culture Beyond East and West",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 6.846936,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780472120796"
+                }
+            ],
+            "matches": 3
+        }
+    },
+    "responseHeader": {
+        "QTime": 1,
+        "params": {
+            "defType": "edismax",
+            "facet": "on",
+            "facet.field": "topicNames_facet",
+            "facet.limit": "-1",
+            "facet.mincount": "1",
+            "facet.sort": "count",
+            "fl": "title,authors,publisher,yearOfPublication,score",
+            "group": "true",
+            "group.field": "isbn",
+            "group.limit": "999",
+            "indent": "on",
+            "q": "wolverine",
+            "qf": "pageText topicNames",
+            "rows": "1999",
+            "sort": "score desc,title_facet asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "highlighting": {
+        "10287": {
+            "pageText": [
+                "end of the Second World War. Okubo Higashi served chopstick meals about 40 percent of the time.\nPHYSICAL EDUCATION\nJapanese schools have large playgrounds and athletic fields. These spaces contrast with the congested buildings around them and in most neighborhoods are the only open areas. They almost always seem to be filled with boys and girls in physical education uniforms, all of them active. I had been more or less prepared for a strong academic program in Japanese elementary schools, but I was surprised at the emphasis placed on physical education and other nonacademic subjects, such as <mark>art</mark> and music. Japanese education has taken to heart the notion of educating the whole child.\nJapanese schools approach physical education as an educationally important subject that should be fun. Children should learn skills, strength, and endurance, taught through a sound pedagogy and lots of practice. Everyone, not just those with athletic ability, can become physically proficient and have fun. Physical education is one of the subjects the national Ministry of Education requires and provides a curriculum for. Not only are there detailed guides for teachers, but there are also specified numbers of hours of physical education classes each year (three periods per week), and there is a textbook for each grade. It had never occurred to anyone in our family that there could be such a thing. There’s homework, too!\nChildren and teachers always change into their physical education uniforms in the classroom. Classes are usually held outdoors on the playground, and the equipment there is used in the curriculum—it’s the same in nearly every school in Japan. Each school also has a gymnasium and a swimming pool for use in the physical education program. The regular classroom teacher also teaches physical education, wearing a track suit for these classes and participating vigorously in "
+            ]
+        }
+    },
+    "response": {
+        "docs": [
+            {
+                "pageText": "end of the Second World War. Okubo Higashi served chopstick meals about 40 percent of the time.\nPHYSICAL EDUCATION\nJapanese schools have large playgrounds and athletic fields. These spaces contrast with the congested buildings around them and in most neighborhoods are the only open areas. They almost always seem to be filled with boys and girls in physical education uniforms, all of them active. I had been more or less prepared for a strong academic program in Japanese elementary schools, but I was surprised at the emphasis placed on physical education and other nonacademic subjects, such as art and music. Japanese education has taken to heart the notion of educating the whole child.\nJapanese schools approach physical education as an educationally important subject that should be fun. Children should learn skills, strength, and endurance, taught through a sound pedagogy and lots of practice. Everyone, not just those with athletic ability, can become physically proficient and have fun. Physical education is one of the subjects the national Ministry of Education requires and provides a curriculum for. Not only are there detailed guides for teachers, but there are also specified numbers of hours of physical education classes each year (three periods per week), and there is a textbook for each grade. It had never occurred to anyone in our family that there could be such a thing. There’s homework, too!\nChildren and teachers always change into their physical education uniforms in the classroom. Classes are usually held outdoors on the playground, and the equipment there is used in the curriculum—it’s the same in nearly every school in Japan. Each school also has a gymnasium and a swimming pool for use in the physical education program. The regular classroom teacher also teaches physical education, wearing a track suit for these classes and participating vigorously in ",
+                "topicNamesForDisplay": "[[\"Physical education\"]]",
+                "topicNames_facet": [
+                    "Physical education"
+                ]
+            }
+        ],
+        "numFound": 1,
+        "start": 0
+    },
+    "responseHeader": {
+        "QTime": 1,
+        "params": {
+            "defType": "edismax",
+            "fl": "topicNames_facet,topicNamesForDisplay,pageText",
+            "fq": [
+                "isbn:9780814712917",
+                "pageNumberForDisplay: 145"
+            ],
+            "hl": "on",
+            "hl.fl": "pageText topicNamesForDisplay",
+            "hl.fragsize": "0",
+            "hl.simple.post": "</mark>",
+            "hl.simple.pre": "<mark>",
+            "indent": "on",
+            "q": "art",
+            "qf": "pageText topicNames",
+            "rows": "1",
+            "sort": "pageSequenceNumber asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}

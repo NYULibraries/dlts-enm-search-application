@@ -1,0 +1,49 @@
+{
+    "highlighting": {
+        "7217": {
+            "pageText": [
+                "how these early fans conversed through letter pages of pulp magazines, or in direct correspondence with each other, allowing them to collectively but playfully inhabit the imaginary worlds that inspired their passions and curiosity. Saler terms these conversations “public spheres of the imagination,” spaces where people came together to discuss ideas, hopes, dreams, and fears by mapping them onto shared fictions. These imaginary worlds proved to be powerful touchstones for the real world, precisely because they were so evocative. Imaginary worlds enabled fans to experience strong sensations and identifications that could open their minds to new experiences beyond their everyday lives. Yet these works’ fictional status generally allowed participants to avoid the exclusiveness and violence that often mark, for example, nationally based affiliations. Instead, fans of different faiths conversed with each other, creating a public sphere more heterogeneous than those found in many other social contexts.\nThe function of fan affinities in bridging differences surfaced often in our research, and represents one of the strengths of fan communities as a productive space for participatory politics. Nerdfighters, for example, described how their shared identity as fans creates an environment where heterogeneous discussion and disagreement can be achieved in a civil manner. Jacob, a 20-year-old <mark>Nerdfighter</mark>, talked about having discussions with people he disagrees with, either because of their strong religious or political views: “Nerdfighters are very—we’re very passionate about things but we’re also very respecting of other people’s opinions.… I think most of the Nerdfighters if they’re approached by somebody who disagrees with them, they would be able to respond in a more rational way.… Most of the Nerdfighters seem to react in an intelligent discussion as opposed to insults.”\nAs Saler’s historical examples suggest, establishing a civic imagination by connecting fictional worlds with real-world issues is not a new phenomenon. Andrew Ross (1991) describes science fiction fan organizations of the 1930s and 1940s that served as spaces in which to debate radical political ideas. <mark>Helen</mark> <mark>Merrick</mark> (<mark>2009</mark>) explores a feminist science fiction culture that goes back to the 1960s. Contemporary fan studies have likewise paid quite a bit of attention to ways that fans discuss gender (e.g., Wills 2013), race (e.g., Gatson and Reid 2012), sexuality (e.g., Hunting 2012), and other politically relevant issues through their favorite texts. However, the forging of such political connections was usually aimed at expres"
+            ]
+        }
+    },
+    "response": {
+        "docs": [
+            {
+                "pageText": "how these early fans conversed through letter pages of pulp magazines, or in direct correspondence with each other, allowing them to collectively but playfully inhabit the imaginary worlds that inspired their passions and curiosity. Saler terms these conversations “public spheres of the imagination,” spaces where people came together to discuss ideas, hopes, dreams, and fears by mapping them onto shared fictions. These imaginary worlds proved to be powerful touchstones for the real world, precisely because they were so evocative. Imaginary worlds enabled fans to experience strong sensations and identifications that could open their minds to new experiences beyond their everyday lives. Yet these works’ fictional status generally allowed participants to avoid the exclusiveness and violence that often mark, for example, nationally based affiliations. Instead, fans of different faiths conversed with each other, creating a public sphere more heterogeneous than those found in many other social contexts.\nThe function of fan affinities in bridging differences surfaced often in our research, and represents one of the strengths of fan communities as a productive space for participatory politics. Nerdfighters, for example, described how their shared identity as fans creates an environment where heterogeneous discussion and disagreement can be achieved in a civil manner. Jacob, a 20-year-old Nerdfighter, talked about having discussions with people he disagrees with, either because of their strong religious or political views: “Nerdfighters are very—we’re very passionate about things but we’re also very respecting of other people’s opinions.… I think most of the Nerdfighters if they’re approached by somebody who disagrees with them, they would be able to respond in a more rational way.… Most of the Nerdfighters seem to react in an intelligent discussion as opposed to insults.”\nAs Saler’s historical examples suggest, establishing a civic imagination by connecting fictional worlds with real-world issues is not a new phenomenon. Andrew Ross (1991) describes science fiction fan organizations of the 1930s and 1940s that served as spaces in which to debate radical political ideas. Helen Merrick (2009) explores a feminist science fiction culture that goes back to the 1960s. Contemporary fan studies have likewise paid quite a bit of attention to ways that fans discuss gender (e.g., Wills 2013), race (e.g., Gatson and Reid 2012), sexuality (e.g., Hunting 2012), and other politically relevant issues through their favorite texts. However, the forging of such political connections was usually aimed at expres",
+                "topicNamesForDisplay": "[[\"Content worlds\"],[\"Merrick, Helen\"],[\"Nerdfighters\"],[\"Public spheres of the imagination\"],[\"Ross, Andrew\"]]",
+                "topicNames_facet": [
+                    "Content worlds",
+                    "Merrick, Helen",
+                    "Nerdfighters",
+                    "Public spheres of the imagination",
+                    "Ross, Andrew"
+                ]
+            }
+        ],
+        "numFound": 1,
+        "start": 0
+    },
+    "responseHeader": {
+        "QTime": 2,
+        "params": {
+            "defType": "edismax",
+            "fl": "topicNames_facet,topicNamesForDisplay,pageText",
+            "fq": [
+                "isbn:9781479899982",
+                "pageNumberForDisplay: 112"
+            ],
+            "hl": "on",
+            "hl.fl": "pageText topicNamesForDisplay",
+            "hl.fragsize": "0",
+            "hl.simple.post": "</mark>",
+            "hl.simple.pre": "<mark>",
+            "indent": "on",
+            "q": "nerdfighter +\"Helen Merrick (2009)\"",
+            "qf": "pageText topicNames",
+            "rows": "1",
+            "sort": "pageSequenceNumber asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}

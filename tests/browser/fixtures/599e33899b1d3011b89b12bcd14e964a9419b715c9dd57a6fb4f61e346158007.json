@@ -1,0 +1,52 @@
+{
+    "highlighting": {
+        "27848": {
+            "pageText": [
+                "began counseling mothers to adopt specific strategies to keep their daughters’ confidence, again suggesting that love itself was insufficient. While the mother-daughter bond should be the tightest of all, wrote Gabrielle Jackson in 1905, it could misfire—and if it did, “it is … mother’s fault.” A basic need was for mothers not only to keep pace with their daughters’ interests but also to relax control and emotional demands in order to grant independence. Again, love was not directly addressed in this discussion, but its potential excesses lurked in the background.40\nFeminists added a second note to the new questioning of maternal adequacy. Charlotte Perkins Gilman sounded characteristic warnings in 1903. “The mother-love concept suffers … from its limitations,” she wrote. It restricted <mark>women</mark> to an unduly narrow field of action, and while maternal nurturance could serve society, in Gilman’s view it was misplaced in the home itself. According to Gilman (herself alienated from her daughter), trained professionals could take care of children better. “That the care and education of children have developed at all,” she argued, “is due to the intelligent efforts of doctors, nurses, teachers, and such few parents as choose to exercise their human brains instead of brute instincts.” The very fact that many mothers manifested fear of competing caregivers revealed the flimsiness of their emotional base: “The terror of the mother lest her child should love some other person better than herself shows that she is afraid of comparison.”41\nNonetheless, great praise for motherlove did persist. Conservative writers urged the intensity of motherlove for parent and child alike. Aline Hoffman argued that “our lot, our principal office is, then, maternity … motherhood is the paramount duty of woman.” James Fernald added that unless they were poor, daughters should stay at home until marriage in order to solidify the emotional bond “and help the dear mother who cared so tenderly for [them] in the weary loving years gone by.” Scientists added their mite. G. Stanley Hall, criticizing what he saw as a growing career emphasis, insisted on the primacy of maternal affection for adult and child alike. As in other areas, Hall built Victorian emotional assumptions into his purportedly empirical psychology. The woman who did not concentrate on motherlove was the “very apotheosis of selfishness from the standpoint of every biological ethic,” losing among other things her “mammary functions” and leaving “love of the child itself defective and maimed.” The resultant lack of full affection in "
+            ]
+        }
+    },
+    "response": {
+        "docs": [
+            {
+                "pageText": "began counseling mothers to adopt specific strategies to keep their daughters’ confidence, again suggesting that love itself was insufficient. While the mother-daughter bond should be the tightest of all, wrote Gabrielle Jackson in 1905, it could misfire—and if it did, “it is … mother’s fault.” A basic need was for mothers not only to keep pace with their daughters’ interests but also to relax control and emotional demands in order to grant independence. Again, love was not directly addressed in this discussion, but its potential excesses lurked in the background.40\nFeminists added a second note to the new questioning of maternal adequacy. Charlotte Perkins Gilman sounded characteristic warnings in 1903. “The mother-love concept suffers … from its limitations,” she wrote. It restricted women to an unduly narrow field of action, and while maternal nurturance could serve society, in Gilman’s view it was misplaced in the home itself. According to Gilman (herself alienated from her daughter), trained professionals could take care of children better. “That the care and education of children have developed at all,” she argued, “is due to the intelligent efforts of doctors, nurses, teachers, and such few parents as choose to exercise their human brains instead of brute instincts.” The very fact that many mothers manifested fear of competing caregivers revealed the flimsiness of their emotional base: “The terror of the mother lest her child should love some other person better than herself shows that she is afraid of comparison.”41\nNonetheless, great praise for motherlove did persist. Conservative writers urged the intensity of motherlove for parent and child alike. Aline Hoffman argued that “our lot, our principal office is, then, maternity … motherhood is the paramount duty of woman.” James Fernald added that unless they were poor, daughters should stay at home until marriage in order to solidify the emotional bond “and help the dear mother who cared so tenderly for [them] in the weary loving years gone by.” Scientists added their mite. G. Stanley Hall, criticizing what he saw as a growing career emphasis, insisted on the primacy of maternal affection for adult and child alike. As in other areas, Hall built Victorian emotional assumptions into his purportedly empirical psychology. The woman who did not concentrate on motherlove was the “very apotheosis of selfishness from the standpoint of every biological ethic,” losing among other things her “mammary functions” and leaving “love of the child itself defective and maimed.” The resultant lack of full affection in ",
+                "topicNamesForDisplay": "[[\"doctors\"],[\"feminism\",\"Feminism\"],[\"Fernald, James\"],[\"Gilman, Charlotte\"],[\"Hall, G. Stanley\"],[\"Hoffmann, Aline\"],[\"Jackson, Gabrielle\"],[\"nursing\"]]",
+                "topicNames_facet": [
+                    "doctors",
+                    "feminism",
+                    "Fernald, James",
+                    "Gilman, Charlotte",
+                    "Hall, G. Stanley",
+                    "Hoffmann, Aline",
+                    "Jackson, Gabrielle",
+                    "nursing"
+                ]
+            }
+        ],
+        "numFound": 1,
+        "start": 0
+    },
+    "responseHeader": {
+        "QTime": 1,
+        "params": {
+            "defType": "edismax",
+            "fl": "topicNames_facet,topicNamesForDisplay,pageText",
+            "fq": [
+                "isbn:9780814779965",
+                "pageNumberForDisplay: 166"
+            ],
+            "hl": "on",
+            "hl.fl": "pageText topicNamesForDisplay",
+            "hl.fragsize": "0",
+            "hl.simple.post": "</mark>",
+            "hl.simple.pre": "<mark>",
+            "indent": "on",
+            "q": "women",
+            "qf": "pageText topicNames",
+            "rows": "1",
+            "sort": "pageSequenceNumber asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}

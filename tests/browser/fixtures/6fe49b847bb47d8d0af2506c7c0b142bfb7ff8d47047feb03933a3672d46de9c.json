@@ -1,0 +1,431 @@
+{
+    "facet_counts": {
+        "facet_fields": {
+            "topicNames_facet": [
+                "postmodernism",
+                15,
+                "Post–Civil Rights era -- Cultural production",
+                4,
+                "Hip-hop -- Relation to high culture",
+                3,
+                "Appropriation art",
+                2,
+                "Delueze, Gilles",
+                2,
+                "Hutcheon, Linda",
+                2,
+                "Irony -- Literature",
+                2,
+                "Irony -- Postmodernism",
+                2,
+                "Jazz",
+                2,
+                "Jurisprudence -- postmodern",
+                2,
+                "Mimicry",
+                2,
+                "Piper, Adrian -- Appropriation art",
+                2,
+                "Piper, Adrian -- Postmodernism",
+                2,
+                "Postmodernism -- difficulty with definitions",
+                2,
+                "authenticity",
+                2,
+                "critical race theory (CRT)",
+                2,
+                "logos",
+                2,
+                "American Express",
+                1,
+                "Appropriation",
+                1,
+                "Arewa, Olufunmilayo",
+                1,
+                "Art -- irony",
+                1,
+                "Berlin, Ira",
+                1,
+                "Biting",
+                1,
+                "Blues",
+                1,
+                "Charles, Michael Ray",
+                1,
+                "Color-blindness -- Legal discourse",
+                1,
+                "Copyright law. -- Assumption of race neutrality",
+                1,
+                "Critical legal studies (CLS)",
+                1,
+                "Criticism -- History of",
+                1,
+                "Criticism -- Romantic conception of authorship",
+                1,
+                "Criticism -- Stable vs. dynamic texts",
+                1,
+                "Criticism -- Tool for redistribution of property rights",
+                1,
+                "Deejaying",
+                1,
+                "Ellington, Duke",
+                1,
+                "Ellison, Ralph: The Invisible Man",
+                1,
+                "Fair Use -- Trademark",
+                1,
+                "Foucault, Michel",
+                1,
+                "Foundationalism -- modern jurisprudence",
+                1,
+                "Gershwin, George",
+                1,
+                "Gilroy, Paul",
+                1,
+                "Greene, K. J.",
+                1,
+                "Hegel, Georg W. F.",
+                1,
+                "Hip-hop -- Misogyny",
+                1,
+                "Hip-hop -- Transformative borrowing",
+                1,
+                "Hurston, Zora Neale",
+                1,
+                "Interpretation -- interpretive turn",
+                1,
+                "Interpretative communities",
+                1,
+                "Interpretive turn",
+                1,
+                "Irony -- Wilson, Fred",
+                1,
+                "Kant -- Immanuel",
+                1,
+                "Kant, Immanuel: neo-Kantian theory and law",
+                1,
+                "Kelley, Robin",
+                1,
+                "Ku Klux Klan",
+                1,
+                "Latino/a critical theory (LatCrit)",
+                1,
+                "Layering -- Beloved",
+                1,
+                "Layering -- Music",
+                1,
+                "Layering -- Quilting",
+                1,
+                "Mingus, Charles",
+                1,
+                "Mitchell-Kernan, Claudia",
+                1,
+                "National Basketball Association (NBA)",
+                1,
+                "Neo-slave narratives",
+                1,
+                "Neologisms",
+                1,
+                "New Critics",
+                1,
+                "Ownership -- Cultural",
+                1,
+                "Ownership -- Owning the self",
+                1,
+                "Parody of ownership",
+                1,
+                "Piper, Adrian -- Conceptualism",
+                1,
+                "Piper, Adrian -- Four Intruders",
+                1,
+                "Piper, Adrian -- Funk Lesson",
+                1,
+                "Piper, Adrian -- Reliance on Kantian Philosophy",
+                1,
+                "Porgy and Bess",
+                1,
+                "Postcolonial -- theory",
+                1,
+                "Primitivism",
+                1,
+                "Property rights -- (in) Raced images",
+                1,
+                "Property rights -- Colorblindness",
+                1,
+                "Rhythmic asymmetry/flow -- Beloved",
+                1,
+                "Rhythmic asymmetry/flow -- Music",
+                1,
+                "Rhythmic asymmetry/flow -- Smith, Anna Deavere",
+                1,
+                "Rhythmic asymmetry/flow -- Wilson, Fred",
+                1,
+                "Rorty, Richard",
+                1,
+                "Sampling -- Beloved",
+                1,
+                "Sampling -- Critical function",
+                1,
+                "Sampling -- Vanilla Nightmare Series",
+                1,
+                "Satire",
+                1,
+                "Schloss, Joseph",
+                1,
+                "Signifyin'",
+                1,
+                "Strip-quilts",
+                1,
+                "Suggs, Jon-Christian",
+                1,
+                "Theft -- (of) African American styles",
+                1,
+                "Trademark -- (and) Racialization",
+                1,
+                "Trademark -- Hip-hop aesthetics",
+                1,
+                "Troutt, David",
+                1,
+                "Walker, Kara",
+                1,
+                "Warhol, Andy",
+                1,
+                "Weberian Despair",
+                1,
+                "Wilson, Fred -- Baby Carriage",
+                1,
+                "Wilson, Fred -- Hood",
+                1,
+                "graffiti",
+                1,
+                "modernism",
+                1,
+                "modernity",
+                1
+            ]
+        },
+        "facet_heatmaps": {
+        },
+        "facet_intervals": {
+        },
+        "facet_queries": {
+        },
+        "facet_ranges": {
+        }
+    },
+    "grouped": {
+        "isbn": {
+            "groups": [
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 5.6475453,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 5.329464,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 4.766254,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 4.1475754,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 3.817744,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 3.817744,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 2.6782167,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 2.6782167,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 2.6782167,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 2.6782167,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 2.6782167,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 2.6782167,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Schur, Richard L."
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press and The University of Michigan Library"
+                                ],
+                                "score": 2.340059,
+                                "title": "Parodies of Ownership: Hip-Hop Aesthetics and Intellectual Property Law",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 5.6475453,
+                        "numFound": 13,
+                        "start": 0
+                    },
+                    "groupValue": "9780472024490"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Gary Minda"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 3.0145667,
+                                "title": "Postmodern Legal Movements",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Gary Minda"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 3.0145667,
+                                "title": "Postmodern Legal Movements",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 3.0145667,
+                        "numFound": 2,
+                        "start": 0
+                    },
+                    "groupValue": "9780814755112"
+                }
+            ],
+            "matches": 15
+        }
+    },
+    "responseHeader": {
+        "QTime": 2,
+        "params": {
+            "defType": "edismax",
+            "facet": "on",
+            "facet.field": "topicNames_facet",
+            "facet.limit": "-1",
+            "facet.mincount": "1",
+            "facet.sort": "count",
+            "fl": "title,authors,publisher,yearOfPublication,score",
+            "fq": "topicNames_facet:\"postmodernism\"",
+            "group": "true",
+            "group.field": "isbn",
+            "group.limit": "999",
+            "indent": "on",
+            "q": "art",
+            "qf": "pageText topicNames",
+            "rows": "1999",
+            "sort": "score desc,title_facet asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}

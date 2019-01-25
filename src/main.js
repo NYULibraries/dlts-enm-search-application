@@ -9,12 +9,28 @@ require( './assets/sass/bulma.scss' );
 
 Vue.config.productionTip = false;
 
-Vue.use( EnmSolr, {
+const enmSolrOptions = {
     solrCorePath : '/solr/enm-pages/',
     solrHost     : process.env.VUE_APP_SOLR_HOST,
     solrPort     : process.env.VUE_APP_SOLR_PORT,
     solrProtocol : process.env.VUE_APP_SOLR_PROTOCOL,
-} );
+};
+
+const params = new URLSearchParams( window.location.search );
+const solrOverrideUrl = params.get( 'solr' );
+
+if ( solrOverrideUrl ) {
+    const url = new URL( solrOverrideUrl );
+
+    if ( url.protocol && url.hostname && url.port && url.pathname ) {
+        enmSolrOptions.solrHost     = url.hostname;
+        enmSolrOptions.solrPort     = url.port;
+        enmSolrOptions.solrProtocol = url.protocol.replace( /:$/, '' );
+        enmSolrOptions.solrCorePath = url.pathname;
+    }
+}
+
+Vue.use( EnmSolr, enmSolrOptions );
 
 new Vue( {
     el         : '#app',

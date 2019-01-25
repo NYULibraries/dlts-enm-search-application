@@ -1,0 +1,57 @@
+{
+    "highlighting": {
+        "30250": {
+            "pageText": [
+                "infrastructures that defined the cultural field through the 1950s. The mass culture of newspapers, magazines, radio, theater, and especially film was a much more robust presence following the war, strengthened by the material transformations sketched above and the flood, subsidized by the wealth and prestige of the U.S. government, of American media and celebrities that inundated Korea after 1953. I think it is important to pause here to consider how this layered ontology of foreign intervention inflects the very notion of mass culture, whose origins in the classical definition lie in the advent of democracy and technology.10 As in so many non-Western and postcolonial societies, Korea’s experience of mass culture was not as an organically developed set of cultural practices but as one that was mediated by a foreign political presence. That the U.S. form of mass culture came into contact with the Japanese (itself a hybrid form) prompted the perception that mass culture in and of itself was at least partially a mechanism of cultural suppression. For if in the classical model mass culture arose as an egalitarian alternative to the hegemonic culture of the elite, it was also, in the post colonial context, an ambivalent vehicle of both imperial domination and native resistance. Mass culture, in other words, has a crucial national-political dimension that in Korea found expression in a variety of discourses and practices, from the uncanny mimicry of singing groups like the Kim Sisters,11 to the earnest formulation of the “enlightenment” modality of cinema.\nIt is precisely in this light that we need to reconsider Theodor Adorno’s critical insight that modernism and the popular arts “are two halves of an integral freedom, to which, however, they do not add up.” Against the assumptions of many of his interpreters, Adorno here positions high <mark>art</mark> and what he elsewhere calls the “culture industry” on the same dialectical plane, arguing “both have the stigmata of capitalism, both contain elements of change.”12 But the cultural field in postwar Korea was marked with different political inflections than those reflected in the contrast between Arnold Schoenberg and American film upon which Adorno reflected in these comments. The literary modernisms that arose in the 1920s and resurged in the 1950s constituted an active response to the new sensibilities and social order of colonial and postwar modernity. This work, rightfully or not, was ushered to the position of the avant-garde, becoming authoritative valences of social and political critique. At the same time, the autonomy and even originality of modernist artists was seriously compromised by the elite social status so many of them enjoyed and by their close connections to Japanese and American culture and education.13 It is crucial to note, "
+            ],
+            "topicNamesForDisplay": [
+                "[[\"Adorno, Theodore\",\"Adorno, Theodor\"],[\"<mark>art</mark>\",\"<mark>Art</mark>\"],[\"avant-garde, the\"],[\"capitalism -- culture industry and\"],[\"culture industry\"],[\"culture(s) -- Japanese\"],[\"enlightenment modality -- in filmmaking\"],[\"filmmaking -- enlightenment in\"],[\"modernism\",\"Modernism\"],[\"United States (U.S.) -- influences\"]]"
+            ]
+        }
+    },
+    "response": {
+        "docs": [
+            {
+                "pageText": "infrastructures that defined the cultural field through the 1950s. The mass culture of newspapers, magazines, radio, theater, and especially film was a much more robust presence following the war, strengthened by the material transformations sketched above and the flood, subsidized by the wealth and prestige of the U.S. government, of American media and celebrities that inundated Korea after 1953. I think it is important to pause here to consider how this layered ontology of foreign intervention inflects the very notion of mass culture, whose origins in the classical definition lie in the advent of democracy and technology.10 As in so many non-Western and postcolonial societies, Korea’s experience of mass culture was not as an organically developed set of cultural practices but as one that was mediated by a foreign political presence. That the U.S. form of mass culture came into contact with the Japanese (itself a hybrid form) prompted the perception that mass culture in and of itself was at least partially a mechanism of cultural suppression. For if in the classical model mass culture arose as an egalitarian alternative to the hegemonic culture of the elite, it was also, in the post colonial context, an ambivalent vehicle of both imperial domination and native resistance. Mass culture, in other words, has a crucial national-political dimension that in Korea found expression in a variety of discourses and practices, from the uncanny mimicry of singing groups like the Kim Sisters,11 to the earnest formulation of the “enlightenment” modality of cinema.\nIt is precisely in this light that we need to reconsider Theodor Adorno’s critical insight that modernism and the popular arts “are two halves of an integral freedom, to which, however, they do not add up.” Against the assumptions of many of his interpreters, Adorno here positions high art and what he elsewhere calls the “culture industry” on the same dialectical plane, arguing “both have the stigmata of capitalism, both contain elements of change.”12 But the cultural field in postwar Korea was marked with different political inflections than those reflected in the contrast between Arnold Schoenberg and American film upon which Adorno reflected in these comments. The literary modernisms that arose in the 1920s and resurged in the 1950s constituted an active response to the new sensibilities and social order of colonial and postwar modernity. This work, rightfully or not, was ushered to the position of the avant-garde, becoming authoritative valences of social and political critique. At the same time, the autonomy and even originality of modernist artists was seriously compromised by the elite social status so many of them enjoyed and by their close connections to Japanese and American culture and education.13 It is crucial to note, ",
+                "topicNamesForDisplay": "[[\"Adorno, Theodore\",\"Adorno, Theodor\"],[\"art\",\"Art\"],[\"avant-garde, the\"],[\"capitalism -- culture industry and\"],[\"culture industry\"],[\"culture(s) -- Japanese\"],[\"enlightenment modality -- in filmmaking\"],[\"filmmaking -- enlightenment in\"],[\"modernism\",\"Modernism\"],[\"United States (U.S.) -- influences\"]]",
+                "topicNames_facet": [
+                    "Adorno, Theodore",
+                    "art",
+                    "avant-garde, the",
+                    "capitalism -- culture industry and",
+                    "culture industry",
+                    "culture(s) -- Japanese",
+                    "enlightenment modality -- in filmmaking",
+                    "filmmaking -- enlightenment in",
+                    "modernism",
+                    "United States (U.S.) -- influences"
+                ]
+            }
+        ],
+        "numFound": 1,
+        "start": 0
+    },
+    "responseHeader": {
+        "QTime": 1,
+        "params": {
+            "defType": "edismax",
+            "fl": "topicNames_facet,topicNamesForDisplay,pageText",
+            "fq": [
+                "isbn:9781452941516",
+                "pageNumberForDisplay: 12"
+            ],
+            "hl": "on",
+            "hl.fl": "pageText topicNamesForDisplay",
+            "hl.fragsize": "0",
+            "hl.simple.post": "</mark>",
+            "hl.simple.pre": "<mark>",
+            "indent": "on",
+            "q": "art",
+            "qf": "pageText topicNames",
+            "rows": "1",
+            "sort": "pageSequenceNumber asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}
