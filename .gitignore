@@ -25,20 +25,58 @@ yarn-error.log*
 
 /tests/browser/tests/testdata/actual/*
 
-!/tests/browser/tests/testdata/actual/search-results/
-/tests/browser/tests/testdata/actual/search-results/*
-!/tests/browser/tests/testdata/actual/search-results/.commit-empty-directory
-
 !/tests/browser/tests/testdata/actual/preview-pane/
 /tests/browser/tests/testdata/actual/preview-pane/*
-!/tests/browser/tests/testdata/actual/preview-pane/.commit-empty-directory
+!/tests/browser/tests/testdata/actual/preview-pane/chrome/
+!/tests/browser/tests/testdata/actual/preview-pane/firefox/
+/tests/browser/tests/testdata/actual/preview-pane/chrome/*
+/tests/browser/tests/testdata/actual/preview-pane/firefox/*
+!/tests/browser/tests/testdata/actual/preview-pane/chrome/.commit-empty-directory
+!/tests/browser/tests/testdata/actual/preview-pane/firefox/.commit-empty-directory
+
+!/tests/browser/tests/testdata/actual/search-echo/
+/tests/browser/tests/testdata/actual/search-echo/*
+!/tests/browser/tests/testdata/actual/search-echo/chrome/
+!/tests/browser/tests/testdata/actual/search-echo/firefox/
+/tests/browser/tests/testdata/actual/search-echo/chrome/*
+/tests/browser/tests/testdata/actual/search-echo/firefox/*
+!/tests/browser/tests/testdata/actual/search-echo/chrome/.commit-empty-directory
+!/tests/browser/tests/testdata/actual/search-echo/firefox/.commit-empty-directory
+
+!/tests/browser/tests/testdata/actual/search-results/
+/tests/browser/tests/testdata/actual/search-results/*
+!/tests/browser/tests/testdata/actual/search-results/chrome/
+!/tests/browser/tests/testdata/actual/search-results/firefox/
+/tests/browser/tests/testdata/actual/search-results/chrome/*
+/tests/browser/tests/testdata/actual/search-results/firefox/*
+!/tests/browser/tests/testdata/actual/search-results/chrome/.commit-empty-directory
+!/tests/browser/tests/testdata/actual/search-results/firefox/.commit-empty-directory
 
 /tests/browser/tests/testdata/diffs/*
 
 !/tests/browser/tests/testdata/diffs/preview-pane/
 /tests/browser/tests/testdata/diffs/preview-pane/*
-!/tests/browser/tests/testdata/diffs/preview-pane/.commit-empty-directory
+!/tests/browser/tests/testdata/diffs/preview-pane/chrome/
+!/tests/browser/tests/testdata/diffs/preview-pane/firefox/
+/tests/browser/tests/testdata/diffs/preview-pane/chrome/*
+/tests/browser/tests/testdata/diffs/preview-pane/firefox/*
+!/tests/browser/tests/testdata/diffs/preview-pane/chrome/.commit-empty-directory
+!/tests/browser/tests/testdata/diffs/preview-pane/firefox/.commit-empty-directory
+
+!/tests/browser/tests/testdata/diffs/search-echo/
+/tests/browser/tests/testdata/diffs/search-echo/*
+!/tests/browser/tests/testdata/diffs/search-echo/chrome/
+!/tests/browser/tests/testdata/diffs/search-echo/firefox/
+/tests/browser/tests/testdata/diffs/search-echo/chrome/*
+/tests/browser/tests/testdata/diffs/search-echo/firefox/*
+!/tests/browser/tests/testdata/diffs/search-echo/chrome/.commit-empty-directory
+!/tests/browser/tests/testdata/diffs/search-echo/firefox/.commit-empty-directory
 
 !/tests/browser/tests/testdata/diffs/search-results/
 /tests/browser/tests/testdata/diffs/search-results/*
-!/tests/browser/tests/testdata/diffs/search-results/.commit-empty-directory
+!/tests/browser/tests/testdata/diffs/search-results/chrome/
+!/tests/browser/tests/testdata/diffs/search-results/firefox/
+/tests/browser/tests/testdata/diffs/search-results/chrome/*
+/tests/browser/tests/testdata/diffs/search-results/firefox/*
+!/tests/browser/tests/testdata/diffs/search-results/chrome/.commit-empty-directory
+!/tests/browser/tests/testdata/diffs/search-results/firefox/.commit-empty-directory
