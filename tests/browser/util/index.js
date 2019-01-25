@@ -1,3 +1,5 @@
+/* global browser:false */
+
 import { execSync } from 'child_process';
 import fs from 'fs';
 import path from 'path';
@@ -82,7 +84,15 @@ function getActualFilePath( suiteName, id ) {
 }
 
 function getActualFilesDirectory( suiteNameArg ) {
-    return path.resolve( ACTUAL_FILES_ROOT, `${ suiteNameArg }/` );
+    return path.resolve(
+        ACTUAL_FILES_ROOT,
+        `${ suiteNameArg }/`,
+        getBrowserName(),
+    );
+}
+
+function getBrowserName() {
+    return browser.options.desiredCapabilities.browserName;
 }
 
 function getDiffFilePath( suiteName, id ) {
