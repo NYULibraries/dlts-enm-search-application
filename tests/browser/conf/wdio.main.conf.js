@@ -31,6 +31,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs : [
+        'tests/browser/tests/google-analytics.js',
         'tests/browser/tests/limit-by-topic-pane.js',
         'tests/browser/tests/navbar.js',
         'tests/browser/tests/preview-pane.js',
@@ -43,6 +44,9 @@ exports.config = {
         // 'path/to/excluded/files'
     ],
     suites : {
+        'google-analytics' : [
+            'tests/browser/tests/google-analytics.js',
+        ],
         'limit-by-topic-pane' : [
             'tests/browser/tests/limit-by-topic-pane.js',
         ],
@@ -78,7 +82,7 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances : 6,
+    maxInstances : 7,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
