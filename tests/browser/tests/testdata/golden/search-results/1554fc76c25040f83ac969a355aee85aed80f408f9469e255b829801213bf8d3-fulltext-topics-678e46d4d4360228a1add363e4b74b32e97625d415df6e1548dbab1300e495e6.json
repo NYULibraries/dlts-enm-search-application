@@ -37,7 +37,7 @@
             "isbn": "9780814779163",
             "maximumPageRelevanceScore": "5.700952",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814779163.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814779163.jpg",
             "title": "The Dilemma of Context"
         }
     ],

@@ -69,7 +69,7 @@
             "isbn": "9780472027491",
             "maximumPageRelevanceScore": "21.826315",
             "numMatchedPages": 103,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780472027491.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780472027491.jpg",
             "title": "Myst and Riven: The World of the D'ni"
         },
         {
@@ -77,7 +77,7 @@
             "isbn": "9780472028931",
             "maximumPageRelevanceScore": "13.736528",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780472028931.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780472028931.jpg",
             "title": "Doom: Scarydarkfast"
         },
         {
@@ -85,7 +85,7 @@
             "isbn": "9780472027835",
             "maximumPageRelevanceScore": "13.736528",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780472027835.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780472027835.jpg",
             "title": "Silent Hill: The Terror Engine"
         },
         {
@@ -93,7 +93,7 @@
             "isbn": "9780472029174",
             "maximumPageRelevanceScore": "7.7800245",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780472029174.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780472029174.jpg",
             "title": "The Unreal Estate Guide to Detroit"
         },
         {
@@ -101,7 +101,7 @@
             "isbn": "9780814731437",
             "maximumPageRelevanceScore": "6.0068197",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814731437.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814731437.jpg",
             "title": "Seriatim"
         },
         {
@@ -109,7 +109,7 @@
             "isbn": "9780814713013",
             "maximumPageRelevanceScore": "6.0068197",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814713013.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814713013.jpg",
             "title": "The Employment of English"
         },
         {
@@ -117,7 +117,7 @@
             "isbn": "9780472023141",
             "maximumPageRelevanceScore": "5.700952",
             "numMatchedPages": 2,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780472023141.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780472023141.jpg",
             "title": "This Gaming Life"
         },
         {
@@ -125,7 +125,7 @@
             "isbn": "9780816689972",
             "maximumPageRelevanceScore": "5.3366094",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780816689972.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780816689972.jpg",
             "title": "Becoming Human"
         },
         {
@@ -133,7 +133,7 @@
             "isbn": "9780472026708",
             "maximumPageRelevanceScore": "4.553778",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780472026708.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780472026708.jpg",
             "title": "Poetry's Afterlife: Verse in the Digital Age"
         }
     ],
