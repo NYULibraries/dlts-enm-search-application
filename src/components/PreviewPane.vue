@@ -159,7 +159,13 @@ export default {
                 );
             } catch( e ) {
                 // TODO: replace this with something more user-friendly
-                alert( 'Sorry, the server has returned an error or is not responding.' );
+                // alert( 'Sorry, the server has returned an error or is not responding.' );
+
+                // Also, this alert box breaks preview pane test suite.  For some reason
+                // this alert box can pop up while executing the before book, which shouldn't
+                // be possible because the before hook does not execute a search.
+                // In any case it would be better to print the error in the preview
+                // pane area.
 
                 return;
             }
