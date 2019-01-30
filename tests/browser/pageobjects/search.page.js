@@ -1,4 +1,4 @@
-/* global browser:false $:false */
+/* global browser:false $:false $$:false */
 
 import crypto from 'crypto';
 
@@ -29,6 +29,12 @@ class SearchPage extends Page {
 
     get baseUrl() {
         return browser.options.baseUrl;
+    }
+
+    get googleAnalytics() {
+        return $$( 'head script' ).map( ( scriptElement ) => {
+            return scriptElement.getHTML();
+        } );
     }
 
     get paths() {
