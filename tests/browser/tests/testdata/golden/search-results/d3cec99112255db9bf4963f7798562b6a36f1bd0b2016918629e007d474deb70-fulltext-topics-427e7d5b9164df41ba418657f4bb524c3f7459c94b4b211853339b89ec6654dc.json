@@ -41,7 +41,7 @@
             "isbn": "9780814746677",
             "maximumPageRelevanceScore": "5.5100307",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814746677.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814746677.jpg",
             "title": "The Beginning of Terror"
         }
     ],

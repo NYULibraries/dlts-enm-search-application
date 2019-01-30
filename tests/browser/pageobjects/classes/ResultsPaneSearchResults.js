@@ -30,8 +30,8 @@ class ResultsPaneSearchResults {
                         .match( /(\d+) matched pages/ )[ 1 ],
                     10
                 );
-            book.thumbnail                 = result.element( '.enm-thumbnail img' ).getAttribute( 'src' );
-            book.title                     = result.element( '.title' ).getText();
+            book.thumbnail = new URL( result.element( '.enm-thumbnail img' ).getAttribute( 'src' ) ).pathname;
+            book.title     = result.element( '.title' ).getText();
 
             books.push( book );
         } );

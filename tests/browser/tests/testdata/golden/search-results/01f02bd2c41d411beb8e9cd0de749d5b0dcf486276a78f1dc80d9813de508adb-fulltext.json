@@ -69,7 +69,7 @@
             "isbn": "9780472026609",
             "maximumPageRelevanceScore": "10.589468",
             "numMatchedPages": 4,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780472026609.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780472026609.jpg",
             "title": "Skate Life: Re-Imagining White Masculinity"
         },
         {
@@ -77,7 +77,7 @@
             "isbn": "9780814746929",
             "maximumPageRelevanceScore": "9.004518",
             "numMatchedPages": 3,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814746929.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814746929.jpg",
             "title": "The Essential Agus"
         },
         {
@@ -85,7 +85,7 @@
             "isbn": "9780814731437",
             "maximumPageRelevanceScore": "8.780999",
             "numMatchedPages": 5,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814731437.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814731437.jpg",
             "title": "Seriatim"
         },
         {
@@ -93,7 +93,7 @@
             "isbn": "9780814746622",
             "maximumPageRelevanceScore": "8.686105",
             "numMatchedPages": 2,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814746622.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814746622.jpg",
             "title": "Bodies in Protest"
         },
         {
@@ -101,7 +101,7 @@
             "isbn": "9780814793398",
             "maximumPageRelevanceScore": "7.645864",
             "numMatchedPages": 5,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814793398.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814793398.jpg",
             "title": "Everyday Courage"
         },
         {
@@ -109,7 +109,7 @@
             "isbn": "9780814774755",
             "maximumPageRelevanceScore": "6.5166416",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814774755.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814774755.jpg",
             "title": "Ferenczi’s Turn in Psychoanalysis"
         },
         {
@@ -117,7 +117,7 @@
             "isbn": "9780814755471",
             "maximumPageRelevanceScore": "6.5166416",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814755471.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814755471.jpg",
             "title": "Teaching What You’re Not"
         },
         {
@@ -125,7 +125,7 @@
             "isbn": "9780814780213",
             "maximumPageRelevanceScore": "6.5166416",
             "numMatchedPages": 2,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814780213.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814780213.jpg",
             "title": "The Chrysanthemum and the Eagle"
         },
         {
@@ -133,7 +133,7 @@
             "isbn": "9780814726815",
             "maximumPageRelevanceScore": "5.789548",
             "numMatchedPages": 3,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814726815.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814726815.jpg",
             "title": "Blacks in the Jewish Mind"
         },
         {
@@ -141,7 +141,7 @@
             "isbn": "9780814766569",
             "maximumPageRelevanceScore": "5.789548",
             "numMatchedPages": 2,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814766569.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814766569.jpg",
             "title": "Imagined Human Beings"
         },
         {
@@ -149,7 +149,7 @@
             "isbn": "9780814751008",
             "maximumPageRelevanceScore": "5.789548",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814751008.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814751008.jpg",
             "title": "In Search of the Swan Maiden"
         },
         {
@@ -157,7 +157,7 @@
             "isbn": "9780814714218",
             "maximumPageRelevanceScore": "5.789548",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814714218.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814714218.jpg",
             "title": "Markets and Justice"
         },
         {
@@ -165,7 +165,7 @@
             "isbn": "9780814713266",
             "maximumPageRelevanceScore": "5.789548",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814713266.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814713266.jpg",
             "title": "The Scar That Binds"
         },
         {
@@ -173,7 +173,7 @@
             "isbn": "9780816680610",
             "maximumPageRelevanceScore": "5.789548",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780816680610.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780816680610.jpg",
             "title": "Universes without Us"
         },
         {
@@ -181,7 +181,7 @@
             "isbn": "9780814774458",
             "maximumPageRelevanceScore": "4.940275",
             "numMatchedPages": 3,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814774458.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814774458.jpg",
             "title": "Bisexuality and the Challenge to Lesbian Politics"
         },
         {
@@ -189,7 +189,7 @@
             "isbn": "9781479899982",
             "maximumPageRelevanceScore": "4.940275",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9781479899982.jpg",
+            "thumbnail": "/enm/search/assets/covers/9781479899982.jpg",
             "title": "By Any Media Necessary"
         },
         {
@@ -197,7 +197,7 @@
             "isbn": "9780472120499",
             "maximumPageRelevanceScore": "4.940275",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780472120499.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780472120499.jpg",
             "title": "Making News at The New York Times"
         },
         {
@@ -205,7 +205,7 @@
             "isbn": "9780814726846",
             "maximumPageRelevanceScore": "4.940275",
             "numMatchedPages": 3,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814726846.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814726846.jpg",
             "title": "Please don’t Wish me a Merry Christmas"
         },
         {
@@ -213,7 +213,7 @@
             "isbn": "9780814735305",
             "maximumPageRelevanceScore": "4.940275",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814735305.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814735305.jpg",
             "title": "The Lavender Vote"
         },
         {
@@ -221,7 +221,7 @@
             "isbn": "9780814735336",
             "maximumPageRelevanceScore": "4.940275",
             "numMatchedPages": 2,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814735336.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814735336.jpg",
             "title": "The Smart Culture"
         }
     ],

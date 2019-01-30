@@ -69,7 +69,7 @@
             "isbn": "9780472120499",
             "maximumPageRelevanceScore": "3.3327827",
             "numMatchedPages": 11,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780472120499.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780472120499.jpg",
             "title": "Making News at The New York Times"
         },
         {
@@ -77,7 +77,7 @@
             "isbn": "9780472029402",
             "maximumPageRelevanceScore": "2.1663415",
             "numMatchedPages": 7,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780472029402.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780472029402.jpg",
             "title": "Digital Rubbish: A Natural History of Electronics"
         },
         {
@@ -85,7 +85,7 @@
             "isbn": "9780814774694",
             "maximumPageRelevanceScore": "1.6387407",
             "numMatchedPages": 4,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814774694.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814774694.jpg",
             "title": "The Psychological Assessment of Presidential Candidates"
         },
         {
@@ -93,7 +93,7 @@
             "isbn": "9780814706657",
             "maximumPageRelevanceScore": "1.5084217",
             "numMatchedPages": 1,
-            "thumbnail": "http://localhost/enm/search/assets/covers/9780814706657.jpg",
+            "thumbnail": "/enm/search/assets/covers/9780814706657.jpg",
             "title": "Narcissism and the Literary Libido"
         }
     ],
