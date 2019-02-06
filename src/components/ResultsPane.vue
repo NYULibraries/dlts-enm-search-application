@@ -15,7 +15,7 @@
                 v-show="display"
                 class="enm-results"
             >
-                <span v-if="! results || results.length === 0">
+                <span v-if="( ! error ) && ( ! results || results.length === 0 )">
                     Please try another search.
                 </span>
 
@@ -121,6 +121,10 @@ export default {
             return this.numPages ? this.numPages.toLocaleString() : '';
         },
         resultsHeader : function () {
+            if ( this.error ) {
+                return 'Sorry, a server error has occurred.  Please try your search again later.';
+            }
+
             if ( this.results && this.results.length > 0 ) {
                 return 'Results: ' + this.numPagesFormatted + ' pages in ' + this.numBooksFormatted + ' books';
             } else {
