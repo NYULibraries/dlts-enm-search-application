@@ -8,7 +8,7 @@
             -->
             <header v-show="display">
                 <h2 class="is-size-4">
-                    Results: {{ resultsHeader }}
+                    {{ resultsHeader }}
                 </h2>
             </header>
             <div
@@ -117,7 +117,7 @@ export default {
         },
         resultsHeader : function () {
             if ( this.results && this.results.length > 0 ) {
-                return this.numPagesFormatted + ' pages in ' + this.numBooksFormatted + ' books';
+                return 'Results: ' + this.numPagesFormatted + ' pages in ' + this.numBooksFormatted + ' books';
             } else {
                 return 'None';
             }
