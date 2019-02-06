@@ -196,9 +196,9 @@ yarn deploy:prod
 
 A deploy task does the following:
 
-1) Builds the proper instance
-2) Copies it to the proper server
-3) Runs tests specific for that instance
+1) Builds the specified version of the search application
+2) Copies it to the appropriate server
+3) Runs tests against the newly deployed application 
 
 Note that the scripts assume "devweb1", "stageweb1", and "web1" in ~/.ssh/config.
 This is necessary to get the username, which can't be hardcoded in the repo.
