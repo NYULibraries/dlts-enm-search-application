@@ -187,10 +187,10 @@ manually if they are broken by the data changes to the Solr fake.
 # Build dev server version, copy to server, and run tests
 yarn deploy:dev
 
-# Build dev server version, copy to server, and run tests
+# Build stage server version, copy to server, and run tests
 yarn deploy:stage
 
-# Build dev server version, copy to server, and run tests
+# Build prod server version, copy to server, and run tests
 yarn deploy:prod
 ```
 
