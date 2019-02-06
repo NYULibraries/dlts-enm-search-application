@@ -31,6 +31,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs : [
+        'tests/browser/tests/errors.js',
         'tests/browser/tests/google-analytics.js',
         'tests/browser/tests/limit-by-topic-pane.js',
         'tests/browser/tests/navbar.js',
@@ -44,6 +45,9 @@ exports.config = {
         // 'path/to/excluded/files'
     ],
     suites : {
+        'errors' : [
+            'tests/browser/tests/errors.js',
+        ],
         'google-analytics' : [
             'tests/browser/tests/google-analytics.js',
         ],
