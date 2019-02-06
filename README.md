@@ -61,13 +61,13 @@ yarn test:browser:local:debug:chrome
 # Timeout is set to very hight value to allow for pausing at breakpoints
 yarn test:browser:local:debug:firefox
 
-# Run tests against live dev server ENM
+# Run tests headlessly against live dev server ENM
 yarn test:browser:dev
 
-# Run tests against live staging server ENM
+# Run tests headlessly against live staging server ENM
 yarn test:browser:stage
 
-# Run tests against live production server ENM
+# Run tests headlessly against live production server ENM
 yarn test:browser:prod
 
 # Update golden files for Selenium tests
