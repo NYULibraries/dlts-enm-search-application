@@ -8,14 +8,14 @@
             -->
             <header v-show="display">
                 <h2 class="is-size-4">
-                    Results: {{ resultsHeader }}
+                    {{ resultsHeader }}
                 </h2>
             </header>
             <div
                 v-show="display"
                 class="enm-results"
             >
-                <span v-if="! results || results.length === 0">
+                <span v-if="( ! error ) && ( ! results || results.length === 0 )">
                     Please try another search.
                 </span>
 
@@ -83,6 +83,11 @@ export default {
             required : true,
             default  : false,
         },
+        error    : {
+            type     : Boolean,
+            required : true,
+            default  : false,
+        },
         numBooks : {
             type     : Number,
             required : true,
@@ -116,8 +121,12 @@ export default {
             return this.numPages ? this.numPages.toLocaleString() : '';
         },
         resultsHeader : function () {
+            if ( this.error ) {
+                return 'Sorry, a server error has occurred.  Please try your search again later.';
+            }
+
             if ( this.results && this.results.length > 0 ) {
-                return this.numPagesFormatted + ' pages in ' + this.numBooksFormatted + ' books';
+                return 'Results: ' + this.numPagesFormatted + ' pages in ' + this.numBooksFormatted + ' books';
             } else {
                 return 'None';
             }
