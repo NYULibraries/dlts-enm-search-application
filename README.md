@@ -69,9 +69,6 @@ yarn test:browser:stage
 
 # Run tests headlessly against live production server ENM
 yarn test:browser:prod
-
-# Update golden files for Selenium tests
-UPDATE_GOLDEN_FILES=1 yarn test:browser:local
 ```
 
 ### Run unit tests
@@ -173,7 +170,11 @@ was developed later.
  
 In the future, if the fixture data for the Solr fake changes the golden files
 can be updated by re-running all tests with environment variable `UPDATE_GOLDEN_FILES`
-set to `1`.
+set to `1`.  Example:
+
+```
+UPDATE_GOLDEN_FILES=1 yarn test:browser:local
+```
 
 Note that there may be some tests that do not verify against golden files but
 have expected values directly hardcoded into the scripts.  These will need to be updated
