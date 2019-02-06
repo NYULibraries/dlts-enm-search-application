@@ -83,6 +83,11 @@ export default {
             required : true,
             default  : false,
         },
+        error    : {
+            type     : Boolean,
+            required : true,
+            default  : false,
+        },
         numBooks : {
             type     : Number,
             required : true,
