@@ -140,24 +140,26 @@ The `index.json` file maps Solr request query strings to response files.
 
 #### Update Solr fixture data
 
+To update the files in `tests/browser/fixtures/`, follow these steps:
+
 1) Make any desired changes to the Solr requests in the
-tests
+tests.
 
 2) Comment out the `onPrepare` hook code in `tests/browser/conf/wdio.main.conf.js`
-that automatically starts the Solr fake.
+that automatically starts the Solr fake (see previous section).
 
 3) Start the Solr fake manually with the `--update-solr-responses-solr-server-url`
 option set to the `select` endpoint on the live Solr server to be used for updating
 the fixture data:
  
-```bash
-# At project root
-node node_modules/dlts-solr-fake/cli.js tests/browser/fixtures/index.json tests/browser/fixtures --update-solr-responses-solr-server-url=http://[SOLR HOST]:[PORT]/solr/enm-pages/select --port 3000
-```
+    ```bash
+    # At project root
+    node node_modules/dlts-solr-fake/cli.js tests/browser/fixtures/index.json tests/browser/fixtures --update-solr-responses-solr-server-url=http://[SOLR HOST]:[PORT]/solr/enm-pages/select --port 3000
+    ```
 
-4) Run the tests containing the Solr request changes
+4) Run the tests containing the Solr request changes.
 
-The `index.json` and Solr response files `tests/browser/fixtures/` will be updated
+The `index.json` and Solr response files in `tests/browser/fixtures/` will be updated
 by the Solr fake.
 
 #### Golden files
