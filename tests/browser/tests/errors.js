@@ -19,4 +19,37 @@ suite( 'Solr errors', function () {
             'Sorry, a server error has occurred. Please try your search again later.'
         );
     } );
+
+    test( 'User-friendly error message when Solr request for preview epub fails', function () {
+        SearchPage.open(
+            {
+                solrErrorSimulation : 'preview-epub',
+            }
+        );
+
+        SearchPage.searchAndWaitForResults( 'art' );
+        SearchPage.resultsPane.results.book( 'Japanese lessons' ).click();
+
+        assert.equal(
+            SearchPage.previewPane.previewEpubErrorText,
+            'Sorry, due to a server error this EPUB cannot be previewed. Please try your search again later.'
+        );
+    } );
+
+    test( 'User-friendly error message when Solr request for preview epub page fails', function () {
+        SearchPage.open(
+            {
+                solrErrorSimulation : 'preview-page',
+            }
+        );
+
+        SearchPage.searchAndWaitForResults( 'art' );
+        SearchPage.resultsPane.results.book( 'Japanese lessons' ).click();
+        SearchPage.previewPane.barChart.clickBarForPageNumber( 12 );
+
+        assert.equal(
+            SearchPage.previewPane.previewEpubPageErrorText,
+            'Sorry, due to a server error this page cannot be previewed. Please try your search again later.'
+        );
+    } );
 } );
