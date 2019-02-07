@@ -128,7 +128,7 @@ export default {
             if ( this.results && this.results.length > 0 ) {
                 return 'Results: ' + this.numPagesFormatted + ' pages in ' + this.numBooksFormatted + ' books';
             } else {
-                return 'None';
+                return 'Results: None';
             }
         },
     },
