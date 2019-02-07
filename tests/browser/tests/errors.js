@@ -10,7 +10,7 @@ suite( 'Solr errors', function () {
     test( 'User-friendly error message when Solr request fails', function () {
         SearchPage.open(
             {
-                simulateSolrFailure : true,
+                solrErrorSimulation : 'search',
             }
         );
 
