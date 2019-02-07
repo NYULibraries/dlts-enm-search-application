@@ -65,7 +65,7 @@ async function doFetch( params ) {
 async function solrSearch( query, queryFields, selectedTopicFacetItems ) {
     // "#" sometimes gets added to the end of the URL, probably because search results have
     // <a> tags with href="#"
-    if ( errorSimulation.startsWith( ERROR_SIMULATION_SEARCH ) ) {
+    if ( errorSimulation && errorSimulation.startsWith( ERROR_SIMULATION_SEARCH ) ) {
         throw Error( ERROR_SIMULATION_SEARCH );
     }
 
@@ -105,7 +105,7 @@ async function solrSearch( query, queryFields, selectedTopicFacetItems ) {
 async function solrPreviewEpub( isbn, query, queryFields, selectedTopicFacetItems ) {
     // "#" sometimes gets added to the end of the URL, probably because search results have
     // <a> tags with href="#"
-    if ( errorSimulation.startsWith( ERROR_SIMULATION_PREVIEW_EPUB ) ) {
+    if ( errorSimulation && errorSimulation.startsWith( ERROR_SIMULATION_PREVIEW_EPUB ) ) {
         throw Error( ERROR_SIMULATION_PREVIEW_EPUB );
     }
 
@@ -140,7 +140,7 @@ async function solrPreviewEpub( isbn, query, queryFields, selectedTopicFacetItem
 async function solrPreviewPage( isbn, pageNumberForDisplay, query, queryFields ) {
     // "#" sometimes gets added to the end of the URL, probably because search results have
     // <a> tags with href="#"
-    if ( errorSimulation.startsWith( ERROR_SIMULATION_PREVIEW_PAGE ) ) {
+    if ( errorSimulation && errorSimulation.startsWith( ERROR_SIMULATION_PREVIEW_PAGE ) ) {
         throw Error( ERROR_SIMULATION_PREVIEW_PAGE );
     }
 
