@@ -197,7 +197,7 @@ export default {
                 );
             } catch( e ) {
                 // TODO: replace this with something more user-friendly
-                alert( 'Sorry, the server has returned an error or is not responding.' );
+                // alert( 'Sorry, the server has returned an error or is not responding.' );
 
                 return;
             }
