@@ -40,6 +40,7 @@
 
             <h2
                 v-show="errorPreviewEpub"
+                id="preview-epub-error"
                 class="is-size-4"
             >
                 Sorry, due to a server error this EPUB cannot be previewed.
@@ -79,6 +80,7 @@
 
             <h2
                 v-show="selectedPageNumber && errorPreviewPage"
+                id="preview-epub-page-error"
                 class="is-size-4"
             >
                 Sorry, due to a server error this page cannot be previewed.
