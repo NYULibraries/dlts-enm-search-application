@@ -32,13 +32,23 @@
             ></span>
 
             <BarChart
+                v-show="! errorPreviewEpub"
                 :bar-chart-data="barChart.barChartData"
                 :title="title"
-                @bar-click="previewEpubPage"
+                @bar-click="previewPage"
             />
 
+            <h2
+                v-show="errorPreviewEpub"
+                id="preview-epub-error"
+                class="is-size-4"
+            >
+                Sorry, due to a server error this EPUB cannot be previewed.
+                Please try your search again later.
+            </h2>
+
             <div
-                v-show="selectedPageNumber"
+                v-show="selectedPageNumber && ! errorPreviewEpub && ! errorPreviewPage"
                 class="enm-topicsonthispage"
             >
                 <h3>Topics on this page</h3>
@@ -68,9 +78,18 @@
 
             <hr>
 
+            <h2
+                v-show="selectedPageNumber && errorPreviewPage"
+                id="preview-epub-page-error"
+                class="is-size-4"
+            >
+                Sorry, due to a server error these pages cannot be previewed.
+                Please try your search again later.
+            </h2>
+
             <!-- eslint-disable vue/no-v-html -->
             <div
-                v-show="selectedPageNumber"
+                v-show="selectedPageNumber && ! errorPreviewEpub && ! errorPreviewPage"
                 class="enm-pageText"
                 v-html="pageText"
             >
@@ -116,6 +135,8 @@ export default {
                 isbn         : this.isbn,
                 title        : this.title,
             },
+            errorPreviewEpub   : false,
+            errorPreviewPage   : false,
             pageText           : null,
             selectedPageNumber : null,
             topicsOnPage       : null,
@@ -133,6 +154,9 @@ export default {
     watch : {
         isbn( newIsbn, oldIsbn ) {
             if ( newIsbn === '' ) {
+                this.errorPreviewEpub = false;
+                this.errorPreviewPage = false;
+
                 this.barChart.barChartData = [];
                 this.pageText = null;
                 this.selectedPageNumber = null;
@@ -158,14 +182,7 @@ export default {
                     this.selectedTopicFacetItems,
                 );
             } catch( e ) {
-                // TODO: replace this with something more user-friendly
-                // alert( 'Sorry, the server has returned an error or is not responding.' );
-
-                // Also, this alert box breaks preview pane test suite.  For some reason
-                // this alert box can pop up while executing the before book, which shouldn't
-                // be possible because the before hook does not execute a search.
-                // In any case it would be better to print the error in the preview
-                // pane area.
+                this.errorPreviewEpub = true;
 
                 return;
             }
@@ -184,7 +201,7 @@ export default {
 
             this.barChart.barChartData = barChartData;
         },
-        async previewEpubPage( pageNumberForDisplay ) {
+        async previewPage( pageNumberForDisplay ) {
             this.selectedPageNumber = pageNumberForDisplay;
 
             let response;
@@ -196,8 +213,7 @@ export default {
                     this.queryFields
                 );
             } catch( e ) {
-                // TODO: replace this with something more user-friendly
-                alert( 'Sorry, the server has returned an error or is not responding.' );
+                this.errorPreviewPage = true;
 
                 return;
             }

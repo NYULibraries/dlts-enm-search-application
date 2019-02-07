@@ -3,6 +3,11 @@ const DEFAULT_SOLR_HOST      = 'localhost';
 const DEFAULT_SOLR_PORT      = 8983;
 const DEFAULT_SOLR_PROTOCOL  = 'http';
 
+const ERROR_SIMULATION_PREVIEW_EPUB = 'preview-epub';
+const ERROR_SIMULATION_PREVIEW_PAGE = 'preview-page';
+const ERROR_SIMULATION_SEARCH       = 'search';
+
+let errorSimulation;
 let solrCorePath;
 let solrHost;
 let solrPort;
@@ -58,6 +63,12 @@ async function doFetch( params ) {
 }
 
 async function solrSearch( query, queryFields, selectedTopicFacetItems ) {
+    // "#" sometimes gets added to the end of the URL, probably because search results have
+    // <a> tags with href="#"
+    if ( errorSimulation && errorSimulation.startsWith( ERROR_SIMULATION_SEARCH ) ) {
+        throw Error( ERROR_SIMULATION_SEARCH );
+    }
+
     const params = {
         q                : query,
         'facet.field'    : 'topicNames_facet',
@@ -92,6 +103,12 @@ async function solrSearch( query, queryFields, selectedTopicFacetItems ) {
 }
 
 async function solrPreviewEpub( isbn, query, queryFields, selectedTopicFacetItems ) {
+    // "#" sometimes gets added to the end of the URL, probably because search results have
+    // <a> tags with href="#"
+    if ( errorSimulation && errorSimulation.startsWith( ERROR_SIMULATION_PREVIEW_EPUB ) ) {
+        throw Error( ERROR_SIMULATION_PREVIEW_EPUB );
+    }
+
     const params = {
         q    : query,
         fl   : 'pageLocalId,pageNumberForDisplay,pageSequenceNumber,epubNumberOfPages,score',
@@ -121,6 +138,12 @@ async function solrPreviewEpub( isbn, query, queryFields, selectedTopicFacetItem
 }
 
 async function solrPreviewPage( isbn, pageNumberForDisplay, query, queryFields ) {
+    // "#" sometimes gets added to the end of the URL, probably because search results have
+    // <a> tags with href="#"
+    if ( errorSimulation && errorSimulation.startsWith( ERROR_SIMULATION_PREVIEW_PAGE ) ) {
+        throw Error( ERROR_SIMULATION_PREVIEW_PAGE );
+    }
+
     const HIGHLIGHT_PRE = '<mark>';
     const HIGHLIGHT_POST = '</mark>';
 
@@ -158,6 +181,8 @@ export default {
         solrHost     = options.solrHost     || DEFAULT_SOLR_HOST;
         solrPort     = options.solrPort     || DEFAULT_SOLR_PORT;
         solrProtocol = options.solrProtocol || DEFAULT_SOLR_PROTOCOL;
+
+        errorSimulation = options.errorSimulation;
 
         Vue.prototype.$solrPreviewEpub = solrPreviewEpub;
         Vue.prototype.$solrPreviewPage = solrPreviewPage;

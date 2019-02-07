@@ -59,12 +59,12 @@ class SearchPage extends Page {
     open( options ) {
         let url = this.paths.search;
 
-        if ( options && options.simulateSolrFailure ) {
-            // Attempting to do a fetch to this bad URL will generate a
-            // net::ERR_ADDRESS_INVALID error
-            url += `?solr=http://localhost:0`;
-        } else if ( browser.options.solrFake ) {
+        if ( browser.options.solrFake ) {
             url += `?solr=${ browser.options.solrFake.url }`;
+
+            if ( options && options.solrErrorSimulation ) {
+                url += '&solrErrorSimulation=' + options.solrErrorSimulation;
+            }
         }
 
         super.open( url );
