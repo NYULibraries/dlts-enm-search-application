@@ -40,7 +40,7 @@ class PreviewPane {
     }
 
     get previewEpubPageErrorText() {
-        return $( '#preview-epub-error' ).getText();
+        return $( '#preview-epub-page-error' ).getText();
     }
 
     get previous() {
