@@ -1,7 +1,5 @@
 /* global setup:false suiteSetup:false suite:false test:false */
 
-import fs from 'fs';
-
 import { assert } from 'chai';
 
 import SearchPage from '../pageobjects/search.page';
