@@ -48,7 +48,7 @@ suite( 'Solr errors', function () {
         SearchPage.previewPane.barChart.clickBarForPageNumber( 12 );
 
         assert.equal(
-            SearchPage.previewPane.previewEpubPageErrorText,
+            SearchPage.previewPane.previewPageErrorText,
             'Sorry, due to a server error this page cannot be previewed. Please try your search again later.'
         );
     } );

@@ -35,7 +35,7 @@
                 v-show="! errorPreviewEpub"
                 :bar-chart-data="barChart.barChartData"
                 :title="title"
-                @bar-click="previewEpubPage"
+                @bar-click="previewPage"
             />
 
             <h2
@@ -201,7 +201,7 @@ export default {
 
             this.barChart.barChartData = barChartData;
         },
-        async previewEpubPage( pageNumberForDisplay ) {
+        async previewPage( pageNumberForDisplay ) {
             this.selectedPageNumber = pageNumberForDisplay;
 
             let response;
