@@ -49,7 +49,7 @@ suite( 'Solr errors', function () {
 
         assert.equal(
             SearchPage.previewPane.previewPageErrorText,
-            'Sorry, due to a server error this page cannot be previewed. Please try your search again later.'
+            'Sorry, due to a server error these pages cannot be previewed. Please try your search again later.'
         );
     } );
 } );

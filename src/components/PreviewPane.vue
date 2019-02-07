@@ -83,7 +83,7 @@
                 id="preview-epub-page-error"
                 class="is-size-4"
             >
-                Sorry, due to a server error this page cannot be previewed.
+                Sorry, due to a server error these pages cannot be previewed.
                 Please try your search again later.
             </h2>
 
