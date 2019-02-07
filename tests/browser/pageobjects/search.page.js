@@ -56,11 +56,15 @@ class SearchPage extends Page {
         return browser.getTitle();
     };
 
-    open() {
+    open( options ) {
         let url = this.paths.search;
 
         if ( browser.options.solrFake ) {
             url += `?solr=${ browser.options.solrFake.url }`;
+
+            if ( options && options.solrErrorSimulation ) {
+                url += '&solrErrorSimulation=' + options.solrErrorSimulation;
+            }
         }
 
         super.open( url );

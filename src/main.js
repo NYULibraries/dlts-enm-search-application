@@ -17,7 +17,12 @@ const enmSolrOptions = {
 };
 
 const params = new URLSearchParams( window.location.search );
+const solrErrorSimulation = params.get( 'solrErrorSimulation' );
 const solrOverrideUrl = params.get( 'solr' );
+
+if ( solrErrorSimulation ) {
+    enmSolrOptions.errorSimulation = solrErrorSimulation;
+}
 
 if ( solrOverrideUrl ) {
     const url = new URL( solrOverrideUrl );

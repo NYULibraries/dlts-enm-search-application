@@ -35,6 +35,14 @@ class PreviewPane {
         );
     }
 
+    get previewEpubErrorText() {
+        return $( '#preview-epub-error' ).getText();
+    }
+
+    get previewPageErrorText() {
+        return $( '#preview-epub-page-error' ).getText();
+    }
+
     get previous() {
         return $( 'a.button=< previous' );
     }
