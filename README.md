@@ -93,16 +93,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/) and
 
 #### Solr fake
 
-The Solr server used for ENM Search can be overridden using the `solr` query parameter.
-
-Example:
-
-`http://dlib.nyu.edu/enm/search/?solr=http://stagediscovery.dlib.nyu.edu:8983/solr/enm-pages/`
-
-...informs the application that all Solr requests should be routed to the stage Solr
-server instead of the production Solr server.
-
-This override is used by the browser tests to make the application under test
+The [`solr` query string parameter](#solr-solr-override) is used by the browser tests to make the application under test
 send all Solr requests to a Solr fake running on localhost:3000.
 The Solr Fake is currently a very basic in-house implementation included as an
 NPM module:
@@ -180,7 +171,31 @@ UPDATE_GOLDEN_FILES=1 yarn test:browser:local
 
 Note that there may be some tests that do not verify against golden files but
 have expected values directly hardcoded into the scripts.  These will need to be updated
-manually if they are broken by the data changes to the Solr fake. 
+manually if they are broken by the data changes to the Solr fake.
+
+## Query parameters
+
+### `solr`: Solr override
+
+The Solr server used for ENM Search can be overridden using the `solr` query parameter.
+
+Example:
+
+`http://dlib.nyu.edu/enm/search/?solr=http://stagediscovery.dlib.nyu.edu:8983/solr/enm-pages/`
+
+...informs the application that all Solr requests should be routed to the stage Solr
+server instead of the production Solr server.
+
+### `solrErrorSimulation`: intentionally produce Solr request errors for testing purposes
+
+* `?solrErrorSimulation=search`
+  * Simulates Solr request error for initial topic/full-text search
+* `?solrErrorSimulation=preview-epub`
+  * Simulates Solr request error when selects an EPUB to preview.
+    This can only happen if the initial Solr request for search results succeeds but the Solr request for EPUB details fails.
+* `?solrErrorSimulation=preview-page`
+  * Simulates Solr request error when selects a page in the bar chart in the preview.
+    This can only happen if the initial Solr request for search results and the subsequent Solr request for EPUB preview succeed but the Solr request for a page to see the topics and page text fails.
 
 ## Deployment
 ```
