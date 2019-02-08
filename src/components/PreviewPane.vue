@@ -43,7 +43,7 @@
                 id="preview-epub-error"
                 class="is-size-4"
             >
-                Sorry, due to a server error this EPUB cannot be previewed.
+                Sorry, this book cannot be previewed due to a server error.
                 Please try your search again later.
             </h2>
 
@@ -83,7 +83,7 @@
                 id="preview-epub-page-error"
                 class="is-size-4"
             >
-                Sorry, due to a server error these pages cannot be previewed.
+                Sorry, these pages cannot be previewed due to a server error.
                 Please try your search again later.
             </h2>
 
