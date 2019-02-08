@@ -32,7 +32,7 @@ suite( 'Solr errors', function () {
 
         assert.equal(
             SearchPage.previewPane.previewEpubErrorText,
-            'Sorry, due to a server error this EPUB cannot be previewed. Please try your search again later.'
+            'Sorry, this book cannot be previewed due to a server error. Please try your search again later.'
         );
     } );
 
@@ -49,7 +49,7 @@ suite( 'Solr errors', function () {
 
         assert.equal(
             SearchPage.previewPane.previewPageErrorText,
-            'Sorry, due to a server error these pages cannot be previewed. Please try your search again later.'
+            'Sorry, these pages cannot be previewed due to a server error. Please try your search again later.'
         );
     } );
 } );
