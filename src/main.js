@@ -27,9 +27,25 @@ if ( solrErrorSimulation ) {
 if ( solrOverrideUrl ) {
     const url = new URL( solrOverrideUrl );
 
-    if ( url.protocol && url.hostname && url.port && url.pathname ) {
+    // Ports 80 and 443 are not returned by URL() if the protocol is http or https,
+    // respectively, even if they are explicitly included in solrOverrideUrl.
+    // We have Solr servers running on ports 80 and 443 because a decision was
+    // made to use those port to accommodate certain edge cases -- see
+    // https://jira.nyu.edu/jira/browse/NYUP-477 for details.
+    let massagedPort = url.port;
+    if ( ! url.port ) {
+        if ( url.protocol === 'http:' ) {
+            massagedPort = 80;
+        } else if ( url.protocol === 'https:' ) {
+            massagedPort = 443;
+        } else {
+            // Do nothing
+        }
+    }
+
+    if ( url.protocol && url.hostname && massagedPort && url.pathname ) {
         enmSolrOptions.solrHost     = url.hostname;
-        enmSolrOptions.solrPort     = url.port;
+        enmSolrOptions.solrPort     = massagedPort;
         enmSolrOptions.solrProtocol = url.protocol.replace( /:$/, '' );
         enmSolrOptions.solrCorePath = url.pathname;
     }
