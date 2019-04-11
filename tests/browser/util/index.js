@@ -92,7 +92,7 @@ function getActualFilesDirectory( suiteNameArg ) {
 }
 
 function getBrowserName() {
-    return browser.options.desiredCapabilities.browserName;
+    return browser.options.capabilities.browserName;
 }
 
 function getDiffFilePath( suiteName, id ) {
