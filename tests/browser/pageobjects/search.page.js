@@ -59,8 +59,8 @@ class SearchPage extends Page {
     open( options ) {
         let url = this.paths.search;
 
-        if ( browser.options.solrFake ) {
-            url += `?solr=${ browser.options.solrFake.url }`;
+        if ( browser.config.solrFake ) {
+            url += `?solr=${ browser.config.solrFake.url }`;
 
             if ( options && options.solrErrorSimulation ) {
                 url += '&solrErrorSimulation=' + options.solrErrorSimulation;
