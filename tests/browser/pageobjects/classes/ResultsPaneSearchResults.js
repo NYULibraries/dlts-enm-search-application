@@ -14,24 +14,27 @@ class ResultsPaneSearchResults {
         let books   = [];
 
         results.forEach( ( result ) => {
+            const id = result.getAttribute( 'id' );
+            const parentElementSelector = `div[ id = "${ id }" ]`;
+
             let book = {};
 
-            book.authorsAndPublisher       = result.element( '.meta' ).getText();
-            book.isbn                      = result.getAttribute( 'id' );
+            book.authorsAndPublisher       = $( `${ parentElementSelector } .meta` ).getText();
+            book.isbn                      = id;
             book.maximumPageRelevanceScore =
                 // Leave the score as a string, don't mess with JS floats
-                result.element( '.relevance' )
+                $( `${ parentElementSelector } .relevance` )
                     .getText()
                     .match( /Maximum page relevance score: (\S+)/ )[ 1 ];
             book.numMatchedPages           =
                 parseInt(
-                    result.element( '.matches' )
+                    $( `${ parentElementSelector } .matches` )
                         .getText()
                         .match( /(\d+) matched pages/ )[ 1 ],
                     10
                 );
-            book.thumbnail = new URL( result.element( '.enm-thumbnail img' ).getAttribute( 'src' ) ).pathname;
-            book.title     = result.element( '.title' ).getText();
+            book.thumbnail = new URL( $( `${ parentElementSelector }.enm-thumbnail img` ).getAttribute( 'src' ) ).pathname;
+            book.title     = $( `${ parentElementSelector } .title` ).getText();
 
             books.push( book );
         } );
