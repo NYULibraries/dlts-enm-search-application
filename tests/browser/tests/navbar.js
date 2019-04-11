@@ -13,7 +13,7 @@ suite( 'Navbar', function () {
         // It's unknown what the minimum width should be, but 1600 is used
         // in Preview Pane tests and that width fixes the problem here, so using
         // 1600 for consistency.
-        SearchPage.setViewportSize(
+        SearchPage.setWindowSize(
             {
                 height : 851,
                 width  : 1600,

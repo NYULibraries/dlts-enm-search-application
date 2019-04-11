@@ -41,7 +41,7 @@ suite( 'Preview Pane', function () {
         // Was keeping it at the exact threshold for a while, which recently changed
         // from 1600 to 1601 in Firefox!...so instead let's just set it much higher
         // than we need.
-        SearchPage.setViewportSize(
+        SearchPage.setWindowSize(
             {
                 height : 851,
                 width  : 1700,

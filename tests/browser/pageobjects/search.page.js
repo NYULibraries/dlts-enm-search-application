@@ -200,13 +200,13 @@ class SearchPage extends Page {
         };
     }
 
-    setViewportSize( size ) {
+    setWindowSize( size ) {
         // size must be an object with width and height fields:
         // {
         //     width  : 500,
         //     height : 500,
         // }
-        browser.setViewportSize( size );
+        browser.setWindowSize( size.width, size.height );
     }
 }
 

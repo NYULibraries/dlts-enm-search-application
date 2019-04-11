@@ -43,7 +43,7 @@ suite( 'Search results', function () {
         // "See all" link.
         // Width of 1500 was found to be sufficient, but 1600 is used in Preview Pane
         // tests so using that higher width for consistency.
-        SearchPage.setViewportSize(
+        SearchPage.setWindowSize(
             {
                 height : 851,
                 width  : 1600,
