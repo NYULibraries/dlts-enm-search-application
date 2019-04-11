@@ -24,7 +24,7 @@ class SearchPage extends Page {
     }
 
     get alertText() {
-        return browser.alertText;
+        return browser.getAlertText();
     }
 
     get baseUrl() {
