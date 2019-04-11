@@ -16,7 +16,7 @@
     "test": "npm run test:browser:local",
     "test:browser:local": "node_modules/.bin/wdio tests/browser/conf/wdio.local.conf.js",
     "test:browser:local:debug:chrome": "node_modules/.bin/wdio tests/browser/conf/wdio.local.debug-chrome.conf.js",
-    "test:browser:local:debug:firefox": "node_modules/.bin/wdio tests/browser/conf/wdio.local.debug-firefox.conf.js",
+    "test:browser:local:debug:firefox": "node_modules/.bin/wdio tests/browser/conf/wdio.local.debug-firefox.conf/.js",
     "test:browser:dev": "node_modules/.bin/wdio tests/browser/conf/wdio.dev.conf.js",
     "test:browser:stage": "node_modules/.bin/wdio tests/browser/conf/wdio.stage.conf.js",
     "test:browser:prod": "node_modules/.bin/wdio tests/browser/conf/wdio.prod.conf.js"
@@ -40,6 +40,9 @@
     "@vue/eslint-config-standard": "^4.0.0",
     "@vue/test-utils": "^1.0.0-beta.20",
     "@wdio/cli": "^5.7.12",
+    "@wdio/local-runner": "^5.7.12",
+    "@wdio/mocha-framework": "^5.7.8",
+    "@wdio/sync": "^5.7.9",
     "babel-eslint": "^10.0.1",
     "chai": "^4.1.2",
     "command-exists": "^1.2.7",
