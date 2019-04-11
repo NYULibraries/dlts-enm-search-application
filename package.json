@@ -49,11 +49,7 @@
     "node-sass": "^4.9.0",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.17",
-    "wdio-mocha-framework": "^0.6.3",
-    "wdio-selenium-standalone-service": "0.0.11",
-    "wdio-spec-reporter": "^0.1.5",
-    "webdriverio": "^4.13.2"
+    "vue-template-compiler": "^2.5.17"
   },
   "engines": {
     "node": ">= 6.0.0",
