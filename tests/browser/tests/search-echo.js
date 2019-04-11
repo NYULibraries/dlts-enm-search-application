@@ -173,7 +173,7 @@ suite( 'Search Echo', function () {
             assert( searchDCIQuery === '*', `Got search DCI query ${ searchDCIQuery }; expected "*"` );
 
             assert(
-                SearchPage.previewPane.loadTheFirstMatchedPageLink.isVisible(),
+                SearchPage.previewPane.loadTheFirstMatchedPageLink.isDisplayed(),
                 '"Load the first matched page" link is not visible'
             );
         } );
@@ -220,7 +220,7 @@ suite( 'Search Echo', function () {
             SearchPage.dismissTopicDCIAndWaitForResults( topic );
 
             assert(
-                SearchPage.previewPane.loadTheFirstMatchedPageLink.isVisible(),
+                SearchPage.previewPane.loadTheFirstMatchedPageLink.isDisplayed(),
                 '"Load the first matched page" link is not visible'
             );
         } );

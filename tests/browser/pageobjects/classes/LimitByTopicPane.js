@@ -20,7 +20,7 @@ class LimitByTopicPane {
     }
 
     get topicNamesWithHitCounts() {
-        if ( this.togglableTopicsGroup.isVisible() ) {
+        if ( this.togglableTopicsGroup.isDisplayed() ) {
             return this.topicNamesWithHitCountsGroupVisible.concat(
                 this.topicNamesWithHitCountsGroupTogglable
             );
