@@ -73,13 +73,13 @@ class SearchPage extends Page {
     dismissSearchDCIAndWaitForResults() {
         this.searchEcho.searchDCI.dismiss();
 
-        this.resultsPane.results._element.waitForVisible();
+        this.resultsPane.results._element.waitForDisplayed();
     }
 
     dismissTopicDCIAndWaitForResults( topic ) {
         this.searchEcho.topicDCIs.dismiss( topic );
 
-        this.resultsPane.results._element.waitForVisible();
+        this.resultsPane.results._element.waitForDisplayed();
     }
 
     limitByTopicAndWaitForResults( topic ) {
@@ -87,11 +87,11 @@ class SearchPage extends Page {
             this.limitByTopicPane.topic( topic ).click();
         } else {
             this.limitByTopicPane.seeAllLink.click();
-            this.limitByTopicPane.topic( topic ).waitForVisible( 5000 );
+            this.limitByTopicPane.topic( topic ).waitForDisplayed( 5000 );
             this.limitByTopicPane.topic( topic ).click();
         }
 
-        this.resultsPane.results._element.waitForVisible();
+        this.resultsPane.results._element.waitForDisplayed();
     }
 
     getPreviewId( query, searchFulltext, searchTopics, topicDCIsTopics, isbn, pageNumber ) {
@@ -179,7 +179,7 @@ class SearchPage extends Page {
     searchAndWaitForResults( query ) {
         this.searchForm.searchBox.addValue( query );
         this.searchForm.submit();
-        this.resultsPane.results._element.waitForVisible();
+        this.resultsPane.results._element.waitForDisplayed();
     }
 
     searchResultsSnapshot() {
