@@ -1,3 +1,9 @@
+const path = require( 'path' );
+
+const solrFake                      = require( 'dlts-solr-fake' );
+const SOLR_FAKE_RESPONSES_DIRECTORY = path.join( __dirname, '../fixtures' );
+const SOLR_FAKE_RESPONSES_INDEX     = path.join( SOLR_FAKE_RESPONSES_DIRECTORY, 'index.json' );
+
 exports.config = {
     //
     // ====================
@@ -6,8 +12,8 @@ exports.config = {
     //
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
-    runner: 'local',
-    
+    runner : 'local',
+
     //
     // ==================
     // Specify Test Files
@@ -17,13 +23,46 @@ exports.config = {
     // NPM script (see https://docs.npmjs.com/cli/run-script) then the current working
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
-    specs: [
-        './test/specs/**/*.js'
+    specs                  : [
+        'tests/browser/tests/errors.js',
+        'tests/browser/tests/google-analytics.js',
+        'tests/browser/tests/limit-by-topic-pane.js',
+        'tests/browser/tests/navbar.js',
+        'tests/browser/tests/preview-pane.js',
+        'tests/browser/tests/search-echo.js',
+        'tests/browser/tests/search-form.js',
+        'tests/browser/tests/search-results.js',
     ],
     // Patterns to exclude.
-    exclude: [
+    exclude                : [
         // 'path/to/excluded/files'
     ],
+    suites                 : {
+        'errors'              : [
+            'tests/browser/tests/errors.js',
+        ],
+        'google-analytics'    : [
+            'tests/browser/tests/google-analytics.js',
+        ],
+        'limit-by-topic-pane' : [
+            'tests/browser/tests/limit-by-topic-pane.js',
+        ],
+        'navbar'              : [
+            'tests/browser/tests/navbar.js',
+        ],
+        'preview-pane'        : [
+            'tests/browser/tests/preview-pane.js',
+        ],
+        'search-echo'         : [
+            'tests/browser/tests/search-echo.js',
+        ],
+        'search-form'         : [
+            'tests/browser/tests/search-form.js',
+        ],
+        'search-results'      : [
+            'tests/browser/tests/search-results.js',
+        ],
+    },
     //
     // ============
     // Capabilities
@@ -40,24 +79,39 @@ exports.config = {
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
     //
-    maxInstances: 10,
+    maxInstances           : 8,
     //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
     //
-    capabilities: [{
-        // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-        // grid with only 5 firefox instances available you can make sure that not more than
-        // 5 instances get started at a time.
-        maxInstances: 5,
-        //
-        browserName: 'firefox',
-        // If outputDir is provided WebdriverIO can capture driver session logs
-        // it is possible to configure which logTypes to include/exclude.
-        // excludeDriverLogs: ['*'], // pass '*' to exclude all driver session logs
-        // excludeDriverLogs: ['bugreport', 'server'],
-    }],
+    capabilities           : [
+        {
+            // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+            // grid with only 5 firefox instances available you can make sure that not more than
+            // 5 instances get started at a time.
+            // maxInstances: 5,
+            //
+            browserName   : 'chrome',
+            chromeOptions : {
+                // to run chrome headless the following flags are required
+                // (see https://developers.google.com/web/updates/2017/04/headless-chrome)
+                args : [ '--headless' ],
+            },
+        },
+        {
+            // maxInstances can get overwritten per capability. So if you have an in-house Selenium
+            // grid with only 5 firefox instances available you can make sure that not more than
+            // 5 instances get started at a time.
+            // maxInstances: 5,
+            //
+            browserName          : 'firefox',
+            'moz:firefoxOptions' : {
+                // flag to activate Firefox headless mode (see https://github.com/mozilla/geckodriver/blob/master/README.md#firefox-capabilities for more details about moz:firefoxOptions)
+                args : [ '-headless' ],
+            },
+        },
+    ],
     //
     // ===================
     // Test Configurations
@@ -65,7 +119,7 @@ exports.config = {
     // Define all options that are relevant for the WebdriverIO instance here
     //
     // Level of logging verbosity: trace | debug | info | warn | error | silent
-    logLevel: 'info',
+    logLevel               : 'info',
     //
     // Set specific log levels per logger
     // loggers:
@@ -77,42 +131,42 @@ exports.config = {
     // - wdio-cli, wdio-config, wdio-sync, wdio-utils
     // Level of logging verbosity: trace | debug | info | warn | error | silent
     // logLevels: {
-        // webdriver: 'info',
-        // 'wdio-applitools-service': 'info'
+    // webdriver: 'info',
+    // 'wdio-applitools-service': 'info'
     // },
     //
     // If you only want to run your tests until a specific amount of tests have failed use
     // bail (default is 0 - don't bail, run all tests).
-    bail: 0,
+    bail                   : 0,
     //
     // Set a base URL in order to shorten url command calls. If your `url` parameter starts
     // with `/`, the base url gets prepended, not including the path portion of your baseUrl.
     // If your `url` parameter starts without a scheme or `/` (like `some/path`), the base url
     // gets prepended directly.
-    baseUrl: 'http://localhost/enm/search/',
+    baseUrl                : 'http://localhost/enm/',
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 10000,
+    waitforTimeout         : 30000,
     //
     // Default timeout in milliseconds for request
     // if Selenium Grid doesn't send response
-    connectionRetryTimeout: 90000,
+    connectionRetryTimeout : 90000,
     //
     // Default request retries count
-    connectionRetryCount: 3,
+    connectionRetryCount   : 3,
     //
     // Test runner services
     // Services take over a specific job you don't want to take care of. They enhance
     // your test setup with almost no effort. Unlike plugins, they don't add new
     // commands. Instead, they hook themselves up into the test process.
-    // services: [],//
+    services               : [ 'selenium-standalone' ],
     // Framework you want to run your specs with.
     // The following are supported: Mocha, Jasmine, and Cucumber
     // see also: https://webdriver.io/docs/frameworks.html
     //
     // Make sure you have the wdio adapter package for the specific framework installed
     // before running any tests.
-    framework: 'mocha',
+    framework              : 'mocha',
     //
     // The number of times to retry the entire specfile when it fails as a whole
     // specFileRetries: 1,
@@ -124,9 +178,15 @@ exports.config = {
     //
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
-    mochaOpts: {
-        ui: 'bdd',
-        timeout: 60000
+    mochaOpts              : {
+        compilers : [ 'js:@babel/register' ],
+        retries   : 5,
+        timeout   : 30000,
+        ui        : 'tdd',
+    },
+    // DLTS Solr Fake
+    solrFake               : {
+        url : 'http://localhost:3000/',
     },
     //
     // =====
@@ -141,8 +201,11 @@ exports.config = {
      * @param {Object} config wdio configuration object
      * @param {Array.<Object>} capabilities list of capabilities details
      */
-    // onPrepare: function (config, capabilities) {
-    // },
+    onPrepare              : function ( config, capabilities ) {
+        if ( this.solrFake ) {
+            solrFake.startSolrFake( SOLR_FAKE_RESPONSES_INDEX, SOLR_FAKE_RESPONSES_DIRECTORY );
+        }
+    },
     /**
      * Gets executed just before initialising the webdriver session and test framework. It allows you
      * to manipulate configurations depending on the capability or spec.
@@ -167,7 +230,7 @@ exports.config = {
      */
     // beforeCommand: function (commandName, args) {
     // },
-    
+
     /**
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
@@ -204,7 +267,7 @@ exports.config = {
      */
     // afterSuite: function (suite) {
     // },
-    
+
     /**
      * Runs after a WebdriverIO command gets executed
      * @param {String} commandName hook command name
@@ -241,10 +304,10 @@ exports.config = {
     // onComplete: function(exitCode, config, capabilities, results) {
     // },
     /**
-    * Gets executed when a refresh happens.
-    * @param {String} oldSessionId session ID of the old session
-    * @param {String} newSessionId session ID of the new session
-    */
+     * Gets executed when a refresh happens.
+     * @param {String} oldSessionId session ID of the old session
+     * @param {String} newSessionId session ID of the new session
+     */
     //onReload: function(oldSessionId, newSessionId) {
     //}
 }
