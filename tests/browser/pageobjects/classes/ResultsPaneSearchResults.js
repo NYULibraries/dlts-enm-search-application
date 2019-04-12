@@ -33,7 +33,7 @@ class ResultsPaneSearchResults {
                         .match( /(\d+) matched pages/ )[ 1 ],
                     10
                 );
-            book.thumbnail = new URL( $( `${ parentElementSelector }.enm-thumbnail img` ).getAttribute( 'src' ) ).pathname;
+            book.thumbnail = new URL( $( `${ parentElementSelector } .enm-thumbnail img` ).getAttribute( 'src' ) ).pathname;
             book.title     = $( `${ parentElementSelector } .title` ).getText();
 
             books.push( book );
