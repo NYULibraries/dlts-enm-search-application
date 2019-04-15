@@ -125,6 +125,11 @@ function getGoldenFilesDirectory( suiteNameArg ) {
     return path.resolve( GOLDEN_FILES_ROOT, `${ suiteNameArg }/` );
 }
 
+function isDisabled( element ) {
+    return element.getAttribute( 'disabled' ) === 'disabled' ||
+           element.getAttribute( 'disabled' ) === 'true';
+}
+
 function jsonStableStringify( data ) {
     return stringify(
         data,
@@ -149,5 +154,6 @@ export {
     getGoldenFilePath,
     getGoldenFiles,
     getGoldenFilesDirectory,
+    isDisabled,
     jsonStableStringify,
 };
