@@ -33,8 +33,12 @@ class ResultsPaneSearchResults {
                         .match( /(\d+) matched pages/ )[ 1 ],
                     10
                 );
-            book.thumbnail = new URL( $( `${ parentElementSelector } .enm-thumbnail img` )
-                .getAttribute( 'src' ) ).pathname;
+            book.thumbnail = $( `${ parentElementSelector } .enm-thumbnail img` )
+                .getAttribute( 'src' );
+            // When testing Chrome, the absolute URL is returned instead of the relative path
+            if ( book.thumbnail.startsWith( 'http' ) ) {
+                book.thumbnail = new URL( book.thumbnail ).pathname;
+            }
             book.title     = $( `${ parentElementSelector } .title` ).getText();
 
             books.push( book );
