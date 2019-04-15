@@ -60,7 +60,7 @@ suite( 'Search form', function () {
 
             SearchPage.search( 'anything' );
 
-            assert.equal( SearchPage.alertText(), 'Please check one or more boxes: Full Text, Topics' );
+            assert.equal( SearchPage.alertText, 'Please check one or more boxes: Full Text, Topics' );
         }
     );
 } );
