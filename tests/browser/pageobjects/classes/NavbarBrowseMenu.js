@@ -18,14 +18,11 @@ class NavbarBrowseMenu {
     };
 
     expand() {
-        // Call .moveToObject on some element other than Browse before calling
-        // .moveToObject on Browse.  This fixes "Feature Topics" test failure in
-        // Firefox.  The working theory is that the previous test also calls this
-        // method and leaves the mouse cursor on the Browse menu, perhaps nullifying
-        // the .moveToObject in the subsequent test.
-        // See https://jira.nyu.edu/jira/browse/NYUP-542
-        $( 'a.navbar-item=About' ).moveToObject( 0, 0 );
-        $( 'a.navbar-link=Browse' ).moveToObject( 0, 0 );
+        // This method has historically been tricky to implement for Firefox.
+        // See:
+        //    * https://jira.nyu.edu/jira/browse/NYUP-542
+        //    * https://jira.nyu.edu/jira/browse/NYUP-619
+        $( 'a.navbar-link=Browse' ).moveTo();
     };
 }
 

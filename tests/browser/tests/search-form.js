@@ -26,7 +26,7 @@ suite( 'Search form', function () {
     test( 'Spinner should appear when search is submitted', function () {
         SearchPage.search( 'anything' );
 
-        assert( SearchPage.spinner.isVisible(), 'Spinner did not appear' );
+        assert( SearchPage.spinner.isDisplayed(), 'Spinner did not appear' );
     } );
 
     test(
@@ -60,7 +60,7 @@ suite( 'Search form', function () {
 
             SearchPage.search( 'anything' );
 
-            assert.equal( SearchPage.alertText(), 'Please check one or more boxes: Full Text, Topics' );
+            assert.equal( SearchPage.alertText, 'Please check one or more boxes: Full Text, Topics' );
         }
     );
 } );
