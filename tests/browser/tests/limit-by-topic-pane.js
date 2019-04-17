@@ -33,7 +33,7 @@ suite( 'Limit by Topic Pane', function () {
         SearchPage.searchAndWaitForResults( 'nerdfighter +"Helen Merrick (2009)"' );
 
         assert(
-            SearchPage.limitByTopicPane.seeAllLink.isVisible() === false,
+            SearchPage.limitByTopicPane.seeAllLink.isDisplayed() === false,
             '"See all" link is present even when there are no toggle-able topics'
         );
     } );
@@ -78,8 +78,8 @@ suite( 'Limit by Topic Pane', function () {
             SearchPage.limitByTopicPane.seeAllLink.click();
 
             assert(
-                SearchPage.limitByTopicPane.seeAllLink.isVisible() === false &&
-                SearchPage.limitByTopicPane.seeLessLink.isVisible() === true,
+                SearchPage.limitByTopicPane.seeAllLink.isDisplayed() === false &&
+                SearchPage.limitByTopicPane.seeLessLink.isDisplayed() === true,
                 seeAllSeeLessMode()
             );
         }
@@ -135,8 +135,8 @@ suite( 'Limit by Topic Pane', function () {
             SearchPage.limitByTopicPane.seeLessLink.click();
 
             assert(
-                SearchPage.limitByTopicPane.seeAllLink.isVisible() === true &&
-                SearchPage.limitByTopicPane.seeLessLink.isVisible() === false,
+                SearchPage.limitByTopicPane.seeAllLink.isDisplayed() === true &&
+                SearchPage.limitByTopicPane.seeLessLink.isDisplayed() === false,
                 seeAllSeeLessMode()
             );
         }
@@ -146,13 +146,13 @@ suite( 'Limit by Topic Pane', function () {
 function seeAllSeeLessMode() {
     let mode = '';
 
-    if ( SearchPage.limitByTopicPane.seeAllLink.isVisible() ) {
+    if ( SearchPage.limitByTopicPane.seeAllLink.isDisplayed() ) {
         mode += '"See all" is visible and ';
     } else {
         mode += '"See all" is not visible and ';
     }
 
-    if ( SearchPage.limitByTopicPane.seeLessLink.isVisible() ) {
+    if ( SearchPage.limitByTopicPane.seeLessLink.isDisplayed() ) {
         mode += '"See less" is visible.';
     } else {
         mode += '"See less" is not visible.';

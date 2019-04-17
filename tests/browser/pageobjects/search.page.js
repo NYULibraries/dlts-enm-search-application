@@ -24,7 +24,7 @@ class SearchPage extends Page {
     }
 
     get alertText() {
-        return browser.alertText;
+        return browser.getAlertText();
     }
 
     get baseUrl() {
@@ -59,8 +59,8 @@ class SearchPage extends Page {
     open( options ) {
         let url = this.paths.search;
 
-        if ( browser.options.solrFake ) {
-            url += `?solr=${ browser.options.solrFake.url }`;
+        if ( browser.config.solrFake ) {
+            url += `?solr=${ browser.config.solrFake.url }`;
 
             if ( options && options.solrErrorSimulation ) {
                 url += '&solrErrorSimulation=' + options.solrErrorSimulation;
@@ -73,13 +73,13 @@ class SearchPage extends Page {
     dismissSearchDCIAndWaitForResults() {
         this.searchEcho.searchDCI.dismiss();
 
-        this.resultsPane.results._element.waitForVisible();
+        this.resultsPane.results._element.waitForDisplayed();
     }
 
     dismissTopicDCIAndWaitForResults( topic ) {
         this.searchEcho.topicDCIs.dismiss( topic );
 
-        this.resultsPane.results._element.waitForVisible();
+        this.resultsPane.results._element.waitForDisplayed();
     }
 
     limitByTopicAndWaitForResults( topic ) {
@@ -87,11 +87,11 @@ class SearchPage extends Page {
             this.limitByTopicPane.topic( topic ).click();
         } else {
             this.limitByTopicPane.seeAllLink.click();
-            this.limitByTopicPane.topic( topic ).waitForVisible( 5000 );
+            this.limitByTopicPane.topic( topic ).waitForDisplayed( 5000 );
             this.limitByTopicPane.topic( topic ).click();
         }
 
-        this.resultsPane.results._element.waitForVisible();
+        this.resultsPane.results._element.waitForDisplayed();
     }
 
     getPreviewId( query, searchFulltext, searchTopics, topicDCIsTopics, isbn, pageNumber ) {
@@ -172,14 +172,15 @@ class SearchPage extends Page {
     }
 
     search( query ) {
-        this.searchForm.searchBox.addValue( query );
-        this.searchForm.submit();
+        // Previously was submitting the form using `browser.keys( '\uE006' )` in
+        // SearchForm.submit method, but that seemed to cause problems in Search Form
+        // tests.  See https://jira.nyu.edu/jira/browse/NYUP-619 for details.
+        this.searchForm.searchBox.addValue( query + '\uE006' );
     }
 
     searchAndWaitForResults( query ) {
-        this.searchForm.searchBox.addValue( query );
-        this.searchForm.submit();
-        this.resultsPane.results._element.waitForVisible();
+        this.search( query );
+        this.resultsPane.results._element.waitForDisplayed();
     }
 
     searchResultsSnapshot() {
@@ -200,13 +201,13 @@ class SearchPage extends Page {
         };
     }
 
-    setViewportSize( size ) {
+    setWindowSize( size ) {
         // size must be an object with width and height fields:
         // {
         //     width  : 500,
         //     height : 500,
         // }
-        browser.setViewportSize( size );
+        browser.setWindowSize( size.width, size.height );
     }
 }
 
