@@ -12,11 +12,6 @@ class SearchForm {
     get searchBox() {
         return $( '#enm-searchinput' );
     }
-
-    submit() {
-        this.searchBox.click();
-        browser.keys( '\uE006' );
-    }
 }
 
 export default SearchForm;

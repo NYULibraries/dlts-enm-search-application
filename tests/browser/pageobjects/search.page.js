@@ -172,13 +172,14 @@ class SearchPage extends Page {
     }
 
     search( query ) {
-        this.searchForm.searchBox.addValue( query );
-        this.searchForm.submit();
+        // Previously was submitting the form using `browser.keys( '\uE006' )` in
+        // SearchForm.submit method, but that seemed to cause problems in Search Form
+        // tests.  See https://jira.nyu.edu/jira/browse/NYUP-619 for details.
+        this.searchForm.searchBox.addValue( query + '\uE006' );
     }
 
     searchAndWaitForResults( query ) {
-        this.searchForm.searchBox.addValue( query );
-        this.searchForm.submit();
+        this.search( query );
         this.resultsPane.results._element.waitForDisplayed();
     }
 
