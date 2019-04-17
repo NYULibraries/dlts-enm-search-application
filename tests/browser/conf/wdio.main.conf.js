@@ -1,7 +1,7 @@
 const path = require( 'path' );
 
 const solrFake                      = require( 'dlts-solr-fake' );
-const SOLR_FAKE_RESPONSES_DIRECTORY = path.join( __dirname, '../fixtures' );
+const SOLR_FAKE_RESPONSES_DIRECTORY = path.join( __dirname, '../fixtures/solr-fake' );
 
 exports.config = {
     //
