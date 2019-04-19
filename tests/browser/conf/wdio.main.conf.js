@@ -208,7 +208,7 @@ exports.config = {
 
             // UPDATE_SOLR_RESPONSES_SOLR_SERVER_URL environment variable if used
             // should be of the form:
-            // http://[HOST]:[PORT]/solr/open-square-metadata/select
+            // http://[HOST]:[PORT]/solr/enm-pages/select
             if ( process.env.UPDATE_SOLR_RESPONSES_SOLR_SERVER_URL ) {
                 options.updateSolrResponsesSolrServerUrl = process.env.UPDATE_SOLR_RESPONSES_SOLR_SERVER_URL;
             }
