@@ -1,0 +1,45 @@
+{
+    "facet_counts": {
+        "facet_fields": {
+            "topicNames_facet": [
+            ]
+        },
+        "facet_heatmaps": {
+        },
+        "facet_intervals": {
+        },
+        "facet_queries": {
+        },
+        "facet_ranges": {
+        }
+    },
+    "grouped": {
+        "isbn": {
+            "groups": [
+            ],
+            "matches": 0
+        }
+    },
+    "responseHeader": {
+        "QTime": 0,
+        "params": {
+            "defType": "edismax",
+            "facet": "on",
+            "facet.field": "topicNames_facet",
+            "facet.limit": "-1",
+            "facet.mincount": "1",
+            "facet.sort": "count",
+            "fl": "title,authors,publisher,yearOfPublication,score",
+            "group": "true",
+            "group.field": "isbn",
+            "group.limit": "999",
+            "indent": "on",
+            "q": "the",
+            "qf": "topicNames",
+            "rows": "1999",
+            "sort": "score desc,title_facet asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}

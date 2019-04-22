@@ -1,0 +1,731 @@
+{
+    "facet_counts": {
+        "facet_fields": {
+            "topicNames_facet": [
+                "values",
+                23,
+                "routines",
+                5,
+                "business desk",
+                3,
+                "immediacy",
+                3,
+                "participation",
+                3,
+                "Gray Lady",
+                2,
+                "Ingrassia, Larry",
+                2,
+                "Kohut, Heinz",
+                2,
+                "Page One",
+                2,
+                "Persona",
+                2,
+                "Self-regard",
+                2,
+                "Thompson, Michael",
+                2,
+                "Twitter",
+                2,
+                "credit cards",
+                2,
+                "fresh content",
+                2,
+                "identity",
+                2,
+                "landfills",
+                2,
+                "performativity",
+                2,
+                "power",
+                2,
+                "recycling",
+                2,
+                "spreadable Web site",
+                2,
+                "sticky Web site",
+                2,
+                "things",
+                2,
+                "waste",
+                2,
+                "\"new economy,\" defined",
+                1,
+                "ASAP journalism",
+                1,
+                "Ability -- to inspire loyalty among followers",
+                1,
+                "Achievement",
+                1,
+                "Active-negative character type",
+                1,
+                "Adkins, Lisa",
+                1,
+                "Amazon.com",
+                1,
+                "Ambition -- Kohut's theory and",
+                1,
+                "Ambition -- dilemmas of in presidential candidates",
+                1,
+                "Behavior(al)",
+                1,
+                "Benjamin, Walter -- The Arcades Project",
+                1,
+                "Calvino -- Italo",
+                1,
+                "Campaign(s) and campaigning -- coverage by the press",
+                1,
+                "Campaign(s) and campaigning -- presidential",
+                1,
+                "Candidate(s) and candidacies",
+                1,
+                "Character -- integrity",
+                1,
+                "Character -- types",
+                1,
+                "Character integrity -- William J. Clinton's",
+                1,
+                "Character integrity -- personas and",
+                1,
+                "Character issues -- Gary Hart and",
+                1,
+                "Characterological -- strengths",
+                1,
+                "Clinton, William J. -- integrity of",
+                1,
+                "Cognitive/cognition -- capacity",
+                1,
+                "Cognitive/cognition -- structures",
+                1,
+                "Commitment",
+                1,
+                "Dealbook",
+                1,
+                "Death of a Salesman",
+                1,
+                "Development(al) -- history",
+                1,
+                "Dionne, E. J., Jr.",
+                1,
+                "Doty, Cate",
+                1,
+                "Dugan, John",
+                1,
+                "Edgerley, Susan",
+                1,
+                "Eisenhower, Dwight D.",
+                1,
+                "Emotional -- structures",
+                1,
+                "Energy level",
+                1,
+                "Experience(s) -- identity development and",
+                1,
+                "Facebook",
+                1,
+                "FedEx",
+                1,
+                "Fisher, Melissa, and Greg Downey",
+                1,
+                "Friendship(s)",
+                1,
+                "Fulbright, J. William",
+                1,
+                "Gallagher, David",
+                1,
+                "George, Alexander L.",
+                1,
+                "George, Juliette",
+                1,
+                "Getzfred, Mark",
+                1,
+                "Goals",
+                1,
+                "Goel, Vindu",
+                1,
+                "Goldman Sachs",
+                1,
+                "Google",
+                1,
+                "Grobart, Sam",
+                1,
+                "Hart, Gary -- intelligence of",
+                1,
+                "Hart, Gary -- public commentary on failed candidacy of",
+                1,
+                "Harvey, David",
+                1,
+                "Hetherington, Kevin",
+                1,
+                "Ideals",
+                1,
+                "Ideals -- pursuit of",
+                1,
+                "International Association of Electronics Recyclers",
+                1,
+                "Jones, Alex S. -- The Trust",
+                1,
+                "Kelly, Kevin",
+                1,
+                "Krishna, Gopal",
+                1,
+                "Lasswell, Harold D.",
+                1,
+                "Lee, Jenny",
+                1,
+                "Libidinal, binding -- investment",
+                1,
+                "Loon, Joost Van, and Ida Sabelis",
+                1,
+                "Markoff, John",
+                1,
+                "Marx, Karl",
+                1,
+                "McGowan, William, Gray Lady Down",
+                1,
+                "Miller, Arthur",
+                1,
+                "Moore, R., Jr.",
+                1,
+                "Morgenson, Gretchen",
+                1,
+                "Motivation(s)",
+                1,
+                "Motivational, emotional, and cognitive (psychological) structures",
+                1,
+                "NASDAQ",
+                1,
+                "NPR",
+                1,
+                "Narcissism -- and grandiosity",
+                1,
+                "Needs and motives",
+                1,
+                "O'Brien, Martin",
+                1,
+                "Office of the Comptroller of Currency (OCC)",
+                1,
+                "Personal -- identity",
+                1,
+                "Phillips, Bill",
+                1,
+                "Political -- charisma",
+                1,
+                "Political -- experience",
+                1,
+                "Political -- persona",
+                1,
+                "Political -- psychology",
+                1,
+                "President(ial) -- psychology",
+                1,
+                "President(ial) -- recruitment",
+                1,
+                "Privacy",
+                1,
+                "Psychoanalytic -- theory",
+                1,
+                "Psychological suitability -- functional impairment and",
+                1,
+                "Psychological(ly) -- motivations, skills, and ideals",
+                1,
+                "Psychological(ly) -- structures",
+                1,
+                "Psychological(ly) -- suitability",
+                1,
+                "Puckett, Jim",
+                1,
+                "Reagan, President Ronald",
+                1,
+                "Risks -- taking",
+                1,
+                "San Francisco, CA",
+                1,
+                "Scanlan, John",
+                1,
+                "Self -- confidence",
+                1,
+                "Self -- esteem",
+                1,
+                "Self -- image",
+                1,
+                "Self -- sense of",
+                1,
+                "Self -- worth",
+                1,
+                "Self-destructive impulses",
+                1,
+                "Self–structure",
+                1,
+                "Serres, Michel",
+                1,
+                "Silicon Valley",
+                1,
+                "Skills",
+                1,
+                "Staley, C.",
+                1,
+                "Staley, Carolyn",
+                1,
+                "Style",
+                1,
+                "Sussman, Mick",
+                1,
+                "Talese, Gay, The Kingdom and the Power",
+                1,
+                "The Boston Globe",
+                1,
+                "The New York Times -- Web history",
+                1,
+                "The New York Times -- established",
+                1,
+                "The New York Times -- in 2010",
+                1,
+                "The Washington Post",
+                1,
+                "Tifft, Susan E.: The Trust",
+                1,
+                "Unconscious, the",
+                1,
+                "WISC",
+                1,
+                "Washington, D.C.",
+                1,
+                "Wicker, T.",
+                1,
+                "Wired",
+                1,
+                "Woman",
+                1,
+                "Womanizing",
+                1,
+                "World Wide Web",
+                1,
+                "banks",
+                1,
+                "blogs -- liveblog",
+                1,
+                "bubbles, financial",
+                1,
+                "business desk -- and print life cycle",
+                1,
+                "circulation",
+                1,
+                "computers",
+                1,
+                "consumption",
+                1,
+                "dead/failed media",
+                1,
+                "debit cards",
+                1,
+                "digital media",
+                1,
+                "dirt",
+                1,
+                "ecologies",
+                1,
+                "engagement",
+                1,
+                "exchange",
+                1,
+                "hackers",
+                1,
+                "hardware, discarded",
+                1,
+                "hazardous waste",
+                1,
+                "headlines",
+                1,
+                "home page -- producers",
+                1,
+                "iPad",
+                1,
+                "immediacy -- business news and print life cycle",
+                1,
+                "immediacy -- for Page One",
+                1,
+                "intensity",
+                1,
+                "interactivity -- multimedia",
+                1,
+                "interactivity -- values",
+                1,
+                "materiality",
+                1,
+                "methods",
+                1,
+                "mobility",
+                1,
+                "multimedia",
+                1,
+                "narcissism",
+                1,
+                "networks, electronic",
+                1,
+                "obsolescence",
+                1,
+                "participation -- no time",
+                1,
+                "paywall",
+                1,
+                "pollution",
+                1,
+                "press -- the",
+                1,
+                "print product -- business news",
+                1,
+                "repair",
+                1,
+                "rubbish theory",
+                1,
+                "scoop",
+                1,
+                "screens",
+                1,
+                "spam",
+                1,
+                "stock market",
+                1,
+                "temporality",
+                1,
+                "values -- emergent",
+                1,
+                "virtue",
+                1
+            ]
+        },
+        "facet_heatmaps": {
+        },
+        "facet_intervals": {
+        },
+        "facet_queries": {
+        },
+        "facet_ranges": {
+        }
+    },
+    "grouped": {
+        "isbn": {
+            "groups": [
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Usher, Nikki"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 3.3327827,
+                                "title": "Making News at The New York Times",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Usher, Nikki"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.8734493,
+                                "title": "Making News at The New York Times",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Usher, Nikki"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.6387407,
+                                "title": "Making News at The New York Times",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Usher, Nikki"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.6387407,
+                                "title": "Making News at The New York Times",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Usher, Nikki"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.6387407,
+                                "title": "Making News at The New York Times",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Usher, Nikki"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.6387407,
+                                "title": "Making News at The New York Times",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Usher, Nikki"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.5084217,
+                                "title": "Making News at The New York Times",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Usher, Nikki"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.1910797,
+                                "title": "Making News at The New York Times",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Usher, Nikki"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.0581851,
+                                "title": "Making News at The New York Times",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Usher, Nikki"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.0581851,
+                                "title": "Making News at The New York Times",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Usher, Nikki"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.0581851,
+                                "title": "Making News at The New York Times",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 3.3327827,
+                        "numFound": 11,
+                        "start": 0
+                    },
+                    "groupValue": "9780472120499"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Gabrys, Jennifer"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 2.1663415,
+                                "title": "Digital Rubbish: A Natural History of Electronics",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Gabrys, Jennifer"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.5084217,
+                                "title": "Digital Rubbish: A Natural History of Electronics",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Gabrys, Jennifer"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.1910797,
+                                "title": "Digital Rubbish: A Natural History of Electronics",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Gabrys, Jennifer"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.0581851,
+                                "title": "Digital Rubbish: A Natural History of Electronics",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Gabrys, Jennifer"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.0581851,
+                                "title": "Digital Rubbish: A Natural History of Electronics",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Gabrys, Jennifer"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 1.0581851,
+                                "title": "Digital Rubbish: A Natural History of Electronics",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Gabrys, Jennifer"
+                                ],
+                                "publisher": [
+                                    "The University of Michigan Press"
+                                ],
+                                "score": 0.90295917,
+                                "title": "Digital Rubbish: A Natural History of Electronics",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 2.1663415,
+                        "numFound": 7,
+                        "start": 0
+                    },
+                    "groupValue": "9780472029402"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Stanley A. Renshon"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 1.6387407,
+                                "title": "The Psychological Assessment of Presidential Candidates",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Stanley A. Renshon"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 1.5084217,
+                                "title": "The Psychological Assessment of Presidential Candidates",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Stanley A. Renshon"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 1.5084217,
+                                "title": "The Psychological Assessment of Presidential Candidates",
+                                "yearOfPublication": 0
+                            },
+                            {
+                                "authors": [
+                                    "Stanley A. Renshon"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 1.1910797,
+                                "title": "The Psychological Assessment of Presidential Candidates",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 1.6387407,
+                        "numFound": 4,
+                        "start": 0
+                    },
+                    "groupValue": "9780814774694"
+                },
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Marshall W. Alcorn, Jr."
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 1.5084217,
+                                "title": "Narcissism and the Literary Libido",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 1.5084217,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780814706657"
+                }
+            ],
+            "matches": 23
+        }
+    },
+    "responseHeader": {
+        "QTime": 1,
+        "params": {
+            "defType": "edismax",
+            "facet": "on",
+            "facet.field": "topicNames_facet",
+            "facet.limit": "-1",
+            "facet.mincount": "1",
+            "facet.sort": "count",
+            "fl": "title,authors,publisher,yearOfPublication,score",
+            "fq": "topicNames_facet:\"values\"",
+            "group": "true",
+            "group.field": "isbn",
+            "group.limit": "999",
+            "indent": "on",
+            "q": "time",
+            "qf": "pageText topicNames",
+            "rows": "1999",
+            "sort": "score desc,title_facet asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}
