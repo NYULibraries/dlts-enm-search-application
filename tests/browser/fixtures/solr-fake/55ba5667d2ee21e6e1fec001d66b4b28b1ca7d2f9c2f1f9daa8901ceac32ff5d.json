@@ -1,0 +1,62 @@
+{
+    "response": {
+        "docs": [
+            {
+                "epubNumberOfPages": 272,
+                "pageLocalId": "page_12",
+                "pageNumberForDisplay": "12",
+                "pageSequenceNumber": 20,
+                "score": 5.5347614
+            },
+            {
+                "epubNumberOfPages": 272,
+                "pageLocalId": "page_13",
+                "pageNumberForDisplay": "13",
+                "pageSequenceNumber": 21,
+                "score": 4.7891774
+            },
+            {
+                "epubNumberOfPages": 272,
+                "pageLocalId": "page_26",
+                "pageNumberForDisplay": "26",
+                "pageSequenceNumber": 34,
+                "score": 6.5915394
+            },
+            {
+                "epubNumberOfPages": 272,
+                "pageLocalId": "page_101",
+                "pageNumberForDisplay": "101",
+                "pageSequenceNumber": 109,
+                "score": 4.448686
+            },
+            {
+                "epubNumberOfPages": 272,
+                "pageLocalId": "page_163",
+                "pageNumberForDisplay": "163",
+                "pageSequenceNumber": 171,
+                "score": 4.448686
+            }
+        ],
+        "maxScore": 6.5915394,
+        "numFound": 5,
+        "start": 0
+    },
+    "responseHeader": {
+        "QTime": 0,
+        "params": {
+            "defType": "edismax",
+            "fl": "pageLocalId,pageNumberForDisplay,pageSequenceNumber,epubNumberOfPages,score",
+            "fq": [
+                "isbn_facet:\"9781452941516\"",
+                "topicNames_facet:\"modernism\""
+            ],
+            "indent": "on",
+            "q": "art",
+            "qf": "pageText topicNames",
+            "rows": "999",
+            "sort": "pageSequenceNumber asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}

@@ -1,0 +1,126 @@
+{
+    "facet_counts": {
+        "facet_fields": {
+            "topicNames_facet": [
+                "Behavior(al)",
+                1,
+                "Campaign(s) and campaigning -- presidential",
+                1,
+                "Candidate(s) and candidacies",
+                1,
+                "Character integrity -- personas and",
+                1,
+                "Characterological -- strengths",
+                1,
+                "Cognitive/cognition -- capacity",
+                1,
+                "Cognitive/cognition -- structures",
+                1,
+                "Development(al) -- history",
+                1,
+                "Emotional -- structures",
+                1,
+                "Experience(s) -- identity development and",
+                1,
+                "George, Alexander L.",
+                1,
+                "George, Juliette",
+                1,
+                "Ideals -- pursuit of",
+                1,
+                "Kohut, Heinz",
+                1,
+                "Lasswell, Harold D.",
+                1,
+                "Motivational, emotional, and cognitive (psychological) structures",
+                1,
+                "Needs and motives",
+                1,
+                "Persona",
+                1,
+                "Personal -- identity",
+                1,
+                "Psychoanalytic -- theory",
+                1,
+                "Psychological(ly) -- motivations, skills, and ideals",
+                1,
+                "Self -- sense of",
+                1,
+                "Skills",
+                1,
+                "Style",
+                1,
+                "identity",
+                1,
+                "power",
+                1,
+                "values",
+                1,
+                "virtue",
+                1
+            ]
+        },
+        "facet_heatmaps": {
+        },
+        "facet_intervals": {
+        },
+        "facet_queries": {
+        },
+        "facet_ranges": {
+        }
+    },
+    "grouped": {
+        "isbn": {
+            "groups": [
+                {
+                    "doclist": {
+                        "docs": [
+                            {
+                                "authors": [
+                                    "Stanley A. Renshon"
+                                ],
+                                "publisher": [
+                                    "New York University Press"
+                                ],
+                                "score": 1.1910797,
+                                "title": "The Psychological Assessment of Presidential Candidates",
+                                "yearOfPublication": 0
+                            }
+                        ],
+                        "maxScore": 1.1910797,
+                        "numFound": 1,
+                        "start": 0
+                    },
+                    "groupValue": "9780814774694"
+                }
+            ],
+            "matches": 1
+        }
+    },
+    "responseHeader": {
+        "QTime": 1,
+        "params": {
+            "defType": "edismax",
+            "facet": "on",
+            "facet.field": "topicNames_facet",
+            "facet.limit": "-1",
+            "facet.mincount": "1",
+            "facet.sort": "count",
+            "fl": "title,authors,publisher,yearOfPublication,score",
+            "fq": [
+                "topicNames_facet:\"values\"",
+                "topicNames_facet:\"virtue\""
+            ],
+            "group": "true",
+            "group.field": "isbn",
+            "group.limit": "999",
+            "indent": "on",
+            "q": "time",
+            "qf": "pageText topicNames",
+            "rows": "1999",
+            "sort": "score desc,title_facet asc",
+            "wt": "json"
+        },
+        "status": 0
+    }
+}
