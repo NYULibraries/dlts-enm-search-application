@@ -3,9 +3,12 @@
 import _ from 'lodash';
 import { assert } from 'chai';
 import { EOL } from 'os';
+import fs from 'fs';
 import SearchPage from '../pageobjects/search.page';
 import {
     getGoldenFilePath,
+    jsonStableStringify,
+    updateGoldenFiles,
     SUITE_NAME,
 } from '../util';
 
@@ -44,10 +47,21 @@ suite( 'Limit by Topic Pane', function () {
             SearchPage.searchAndWaitForResults( 'Dungeons & Dragons' );
             SearchPage.limitByTopicPane.seeAllLink.click();
 
-            const expectedLimitByTopics = require(
-                getGoldenFilePath( SUITE_NAME.limitByTopicPane, SearchPage.getSearchIdForCurrentSearch() )
+            const goldenFile = getGoldenFilePath(
+                SUITE_NAME.limitByTopicPane,
+                SearchPage.getSearchIdForCurrentSearch()
             );
             const actualLimitByTopics = SearchPage.limitByTopicPane.topicNames;
+
+            if ( updateGoldenFiles() ) {
+                fs.writeFileSync( goldenFile, jsonStableStringify( actualLimitByTopics ) );
+
+                console.log( `Updated golden file ${ goldenFile }` );
+
+                return;
+            }
+
+            const expectedLimitByTopics = require( goldenFile );
 
             const inActualNotExpected = _.difference( actualLimitByTopics, expectedLimitByTopics );
             const inExpectedNotActual = _.difference( expectedLimitByTopics, actualLimitByTopics );
