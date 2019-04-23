@@ -15,19 +15,11 @@ import {
     getGoldenFiles,
     isDisabled,
     jsonStableStringify,
+    updateGoldenFiles,
     SUITE_NAME,
 } from '../util';
 
 const goldenFiles = getGoldenFiles( SUITE_NAME.previewPane );
-
-let updateGoldenFiles = false;
-
-if (
-    process.env.UPDATE_GOLDEN_FILES &&
-    process.env.UPDATE_GOLDEN_FILES.toLowerCase() !== 'false'
-) {
-    updateGoldenFiles = true;
-}
 
 suite( 'Preview Pane', function () {
     suiteSetup( function () {
@@ -210,7 +202,7 @@ function compareActualToGolden( goldenFile ) {
 
     const actualFile = getActualFilePath( SUITE_NAME.previewPane, previewId );
 
-    if ( updateGoldenFiles ) {
+    if ( updateGoldenFiles() ) {
         fs.writeFileSync( goldenFile, stringifiedSnapshot );
 
         console.log( `Updated golden file ${ goldenFile }` );
