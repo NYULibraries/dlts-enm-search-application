@@ -117,7 +117,7 @@ Solr index will be used to generate the new Solr fixture data.
 
 3) Run `yarn test:browser:update:fixtures`.
 
-The `index.json` and Solr response files in `tests/browser/fixtures/` will be updated
+The `index.json` and Solr response files in `tests/browser/fixtures/solr-fake/` will be updated
 by the Solr fake.
 
 #### Golden files
