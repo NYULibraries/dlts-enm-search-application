@@ -14,19 +14,11 @@ import {
     getGoldenFilePath,
     getGoldenFiles,
     jsonStableStringify,
+    updateGoldenFiles,
     SUITE_NAME,
 } from '../util';
 
 const goldenFiles = getGoldenFiles( SUITE_NAME.searchResults );
-
-let updateGoldenFiles = false;
-
-if (
-    process.env.UPDATE_GOLDEN_FILES &&
-    process.env.UPDATE_GOLDEN_FILES.toLowerCase() !== 'false'
-) {
-    updateGoldenFiles = true;
-}
 
 suite( 'Search results', function () {
     suiteSetup( function () {
@@ -98,7 +90,7 @@ function testSearchResults( golden ) {
         const actualFile = getActualFilePath( SUITE_NAME.searchResults, searchId );
         const goldenFile = getGoldenFilePath( SUITE_NAME.searchResults, searchId );
 
-        if ( updateGoldenFiles ) {
+        if ( updateGoldenFiles() ) {
             fs.writeFileSync( goldenFile, stringifiedSnapshot );
 
             console.log( `Updated golden file ${ goldenFile }` );

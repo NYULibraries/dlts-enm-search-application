@@ -137,6 +137,11 @@ function jsonStableStringify( data ) {
     );
 }
 
+function updateGoldenFiles() {
+    return process.env.UPDATE_GOLDEN_FILES &&
+           process.env.UPDATE_GOLDEN_FILES.toLowerCase() !== 'false';
+}
+
 export const SUITE_NAME = {
     limitByTopicPane : 'limit-by-topic-pane',
     previewPane      : 'preview-pane',
@@ -156,4 +161,5 @@ export {
     getGoldenFilesDirectory,
     isDisabled,
     jsonStableStringify,
+    updateGoldenFiles,
 };
