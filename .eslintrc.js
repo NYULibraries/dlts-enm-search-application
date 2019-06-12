@@ -13,9 +13,14 @@ module.exports = {
     env : {
         browser : true,
         es6     : true,
+        'jest/globals': true,
         node    : true,
     },
     extends : [
+        // https://github.com/jest-community/eslint-plugin-jest/blob/master/src/index.js?#L19-#L37
+        'plugin:jest/recommended',
+        // https://github.com/jest-community/eslint-plugin-jest/blob/master/src/index.js?#L38-#L46
+        'plugin:jest/style',
         // https://github.com/standard/eslint-config-standard/blob/ddd325066548a9e94b31fe2c8fa968ae5a49edfb/eslintrc.json
         '@vue/standard',
         // https://github.com/vuejs/eslint-plugin-vue/blob/9fdf8e030c880e99f9bfa63fe10c3408961ee256/lib/configs/recommended.js
@@ -23,6 +28,7 @@ module.exports = {
     ],
     // required to lint *.vue files
     plugins : [
+        'jest',
         'vue',
     ],
     // add your custom rules here
