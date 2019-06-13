@@ -1,9 +1,11 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
+import Vuex from 'vuex';
+
 import App from './App';
 import EnmSolr from './plugins/enm-solr';
-import store from './store';
+import storeConfig from './store/store-config';
 
 require( './assets/sass/bulma.scss' );
 
@@ -52,6 +54,9 @@ if ( solrOverrideUrl ) {
 }
 
 Vue.use( EnmSolr, enmSolrOptions );
+
+Vue.use( Vuex );
+const store = new Vuex.Store( storeConfig );
 
 new Vue( {
     el         : '#app',
