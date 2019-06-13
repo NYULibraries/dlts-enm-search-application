@@ -75,5 +75,38 @@
     "engines": {
         "node": ">= 6.0.0",
         "npm": ">= 3.0.0"
+    },
+    "jest": {
+        "moduleFileExtensions": [
+            "js",
+            "jsx",
+            "json",
+            "vue"
+        ],
+        "moduleNameMapper": {
+            "^@/(.*)$": "<rootDir>/src/$1"
+        },
+        "notify": true,
+        "notifyMode": "always",
+        "snapshotSerializers": [
+            "jest-serializer-vue"
+        ],
+        "testMatch": [
+            "**/tests/unit/**/*.test.(js|jsx|ts|tsx)"
+        ],
+        "testURL": "http://localhost/",
+        "transform": {
+            "^.+\\.jsx?$": "babel-jest",
+            ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+            "^.+\\.vue$": "vue-jest"
+        },
+        "transformIgnorePatterns": [
+            "/node_modules/"
+        ],
+        "watchPlugins": [
+            "jest-watch-typeahead/filename",
+            "jest-watch-typeahead/testname"
+        ],
+        "verbose": true
     }
 }
