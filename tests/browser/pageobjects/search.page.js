@@ -28,7 +28,7 @@ class SearchPage extends Page {
     }
 
     get baseUrl() {
-        return browser.options.baseUrl;
+        return browser.config.baseUrl;
     }
 
     get googleAnalytics() {

@@ -19,7 +19,7 @@ suite( 'Search form', function () {
             const googleAnalytics = SearchPage.googleAnalytics;
             let expectedGoogleAnalytics = [];
 
-            if ( browser.options.enmGoogleAnalytics ) {
+            if ( browser.config.enmGoogleAnalytics ) {
                 expectedGoogleAnalytics = [
                     '<script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>',
                     '<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-51495518-4"></script>',
