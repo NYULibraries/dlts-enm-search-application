@@ -1,6 +1,6 @@
 {
     "name": "enm-search-application",
-    "version": "1.1.1",
+    "version": "1.1.4",
     "description": "Vue.js/D3 search SPA for the DLTS Enhanced Networked Monographs website.",
     "author": "David <da70@nyu.edu>",
     "private": true,
