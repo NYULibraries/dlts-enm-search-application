@@ -83,6 +83,11 @@ exports.config = {
     // If there are for example 9 test files and 2 capabilities (Firefox and Chrome, say) and
     // maxInstances is set to 9, webdriverio will open 5 Chrome windows and 4 Firefox windows.
     //
+    // Recently there's been a bit of test flake when using 4 or 8 maxInstances.
+    // In particular the 'united states of america' preview pane tests have been
+    // timing out.  For now keeping it at one Chrome and one Firefox instance.
+    maxInstances           : 2,
+    //
     // If you have trouble getting all important capabilities together, check out the
     // Sauce Labs platform configurator - a great tool to configure your capabilities:
     // https://docs.saucelabs.com/reference/platforms-configurator
