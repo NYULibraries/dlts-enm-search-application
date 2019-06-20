@@ -50,6 +50,7 @@
         "@wdio/selenium-standalone-service": "^5.9.3",
         "@wdio/spec-reporter": "^5.9.3",
         "@wdio/sync": "^5.10.1",
+        "babel-core": "7.0.0-bridge.0",
         "babel-eslint": "^10.0.2",
         "babel-jest": "^24.8.0",
         "chai": "^4.1.2",
