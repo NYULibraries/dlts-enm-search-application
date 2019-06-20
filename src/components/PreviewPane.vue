@@ -11,13 +11,13 @@
         >
             <p class="message-body has-text-centered">
                 Choose a book at left to view matched pages, or
-                                                             <br>
-                                                             <a
-                                                                 href="#"
-                                                                 @click="loadFirstMatchedPage"
-                                                             >
-                                                                 Load the first matched page
-                                                             </a>
+                <br>
+                <a
+                    href="#"
+                    @click="loadFirstMatchedPage"
+                >
+                    Load the first matched page
+                </a>
             </p>
         </div>
         <!--PREVIEW: NO EPUB SELECTED-->
