@@ -22,32 +22,12 @@ describe( 'store-config', () => {
             'topicFacetItem3',
         ];
 
-        test( 'addSelectedTopicFacetItem mutation', () => {
-            const sampleTopicFacetItem = sampleTopicFacetItems[ 0 ];
-
-            store.commit( 'addSelectedTopicFacetItem', sampleTopicFacetItem );
-
-            expect( store.getters.selectedTopicFacetItems ).toEqual( [ sampleTopicFacetItem ] );
-        } );
-
         test( 'addSelectedTopicFacetItem action', () => {
             const sampleTopicFacetItem = sampleTopicFacetItems[ 0 ];
 
             store.dispatch( 'addSelectedTopicFacetItem', sampleTopicFacetItem );
 
             expect( store.getters.selectedTopicFacetItems ).toEqual( [ sampleTopicFacetItem ] );
-        } );
-
-        test( 'clearSelectedTopicFacetItems mutation', () => {
-            store.commit( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 0 ] );
-            store.commit( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 1 ] );
-            store.commit( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 2 ] );
-
-            expect( store.getters.selectedTopicFacetItems ).toEqual( sampleTopicFacetItems );
-
-            store.commit( 'clearSelectedTopicFacetItems' );
-
-            expect( store.getters.selectedTopicFacetItems ).toEqual( [] );
         } );
 
         test( 'clearSelectedTopicFacetItems action', () => {
@@ -60,22 +40,6 @@ describe( 'store-config', () => {
             store.dispatch( 'clearSelectedTopicFacetItems' );
 
             expect( store.getters.selectedTopicFacetItems ).toEqual( [] );
-        } );
-
-        test( 'removeSelectedTopicFacetItem mutation', () => {
-            store.commit( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 0 ] );
-            store.commit( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 1 ] );
-            store.commit( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 2 ] );
-
-            expect( store.getters.selectedTopicFacetItems ).toEqual( sampleTopicFacetItems );
-
-            store.commit( 'removeSelectedTopicFacetItem', sampleTopicFacetItems[ 1 ] );
-
-            expect( store.getters.selectedTopicFacetItems ).toEqual(
-                [
-                    sampleTopicFacetItems[ 0 ],
-                    sampleTopicFacetItems[ 2 ],
-                ] );
         } );
 
         test( 'removeSelectedTopicFacetItem action', () => {
@@ -98,27 +62,10 @@ describe( 'store-config', () => {
     describe( 'query', () => {
         const sampleQuery = 'query';
 
-        test( 'setQuery mutation', () => {
-            store.commit( 'setQuery', sampleQuery );
-
-            expect( store.getters.query ).toEqual( sampleQuery );
-        } );
-
         test( 'setQuery action', () => {
             store.dispatch( 'setQuery', sampleQuery );
 
             expect( store.getters.query ).toEqual( sampleQuery );
-        } );
-
-        test( 'setQueryFields mutation', () => {
-            const queryFields = [
-                'queryField1',
-                'queryField2',
-            ];
-
-            store.commit( 'setQueryFields', queryFields );
-
-            expect( store.getters.queryFields ).toEqual( queryFields );
         } );
 
         test( 'setQueryFields action', () => {
