@@ -1,6 +1,12 @@
 export default {
     addSelectedTopicFacetItem( state, topicFacetItem ) {
-        state.selectedTopicFacetItems.push( topicFacetItem );
+        if ( typeof topicFacetItem === 'string' && topicFacetItem !== '' ) {
+            state.selectedTopicFacetItems.push( topicFacetItem );
+        } else {
+            console.error( `Invalid argument passed to addSelectedTopicFacetItem: ` +
+                           ( topicFacetItem === '' ? '[empty string]' : topicFacetItem )
+            );
+        }
     },
     clearSelectedTopicFacetItems( state ) {
         state.selectedTopicFacetItems = [];
