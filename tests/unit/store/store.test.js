@@ -31,6 +31,19 @@ describe( 'store-config', () => {
 
             expect( store.getters.selectedTopicFacetItems ).toEqual( [ sampleTopicFacetItem ] );
         } );
+        test( 'does not add empty string, undefined, or null to selectedTopicFacetItems', () => {
+            store.dispatch( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 0 ] );
+            store.dispatch( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 1 ] );
+            store.dispatch( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 2 ] );
+
+            expect( store.getters.selectedTopicFacetItems ).toEqual( sampleTopicFacetItems );
+
+            store.dispatch( 'addSelectedTopicFacetItem', '' );
+            store.dispatch( 'addSelectedTopicFacetItem', undefined );
+            store.dispatch( 'addSelectedTopicFacetItem', null );
+
+            expect( store.getters.selectedTopicFacetItems ).toEqual( sampleTopicFacetItems );
+        } );
     } );
 
     describe( 'clearSelectedTopicFacetItems action', () => {
