@@ -4,6 +4,14 @@ import cloneDeep from 'lodash.clonedeep';
 import storeConfig from '../../../src/store/store-config';
 
 describe( 'store-config', () => {
+    const sampleTopicFacetItems = [
+        'topicFacetItem1',
+        'topicFacetItem2',
+        'topicFacetItem3',
+    ];
+
+    const sampleQuery = 'query';
+
     let store;
 
     beforeEach( () => {
@@ -15,22 +23,18 @@ describe( 'store-config', () => {
         store = new Vuex.Store( clonedStoreConfig );
     } );
 
-    describe( 'selected topic facet items', () => {
-        const sampleTopicFacetItems = [
-            'topicFacetItem1',
-            'topicFacetItem2',
-            'topicFacetItem3',
-        ];
-
-        test( 'addSelectedTopicFacetItem action', () => {
+    describe( 'addSelectedTopicFacetItem action', () => {
+        test( 'adds topic facet item to selectedTopicFacetItems', () => {
             const sampleTopicFacetItem = sampleTopicFacetItems[ 0 ];
 
             store.dispatch( 'addSelectedTopicFacetItem', sampleTopicFacetItem );
 
             expect( store.getters.selectedTopicFacetItems ).toEqual( [ sampleTopicFacetItem ] );
         } );
+    } );
 
-        test( 'clearSelectedTopicFacetItems action', () => {
+    describe( 'clearSelectedTopicFacetItems action', () => {
+        test( 'clears selectedTopicFacetItems', () => {
             store.dispatch( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 0 ] );
             store.dispatch( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 1 ] );
             store.dispatch( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 2 ] );
@@ -41,8 +45,10 @@ describe( 'store-config', () => {
 
             expect( store.getters.selectedTopicFacetItems ).toEqual( [] );
         } );
+    } );
 
-        test( 'removeSelectedTopicFacetItem action', () => {
+    describe( 'removeSelectedTopicFacetItem action', () => {
+        test( 'removes facet item from selectedTopicFacetItem', () => {
             store.dispatch( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 0 ] );
             store.dispatch( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 1 ] );
             store.dispatch( 'addSelectedTopicFacetItem', sampleTopicFacetItems[ 2 ] );
@@ -59,16 +65,16 @@ describe( 'store-config', () => {
         } );
     } );
 
-    describe( 'query', () => {
-        const sampleQuery = 'query';
-
-        test( 'setQuery action', () => {
+    describe( 'setQuery action', () => {
+        test( 'sets query', () => {
             store.dispatch( 'setQuery', sampleQuery );
 
             expect( store.getters.query ).toEqual( sampleQuery );
         } );
+    } );
 
-        test( 'setQueryFields action', () => {
+    describe( 'setQueryFields action', () => {
+        test( 'sets queryFields', () => {
             const queryFields = [
                 'queryField1',
                 'queryField2',
@@ -79,5 +85,4 @@ describe( 'store-config', () => {
             expect( store.getters.queryFields ).toEqual( queryFields );
         } );
     } );
-
 } );
