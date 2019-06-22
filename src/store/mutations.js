@@ -21,6 +21,15 @@ export default {
         state.query = query;
     },
     setQueryFields( state, queryFields ) {
-        state.queryFields = queryFields;
+        if ( Array.isArray( queryFields ) ) {
+            state.queryFields = queryFields;
+        } else {
+            console.error( `Invalid argument passed to queryFields: ` +
+                           ( Array.isArray( queryFields ) && queryFields.length === 0
+                               ? '[empty array]'
+                               : queryFields )
+            );
+            state.queryFields = [];
+        }
     },
 };
