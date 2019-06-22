@@ -109,6 +109,28 @@ describe( 'store-config', () => {
 
             expect( store.getters.query ).toEqual( sampleQuery );
         } );
+
+        test( 'setQueryFields mutation', () => {
+            const queryFields = [
+                'queryField1',
+                'queryField2',
+            ];
+
+            store.commit( 'setQueryFields', queryFields );
+
+            expect( store.getters.queryFields ).toEqual( queryFields );
+        } );
+
+        test( 'setQueryFields action', () => {
+            const queryFields = [
+                'queryField1',
+                'queryField2',
+            ];
+
+            store.dispatch( 'setQueryFields', queryFields );
+
+            expect( store.getters.queryFields ).toEqual( queryFields );
+        } );
     } );
 
 } );
