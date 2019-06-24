@@ -1,7 +1,7 @@
 import Vuex from 'vuex';
 import { createLocalVue } from '@vue/test-utils';
 import cloneDeep from 'lodash.clonedeep';
-import storeConfig from '../../../src/store/store-config';
+import storeConfig from '@/store/store-config';
 
 describe( 'store-config', () => {
     const sampleTopicFacetItems = [
