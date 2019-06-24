@@ -178,18 +178,5 @@ describe( 'store-config', () => {
             store.dispatch( 'setQueryFields', null );
             expect( store.getters.queryFields ).toEqual( [] );
         } );
-
-        test( 'if passed string, set to empty array', () => {
-            const queryFields = [
-                'queryField1',
-                'queryField2',
-            ];
-
-            store.dispatch( 'setQueryFields', queryFields );
-            expect( store.getters.queryFields ).toEqual( queryFields );
-
-            store.dispatch( 'setQueryFields', queryFields[ 0 ] );
-            expect( store.getters.queryFields ).toEqual( [] );
-        } );
     } );
 } );
