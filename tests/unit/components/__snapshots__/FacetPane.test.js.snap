@@ -422,6 +422,428 @@ exports[`FacetPane click See All renders correctly 1`] = `
 </div>
 `;
 
+exports[`FacetPane click See Less renders correctly 1`] = `
+<div
+  class="column enm-pane enm-pane-facets is-2"
+>
+  <div
+    class="content"
+    style="display: none;"
+  >
+    <h2
+      class="enm-pane-heading is-size-5"
+    >
+      
+            Limit by Topic
+        
+    </h2>
+     
+    <div
+      class="enm-facets-list"
+    >
+      <div
+        class="enm-topics enm-facets-group-visible"
+      >
+        <a
+          href="#"
+          id="topic1"
+        >
+          
+                    topic1
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (120)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic2"
+        >
+          
+                    topic2
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (115)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic3"
+        >
+          
+                    topic3
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (110)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic4"
+        >
+          
+                    topic4
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (105)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic5"
+        >
+          
+                    topic5
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (100)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic6"
+        >
+          
+                    topic6
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (95)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic7"
+        >
+          
+                    topic7
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (90)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic8"
+        >
+          
+                    topic8
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (85)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic9"
+        >
+          
+                    topic9
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (80)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic10"
+        >
+          
+                    topic10
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (75)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic11"
+        >
+          
+                    topic11
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (70)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic12"
+        >
+          
+                    topic12
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (65)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic13"
+        >
+          
+                    topic13
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (60)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic14"
+        >
+          
+                    topic14
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (55)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic15"
+        >
+          
+                    topic15
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (50)
+                    
+          </span>
+        </a>
+      </div>
+       
+      <a
+        class="listui seemore"
+        href="#"
+        id="see-all-link"
+        style="display: none;"
+      >
+        <i
+          aria-hidden="true"
+          class="fa fa-angle-double-down"
+        />
+        See All
+            
+      </a>
+       
+      <div
+        class="enm-topics enm-facets-group-togglable"
+        style=""
+      >
+        <a
+          href="#"
+          id="topic16"
+        >
+          
+                    topic16
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (45)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic17"
+        >
+          
+                    topic17
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (40)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic18"
+        >
+          
+                    topic18
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (35)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic19"
+        >
+          
+                    topic19
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (30)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic20"
+        >
+          
+                    topic20
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (25)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic21"
+        >
+          
+                    topic21
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (20)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic22"
+        >
+          
+                    topic22
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (15)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic23"
+        >
+          
+                    topic23
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (10)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic24"
+        >
+          
+                    topic24
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (5)
+                    
+          </span>
+        </a>
+      </div>
+       
+      <a
+        class="listui seemore"
+        href="#"
+        id="see-less-link"
+        style=""
+      >
+        <i
+          aria-hidden="true"
+          class="fa fa-angle-double-up"
+        />
+        See Less
+            
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`FacetPane initialized renders correctly 1`] = `
 <div
   class="column enm-pane enm-pane-facets is-2"
