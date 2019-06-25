@@ -252,6 +252,7 @@ exports[`FacetPane click See All renders correctly 1`] = `
       <a
         class="listui seemore"
         href="#"
+        id="see-all-link"
         style="display: none;"
       >
         <i
@@ -406,6 +407,7 @@ exports[`FacetPane click See All renders correctly 1`] = `
       <a
         class="listui seemore"
         href="#"
+        id="see-less-link"
         style=""
       >
         <i
@@ -672,6 +674,7 @@ exports[`FacetPane initialized renders correctly 1`] = `
       <a
         class="listui seemore"
         href="#"
+        id="see-all-link"
       >
         <i
           aria-hidden="true"
@@ -689,6 +692,7 @@ exports[`FacetPane initialized renders correctly 1`] = `
       <a
         class="listui seemore"
         href="#"
+        id="see-less-link"
         style="display: none;"
       >
         <i

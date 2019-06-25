@@ -57,7 +57,7 @@ describe( 'FacetPane', () => {
         beforeEach( () => {
             wrapper = createWrapper();
 
-            wrapper.find( '.seemore' ).trigger( 'click' );
+            wrapper.find( '#see-all-link' ).trigger( 'click' );
         } );
         test( 'has correct showAllTopics', () => {
             expect( wrapper.vm.showAllTopics ).toBeTruthy();
