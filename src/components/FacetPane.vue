@@ -73,7 +73,7 @@
 <script>
 import { mapActions } from 'vuex';
 
-const DEFAULT_TOPIC_FACET_LIST_LIMIT = 15;
+const DEFAULT_TOPICS_FACET_LIST_LIMIT = 15;
 
 export default {
     name  : 'FacetPane',
@@ -94,7 +94,7 @@ export default {
             type     : Number,
             required : true,
             default  : function () {
-                return DEFAULT_TOPIC_FACET_LIST_LIMIT;
+                return DEFAULT_TOPICS_FACET_LIST_LIMIT;
             },
         },
     },
