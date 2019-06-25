@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BarChart renders HTML correctly 1`] = `
+<div
+  id="bar-chart"
+>
+  <header>
+    <div
+      class="enm-pageno"
+      style="display: none;"
+    >
+      
+            page 
+        
+    </div>
+     
+    <h2
+      class="title is-spaced"
+    >
+      
+            The Book
+        
+    </h2>
+  </header>
+   
+  <svg
+    height="190"
+    width="572"
+  />
+   
+  <div
+    class="enm-buttons"
+  >
+    <a
+      class="button"
+      href="#"
+      title="View previous matched page in this book"
+    >
+      
+            &lt; previous
+        
+    </a>
+     
+    <a
+      class="button"
+      href="#"
+      title="View next matched page in this book"
+    >
+      
+            next &gt;
+        
+    </a>
+  </div>
+</div>
+`;
