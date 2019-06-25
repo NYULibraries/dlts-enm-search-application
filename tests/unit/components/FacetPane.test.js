@@ -1,7 +1,8 @@
 import FacetPane from '@/components/FacetPane';
 
 import merge from 'lodash.merge';
-import { shallowMount } from '@vue/test-utils';
+import { createLocalVue, shallowMount } from '@vue/test-utils';
+import Vuex from 'vuex';
 
 const NUM_TOPICS_IN_DEFAULT_TOPICS_FACET_LIST = 25;
 const DEFAULT_TOPICS_FACET_LIST = [];
@@ -107,6 +108,44 @@ describe( 'FacetPane', () => {
 
         test( 'renders correctly', () => {
             expect( wrapper.element ).toMatchSnapshot();
+        } );
+    } );
+    describe( 'clickTopicFacetItem', () => {
+        let actions;
+        let mockAddSelectedTopicFacetItem = jest.fn();
+        let store;
+
+        let localVue;
+        let selectedTopic;
+        let wrapper;
+
+        beforeAll( () => {
+            localVue = createLocalVue();
+
+            localVue.use( Vuex );
+        } );
+
+        beforeEach( () => {
+            actions = {
+                addSelectedTopicFacetItem : mockAddSelectedTopicFacetItem,
+            };
+
+            store = new Vuex.Store( {
+                actions,
+            } );
+
+            wrapper = createWrapper( {
+                localVue,
+                store,
+            } );
+
+            selectedTopic = DEFAULT_TOPICS_FACET_LIST[ 2 ];
+
+            wrapper.find( '#' + selectedTopic.name ).trigger( 'click' );
+        } );
+
+        test( 'calls addSelectedTopicFacetItem action with argument', () => {
+            expect( mockAddSelectedTopicFacetItem.mock.calls[ 0 ][ 1 ] ).toBe( selectedTopic.name );
         } );
     } );
 } );
