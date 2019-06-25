@@ -38,7 +38,9 @@ describe( 'FacetPane', () => {
 
         test( 'has correct topicFacetItemsAlwaysVisible', () => {
             expect( wrapper.vm.topicFacetItemsAlwaysVisible )
-                .toEqual( DEFAULT_TOPICS_FACET_LIST.slice( 0, 15 ) );
+                .toEqual(
+                    DEFAULT_TOPICS_FACET_LIST.slice( 0, DEFAULT_TOPICS_FACET_LIST_LIMIT )
+                );
         } );
 
         test( 'has correct topicFacetItemsToggleable', () => {
