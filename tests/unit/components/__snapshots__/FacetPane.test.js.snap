@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FacetPane initialized renders correctly 1`] = `
+exports[`FacetPane click See All renders correctly 1`] = `
 <div
   class="column enm-pane enm-pane-facets is-2"
 >
@@ -252,6 +252,7 @@ exports[`FacetPane initialized renders correctly 1`] = `
       <a
         class="listui seemore"
         href="#"
+        style="display: none;"
       >
         <i
           aria-hidden="true"
@@ -263,13 +264,149 @@ exports[`FacetPane initialized renders correctly 1`] = `
        
       <div
         class="enm-topics enm-facets-group-togglable"
-        style="display: none;"
-      />
+        style=""
+      >
+        <a
+          href="#"
+          id="topic16"
+        >
+          
+                    topic16
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (45)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic17"
+        >
+          
+                    topic17
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (40)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic18"
+        >
+          
+                    topic18
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (35)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic19"
+        >
+          
+                    topic19
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (30)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic20"
+        >
+          
+                    topic20
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (25)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic21"
+        >
+          
+                    topic21
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (20)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic22"
+        >
+          
+                    topic22
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (15)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic23"
+        >
+          
+                    topic23
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (10)
+                    
+          </span>
+        </a>
+        <a
+          href="#"
+          id="topic24"
+        >
+          
+                    topic24
+                    
+          <span
+            class="enm-hitcount"
+          >
+            
+                        (5)
+                    
+          </span>
+        </a>
+      </div>
        
       <a
         class="listui seemore"
         href="#"
-        style="display: none;"
+        style=""
       >
         <i
           aria-hidden="true"
@@ -283,7 +420,7 @@ exports[`FacetPane initialized renders correctly 1`] = `
 </div>
 `;
 
-exports[`FacetPane renders correctly after initialization 1`] = `
+exports[`FacetPane initialized renders correctly 1`] = `
 <div
   class="column enm-pane enm-pane-facets is-2"
 >

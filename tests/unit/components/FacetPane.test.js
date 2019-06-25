@@ -51,4 +51,33 @@ describe( 'FacetPane', () => {
             expect( wrapper.element ).toMatchSnapshot();
         } );
     } );
+    describe( 'click See All', () => {
+        let wrapper;
+
+        beforeEach( () => {
+            wrapper = createWrapper();
+
+            wrapper.find( '.seemore' ).trigger( 'click' );
+        } );
+        test( 'has correct showAllTopics', () => {
+            expect( wrapper.vm.showAllTopics ).toBeTruthy();
+        } );
+
+        test( 'has correct topicFacetItemsAlwaysVisible', () => {
+            expect( wrapper.vm.topicFacetItemsAlwaysVisible )
+                .toEqual(
+                    DEFAULT_TOPICS_FACET_LIST.slice( 0, DEFAULT_TOPICS_FACET_LIST_LIMIT )
+                );
+        } );
+
+        test( 'has correct topicFacetItemsToggleable', () => {
+            expect( wrapper.vm.topicFacetItemsToggleable ).toEqual(
+                DEFAULT_TOPICS_FACET_LIST.slice( DEFAULT_TOPICS_FACET_LIST_LIMIT )
+            );
+        } );
+
+        test( 'renders correctly', () => {
+            expect( wrapper.element ).toMatchSnapshot();
+        } );
+    } );
 } );
