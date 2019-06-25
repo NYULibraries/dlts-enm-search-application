@@ -33,6 +33,7 @@ describe( 'FacetPane', () => {
         beforeEach( () => {
             wrapper = createWrapper();
         } );
+
         test( 'has correct showAllTopics', () => {
             expect( wrapper.vm.showAllTopics ).toBeFalsy();
         } );
@@ -60,6 +61,7 @@ describe( 'FacetPane', () => {
 
             wrapper.find( '#see-all-link' ).trigger( 'click' );
         } );
+
         test( 'has correct showAllTopics', () => {
             expect( wrapper.vm.showAllTopics ).toBeTruthy();
         } );
@@ -89,6 +91,7 @@ describe( 'FacetPane', () => {
 
             wrapper.find( '#see-less-link' ).trigger( 'click' );
         } );
+
         test( 'has correct showAllTopics', () => {
             expect( wrapper.vm.showAllTopics ).toBeTruthy();
         } );
