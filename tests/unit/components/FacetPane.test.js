@@ -27,28 +27,25 @@ function createWrapper( overrides ) {
 
 describe( 'FacetPane', () => {
     describe( 'initialized', () => {
-        test( 'has correct showAllTopics', () => {
-            const wrapper = createWrapper();
+        let wrapper;
 
+        beforeEach( () => {
+            wrapper = createWrapper();
+        } );
+        test( 'has correct showAllTopics', () => {
             expect( wrapper.vm.showAllTopics ).toBeFalsy();
         } );
 
         test( 'has correct topicFacetItemsAlwaysVisible', () => {
-            const wrapper = createWrapper();
-
             expect( wrapper.vm.topicFacetItemsAlwaysVisible )
                 .toEqual( DEFAULT_TOPICS_FACET_LIST.slice( 0, 15 ) );
         } );
 
         test( 'has correct topicFacetItemsToggleable', () => {
-            const wrapper = createWrapper();
-
             expect( wrapper.vm.topicFacetItemsToggleable ).toEqual( [] );
         } );
 
         test( 'renders correctly', () => {
-            const wrapper = createWrapper();
-
             expect( wrapper.element ).toMatchSnapshot();
         } );
     } );
