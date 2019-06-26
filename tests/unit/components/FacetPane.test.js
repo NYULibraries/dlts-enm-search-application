@@ -176,4 +176,16 @@ describe( 'FacetPane', () => {
         expect( wrapper.vm.topicFacetItemsAlwaysVisible )
             .toEqual( DEFAULT_TOPICS_FACET_LIST.slice( 0, NEW_TOPICS_FACET_LIST_LIMIT ) );
     } );
+    test( 'setting display prop shows/hides the pane', () => {
+        const wrapper = createWrapper();
+        const facetsList = wrapper.find( '.enm-facets-list' );
+
+        expect( facetsList.isVisible() ).toBe( true );
+
+        wrapper.setProps( { display : false } );
+        expect( facetsList.isVisible() ).toBe( false );
+
+        wrapper.setProps( { display : true } );
+        expect( facetsList.isVisible() ).toBe( true );
+    } );
 } );
