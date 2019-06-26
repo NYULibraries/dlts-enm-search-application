@@ -150,4 +150,30 @@ describe( 'FacetPane', () => {
         expect( mockAddSelectedTopicFacetItem.mock.calls[ 1 ][ 1 ] ).toBe( selectedTopicName2 );
         expect( mockAddSelectedTopicFacetItem.mock.calls[ 2 ][ 1 ] ).toBe( selectedTopicName3 );
     } );
+    test( 'changing topicFacetList prop updates topics facet list', () => {
+        const wrapper = createWrapper();
+
+        const newTopicFacetList = [];
+        for ( let i = 1; i < NUM_TOPICS_IN_DEFAULT_TOPICS_FACET_LIST * 2; i++ ) {
+            newTopicFacetList.push( {
+                name    : 'new-topic-' + i,
+                numHits : 88,
+            } );
+        }
+
+        wrapper.setProps( { topicsFacetList : newTopicFacetList } );
+
+        expect( wrapper.vm.topicFacetItemsAlwaysVisible )
+            .toEqual( newTopicFacetList.slice( 0, DEFAULT_TOPICS_FACET_LIST_LIMIT ) );
+    } );
+    test( 'changing topicFacetListLimit prop updates topics facet list', () => {
+        const wrapper = createWrapper();
+
+        const NEW_TOPICS_FACET_LIST_LIMIT = DEFAULT_TOPICS_FACET_LIST_LIMIT + 10;
+
+        wrapper.setProps( { topicsFacetListLimit : NEW_TOPICS_FACET_LIST_LIMIT } );
+
+        expect( wrapper.vm.topicFacetItemsAlwaysVisible )
+            .toEqual( DEFAULT_TOPICS_FACET_LIST.slice( 0, NEW_TOPICS_FACET_LIST_LIMIT ) );
+    } );
 } );
