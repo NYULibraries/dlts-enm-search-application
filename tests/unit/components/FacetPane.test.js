@@ -119,7 +119,6 @@ describe( 'FacetPane', () => {
         let store;
 
         let localVue;
-        let selectedTopic;
         let wrapper;
 
         beforeAll( () => {
@@ -141,14 +140,20 @@ describe( 'FacetPane', () => {
                 localVue,
                 store,
             } );
-
-            selectedTopic = DEFAULT_TOPICS_FACET_LIST[ 2 ];
-
-            wrapper.find( '#' + selectedTopic.name ).trigger( 'click' );
         } );
 
-        test( 'calls addSelectedTopicFacetItem action with argument', () => {
-            expect( mockAddSelectedTopicFacetItem.mock.calls[ 0 ][ 1 ] ).toBe( selectedTopic.name );
+        test( 'calls addSelectedTopicFacetItem action with correct argument', () => {
+            const selectedTopicName1 = DEFAULT_TOPICS_FACET_LIST[ 7 ].name;
+            const selectedTopicName2 = DEFAULT_TOPICS_FACET_LIST[ 2 ].name;
+            const selectedTopicName3 = DEFAULT_TOPICS_FACET_LIST[ 12 ].name;
+
+            wrapper.find( '#' + selectedTopicName1 ).trigger( 'click' );
+            wrapper.find( '#' + selectedTopicName2 ).trigger( 'click' );
+            wrapper.find( '#' + selectedTopicName3 ).trigger( 'click' );
+
+            expect( mockAddSelectedTopicFacetItem.mock.calls[ 0 ][ 1 ] ).toBe( selectedTopicName1 );
+            expect( mockAddSelectedTopicFacetItem.mock.calls[ 1 ][ 1 ] ).toBe( selectedTopicName2 );
+            expect( mockAddSelectedTopicFacetItem.mock.calls[ 2 ][ 1 ] ).toBe( selectedTopicName3 );
         } );
     } );
 } );
