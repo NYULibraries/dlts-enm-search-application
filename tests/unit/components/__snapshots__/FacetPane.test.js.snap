@@ -6,7 +6,6 @@ exports[`FacetPane click See All renders correctly 1`] = `
 >
   <div
     class="content"
-    style="display: none;"
   >
     <h2
       class="enm-pane-heading is-size-5"
@@ -428,7 +427,6 @@ exports[`FacetPane click See Less renders correctly 1`] = `
 >
   <div
     class="content"
-    style="display: none;"
   >
     <h2
       class="enm-pane-heading is-size-5"
@@ -850,7 +848,6 @@ exports[`FacetPane initialized renders correctly 1`] = `
 >
   <div
     class="content"
-    style="display: none;"
   >
     <h2
       class="enm-pane-heading is-size-5"
