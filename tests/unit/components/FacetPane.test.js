@@ -18,7 +18,7 @@ const DEFAULT_TOPICS_FACET_LIST_LIMIT = 15;
 function createWrapper( overrides ) {
     const defaultMountingOptions = {
         propsData : {
-            display              : false,
+            display              : true,
             topicsFacetList      : DEFAULT_TOPICS_FACET_LIST,
             topicsFacetListLimit : DEFAULT_TOPICS_FACET_LIST_LIMIT,
         },
