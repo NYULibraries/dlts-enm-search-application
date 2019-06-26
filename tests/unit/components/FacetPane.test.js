@@ -113,7 +113,7 @@ describe( 'FacetPane', () => {
             expect( wrapper.element ).toMatchSnapshot();
         } );
     } );
-    describe( 'clickTopicFacetItem', () => {
+    test( 'clickTopicFacetItem calls addSelectedTopicFacetItem action with correct argument', () => {
         let actions;
         let mockAddSelectedTopicFacetItem = jest.fn();
         let store;
@@ -121,39 +121,33 @@ describe( 'FacetPane', () => {
         let localVue;
         let wrapper;
 
-        beforeAll( () => {
-            localVue = createLocalVue();
+        localVue = createLocalVue();
 
-            localVue.use( Vuex );
+        localVue.use( Vuex );
+
+        actions = {
+            addSelectedTopicFacetItem : mockAddSelectedTopicFacetItem,
+        };
+
+        store = new Vuex.Store( {
+            actions,
         } );
 
-        beforeEach( () => {
-            actions = {
-                addSelectedTopicFacetItem : mockAddSelectedTopicFacetItem,
-            };
-
-            store = new Vuex.Store( {
-                actions,
-            } );
-
-            wrapper = createWrapper( {
-                localVue,
-                store,
-            } );
+        wrapper = createWrapper( {
+            localVue,
+            store,
         } );
 
-        test( 'calls addSelectedTopicFacetItem action with correct argument', () => {
-            const selectedTopicName1 = DEFAULT_TOPICS_FACET_LIST[ 7 ].name;
-            const selectedTopicName2 = DEFAULT_TOPICS_FACET_LIST[ 2 ].name;
-            const selectedTopicName3 = DEFAULT_TOPICS_FACET_LIST[ 12 ].name;
+        const selectedTopicName1 = DEFAULT_TOPICS_FACET_LIST[ 7 ].name;
+        const selectedTopicName2 = DEFAULT_TOPICS_FACET_LIST[ 2 ].name;
+        const selectedTopicName3 = DEFAULT_TOPICS_FACET_LIST[ 12 ].name;
 
-            wrapper.find( '#' + selectedTopicName1 ).trigger( 'click' );
-            wrapper.find( '#' + selectedTopicName2 ).trigger( 'click' );
-            wrapper.find( '#' + selectedTopicName3 ).trigger( 'click' );
+        wrapper.find( '#' + selectedTopicName1 ).trigger( 'click' );
+        wrapper.find( '#' + selectedTopicName2 ).trigger( 'click' );
+        wrapper.find( '#' + selectedTopicName3 ).trigger( 'click' );
 
-            expect( mockAddSelectedTopicFacetItem.mock.calls[ 0 ][ 1 ] ).toBe( selectedTopicName1 );
-            expect( mockAddSelectedTopicFacetItem.mock.calls[ 1 ][ 1 ] ).toBe( selectedTopicName2 );
-            expect( mockAddSelectedTopicFacetItem.mock.calls[ 2 ][ 1 ] ).toBe( selectedTopicName3 );
-        } );
+        expect( mockAddSelectedTopicFacetItem.mock.calls[ 0 ][ 1 ] ).toBe( selectedTopicName1 );
+        expect( mockAddSelectedTopicFacetItem.mock.calls[ 1 ][ 1 ] ).toBe( selectedTopicName2 );
+        expect( mockAddSelectedTopicFacetItem.mock.calls[ 2 ][ 1 ] ).toBe( selectedTopicName3 );
     } );
 } );
