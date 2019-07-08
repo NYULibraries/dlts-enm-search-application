@@ -19,6 +19,7 @@ exports[`PreviewPane initialized with no book selected renders correctly 1`] = `
        
       <a
         href="#"
+        id="load-first-matched-page-link"
       >
         
                 Load the first matched page
