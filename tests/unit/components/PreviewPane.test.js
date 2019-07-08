@@ -55,6 +55,28 @@ describe( 'PreviewPane', () => {
     } );
 
     describe( 'when a new book is selected', () => {
+        const MOCK_SOLR_RESPONSE_DOCS         = [
+            {
+                'pageNumberForDisplay' : '5',
+                'score'                : 2.6782167,
+            },
+            {
+                'pageNumberForDisplay' : '19',
+                'score'                : 2.6782167,
+            },
+            {
+                'pageNumberForDisplay' : '126',
+                'score'                : 4.766254,
+            },
+            {
+                'pageNumberForDisplay' : '192',
+                'score'                : 5.5347614,
+            },
+            {
+                'pageNumberForDisplay' : '218',
+                'score'                : 4.7891774,
+            },
+        ];
         const ISBN                             = '9781111111111';
         const QUERY                            = 'art';
         const QUERY_FIELDS                     = [ 'pageText', 'topicNames' ];
@@ -81,7 +103,23 @@ describe( 'PreviewPane', () => {
                 }
             );
 
-            wrapper = createWrapper( { store, localVue } );
+            const $solrPreviewEpub = jest.fn().mockReturnValueOnce(
+                {
+                    'response' : {
+                        'docs' : MOCK_SOLR_RESPONSE_DOCS,
+                    },
+                }
+            );
+
+            wrapper = createWrapper(
+                {
+                    mocks : {
+                        $solrPreviewEpub,
+                    },
+                    store,
+                    localVue,
+                }
+            );
 
             wrapper.setProps(
                 {
