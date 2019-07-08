@@ -61,7 +61,12 @@ describe( 'PreviewPane', () => {
         const SELECTED_TOPIC_FIELD_FACET_ITEMS = [ 'art', 'drawing', 'painting' ];
         const TITLE                            = 'The Book';
 
-        let getters;
+        const getters = {
+            query                   : () => QUERY,
+            queryFields             : () => QUERY_FIELDS,
+            selectedTopicFacetItems : () => SELECTED_TOPIC_FIELD_FACET_ITEMS,
+        };
+
         let store;
         let wrapper;
 
@@ -70,12 +75,6 @@ describe( 'PreviewPane', () => {
         localVue.use( Vuex );
 
         beforeEach( () => {
-            getters = {
-                query                   : () => QUERY,
-                queryFields             : () => QUERY_FIELDS,
-                selectedTopicFacetItems : () => SELECTED_TOPIC_FIELD_FACET_ITEMS,
-            };
-
             store = new Vuex.Store(
                 {
                     getters,
