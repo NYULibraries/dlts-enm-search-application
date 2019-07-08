@@ -13,6 +13,7 @@
                 Choose a book at left to view matched pages, or
                 <br>
                 <a
+                    id="load-first-matched-page-link"
                     href="#"
                     @click="loadFirstMatchedPage"
                 >

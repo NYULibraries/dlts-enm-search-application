@@ -21,6 +21,8 @@ function createWrapper( overrides ) {
 
 describe( 'PreviewPane', () => {
     describe( 'initialized with no book selected', () => {
+        const LOAD_FIRST_MATCHED_PAGE_LINK_CLICK_EVENT = 'load-first-matched-page-link-click';
+
         let wrapper;
 
         beforeEach( () => {
@@ -38,6 +40,14 @@ describe( 'PreviewPane', () => {
         test( 'has correct title prop', () => {
             expect( wrapper.vm.isbn ).toBe( TITLE_BEFORE_BOOK_SELECTED );
         } );
+
+        test( `clicking on "Load the first matched page" emits "${ LOAD_FIRST_MATCHED_PAGE_LINK_CLICK_EVENT }" event`,
+            () => {
+                wrapper.find( '#load-first-matched-page-link' ).trigger( 'click' );
+
+                expect( wrapper.emitted()[ LOAD_FIRST_MATCHED_PAGE_LINK_CLICK_EVENT ] ).toBeTruthy();
+            }
+        );
 
         test( 'renders correctly', () => {
             expect( wrapper.element ).toMatchSnapshot();
