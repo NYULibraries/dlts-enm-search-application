@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PreviewPane initialized with no book selected renders correctly 1`] = `
+<div
+  class="column enm-pane enm-pane-preview"
+  style="display: none;"
+>
+  <div
+    class="message is-valign is-centered"
+    id="message"
+  >
+    <p
+      class="message-body has-text-centered"
+    >
+      
+            Choose a book at left to view matched pages, or
+            
+      <br />
+       
+      <a
+        href="#"
+      >
+        
+                Load the first matched page
+            
+      </a>
+    </p>
+  </div>
+   
+  <div>
+    <!---->
+     
+    <barchart-stub
+      barchartdata=""
+      title=""
+    />
+     
+    <h2
+      class="is-size-4"
+      id="preview-epub-error"
+      style="display: none;"
+    >
+      
+            Sorry, this book cannot be previewed due to a server error.
+            Please try your search again later.
+        
+    </h2>
+     
+    <div
+      class="enm-topicsonthispage"
+      style="display: none;"
+    >
+      <h3>
+        Topics on this page
+      </h3>
+       
+      <ul />
+       
+      <div
+        class="enm-notopics"
+      >
+        
+                No topics are associated with this page.
+            
+      </div>
+    </div>
+     
+    <hr />
+     
+    <h2
+      class="is-size-4"
+      id="preview-epub-page-error"
+      style="display: none;"
+    >
+      
+            Sorry, these pages cannot be previewed due to a server error.
+            Please try your search again later.
+        
+    </h2>
+     
+    <div
+      class="enm-pageText"
+      style="display: none;"
+    />
+  </div>
+</div>
+`;

@@ -38,6 +38,10 @@ describe( 'PreviewPane', () => {
         test( 'has correct title prop', () => {
             expect( wrapper.vm.isbn ).toBe( TITLE_BEFORE_BOOK_SELECTED );
         } );
+
+        test( 'renders correctly', () => {
+            expect( wrapper.element ).toMatchSnapshot();
+        } );
     } );
 
     describe( 'when a new book is selected', () => {
