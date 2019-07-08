@@ -77,6 +77,12 @@ describe( 'PreviewPane', () => {
                 'score'                : 4.7891774,
             },
         ];
+        const EXPECTED_BAR_CHART_DATA = MOCK_SOLR_RESPONSE_DOCS.map( doc => {
+            return {
+                page  : doc.pageNumberForDisplay,
+                score : doc.score,
+            };
+        } );
         const ISBN                             = '9781111111111';
         const QUERY                            = 'art';
         const QUERY_FIELDS                     = [ 'pageText', 'topicNames' ];
@@ -140,6 +146,13 @@ describe( 'PreviewPane', () => {
 
         test( 'has correct title prop', () => {
             expect( wrapper.vm.title ).toBe( TITLE );
+        } );
+
+        // We only need to test barChart.barChartData.
+        // barChart.isbn and barChart.title are generally set one time only
+        // through BarChart props
+        test( 'passes BarChart component correct barChartData', () => {
+            expect( wrapper.vm.barChart.barChartData ).toEqual( EXPECTED_BAR_CHART_DATA );
         } );
     } );
 } );
