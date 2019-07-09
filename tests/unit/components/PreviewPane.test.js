@@ -136,6 +136,17 @@ describe( 'PreviewPane', () => {
             );
         } );
 
+        test( 'calls $solrPreviewEpub with proper arguments', () => {
+            expect( wrapper.vm.$solrPreviewEpub.mock.calls[ 0 ] ).toEqual(
+                [
+                    ISBN,
+                    QUERY,
+                    QUERY_FIELDS,
+                    SELECTED_TOPIC_FIELD_FACET_ITEMS,
+                ]
+            );
+        } );
+
         test( 'has correct display prop', () => {
             expect( wrapper.vm.display ).toBeTruthy();
         } );
