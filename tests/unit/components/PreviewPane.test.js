@@ -1,3 +1,4 @@
+import BarChart from '@/components/BarChart';
 import PreviewPane from '@/components/PreviewPane';
 
 import merge from 'lodash.merge';
@@ -163,7 +164,8 @@ describe( 'PreviewPane', () => {
         // barChart.isbn and barChart.title are generally set one time only
         // through BarChart props
         test( 'passes BarChart component correct barChartData', () => {
-            expect( wrapper.vm.barChart.barChartData ).toEqual( EXPECTED_BAR_CHART_DATA );
+            const barChartStub = wrapper.find( BarChart );
+            expect( barChartStub.vm.barChartData ).toEqual( EXPECTED_BAR_CHART_DATA );
         } );
     } );
 } );
