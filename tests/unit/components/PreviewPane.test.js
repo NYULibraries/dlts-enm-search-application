@@ -162,7 +162,7 @@ describe( 'PreviewPane', () => {
 
         // We only need to test barChart.barChartData.
         // barChart.isbn and barChart.title are generally set one time only
-        // through BarChart props
+        // through BarChart props assignment in template.
         test( 'passes BarChart component correct barChartData', () => {
             const barChartStub = wrapper.find( BarChart );
             expect( barChartStub.vm.barChartData ).toEqual( EXPECTED_BAR_CHART_DATA );
