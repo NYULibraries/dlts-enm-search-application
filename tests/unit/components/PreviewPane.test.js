@@ -80,12 +80,14 @@ describe( 'PreviewPane', () => {
             };
         } );
 
-        const localVue = createLocalVueWithVuex();
-        const store = createStore( QUERY, QUERY_FIELDS, SELECTED_TOPIC_FIELD_FACET_ITEMS );
-
+        let localVue;
+        let store;
         let wrapper;
 
         beforeEach( () => {
+            localVue = createLocalVueWithVuex();
+            store = createStore( QUERY, QUERY_FIELDS, SELECTED_TOPIC_FIELD_FACET_ITEMS );
+
             const $solrPreviewEpub = jest.fn().mockReturnValueOnce(
                 {
                     'response' : {
@@ -137,12 +139,15 @@ describe( 'PreviewPane', () => {
         const MOCK_SOLR_RESPONSE_PREVIEW_PAGE  =
                   require( '../fixtures/solr-responses/solr-preview-page-highlights-in-pagetext-and-topicnames' );
         const SELECTED_PAGE_NUMBER = 12;
-        const localVue = createLocalVueWithVuex();
-        const store = createStore( QUERY, QUERY_FIELDS, SELECTED_TOPIC_FIELD_FACET_ITEMS );
 
+        let localVue;
+        let store;
         let wrapper;
 
         beforeEach( () => {
+            localVue = createLocalVueWithVuex();
+            store = createStore( QUERY, QUERY_FIELDS, SELECTED_TOPIC_FIELD_FACET_ITEMS );
+
             const $solrPreviewEpub = jest.fn();
 
             const $solrPreviewPage = jest.fn().mockReturnValueOnce(
