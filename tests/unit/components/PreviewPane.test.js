@@ -6,9 +6,6 @@ import { shallowMount } from '@vue/test-utils';
 
 import { createLocalVueWithVuex, createStore } from '../test-utils';
 
-const ISBN_BEFORE_BOOK_SELECTED  = '';
-const TITLE_BEFORE_BOOK_SELECTED = '';
-
 const ISBN                             = '9781111111111';
 const QUERY                            = 'art';
 const QUERY_FIELDS                     = [ 'pageText', 'topicNames' ];
@@ -19,8 +16,8 @@ function createWrapper( overrides ) {
     const defaultMountingOptions = {
         propsData : {
             display : false,
-            isbn    : ISBN_BEFORE_BOOK_SELECTED,
-            title   : TITLE_BEFORE_BOOK_SELECTED,
+            isbn    : '',
+            title   : '',
         },
     };
 
