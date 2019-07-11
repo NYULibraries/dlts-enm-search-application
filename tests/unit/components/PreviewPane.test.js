@@ -169,7 +169,7 @@ describe( 'PreviewPane', () => {
         } );
     } );
 
-    describe( 'when receiving a "bar-click" event', () => {
+    describe( 'when BarChart emits a "bar-click" event', () => {
         const MOCK_SOLR_RESPONSE_PREVIEW_PAGE  =
                   require( '../fixtures/solr-responses/solr-preview-page-highlights-in-pagetext-and-topicnames' );
         const ISBN                             = '9781111111111';
@@ -199,6 +199,8 @@ describe( 'PreviewPane', () => {
                 }
             );
 
+            const $solrPreviewEpub = jest.fn();
+
             const $solrPreviewPage = jest.fn().mockReturnValueOnce(
                 MOCK_SOLR_RESPONSE_PREVIEW_PAGE
             );
@@ -206,6 +208,7 @@ describe( 'PreviewPane', () => {
             wrapper = createWrapper(
                 {
                     mocks : {
+                        $solrPreviewEpub,
                         $solrPreviewPage,
                     },
                     store,
@@ -238,6 +241,8 @@ describe( 'PreviewPane', () => {
             );
         } );
 
-        test.todo( 'renders correctly selected page' );
+        test( 'renders correctly selected page', () => {
+            expect( wrapper.element ).toMatchSnapshot();
+        } );
     } );
 } );
