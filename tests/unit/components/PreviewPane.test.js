@@ -37,18 +37,6 @@ describe( 'PreviewPane', () => {
             wrapper = createWrapper();
         } );
 
-        test( 'has correct display prop', () => {
-            expect( wrapper.vm.display ).toBeFalsy();
-        } );
-
-        test( 'has correct isbn prop', () => {
-            expect( wrapper.vm.isbn ).toBe( ISBN_BEFORE_BOOK_SELECTED );
-        } );
-
-        test( 'has correct title prop', () => {
-            expect( wrapper.vm.isbn ).toBe( TITLE_BEFORE_BOOK_SELECTED );
-        } );
-
         test( `clicking on "Load the first matched page" emits "${ LOAD_FIRST_MATCHED_PAGE_LINK_CLICK_EVENT }" event`,
             () => {
                 wrapper.find( '#load-first-matched-page-link' ).trigger( 'click' );
@@ -134,18 +122,6 @@ describe( 'PreviewPane', () => {
                     SELECTED_TOPIC_FIELD_FACET_ITEMS,
                 ]
             );
-        } );
-
-        test( 'has correct display prop', () => {
-            expect( wrapper.vm.display ).toBeTruthy();
-        } );
-
-        test( 'has correct isbn prop', () => {
-            expect( wrapper.vm.isbn ).toBe( ISBN );
-        } );
-
-        test( 'has correct title prop', () => {
-            expect( wrapper.vm.title ).toBe( TITLE );
         } );
 
         // We only need to test barChart.barChartData.
