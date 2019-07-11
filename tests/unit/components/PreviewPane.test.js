@@ -144,6 +144,9 @@ describe( 'PreviewPane', () => {
 
         beforeEach( () => {
             localVue = createLocalVueWithVuex();
+
+            $solrPreviewEpub.mockClear();
+            $solrPreviewPage.mockClear();
         } );
 
         describe( 'for a page hit with highlights in both page text and topic names', () => {
