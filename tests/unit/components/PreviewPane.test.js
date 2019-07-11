@@ -10,6 +10,7 @@ const ISBN                             = '9781111111111';
 const QUERY                            = 'art';
 const QUERY_FIELDS_ALL                 = [ 'pageText', 'topicNames' ];
 const QUERY_FIELDS_PAGE_TEXT_ONLY      = [ 'pageText' ];
+const QUERY_FIELDS_TOPIC_NAMES_ONLY    = [ 'topicNames' ];
 const SELECTED_TOPIC_FIELD_FACET_ITEMS = [ 'art', 'drawing', 'painting' ];
 const TITLE                            = 'The Book';
 
@@ -121,6 +122,8 @@ describe( 'PreviewPane', () => {
                   require( '../fixtures/solr-responses/solr-preview-page-with-highlights-in-pagetext-and-topicnames' );
         const MOCK_SOLR_RESPONSE_PREVIEW_PAGE_WITH_HIGHLIGHTS_IN_PAGE_TEXT_ONLY =
                   require( '../fixtures/solr-responses/solr-preview-page-with-highlights-in-pagetext-only' );
+        const MOCK_SOLR_RESPONSE_PREVIEW_PAGE_WITH_HIGHLIGHTS_IN_TOPIC_NAMES_ONLY =
+                  require( '../fixtures/solr-responses/solr-preview-page-with-highlights-in-topicnames-only' );
         const SELECTED_PAGE_NUMBER = 12;
 
         const $solrPreviewEpub = jest.fn();
@@ -133,6 +136,9 @@ describe( 'PreviewPane', () => {
                 break;
             case QUERY_FIELDS_PAGE_TEXT_ONLY :
                 response = MOCK_SOLR_RESPONSE_PREVIEW_PAGE_WITH_HIGHLIGHTS_IN_PAGE_TEXT_ONLY;
+                break;
+            case QUERY_FIELDS_TOPIC_NAMES_ONLY :
+                response = MOCK_SOLR_RESPONSE_PREVIEW_PAGE_WITH_HIGHLIGHTS_IN_TOPIC_NAMES_ONLY;
                 break;
             default :
             // Should never get here
@@ -221,6 +227,45 @@ describe( 'PreviewPane', () => {
                         SELECTED_PAGE_NUMBER,
                         QUERY,
                         QUERY_FIELDS_PAGE_TEXT_ONLY,
+                    ]
+                );
+            } );
+
+            test( 'renders preview correctly', () => {
+                expect( wrapper.element ).toMatchSnapshot();
+            } );
+        } );
+
+        describe( 'for a page hit with highlights in topic names only', () => {
+            beforeEach( () => {
+                store = createReadonlyStore( QUERY, QUERY_FIELDS_TOPIC_NAMES_ONLY, SELECTED_TOPIC_FIELD_FACET_ITEMS );
+
+                wrapper = createWrapper(
+                    {
+                        mocks : {
+                            $solrPreviewEpub,
+                            $solrPreviewPage,
+                        },
+                        store,
+                        localVue,
+                    }
+                );
+
+                simulateClickingEpubInSearchResults( wrapper, ISBN, TITLE );
+
+                wrapper.find( BarChart ).vm.$emit(
+                    'bar-click',
+                    SELECTED_PAGE_NUMBER
+                );
+            } );
+
+            test( 'calls $solrPreviewPage with proper arguments', () => {
+                expect( wrapper.vm.$solrPreviewPage.mock.calls[ 0 ] ).toEqual(
+                    [
+                        ISBN,
+                        SELECTED_PAGE_NUMBER,
+                        QUERY,
+                        QUERY_FIELDS_TOPIC_NAMES_ONLY,
                     ]
                 );
             } );
