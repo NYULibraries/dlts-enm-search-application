@@ -129,9 +129,11 @@ describe( 'PreviewPane', () => {
             store = createReadonlyStore( QUERY, QUERY_FIELDS_ALL, SELECTED_TOPIC_FIELD_FACET_ITEMS );
 
             const $solrPreviewEpub = jest.fn();
-            const $solrPreviewPage = jest.fn().mockReturnValueOnce(
-                MOCK_SOLR_RESPONSE_PREVIEW_PAGE
-            );
+            const $solrPreviewPage = jest.fn( ( isbn, selectedPageNumber, query, queryFields ) => {
+                if ( queryFields === QUERY_FIELDS_ALL ) {
+                    return MOCK_SOLR_RESPONSE_PREVIEW_PAGE;
+                }
+            } );
 
             wrapper = createWrapper(
                 {
@@ -152,19 +154,21 @@ describe( 'PreviewPane', () => {
             );
         } );
 
-        test( 'calls $solrPreviewPage with proper arguments', () => {
-            expect( wrapper.vm.$solrPreviewPage.mock.calls[ 0 ] ).toEqual(
-                [
-                    ISBN,
-                    SELECTED_PAGE_NUMBER,
-                    QUERY,
-                    QUERY_FIELDS_ALL,
-                ]
-            );
-        } );
+        describe( 'for a page hit with highlights in both page text and topic names', () => {
+            test( 'calls $solrPreviewPage with proper arguments', () => {
+                expect( wrapper.vm.$solrPreviewPage.mock.calls[ 0 ] ).toEqual(
+                    [
+                        ISBN,
+                        SELECTED_PAGE_NUMBER,
+                        QUERY,
+                        QUERY_FIELDS_ALL,
+                    ]
+                );
+            } );
 
-        test( 'renders correctly selected page', () => {
-            expect( wrapper.element ).toMatchSnapshot();
+            test( 'renders preview correctly', () => {
+                expect( wrapper.element ).toMatchSnapshot();
+            } );
         } );
     } );
 } );
