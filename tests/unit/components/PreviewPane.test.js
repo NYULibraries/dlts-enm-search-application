@@ -2,8 +2,9 @@ import BarChart from '@/components/BarChart';
 import PreviewPane from '@/components/PreviewPane';
 
 import merge from 'lodash.merge';
-import { createLocalVue, shallowMount } from '@vue/test-utils';
-import Vuex from 'vuex';
+import { shallowMount } from '@vue/test-utils';
+
+import { createLocalVueWithVuex, createStore } from '../test-utils';
 
 const ISBN_BEFORE_BOOK_SELECTED  = '';
 const TITLE_BEFORE_BOOK_SELECTED = '';
@@ -24,28 +25,6 @@ function createWrapper( overrides ) {
     };
 
     return shallowMount( PreviewPane, merge( defaultMountingOptions, overrides ) );
-}
-
-function createLocalVueWithVuex() {
-    const localVue = createLocalVue();
-
-    localVue.use( Vuex );
-
-    return localVue;
-}
-
-function createStore( query, queryFields, selectedTopicFieldFacetItems ) {
-    const getters = {
-        query                   : () => query,
-        queryFields             : () => queryFields,
-        selectedTopicFacetItems : () => selectedTopicFieldFacetItems,
-    };
-
-    return new Vuex.Store(
-        {
-            getters,
-        }
-    );
 }
 
 describe( 'PreviewPane', () => {
