@@ -4,7 +4,7 @@ import PreviewPane from '@/components/PreviewPane';
 import merge from 'lodash.merge';
 import { shallowMount } from '@vue/test-utils';
 
-import { createLocalVueWithVuex, createStore } from '../test-utils';
+import { createLocalVueWithVuex, createReadonlyStore } from '../test-utils';
 
 const ISBN                             = '9781111111111';
 const QUERY                            = 'art';
@@ -72,7 +72,7 @@ describe( 'PreviewPane', () => {
 
         beforeEach( () => {
             localVue = createLocalVueWithVuex();
-            store = createStore( QUERY, QUERY_FIELDS, SELECTED_TOPIC_FIELD_FACET_ITEMS );
+            store = createReadonlyStore( QUERY, QUERY_FIELDS, SELECTED_TOPIC_FIELD_FACET_ITEMS );
 
             const $solrPreviewEpub = jest.fn().mockReturnValueOnce(
                 {
@@ -126,7 +126,7 @@ describe( 'PreviewPane', () => {
 
         beforeEach( () => {
             localVue = createLocalVueWithVuex();
-            store = createStore( QUERY, QUERY_FIELDS, SELECTED_TOPIC_FIELD_FACET_ITEMS );
+            store = createReadonlyStore( QUERY, QUERY_FIELDS, SELECTED_TOPIC_FIELD_FACET_ITEMS );
 
             const $solrPreviewEpub = jest.fn();
             const $solrPreviewPage = jest.fn().mockReturnValueOnce(

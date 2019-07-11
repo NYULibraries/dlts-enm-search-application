@@ -9,7 +9,7 @@ function createLocalVueWithVuex() {
     return localVue;
 }
 
-function createStore( query, queryFields, selectedTopicFieldFacetItems ) {
+function createReadonlyStore( query, queryFields, selectedTopicFieldFacetItems ) {
     const getters = {
         query                   : () => query,
         queryFields             : () => queryFields,
@@ -25,5 +25,5 @@ function createStore( query, queryFields, selectedTopicFieldFacetItems ) {
 
 export {
     createLocalVueWithVuex,
-    createStore,
+    createReadonlyStore,
 };
