@@ -8,7 +8,7 @@ import { createLocalVueWithVuex, createReadonlyStore } from '../test-utils';
 
 const ISBN                             = '9781111111111';
 const QUERY                            = 'art';
-const QUERY_FIELDS                     = [ 'pageText', 'topicNames' ];
+const QUERY_FIELDS_ALL                 = [ 'pageText', 'topicNames' ];
 const SELECTED_TOPIC_FIELD_FACET_ITEMS = [ 'art', 'drawing', 'painting' ];
 const TITLE                            = 'The Book';
 
@@ -72,7 +72,7 @@ describe( 'PreviewPane', () => {
 
         beforeEach( () => {
             localVue = createLocalVueWithVuex();
-            store = createReadonlyStore( QUERY, QUERY_FIELDS, SELECTED_TOPIC_FIELD_FACET_ITEMS );
+            store = createReadonlyStore( QUERY, QUERY_FIELDS_ALL, SELECTED_TOPIC_FIELD_FACET_ITEMS );
 
             const $solrPreviewEpub = jest.fn().mockReturnValueOnce(
                 {
@@ -100,7 +100,7 @@ describe( 'PreviewPane', () => {
                 [
                     ISBN,
                     QUERY,
-                    QUERY_FIELDS,
+                    QUERY_FIELDS_ALL,
                     SELECTED_TOPIC_FIELD_FACET_ITEMS,
                 ]
             );
@@ -126,7 +126,7 @@ describe( 'PreviewPane', () => {
 
         beforeEach( () => {
             localVue = createLocalVueWithVuex();
-            store = createReadonlyStore( QUERY, QUERY_FIELDS, SELECTED_TOPIC_FIELD_FACET_ITEMS );
+            store = createReadonlyStore( QUERY, QUERY_FIELDS_ALL, SELECTED_TOPIC_FIELD_FACET_ITEMS );
 
             const $solrPreviewEpub = jest.fn();
             const $solrPreviewPage = jest.fn().mockReturnValueOnce(
@@ -158,7 +158,7 @@ describe( 'PreviewPane', () => {
                     ISBN,
                     SELECTED_PAGE_NUMBER,
                     QUERY,
-                    QUERY_FIELDS,
+                    QUERY_FIELDS_ALL,
                 ]
             );
         } );
