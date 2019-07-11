@@ -24,6 +24,16 @@ function createWrapper( overrides ) {
     return shallowMount( PreviewPane, merge( defaultMountingOptions, overrides ) );
 }
 
+function simulateClickingEpubInSearchResults( previewPaneWrapper, isbn, title ) {
+    previewPaneWrapper.setProps(
+        {
+            display : true,
+            isbn,
+            title,
+        }
+    );
+}
+
 describe( 'PreviewPane', () => {
     describe( 'initialized with no book selected', () => {
         const LOAD_FIRST_MATCHED_PAGE_LINK_CLICK_EVENT = 'load-first-matched-page-link-click';
@@ -82,13 +92,7 @@ describe( 'PreviewPane', () => {
                 }
             );
 
-            wrapper.setProps(
-                {
-                    display : true,
-                    isbn    : ISBN,
-                    title   : TITLE,
-                }
-            );
+            simulateClickingEpubInSearchResults( wrapper, ISBN, TITLE );
         } );
 
         test( 'calls $solrPreviewEpub with proper arguments', () => {
@@ -140,13 +144,7 @@ describe( 'PreviewPane', () => {
                 }
             );
 
-            wrapper.setProps(
-                {
-                    display : true,
-                    isbn    : ISBN,
-                    title   : TITLE,
-                }
-            );
+            simulateClickingEpubInSearchResults( wrapper, ISBN, TITLE );
 
             wrapper.find( BarChart ).vm.$emit(
                 'bar-click',
