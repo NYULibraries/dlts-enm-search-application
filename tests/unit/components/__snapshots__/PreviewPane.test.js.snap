@@ -87,7 +87,7 @@ exports[`PreviewPane initialized with no book selected renders correctly 1`] = `
 </div>
 `;
 
-exports[`PreviewPane when BarChart emits a "bar-click" event for a page hit with highlights in both page text and topic names renders correctly selected page 1`] = `
+exports[`PreviewPane when BarChart emits a "bar-click" event for a page hit with highlights in both page text and topic names renders preview correctly 1`] = `
 <div
   class="column enm-pane enm-pane-preview"
   style=""
