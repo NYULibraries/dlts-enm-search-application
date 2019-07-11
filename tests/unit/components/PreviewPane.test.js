@@ -51,28 +51,7 @@ describe( 'PreviewPane', () => {
     } );
 
     describe( 'when a new book is selected', () => {
-        const MOCK_SOLR_RESPONSE_DOCS         = [
-            {
-                'pageNumberForDisplay' : '5',
-                'score'                : 2.6782167,
-            },
-            {
-                'pageNumberForDisplay' : '19',
-                'score'                : 2.6782167,
-            },
-            {
-                'pageNumberForDisplay' : '126',
-                'score'                : 4.766254,
-            },
-            {
-                'pageNumberForDisplay' : '192',
-                'score'                : 5.5347614,
-            },
-            {
-                'pageNumberForDisplay' : '218',
-                'score'                : 4.7891774,
-            },
-        ];
+        const MOCK_SOLR_RESPONSE_DOCS = require( '../fixtures/solr-responses/solr-preview-epub-docs' );
         const EXPECTED_BAR_CHART_DATA = MOCK_SOLR_RESPONSE_DOCS.map( doc => {
             return {
                 page  : doc.pageNumberForDisplay,
