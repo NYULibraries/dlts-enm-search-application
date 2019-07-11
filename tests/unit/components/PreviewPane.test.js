@@ -9,6 +9,7 @@ import { createLocalVueWithVuex, createReadonlyStore } from '../test-utils';
 const ISBN                             = '9781111111111';
 const QUERY                            = 'art';
 const QUERY_FIELDS_ALL                 = [ 'pageText', 'topicNames' ];
+const QUERY_FIELDS_PAGE_TEXT_ONLY      = [ 'pageText' ];
 const SELECTED_TOPIC_FIELD_FACET_ITEMS = [ 'art', 'drawing', 'painting' ];
 const TITLE                            = 'The Book';
 
@@ -118,6 +119,8 @@ describe( 'PreviewPane', () => {
     describe( 'when BarChart emits a "bar-click" event', () => {
         const MOCK_SOLR_RESPONSE_PREVIEW_PAGE  =
                   require( '../fixtures/solr-responses/solr-preview-page-with-highlights-in-pagetext-and-topicnames' );
+        const MOCK_SOLR_RESPONSE_PREVIEW_PAGE_WITH_HIGHLIGHTS_IN_PAGE_TEXT_ONLY =
+                  require( '../fixtures/solr-responses/solr-preview-page-with-highlights-in-pagetext-only' );
         const SELECTED_PAGE_NUMBER = 12;
 
         const $solrPreviewEpub = jest.fn();
@@ -188,14 +191,36 @@ describe( 'PreviewPane', () => {
             } );
         } );
 
-        describe( 'for a page hit with highlights in both page text and topic names', () => {
+        describe( 'for a page hit with highlights in page text only', () => {
+            beforeEach( () => {
+                store = createReadonlyStore( QUERY, QUERY_FIELDS_PAGE_TEXT_ONLY, SELECTED_TOPIC_FIELD_FACET_ITEMS );
+
+                wrapper = createWrapper(
+                    {
+                        mocks : {
+                            $solrPreviewEpub,
+                            $solrPreviewPage,
+                        },
+                        store,
+                        localVue,
+                    }
+                );
+
+                simulateClickingEpubInSearchResults( wrapper, ISBN, TITLE );
+
+                wrapper.find( BarChart ).vm.$emit(
+                    'bar-click',
+                    SELECTED_PAGE_NUMBER
+                );
+            } );
+
             test( 'calls $solrPreviewPage with proper arguments', () => {
                 expect( wrapper.vm.$solrPreviewPage.mock.calls[ 0 ] ).toEqual(
                     [
                         ISBN,
                         SELECTED_PAGE_NUMBER,
                         QUERY,
-                        QUERY_FIELDS_ALL,
+                        QUERY_FIELDS_PAGE_TEXT_ONLY,
                     ]
                 );
             } );
