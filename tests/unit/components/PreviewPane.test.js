@@ -120,38 +120,69 @@ describe( 'PreviewPane', () => {
                   require( '../fixtures/solr-responses/solr-preview-page-with-highlights-in-pagetext-and-topicnames' );
         const SELECTED_PAGE_NUMBER = 12;
 
+        const $solrPreviewEpub = jest.fn();
+        const $solrPreviewPage = jest.fn( ( isbn, selectedPageNumber, query, queryFields ) => {
+            let response;
+
+            switch ( queryFields ) {
+            case QUERY_FIELDS_ALL :
+                response = MOCK_SOLR_RESPONSE_PREVIEW_PAGE;
+                break;
+            case QUERY_FIELDS_PAGE_TEXT_ONLY :
+                response = MOCK_SOLR_RESPONSE_PREVIEW_PAGE_WITH_HIGHLIGHTS_IN_PAGE_TEXT_ONLY;
+                break;
+            default :
+            // Should never get here
+            }
+
+            return response;
+        } );
+
         let localVue;
         let store;
         let wrapper;
 
         beforeEach( () => {
             localVue = createLocalVueWithVuex();
-            store = createReadonlyStore( QUERY, QUERY_FIELDS_ALL, SELECTED_TOPIC_FIELD_FACET_ITEMS );
+        } );
 
-            const $solrPreviewEpub = jest.fn();
-            const $solrPreviewPage = jest.fn( ( isbn, selectedPageNumber, query, queryFields ) => {
-                if ( queryFields === QUERY_FIELDS_ALL ) {
-                    return MOCK_SOLR_RESPONSE_PREVIEW_PAGE;
-                }
+        describe( 'for a page hit with highlights in both page text and topic names', () => {
+            beforeEach( () => {
+                store = createReadonlyStore( QUERY, QUERY_FIELDS_ALL, SELECTED_TOPIC_FIELD_FACET_ITEMS );
+
+                wrapper = createWrapper(
+                    {
+                        mocks : {
+                            $solrPreviewEpub,
+                            $solrPreviewPage,
+                        },
+                        store,
+                        localVue,
+                    }
+                );
+
+                simulateClickingEpubInSearchResults( wrapper, ISBN, TITLE );
+
+                wrapper.find( BarChart ).vm.$emit(
+                    'bar-click',
+                    SELECTED_PAGE_NUMBER
+                );
             } );
 
-            wrapper = createWrapper(
-                {
-                    mocks : {
-                        $solrPreviewEpub,
-                        $solrPreviewPage,
-                    },
-                    store,
-                    localVue,
-                }
-            );
+            test( 'calls $solrPreviewPage with proper arguments', () => {
+                expect( wrapper.vm.$solrPreviewPage.mock.calls[ 0 ] ).toEqual(
+                    [
+                        ISBN,
+                        SELECTED_PAGE_NUMBER,
+                        QUERY,
+                        QUERY_FIELDS_ALL,
+                    ]
+                );
+            } );
 
-            simulateClickingEpubInSearchResults( wrapper, ISBN, TITLE );
-
-            wrapper.find( BarChart ).vm.$emit(
-                'bar-click',
-                SELECTED_PAGE_NUMBER
-            );
+            test( 'renders preview correctly', () => {
+                expect( wrapper.element ).toMatchSnapshot();
+            } );
         } );
 
         describe( 'for a page hit with highlights in both page text and topic names', () => {
