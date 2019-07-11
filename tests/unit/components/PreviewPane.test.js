@@ -8,6 +8,12 @@ import Vuex from 'vuex';
 const ISBN_BEFORE_BOOK_SELECTED  = '';
 const TITLE_BEFORE_BOOK_SELECTED = '';
 
+const ISBN                             = '9781111111111';
+const QUERY                            = 'art';
+const QUERY_FIELDS                     = [ 'pageText', 'topicNames' ];
+const SELECTED_TOPIC_FIELD_FACET_ITEMS = [ 'art', 'drawing', 'painting' ];
+const TITLE                            = 'The Book';
+
 function createWrapper( overrides ) {
     const defaultMountingOptions = {
         propsData : {
@@ -18,6 +24,28 @@ function createWrapper( overrides ) {
     };
 
     return shallowMount( PreviewPane, merge( defaultMountingOptions, overrides ) );
+}
+
+function createLocalVueWithVuex() {
+    const localVue = createLocalVue();
+
+    localVue.use( Vuex );
+
+    return localVue;
+}
+
+function createStore( query, queryFields, selectedTopicFieldFacetItems ) {
+    const getters = {
+        query                   : () => query,
+        queryFields             : () => queryFields,
+        selectedTopicFacetItems : () => selectedTopicFieldFacetItems,
+    };
+
+    return new Vuex.Store(
+        {
+            getters,
+        }
+    );
 }
 
 describe( 'PreviewPane', () => {
@@ -84,32 +112,13 @@ describe( 'PreviewPane', () => {
                 score : doc.score,
             };
         } );
-        const ISBN                             = '9781111111111';
-        const QUERY                            = 'art';
-        const QUERY_FIELDS                     = [ 'pageText', 'topicNames' ];
-        const SELECTED_TOPIC_FIELD_FACET_ITEMS = [ 'art', 'drawing', 'painting' ];
-        const TITLE                            = 'The Book';
 
-        const getters = {
-            query                   : () => QUERY,
-            queryFields             : () => QUERY_FIELDS,
-            selectedTopicFacetItems : () => SELECTED_TOPIC_FIELD_FACET_ITEMS,
-        };
+        const localVue = createLocalVueWithVuex();
+        const store = createStore( QUERY, QUERY_FIELDS, SELECTED_TOPIC_FIELD_FACET_ITEMS );
 
-        let store;
         let wrapper;
 
-        const localVue = createLocalVue();
-
-        localVue.use( Vuex );
-
         beforeEach( () => {
-            store = new Vuex.Store(
-                {
-                    getters,
-                }
-            );
-
             const $solrPreviewEpub = jest.fn().mockReturnValueOnce(
                 {
                     'response' : {
@@ -172,33 +181,13 @@ describe( 'PreviewPane', () => {
     describe( 'when BarChart emits a "bar-click" event', () => {
         const MOCK_SOLR_RESPONSE_PREVIEW_PAGE  =
                   require( '../fixtures/solr-responses/solr-preview-page-highlights-in-pagetext-and-topicnames' );
-        const ISBN                             = '9781111111111';
-        const QUERY                            = 'art';
-        const QUERY_FIELDS                     = [ 'pageText', 'topicNames' ];
-        const SELECTED_PAGE_NUMBER             = 12;
-        const SELECTED_TOPIC_FIELD_FACET_ITEMS = [ 'art', 'drawing', 'painting' ];
-        const TITLE                            = 'The Book';
+        const SELECTED_PAGE_NUMBER = 12;
+        const localVue = createLocalVueWithVuex();
+        const store = createStore( QUERY, QUERY_FIELDS, SELECTED_TOPIC_FIELD_FACET_ITEMS );
 
-        const getters = {
-            query                   : () => QUERY,
-            queryFields             : () => QUERY_FIELDS,
-            selectedTopicFacetItems : () => SELECTED_TOPIC_FIELD_FACET_ITEMS,
-        };
-
-        let store;
         let wrapper;
 
-        const localVue = createLocalVue();
-
-        localVue.use( Vuex );
-
         beforeEach( () => {
-            store = new Vuex.Store(
-                {
-                    getters,
-                }
-            );
-
             const $solrPreviewEpub = jest.fn();
 
             const $solrPreviewPage = jest.fn().mockReturnValueOnce(
