@@ -125,7 +125,6 @@ describe( 'PreviewPane', () => {
             store = createStore( QUERY, QUERY_FIELDS, SELECTED_TOPIC_FIELD_FACET_ITEMS );
 
             const $solrPreviewEpub = jest.fn();
-
             const $solrPreviewPage = jest.fn().mockReturnValueOnce(
                 MOCK_SOLR_RESPONSE_PREVIEW_PAGE
             );
