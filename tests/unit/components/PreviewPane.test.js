@@ -137,7 +137,7 @@ describe( 'PreviewPane', () => {
 
     describe( 'when BarChart emits a "bar-click" event', () => {
         const MOCK_SOLR_RESPONSE_PREVIEW_PAGE  =
-                  require( '../fixtures/solr-responses/solr-preview-page-highlights-in-pagetext-and-topicnames' );
+                  require( '../fixtures/solr-responses/solr-preview-page-with-highlights-in-pagetext-and-topicnames' );
         const SELECTED_PAGE_NUMBER = 12;
 
         let localVue;
