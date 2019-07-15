@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsPane renders no results found correctly 1`] = `
+<div
+  class="column enm-pane enm-pane-results is-half"
+>
+  <header
+    style=""
+  >
+    <h2
+      class="is-size-4"
+    >
+      
+                    Results: None
+                
+    </h2>
+  </header>
+   
+  <div
+    class="enm-results"
+    style=""
+  >
+    <span>
+      
+                    Please try another search.
+                
+    </span>
+     
+  </div>
+</div>
+`;
