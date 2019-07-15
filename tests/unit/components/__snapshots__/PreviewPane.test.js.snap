@@ -87,6 +87,186 @@ exports[`PreviewPane initialized with no book selected renders correctly 1`] = `
 </div>
 `;
 
+exports[`PreviewPane renders user-friendly preview error when $solrPreviewEpub returns an error 1`] = `
+<div
+  class="column enm-pane enm-pane-preview"
+  style=""
+>
+  <div
+    class="message is-valign is-centered"
+    id="message"
+    style="display: none;"
+  >
+    <p
+      class="message-body has-text-centered"
+    >
+      
+            Choose a book at left to view matched pages, or
+            
+      <br />
+       
+      <a
+        href="#"
+        id="load-first-matched-page-link"
+      >
+        
+                Load the first matched page
+            
+      </a>
+    </p>
+  </div>
+   
+  <div>
+    <span
+      id="preview-isbn"
+      name="9781111111111"
+      style="display: none;"
+    />
+     
+    <barchart-stub
+      barchartdata=""
+      style="display: none;"
+      title="The Book"
+    />
+     
+    <h2
+      class="is-size-4"
+      id="preview-epub-error"
+      style=""
+    >
+      
+            Sorry, this book cannot be previewed due to a server error.
+            Please try your search again later.
+        
+    </h2>
+     
+    <div
+      class="enm-topicsonthispage"
+      style="display: none;"
+    >
+      <h3>
+        Topics on this page
+      </h3>
+       
+      <ul />
+       
+      <div
+        class="enm-notopics"
+      >
+        
+                No topics are associated with this page.
+            
+      </div>
+    </div>
+     
+    <hr />
+     
+    <h2
+      class="is-size-4"
+      id="preview-epub-page-error"
+      style="display: none;"
+    >
+      
+            Sorry, these pages cannot be previewed due to a server error.
+            Please try your search again later.
+        
+    </h2>
+     
+    <div
+      class="enm-pageText"
+      style="display: none;"
+    />
+  </div>
+</div>
+`;
+
+exports[`PreviewPane renders user-friendly preview error when $solrPreviewPage returns an error 1`] = `
+<div
+  class="column enm-pane enm-pane-preview"
+  style="display: none;"
+>
+  <div
+    class="message is-valign is-centered"
+    id="message"
+  >
+    <p
+      class="message-body has-text-centered"
+    >
+      
+            Choose a book at left to view matched pages, or
+            
+      <br />
+       
+      <a
+        href="#"
+        id="load-first-matched-page-link"
+      >
+        
+                Load the first matched page
+            
+      </a>
+    </p>
+  </div>
+   
+  <div>
+    <!---->
+     
+    <barchart-stub
+      barchartdata=""
+      title=""
+    />
+     
+    <h2
+      class="is-size-4"
+      id="preview-epub-error"
+      style="display: none;"
+    >
+      
+            Sorry, this book cannot be previewed due to a server error.
+            Please try your search again later.
+        
+    </h2>
+     
+    <div
+      class="enm-topicsonthispage"
+      style="display: none;"
+    >
+      <h3>
+        Topics on this page
+      </h3>
+       
+      <ul />
+       
+      <div
+        class="enm-notopics"
+      >
+        
+                No topics are associated with this page.
+            
+      </div>
+    </div>
+     
+    <hr />
+     
+    <h2
+      class="is-size-4"
+      id="preview-epub-page-error"
+      style=""
+    >
+      
+            Sorry, these pages cannot be previewed due to a server error.
+            Please try your search again later.
+        
+    </h2>
+     
+    <div
+      class="enm-pageText"
+      style="display: none;"
+    />
+  </div>
+</div>
+`;
+
 exports[`PreviewPane when BarChart emits a "bar-click" event for a page hit with highlights in both page text and topic names renders preview correctly 1`] = `
 <div
   class="column enm-pane enm-pane-preview"

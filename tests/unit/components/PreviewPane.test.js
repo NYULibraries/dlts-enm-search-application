@@ -275,4 +275,50 @@ describe( 'PreviewPane', () => {
             } );
         } );
     } );
+
+    test( 'renders user-friendly preview error when $solrPreviewEpub returns an error', () => {
+        const localVue = createLocalVueWithVuex();
+
+        const $solrPreviewEpub = jest.fn().mockImplementation( () => {
+            throw new Error();
+        } );
+
+        const wrapper = createWrapper(
+            {
+                mocks : {
+                    $solrPreviewEpub,
+                },
+                localVue,
+            }
+        );
+
+        simulateClickingEpubInSearchResults( wrapper, ISBN, TITLE );
+
+        expect( wrapper.element ).toMatchSnapshot();
+    } );
+
+    test( 'renders user-friendly preview error when $solrPreviewPage returns an error', () => {
+        const localVue = createLocalVueWithVuex();
+
+        const $solrPreviewPage = jest.fn().mockImplementation( () => {
+            throw new Error();
+        } );
+
+        const wrapper = createWrapper(
+            {
+                mocks : {
+                    $solrPreviewPage,
+                },
+                localVue,
+            }
+        );
+
+        // Simulate clicking of a bar, any bar
+        wrapper.find( BarChart ).vm.$emit(
+            'bar-click',
+            1
+        );
+
+        expect( wrapper.element ).toMatchSnapshot();
+    } );
 } );
