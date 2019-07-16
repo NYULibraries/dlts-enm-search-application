@@ -34,7 +34,7 @@ function createWrapper( overrides ) {
 }
 
 describe( 'SearchEcho', () => {
-    const SEARCH_DCI_DISMISSED_EVENT = 'search-dci-dismiss';
+    const SEARCH_DCI_DISMISS_EVENT = 'search-dci-dismiss';
 
     test( 'does not display any DCIs when query is empty', () => {
     } );
@@ -57,7 +57,7 @@ describe( 'SearchEcho', () => {
     test( 'dismissing search DCI calls setQuery with correct arguments', () => {
     } );
 
-    test( `dismissing search DCI emits "${ SEARCH_DCI_DISMISSED_EVENT }"`, () => {
+    test( `dismissing search DCI emits "${ SEARCH_DCI_DISMISS_EVENT }"`, () => {
     } );
 
     test( 'dismissing topic DCI calls removeSelectedTopicFacetItem with correct arguments', () => {
