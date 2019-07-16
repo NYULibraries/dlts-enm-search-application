@@ -12,6 +12,7 @@ for ( let i = 1; i < NUM_TOPICS_IN_DEFAULT_TOPICS_FACET_LIST; i++ ) {
         numHits : 5 * ( NUM_TOPICS_IN_DEFAULT_TOPICS_FACET_LIST - i ),
     } );
 }
+Object.freeze( DEFAULT_TOPICS_FACET_LIST );
 
 const DEFAULT_TOPICS_FACET_LIST_LIMIT = 15;
 
