@@ -18,8 +18,9 @@ function createWrapper( overrides ) {
 }
 
 describe( 'ResultsPane', () => {
-    const epubClickEvent = 'epub-click';
-    const results = require( '../fixtures/solr-responses/solr-search-results-groups.json' );
+    const EPUB_CLICK_EVENT = 'epub-click';
+
+    const RESULTS = require( '../fixtures/solr-responses/solr-search-results-groups.json' );
 
     let wrapper;
 
@@ -36,10 +37,10 @@ describe( 'ResultsPane', () => {
         wrapper.setProps(
             {
                 display  : true,
-                numBooks : results.length,
-                numPages : results.map( ( group ) => group.doclist.numFound )
+                numBooks : RESULTS.length,
+                numPages : RESULTS.map( ( group ) => group.doclist.numFound )
                     .reduce( ( accumulator, currentValue ) => accumulator + currentValue ),
-                results  : results,
+                results  : RESULTS,
             }
         );
     }
@@ -67,15 +68,15 @@ describe( 'ResultsPane', () => {
         expect( wrapper.element ).toMatchSnapshot();
     } );
 
-    test( `emits "${ epubClickEvent }" when result is clicked`, () => {
+    test( `emits "${ EPUB_CLICK_EVENT }" when result is clicked`, () => {
         simulateSearch();
 
-        const epubId    = results[ 7 ].groupValue;
-        const epubTitle = results[ 7 ].doclist.docs[ 0 ].title;
+        const EPUB_ID    = RESULTS[ 7 ].groupValue;
+        const EPUB_TITLE = RESULTS[ 7 ].doclist.docs[ 0 ].title;
 
-        wrapper.find( `[ id = "${ epubId }" ]` ).trigger( 'click' );
+        wrapper.find( `[ id = "${ EPUB_ID }" ]` ).trigger( 'click' );
 
-        expect( wrapper.emitted()[ epubClickEvent ][ 0 ] ).toEqual( [ epubId, epubTitle ] );
+        expect( wrapper.emitted()[ EPUB_CLICK_EVENT ][ 0 ] ).toEqual( [ EPUB_ID, EPUB_TITLE ] );
     } );
 
     test( 'renders error condition correctly', () => {
