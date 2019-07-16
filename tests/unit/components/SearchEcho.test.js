@@ -54,7 +54,46 @@ describe( 'SearchEcho', () => {
     test( 'displays correct DCIs when facet items are selected', () => {
     } );
 
-    test( 'dismissing search DCI calls setQuery with correct arguments', () => {
+    test( 'dismissing search DCI sets query to * if topics selected', () => {
+        const SEARCH_DCI_ID = 'search-dci';
+
+        const localVue = createLocalVueWithVuex();
+
+        const mockSetQuery = jest.fn();
+
+        const actions = {
+            setQuery : mockSetQuery,
+        };
+
+        const QUERY                      = 'something';
+        const QUERY_FIELDS_FULL_TEXT     = 'pageText';
+        const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
+        const QUERY_FIELDS_ALL           = [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ];
+        const SELECTED_TOPIC_FACET_ITEMS = [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ];
+
+        const getters = {
+            query                   : () => QUERY,
+            queryFields             : () => QUERY_FIELDS_ALL,
+            selectedTopicFacetItems : () => SELECTED_TOPIC_FACET_ITEMS,
+        };
+
+        const store = new Vuex.Store(
+            {
+                actions,
+                getters,
+            }
+        );
+
+        const wrapper = createWrapper(
+            {
+                localVue,
+                store,
+            }
+        );
+
+        wrapper.find( `button[ id = "${ SEARCH_DCI_ID }" ]` ).trigger( 'click' );
+
+        expect( mockSetQuery.mock.calls[ 0 ][ 1 ] ).toBe( '*' );
     } );
 
     test( `dismissing search DCI emits "${ SEARCH_DCI_DISMISS_EVENT }" event`, () => {
