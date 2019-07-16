@@ -23,6 +23,15 @@ describe( 'ResultsPane', () => {
 
     let wrapper;
 
+    function simulateError() {
+        wrapper.setProps(
+            {
+                display : true,
+                error   : true,
+            }
+        );
+    }
+
     function simulateSearch() {
         wrapper.setProps(
             {
@@ -67,5 +76,11 @@ describe( 'ResultsPane', () => {
         wrapper.find( `[ id = "${ epubId }" ]` ).trigger( 'click' );
 
         expect( wrapper.emitted()[ epubClickEvent ][ 0 ] ).toEqual( [ epubId, epubTitle ] );
+    } );
+
+    test( 'renders error condition correctly', () => {
+        simulateError();
+
+        expect( wrapper.element ).toMatchSnapshot();
     } );
 } );

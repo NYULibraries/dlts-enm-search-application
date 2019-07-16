@@ -1,5 +1,31 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ResultsPane renders error condition correctly 1`] = `
+<div
+  class="column enm-pane enm-pane-results is-half"
+>
+  <header
+    style=""
+  >
+    <h2
+      class="is-size-4"
+    >
+      
+                    Sorry, a server error has occurred.  Please try your search again later.
+                
+    </h2>
+  </header>
+   
+  <div
+    class="enm-results"
+    style=""
+  >
+    <!---->
+     
+  </div>
+</div>
+`;
+
 exports[`ResultsPane renders no results found correctly 1`] = `
 <div
   class="column enm-pane enm-pane-results is-half"
