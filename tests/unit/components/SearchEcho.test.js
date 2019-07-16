@@ -1,6 +1,6 @@
 import SearchEcho from '@/components/SearchEcho';
 
-import { createLocalVue, shallowMount } from '@vue/test-utils';
+import { shallowMount } from '@vue/test-utils';
 import merge from 'lodash.merge';
 import Vuex from 'vuex';
 import { createLocalVueWithVuex } from '../test-utils';
@@ -110,8 +110,6 @@ describe( 'SearchEcho', () => {
         const QUERY                      = 'something';
         const QUERY_FIELDS_FULL_TEXT     = 'pageText';
         const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
-        const QUERY_FIELDS_ALL           = [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ];
-        const SELECTED_TOPIC_FACET_ITEMS = [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ];
 
         const getters = {
             query                   : () => QUERY,
@@ -152,8 +150,6 @@ describe( 'SearchEcho', () => {
         const QUERY                      = 'something';
         const QUERY_FIELDS_FULL_TEXT     = 'pageText';
         const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
-        const QUERY_FIELDS_ALL           = [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ];
-        const SELECTED_TOPIC_FACET_ITEMS = [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ];
 
         const getters = {
             query                   : () => QUERY,
