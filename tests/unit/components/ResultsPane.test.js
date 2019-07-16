@@ -18,12 +18,12 @@ function createWrapper( overrides ) {
 }
 
 describe( 'ResultsPane', () => {
+    const epubClickEvent = 'epub-click';
+    const results = require( '../fixtures/solr-responses/solr-search-results-groups.json' );
+
     let wrapper;
 
     function simulateSearch() {
-        const results =
-                  require( '../fixtures/solr-responses/solr-search-results-groups.json' );
-
         wrapper.setProps(
             {
                 display  : true,
@@ -56,5 +56,16 @@ describe( 'ResultsPane', () => {
         simulateSearch();
 
         expect( wrapper.element ).toMatchSnapshot();
+    } );
+
+    test( `emits "${ epubClickEvent }" when result is clicked`, () => {
+        simulateSearch();
+
+        const epubId    = results[ 7 ].groupValue;
+        const epubTitle = results[ 7 ].doclist.docs[ 0 ].title;
+
+        wrapper.find( `[ id = "${ epubId }" ]` ).trigger( 'click' );
+
+        expect( wrapper.emitted()[ epubClickEvent ][ 0 ] ).toEqual( [ epubId, epubTitle ] );
     } );
 } );
