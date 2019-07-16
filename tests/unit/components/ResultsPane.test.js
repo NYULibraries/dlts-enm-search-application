@@ -20,6 +20,21 @@ function createWrapper( overrides ) {
 describe( 'ResultsPane', () => {
     let wrapper;
 
+    function simulateSearch() {
+        const results =
+                  require( '../fixtures/solr-responses/solr-search-results-groups.json' );
+
+        wrapper.setProps(
+            {
+                display  : true,
+                numBooks : results.length,
+                numPages : results.map( ( group ) => group.doclist.numFound )
+                    .reduce( ( accumulator, currentValue ) => accumulator + currentValue ),
+                results  : results,
+            }
+        );
+    }
+
     beforeEach( () => {
         wrapper = createWrapper();
     } );
@@ -38,18 +53,7 @@ describe( 'ResultsPane', () => {
     } );
 
     test( 'renders results correctly', () => {
-        const results =
-            require( '../fixtures/solr-responses/solr-search-results-groups.json' );
-
-        wrapper.setProps(
-            {
-                display  : true,
-                numBooks : results.length,
-                numPages : results.map( ( group ) => group.doclist.numFound )
-                    .reduce( ( accumulator, currentValue ) => accumulator + currentValue ),
-                results  : results
-            }
-        );
+        simulateSearch();
 
         expect( wrapper.element ).toMatchSnapshot();
     } );
