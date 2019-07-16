@@ -5,32 +5,54 @@ import merge from 'lodash.merge';
 import Vuex from 'vuex';
 import { createLocalVueWithVuex } from '../test-utils';
 
-// From App.vue
-// Maybe need to DRY this up?
-const QUERY_FIELDS_UI = [
-    {
-        dciLabel : 'full texts',
-        label    : 'Full Text',
-        name     : 'fulltext',
-        value    : 'pageText',
-    },
-    {
-        dciLabel : 'topics',
-        label    : 'Topics',
-        name     : 'topics',
-        value    : 'topicNames',
-    },
-];
+const QUERY_FIELDS_FULL_TEXT     = 'pageText';
+const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
+const QUERY_FIELDS_ALL           = [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ];
+const SELECTED_TOPIC_FACET_ITEMS = [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ];
 
-function createWrapper( overrides ) {
+function createWrapper( storeOverrides, mountingOverrides ) {
+    // From App.vue
+    // Maybe need to DRY this up?
+    const QUERY_FIELDS_UI = [
+        {
+            dciLabel : 'full texts',
+            label    : 'Full Text',
+            name     : 'fulltext',
+            value    : 'pageText',
+        },
+        {
+            dciLabel : 'topics',
+            label    : 'Topics',
+            name     : 'topics',
+            value    : 'topicNames',
+        },
+    ];
+    const localVue = createLocalVueWithVuex();
+    const defaultStoreOptions = {
+        actions : {
+            removeSelectedTopicFacetItem : () => {},
+            setQuery                     : () => {},
+            setQueryFields               : () => {},
+        },
+        getters : {
+            query                   : () => 'something',
+            queryFields             : () => QUERY_FIELDS_ALL,
+            selectedTopicFacetItems : () => SELECTED_TOPIC_FACET_ITEMS,
+        },
+    };
+
+    const store = new Vuex.Store( merge( defaultStoreOptions, storeOverrides ) );
+
     const defaultMountingOptions = {
         propsData : {
             display       : false,
             queryFieldsUI : QUERY_FIELDS_UI,
         },
+        localVue,
+        store,
     };
 
-    return shallowMount( SearchEcho, merge( defaultMountingOptions, overrides ) );
+    return shallowMount( SearchEcho, merge( defaultMountingOptions, mountingOverrides ) );
 }
 
 describe( 'SearchEcho', () => {
@@ -57,39 +79,17 @@ describe( 'SearchEcho', () => {
     test( 'dismissing search DCI sets query to empty string if no topics selected', () => {
         const SEARCH_DCI_ID = 'search-dci';
 
-        const localVue = createLocalVueWithVuex();
-
         const mockSetQuery = jest.fn();
-
-        const actions = {
-            setQuery : mockSetQuery,
+        const storeOverrides = {
+            actions : {
+                setQuery : mockSetQuery,
+            },
+            getters : {
+                selectedTopicFacetItems : () => [],
+            },
         };
 
-        const QUERY                      = 'something';
-        const QUERY_FIELDS_FULL_TEXT     = 'pageText';
-        const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
-        const QUERY_FIELDS_ALL           = [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ];
-        const SELECTED_TOPIC_FACET_ITEMS = [];
-
-        const getters = {
-            query                   : () => QUERY,
-            queryFields             : () => QUERY_FIELDS_ALL,
-            selectedTopicFacetItems : () => SELECTED_TOPIC_FACET_ITEMS,
-        };
-
-        const store = new Vuex.Store(
-            {
-                actions,
-                getters,
-            }
-        );
-
-        const wrapper = createWrapper(
-            {
-                localVue,
-                store,
-            }
-        );
+        const wrapper = createWrapper( storeOverrides );
 
         wrapper.find( `button[ id = "${ SEARCH_DCI_ID }" ]` ).trigger( 'click' );
 
@@ -99,37 +99,14 @@ describe( 'SearchEcho', () => {
     test( 'dismissing search DCI sets query to * if topics selected', () => {
         const SEARCH_DCI_ID = 'search-dci';
 
-        const localVue = createLocalVueWithVuex();
-
         const mockSetQuery = jest.fn();
-
-        const actions = {
-            setQuery : mockSetQuery,
+        const storeOverrides = {
+            actions : {
+                setQuery : mockSetQuery,
+            },
         };
 
-        const QUERY                      = 'something';
-        const QUERY_FIELDS_FULL_TEXT     = 'pageText';
-        const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
-
-        const getters = {
-            query                   : () => QUERY,
-            queryFields             : () => QUERY_FIELDS_ALL,
-            selectedTopicFacetItems : () => SELECTED_TOPIC_FACET_ITEMS,
-        };
-
-        const store = new Vuex.Store(
-            {
-                actions,
-                getters,
-            }
-        );
-
-        const wrapper = createWrapper(
-            {
-                localVue,
-                store,
-            }
-        );
+        const wrapper = createWrapper( storeOverrides );
 
         wrapper.find( `button[ id = "${ SEARCH_DCI_ID }" ]` ).trigger( 'click' );
 
@@ -139,37 +116,7 @@ describe( 'SearchEcho', () => {
     test( `dismissing search DCI emits "${ SEARCH_DCI_DISMISS_EVENT }" event`, () => {
         const SEARCH_DCI_ID = 'search-dci';
 
-        const localVue = createLocalVueWithVuex();
-
-        const mockSetQuery = jest.fn();
-
-        const actions = {
-            setQuery : mockSetQuery,
-        };
-
-        const QUERY                      = 'something';
-        const QUERY_FIELDS_FULL_TEXT     = 'pageText';
-        const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
-
-        const getters = {
-            query                   : () => QUERY,
-            queryFields             : () => QUERY_FIELDS_ALL,
-            selectedTopicFacetItems : () => SELECTED_TOPIC_FACET_ITEMS,
-        };
-
-        const store = new Vuex.Store(
-            {
-                actions,
-                getters,
-            }
-        );
-
-        const wrapper = createWrapper(
-            {
-                localVue,
-                store,
-            }
-        );
+        const wrapper = createWrapper();
 
         wrapper.find( `button[ id = "${ SEARCH_DCI_ID }" ]` ).trigger( 'click' );
 
@@ -177,39 +124,14 @@ describe( 'SearchEcho', () => {
     } );
 
     test( 'dismissing topic DCI calls removeSelectedTopicFacetItem with correct arguments', () => {
-        const localVue = createLocalVueWithVuex();
-
         const mockRemoveSelectedTopicFacetItem = jest.fn();
-
-        const actions = {
-            removeSelectedTopicFacetItem : mockRemoveSelectedTopicFacetItem,
+        const storeOverrides = {
+            actions : {
+                removeSelectedTopicFacetItem : mockRemoveSelectedTopicFacetItem,
+            },
         };
 
-        const QUERY                      = 'something';
-        const QUERY_FIELDS_FULL_TEXT     = 'pageText';
-        const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
-        const QUERY_FIELDS_ALL           = [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ];
-        const SELECTED_TOPIC_FACET_ITEMS = [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ];
-
-        const getters = {
-            query                   : () => QUERY,
-            queryFields             : () => QUERY_FIELDS_ALL,
-            selectedTopicFacetItems : () => SELECTED_TOPIC_FACET_ITEMS,
-        };
-
-        const store = new Vuex.Store(
-            {
-                actions,
-                getters,
-            }
-        );
-
-        const wrapper = createWrapper(
-            {
-                localVue,
-                store,
-            }
-        );
+        const wrapper = createWrapper( storeOverrides );
 
         const TOPIC_TO_DISMISS = SELECTED_TOPIC_FACET_ITEMS[ 2 ];
 
