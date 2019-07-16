@@ -8,6 +8,7 @@ import { createLocalVueWithVuex } from '../test-utils';
 const QUERY_FIELDS_FULL_TEXT     = 'pageText';
 const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
 const QUERY_FIELDS_ALL           = [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ];
+const SEARCH_DCI_ID              = 'search-dci';
 const SELECTED_TOPIC_FACET_ITEMS = [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ];
 
 function createWrapper( storeOverrides, mountingOverrides ) {
@@ -77,8 +78,6 @@ describe( 'SearchEcho', () => {
     } );
 
     test( 'dismissing search DCI sets query to empty string if no topics selected', () => {
-        const SEARCH_DCI_ID = 'search-dci';
-
         const mockSetQuery = jest.fn();
         const storeOverrides = {
             actions : {
@@ -97,8 +96,6 @@ describe( 'SearchEcho', () => {
     } );
 
     test( 'dismissing search DCI sets query to * if topics selected', () => {
-        const SEARCH_DCI_ID = 'search-dci';
-
         const mockSetQuery = jest.fn();
         const storeOverrides = {
             actions : {
@@ -114,8 +111,6 @@ describe( 'SearchEcho', () => {
     } );
 
     test( `dismissing search DCI emits "${ SEARCH_DCI_DISMISS_EVENT }" event`, () => {
-        const SEARCH_DCI_ID = 'search-dci';
-
         const wrapper = createWrapper();
 
         wrapper.find( `button[ id = "${ SEARCH_DCI_ID }" ]` ).trigger( 'click' );
