@@ -7,9 +7,9 @@ import { createLocalVueWithVuex } from '../test-utils';
 
 const QUERY_FIELDS_FULL_TEXT     = 'pageText';
 const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
-const QUERY_FIELDS_ALL           = [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ];
+const QUERY_FIELDS_ALL           = Object.freeze( [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ] );
 const SEARCH_DCI_ID              = 'search-dci';
-const SELECTED_TOPIC_FACET_ITEMS = [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ];
+const SELECTED_TOPIC_FACET_ITEMS = Object.freeze( [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ] );
 
 function createWrapper( storeOverrides, mountingOverrides ) {
     // From App.vue
