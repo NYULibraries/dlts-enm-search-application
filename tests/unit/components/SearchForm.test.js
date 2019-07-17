@@ -1,7 +1,7 @@
 import SearchForm from '@/components/SearchForm';
 import { createLocalVueWithVuex,queryFieldsUI } from '../test-utils';
 
-import merge from 'lodash.merge';
+import mergeWith from 'lodash.mergeWith';
 import { shallowMount } from '@vue/test-utils';
 import Vuex from 'vuex';
 
@@ -22,7 +22,14 @@ function createWrapper( storeOverrides, mountingOverrides ) {
         },
     };
 
-    const store = new Vuex.Store( merge( defaultStoreOptions, storeOverrides ) );
+    // Allow for empty objects and arrays in overrides to replace default values
+    function customizer( objValue, srcValue ) {
+        return srcValue || objValue;
+    }
+
+    const store = new Vuex.Store(
+        mergeWith( defaultStoreOptions, storeOverrides, customizer )
+    );
 
     const defaultMountingOptions = {
         propsData : {
@@ -32,7 +39,12 @@ function createWrapper( storeOverrides, mountingOverrides ) {
         store,
     };
 
-    return shallowMount( SearchForm, merge( defaultMountingOptions, mountingOverrides ) );
+    const mergedMountingOptions = mergeWith(
+        defaultMountingOptions, mountingOverrides, customizer
+    );
+
+    return shallowMount( SearchForm, mergedMountingOptions );
+    // return shallowMount( SearchForm, merge( defaultMountingOptions, mountingOverrides ) );
 }
 describe( 'SearchForm', () => {
     test( 'renders correctly when initialized', () => {
