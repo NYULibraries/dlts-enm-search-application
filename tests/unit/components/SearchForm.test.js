@@ -69,4 +69,36 @@ describe( 'SearchForm', () => {
             expect( createWrapper().element ).toMatchSnapshot();
         } );
     } );
+
+    test( 'calls window.alert with correct arguments ' +
+               'when search submitted with no query fields selected', () => {
+
+        const storeOverrides = {
+            getters : {
+                query : () => '',
+            },
+        };
+
+        const wrapper = createWrapper( storeOverrides );
+
+        const spyAlert = jest.spyOn( window, 'alert' ).mockImplementation( () => {
+            // noop
+        } );
+
+        queryFieldsUI().map( queryFieldUI => queryFieldUI.name )
+            .forEach( ( queryField ) => {
+                wrapper.find( `input[ id = "${ queryField }Chx" ]` ).setChecked( false );
+            } );
+
+        wrapper.find( 'form' ).trigger( 'submit' );
+
+        const expectedBoxNames = queryFieldsUI()
+            .map( queryFieldUI => queryFieldUI.label )
+            .sort()
+            .join( ', ' );
+
+        expect( spyAlert ).toHaveBeenCalledWith( 'Please check one or more boxes: ' + expectedBoxNames );
+
+        spyAlert.mockRestore();
+    } );
 } );
