@@ -119,6 +119,14 @@ describe( 'SearchEcho', () => {
     } );
 
     test( 'displays correct DCIs when facet items are selected', () => {
+        const wrapper = createWrapper();
+
+        const topicFacetItemDCIs = wrapper.findAll( 'span.tag' ).wrappers.slice( 1 );
+
+        for ( let i = 0; i < SELECTED_TOPIC_FACET_ITEMS.length; i++ ) {
+            expect( topicFacetItemDCIs[ i ].text() )
+                .toMatch( new RegExp( `^Topic:\\s+${ SELECTED_TOPIC_FACET_ITEMS[ i ] }$` ) );
+        }
     } );
 
     test( 'dismissing search DCI sets query to empty string if no topics selected', () => {
