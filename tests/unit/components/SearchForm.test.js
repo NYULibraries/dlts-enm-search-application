@@ -1,5 +1,5 @@
 import SearchForm from '@/components/SearchForm';
-import { createLocalVueWithVuex,queryFieldsUI } from '../test-utils';
+import { createLocalVueWithVuex, queryFieldsUI } from '../test-utils';
 
 import mergeWith from 'lodash.mergeWith';
 import { shallowMount } from '@vue/test-utils';
@@ -46,6 +46,7 @@ function createWrapper( storeOverrides, mountingOverrides ) {
     return shallowMount( SearchForm, mergedMountingOptions );
     // return shallowMount( SearchForm, merge( defaultMountingOptions, mountingOverrides ) );
 }
+
 describe( 'SearchForm', () => {
     test( 'renders correctly when initialized', () => {
         expect( createWrapper().element ).toMatchSnapshot();
