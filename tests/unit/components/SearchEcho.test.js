@@ -47,7 +47,7 @@ function createWrapper( storeOverrides, mountingOverrides ) {
 
     const defaultMountingOptions = {
         propsData : {
-            display       : false,
+            display       : true,
             queryFieldsUI : QUERY_FIELDS_UI,
         },
         localVue,
