@@ -14,6 +14,7 @@ const SEARCH_DCI_BUTTON_ID       = 'search-dci';
 // so need this to create a wrapper to click the dismiss "x".  We still need
 // SEARCH_DCI_BUTTON_ID for a test assertion to check the dismiss event.
 const SEARCH_DCI_BUTTON_SELECTOR = `button[ id = "${ SEARCH_DCI_BUTTON_ID }" ]`;
+const SEARCH_DCI_SPAN_SELECTOR   = '#search-dci-span';
 const SELECTED_TOPIC_FACET_ITEMS = Object.freeze( [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ] );
 
 function createWrapper( storeOverrides, mountingOverrides ) {
@@ -91,13 +92,34 @@ describe( 'SearchEcho', () => {
         expect( dciContainers.wrappers[ 0 ].find( 'button' ).attributes().id ).toBe( SEARCH_DCI_BUTTON_ID );
     } );
 
-    test( 'displays correct DCIs when query submitted against full-text only', () => {
+    test( 'displays correct search DCI when query submitted against full-text only', () => {
+        const storeOverrides = {
+            getters : {
+                queryFields : () => [ QUERY_FIELDS_FULL_TEXT ],
+            },
+        };
+
+        const wrapper = createWrapper( storeOverrides );
+
+        expect( wrapper.find( SEARCH_DCI_SPAN_SELECTOR ).text() ).toBe( 'Searching full texts for: something' );
     } );
 
-    test( 'displays correct DCIs when query submitted against topics only', () => {
+    test( 'displays correct search DCI when query submitted against topics only', () => {
+        const storeOverrides = {
+            getters : {
+                queryFields : () => [ QUERY_FIELDS_TOPIC_NAMES ],
+            },
+        };
+
+        const wrapper = createWrapper( storeOverrides );
+
+        expect( wrapper.find( SEARCH_DCI_SPAN_SELECTOR ).text() ).toBe( 'Searching topics for: something' );
     } );
 
     test( 'displays correct DCIs when query submitted against full-text and topics', () => {
+        const wrapper = createWrapper();
+
+        expect( wrapper.find( SEARCH_DCI_SPAN_SELECTOR ).text() ).toBe( 'Searching full texts and topics for: something' );
     } );
 
     test( 'displays correct DCIs when facet items are selected', () => {
