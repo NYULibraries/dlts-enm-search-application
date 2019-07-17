@@ -23,7 +23,27 @@ function createReadonlyStore( query, queryFields, selectedTopicFieldFacetItems )
     );
 }
 
+function queryFieldsUI() {
+    // From App.vue QUERY_FIELDS_UI
+    // Maybe need to DRY this up?
+    return [
+        {
+            dciLabel : 'full texts',
+            label    : 'Full Text',
+            name     : 'fulltext',
+            value    : 'pageText',
+        },
+        {
+            dciLabel : 'topics',
+            label    : 'Topics',
+            name     : 'topics',
+            value    : 'topicNames',
+        },
+    ];
+}
+
 export {
     createLocalVueWithVuex,
     createReadonlyStore,
+    queryFieldsUI,
 };

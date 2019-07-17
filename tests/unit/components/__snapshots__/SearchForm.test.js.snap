@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchForm renders correctly when initialized 1`] = `
+<section
+  class="hero is-primary enm-searchbox-hero"
+>
+  <div
+    class="hero-body"
+  >
+    <div
+      class="container is-fluid"
+    >
+      <form
+        class="enm-searchform"
+      >
+        <div
+          class="enm-searchbox"
+        >
+          <div
+            class="field columns level"
+          >
+            <div
+              class="column level-item"
+            >
+              <p
+                class="control has-icons-left"
+              >
+                <label
+                  class="enm-visually-hidden"
+                  for="enm-searchinput"
+                >
+                  
+                                    Search inside all books
+                                
+                </label>
+                 
+                <input
+                  class="input is-large"
+                  id="enm-searchinput"
+                  placeholder="Search inside all books"
+                  type="text"
+                />
+                 
+                <span
+                  class="icon is-small is-left"
+                >
+                  <i
+                    class="fa fa-search"
+                  />
+                </span>
+              </p>
+            </div>
+             
+            <div
+              class="column is-narrow"
+            >
+              <input
+                class="is-medium is-checkbox"
+                id="fulltextChx"
+                name="fulltextChx"
+                type="checkbox"
+                value="pageText"
+              />
+               
+              <label
+                for="fulltextChx"
+              >
+                
+                                    Full Text
+                                
+              </label>
+              <input
+                class="is-medium is-checkbox"
+                id="topicsChx"
+                name="topicsChx"
+                type="checkbox"
+                value="topicNames"
+              />
+               
+              <label
+                for="topicsChx"
+              >
+                
+                                    Topics
+                                
+              </label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+`;
