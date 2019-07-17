@@ -9,8 +9,8 @@ const DCI_CONTAINER_SELECTOR     = 'span.tag';
 const QUERY_FIELDS_FULL_TEXT     = 'pageText';
 const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
 const QUERY_FIELDS_ALL           = Object.freeze( [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ] );
-const SEARCH_DCI_ID              = 'search-dci';
-const SEARCH_DCI_SELECTOR        = `button[ id = "${ SEARCH_DCI_ID }" ]`;
+const SEARCH_DCI_BUTTON_ID       = 'search-dci';
+const SEARCH_DCI_BUTTON_SELECTOR = `button[ id = "${ SEARCH_DCI_BUTTON_ID }" ]`;
 const SELECTED_TOPIC_FACET_ITEMS = Object.freeze( [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ] );
 
 function createWrapper( storeOverrides, mountingOverrides ) {
@@ -70,7 +70,7 @@ describe( 'SearchEcho', () => {
 
         const wrapper = createWrapper( storeOverrides );
 
-        expect( wrapper.find( SEARCH_DCI_SELECTOR ).isVisible() ).toBeFalsy();
+        expect( wrapper.find( SEARCH_DCI_BUTTON_SELECTOR ).isVisible() ).toBeFalsy();
     } );
 
     test( 'does not display topic DCIs when selectedTopicItems is empty', () => {
@@ -85,7 +85,7 @@ describe( 'SearchEcho', () => {
         // Only the search DCI should be displayed
         const dciContainers = wrapper.findAll( DCI_CONTAINER_SELECTOR );
         expect( dciContainers.length ).toBe( 1 );
-        expect( dciContainers.wrappers[ 0 ].find( 'button' ).attributes().id ).toBe( SEARCH_DCI_ID );
+        expect( dciContainers.wrappers[ 0 ].find( 'button' ).attributes().id ).toBe( SEARCH_DCI_BUTTON_ID );
     } );
 
     test( 'displays correct DCIs when query submitted against full-text only', () => {
@@ -113,7 +113,7 @@ describe( 'SearchEcho', () => {
 
         const wrapper = createWrapper( storeOverrides );
 
-        wrapper.find( SEARCH_DCI_SELECTOR ).trigger( 'click' );
+        wrapper.find( SEARCH_DCI_BUTTON_SELECTOR ).trigger( 'click' );
 
         expect( mockSetQuery.mock.calls[ 0 ][ 1 ] ).toBe( '' );
     } );
@@ -128,7 +128,7 @@ describe( 'SearchEcho', () => {
 
         const wrapper = createWrapper( storeOverrides );
 
-        wrapper.find( SEARCH_DCI_SELECTOR ).trigger( 'click' );
+        wrapper.find( SEARCH_DCI_BUTTON_SELECTOR ).trigger( 'click' );
 
         expect( mockSetQuery.mock.calls[ 0 ][ 1 ] ).toBe( '*' );
     } );
@@ -136,9 +136,9 @@ describe( 'SearchEcho', () => {
     test( `dismissing search DCI emits "${ SEARCH_DCI_DISMISS_EVENT }" event`, () => {
         const wrapper = createWrapper();
 
-        wrapper.find( SEARCH_DCI_SELECTOR ).trigger( 'click' );
+        wrapper.find( SEARCH_DCI_BUTTON_SELECTOR ).trigger( 'click' );
 
-        expect( wrapper.emitted()[ SEARCH_DCI_DISMISS_EVENT ][ 0 ][ 0 ] ).toEqual( SEARCH_DCI_ID );
+        expect( wrapper.emitted()[ SEARCH_DCI_DISMISS_EVENT ][ 0 ][ 0 ] ).toEqual( SEARCH_DCI_BUTTON_ID );
     } );
 
     test( 'dismissing topic DCI calls removeSelectedTopicFacetItem with correct arguments', () => {
