@@ -10,11 +10,7 @@ const QUERY_FIELDS_FULL_TEXT     = 'pageText';
 const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
 const QUERY_FIELDS_ALL           = Object.freeze( [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ] );
 const SEARCH_DCI_BUTTON_ID       = 'search-dci';
-// For some reason, `#${ SEARCH_DCI_BUTTON_ID }` alone doesn't work as a selector,
-// so need this to create a wrapper to click the dismiss "x".  We still need
-// SEARCH_DCI_BUTTON_ID for a test assertion to check the dismiss event.
-const SEARCH_DCI_BUTTON_SELECTOR = `button[ id = "${ SEARCH_DCI_BUTTON_ID }" ]`;
-const SEARCH_DCI_SPAN_SELECTOR   = '#search-dci-span';
+const SEARCH_DCI_SPAN_ID         = 'search-dci-span';
 const SELECTED_TOPIC_FACET_ITEMS = Object.freeze( [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ] );
 
 function createWrapper( storeOverrides, mountingOverrides ) {
@@ -74,7 +70,7 @@ describe( 'SearchEcho', () => {
 
         const wrapper = createWrapper( storeOverrides );
 
-        expect( wrapper.find( SEARCH_DCI_BUTTON_SELECTOR ).isVisible() ).toBeFalsy();
+        expect( wrapper.find( `#${ SEARCH_DCI_BUTTON_ID }` ).isVisible() ).toBeFalsy();
     } );
 
     test( 'does not display topic DCIs when selectedTopicItems is empty', () => {
@@ -101,7 +97,7 @@ describe( 'SearchEcho', () => {
 
         const wrapper = createWrapper( storeOverrides );
 
-        expect( wrapper.find( SEARCH_DCI_SPAN_SELECTOR ).text() ).toBe( 'Searching full texts for: something' );
+        expect( wrapper.find( `#${ SEARCH_DCI_SPAN_ID }` ).text() ).toBe( 'Searching full texts for: something' );
     } );
 
     test( 'displays correct search DCI when query submitted against topics only', () => {
@@ -113,13 +109,13 @@ describe( 'SearchEcho', () => {
 
         const wrapper = createWrapper( storeOverrides );
 
-        expect( wrapper.find( SEARCH_DCI_SPAN_SELECTOR ).text() ).toBe( 'Searching topics for: something' );
+        expect( wrapper.find( `#${ SEARCH_DCI_SPAN_ID }` ).text() ).toBe( 'Searching topics for: something' );
     } );
 
     test( 'displays correct DCIs when query submitted against full-text and topics', () => {
         const wrapper = createWrapper();
 
-        expect( wrapper.find( SEARCH_DCI_SPAN_SELECTOR ).text() ).toBe( 'Searching full texts and topics for: something' );
+        expect( wrapper.find( `#${ SEARCH_DCI_SPAN_ID }` ).text() ).toBe( 'Searching full texts and topics for: something' );
     } );
 
     test( 'displays correct DCIs when facet items are selected', () => {
@@ -138,7 +134,7 @@ describe( 'SearchEcho', () => {
 
         const wrapper = createWrapper( storeOverrides );
 
-        wrapper.find( SEARCH_DCI_BUTTON_SELECTOR ).trigger( 'click' );
+        wrapper.find( `#${ SEARCH_DCI_BUTTON_ID }` ).trigger( 'click' );
 
         expect( mockSetQuery.mock.calls[ 0 ][ 1 ] ).toBe( '' );
     } );
@@ -153,7 +149,7 @@ describe( 'SearchEcho', () => {
 
         const wrapper = createWrapper( storeOverrides );
 
-        wrapper.find( SEARCH_DCI_BUTTON_SELECTOR ).trigger( 'click' );
+        wrapper.find( `#${ SEARCH_DCI_BUTTON_ID }` ).trigger( 'click' );
 
         expect( mockSetQuery.mock.calls[ 0 ][ 1 ] ).toBe( '*' );
     } );
@@ -161,7 +157,7 @@ describe( 'SearchEcho', () => {
     test( `dismissing search DCI emits "${ SEARCH_DCI_DISMISS_EVENT }" event`, () => {
         const wrapper = createWrapper();
 
-        wrapper.find( SEARCH_DCI_BUTTON_SELECTOR ).trigger( 'click' );
+        wrapper.find( `#${ SEARCH_DCI_BUTTON_ID }` ).trigger( 'click' );
 
         expect( wrapper.emitted()[ SEARCH_DCI_DISMISS_EVENT ][ 0 ][ 0 ] ).toEqual( SEARCH_DCI_BUTTON_ID );
     } );
