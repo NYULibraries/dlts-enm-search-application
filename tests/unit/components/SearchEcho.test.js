@@ -9,6 +9,7 @@ const QUERY_FIELDS_FULL_TEXT     = 'pageText';
 const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
 const QUERY_FIELDS_ALL           = Object.freeze( [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ] );
 const SEARCH_DCI_ID              = 'search-dci';
+const SEARCH_DCI_SELECTOR        = `button[ id = "${ SEARCH_DCI_ID }" ]`;
 const SELECTED_TOPIC_FACET_ITEMS = Object.freeze( [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ] );
 
 function createWrapper( storeOverrides, mountingOverrides ) {
@@ -90,7 +91,7 @@ describe( 'SearchEcho', () => {
 
         const wrapper = createWrapper( storeOverrides );
 
-        wrapper.find( `button[ id = "${ SEARCH_DCI_ID }" ]` ).trigger( 'click' );
+        wrapper.find( SEARCH_DCI_SELECTOR ).trigger( 'click' );
 
         expect( mockSetQuery.mock.calls[ 0 ][ 1 ] ).toBe( '' );
     } );
@@ -105,7 +106,7 @@ describe( 'SearchEcho', () => {
 
         const wrapper = createWrapper( storeOverrides );
 
-        wrapper.find( `button[ id = "${ SEARCH_DCI_ID }" ]` ).trigger( 'click' );
+        wrapper.find( SEARCH_DCI_SELECTOR ).trigger( 'click' );
 
         expect( mockSetQuery.mock.calls[ 0 ][ 1 ] ).toBe( '*' );
     } );
@@ -113,7 +114,7 @@ describe( 'SearchEcho', () => {
     test( `dismissing search DCI emits "${ SEARCH_DCI_DISMISS_EVENT }" event`, () => {
         const wrapper = createWrapper();
 
-        wrapper.find( `button[ id = "${ SEARCH_DCI_ID }" ]` ).trigger( 'click' );
+        wrapper.find( SEARCH_DCI_SELECTOR ).trigger( 'click' );
 
         expect( wrapper.emitted()[ SEARCH_DCI_DISMISS_EVENT ][ 0 ][ 0 ] ).toEqual( SEARCH_DCI_ID );
     } );
