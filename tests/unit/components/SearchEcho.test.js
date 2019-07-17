@@ -129,6 +129,10 @@ describe( 'SearchEcho', () => {
         }
     } );
 
+    test( 'renders correctly', () => {
+        expect( createWrapper() ).toMatchSnapshot();
+    } );
+
     test( 'dismissing search DCI sets query to empty string if no topics selected', () => {
         const mockSetQuery = jest.fn();
         const storeOverrides = {

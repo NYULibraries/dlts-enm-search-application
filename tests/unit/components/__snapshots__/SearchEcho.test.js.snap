@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchEcho renders correctly 1`] = `
+<section class="hero searchecho">
+  <div class="container is-fluid">
+    <div class="columns enm-searchecho">
+      <div class="column"><span id="search-dci-span" class="tag">
+                    Searching full texts and topics for: something
+                    <button id="search-dci" class="delete is-small"></button></span> <span class="tag">
+                    Topic:&nbsp;<span class="enm-topic">
+                        topic 0
+                    </span> <button id="topic 0" class="delete is-small"></button></span><span class="tag">
+                    Topic:&nbsp;<span class="enm-topic">
+                        topic 1
+                    </span> <button id="topic 1" class="delete is-small"></button></span><span class="tag">
+                    Topic:&nbsp;<span class="enm-topic">
+                        topic 2
+                    </span> <button id="topic 2" class="delete is-small"></button></span><span class="tag">
+                    Topic:&nbsp;<span class="enm-topic">
+                        topic 3
+                    </span> <button id="topic 3" class="delete is-small"></button></span></div>
+    </div>
+  </div>
+</section>
+`;
