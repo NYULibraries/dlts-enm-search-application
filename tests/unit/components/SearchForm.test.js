@@ -48,8 +48,25 @@ function createWrapper( storeOverrides, mountingOverrides ) {
 }
 
 describe( 'SearchForm', () => {
-    test( 'renders correctly when initialized', () => {
-        expect( createWrapper().element ).toMatchSnapshot();
-    } );
+    describe( 'renders correctly when initialized', () => {
+        test( 'with no queryFields', () => {
+            const storeOverrides = {
+                getters : {
+                    queryFields : () => [],
+                },
+            };
+            const mountingOverrides = {
+                propsData : {
+                    queryFieldsUI : [],
+                },
+            };
+            const wrapper = createWrapper( storeOverrides, mountingOverrides );
 
+            expect( wrapper.element ).toMatchSnapshot();
+        } );
+
+        test( 'with queryFields', () => {
+            expect( createWrapper().element ).toMatchSnapshot();
+        } );
+    } );
 } );
