@@ -60,7 +60,16 @@ function createWrapper( storeOverrides, mountingOverrides ) {
 describe( 'SearchEcho', () => {
     const SEARCH_DCI_DISMISS_EVENT = 'search-dci-dismiss';
 
-    test( 'does not display any DCIs when query is empty', () => {
+    test( 'does not display search DCI when query is empty', () => {
+        const storeOverrides = {
+            getters : {
+                query : () => '',
+            },
+        };
+
+        const wrapper = createWrapper( storeOverrides );
+
+        expect( wrapper.find( SEARCH_DCI_SELECTOR ).isVisible() ).toBeFalsy();
     } );
 
     test( 'does not display topic DCIs when selectedTopicItems is empty', () => {
