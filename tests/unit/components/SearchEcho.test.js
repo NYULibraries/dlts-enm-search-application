@@ -3,7 +3,7 @@ import SearchEcho from '@/components/SearchEcho';
 import { shallowMount } from '@vue/test-utils';
 import merge from 'lodash.merge';
 import Vuex from 'vuex';
-import { createLocalVueWithVuex } from '../test-utils';
+import { createLocalVueWithVuex,queryFieldsUI } from '../test-utils';
 
 const DCI_CONTAINER_SELECTOR     = 'span.tag';
 const QUERY_FIELDS_FULL_TEXT     = 'pageText';
@@ -14,22 +14,6 @@ const SEARCH_DCI_SPAN_ID         = 'search-dci-span';
 const SELECTED_TOPIC_FACET_ITEMS = Object.freeze( [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ] );
 
 function createWrapper( storeOverrides, mountingOverrides ) {
-    // From App.vue
-    // Maybe need to DRY this up?
-    const QUERY_FIELDS_UI = [
-        {
-            dciLabel : 'full texts',
-            label    : 'Full Text',
-            name     : 'fulltext',
-            value    : 'pageText',
-        },
-        {
-            dciLabel : 'topics',
-            label    : 'Topics',
-            name     : 'topics',
-            value    : 'topicNames',
-        },
-    ];
     const localVue = createLocalVueWithVuex();
     const defaultStoreOptions = {
         actions : {
@@ -49,7 +33,7 @@ function createWrapper( storeOverrides, mountingOverrides ) {
     const defaultMountingOptions = {
         propsData : {
             display       : true,
-            queryFieldsUI : QUERY_FIELDS_UI,
+            queryFieldsUI : queryFieldsUI(),
         },
         localVue,
         store,
