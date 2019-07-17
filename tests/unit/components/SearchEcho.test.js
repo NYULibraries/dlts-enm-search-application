@@ -10,6 +10,9 @@ const QUERY_FIELDS_FULL_TEXT     = 'pageText';
 const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
 const QUERY_FIELDS_ALL           = Object.freeze( [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ] );
 const SEARCH_DCI_BUTTON_ID       = 'search-dci';
+// For some reason, `#${ SEARCH_DCI_BUTTON_ID }` alone doesn't work as a selector,
+// so need this to create a wrapper to click the dismiss "x".  We still need
+// SEARCH_DCI_BUTTON_ID for a test assertion to check the dismiss event.
 const SEARCH_DCI_BUTTON_SELECTOR = `button[ id = "${ SEARCH_DCI_BUTTON_ID }" ]`;
 const SELECTED_TOPIC_FACET_ITEMS = Object.freeze( [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ] );
 
