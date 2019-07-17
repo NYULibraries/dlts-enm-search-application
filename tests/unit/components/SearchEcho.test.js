@@ -5,6 +5,7 @@ import merge from 'lodash.merge';
 import Vuex from 'vuex';
 import { createLocalVueWithVuex } from '../test-utils';
 
+const DCI_CONTAINER_SELECTOR     = 'span.tag';
 const QUERY_FIELDS_FULL_TEXT     = 'pageText';
 const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
 const QUERY_FIELDS_ALL           = Object.freeze( [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ] );
@@ -73,6 +74,18 @@ describe( 'SearchEcho', () => {
     } );
 
     test( 'does not display topic DCIs when selectedTopicItems is empty', () => {
+        const storeOverrides = {
+            getters : {
+                selectedTopicFacetItems : () => [],
+            },
+        };
+
+        const wrapper = createWrapper( storeOverrides );
+
+        // Only the search DCI should be displayed
+        const dciContainers = wrapper.findAll( DCI_CONTAINER_SELECTOR );
+        expect( dciContainers.length ).toBe( 1 );
+        expect( dciContainers.wrappers[ 0 ].find( 'button' ).attributes().id ).toBe( SEARCH_DCI_ID );
     } );
 
     test( 'displays correct DCIs when query submitted against full-text only', () => {
