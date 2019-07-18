@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Spinner renders correctly when displayed 1`] = `
+<div
+  class="column enm-pane enm-pane-results is-half"
+  id="spinner"
+  style=""
+>
+  <div
+    class="overlay-loader"
+  >
+    <div
+      class="loader"
+    >
+      <div />
+       
+      <div />
+       
+      <div />
+       
+      <div />
+       
+      <div />
+       
+      <div />
+       
+      <div />
+    </div>
+  </div>
+</div>
+`;
