@@ -1,5 +1,5 @@
 import SearchForm from '@/components/SearchForm';
-import { createLocalVueWithVuex, queryFieldsUI } from '../test-utils';
+import { createLocalVueWithVuex, queryFieldsUI, queryFieldsUILabels } from '../test-utils';
 
 import mergeWith from 'lodash.mergeWith';
 import { shallowMount } from '@vue/test-utils';
@@ -93,12 +93,9 @@ describe( 'SearchForm', () => {
 
         wrapper.find( 'form' ).trigger( 'submit' );
 
-        const expectedBoxNames = queryFieldsUI()
-            .map( queryFieldUI => queryFieldUI.label )
-            .sort()
-            .join( ', ' );
-
-        expect( spyAlert ).toHaveBeenCalledWith( 'Please check one or more boxes: ' + expectedBoxNames );
+        expect( spyAlert ).toHaveBeenCalledWith(
+            'Please check one or more boxes: ' + queryFieldsUILabels().join( ', ' )
+        );
 
         spyAlert.mockRestore();
     } );

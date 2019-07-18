@@ -42,8 +42,16 @@ function queryFieldsUI() {
     ];
 }
 
+function queryFieldsUILabels() {
+    return queryFieldsUI()
+        .map( queryFieldUI => queryFieldUI.label )
+        .sort();
+}
+}
+
 export {
     createLocalVueWithVuex,
     createReadonlyStore,
     queryFieldsUI,
+    queryFieldsUILabels,
 };
