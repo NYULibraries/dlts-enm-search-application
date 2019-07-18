@@ -144,5 +144,9 @@ describe( 'SearchForm', () => {
         test( `"${ SUBMIT_EVENT }" is emitted`, () => {
             expect( wrapper.emitted() ).toHaveProperty( SUBMIT_EVENT );
         } );
+
+        test( 'renders correctly', () => {
+            expect( wrapper.element ).toMatchSnapshot();
+        } );
     } );
 } );
