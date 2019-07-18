@@ -1,5 +1,10 @@
 import SearchForm from '@/components/SearchForm';
-import { createLocalVueWithVuex, queryFieldsUI, queryFieldsUILabels } from '../test-utils';
+import {
+    createLocalVueWithVuex,
+    queryFieldsUI,
+    queryFieldsUILabels,
+    queryFieldsUIValues,
+} from '../test-utils';
 
 import mergeWith from 'lodash.mergeWith';
 import { shallowMount } from '@vue/test-utils';
@@ -9,6 +14,8 @@ const QUERY                      = 'something';
 const QUERY_FIELDS_FULL_TEXT     = 'pageText';
 const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
 const QUERY_FIELDS_ALL           = Object.freeze( [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ] );
+
+const SEARCH_INPUT_SELECTOR      = '#enm-searchinput';
 
 function createWrapper( storeOverrides, mountingOverrides ) {
     const localVue = createLocalVueWithVuex();
@@ -98,5 +105,44 @@ describe( 'SearchForm', () => {
         );
 
         spyAlert.mockRestore();
+    } );
+
+    describe( 'when search is submitted', () => {
+        const SUBMIT_EVENT = 'submit';
+
+        const mockSetQuery       = jest.fn();
+        const mockSetQueryFields = jest.fn();
+
+        let wrapper;
+
+        beforeEach( () => {
+            mockSetQuery.mockRestore();
+            mockSetQueryFields.mockRestore();
+
+            const storeOverrides = {
+                actions : {
+                    setQuery       : mockSetQuery,
+                    setQueryFields : mockSetQueryFields,
+                },
+            };
+
+            wrapper = createWrapper( storeOverrides );
+
+            wrapper.find( SEARCH_INPUT_SELECTOR ).setValue( QUERY );
+
+            wrapper.find( 'form' ).trigger( 'submit' );
+        } );
+
+        test( 'setQuery is called with correct arguments', () => {
+            expect( mockSetQuery.mock.calls[ 0 ][ 1 ] ).toBe( QUERY );
+        } );
+
+        test( 'setQueryFields is called with correct arguments', () => {
+            expect( mockSetQueryFields.mock.calls[ 0 ][ 1 ] ).toEqual( queryFieldsUIValues() );
+        } );
+
+        test( `"${ SUBMIT_EVENT }" is emitted`, () => {
+            expect( wrapper.emitted() ).toHaveProperty( SUBMIT_EVENT );
+        } );
     } );
 } );

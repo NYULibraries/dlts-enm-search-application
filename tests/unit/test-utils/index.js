@@ -47,6 +47,11 @@ function queryFieldsUILabels() {
         .map( queryFieldUI => queryFieldUI.label )
         .sort();
 }
+
+function queryFieldsUIValues() {
+    return queryFieldsUI()
+        .map( queryFieldUI => queryFieldUI.value )
+        .sort();
 }
 
 export {
@@ -54,4 +59,5 @@ export {
     createReadonlyStore,
     queryFieldsUI,
     queryFieldsUILabels,
+    queryFieldsUIValues,
 };
