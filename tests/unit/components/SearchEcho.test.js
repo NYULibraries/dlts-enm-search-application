@@ -3,7 +3,7 @@ import SearchEcho from '@/components/SearchEcho';
 import { shallowMount } from '@vue/test-utils';
 import merge from 'lodash.merge';
 import Vuex from 'vuex';
-import { createLocalVueWithVuex,queryFieldsUI } from '../test-utils';
+import { createLocalVueWithVuex, queryFieldsUI } from '../test-utils';
 
 const DCI_CONTAINER_SELECTOR     = 'span.tag';
 const QUERY_FIELDS_FULL_TEXT     = 'pageText';
