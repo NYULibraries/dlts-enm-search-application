@@ -5,6 +5,7 @@ import mergeWith from 'lodash.mergeWith';
 import { shallowMount } from '@vue/test-utils';
 import Vuex from 'vuex';
 
+const QUERY                      = 'something';
 const QUERY_FIELDS_FULL_TEXT     = 'pageText';
 const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
 const QUERY_FIELDS_ALL           = Object.freeze( [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ] );
@@ -17,7 +18,7 @@ function createWrapper( storeOverrides, mountingOverrides ) {
             setQueryFields               : () => {},
         },
         getters : {
-            query                   : () => 'something',
+            query                   : () => QUERY,
             queryFields             : () => QUERY_FIELDS_ALL,
         },
     };
