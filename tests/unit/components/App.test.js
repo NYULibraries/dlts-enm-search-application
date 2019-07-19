@@ -11,6 +11,7 @@ import merge from 'lodash.merge';
 import Vuex from 'vuex';
 import { createLocalVueWithVuex } from '../test-utils';
 
+const QUERY                      = 'something';
 const QUERY_FIELDS_FULL_TEXT     = 'pageText';
 const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
 const QUERY_FIELDS_ALL           = Object.freeze( [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ] );
@@ -57,5 +58,47 @@ describe( 'App', () => {
         expect( wrapper.find( PreviewPane ).vm.display ).toBeFalsy();
         expect( wrapper.find( Spinner ).vm.display ).toBeFalsy();
     } );
+
+    describe( 'when SearchForm emits submit event', () => {
+        const mockClearSelectedTopicFacetItems = jest.fn();
+
+        let wrapper;
+
+        beforeEach( () => {
+            mockClearSelectedTopicFacetItems.mockRestore();
+
+            const storeOverrides = {
+                actions : {
+                    clearSelectedTopicFacetItems : mockClearSelectedTopicFacetItems,
+                },
+                getters : {
+                    query : () => QUERY,
+                },
+            };
+
+            wrapper = createWrapper( storeOverrides );
+
+            wrapper.find( SearchForm ).vm.$emit( 'submit' );
+        } );
+
+        test( 'clearSelectedTopicFacetItems is called', () => {
+            expect( mockClearSelectedTopicFacetItems ).toHaveBeenCalled();
+        } );
+
+        test( 'new search is submitted and $solrSearch is called with correct arguments', () => {
+
+        } );
+
+        test( 'FacetPane props and visibility are set correctly', () => {
+
+        } );
+
+        test( 'ResultsPane props and visibility are set correctly', () => {
+
+        } );
+
+        test( 'PreviewPane props and visibility are set correctly', () => {
+
+        } );
     } );
 } );
