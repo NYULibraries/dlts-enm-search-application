@@ -61,22 +61,31 @@ describe( 'App', () => {
 
     describe( 'when SearchForm emits submit event', () => {
         const mockClearSelectedTopicFacetItems = jest.fn();
+        const mockSolrSearch = jest.fn();
 
         let wrapper;
 
         beforeEach( () => {
             mockClearSelectedTopicFacetItems.mockRestore();
+            mockSolrSearch.mockRestore();
 
             const storeOverrides = {
                 actions : {
                     clearSelectedTopicFacetItems : mockClearSelectedTopicFacetItems,
                 },
                 getters : {
-                    query : () => QUERY,
+                    query                   : () => QUERY,
+                    selectedTopicFacetItems : () => SELECTED_TOPIC_FACET_ITEMS,
                 },
             };
 
-            wrapper = createWrapper( storeOverrides );
+            const mountingOverrides = {
+                mocks : {
+                    $solrSearch : mockSolrSearch,
+                },
+            };
+
+            wrapper = createWrapper( storeOverrides, mountingOverrides );
 
             wrapper.find( SearchForm ).vm.$emit( 'submit' );
         } );
@@ -85,8 +94,14 @@ describe( 'App', () => {
             expect( mockClearSelectedTopicFacetItems ).toHaveBeenCalled();
         } );
 
-        test( 'new search is submitted and $solrSearch is called with correct arguments', () => {
-
+        test( '$solrSearch is called with correct arguments', () => {
+            expect( mockSolrSearch.mock.calls[ 0 ] ).toEqual(
+                [
+                    QUERY,
+                    QUERY_FIELDS_ALL,
+                    SELECTED_TOPIC_FACET_ITEMS,
+                ],
+            );
         } );
 
         test( 'FacetPane props and visibility are set correctly', () => {
