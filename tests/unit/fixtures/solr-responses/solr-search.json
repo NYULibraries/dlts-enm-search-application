@@ -1,0 +1,516 @@
+{
+    "facet_counts" : {
+        "facet_fields" : {
+            "topicNames_facet" : [
+                "topic 1",
+                250,
+                "topic 2",
+                147,
+                "topic 3",
+                100,
+                "topic 4",
+                68,
+                "topic 5",
+                68,
+                "topic 6",
+                12,
+                "topic 7",
+                1
+            ]
+        }
+    },
+    "grouped" : {
+        "isbn" : {
+            "groups" : [
+                {
+                    "groupValue":"9781111111111",
+                    "doclist":{
+                        "numFound":8,
+                        "start":0,
+                        "maxScore":19.730812,
+                        "docs":[
+                            {
+                                "authors":[
+                                    "Authors One"
+                                ],
+                                "publisher":[
+                                    "Publisher One"
+                                ],
+                                "title":"Title 1",
+                                "yearOfPublication":0,
+                                "score":19.730812
+                            },
+                            {
+                                "authors":[
+                                    "Authors One"
+                                ],
+                                "publisher":[
+                                    "Publisher One"
+                                ],
+                                "title":"Title 1",
+                                "yearOfPublication":0,
+                                "score":13.67579
+                            },
+                            {
+                                "authors":[
+                                    "Authors One"
+                                ],
+                                "publisher":[
+                                    "Publisher One"
+                                ],
+                                "title":"Title 1",
+                                "yearOfPublication":0,
+                                "score":10.649685
+                            },
+                            {
+                                "authors":[
+                                    "Authors One"
+                                ],
+                                "publisher":[
+                                    "Publisher One"
+                                ],
+                                "title":"Title 1",
+                                "yearOfPublication":0,
+                                "score":8.958746
+                            },
+                            {
+                                "authors":[
+                                    "Authors One"
+                                ],
+                                "publisher":[
+                                    "Publisher One"
+                                ],
+                                "title":"Title 1",
+                                "yearOfPublication":0,
+                                "score":8.958746
+                            },
+                            {
+                                "authors":[
+                                    "Authors One"
+                                ],
+                                "publisher":[
+                                    "Publisher One"
+                                ],
+                                "title":"Title 1",
+                                "yearOfPublication":0,
+                                "score":7.959174
+                            },
+                            {
+                                "authors":[
+                                    "Authors One"
+                                ],
+                                "publisher":[
+                                    "Publisher One"
+                                ],
+                                "title":"Title 1",
+                                "yearOfPublication":0,
+                                "score":7.959174
+                            },
+                            {
+                                "authors":[
+                                    "Authors One"
+                                ],
+                                "publisher":[
+                                    "Publisher One"
+                                ],
+                                "title":"Title 1",
+                                "yearOfPublication":0,
+                                "score":7.959174
+                            }
+                        ]
+                    }
+                },
+                {
+                    "groupValue":"9781111111112",
+                    "doclist":{
+                        "numFound":11,
+                        "start":0,
+                        "maxScore":16.446804,
+                        "docs":[
+                            {
+                                "authors":[
+                                    "Authors, Two"
+                                ],
+                                "publisher":[
+                                    "Publisher Two"
+                                ],
+                                "title":"Title 2",
+                                "yearOfPublication":2018,
+                                "score":16.446804
+                            },
+                            {
+                                "authors":[
+                                    "Authors, Two"
+                                ],
+                                "publisher":[
+                                    "Publisher Two"
+                                ],
+                                "title":"Title 2",
+                                "yearOfPublication":2018,
+                                "score":15.178157
+                            },
+                            {
+                                "authors":[
+                                    "Authors, Two"
+                                ],
+                                "publisher":[
+                                    "Publisher Two"
+                                ],
+                                "title":"Title 2",
+                                "yearOfPublication":2018,
+                                "score":14.09121
+                            },
+                            {
+                                "authors":[
+                                    "Authors, Two"
+                                ],
+                                "publisher":[
+                                    "Publisher Two"
+                                ],
+                                "title":"Title 2",
+                                "yearOfPublication":2018,
+                                "score":12.325842
+                            },
+                            {
+                                "authors":[
+                                    "Authors, Two"
+                                ],
+                                "publisher":[
+                                    "Publisher Two"
+                                ],
+                                "title":"Title 2",
+                                "yearOfPublication":2018,
+                                "score":12.325842
+                            },
+                            {
+                                "authors":[
+                                    "Authors, Two"
+                                ],
+                                "publisher":[
+                                    "Publisher Two"
+                                ],
+                                "title":"Title 2",
+                                "yearOfPublication":2018,
+                                "score":12.325842
+                            },
+                            {
+                                "authors":[
+                                    "Authors, Two"
+                                ],
+                                "publisher":[
+                                    "Publisher Two"
+                                ],
+                                "title":"Title 2",
+                                "yearOfPublication":2018,
+                                "score":12.325842
+                            },
+                            {
+                                "authors":[
+                                    "Authors, Two"
+                                ],
+                                "publisher":[
+                                    "Publisher Two"
+                                ],
+                                "title":"Title 2",
+                                "yearOfPublication":2018,
+                                "score":8.958746
+                            },
+                            {
+                                "authors":[
+                                    "Authors, Two"
+                                ],
+                                "publisher":[
+                                    "Publisher Two"
+                                ],
+                                "title":"Title 2",
+                                "yearOfPublication":2018,
+                                "score":8.958746
+                            },
+                            {
+                                "authors":[
+                                    "Authors, Two"
+                                ],
+                                "publisher":[
+                                    "Publisher Two"
+                                ],
+                                "title":"Title 2",
+                                "yearOfPublication":2018,
+                                "score":8.958746
+                            },
+                            {
+                                "authors":[
+                                    "Authors, Two"
+                                ],
+                                "publisher":[
+                                    "Publisher Two"
+                                ],
+                                "title":"Title 2",
+                                "yearOfPublication":2018,
+                                "score":8.958746
+                            }
+                        ]
+                    }
+                },
+                {
+                    "groupValue":"9781111111113",
+                    "doclist":{
+                        "numFound":5,
+                        "start":0,
+                        "maxScore":13.67579,
+                        "docs":[
+                            {
+                                "authors":[
+                                    "Author, Third"
+                                ],
+                                "publisher":[
+                                    "Publisher Three"
+                                ],
+                                "title":"Title 3",
+                                "yearOfPublication":1980,
+                                "score":13.67579
+                            },
+                            {
+                                "authors":[
+                                    "Author, Third"
+                                ],
+                                "publisher":[
+                                    "Publisher Three"
+                                ],
+                                "title":"Title 3",
+                                "yearOfPublication":1980,
+                                "score":13.67579
+                            },
+                            {
+                                "authors":[
+                                    "Author, Third"
+                                ],
+                                "publisher":[
+                                    "Publisher Three"
+                                ],
+                                "title":"Title 3",
+                                "yearOfPublication":1980,
+                                "score":13.67579
+                            },
+                            {
+                                "authors":[
+                                    "Author, Third"
+                                ],
+                                "publisher":[
+                                    "Publisher Three"
+                                ],
+                                "title":"Title 3",
+                                "yearOfPublication":1980,
+                                "score":10.649685
+                            },
+                            {
+                                "authors":[
+                                    "Author, Third"
+                                ],
+                                "publisher":[
+                                    "Publisher Three"
+                                ],
+                                "title":"Title 3",
+                                "yearOfPublication":1980,
+                                "score":7.959174
+                            }
+                        ]
+                    }
+                },
+                {
+                    "groupValue":"9781111111114",
+                    "doclist":{
+                        "numFound":2,
+                        "start":0,
+                        "maxScore":13.67579,
+                        "docs":[
+                            {
+                                "authors":[
+                                    "Author, Number Four"
+                                ],
+                                "publisher":[
+                                    "Publisher Four"
+                                ],
+                                "title":"Title 4",
+                                "yearOfPublication":0,
+                                "score":13.67579
+                            },
+                            {
+                                "authors":[
+                                    "Author, Number Four"
+                                ],
+                                "publisher":[
+                                    "Publisher Four"
+                                ],
+                                "title":"Title 4",
+                                "yearOfPublication":0,
+                                "score":6.791637
+                            }
+                        ]
+                    }
+                },
+                {
+                    "groupValue":"9781111111115",
+                    "doclist":{
+                        "numFound":7,
+                        "start":0,
+                        "maxScore":12.300173,
+                        "docs":[
+                            {
+                                "authors":[
+                                    "AuthorFive"
+                                ],
+                                "publisher":[
+                                    "Publisher Five"
+                                ],
+                                "title":"Title 5",
+                                "yearOfPublication":1977,
+                                "score":12.300173
+                            },
+                            {
+                                "authors":[
+                                    "AuthorFive"
+                                ],
+                                "publisher":[
+                                    "Publisher Five"
+                                ],
+                                "title":"Title 5",
+                                "yearOfPublication":1977,
+                                "score":10.649685
+                            },
+                            {
+                                "authors":[
+                                    "AuthorFive"
+                                ],
+                                "publisher":[
+                                    "Publisher Five"
+                                ],
+                                "title":"Title 5",
+                                "yearOfPublication":1977,
+                                "score":8.711122
+                            },
+                            {
+                                "authors":[
+                                    "AuthorFive"
+                                ],
+                                "publisher":[
+                                    "Publisher Five"
+                                ],
+                                "title":"Title 5",
+                                "yearOfPublication":1977,
+                                "score":7.959174
+                            },
+                            {
+                                "authors":[
+                                    "AuthorFive"
+                                ],
+                                "publisher":[
+                                    "Publisher Five"
+                                ],
+                                "title":"Title 5",
+                                "yearOfPublication":1977,
+                                "score":6.791637
+                            },
+                            {
+                                "authors":[
+                                    "AuthorFive"
+                                ],
+                                "publisher":[
+                                    "Publisher Five"
+                                ],
+                                "title":"Title 5",
+                                "yearOfPublication":1977,
+                                "score":6.791637
+                            },
+                            {
+                                "authors":[
+                                    "AuthorFive"
+                                ],
+                                "publisher":[
+                                    "Publisher Five"
+                                ],
+                                "title":"Title 5",
+                                "yearOfPublication":1977,
+                                "score":6.791637
+                            }
+                        ]
+                    }
+                },
+                {
+                    "groupValue":"9781111111116",
+                    "doclist":{
+                        "numFound":2,
+                        "start":0,
+                        "maxScore":11.345643,
+                        "docs":[
+                            {
+                                "authors":[
+                                    "Author Number Six"
+                                ],
+                                "publisher":[
+                                    "Publisher Six"
+                                ],
+                                "title":"Title 6",
+                                "yearOfPublication":1980,
+                                "score":11.345643
+                            },
+                            {
+                                "authors":[
+                                    "Author Number Six"
+                                ],
+                                "publisher":[
+                                    "Publisher Six"
+                                ],
+                                "title":"Title 6",
+                                "yearOfPublication":1980,
+                                "score":7.959174
+                            }
+                        ]
+                    }
+                },
+                {
+                    "groupValue":"9781111111117",
+                    "doclist":{
+                        "numFound":1,
+                        "start":0,
+                        "maxScore":8.958746,
+                        "docs":[
+                            {
+                                "authors":[
+                                    "Authors Seven"
+                                ],
+                                "publisher":[
+                                    "Publisher Seven"
+                                ],
+                                "title":"Title 7",
+                                "yearOfPublication":1983,
+                                "score":8.958746
+                            }
+                        ]
+                    }
+                },
+                {
+                    "groupValue":"9781111111118",
+                    "doclist":{
+                        "numFound":1,
+                        "start":0,
+                        "maxScore":8.958746,
+                        "docs":[
+                            {
+                                "authors":[
+                                    "Authors; Eight"
+                                ],
+                                "publisher":[
+                                    "Publisher Eight"
+                                ],
+                                "title":"Title 8",
+                                "yearOfPublication":1977,
+                                "score":8.958746
+                            }
+                        ]
+                    }
+                }
+            ],
+            "matches" : 37
+        }
+    }
+}

@@ -20,7 +20,8 @@ function createWrapper( overrides ) {
 describe( 'ResultsPane', () => {
     const EPUB_CLICK_EVENT = 'epub-click';
 
-    const RESULTS = require( '../fixtures/solr-responses/solr-search-results-groups.json' );
+    const RESULTS =
+        require( '../fixtures/solr-responses/solr-search.json' ).grouped.isbn.groups;
 
     let wrapper;
 
