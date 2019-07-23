@@ -145,7 +145,11 @@ describe( 'App', () => {
         } );
 
         test( 'ResultsPane props and visibility are set correctly', () => {
+            const resultsPaneStub = wrapper.find( ResultsPane );
 
+            expect( resultsPaneStub.vm.numBooks ).toBe( MOCK_SOLR_SEARCH_RESPONSE.grouped.isbn.groups.length );
+            expect( resultsPaneStub.vm.numPages ).toBe( MOCK_SOLR_SEARCH_RESPONSE.grouped.isbn.matches );
+            expect( resultsPaneStub.vm.results ).toBe( MOCK_SOLR_SEARCH_RESPONSE.grouped.isbn.groups );
         } );
 
         test( 'PreviewPane props and visibility are set correctly', () => {
