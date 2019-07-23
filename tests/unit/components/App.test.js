@@ -60,8 +60,15 @@ describe( 'App', () => {
     } );
 
     describe( 'when SearchForm emits submit event', () => {
+        const MOCK_SOLR_SEARCH_RESPONSE = Object.freeze(
+            require( '../fixtures/solr-responses/solr-search.json' )
+        );
         const mockClearSelectedTopicFacetItems = jest.fn();
-        const mockSolrSearch = jest.fn();
+        const mockSolrSearch = jest.fn().mockImplementation(
+            ( query, queryFields, selectedTopicFacetItems ) => {
+                return MOCK_SOLR_SEARCH_RESPONSE;
+            }
+        );
 
         let wrapper;
 
@@ -105,7 +112,25 @@ describe( 'App', () => {
         } );
 
         test( 'FacetPane props and visibility are set correctly', () => {
+            const mockSolrSearchResponseTopicNamesFacet =
+                      MOCK_SOLR_SEARCH_RESPONSE
+                          .facet_counts
+                          .facet_fields
+                          .topicNames_facet;
+            const expectedTopicNamesFacet = [];
+            for ( let i = 0; i < mockSolrSearchResponseTopicNamesFacet.length; i = i + 2 ) {
+                if ( ! SELECTED_TOPIC_FACET_ITEMS.includes( mockSolrSearchResponseTopicNamesFacet[ i ] ) ) {
+                    expectedTopicNamesFacet.push(
+                        {
+                            name    : mockSolrSearchResponseTopicNamesFacet[ i ],
+                            numHits : mockSolrSearchResponseTopicNamesFacet[ i + 1 ].toString(),
+                        }
+                    );
+                }
+            }
 
+            const facetPaneStub = wrapper.find( FacetPane );
+            expect( facetPaneStub.vm.topicsFacetList ).toEqual( expectedTopicNamesFacet );
         } );
 
         test( 'ResultsPane props and visibility are set correctly', () => {
