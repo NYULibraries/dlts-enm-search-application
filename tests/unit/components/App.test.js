@@ -66,7 +66,7 @@ function getExpectedTopicFacetNames( solrResponseTopicNamesFacet, userSelectedTo
     return expectedTopicNamesFacet;
 }
 
-describe.only( 'App', () => {
+describe( 'App', () => {
     test( 'sets visibility of panes correctly on initialization', () => {
         const wrapper = createWrapper();
 
