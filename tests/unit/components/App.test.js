@@ -17,6 +17,8 @@ const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
 const QUERY_FIELDS_ALL           = Object.freeze( [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ] );
 const SELECTED_TOPIC_FACET_ITEMS = Object.freeze( [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ] );
 
+const SEARCH_ECHO_SEARCH_DCI_DISMISS_EVENT = 'search-dci-dismiss';
+
 function createWrapper( storeOverrides, mountingOverrides ) {
     const localVue = createLocalVueWithVuex();
     const defaultStoreOptions = {
@@ -164,5 +166,37 @@ describe( 'App', () => {
         test( 'PreviewPane props and visibility are set correctly', () => {
             expect( wrapper.find( PreviewPane ).vm.display ).toBeTruthy();
         } );
+    } );
+
+    test( `calls $solrSearch when SearchEcho emits ${ SEARCH_ECHO_SEARCH_DCI_DISMISS_EVENT } event`, () => {
+        const mockSolrSearch = jest.fn();
+
+        // When user dismisses search DCI with topic facet items selected, the
+        // query is changed to "*".
+        const WILDCARD_QUERY = '*';
+        const storeOverrides = {
+            getters : {
+                query                   : () => WILDCARD_QUERY,
+                selectedTopicFacetItems : () => SELECTED_TOPIC_FACET_ITEMS,
+            },
+        };
+
+        const mountingOverrides = {
+            mocks : {
+                $solrSearch : mockSolrSearch,
+            },
+        };
+
+        const wrapper = createWrapper( storeOverrides, mountingOverrides );
+
+        wrapper.find( SearchEcho ).vm.$emit( SEARCH_ECHO_SEARCH_DCI_DISMISS_EVENT );
+
+        expect( mockSolrSearch.mock.calls[ 0 ] ).toEqual(
+            [
+                WILDCARD_QUERY,
+                QUERY_FIELDS_ALL,
+                SELECTED_TOPIC_FACET_ITEMS,
+            ],
+        );
     } );
 } );
