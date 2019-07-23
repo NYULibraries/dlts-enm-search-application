@@ -162,7 +162,7 @@ describe( 'App', () => {
         } );
 
         test( 'PreviewPane props and visibility are set correctly', () => {
-
+            expect( wrapper.find( PreviewPane ).vm.display ).toBeTruthy();
         } );
     } );
 } );
