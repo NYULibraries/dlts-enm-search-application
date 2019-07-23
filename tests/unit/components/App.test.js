@@ -152,6 +152,10 @@ describe( 'App', () => {
         test( 'ResultsPane props and visibility are set correctly', () => {
             const resultsPaneStub = wrapper.find( ResultsPane );
 
+            // See note about visibility testing in test
+            // 'sets visibility of panes correctly on initialization'
+            expect( resultsPaneStub.vm.display ).toBeTruthy();
+
             expect( resultsPaneStub.vm.numBooks ).toBe( MOCK_SOLR_SEARCH_RESPONSE.grouped.isbn.groups.length );
             expect( resultsPaneStub.vm.numPages ).toBe( MOCK_SOLR_SEARCH_RESPONSE.grouped.isbn.matches );
             expect( resultsPaneStub.vm.results ).toBe( MOCK_SOLR_SEARCH_RESPONSE.grouped.isbn.groups );
