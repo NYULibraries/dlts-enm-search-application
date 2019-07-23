@@ -17,6 +17,7 @@ const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
 const QUERY_FIELDS_ALL           = Object.freeze( [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ] );
 const SELECTED_TOPIC_FACET_ITEMS = Object.freeze( [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ] );
 
+const EPUB_CLICK_EVENT                     = 'epub-click';
 const SEARCH_ECHO_SEARCH_DCI_DISMISS_EVENT = 'search-dci-dismiss';
 
 function createWrapper( storeOverrides, mountingOverrides ) {
@@ -198,5 +199,18 @@ describe( 'App', () => {
                 SELECTED_TOPIC_FACET_ITEMS,
             ],
         );
+    } );
+
+    test( `sets PreviewPane props correctly when ResultsPane emits "${ EPUB_CLICK_EVENT }"`, () => {
+        const ISBN  = '9781111111111';
+        const TITLE = 'The Book';
+
+        const wrapper = createWrapper();
+
+        wrapper.find( ResultsPane ).vm.$emit( EPUB_CLICK_EVENT, ISBN, TITLE );
+
+        const previewPaneStub = wrapper.find( PreviewPane );
+        expect( previewPaneStub.vm.isbn ).toBe( ISBN );
+        expect( previewPaneStub.vm.title ).toBe( TITLE );
     } );
 } );
