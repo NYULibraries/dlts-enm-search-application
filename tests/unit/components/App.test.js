@@ -43,7 +43,30 @@ function createWrapper( storeOverrides, mountingOverrides ) {
     return shallowMount( App, merge( defaultMountingOptions, mountingOverrides ) );
 }
 
-describe( 'App', () => {
+function getExpectedTopicFacetNames( solrResponseTopicNamesFacet, userSelectedTopicFacetItems ) {
+    const mockSolrSearchResponseTopicNamesFacet = solrResponseTopicNamesFacet
+        .facet_counts
+        .facet_fields
+        .topicNames_facet;
+
+    const expectedTopicNamesFacet = [];
+    for ( let i = 0; i < mockSolrSearchResponseTopicNamesFacet.length; i = i + 2 ) {
+        const topicName = mockSolrSearchResponseTopicNamesFacet[ i ];
+        const numHits   = mockSolrSearchResponseTopicNamesFacet[ i + 1 ].toString();
+        if ( ! userSelectedTopicFacetItems.includes( topicName ) ) {
+            expectedTopicNamesFacet.push(
+                {
+                    name    : topicName,
+                    numHits : numHits,
+                }
+            );
+        }
+    }
+
+    return expectedTopicNamesFacet;
+}
+
+describe.only( 'App', () => {
     test( 'sets visibility of panes correctly on initialization', () => {
         const wrapper = createWrapper();
 
@@ -112,22 +135,10 @@ describe( 'App', () => {
         } );
 
         test( 'FacetPane props and visibility are set correctly', () => {
-            const mockSolrSearchResponseTopicNamesFacet =
-                      MOCK_SOLR_SEARCH_RESPONSE
-                          .facet_counts
-                          .facet_fields
-                          .topicNames_facet;
-            const expectedTopicNamesFacet = [];
-            for ( let i = 0; i < mockSolrSearchResponseTopicNamesFacet.length; i = i + 2 ) {
-                if ( ! SELECTED_TOPIC_FACET_ITEMS.includes( mockSolrSearchResponseTopicNamesFacet[ i ] ) ) {
-                    expectedTopicNamesFacet.push(
-                        {
-                            name    : mockSolrSearchResponseTopicNamesFacet[ i ],
-                            numHits : mockSolrSearchResponseTopicNamesFacet[ i + 1 ].toString(),
-                        }
-                    );
-                }
-            }
+            const expectedTopicNamesFacet = getExpectedTopicFacetNames(
+                MOCK_SOLR_SEARCH_RESPONSE,
+                SELECTED_TOPIC_FACET_ITEMS,
+            );
 
             const facetPaneStub = wrapper.find( FacetPane );
             expect( facetPaneStub.vm.topicsFacetList ).toEqual( expectedTopicNamesFacet );
