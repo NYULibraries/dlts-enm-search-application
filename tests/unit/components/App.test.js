@@ -141,6 +141,11 @@ describe( 'App', () => {
             );
 
             const facetPaneStub = wrapper.find( FacetPane );
+
+            // See note about visibility testing in test
+            // 'sets visibility of panes correctly on initialization'
+            expect( facetPaneStub.vm.display ).toBeTruthy();
+
             expect( facetPaneStub.vm.topicsFacetList ).toEqual( expectedTopicNamesFacet );
         } );
 
