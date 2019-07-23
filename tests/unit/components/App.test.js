@@ -66,8 +66,8 @@ describe( 'App', () => {
         let wrapper;
 
         beforeEach( () => {
-            mockClearSelectedTopicFacetItems.mockRestore();
-            mockSolrSearch.mockRestore();
+            mockClearSelectedTopicFacetItems.mockClear();
+            mockSolrSearch.mockClear();
 
             const storeOverrides = {
                 actions : {
