@@ -1,4 +1,4 @@
-/* global setup:false suiteSetup:false suite:false test:false */
+/* global suite:false test:false */
 
 import { assert } from 'chai';
 

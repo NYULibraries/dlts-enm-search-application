@@ -1,0 +1,667 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultsPane renders error condition correctly 1`] = `
+<div
+  class="column enm-pane enm-pane-results is-half"
+>
+  <header
+    style=""
+  >
+    <h2
+      class="is-size-4"
+    >
+      
+                    Sorry, a server error has occurred.  Please try your search again later.
+                
+    </h2>
+  </header>
+   
+  <div
+    class="enm-results"
+    style=""
+  >
+    <!---->
+     
+  </div>
+</div>
+`;
+
+exports[`ResultsPane renders no results found correctly 1`] = `
+<div
+  class="column enm-pane enm-pane-results is-half"
+>
+  <header
+    style=""
+  >
+    <h2
+      class="is-size-4"
+    >
+      
+                    Results: None
+                
+    </h2>
+  </header>
+   
+  <div
+    class="enm-results"
+    style=""
+  >
+    <span>
+      
+                    Please try another search.
+                
+    </span>
+     
+  </div>
+</div>
+`;
+
+exports[`ResultsPane renders results correctly 1`] = `
+<div
+  class="column enm-pane enm-pane-results is-half"
+>
+  <header
+    style=""
+  >
+    <h2
+      class="is-size-4"
+    >
+      
+                    Results: 37 pages in 8 books
+                
+    </h2>
+  </header>
+   
+  <div
+    class="enm-results"
+    style=""
+  >
+    <!---->
+     
+    <div
+      class="box"
+      id="9781111111111"
+      name="Title 1"
+    >
+      <article
+        class="media enm-book"
+      >
+        <div
+          class="media-left"
+        >
+          <figure
+            class="image enm-thumbnail"
+          >
+            <img
+              alt=""
+              src="/enm/search/assets/covers/9781111111111.jpg"
+            />
+          </figure>
+        </div>
+         
+        <div
+          class="media-content"
+        >
+          <a
+            class="enm-divlink"
+            href="#"
+          >
+            
+ 
+                            
+          </a>
+           
+          <h3
+            class="title is-spaced"
+          >
+            <a
+              href="#"
+            >
+              
+                                    Title 1
+                                
+            </a>
+          </h3>
+           
+          <div
+            class="meta"
+          >
+            
+                                Authors One; Publisher One
+                            
+          </div>
+           
+          <div
+            class="matches"
+          >
+            
+                                8 matched pages
+                            
+          </div>
+           
+          <div
+            class="relevance"
+          >
+            
+                                Maximum page relevance score: 
+            <span>
+              19.730812
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="box"
+      id="9781111111112"
+      name="Title 2"
+    >
+      <article
+        class="media enm-book"
+      >
+        <div
+          class="media-left"
+        >
+          <figure
+            class="image enm-thumbnail"
+          >
+            <img
+              alt=""
+              src="/enm/search/assets/covers/9781111111112.jpg"
+            />
+          </figure>
+        </div>
+         
+        <div
+          class="media-content"
+        >
+          <a
+            class="enm-divlink"
+            href="#"
+          >
+            
+ 
+                            
+          </a>
+           
+          <h3
+            class="title is-spaced"
+          >
+            <a
+              href="#"
+            >
+              
+                                    Title 2
+                                
+            </a>
+          </h3>
+           
+          <div
+            class="meta"
+          >
+            
+                                Authors, Two; Publisher Two
+                            
+          </div>
+           
+          <div
+            class="matches"
+          >
+            
+                                11 matched pages
+                            
+          </div>
+           
+          <div
+            class="relevance"
+          >
+            
+                                Maximum page relevance score: 
+            <span>
+              16.446804
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="box"
+      id="9781111111113"
+      name="Title 3"
+    >
+      <article
+        class="media enm-book"
+      >
+        <div
+          class="media-left"
+        >
+          <figure
+            class="image enm-thumbnail"
+          >
+            <img
+              alt=""
+              src="/enm/search/assets/covers/9781111111113.jpg"
+            />
+          </figure>
+        </div>
+         
+        <div
+          class="media-content"
+        >
+          <a
+            class="enm-divlink"
+            href="#"
+          >
+            
+ 
+                            
+          </a>
+           
+          <h3
+            class="title is-spaced"
+          >
+            <a
+              href="#"
+            >
+              
+                                    Title 3
+                                
+            </a>
+          </h3>
+           
+          <div
+            class="meta"
+          >
+            
+                                Author, Third; Publisher Three
+                            
+          </div>
+           
+          <div
+            class="matches"
+          >
+            
+                                5 matched pages
+                            
+          </div>
+           
+          <div
+            class="relevance"
+          >
+            
+                                Maximum page relevance score: 
+            <span>
+              13.67579
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="box"
+      id="9781111111114"
+      name="Title 4"
+    >
+      <article
+        class="media enm-book"
+      >
+        <div
+          class="media-left"
+        >
+          <figure
+            class="image enm-thumbnail"
+          >
+            <img
+              alt=""
+              src="/enm/search/assets/covers/9781111111114.jpg"
+            />
+          </figure>
+        </div>
+         
+        <div
+          class="media-content"
+        >
+          <a
+            class="enm-divlink"
+            href="#"
+          >
+            
+ 
+                            
+          </a>
+           
+          <h3
+            class="title is-spaced"
+          >
+            <a
+              href="#"
+            >
+              
+                                    Title 4
+                                
+            </a>
+          </h3>
+           
+          <div
+            class="meta"
+          >
+            
+                                Author, Number Four; Publisher Four
+                            
+          </div>
+           
+          <div
+            class="matches"
+          >
+            
+                                2 matched pages
+                            
+          </div>
+           
+          <div
+            class="relevance"
+          >
+            
+                                Maximum page relevance score: 
+            <span>
+              13.67579
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="box"
+      id="9781111111115"
+      name="Title 5"
+    >
+      <article
+        class="media enm-book"
+      >
+        <div
+          class="media-left"
+        >
+          <figure
+            class="image enm-thumbnail"
+          >
+            <img
+              alt=""
+              src="/enm/search/assets/covers/9781111111115.jpg"
+            />
+          </figure>
+        </div>
+         
+        <div
+          class="media-content"
+        >
+          <a
+            class="enm-divlink"
+            href="#"
+          >
+            
+ 
+                            
+          </a>
+           
+          <h3
+            class="title is-spaced"
+          >
+            <a
+              href="#"
+            >
+              
+                                    Title 5
+                                
+            </a>
+          </h3>
+           
+          <div
+            class="meta"
+          >
+            
+                                AuthorFive; Publisher Five
+                            
+          </div>
+           
+          <div
+            class="matches"
+          >
+            
+                                7 matched pages
+                            
+          </div>
+           
+          <div
+            class="relevance"
+          >
+            
+                                Maximum page relevance score: 
+            <span>
+              12.300173
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="box"
+      id="9781111111116"
+      name="Title 6"
+    >
+      <article
+        class="media enm-book"
+      >
+        <div
+          class="media-left"
+        >
+          <figure
+            class="image enm-thumbnail"
+          >
+            <img
+              alt=""
+              src="/enm/search/assets/covers/9781111111116.jpg"
+            />
+          </figure>
+        </div>
+         
+        <div
+          class="media-content"
+        >
+          <a
+            class="enm-divlink"
+            href="#"
+          >
+            
+ 
+                            
+          </a>
+           
+          <h3
+            class="title is-spaced"
+          >
+            <a
+              href="#"
+            >
+              
+                                    Title 6
+                                
+            </a>
+          </h3>
+           
+          <div
+            class="meta"
+          >
+            
+                                Author Number Six; Publisher Six
+                            
+          </div>
+           
+          <div
+            class="matches"
+          >
+            
+                                2 matched pages
+                            
+          </div>
+           
+          <div
+            class="relevance"
+          >
+            
+                                Maximum page relevance score: 
+            <span>
+              11.345643
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="box"
+      id="9781111111117"
+      name="Title 7"
+    >
+      <article
+        class="media enm-book"
+      >
+        <div
+          class="media-left"
+        >
+          <figure
+            class="image enm-thumbnail"
+          >
+            <img
+              alt=""
+              src="/enm/search/assets/covers/9781111111117.jpg"
+            />
+          </figure>
+        </div>
+         
+        <div
+          class="media-content"
+        >
+          <a
+            class="enm-divlink"
+            href="#"
+          >
+            
+ 
+                            
+          </a>
+           
+          <h3
+            class="title is-spaced"
+          >
+            <a
+              href="#"
+            >
+              
+                                    Title 7
+                                
+            </a>
+          </h3>
+           
+          <div
+            class="meta"
+          >
+            
+                                Authors Seven; Publisher Seven
+                            
+          </div>
+           
+          <div
+            class="matches"
+          >
+            
+                                1 matched pages
+                            
+          </div>
+           
+          <div
+            class="relevance"
+          >
+            
+                                Maximum page relevance score: 
+            <span>
+              8.958746
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div
+      class="box"
+      id="9781111111118"
+      name="Title 8"
+    >
+      <article
+        class="media enm-book"
+      >
+        <div
+          class="media-left"
+        >
+          <figure
+            class="image enm-thumbnail"
+          >
+            <img
+              alt=""
+              src="/enm/search/assets/covers/9781111111118.jpg"
+            />
+          </figure>
+        </div>
+         
+        <div
+          class="media-content"
+        >
+          <a
+            class="enm-divlink"
+            href="#"
+          >
+            
+ 
+                            
+          </a>
+           
+          <h3
+            class="title is-spaced"
+          >
+            <a
+              href="#"
+            >
+              
+                                    Title 8
+                                
+            </a>
+          </h3>
+           
+          <div
+            class="meta"
+          >
+            
+                                Authors; Eight; Publisher Eight
+                            
+          </div>
+           
+          <div
+            class="matches"
+          >
+            
+                                1 matched pages
+                            
+          </div>
+           
+          <div
+            class="relevance"
+          >
+            
+                                Maximum page relevance score: 
+            <span>
+              8.958746
+            </span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>
+`;

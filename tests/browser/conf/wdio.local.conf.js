@@ -5,5 +5,5 @@ let wdioMainConf = require( './wdio.main.conf.js' );
 
 exports.config = merge( wdioMainConf.config, {
     baseUrl            : 'http://localhost/enm/',
-    enmGoogleAnalytics : true,
+    enmGoogleAnalytics : false,
 } );

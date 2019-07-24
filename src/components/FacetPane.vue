@@ -26,6 +26,7 @@
 
                 <a
                     v-show="( ! showAllTopics ) && ( topicsFacetList.length > topicsFacetListLimit )"
+                    id="see-all-link"
                     class="listui seemore"
                     href="#"
                     @click="showAllTopics = ! showAllTopics"
@@ -56,6 +57,7 @@
 
                 <a
                     v-show="( showAllTopics ) && ( topicsFacetList.length > topicsFacetListLimit )"
+                    id="see-less-link"
                     class="listui seemore"
                     href="#"
                     @click="showAllTopics = ! showAllTopics"

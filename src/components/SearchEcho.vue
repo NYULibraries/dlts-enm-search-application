@@ -5,6 +5,7 @@
                 <div class="column">
                     <span
                         v-show="searchDCI && display"
+                        id="search-dci-span"
                         class="tag"
                     >
                         {{ searchDCI }}
