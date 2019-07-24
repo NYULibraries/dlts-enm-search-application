@@ -17,8 +17,13 @@ const QUERY_FIELDS_TOPIC_NAMES   = 'topicNames';
 const QUERY_FIELDS_ALL           = Object.freeze( [ QUERY_FIELDS_FULL_TEXT, QUERY_FIELDS_TOPIC_NAMES ] );
 const SELECTED_TOPIC_FACET_ITEMS = Object.freeze( [ 'topic 0', 'topic 1', 'topic 2', 'topic 3' ] );
 
-const EPUB_CLICK_EVENT                     = 'epub-click';
-const SEARCH_ECHO_SEARCH_DCI_DISMISS_EVENT = 'search-dci-dismiss';
+const EPUB_CLICK_EVENT                         = 'epub-click';
+const LOAD_FIRST_MATCHED_PAGE_LINK_CLICK_EVENT = 'load-first-matched-page-link-click';
+const SEARCH_ECHO_SEARCH_DCI_DISMISS_EVENT     = 'search-dci-dismiss';
+
+const MOCK_SOLR_SEARCH_RESPONSE = Object.freeze(
+    require( '../fixtures/solr-responses/solr-search.json' )
+);
 
 function createWrapper( storeOverrides, mountingOverrides ) {
     const localVue = createLocalVueWithVuex();
@@ -86,9 +91,6 @@ describe( 'App', () => {
     } );
 
     describe( 'when SearchForm emits submit event', () => {
-        const MOCK_SOLR_SEARCH_RESPONSE = Object.freeze(
-            require( '../fixtures/solr-responses/solr-search.json' )
-        );
         const mockClearSelectedTopicFacetItems = jest.fn();
         const mockSolrSearch = jest.fn().mockImplementation(
             ( query, queryFields, selectedTopicFacetItems ) => {
@@ -201,16 +203,57 @@ describe( 'App', () => {
         );
     } );
 
-    test( `sets PreviewPane props correctly when ResultsPane emits "${ EPUB_CLICK_EVENT }"`, () => {
-        const ISBN  = '9781111111111';
-        const TITLE = 'The Book';
+    // Originally had these tests in top of 'App" describe() block, but the
+    // LOAD_FIRST_MATCHED_PAGE_LINK_CLICK test would succeed only when run alone
+    // with test.only(), failing when doing a full test suite run.
+    // The original LOAD_FIRST_MATCHED_PAGE_LINK_CLICK test simulated the submitted
+    // search using the code in beforeEach(), with an `await flushPromises();` after
+    // the $emit of 'submit' event.  This only seemed to work when running the test
+    // in isolation.  When running the full suite, got an error in App.setFacetPaneFromSolrResponse()
+    // due to solrResponse not being defined.  Didn't run into this problem in other
+    // tests in this suite which used beforeEach() to submit the search.  Copying
+    // this approach for these tests cleared the error.
+    describe( 'sets PreviewPane props correctly', () => {
+        let wrapper;
 
-        const wrapper = createWrapper();
+        beforeEach( () => {
+            const mockSolrSearch = jest.fn().mockImplementation(
+                ( query, queryFields, selectedTopicFacetItems ) => {
+                    return MOCK_SOLR_SEARCH_RESPONSE;
+                }
+            );
 
-        wrapper.find( ResultsPane ).vm.$emit( EPUB_CLICK_EVENT, ISBN, TITLE );
+            const mountingOverrides = {
+                mocks : {
+                    $solrSearch : mockSolrSearch,
+                },
+            };
 
-        const previewPaneStub = wrapper.find( PreviewPane );
-        expect( previewPaneStub.vm.isbn ).toBe( ISBN );
-        expect( previewPaneStub.vm.title ).toBe( TITLE );
+            wrapper = createWrapper( null, mountingOverrides );
+
+            wrapper.find( SearchForm ).vm.$emit( 'submit' );
+        } );
+
+        test( `when ResultsPane emits "${ EPUB_CLICK_EVENT }"`, () => {
+            const ISBN  = MOCK_SOLR_SEARCH_RESPONSE.grouped.isbn.groups[ 3 ].groupValue;
+            const TITLE = MOCK_SOLR_SEARCH_RESPONSE.grouped.isbn.groups[ 3 ].doclist.docs[ 0 ].title;
+
+            wrapper.find( ResultsPane ).vm.$emit( EPUB_CLICK_EVENT, ISBN, TITLE );
+
+            const previewPaneStub = wrapper.find( PreviewPane );
+            expect( previewPaneStub.vm.isbn ).toBe( ISBN );
+            expect( previewPaneStub.vm.title ).toBe( TITLE );
+        } );
+
+        test( `when PreviewPane emits "${ LOAD_FIRST_MATCHED_PAGE_LINK_CLICK_EVENT }"`, async () => {
+            const previewPaneStub = wrapper.find( PreviewPane );
+
+            wrapper.find( PreviewPane ).vm.$emit( LOAD_FIRST_MATCHED_PAGE_LINK_CLICK_EVENT );
+
+            const firstEpub = MOCK_SOLR_SEARCH_RESPONSE.grouped.isbn.groups[ 0 ];
+
+            expect( previewPaneStub.vm.isbn ).toBe( firstEpub.groupValue );
+            expect( previewPaneStub.vm.title ).toBe( firstEpub.doclist.docs[ 0 ].title );
+        } );
     } );
 } );
