@@ -1,4 +1,4 @@
-/* global browser:false $:false */
+/* global $:false */
 
 import SearchFormFulltextCheckbox from './SearchFormFulltextCheckbox';
 import SearchFormTopicsCheckbox from './SearchFormTopicsCheckbox';
