@@ -80,7 +80,6 @@ describe( 'SearchForm', () => {
 
     test( 'calls window.alert with correct arguments ' +
                'when search submitted with no query fields selected', () => {
-
         const storeOverrides = {
             getters : {
                 query : () => '',
