@@ -68,7 +68,7 @@ describe( 'SearchEcho', () => {
 
         // Only the search DCI should be displayed
         const dciContainers = wrapper.findAll( DCI_CONTAINER_SELECTOR );
-        expect( dciContainers.length ).toBe( 1 );
+        expect( dciContainers ).toHaveLength( 1 );
         expect( dciContainers.wrappers[ 0 ].find( 'button' ).attributes().id ).toBe( SEARCH_DCI_BUTTON_ID );
     } );
 
