@@ -13,7 +13,7 @@
         "deploy:stage": "yarn run build:stage; rsync --archive --compress --delete --human-readable --verbose dist/ stageweb1:/www/sites/enm/search/; yarn test:browser:stage",
         "deploy:prod": "yarn run build:prod; rsync --archive --compress --delete --human-readable --verbose dist/ web1:/www/sites/enm/search/; yarn test:browser:prod",
         "lint": "vue-cli-service lint",
-        "test": "npm run test:browser:local",
+        "test": "yarn run lint && yarn run test:unit && yarn run test:browser:local",
         "test:browser:local": "node_modules/.bin/wdio tests/browser/conf/wdio.local.conf.js",
         "test:browser:local:chrome": "node_modules/.bin/wdio tests/browser/conf/wdio.local.chrome.conf.js",
         "test:browser:local:chrome:debug": "node_modules/.bin/wdio tests/browser/conf/wdio.local.chrome.debug.conf.js",
