@@ -1,5 +1,13 @@
 import { createLocalVue } from '@vue/test-utils';
+import merge from 'lodash.merge';
+
 import EnmSolr from '@/plugins/enm-solr';
+
+// Copied from plugin under test.
+// Not DRY, but doesn't feel right to export them from the plugin just for the test.
+const ERROR_SIMULATION_PREVIEW_EPUB = 'preview-epub';
+const ERROR_SIMULATION_PREVIEW_PAGE = 'preview-page';
+const ERROR_SIMULATION_SEARCH       = 'search';
 
 const ISBN                       = '9781111111111';
 const QUERY                      = 'something';
@@ -135,5 +143,66 @@ describe( 'enm-solr plugin', () => {
             '&indent=on' +
             '&wt=json'
         );
+    } );
+
+    describe( 'when options.errorSimulation is set', () => {
+        test( `...to "${ ERROR_SIMULATION_PREVIEW_EPUB }", throws "${ ERROR_SIMULATION_PREVIEW_EPUB }"`, async () => {
+            const options = merge(
+                {
+                    errorSimulation : ERROR_SIMULATION_PREVIEW_EPUB,
+                },
+                ENM_SOLR_OPTIONS,
+            );
+            localVue = createLocalVue();
+            localVue.use( EnmSolr, options );
+
+            await expect(
+                localVue.prototype.$solrPreviewEpub(
+                    ISBN,
+                    QUERY,
+                    QUERY_FIELDS_ALL,
+                    SELECTED_TOPIC_FACET_ITEMS
+                )
+            ).rejects.toThrow( ERROR_SIMULATION_PREVIEW_EPUB );
+        } );
+
+        test( `...to "${ ERROR_SIMULATION_PREVIEW_PAGE }", throws "${ ERROR_SIMULATION_PREVIEW_PAGE }"`, async () => {
+            const options = merge(
+                {
+                    errorSimulation : ERROR_SIMULATION_PREVIEW_PAGE,
+                },
+                ENM_SOLR_OPTIONS,
+            );
+            localVue = createLocalVue();
+            localVue.use( EnmSolr, options );
+
+            await expect(
+                localVue.prototype.$solrPreviewPage(
+                    ISBN,
+                    QUERY,
+                    QUERY_FIELDS_ALL,
+                    SELECTED_TOPIC_FACET_ITEMS
+                )
+            ).rejects.toThrow( ERROR_SIMULATION_PREVIEW_PAGE );
+        } );
+
+        test( `...to "${ ERROR_SIMULATION_SEARCH }", throws "${ ERROR_SIMULATION_SEARCH }"`, async () => {
+            const options = merge(
+                {
+                    errorSimulation : ERROR_SIMULATION_SEARCH,
+                },
+                ENM_SOLR_OPTIONS,
+            );
+            localVue = createLocalVue();
+            localVue.use( EnmSolr, options );
+
+            await expect(
+                localVue.prototype.$solrSearch(
+                    QUERY,
+                    QUERY_FIELDS_ALL,
+                    SELECTED_TOPIC_FACET_ITEMS
+                )
+            ).rejects.toThrow( ERROR_SIMULATION_SEARCH );
+        } );
     } );
 } );
