@@ -41,12 +41,11 @@ yarn build:prod
 ```
 
 ### Run all tests
+
 ```
 # Run all unit and browser tests
 yarn test
 ```
-
-Currently there are no unit tests, only browser (e2e) tests.
 
 ### Browser (e2e) tests
 ```
@@ -73,7 +72,9 @@ yarn test:browser:prod
 
 ### Run unit tests
 
-Currently there are no unit tests, only browser (e2e) tests.
+```
+yarn test:unit
+```
 
 ### Lint and fix files
 ```
@@ -208,10 +209,12 @@ Host devdb1
 * [Babel](https://babeljs.io/)
 * [D3](https://d3js.org/)
 * [ESLint](https://eslint.org/)
+* [Jest](https://jestjs.io/)
 * [Selenium](https://www.seleniumhq.org/)
 * [Solr](http://lucene.apache.org/solr/)
 * [Vue.js](https://vuejs.org/)
 * [Vue CLI 3](https://cli.vuejs.org/)
+* [Vue Test Utils](https://vue-test-utils.vuejs.org/)
 * [Vuex](https://vuex.vuejs.org/)
 * [WebdriverIO](https://webdriver.io/)
 * [Webpack](https://webpack.js.org/e0b5805d423a4ec9473ee315250968b2.svg)
