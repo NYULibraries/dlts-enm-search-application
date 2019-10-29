@@ -3,9 +3,11 @@ export default {
         if ( typeof topicFacetItem === 'string' && topicFacetItem !== '' ) {
             state.selectedTopicFacetItems.push( topicFacetItem );
         } else {
+            /* eslint-disable no-console */
             console.error( `Invalid argument passed to addSelectedTopicFacetItem: ` +
                            ( topicFacetItem === '' ? '[empty string]' : topicFacetItem )
             );
+            /* eslint-disable no-console */
         }
     },
     clearSelectedTopicFacetItems( state ) {
@@ -24,11 +26,14 @@ export default {
         if ( Array.isArray( queryFields ) ) {
             state.queryFields = queryFields;
         } else {
+            /* eslint-disable no-console */
             console.error( `Invalid argument passed to queryFields: ` +
                            ( Array.isArray( queryFields ) && queryFields.length === 0
                                ? '[empty array]'
                                : queryFields )
             );
+            /* eslint-disable no-console */
+
             state.queryFields = [];
         }
     },
