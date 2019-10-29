@@ -2,12 +2,12 @@ module.exports = {
     'env'   : {
         'development' : {
             presets : [
-                '@vue/app',
+                '@vue/cli-plugin-babel/preset',
             ],
         },
         'production' : {
             presets : [
-                '@vue/app',
+                '@vue/cli-plugin-babel/preset',
             ],
         },
         'test' : {

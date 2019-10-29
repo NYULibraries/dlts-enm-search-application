@@ -1,9 +1,9 @@
 {
     "name": "enm-search-application",
     "version": "1.2.0",
+    "private": true,
     "description": "Vue.js/D3 search SPA for the DLTS Enhanced Networked Monographs website.",
     "author": "David <da70@nyu.edu>",
-    "private": true,
     "scripts": {
         "serve": "vue-cli-service serve",
         "build:dev": "vue-cli-service build --mode dev",
@@ -27,6 +27,7 @@
         "test:unit": "vue-cli-service test:unit"
     },
     "dependencies": {
+        "core-js": "^3.3.2",
         "d3": "^5.9.2",
         "d3-tip": "^0.9.1",
         "font-awesome": "4.7.0",
@@ -38,10 +39,10 @@
         "@babel/core": "^7.4.5",
         "@babel/preset-env": "^7.4.5",
         "@babel/register": "^7.4.4",
-        "@vue/cli-plugin-babel": "^3.8.0",
-        "@vue/cli-plugin-eslint": "^3.8.0",
-        "@vue/cli-plugin-unit-jest": "^3.8.0",
-        "@vue/cli-service": "^3.8.4",
+        "@vue/cli-plugin-babel": "^4.0.5",
+        "@vue/cli-plugin-eslint": "^4.0.5",
+        "@vue/cli-plugin-unit-jest": "^4.0.5",
+        "@vue/cli-service": "^4.0.5",
         "@vue/eslint-config-standard": "^4.0.0",
         "@vue/test-utils": "^1.0.0-beta.29",
         "@wdio/cli": "^5.10.7",
@@ -69,15 +70,11 @@
         "lodash.mergewith": "^4.6.2",
         "node-sass": "^4.12.0",
         "rimraf": "^2.6.3",
-        "sass-loader": "^7.0.1",
+        "sass-loader": "^8.0.0",
         "vue-jest": "^3.0.4",
         "vue-template-compiler": "^2.6.10",
         "webdriver": "5.10.4",
         "webdriverio": "^5.10.7"
-    },
-    "engines": {
-        "node": ">= 6.0.0",
-        "npm": ">= 3.0.0"
     },
     "jest": {
         "moduleFileExtensions": [
@@ -111,5 +108,9 @@
             "jest-watch-typeahead/testname"
         ],
         "verbose": true
+    },
+    "engines": {
+        "node": ">= 6.0.0",
+        "npm": ">= 3.0.0"
     }
 }
