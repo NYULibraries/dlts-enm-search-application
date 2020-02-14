@@ -1,5 +1,5 @@
 module.exports = {
-    publicPath          : '/enm/search/',
+    publicPath          : '/search/',
     outputDir           : 'dist',
     assetsDir           : 'assets',
     indexPath           : 'index.html',

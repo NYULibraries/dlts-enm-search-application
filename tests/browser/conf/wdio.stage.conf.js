@@ -4,6 +4,6 @@ let merge        = require( 'deepmerge' );
 let wdioMainConf = require( './wdio.main.conf.js' );
 
 exports.config = merge( wdioMainConf.config, {
-    baseUrl            : 'http://stageweb1.dlib.nyu.edu/enm/',
+    baseUrl            : 'http://enm-stage.dlib.nyu.edu/',
     enmGoogleAnalytics : false,
 } );

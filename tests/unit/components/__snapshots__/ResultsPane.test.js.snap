@@ -94,7 +94,7 @@ exports[`ResultsPane renders results correctly 1`] = `
           >
             <img
               alt=""
-              src="/enm/search/assets/covers/9781111111111.jpg"
+              src="/search/assets/covers/9781111111111.jpg"
             />
           </figure>
         </div>
@@ -167,7 +167,7 @@ exports[`ResultsPane renders results correctly 1`] = `
           >
             <img
               alt=""
-              src="/enm/search/assets/covers/9781111111112.jpg"
+              src="/search/assets/covers/9781111111112.jpg"
             />
           </figure>
         </div>
@@ -240,7 +240,7 @@ exports[`ResultsPane renders results correctly 1`] = `
           >
             <img
               alt=""
-              src="/enm/search/assets/covers/9781111111113.jpg"
+              src="/search/assets/covers/9781111111113.jpg"
             />
           </figure>
         </div>
@@ -313,7 +313,7 @@ exports[`ResultsPane renders results correctly 1`] = `
           >
             <img
               alt=""
-              src="/enm/search/assets/covers/9781111111114.jpg"
+              src="/search/assets/covers/9781111111114.jpg"
             />
           </figure>
         </div>
@@ -386,7 +386,7 @@ exports[`ResultsPane renders results correctly 1`] = `
           >
             <img
               alt=""
-              src="/enm/search/assets/covers/9781111111115.jpg"
+              src="/search/assets/covers/9781111111115.jpg"
             />
           </figure>
         </div>
@@ -459,7 +459,7 @@ exports[`ResultsPane renders results correctly 1`] = `
           >
             <img
               alt=""
-              src="/enm/search/assets/covers/9781111111116.jpg"
+              src="/search/assets/covers/9781111111116.jpg"
             />
           </figure>
         </div>
@@ -532,7 +532,7 @@ exports[`ResultsPane renders results correctly 1`] = `
           >
             <img
               alt=""
-              src="/enm/search/assets/covers/9781111111117.jpg"
+              src="/search/assets/covers/9781111111117.jpg"
             />
           </figure>
         </div>
@@ -605,7 +605,7 @@ exports[`ResultsPane renders results correctly 1`] = `
           >
             <img
               alt=""
-              src="/enm/search/assets/covers/9781111111118.jpg"
+              src="/search/assets/covers/9781111111118.jpg"
             />
           </figure>
         </div>
