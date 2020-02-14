@@ -32,7 +32,7 @@
                         <div class="media-left">
                             <figure class="image enm-thumbnail">
                                 <img
-                                    :src="'/enm/search/assets/covers/' + result.groupValue + '.jpg'"
+                                    :src="'/search/assets/covers/' + result.groupValue + '.jpg'"
                                     alt=""
                                 >
                             </figure>
