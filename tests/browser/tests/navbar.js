@@ -57,7 +57,7 @@ suite( 'Navbar', function () {
         SearchPage.navbar.search.click();
 
         assert(
-            SearchPage.currentUrl === SearchPage.baseUrl + SearchPage.paths.search + '/'
+            SearchPage.currentUrl === SearchPage.baseUrl + SearchPage.paths.search
         );
     } );
 } );
