@@ -1,7 +1,7 @@
 # DLTS Enhanced Networked Monographs: Search
 
-[Topics and full-text search](http://dlib.nyu.edu/enm/search/)
-for the DLTS [Enhanced Networked Monographs website](http://dlib.nyu.edu/enm/).
+[Topics and full-text search](https://enm.dlib.nyu.edu/search/)
+for the DLTS [Enhanced Networked Monographs website](https://enm.dlib.nyu.edu/).
 
 ## Overview
 
