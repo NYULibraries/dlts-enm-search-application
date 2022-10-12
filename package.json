@@ -72,7 +72,7 @@
         "jest-watch-typeahead": "^0.3.1",
         "json-stable-stringify": "^1.0.1",
         "lodash.clonedeep": "^4.5.0",
-        "lodash.merge": "^4.6.1",
+        "lodash.merge": "^4.6.2",
         "lodash.mergewith": "^4.6.2",
         "node-sass": "^4.12.0",
         "rimraf": "^2.6.3",
